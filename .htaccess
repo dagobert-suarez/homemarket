@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteRule ^inicio$ index.php?controller=views
+RewriteRule ^hola$ index.php?controller=views&a=hola
+RewriteRule ^registrarse$ index.php?controller=views&a=registrarse
+RewriteRule ^master$ index.php?controller=views&a=master
+RewriteRule ^prueba$ index.php?controller=views&a=prueba
+RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
+
+RewriteRule ^validar$ index.php?controller=login&a=validar
