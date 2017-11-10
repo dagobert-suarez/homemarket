@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2017 a las 00:04:32
--- Versión del servidor: 10.1.26-MariaDB
--- Versión de PHP: 7.1.8
+-- Tiempo de generación: 10-11-2017 a las 23:53:34
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `home market`
+-- Base de datos: `home_market`
 --
 
 -- --------------------------------------------------------
@@ -39,12 +37,8 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`contra`, `token`, `doc_cli`) VALUES
-('$2y$10$zh0ls5LEuFpG1iYtFKmS4ek.hbZvJKrdgDSYoFxmeLRkbxLtDdaBe', '065b72001434cee2baed5d65cbbd36e2', 1234550),
-('$2y$10$J0xWIKlUd4C7yNMX3Z.je.jWIFrfcVxAb5B.KS71rNOcgamI5Ak/.', '3e7cc55d148dcd4a255d1620d123f6f5', 100008453),
-('$2y$10$QR3RepOSX8KxcXkUskuXReupj1MzWCfRGYXkss5nXZnkjY00IOqTq', '40c66a70c5472e1b1972fe97aee0fc71', 123455),
-('$2y$10$qfr5//3Dw0HtVHkUhRQp9.BcRFyv8XenoWdhLwlmsZOcUaZeKnD2S', 'asaa', 123),
-('$2y$10$LGLDROtBWoWfB.tEk.EEIuDl.lij78eL/63vkO6ABbn.5uz3/IWbS', 'f52ef9debf421a8a57ebf20bd74887db', 9999),
-('$2y$10$b.AxUTqZOF41JdrbLNVVS.TKNlgi2tVAMKRk8yGWk8A7xLYfJMXby', 'fsaghgdgc', 990925);
+('$2y$10$eC1vPMbnDR3X9ulOIuxWqeZCrNBJbSmQISOkN07FQR49zUfjxX5wG', '24fa6c27bde3a2f7912ef6ea55170e1c', 2147483647),
+('$2y$10$4zmAbzADmnHZ9RskZnmmp.shtwhEOv4q4LWrM9C5QWo1Hgy5e0qP6', 'd41d8cd98f00b204e9800998ecf8427e', 0);
 
 -- --------------------------------------------------------
 
@@ -158,23 +152,8 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`doc_cli`, `pNom_cli`, `sNom_cli`, `pApe_cli`, `sApe_cli`, `gen_cli`, `fech_nac`, `cel_cli`, `tel_cli`, `email_cli`, `cod_ciu`, `est_cli`) VALUES
-(1, 'ghd', 'mhcg', 'mv', 'mcg', '', '2017-11-28', 342, 657, 'ggg@g', 660, '1'),
-(24, 'david', '', 'herrera', 'zt', '', '1999-11-29', 89, 75, 'gyffy@gmail.com', 5003, '1'),
-(54, 'ghfcgh', 'ghc', 'hgcgh', 'mvh', '', '2017-11-27', 3535, 78678, 'fdfd@gg', 5003, '1'),
-(112, 'david', '', 'herrera', 'zt', '', '1999-11-29', 32334, 323534, 'gyffy@gmail.com', 5003, '1'),
-(123, 'guffy', 'seg nom', 'pri ape', 'seh ape', 'mas', '2017-11-03', 323, 521, 'da@sdj', 5003, '1'),
-(321, 'david', '', 'herrre', 'aa', '', '2017-11-05', 233, 344, 'fafa@ht', 5003, '1'),
-(340, 'david', '', 'herrre', 'aa', '', '2017-11-05', 233, 344, 'fafa@ht', 67, '1'),
-(1037, 'guille', '', 'valencia', '', '', '2017-11-10', 300, 500, 'guille@gmail.com', 37, '1'),
-(1234, 'soso', 'erew', 'ewr', 'ere', '', '2017-11-26', 233245, 0, '4565@gm', 343, '1'),
-(5050, 'david', '', 'herrera', 'zt', '', '1999-11-29', 32334, 323534, 'gyffy@gmail.com', 5003, '1'),
-(9999, 'dagil', 'wrwr', 'fago', 'agudelo', '', '2017-10-27', 233245, 3, 'fago@gm', 6565, '1'),
-(12345, 'soso', 'erew', 'ewr', 'ere', '', '2017-11-26', 233245, 0, '4565@gm', 343, '1'),
-(123455, 'soso', 'erew', 'ewr', 'ere', '', '2017-11-26', 233245, 0, '4565@gm', 343, '1'),
-(990925, 'dagobert', 'antonio', 'suarez', 'agudelo', 'hombre', '1999-11-19', 1212, 31213, 'dago@suarez', 1212, 'activo'),
-(1234550, 'soso', 'erew', 'ewr', 'ere', '', '2017-11-26', 233245, 0, '45653@gm', 65656, '1'),
-(100008453, 'David', '', 'Herrera', 'Zapata', '', '1999-11-29', 323, 0, 'guffyk2@gm', 1343, '1'),
-(1000084530, 'David', NULL, 'Herrera', 'Zapata', 'Masculino', '1999-11-29', 0, 0, 'guffyherrera150@gmail.com', NULL, NULL);
+(0, '', '', '', '', '', '0000-00-00', 0, 0, '', 0, '1'),
+(2147483647, 'David', '', 'Herrera', 'Zapata', '', '1999-11-29', 323, 0, 'guffy@gm', 5005, '1');
 
 -- --------------------------------------------------------
 
@@ -853,7 +832,6 @@ ALTER TABLE `usuario`
 ALTER TABLE `usuario_supermercado`
   ADD CONSTRAINT `usuario_supermercado_ibfk_1` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`),
   ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`nit_sup`) REFERENCES `supermercado` (`nit_sup`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
