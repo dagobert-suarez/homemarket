@@ -13,12 +13,13 @@ body{
   z-index: 1000;
 }
 .logo--menu{
-  width: 15%;
+  width: 20%;
   margin-left: 5%;
   position: fixed;
 }
 .logo--img{
-  width: 50px;
+  width: 65px;
+  height: 50px;
 }
 .container--menu{
   margin-left: 20%;
@@ -64,8 +65,6 @@ body{
   height:450px;
 
 }
-
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -87,9 +86,31 @@ body{
   position: absolute;
   top: 0;
 }
+.wrap-info{
+    position: absolute;
+    height: 473px;
+    width: 220px;
+    overflow: visible;
+}
+.content-info{
+    z-index: 5;
+    width: 100%;
+    margin-top: -10%;
+    padding-left: 20%;
+    color: #ffffff;
 
-/* The dots//indicador*/
-.dot {
+}
+.info{
+    background-color: rgb(0, 0, 0);
+    font-family: 'Arimo', sans-serif;
+    width: 100%;
+    height: 475px;
+    opacity: 0.8;
+    justify-content: flex-start;
+}
+
+/*El indicador*/
+.pont{
   height: 15px;
   width: 15px;
   margin: 0 6px;

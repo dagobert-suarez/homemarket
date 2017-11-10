@@ -1,6 +1,6 @@
 <div class="menu">
 		<div class="logo--menu">
-				<img  class="logo--img"src="../assets/image/logoop.jpg" alt="">
+				<img  class="logo--img"src="views/assets/image/logoprueba.jpg" alt="">
 		</div>
 		<div class="container--menu">
 				<a href="master">Inicio</a>
