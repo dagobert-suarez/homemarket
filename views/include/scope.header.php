@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>dashboard</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="views/assets/css/main.css">
 	</head>
 	<body>

@@ -176,10 +176,27 @@ body{
     border-bottom: 2px solid rgb(170, 170, 170);
 }
 /*Está es la parte del login*/
-
 .login--form{
 
 }
+/*#loginmodal{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    /*position: fixed;
+    top: 0;*/
+    /*transition: all .5s;
+    left:-100vw;
+    width:100vw;
+    height: 100vh;
+}*/
+
+/*#loginmodal:target{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;*/
+/*}*/
+
 .container-form{
   padding: 10px;
 }
@@ -256,23 +273,7 @@ input[type=password]:focus{
     transition: 0.7s;
 
 }
-/*input[type=text]:focus{
-    border-color:rgb(255, 0, 0);
-    transition: 0.7s;
-}
-input[type=date]:focus{
-    border-color: rgb(255, 0, 0);
-    transition: 0.7s;
-}
-input[type=email]:focus{
-    border-color: rgb(255, 0, 0);
-    transition: 0.7s;
-}
-input[type=number]:focus{
-    border-color: rgb(255, 0, 0);
-    transition: 0.7s;
-}
-*/
+
 .required::after{
     content: " * ";
     color: rgb(255, 0, 0);
@@ -288,4 +289,11 @@ input[type=number]:focus{
     margin: 15px;
     letter-spacing: 0.5px;
     font-family: 'Noto sans', sans-serif;
+}
+
+.secttwo{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: rgb(254, 160, 0);
 }

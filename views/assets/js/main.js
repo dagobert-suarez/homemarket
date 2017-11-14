@@ -1,7 +1,7 @@
 var slideIndex = 0;
-slidesh();
+showSlides();
 
-function slidesh() {
+function showSlides() {
     var i;
     var slides = document.getElementsByClassName("Slides");
     var dots = document.getElementsByClassName("pont");
@@ -15,5 +15,5 @@ function slidesh() {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    setTimeout(slidesh, 4000); // Cambia la imagen cada 4 segundos
+    setTimeout(showSlides, 4000); // Cambia la imagen cada 4 segungos
 }

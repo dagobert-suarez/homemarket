@@ -1,4 +1,4 @@
-<div class="login--form">
+<div id="loginmodal" class="login--form">
 	<form  class="modal-content" method="POST" action="validar" >
 		<h4>Iniciar sesion</h4>
 		<div class="container-form">
@@ -12,6 +12,6 @@
 		</div>
 	</form>
 </div>
-<?php
+<!-- <?php
 // echo password_hash("9909", PASSWORD_DEFAULT);
-?>
+?> -->
