@@ -124,12 +124,6 @@ body{
   background-color: #13b090;
 }
 
-/*animacion  */
-/*@-webkit-keyframes raz {
-  from {opacity: .4}
-  to {opacity: 1}
-}*/
-
 @keyframes raz {
   from {opacity: .4}
   to {opacity: 1}
@@ -144,9 +138,12 @@ body{
   background-color: red;
   width: 100%;
 }
+.img-c{
+
+}
 /*este es diseño de el registrar*/
 .onereg{
-    margin-top: 62.5px;
+    margin-top: 60.5px;
     display: flex;
     width: 100%;
 }
@@ -176,37 +173,53 @@ body{
     border-bottom: 2px solid rgb(170, 170, 170);
 }
 /*Está es la parte del login*/
+
 .login--form{
-
-}
-/*#loginmodal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    /*position: fixed;
-    top: 0;*/
-    /*transition: all .5s;
-    left:-100vw;
-    width:100vw;
-    height: 100vh;
-}*/
-
-/*#loginmodal:target{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0;*/
-/*}*/
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 .container-form{
   padding: 10px;
 }
 .modal-content{
-  border: 1px solid #888;
-  margin: 5% auto 5% auto;
-  width: 50%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 8px;
+    background-color: #eeeeee;
+    margin: 10% auto 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 28%;
+    font-family:'Roboto', sans-serif;
 }
+.container-img{
+    text-align: center;
+    position: relative;
+    margin: -15px 0 20px 0;
+}
+/*.logoimg{
+    width: 20%;
+    border-radius: 50%;
+}*/
+.close{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    color: #aaa;
+    font-size: 35px;
+}
+.close:focus,.close:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+
 .login--form input[type=email],
 .login--form input[type=password]{
     border: 1px solid rgb(182, 182, 182);
@@ -214,7 +227,7 @@ body{
     width: 100%;
     box-sizing: border-box;
     display: inline-block;
-    padding: 9px 11px;
+    padding: 10px 12px;
     border-radius: 6px;
     outline: none;
     font-size: 13px;
@@ -226,9 +239,6 @@ text-align: center;
 white-space: nowrap;
 vertical-align: middle;
 user-select: none;
-/*-ms-user-select:none;
--webkit-user-select:none;
--moz-user-select:none;*/
 border:1px solid transparent;
 padding: 10px 15px;
 font-size: 16px;
@@ -237,11 +247,28 @@ border-bottom:
 transition: all .15s ease-in-out;
 outline: none;
 cursor: pointer;
-width: 50%;
+width: 45%;
+background-color: #f99d00;
+top:5px;
 
 }
 .btnsave:hover{
-    box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 6px 5px rgba(0, 0, 0, 0.3);
+}
+.botns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/*keyframes login*/
+.anima{
+    animation: animatezoom 0.5s;
+}
+@keyframes animatezoom {
+    from {transition: scale(0)}
+    to{transform: scale(1)}
+
 }
 /*finalizo la parte del login*/
 /*Está es la parte de registro */
@@ -269,8 +296,8 @@ input[type=date]:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 input[type=password]:focus{
-    border-color:#13b097;
-    transition: 0.7s;
+    border-color:#ff8200;
+    transition: 0.5s;
 
 }
 
