@@ -8,24 +8,25 @@
 	</div>
 	<div class="content-form">
 		<div class="form-gruop">
-			<label  class=" required" for="">	Primer Nombre:</label>
-			<input type="text" name="data[]" placeholder="nombre">
+			<label  class=" required" for="">Primer Nombre:</label>
+			<input type="text" name="data[]" placeholder="nombre" class="pitp">
 		</div>
 		<div class="form-gruop">
 			<label  class=" opcional" for="">segundo Nombre</label>
-			<input type="text" name="data[]" placeholder="segundo nombre">
+			<input type="text" name="data[]" placeholder="segundo nombre" class="pitp">
 		</div>
 	</div>
 	<div class="content-form">
 	<div class="form-gruop">
 			<label  class=" required" for="">Primer Apellido</label>
-			<input type="text" name="data[]" placeholder="apellido">
+			<input type="text" name="data[]" placeholder="apellido" class="pitp">
 	</div>
 	<div class="form-gruop">
 				<label  class=" opcional" for="">segundo Apellido</label>
-				<input type="text" name="data[]" placeholder="segundo apellido">
+				<input type="text" name="data[]" placeholder="segundo apellido" class="pitp">
 	</div>
 </div>
+<div class="content-form">
 	<div class="form-gruop">
 		<label  class=" required" for="">	Genero</label>
 		<input type="text" name="data[]" placeholder="Genero">
@@ -34,6 +35,7 @@
 	<div class="">
 		<label  class=" required" for="">	Fecha de nacimiento</label>
 		<input type="date" name="data[]" placeholder="fecha nacimiento">
+	</div>
 	</div>
 	<div class="content-form">
 		<div class="form-gruop">
