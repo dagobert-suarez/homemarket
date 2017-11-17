@@ -20,7 +20,7 @@ class LoginController{
 				    echo 'La contraseña no es válida.';
 				}
 		}else{
-			echo 'el usuario no existe';
+			echo 'el usuario no existe por culpa de dago';
 		}
 	}
 }
