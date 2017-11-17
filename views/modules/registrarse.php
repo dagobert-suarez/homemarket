@@ -1,4 +1,3 @@
-
 <section class="registrarse" id="registro">
 
 	<h1 class="regis">Registrate en homemarket</h1>
@@ -60,7 +59,7 @@
 				<label  class=" required" for="">contraseña</label>
 				<input type="password" name="data[]" placeholder="contraseña">
 	</div>
-		<button type="submit" name="registrar" class="btn">registrarse</button>
+		<button type="submit" name="registrar" class="btntnt">registrarse</button>
 	</form>
 
 </section>

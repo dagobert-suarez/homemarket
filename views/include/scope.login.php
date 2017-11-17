@@ -15,7 +15,6 @@
 		</div>
 			<div class="botns">
 				<button class="btnsave" >entrar</button>
-				<button class="btnsave" >registrarse</button>
 			</div>
 	</form>
 </div>

@@ -12,4 +12,3 @@
 				<a id="mon">Iniciar sesión</a>
 		</div>
 	</div>
-	<!-- <a id="mon" href="#loginmodal" onclick="document.getElementById('loginmodal').style.display='block'">Iniciar sesión</a> -->

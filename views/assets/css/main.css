@@ -172,6 +172,9 @@ body{
     padding-bottom: 15px;
     border-bottom: 2px solid rgb(170, 170, 170);
 }
+.btntnt{
+    background-color: rgb(1, 132, 245);
+}
 /*Está es la parte del login*/
 
 .login--form{
