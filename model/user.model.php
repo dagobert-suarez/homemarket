@@ -18,7 +18,7 @@ class UserModel{
 					$query = $this->pdo->prepare($sql);
 					$query->execute(array($data[11],$token,$data[0]));
 
-					$msn = "Guardo con exito";
+					$msn = "Guardado con exito";
 					}catch (PDOException $e) {
 						die($e->getMessage());
 				  }
