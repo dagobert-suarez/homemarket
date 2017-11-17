@@ -3,7 +3,6 @@
 	<form  class="modal-content anima" method="POST" action="validar" >
 		<div class="container-img">
 			<span id="close" class="close" >&times;</span>
-			<!-- <img src="views/assets/image/logoop.jpg" alt="" class="logoimg"> -->
 			<h1>Iniciar sesion</h1>
 		</div>
 		<div class="container-form">

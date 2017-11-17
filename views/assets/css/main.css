@@ -191,7 +191,7 @@ body{
   padding: 10px;
 }
 .modal-content{
-    background-color: #eeeeee;
+    background-color: #ececec;
     margin: 10% auto 5% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -203,10 +203,7 @@ body{
     position: relative;
     margin: -15px 0 20px 0;
 }
-/*.logoimg{
-    width: 20%;
-    border-radius: 50%;
-}*/
+
 .close{
     position: absolute;
     top: 0;

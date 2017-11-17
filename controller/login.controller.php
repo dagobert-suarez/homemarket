@@ -14,8 +14,8 @@ class LoginController{
 			$contra = $this->users->contra($result['doc_cli']);
 			if (password_verify($_POST['contra'], $contra['contra'])) {
 				$_SESSION['user']=$result['pNom_cli'];
-				    echo "<h1>¡ingreso corretamente</h1>" ;
-				    // header('Location:hola');
+				    // echo "<h1>¡ingreso corretamente</h1>" ;
+				    header('Location:ingreso');
 				} else {
 				    echo 'La contraseña no es válida.';
 				}
