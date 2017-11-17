@@ -8,7 +8,7 @@
 				<a href="">Aliados</a>
 		</div>
 		<div class="container--menu2">
-				<a href="registrarse">Registrarse</a>
+				<a href="#registro">Registrarse</a>
 				<a id="mon">Iniciar sesión</a>
 		</div>
 	</div>

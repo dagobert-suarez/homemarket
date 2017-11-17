@@ -1,4 +1,3 @@
-
 <section class="one-slide">
 	<div class="slideshow-container">
 		<div class="wrap-info">
@@ -37,5 +36,17 @@
 		<span class="pont"></span>
 		<span class="pont"></span>
 		 <span class="pont"></span>
+	</div>
+	<div class="tuto">
+		<div class="tuto1">
+
+		</div>
+		<div class="tuto2">
+
+		</div>
+		<div class="tuto3">
+
+			</div>
+
 	</div>
 </section>

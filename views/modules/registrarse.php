@@ -1,5 +1,5 @@
-<section class="registrarse" id="registro">
-
+<section class="setregistrarse" id="registro">
+<div class="formpart">
 	<h1 class="regis">Registrate en homemarket</h1>
 	<form method="post" action="nuevo-cliente">
 		<div class="form-gruop">
@@ -28,10 +28,8 @@
 </div>
 	<div class="form-gruop">
 		<label  class=" required" for="">	Genero</label>
-		<select class="required" name="data[]">
-                          <option value="">Masculino</option>
-                          <option value="">Femenino</option>
-                      </select>
+		<input type="text" name="data[]" placeholder="Genero">
+
 	</div>
 	<div class="">
 		<label  class=" required" for="">	Fecha de nacimiento</label>
@@ -59,7 +57,15 @@
 				<label  class=" required" for="">contraseña</label>
 				<input type="password" name="data[]" placeholder="contraseña">
 	</div>
-		<button type="submit" name="registrar" class="btntnt">registrarse</button>
+		<button type="submit" name="registrar" class="btntnt">Registrarse</button>
 	</form>
-
+</div>
+<div class="formtext">
+	<h1 class="tlt">
+	  EMPIEZA UN EXPERIENCIA CON HOME MARKET
+	</h1>
+	<div class="text-inf">
+		<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
+	</div>
+</div>
 </section>
