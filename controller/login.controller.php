@@ -17,10 +17,10 @@ class LoginController{
 				    // echo "<h1>¡ingreso corretamente</h1>" ;
 				    header('Location:ingreso');
 				} else {
-				    echo 'La contraseña no es válida.';
+				    echo '<h1>La contraseña no es válida</h1>.';
 				}
 		}else{
-			echo 'el usuario no existe por culpa de dago';
+			echo '<h1>el usuario no existe por culpa de dago</h1>';
 		}
 	}
 }
