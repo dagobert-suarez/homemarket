@@ -11,7 +11,7 @@ class viewsController{
 		require_once "views/modules/inicio.php";
 		require_once "views/include/scope.footer.php";
 	}
-	function prueba(){
+	function super(){
 		require_once "views/include/scope.header.php";
 		require_once "views/include/scope.prueba.php";
 		require_once "views/include/scope.footer.php";

@@ -4,7 +4,7 @@
 		</div>
 		<div class="container--menu">
 				<a href="">Inicio</a>
-				<a href="prueba">Supermerdacos</a>
+				<a href="super">Supermerdacos</a>
 				<a href="">Aliados</a>
 		</div>
 		<div class="container--menu2">
