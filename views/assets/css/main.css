@@ -167,9 +167,10 @@ body{
     margin: 4px;
     margin-top: 2px;
     width: 50%;
-    border-radius: 6px;
+    /*border-radius: 6px;*/
     padding: 5px 5px;
     font-family:'Roboto', sans-serif;
+    display: block;
 }
 .content-form{
     display: flex;
@@ -183,6 +184,7 @@ body{
     opacity: 0.8;
 }
 .regis{
+    margin-top:50px;
     margin: 10px;
     padding-bottom: 15px;
     border-bottom: 2px solid rgb(170, 170, 170);
@@ -207,7 +209,7 @@ body{
 .btntnt:hover{
     background-color: #faac00;
     color: rgb(0, 0, 0);
-    box-shadow: 0 5px 6px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #registro{
@@ -215,16 +217,63 @@ body{
 }
  .content-form label{
     display: block;
-    /*font-size: 16px;*/
+    font-size: 16px;
     color: #010101;
     margin-bottom: 3px;
 }
- .content-form input{
-     width:100%;
-     padding: 10px 40px;
+     /*.content-form input{
+         width:100%;
+         padding: 10px 40px;
+     }*/
+ input[type=text]{
+     display: block;
+     outline: none;
+     width: 70%;
+     padding: 10px 25px;
+     line-height: 1.20;
+     border: 1px solid rgb(182, 182, 182);
  }
-
-input[type=text],
+ input[type=number]{
+     display: block;
+     outline: none;
+     /*width: 40%;*/
+     padding: 10px 25px;
+     line-height: 1.20;
+     border: 1px solid rgb(182, 182, 182);
+ }
+ input[type=email]{
+     display: block;
+     outline: none;
+     width: 40%;
+     padding: 10px 25px;
+     line-height: 1.20;
+     border: 1px solid rgb(182, 182, 182);
+ }
+ input[type=date]{
+     display: block;
+     outline: none;
+     width: 40%;
+     padding: 10px 25px;
+     line-height: 1.20;
+     border: 1px solid rgb(182, 182, 182);
+ }
+ input[type=password]{
+     display: block;
+     outline: none;
+     width: 40%;
+     padding: 10px 25px;
+     line-height: 1.20;
+     border: 1px solid rgb(182, 182, 182);
+ }
+ select{
+     display: block;
+     outline: none;
+     width: 40%;
+     padding: 10px 25px;
+     line-height: 1.20;
+     border: 1px solid rgb(182, 182, 182);
+ }
+/*input[type=text],
 input[type=date],
 input[type=email],
 input[type=number],
@@ -238,7 +287,7 @@ input[type=password],select{
     line-height: 1.20;
     font-size: 13px;
     outline: none;
-}
+}*/
 input[type=text]:focus,
 input[type=date]:focus,
 input[type=email]:focus,
@@ -356,6 +405,9 @@ input[type=password]:focus{
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
+}
+#mon{
+    cursor: pointer;
 }
 
 /*keyframes login*/
