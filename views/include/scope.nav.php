@@ -3,12 +3,11 @@
 		<div class="wrap-info">
 			<div class="content-info">
 					<div class="info">
-						<h1>Hola como estás</h1>
+						<h1>Bienvenido</h1>
 					</div>
 			</div>
 	    </div>
 		<div class="Slides raz">
-			<div class="numerador">1 / 4</div>
 			<img class="img-c" src="views/assets/image/mark.jpg">
 			<div class="text"></div>
 		</div>
@@ -37,16 +36,5 @@
 		<span class="pont"></span>
 		 <span class="pont"></span>
 	</div>
-	<!-- <div class="tuto">
-		<div class="tuto1">
 
-		</div>
-		<div class="tuto2">
-
-		</div>
-		<div class="tuto3">
-
-			</div>
-
-	</div> -->
 </section>
