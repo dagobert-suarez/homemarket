@@ -28,7 +28,7 @@
 	</div>
 	<div class="form-gruop">
 
-		<label  class=" required" for="">	Genero</label>
+		<label  class=" required" for="">Genero</label>
 		<select name="data[]" placeholder="Genero" required>
 			<option value="m">Hombre</option>
 			<option value="f">Mujer</option>
@@ -75,7 +75,7 @@
 	</div>
 	<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-				<input type="password" name="data[]" placeholder="verificar_contraseña" required>
+				<input type="password" name="data[]" placeholder="verificar contraseña" required>
 	</div>
 		<button type="submit" name="registrar" class="btntnt">Registrarse</button>
 	</form>
