@@ -54,7 +54,11 @@
 	<div class="form-gruop">
 				<label  class=" required" for="">ciudad</label>
 			 <select name="data[]" placeholder="codigo de la ciudad">
-				 <option value=""></option>
+				 <?php
+				 foreach ($this->userModel->readCities() as $row){
+					 echo "<option value='$row[0]'>$row[1]</option>";
+				 }
+				 ?>
 	</div>
 	<div class="form-gruop">
 				<label  class=" required" for="">contraseña</label>
