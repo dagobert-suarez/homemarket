@@ -75,7 +75,7 @@
 	</div>
 	<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-				<input type="password" name="data[]" placeholder="verificar contraseña" required>
+				<input type="password" name="data[]" placeholder="verificar_contraseña" required>
 	</div>
 		<button type="submit" name="registrar" class="btntnt">Registrarse</button>
 	</form>
