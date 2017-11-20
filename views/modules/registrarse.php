@@ -27,18 +27,17 @@
 		</div>
 	</div>
 	<div class="form-gruop">
-<<<<<<< HEAD
+
 		<label  class=" required" for="">Genero</label>
 		<select name="data[] placeholder"
 		<input type="text" name="data[]" placeholder="Genero" required>
-=======
+
 		<label  class=" required" for="">	Genero</label>
 		<select name="data[]" placeholder="Genero" required>
 			<option value="m">Hombre</option>
 			<option value="f">Mujer</option>
 			<option value="o">Otro</option>
 		</select>
->>>>>>> 00496eb9e320183c18cae0a0df2d1820286faeec
 
 	</div>
 	<div class="">
@@ -71,10 +70,8 @@
 					 echo "<option value='$row[0]'>$row[1]</option>";
 				 }
 				 ?>
-<<<<<<< HEAD
-=======
 			 </select>
->>>>>>> 00496eb9e320183c18cae0a0df2d1820286faeec
+
 	</div>
 	<div class="form-gruop">
 				<label  class="required" for="">contraseña</label>
