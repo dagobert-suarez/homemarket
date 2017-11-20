@@ -28,7 +28,11 @@
 </div>
 	<div class="form-gruop">
 		<label  class=" required" for="">	Genero</label>
-		<input type="text" name="data[]" placeholder="Genero" required>
+		<select name="data[]" placeholder="Genero" required>
+			<option value="m">Hombre</option>
+			<option value="f">Mujer</option>
+			<option value="o">Otro</option>
+		</select>
 
 	</div>
 	<div class="">
@@ -56,15 +60,15 @@
 	<div class="form-gruop">
 			<label  class=" required" for="">ciudad</label>
 			 <select name="data[]" placeholder="codigo de la ciudad">
-<<<<<<< HEAD
+
 			 <option value=""></option>
-=======
+
 				 <?php
 				 foreach ($this->userModel->readCities() as $row){
 					 echo "<option value='$row[0]'>$row[1]</option>";
 				 }
 				 ?>
->>>>>>> 0ee1de089005ee22dea89122adfa4aa0e2078eba
+			 </select>
 	</div>
 	<div class="form-gruop">
 				<label  class="required" for="">contraseña</label>
