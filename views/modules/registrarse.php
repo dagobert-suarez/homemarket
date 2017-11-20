@@ -28,10 +28,6 @@
 	</div>
 	<div class="form-gruop">
 
-		<label  class=" required" for="">Genero</label>
-		<select name="data[] placeholder"
-		<input type="text" name="data[]" placeholder="Genero" required>
-
 		<label  class=" required" for="">	Genero</label>
 		<select name="data[]" placeholder="Genero" required>
 			<option value="m">Hombre</option>
@@ -77,12 +73,16 @@
 				<label  class="required" for="">contraseña</label>
 				<input type="password" name="data[]" placeholder="contraseña" required>
 	</div>
+	<div class="form-gruop">
+				<label  class="required" for="">verificar contraseña</label>
+				<input type="password" name="data[]" placeholder="verificar_contraseña" required>
+	</div>
 		<button type="submit" name="registrar" class="btntnt">Registrarse</button>
 	</form>
 </div>
 <div class="formtext">
 	<h1 class="tlt">
-	  EMPIEZA UN EXPERIENCIA CON HOME MARKET
+	  EMPIEZA UNA EXPERIENCIA CON HOME MARKET
 	</h1>
 	<div class="text-inf">
 		<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
