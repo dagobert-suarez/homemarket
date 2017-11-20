@@ -4,17 +4,17 @@ showSlides();
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("Slides");
-    var ponts = document.getElementsByClassName("pont");
+    var dots = document.getElementsByClassName("pont");
     for (i = 0; i < slides.length; i++) {
        slides[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
-    for (i = 0; i < ponts.length; i++) {
-        ponts[i].className = ponts[i].className.replace(" active", "");
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex-1].style.display = "block";
-    ponts[slideIndex-1].className += " active";
+    dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 4000); // Cambia la imagen cada 4 segungos
 };
 

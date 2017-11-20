@@ -5,7 +5,7 @@
 		<div class="form-gruop">
 			<label  class=" required" for="">Numero de documento:</label>
 			<input type="number" name="data[]" placeholder="documento identidad" required>
-	</div>
+		</div>
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class=" required" for="">Primer Nombre:</label>
@@ -17,22 +17,28 @@
 		</div>
 	</div>
 	<div class="content-form">
-	<div class="form-gruop">
-			<label  class=" required" for="">Primer Apellido</label>
-			<input type="text" name="data[]" placeholder="apellido" class="pitp" required>
+		<div class="form-gruop">
+				<label  class=" required" for="">Primer Apellido</label>
+				<input type="text" name="data[]" placeholder="apellido" class="pitp" required>
+		</div>
+		<div class="form-gruop">
+					<label  class=" opcional" for="">segundo Apellido</label>
+					<input type="text" name="data[]" placeholder="segundo apellido" class="pitp">
+		</div>
 	</div>
 	<div class="form-gruop">
-				<label  class=" opcional" for="">segundo Apellido</label>
-				<input type="text" name="data[]" placeholder="segundo apellido" class="pitp">
-	</div>
-</div>
-	<div class="form-gruop">
+<<<<<<< HEAD
+		<label  class=" required" for="">Genero</label>
+		<select name="data[] placeholder"
+		<input type="text" name="data[]" placeholder="Genero" required>
+=======
 		<label  class=" required" for="">	Genero</label>
 		<select name="data[]" placeholder="Genero" required>
 			<option value="m">Masculino</option>
 			<option value="f">Femenino</option>
 			<option value="o">Otro</option>
 		</select>
+>>>>>>> 00496eb9e320183c18cae0a0df2d1820286faeec
 
 	</div>
 	<div class="">
@@ -53,10 +59,7 @@
 		<label  class=" required" for="">correo</label>
 		<input type="email" name="data[]" placeholder="correo" required>
 	</div>
-	<div class="form-gruop">
-			<label  class=" required" for="">cod ciudad</label>
-			<input type="number" name="data[]" placeholder="codigo de la ciudad" required>
-	</div>
+
 	<div class="form-gruop">
 			<label  class=" required" for="">ciudad</label>
 			 <select name="data[]" placeholder="codigo de la ciudad">
@@ -68,7 +71,10 @@
 					 echo "<option value='$row[0]'>$row[1]</option>";
 				 }
 				 ?>
+<<<<<<< HEAD
+=======
 			 </select>
+>>>>>>> 00496eb9e320183c18cae0a0df2d1820286faeec
 	</div>
 	<div class="form-gruop">
 				<label  class="required" for="">contraseña</label>
@@ -84,5 +90,6 @@
 	<div class="text-inf">
 		<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
 	</div>
+<a href="registrosuper">registrarse como supermercado</a>
 </div>
 </section>

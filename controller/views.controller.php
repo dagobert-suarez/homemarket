@@ -21,6 +21,11 @@ class viewsController{
 		require_once "views/include/scope.prueba.php";
 		require_once "views/include/scope.footer.php";
 	}
+	function registrosuper(){
+		require_once "views/include/scope.header.php";
+		require_once "views/modules/registrosuper.php";
+		require_once "views/include/scope.footer.php";
+	}
 
 	function ingreso(){
 		if (isset($_SESSION['user'])) {
