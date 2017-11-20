@@ -28,10 +28,6 @@
 	</div>
 	<div class="form-gruop">
 
-		<label  class=" required" for="">Genero</label>
-		<select name="data[] placeholder"
-		<input type="text" name="data[]" placeholder="Genero" required>
-
 		<label  class=" required" for="">	Genero</label>
 		<select name="data[]" placeholder="Genero" required>
 			<option value="m">Masculino</option>

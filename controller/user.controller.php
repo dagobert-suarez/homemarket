@@ -2,7 +2,7 @@
 require_once "model/user.model.php";
 class UserController{
 	private $users;
-	
+
     public function __CONSTRUCT(){
         $this->users = new UserModel();
     }
