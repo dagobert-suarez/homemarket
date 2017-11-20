@@ -53,9 +53,7 @@
 	</div>
 	<div class="form-gruop">
 				<label  class=" required" for="">ciudad</label>
-
 			 <select name="data[]" placeholder="codigo de la ciudad">
-				 
 				 <option value=""></option>
 	</div>
 	<div class="form-gruop">
