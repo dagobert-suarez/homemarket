@@ -37,7 +37,7 @@
 		<span class="pont"></span>
 		 <span class="pont"></span>
 	</div>
-	<div class="tuto">
+	<!-- <div class="tuto">
 		<div class="tuto1">
 
 		</div>
@@ -48,5 +48,5 @@
 
 			</div>
 
-	</div>
+	</div> -->
 </section>

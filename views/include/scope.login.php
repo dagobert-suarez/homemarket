@@ -3,7 +3,7 @@
 	<form  class="modal-content anima" method="POST" action="validar" >
 		<div class="container-img">
 			<span id="close" class="close" >&times;</span>
-			<h1>Iniciar sesion</h1>
+			<h1 class="title">Iniciar sesion</h1>
 		</div>
 		<div class="container-form">
 			<label class="required" for=""><b>Correo</b></label>

@@ -63,7 +63,7 @@ body{
 }
 .img-c{
   width: 100%;
-  height:450px;
+  height:400px;
 
 }
 /* Caption text */
@@ -89,7 +89,7 @@ body{
 }
 .wrap-info{
     position: absolute;
-    height: 473px;
+    height: 453px;
     width: 220px;
     overflow: visible;
 }
@@ -105,7 +105,7 @@ body{
     background-color: rgb(0, 0, 0);
     font-family: 'Arimo', sans-serif;
     width: 100%;
-    height: 475px;
+    height: 428px;
     opacity: 0.8;
     justify-content: flex-start;
 }
@@ -209,22 +209,24 @@ body{
 #registro{
   margin-top: 2.5%;
 }
- label {
+ .content-form label{
     display: block;
-    font-size: 16px;
+    /*font-size: 16px;*/
     color: #010101;
-    margin-bottom: 8px;
-
+    margin-bottom: 3px;
 }
+ .content-form input{
+     width:100%;
+     padding: 10px 40px;
+ }
 
 input[type=text],
 input[type=date],
 input[type=email],
 input[type=number],
-input[type=password],
-select{
+input[type=password]{
     margin: 5px 3px;
-    width: 90%;
+    width: 50%;
     padding: 11px 30px;
     box-sizing: border-box;
     border: 1px solid rgb(182, 182, 182);
@@ -341,14 +343,13 @@ input[type=password]:focus{
     width: 45%;
     background-color: #f99d00;
     top:5px;
-
 }
 .btnsave:hover{
     box-shadow: 0 5px 6px 5px rgba(0, 0, 0, 0.3);
 }
 .botns{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-top: 10px;
 }
 
