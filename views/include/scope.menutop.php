@@ -3,8 +3,8 @@
 				<img  class="logo--img"src="views/assets/image/logoprueba.jpg" alt="">
 		</div>
 		<div class="container--menu">
-				<a href="">Inicio</a>
-				<a href="prueba">Supermerdacos</a>
+				<a href="inicio">Inicio</a>
+				<a href="super">Supermerdacos</a>
 				<a href="">Aliados</a>
 		</div>
 		<div class="container--menu2">
