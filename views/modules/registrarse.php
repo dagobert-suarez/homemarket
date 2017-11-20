@@ -52,8 +52,11 @@
 		<input type="email" name="data[]" placeholder="correo">
 	</div>
 	<div class="form-gruop">
-				<label  class=" required" for="">	cod ciudad</label>
-			 <input type="number" name="data[]" placeholder="codigo de la ciudad">
+				<label  class=" required" for="">ciudad</label>
+
+			 <select name="data[]" placeholder="codigo de la ciudad">
+				 
+				 <option value=""></option>
 	</div>
 	<div class="form-gruop">
 				<label  class=" required" for="">contraseña</label>
