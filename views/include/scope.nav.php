@@ -8,6 +8,7 @@
 			</div>
 	    </div>
 		<div class="Slides raz">
+			<div class="numerador">1/ 4</div>
 			<img class="img-c" src="views/assets/image/mark.jpg">
 			<div class="text"></div>
 		</div>
@@ -30,11 +31,11 @@
 		</div>
 
 	</div>
-	<div style="text-align:center">
+	<div class="indicator" >
 		<span class="pont"></span>
 		<span class="pont"></span>
 		<span class="pont"></span>
-		 <span class="pont"></span>
+		<span class="pont"></span>
 	</div>
 
 </section>

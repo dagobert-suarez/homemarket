@@ -53,7 +53,7 @@ body{
 .one-slide{
   width: 100%;
   justify-content: center;
-  background-color: gray;
+  background-color: rgb(251, 0, 213);
 
 
 }
@@ -61,8 +61,9 @@ body{
 
 /* Slideshow container */
 .slideshow-container {
-  width: 100%;
-  margin-top: 4.5%;
+  width: 90%;
+  /*margin-top: 4.5%;*/
+  margin: 2% auto 0% auto;
 
 }
 .img-c{
@@ -115,6 +116,9 @@ body{
 }
 
 /*El indicador*/
+.indicator{
+    text-align: center;
+}
 .pont{
   height: 15px;
   width: 15px;
