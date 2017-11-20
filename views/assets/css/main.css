@@ -39,7 +39,11 @@ body{
   text-decoration: none;
   padding: 13px 14px;
 }
+<<<<<<< HEAD
 /*.menu a:hover{
+=======
+.menu a:hover{
+>>>>>>> 0ee1de089005ee22dea89122adfa4aa0e2078eba
       background-color: #bdebe3;
   color: rgb(0, 0, 0);
   cursor: pointer;

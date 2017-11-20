@@ -25,5 +25,16 @@ class UserModel{
 					return $msn;
 			 }
 
+	function readCities(){
+		try{
+		$sql="SELECT cod_ciu,nom_ciu FROM ciudad ";
+		$query=$this->pdo->prepare($sql);
+    $query->execute();
+    $result = $query->fetchALL(PDO::FETCH_BOTH);
+    } catch (PDOException $e) {
+          $result = $e->getMessage();
+      }
+      return $result;
+  }
 }
 ?>
