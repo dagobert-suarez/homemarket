@@ -4,6 +4,7 @@
 			<div class="content-info">
 					<div class="info">
 						<h1>Bienvenido</h1>
+						<p>Home Market es una plataforma donde puedes encontrar supermercados y una cantidad de produtos </p>
 					</div>
 			</div>
 	    </div>

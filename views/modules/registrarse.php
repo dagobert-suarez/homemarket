@@ -27,19 +27,20 @@
 					<input type="text" name="data[]" placeholder="segundo apellido" class="pitp">
 		</div>
 	</div>
-	<div class="form-gruop">
+	<div class="content-form">
+		<div class="form-gruop">
+			<label  class=" required" for="">Genero</label>
+			<select name="data[]" placeholder="Genero" required>
+				<option value="m">Hombre</option>
+				<option value="f">Mujer</option>
+				<option value="o">Otro</option>
+			</select>
 
-		<label  class=" required" for="">Genero</label>
-		<select name="data[]" placeholder="Genero" required>
-			<option value="m">Hombre</option>
-			<option value="f">Mujer</option>
-			<option value="o">Otro</option>
-		</select>
-
-	</div>
-	<div class="">
-		<label  class=" required" for="">	Fecha de nacimiento</label>
-		<input type="date" name="data[]" placeholder="fecha nacimiento" required>
+		</div>
+		<div class="form-gruop">
+			<label  class=" required" for="">	Fecha de nacimiento</label>
+			<input type="date" name="data[]" placeholder="fecha nacimiento" required>
+		</div>
 	</div>
 	<div class="content-form">
 		<div class="form-gruop">
@@ -58,7 +59,7 @@
 
 	<div class="form-gruop">
 			<label  class=" required" for="">ciudad</label>
-			 <select name="data[]" placeholder="codigo de la ciudad">
+			 <select name="data[]" placeholder="codigo de la ciudad" class="city">
 			 <option value=""></option>
 				 <?php
 				 foreach ($this->userModel->readCities() as $row){
