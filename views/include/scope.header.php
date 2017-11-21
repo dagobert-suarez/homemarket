@@ -11,7 +11,7 @@
 		<section class="containerparal">
 			<header class="main-nav"><br>
 				<?php
-				require_once'scope.menutop.php';
+				require_once 'scope.menutop.php';
 				?>
 			</header>
 			<div class="beach">
@@ -22,7 +22,7 @@
 			</div>
 			<div class="beach2">
 				<?php
-				require_once'views/modules/registrarse.php';
+				require_once 'views/modules/registrarse.php';
 				 ?>
 			</div>
 			<div class="beach">
