@@ -58,7 +58,7 @@
 		<input type="email" class="emailform" name="data[]" placeholder="correo" required>
 	</div>
 	<div class="form-gruop">
-<<<<<<< HEAD
+
 			<label  class=" required" for="">ciudad</label>
 			 <select name="data[]" placeholder="codigo de la ciudad">
 			 <option value=""></option>
@@ -71,7 +71,7 @@
 	</div>
 
 	<div class="form-gruop">
-=======
+
 		<label  class=" required" for="">ciudad</label>
 		<select name="data[]"  class="city">
 			<?php
@@ -84,18 +84,18 @@
 
 	<div class="content-form">
 			<div class="form-gruop">
->>>>>>> 701f59817ee63a0db4fee1bd2cadd02ec1ce37be
+
 				<label  class="required" for="">contraseña</label>
 				<input type="password" name="data[]" placeholder="contraseña" required>
 			</div>
 			<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-<<<<<<< HEAD
+
 				<input type="password" name="rpassword" placeholder="verificar contraseña" required>
-=======
+
 				<input type="password" name="data[]" placeholder="verificar contraseña" required>
 			</div>
->>>>>>> 701f59817ee63a0db4fee1bd2cadd02ec1ce37be
+
 	</div>
 	<div class="form-gruop">
 		<button type="submit" name="registrar" class="btntnt">Registrarse</button>
