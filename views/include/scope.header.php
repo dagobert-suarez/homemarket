@@ -8,13 +8,23 @@
 		<link rel="stylesheet" href="views/assets/css/main.css">
 	</head>
 	<body>
-		<section class="container">
+		<section class="containerparal">
 			<header class="main-nav"><br>
 				<?php
-					require_once'scope.menutop.php';
+				require_once'scope.menutop.php';
 				?>
 			</header>
-			<?php
+			<div class="beach">
+				<?php
 				require_once 'scope.nav.php';
 				require_once 'scope.login.php';
-			?>
+				?>
+			</div>
+			<div class="beach2">
+				<?php
+				require_once'views/modules/registrarse.php';
+				 ?>
+			</div>
+			<div class="beach">
+
+			</div>
