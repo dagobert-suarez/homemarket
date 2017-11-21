@@ -5,7 +5,8 @@ body{
   margin: 0;
   background-color: rgba(247, 252, 255, 0);
   }
-.beach {
+
+.beach{
     height: 660px;
     background-color:darkgray;
     background-size: cover;

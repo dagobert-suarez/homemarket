@@ -25,6 +25,3 @@
 				require_once 'views/modules/registrarse.php';
 				 ?>
 			</div>
-			<div class="beach">
-
-			</div>
