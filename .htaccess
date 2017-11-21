@@ -1,6 +1,6 @@
 RewriteEngine on
 
-//principal
+#principal
 
 RewriteRule ^inicio$ index.php?controller=views
 RewriteRule ^ingreso$ index.php?controller=views&a=ingreso
@@ -11,4 +11,4 @@ RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 
 RewriteRule ^validar$ index.php?controller=login&a=validar
-//cliente
+#cliente
