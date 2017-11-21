@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <section class="setregistrarse" id="registro">
 <div class="formpart">
 	<h1 class="regis">Registrate en homemarket</h1>
@@ -58,24 +59,22 @@
 	<div class="form-gruop">
 			<label  class=" required" for="">ciudad</label>
 			 <select name="data[]" placeholder="codigo de la ciudad">
-
 			 <option value=""></option>
-
 				 <?php
 				 foreach ($this->userModel->readCities() as $row){
 					 echo "<option value='$row[0]'>$row[1]</option>";
 				 }
 				 ?>
 			 </select>
-
 	</div>
+
 	<div class="form-gruop">
 				<label  class="required" for="">contraseña</label>
 				<input type="password" name="data[]" placeholder="contraseña" required>
 	</div>
 	<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-				<input type="password" name="data[]" placeholder="verificar contraseña" required>
+				<input type="password" name="rpassword" placeholder="verificar contraseña" required>
 	</div>
 		<button type="submit" name="registrar" class="btntnt">Registrarse</button>
 	</form>
