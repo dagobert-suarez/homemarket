@@ -88,12 +88,10 @@
 				<label  class="required" for="">contraseña</label>
 				<input type="password" name="data[]" placeholder="contraseña" required>
 			</div>
+			
 			<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-
 				<input type="password" name="rpassword" placeholder="verificar contraseña" required>
-
-				<input type="password" name="data[]" placeholder="verificar contraseña" required>
 			</div>
 
 	</div>
