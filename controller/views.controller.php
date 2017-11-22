@@ -28,7 +28,6 @@ class viewsController{
 	}
 	function cliente(){
 		require_once "views/modules/cliente/header.php";
-		require_once "views/modules/paral.php";
 		require_once "views/modules/cliente/footer.php";
 	}
 
