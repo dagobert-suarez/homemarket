@@ -66,3 +66,23 @@ $('[name=email]').focus(function(){
     $("span.error").remove();
   // }
 })
+
+/*******---verificar contraseña-----*****/
+$('#password').keyup(function(){
+    var password = $('#password').val();
+    console.log(password.length);
+
+});
+
+$('#rpassword').focusout(function(){
+    var password = $('#password').val();
+    if (password===$('#rpassword').val()) {
+      $("btntnt").prop("disabled",false);
+      console.log("son correctos");
+    }else{
+      $("btntnt").prop("disabled",true);
+      console.log("no son iguales");
+    }
+
+
+});

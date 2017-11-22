@@ -70,11 +70,11 @@
 
 	<div class="form-gruop">
 				<label  class="required" for="">contraseña</label>
-				<input type="password" name="data[]" placeholder="contraseña" required>
+				<input type="password" name="data[]" placeholder="contraseña" id=password required>
 	</div>
 	<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-				<input type="password" name="rpassword" placeholder="verificar contraseña" required>
+				<input type="password" name="rpassword" placeholder="verificar contraseña" id="rpassword" required>
 	</div>
 	<div class="fomr-group" id="recaptcha">
 			<div class="g-recaptcha" data-theme="dark" data-sitekey="6LdgiTkUAAAAADv4ddSh-yCAAl-j15tc1K8CAQsv"></div>
