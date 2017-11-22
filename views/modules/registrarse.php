@@ -35,7 +35,7 @@
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class=" required" for="">	celular</label>
-			<input type="number" name="data[]" placeholder="n celular" required>
+			<input type="bigint" name="data[]" placeholder="n celular" required>
 		</div>
 		<div class="form-gruop">
 			<label  class=" opcional" for="">telefono</label>
