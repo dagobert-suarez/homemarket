@@ -8,23 +8,15 @@
 		</div>
 	<div class="content-form">
 		<div class="form-gruop">
-			<label  class=" required" for="">Primer Nombre:</label>
+			<label  class=" required" for="">Nombre:</label>
 			<input type="text" name="data[]" placeholder="nombre" class="pitp" required>
 		</div>
+		
 		<div class="form-gruop">
-			<label  class=" opcional" for="">segundo Nombre</label>
-			<input type="text" name="data[]" placeholder="segundo nombre" class="pitp">
-		</div>
-	</div>
-	<div class="content-form">
-		<div class="form-gruop">
-				<label  class=" required" for="">Primer Apellido</label>
+				<label  class=" required" for="">Apellido</label>
 				<input type="text" name="data[]" placeholder="apellido" class="pitp" required>
 		</div>
-		<div class="form-gruop">
-					<label  class=" opcional" for="">segundo Apellido</label>
-					<input type="text" name="data[]" placeholder="segundo apellido" class="pitp">
-		</div>
+
 	</div>
 	<div class="content-form">
 		<div class="form-gruop">
