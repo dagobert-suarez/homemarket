@@ -18,15 +18,16 @@ body{
   font-size: 17px;
   position: fixed;
 }
-/*.content--profile{
-    position: absolute;
-    margin-left: 60px;
+/*.content-profile{
+  position: fixed;
+
 }*/
 .menu--top ul{
   width: 180px;
   display: flex;
   justify-content: space-around;
   list-style-type:none;
+  position: fixed;
 }
 ul{
   text-decoration: none;
@@ -50,8 +51,8 @@ li i:hover{
 /*parte more*/
 .more{
   display: flex;
-  width: 100%
-
+  width: 100%;
+  /*margin-top: 0%;*/
 }
 .content-title{
   border-bottom: 1px solid #ffab07;
@@ -72,15 +73,21 @@ li i:hover{
 }
 .contentex ul li a:hover{
     background-color:orange;
-    color: white;
+    color: #000000;
 }
 
 .mas{
   width: 20%;
-  padding: 5px 5px;
-  margin: 5px 10px;
+  padding: 10px 5px;
+  margin: 5px 20px;
   background-color: #f1f1f1 ;
   color: #434d53;
   border-radius: 8px;
-
 }
+/*content gallery*/
+.gallery--lol{
+    width: 75%;
+    background-color: #f1f1f1;
+}
+
+/**/
