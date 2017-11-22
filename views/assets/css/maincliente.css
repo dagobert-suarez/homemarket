@@ -7,20 +7,20 @@ body{
   top: 0;
   padding: 0;
 }
+/*está es la parte del menu top*/
 .menu--top{
   width: 100%;
   display: flex;
   justify-content: flex-end;
   padding: 17px 0px;
-  /*background-color: #ffb103;
-  color:#000;*/
   text-align: center;
   font-family: 'Cabin', sans-serif;
   font-size: 17px;
+  position: fixed;
 }
 /*.content--profile{
     position: absolute;
-
+    margin-left: 60px;
 }*/
 .menu--top ul{
   width: 180px;
@@ -33,5 +33,54 @@ ul{
 }
 li i:hover{
   background-color: inherit;
-  color: white;
+  color:white;
+  cursor: pointer;
+}
+/*finaliza menú top*/
+/* inicio info-map*/
+.info-map{
+  width: 100%;
+
+}
+#map{
+  width: 60%;
+  height: 80vh;
+}
+/* finaliza  info-map*/
+/*parte more*/
+.more{
+  display: flex;
+  width: 100%
+
+}
+.content-title{
+  border-bottom: 1px solid #ffab07;
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+.contentex ul{
+  margin-top: 10px;
+  display: block;
+  padding: 10px 12px;
+  font-family: 'Cavin',sans-serif;
+}
+.contentex ul li a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+.contentex ul li a:hover{
+    background-color:orange;
+    color: white;
+}
+
+.mas{
+  width: 20%;
+  padding: 5px 5px;
+  margin: 5px 10px;
+  background-color: #f1f1f1 ;
+  color: #434d53;
+  border-radius: 8px;
+
 }

@@ -23,3 +23,11 @@
         <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
       </ul>
     </div>
+    <div class="info-map gray1">
+      <div id="map"></div>
+    </div>
+    <div class="more gray2">
+      <?php
+        require_once 'views/modules/cliente/more.php';
+      ?>
+    </div>

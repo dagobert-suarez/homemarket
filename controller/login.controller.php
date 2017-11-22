@@ -26,7 +26,7 @@ class LoginController{
 			if (password_verify($_POST['contra'], $contra['contra'])) {
 				$_SESSION['user']=$result['pNom_cli'];
 				    // echo "<h1>¡ingreso corretamente</h1>" ;
-				    header('Location:ingreso');
+				    header('Location:cliente');
 				} else {
 				    echo '<h1>La contraseña no es válida</h1>.';
 				}
