@@ -26,9 +26,10 @@ class viewsController{
 		require_once "views/modules/registrosuper.php";
 		require_once "views/include/scope.footer.php";
 	}
-	function paral(){
-		require_once "views/include/scope.header.php";
+	function cliente(){
+		require_once "views/modules/cliente/header.php";
 		require_once "views/modules/paral.php";
+		require_once "views/modules/cliente/footer.php";
 	}
 
 

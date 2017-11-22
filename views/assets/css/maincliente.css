@@ -1,0 +1,14 @@
+body{
+  margin: 0;
+  top: 0;
+  padding: 0;
+}
+.menutop{
+  margin: 0;
+}
+ul{
+  background-color: black;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+}

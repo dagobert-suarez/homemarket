@@ -6,10 +6,11 @@ RewriteRule ^inicio$ index.php?controller=views
 RewriteRule ^ingreso$ index.php?controller=views&a=ingreso
 RewriteRule ^master$ index.php?controller=views&a=master
 RewriteRule ^super$ index.php?controller=views&a=super
-RewriteRule ^paral$ index.php?controller=views&a=paral
 RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
+
 #cliente
+RewriteRule ^cliente$ index.php?controller=views&a=cliente

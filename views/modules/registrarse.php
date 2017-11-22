@@ -1,4 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <section class="setregistrarse" id="registro">
 <div class="formpart">
 	<h1 class="regis">Registrate en homemarket</h1>
@@ -77,8 +76,9 @@
 				<label  class="required" for="">verificar contraseña</label>
 				<input type="password" name="rpassword" placeholder="verificar contraseña" required>
 	</div>
-	<div class="g-recaptcha" data-theme="dark" data-sitekey="6LdgiTkUAAAAADv4ddSh-yCAAl-j15tc1K8CAQsv"></div>
-
+	<div class="fomr-group" id="recaptcha">
+			<div class="g-recaptcha" data-theme="dark" data-sitekey="6LdgiTkUAAAAADv4ddSh-yCAAl-j15tc1K8CAQsv"></div>
+	</div>
 		<button type="button" name="registrar" class="btntnt" onclick="miFuncion()">Registrarse</button>
 	</form>
 </div>

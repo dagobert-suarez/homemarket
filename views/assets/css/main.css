@@ -219,11 +219,12 @@ body{
     padding-bottom: 10px;
     border-bottom: 2px solid #faac00 ;
     font-size: 25px;
-    /*font-family: 'Cabin', sans-serif;*/
     font-family: 'Noto_Sans', sans-serif;
-
-
 }
+#recaptcha{
+    margin: 15px 15px 0px;
+}
+
 .btntnt{
     background-color: white;
     color: rgb(0, 0, 0);
