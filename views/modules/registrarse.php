@@ -2,7 +2,7 @@
 <section class="setregistrarse" id="registro">
 <div class="formpart">
 	<h1 class="regis">Registrate en homemarket</h1>
-	<form method="post" action="nuevo-cliente">
+	<form id="frmregistro" method="post" action="nuevo-cliente">
 		<div class="form-gruop">
 			<label  class=" required" for="">Numero de documento:</label>
 			<input type="number" name="data[]" placeholder="documento identidad" required>
@@ -77,7 +77,9 @@
 				<label  class="required" for="">verificar contraseña</label>
 				<input type="password" name="rpassword" placeholder="verificar contraseña" required>
 	</div>
-		<button type="submit" name="registrar" class="btntnt">Registrarse</button>
+	<div class="g-recaptcha" data-theme="dark" data-sitekey="6LdgiTkUAAAAADv4ddSh-yCAAl-j15tc1K8CAQsv"></div>
+
+		<button type="button" name="registrar" class="btntnt" onclick="miFuncion()">Registrarse</button>
 	</form>
 </div>
 <div class="formtext">

@@ -1,6 +1,17 @@
 var slideIndex = 0;
 showSlides();
 
+function miFuncion() {
+  var response = grecaptcha.getResponse();
+
+  if(response.length == 0){
+    alert("Captcha no verificado");
+
+  } else {
+    document.getElementById('frmregistro').submit()
+  }
+}
+
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("Slides");
