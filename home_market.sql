@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2017 a las 23:52:15
+-- Tiempo de generación: 22-11-2017 a las 20:31:20
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -45,7 +45,6 @@ DELIMITER ;
 CREATE TABLE `acceso` (
   `contra` varchar(255) DEFAULT NULL,
   `token` varchar(255) NOT NULL,
-  `estado` varchar(11) NOT NULL,
   `doc_usu` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -53,9 +52,8 @@ CREATE TABLE `acceso` (
 -- Volcado de datos para la tabla `acceso`
 --
 
-INSERT INTO `acceso` (`contra`, `token`, `estado`, `doc_usu`) VALUES
-('14', 'Asdaw', '1', 1025487965),
-('1234', 'dbgvdfbfsd', '1', 3251478);
+INSERT INTO `acceso` (`contra`, `token`, `doc_usu`) VALUES
+('15487458', 'ascascaefasc', 1017257020);
 
 -- --------------------------------------------------------
 
@@ -73,11 +71,7 @@ CREATE TABLE `calificacion` (
 --
 
 INSERT INTO `calificacion` (`id_cal`, `pun_cal`) VALUES
-(1, '5'),
-(2, '4'),
-(3, '3'),
-(4, '2'),
-(5, '1');
+(1, '5');
 
 -- --------------------------------------------------------
 
@@ -95,11 +89,7 @@ CREATE TABLE `calificacion_supermercado` (
 --
 
 INSERT INTO `calificacion_supermercado` (`nit_sup`, `id_cal`) VALUES
-('500.258.257-2', 1),
-('456.587.1254', 4),
-('305.325.4458', 2),
-('600.458.1234', 1),
-('456.587.1254', 2);
+('305.325.4458', 1);
 
 -- --------------------------------------------------------
 
@@ -111,6 +101,13 @@ CREATE TABLE `calificacion_usu` (
   `doc_usu` int(11) DEFAULT NULL,
   `id_cal` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `calificacion_usu`
+--
+
+INSERT INTO `calificacion_usu` (`doc_usu`, `id_cal`) VALUES
+(1017257020, 1);
 
 -- --------------------------------------------------------
 
@@ -129,9 +126,7 @@ CREATE TABLE `ciudad` (
 --
 
 INSERT INTO `ciudad` (`cod_ciu`, `nom_ciu`, `cod_dpto`) VALUES
-(5003, 'itagui', 5),
-(5330, 'poblado', 5),
-(50003, 'medellin', 5);
+(5003, 'itagui', 21);
 
 -- --------------------------------------------------------
 
@@ -153,10 +148,7 @@ CREATE TABLE `detalle_pedido` (
 --
 
 INSERT INTO `detalle_pedido` (`id_ped`, `cod_pro`, `can_pro`, `val_tot`, `cod_ped`, `id_stock`) VALUES
-(1, '20', 486, 48647, 4, 20185),
-(2, '30', 534865, 5348, 2, 4887),
-(3, '50', 652349, 5678, 3, 548),
-(4, '258', 215, 41548, 1, 201);
+(5, '54', 54, 25454, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -175,7 +167,7 @@ CREATE TABLE `dpto` (
 --
 
 INSERT INTO `dpto` (`cod_dpto`, `nom_dpto`, `cod_pais`) VALUES
-(5, 'antioquia', 57);
+(21, 'antioquia', 220);
 
 -- --------------------------------------------------------
 
@@ -188,6 +180,13 @@ CREATE TABLE `pais` (
   `nombre_pais` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `pais`
+--
+
+INSERT INTO `pais` (`cod_pais`, `nombre_pais`) VALUES
+(220, 'colombia');
+
 -- --------------------------------------------------------
 
 --
@@ -199,19 +198,15 @@ CREATE TABLE `pedido` (
   `emp_ped` int(11) DEFAULT NULL,
   `fech_ped` datetime DEFAULT NULL,
   `doc_usu` int(11) DEFAULT NULL,
-  `dir_ped` varchar(30) DEFAULT NULL,
-  `doc_cli` int(11) DEFAULT NULL
+  `dir_ped` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `pedido`
 --
 
-INSERT INTO `pedido` (`cod_ped`, `emp_ped`, `fech_ped`, `doc_usu`, `dir_ped`, `doc_cli`) VALUES
-(1, 0, '2017-11-01 00:00:00', 165478964, 'calle 98 # 35-45', 1017587425),
-(2, 645, '2017-08-16 00:00:00', 165478964, 'calle 70 # 50-38 ', 1245874857),
-(3, 315, '2017-11-02 00:00:00', 3251478, 'calle94a # 44-18', 12358476),
-(4, 21854, '2017-10-16 00:00:00', 14578969, 'cale 48 # 48-25', 1017587425);
+INSERT INTO `pedido` (`cod_ped`, `emp_ped`, `fech_ped`, `doc_usu`, `dir_ped`) VALUES
+(1, 215, '2017-10-03 00:00:00', 1017257020, 'calle 30 # 50-30');
 
 -- --------------------------------------------------------
 
@@ -233,10 +228,7 @@ CREATE TABLE `permisos` (
 --
 
 INSERT INTO `permisos` (`id_per`, `id_rol`, `C`, `R`, `U`, `D`) VALUES
-(1, 1, 1, 1, 1, 1),
-(2, 2, 1, 1, 1, 1),
-(3, 3, 1, 1, 1, 1),
-(4, 4, 1, 1, 1, 1);
+(1, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -249,7 +241,6 @@ CREATE TABLE `productos` (
   `nom_pro` varchar(50) NOT NULL,
   `des_pro` varchar(1000) DEFAULT NULL,
   `mar_pro` varchar(30) NOT NULL,
-  `IMG` varchar(255) NOT NULL,
   `id_tip_pro` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -257,11 +248,8 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`cod_pro`, `nom_pro`, `des_pro`, `mar_pro`, `IMG`, `id_tip_pro`) VALUES
-('20', 'queso', 'rico queso echo de leche de vaca ', 'colanta', '', 259),
-('258', 'arroz', 'libra de arroz diana con un contenido de 500 gramos', 'diana', '', 125),
-('30', 'huevos', 'son huevos blanco ricos para comer ', 'kikes', '', 359),
-('50', 'leche', 'leche  rica y nutritiva', 'colanta', '', 125);
+INSERT INTO `productos` (`cod_pro`, `nom_pro`, `des_pro`, `mar_pro`, `id_tip_pro`) VALUES
+('54', 'arroz', 'libra de arroz de 500 g', 'diana', 3);
 
 -- --------------------------------------------------------
 
@@ -279,10 +267,7 @@ CREATE TABLE `producto_stock` (
 --
 
 INSERT INTO `producto_stock` (`id_stock`, `cod_pro`) VALUES
-(4887, '258'),
-(20185, '20'),
-(548, '30'),
-(201, '50');
+(5, '54');
 
 -- --------------------------------------------------------
 
@@ -302,10 +287,7 @@ CREATE TABLE `proveedores` (
 --
 
 INSERT INTO `proveedores` (`cod_prov`, `nom_prov`, `dir_prov`, `tel_pro`) VALUES
-(1, 'samuel', 'calle 45 # 10-50', 255486),
-(2, 'estefa', 'calle 80 # 30-50', 4554878),
-(3, 'camilo', 'calle30#60-70', 1248579),
-(4, 'el braya', 'carrera 50#50-50', 5248747);
+(1025, 'samuel', 'cale 39 # 50-50', 2587584);
 
 -- --------------------------------------------------------
 
@@ -323,10 +305,7 @@ CREATE TABLE `proveedores_productos` (
 --
 
 INSERT INTO `proveedores_productos` (`cod_pro`, `cod_prov`) VALUES
-('20', 3),
-('20', 3),
-('30', 4),
-('50', 2);
+('54', 1025);
 
 -- --------------------------------------------------------
 
@@ -344,10 +323,7 @@ CREATE TABLE `pro_ped` (
 --
 
 INSERT INTO `pro_ped` (`id_ped`, `cod_pro`) VALUES
-(1, '20'),
-(2, '30'),
-(3, '50'),
-(4, '258');
+(5, '54');
 
 -- --------------------------------------------------------
 
@@ -365,10 +341,8 @@ CREATE TABLE `rol` (
 --
 
 INSERT INTO `rol` (`id_rol`, `nom_rol`) VALUES
-(1, 'cliente'),
-(2, 'empleado'),
-(3, 'administardor'),
-(4, 'super admin');
+(1, 'aministrador'),
+(2, 'cliente');
 
 -- --------------------------------------------------------
 
@@ -391,10 +365,7 @@ CREATE TABLE `stock` (
 --
 
 INSERT INTO `stock` (`id_stock`, `can_pro`, `fech_ing_pro`, `uniMed_pro`, `valCom_pro`, `valVen_pro`, `id_tip_pro`) VALUES
-(201, 5, '2017-11-06 00:00:00', 'peso', 200, 504, 359),
-(548, 21, '2017-10-17 00:00:00', 'libras', 2119, 15, 1258),
-(4887, 5, '2017-11-06 00:00:00', 'kilo', 500, 1000, 125),
-(20185, 312, '2017-11-06 00:00:00', 'gramos', 2315, 1254, 125);
+(5, 20, '2017-07-11 00:00:00', 'libra', 1000, 1500, 3);
 
 -- --------------------------------------------------------
 
@@ -419,10 +390,7 @@ CREATE TABLE `supermercado` (
 --
 
 INSERT INTO `supermercado` (`nit_sup`, `nom_sup`, `dir_sup`, `tel_sup`, `loc_sup`, `cod_ciu`, `logo_sup`, `lon_sup`, `lat_sup`) VALUES
-('305.325.4458', 'exgordo ', 'calle 98 # 50-10', 325487, 'sdfg', 50003, 'qwew', 'ergerg', 'fdsgdsf'),
-('456.587.1254', 'las granjas', 'calle 95#40-50', 2136454, '4523456', 5330, 'sedgsdd', '1236', '2345274'),
-('500.258.257-2', 'supermecado nose', 'calle 98 # 45-10', 5874530, '168453', 50003, 'sdsf', '5012', '7857'),
-('600.458.1234', 'compre aqui', 'calle 98#50-12', 32158, 'wsadsaf', 5003, 'sdfs', 'dsafa', 'asdf');
+('305.325.4458', 'exgordo', 'calle 98 # 50-10', 2587468, 'efhdu5d798', 5003, 'efsdcwde', 'sdcsfdef', 'dsfafsdfe');
 
 -- --------------------------------------------------------
 
@@ -440,10 +408,7 @@ CREATE TABLE `supermercado_ciudad` (
 --
 
 INSERT INTO `supermercado_ciudad` (`nit_sup`, `cod_ciu`) VALUES
-('305.325.4458', 5003),
-('456.587.1254', 50003),
-('500.258.257-2', 5330),
-('600.458.1234', 5003);
+('305.325.4458', 5003);
 
 -- --------------------------------------------------------
 
@@ -461,10 +426,7 @@ CREATE TABLE `tipo_producto` (
 --
 
 INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
-(125, 'leche'),
-(259, 'queso'),
-(359, 'huevos'),
-(1258, 'arroz');
+(3, 'arroz');
 
 -- --------------------------------------------------------
 
@@ -474,29 +436,24 @@ INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
 
 CREATE TABLE `usuario` (
   `doc_usu` int(11) NOT NULL,
-  `pNom_usu` varchar(30) NOT NULL,
-  `sNom_usu` varchar(30) DEFAULT NULL,
-  `pApe_usu` varchar(30) NOT NULL,
-  `sApe_usu` varchar(30) NOT NULL,
+  `nom_usu` varchar(30) NOT NULL,
+  `ape_usu` varchar(30) NOT NULL,
   `fech_nac_usu` datetime NOT NULL,
   `gen_usu` varchar(20) NOT NULL,
-  `cel_usu` int(11) NOT NULL,
+  `cel_usu` bigint(20) NOT NULL,
   `tel_usu` int(11) NOT NULL,
   `email_usu` varchar(50) NOT NULL,
-  `IMG` varchar(255) NOT NULL,
+  `cod_ciu` int(11) NOT NULL,
   `id_rol` int(11) DEFAULT NULL,
-  `cod_ciu` int(11) DEFAULT NULL
+  `img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`doc_usu`, `pNom_usu`, `sNom_usu`, `pApe_usu`, `sApe_usu`, `fech_nac_usu`, `gen_usu`, `cel_usu`, `tel_usu`, `email_usu`, `IMG`, `id_rol`, `cod_ciu`) VALUES
-(3251478, 'carlos', NULL, 'perez', 'ortiz', '1995-03-25 00:00:00', 'hombre', 1547854, 25487, 'carlos@hotmail.com', '', 2, NULL),
-(14578969, 'cristina', NULL, 'bedoya ', 'urrego', '1997-06-20 00:00:00', 'mujer', 321659785, 2365984, 'cristina@hotmail.com', '', 4, NULL),
-(165478964, 'juan', 'carlos', 'osorio', 'cardona', '1997-10-21 00:00:00', 'hombre', 2147483647, 5219584, 'nose@hotmail.com', '', 2, NULL),
-(1025487965, 'maria', 'jose', 'lombana', 'higuita', '1996-03-20 00:00:00', 'mujer', 32659841, 3256988, 'jose@hotmail.com', '', 1, NULL);
+INSERT INTO `usuario` (`doc_usu`, `nom_usu`, `ape_usu`, `fech_nac_usu`, `gen_usu`, `cel_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img`) VALUES
+(1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew');
 
 -- --------------------------------------------------------
 
@@ -514,10 +471,7 @@ CREATE TABLE `usuario_supermercado` (
 --
 
 INSERT INTO `usuario_supermercado` (`doc_usu`, `nit_sup`) VALUES
-(3251478, '305.325.4458'),
-(14578969, '456.587.1254'),
-(165478964, '500.258.257-2'),
-(1025487965, '600.458.1234');
+(1017257020, '305.325.4458');
 
 --
 -- Índices para tablas volcadas
@@ -584,8 +538,7 @@ ALTER TABLE `pais`
 --
 ALTER TABLE `pedido`
   ADD PRIMARY KEY (`cod_ped`),
-  ADD KEY `doc_usu` (`doc_usu`),
-  ADD KEY `doc_cli` (`doc_cli`);
+  ADD KEY `doc_usu` (`doc_usu`);
 
 --
 -- Indices de la tabla `permisos`
@@ -666,9 +619,8 @@ ALTER TABLE `tipo_producto`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`doc_usu`),
-  ADD UNIQUE KEY `cod_ciu` (`cod_ciu`),
   ADD KEY `id_rol` (`id_rol`),
-  ADD KEY `cod_ciu_2` (`cod_ciu`);
+  ADD KEY `cod_ciu` (`cod_ciu`);
 
 --
 -- Indices de la tabla `usuario_supermercado`
@@ -691,13 +643,13 @@ ALTER TABLE `calificacion`
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
-  MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `stock`
@@ -727,27 +679,28 @@ ALTER TABLE `calificacion_supermercado`
 --
 ALTER TABLE `calificacion_usu`
   ADD CONSTRAINT `calificacion_usu_ibfk_2` FOREIGN KEY (`id_cal`) REFERENCES `calificacion` (`id_cal`),
-  ADD CONSTRAINT `calificacion_usu_ibfk_3` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`) ON DELETE CASCADE;
+  ADD CONSTRAINT `calificacion_usu_ibfk_3` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`);
 
 --
 -- Filtros para la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
   ADD CONSTRAINT `detalle_pedido_ibfk_1` FOREIGN KEY (`cod_pro`) REFERENCES `productos` (`cod_pro`),
-  ADD CONSTRAINT `detalle_pedido_ibfk_2` FOREIGN KEY (`cod_ped`) REFERENCES `pedido` (`cod_ped`),
-  ADD CONSTRAINT `detalle_pedido_ibfk_3` FOREIGN KEY (`id_stock`) REFERENCES `stock` (`id_stock`);
+  ADD CONSTRAINT `detalle_pedido_ibfk_3` FOREIGN KEY (`id_stock`) REFERENCES `stock` (`id_stock`),
+  ADD CONSTRAINT `detalle_pedido_ibfk_4` FOREIGN KEY (`cod_ped`) REFERENCES `pedido` (`cod_ped`) ON DELETE CASCADE;
 
 --
--- Filtros para la tabla `pais`
+-- Filtros para la tabla `dpto`
 --
-ALTER TABLE `pais`
-  ADD CONSTRAINT `pais_ibfk_1` FOREIGN KEY (`cod_pais`) REFERENCES `dpto` (`cod_pais`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `dpto`
+  ADD CONSTRAINT `dpto_ibfk_1` FOREIGN KEY (`cod_dpto`) REFERENCES `ciudad` (`cod_dpto`) ON DELETE CASCADE,
+  ADD CONSTRAINT `dpto_ibfk_2` FOREIGN KEY (`cod_pais`) REFERENCES `pais` (`cod_pais`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  ADD CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`);
+  ADD CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `permisos`
@@ -792,28 +745,28 @@ ALTER TABLE `stock`
 -- Filtros para la tabla `supermercado`
 --
 ALTER TABLE `supermercado`
-  ADD CONSTRAINT `supermercado_ibfk_1` FOREIGN KEY (`cod_ciu`) REFERENCES `ciudad` (`cod_ciu`);
+  ADD CONSTRAINT `supermercado_ibfk_1` FOREIGN KEY (`cod_ciu`) REFERENCES `ciudad` (`cod_ciu`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `supermercado_ciudad`
 --
 ALTER TABLE `supermercado_ciudad`
   ADD CONSTRAINT `supermercado_ciudad_ibfk_1` FOREIGN KEY (`nit_sup`) REFERENCES `supermercado` (`nit_sup`),
-  ADD CONSTRAINT `supermercado_ciudad_ibfk_2` FOREIGN KEY (`cod_ciu`) REFERENCES `ciudad` (`cod_ciu`);
+  ADD CONSTRAINT `supermercado_ciudad_ibfk_2` FOREIGN KEY (`cod_ciu`) REFERENCES `ciudad` (`cod_ciu`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`),
-  ADD CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`cod_ciu`) REFERENCES `ciudad` (`cod_ciu`) ON DELETE CASCADE;
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`cod_ciu`) REFERENCES `ciudad` (`cod_ciu`) ON DELETE CASCADE,
+  ADD CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `usuario_supermercado`
 --
 ALTER TABLE `usuario_supermercado`
-  ADD CONSTRAINT `usuario_supermercado_ibfk_1` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`),
-  ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`nit_sup`) REFERENCES `supermercado` (`nit_sup`);
+  ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`nit_sup`) REFERENCES `supermercado` (`nit_sup`),
+  ADD CONSTRAINT `usuario_supermercado_ibfk_3` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

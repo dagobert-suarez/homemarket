@@ -67,9 +67,21 @@
 				<label  class="required" for="">verificar contraseña</label>
 				<input type="password" name="rpassword" placeholder="verificar contraseña" id="rpassword" required>
 	</div>
+	<div class="form-gruop">
+			<label  class=" required" for="">crear cuenta como</label>
+			 <select name="data[]" placeholder="codigo de la ciudad" class="city">
+			 <option value=""></option>
+				 <?php
+				 foreach ($this->userModel->readRol() as $row){
+					 echo "<option value='$row[0]'>$row[1]</option>";
+				 }
+				 ?>
+			 </select>
+	</div>
 	<div class="fomr-group" id="recaptcha">
 			<div class="g-recaptcha" data-theme="dark" data-sitekey="6LdgiTkUAAAAADv4ddSh-yCAAl-j15tc1K8CAQsv"></div>
 	</div>
+
 		<button type="button" name="registrar" class="btntnt" onclick="miFuncion()">Registrarse</button>
 	</form>
 </div>

@@ -9,6 +9,8 @@ class UserController{
 
 	function crear(){
 		$data=$_POST['data'];
+		// print_r($data);
+		// die();
 		$data[9]=password_hash($data[9], PASSWORD_DEFAULT);
 		$token = md5($data[0].$data[1]);
 		$result = $this->users->createUser($data,$token);
