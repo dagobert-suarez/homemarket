@@ -9,10 +9,10 @@ class LoginModel{
 			die($e->getMessage());
 		}
 	}
- 
+
 	function user($nombre){
 		try {
-				$sql = "SELECT * FROM cliente WHERE email_cli = ? ";
+				$sql = "SELECT * FROM usuario WHERE email_usu = ? ";
 				$query = $this->pdo->prepare($sql);
 				$query->execute(array($nombre));
 				$result = $query->fetch(PDO::FETCH_BOTH);
@@ -25,7 +25,7 @@ class LoginModel{
 
 	function contra($usu){
 		try {
-				$sql = "SELECT * FROM acceso WHERE doc_cli = ? ";
+				$sql = "SELECT * FROM acceso WHERE doc_usu = ? ";
 				$query = $this->pdo->prepare($sql);
 				$query->execute(array($usu));
 				$result = $query->fetch(PDO::FETCH_BOTH);
