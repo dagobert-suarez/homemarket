@@ -13,7 +13,7 @@ class LoginController{
 	if ($result!=array()){
 		$result = array("true","");
 	}else{
-		$result = array("false","El fucking Usuario no existe");
+		$result = array("false","El Usuario no existe");
 	}
 
 	echo json_encode($result);
