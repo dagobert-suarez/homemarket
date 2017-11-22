@@ -9,10 +9,17 @@
   </head>
   <body>
   <section class="">
-    <div  class="menutop">
+    <div class="menu--top green1">
+      <div class="content-profile">
+        <p><?php if (isset($_SESSION['user'])) {
+            echo $_SESSION['user'];
+        }else{
+          header('Location:inicio');
+        } ?></p>
+      </div>
       <ul>
-        <li> </li>
-        <li><a href="#">ajustes</a></li>
-        <li><a href="#">cerrar sesion</a></li>
+        <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
+        <li><i class="fa fa-cog" aria-hidden="true"></i></li>
+        <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
       </ul>
     </div>

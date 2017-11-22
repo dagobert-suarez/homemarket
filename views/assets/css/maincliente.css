@@ -1,14 +1,37 @@
+@import "reset.css";
+@import "color.css";
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
+
 body{
   margin: 0;
   top: 0;
   padding: 0;
 }
-.menutop{
-  margin: 0;
+.menu--top{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 17px 0px;
+  /*background-color: #ffb103;
+  color:#000;*/
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  font-size: 17px;
+}
+/*.content--profile{
+    position: absolute;
+
+}*/
+.menu--top ul{
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type:none;
 }
 ul{
-  background-color: black;
-  margin: 0;
-  list-style-type: none;
-  width: 100%;
+  text-decoration: none;
+}
+li i:hover{
+  background-color: inherit;
+  color: white;
 }
