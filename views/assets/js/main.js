@@ -58,6 +58,11 @@ $("input[name='email']").focusout(function(){
           $("span.error").remove();
           $(".btnsave").prop("disabled",false);
         }
-
     })
+})
+
+$('[name=email]').focus(function(){
+  // if ($(this).val().length == 0){
+    $("span.error").remove();
+  // }
 })
