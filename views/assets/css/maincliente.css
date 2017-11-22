@@ -4,8 +4,8 @@
 
 body{
   margin: 0;
-  top: 0;
-  padding: 0;
+  /*top: 0;
+  padding: 0;*/
 }
 /*está es la parte del menu top*/
 .menu--top{
@@ -15,19 +15,20 @@ body{
   padding: 17px 0px;
   text-align: center;
   font-family: 'Cabin', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   position: fixed;
 }
-/*.content-profile{
-  position: fixed;
-
-}*/
+.content-profile {
+  position:fixed;;
+  left: 1090px;
+  color: #121212;
+}
 .menu--top ul{
   width: 180px;
   display: flex;
   justify-content: space-around;
   list-style-type:none;
-  position: fixed;
+  /*position: fixed;*/
 }
 ul{
   text-decoration: none;
