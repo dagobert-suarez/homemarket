@@ -69,7 +69,7 @@
 	</div>
 	<div class="form-gruop">
 			<label  class=" required" for="">crear cuenta como</label>
-			 <select name="data[]" class="city">
+			 <select name="data[]" class="city" required>
 			 <option value=""></option>
 				 <?php
 				 foreach ($this->userModel->readRol() as $row){
