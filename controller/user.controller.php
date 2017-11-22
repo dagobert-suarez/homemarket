@@ -14,6 +14,12 @@ class UserController{
 		$result = $this->users->createUser($data,$token);
 		echo $result;
 
+$response = $_POST['g-recaptcha-response'];
+$secret_key = '6LdgiTkUAAAAAEc2e9YlcEiyD8nSWZu1YXc3SDWP';
+$ip_user = $_SERVER['REMOTE_ADDR'];
+$validation = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$response&remoteip=$ip_user");
+$result = json_decode($validation);
+
 	}
 
 }

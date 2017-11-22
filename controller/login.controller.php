@@ -8,6 +8,17 @@ class LoginController{
         $this->users = new LoginModel();
     }
 
+		function validar_usuario(){
+	$result = $this->users->user($_POST['email']);
+	if ($result!=array()){
+		$result = array("true","");
+	}else{
+		$result = array("false","El fucking Usuario no existe");
+	}
+
+	echo json_encode($result);
+}
+
 	function validar(){
 		$result = $this->users->user($_POST['email']);
 		if ($result!=array()){

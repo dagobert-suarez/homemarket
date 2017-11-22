@@ -34,3 +34,19 @@ window.onclick = function(outclick){
         modal.style.display= "none";
     }
 }
+
+$("input[name='email']").focusout(function(){
+    $.post("validar_usuario",{email:$(this).val()},function(result){
+        var result = JSON.parse(result);
+        $("span.error").remove();
+
+        if(result[0] == "false"){
+          $("input[name='email']").after("<span class='error'>"+result[1]+"</span>");
+          $(".btnsave").prop("disabled",true);
+        }else{
+          $("span.error").remove();
+          $(".btnsave").prop("disabled",false);
+        }
+
+    })
+})
