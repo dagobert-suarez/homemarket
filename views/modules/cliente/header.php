@@ -9,7 +9,7 @@
   </head>
   <body>
   <section class="">
-    <div class="menu--top">
+    <div class="menu--top green1">
       <div class="content-profile">
         <p><?php if (isset($_SESSION['user'])) {
             echo $_SESSION['user'];

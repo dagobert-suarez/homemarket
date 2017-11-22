@@ -82,11 +82,11 @@
 		<button type="button" name="registrar" class="btntnt" onclick="miFuncion()">Registrarse</button>
 	</form>
 </div>
-<div class="formtext">
-	<h1 class="tlt">
+<div class="formtext ">
+	<h1 class="tlt ">
 	  EMPIEZA UNA EXPERIENCIA CON HOME MARKET
 	</h1>
-	<div class="text-inf">
+	<div class="text-inf ">
 		<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
 	</div>
 <a href="registrosuper">registrarse como supermercado</a>

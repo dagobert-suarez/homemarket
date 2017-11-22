@@ -1,3 +1,5 @@
+@import "reset.css";
+@import "color.css";
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
 body{
@@ -9,9 +11,9 @@ body{
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 3px 0px;
-  background-color: #ffb103;
-  color:#000;
+  padding: 17px 0px;
+  /*background-color: #ffb103;
+  color:#000;*/
   text-align: center;
   font-family: 'Cabin', sans-serif;
   font-size: 17px;
