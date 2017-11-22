@@ -22,9 +22,9 @@ class LoginController{
 	function validar(){
 		$result = $this->users->user($_POST['email']);
 		if ($result!=array()){
-			$contra = $this->users->contra($result['doc_cli']);
+			$contra = $this->users->contra($result['doc_usu']);
 			if (password_verify($_POST['contra'], $contra['contra'])) {
-				$_SESSION['user']=$result['pNom_cli'];
+				$_SESSION['user']=$result['nom_usu'];
 				    // echo "<h1>¡ingreso corretamente</h1>" ;
 				    header('Location:cliente');
 				} else {
