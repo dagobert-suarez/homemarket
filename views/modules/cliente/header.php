@@ -26,8 +26,10 @@
     <div class="info-map gray1">
       <div id="map"></div>
     </div>
-    <div class="more gray2">
+    <div class="more">
       <?php
         require_once 'views/modules/cliente/more.php';
+        require_once 'views/modules/cliente/content.gallery.php';
+
       ?>
     </div>
