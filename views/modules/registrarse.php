@@ -9,22 +9,22 @@
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class=" required" for="">Nombre:</label>
-			<input type="text" name="data[]" placeholder="nombre" class="pitp" required>
+			<input type="text" name="data[]" class="pitp" required>
 		</div>
 		<div class="form-gruop">
 				<label  class=" required" for="">Apellido</label>
-				<input type="text" name="data[]" placeholder="apellido" class="pitp" required>
+				<input type="text" name="data[]" class="pitp" required>
 		</div>
 	</div>
 
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class=" required" for="">	Fecha de nacimiento</label>
-			<input type="date" name="data[]" placeholder="fecha nacimiento" required>
+			<input type="date" name="data[]" required>
 		</div>
 		<div class="form-gruop">
 			<label  class=" required" for="">Genero</label>
-			<select name="data[]" placeholder="Genero" required>
+			<select name="data[]" required>
 				<option value="m">Hombre</option>
 				<option value="f">Mujer</option>
 				<option value="o">Otro</option>
@@ -35,11 +35,11 @@
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class=" opcional" for="">	celular</label>
-			<input type="bigint" name="data[]" placeholder="n celular">
+			<input type="bigint" name="data[]">
 		</div>
 		<div class="form-gruop">
 			<label  class=" opcional" for="">telefono</label>
-			<input type="number" name="data[]" placeholder="n telefono">
+			<input type="number" name="data[]">
 		</div>
 </div>
 	<div class="form-gruop">
@@ -49,7 +49,7 @@
 
 	<div class="form-gruop">
 			<label  class=" required" for="">ciudad</label>
-			 <select name="data[]" placeholder="codigo de la ciudad" class="city">
+			 <select name="data[]" class="city">
 			 <option value=""></option>
 				 <?php
 				 foreach ($this->userModel->readCities() as $row){
@@ -61,15 +61,15 @@
 
 	<div class="form-gruop">
 				<label  class="required" for="">contraseña</label>
-				<input type="password" name="data[]" placeholder="contraseña" id=password required>
+				<input type="password" name="data[]" id=password required>
 	</div>
 	<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-				<input type="password" name="rpassword" placeholder="verificar contraseña" id="rpassword" required>
+				<input type="password" name="rpassword" id="rpassword" required>
 	</div>
 	<div class="form-gruop">
 			<label  class=" required" for="">crear cuenta como</label>
-			 <select name="data[]" placeholder="codigo de la ciudad" class="city">
+			 <select name="data[]" class="city">
 			 <option value=""></option>
 				 <?php
 				 foreach ($this->userModel->readRol() as $row){
