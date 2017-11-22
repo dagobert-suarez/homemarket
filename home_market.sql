@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2017 a las 20:31:20
+-- Tiempo de generación: 22-11-2017 a las 22:42:58
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -26,8 +26,13 @@ DELIMITER $$
 --
 -- Procedimientos
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_acceso` (IN `contra` VARCHAR(255), IN `token` VARCHAR(255), IN `estado` VARCHAR(11), IN `doc_usu` INT(11))  BEGIN
-INSERT INTO acceso (contra, token, estado, doc_usu) VALUES (contra, token, estado, doc_usu);
+CREATE DEFINER=`root`@`localhost` PROCEDURE `consultar_usu` (IN `documento` INT(11))  BEGIN
+SELECT * FROM usuario where doc_usu=documento;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_usu` (IN `doc_usu` INT(11), IN `nom_usu` VARCHAR(50), IN `ape_usu` VARCHAR(50), IN `fech_nac_usu` DATETIME, IN `gen_usu` VARCHAR(30), IN `cel_usu` BIGINT(11), IN `tel_usu` INT(11), IN `email_usu` VARCHAR(50), IN `cod_ciu` INT(11), IN `id_rol` INT(11), IN `img` VARCHAR(255), IN `contra` VARCHAR(255), IN `token` VARCHAR(255))  BEGIN
+ INSERT INTO usuario VALUES(doc_usu,nom_usu,ape_usu,fech_nac_usu,gen_usu,cel_usu,tel_usu,email_usu,cod_ciu,id_rol,img);
+ INSERT INTO acceso VALUES(contra,token,doc_usu);
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `login` (IN `email` VARCHAR(50))  BEGIN
@@ -53,7 +58,8 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`contra`, `token`, `doc_usu`) VALUES
-('15487458', 'ascascaefasc', 1017257020);
+('15487458', 'ascascaefasc', 1017257020),
+('12345', 'asdfdsas', 14548);
 
 -- --------------------------------------------------------
 
@@ -341,8 +347,8 @@ CREATE TABLE `rol` (
 --
 
 INSERT INTO `rol` (`id_rol`, `nom_rol`) VALUES
-(1, 'aministrador'),
-(2, 'cliente');
+(1, 'cliente'),
+(2, 'administrador');
 
 -- --------------------------------------------------------
 
@@ -436,11 +442,11 @@ INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
 
 CREATE TABLE `usuario` (
   `doc_usu` int(11) NOT NULL,
-  `nom_usu` varchar(30) NOT NULL,
-  `ape_usu` varchar(30) NOT NULL,
+  `nom_usu` varchar(50) NOT NULL,
+  `ape_usu` varchar(50) NOT NULL,
   `fech_nac_usu` datetime NOT NULL,
   `gen_usu` varchar(20) NOT NULL,
-  `cel_usu` bigint(20) NOT NULL,
+  `cel_usu` bigint(11) NOT NULL,
   `tel_usu` int(11) NOT NULL,
   `email_usu` varchar(50) NOT NULL,
   `cod_ciu` int(11) NOT NULL,
@@ -453,6 +459,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`doc_usu`, `nom_usu`, `ape_usu`, `fech_nac_usu`, `gen_usu`, `cel_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img`) VALUES
+(14548, 'sd', 'ds', '1995-02-02 00:00:00', 'hombre', 3146978585, 528257, 'ssdad@hotmail.com', 5003, 2, 'sdfsd'),
+(154847, 'DAVID', 'LOPEZ', '1998-08-11 00:00:00', 'hombre', 3146978585, 2549685, 'david@hotmail.com', 5003, 2, 'efdfdsfdsas'),
+(154987, 'nods', 'fdsd', '1995-02-02 00:00:00', 'hombre', 31548795, 2598743, 'advidsv@hotmail.com', 5003, 2, 'wdsad'),
 (1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew');
 
 -- --------------------------------------------------------
