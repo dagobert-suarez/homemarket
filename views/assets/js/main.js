@@ -5,7 +5,7 @@ function miFuncion() {
   var response = grecaptcha.getResponse();
 
   if(response.length == 0){
-    alert("Captcha no verificado");
+    alert("Falta verificar el Captcha");
 
   } else {
     document.getElementById('frmregistro').submit()
