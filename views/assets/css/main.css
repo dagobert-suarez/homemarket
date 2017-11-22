@@ -284,6 +284,7 @@ body{
  /*}*/
 
 input[type=text],
+input[type=bigint],
 input[type=date],
 input[type=email],
 input[type=number],
@@ -297,7 +298,7 @@ input[type=password]{
     outline: none;
     display: block;
 }
-Label{
+Label {
   margin: 0px 20px 1px;
 }
 .city{
@@ -322,6 +323,7 @@ select{
 input[type=text]:focus,
 input[type=date]:focus,
 input[type=email]:focus,
+input[type=bigint]:focus,
 input[type=number]:focus,
 input[type=password]:focus,select:focus{
     border-color:#ff8200;
@@ -451,3 +453,12 @@ input[type=password]:focus,select:focus{
 
 }
 /*finalizo la parte del login*/
+/*footer*/
+.footer{
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #434d53;
+}
