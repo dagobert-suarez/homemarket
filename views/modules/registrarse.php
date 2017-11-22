@@ -11,14 +11,17 @@
 			<label  class=" required" for="">Nombre:</label>
 			<input type="text" name="data[]" placeholder="nombre" class="pitp" required>
 		</div>
-		
 		<div class="form-gruop">
 				<label  class=" required" for="">Apellido</label>
 				<input type="text" name="data[]" placeholder="apellido" class="pitp" required>
 		</div>
-
 	</div>
+
 	<div class="content-form">
+		<div class="form-gruop">
+			<label  class=" required" for="">	Fecha de nacimiento</label>
+			<input type="date" name="data[]" placeholder="fecha nacimiento" required>
+		</div>
 		<div class="form-gruop">
 			<label  class=" required" for="">Genero</label>
 			<select name="data[]" placeholder="Genero" required>
@@ -26,12 +29,8 @@
 				<option value="f">Mujer</option>
 				<option value="o">Otro</option>
 			</select>
+		</div>
 
-		</div>
-		<div class="form-gruop">
-			<label  class=" required" for="">	Fecha de nacimiento</label>
-			<input type="date" name="data[]" placeholder="fecha nacimiento" required>
-		</div>
 	</div>
 	<div class="content-form">
 		<div class="form-gruop">
