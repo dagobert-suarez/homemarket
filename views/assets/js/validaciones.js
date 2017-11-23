@@ -1,3 +1,4 @@
+
 $("#frmregistro").submit(function(e) {
     e.preventDefault();
             dataJson = [];
@@ -7,7 +8,6 @@ $("#frmregistro").submit(function(e) {
                 dataJson.push(structure);
             });
            var  response = grecaptcha.getResponse();
-
             console.log(dataJson);
             $.ajax({
               url: "nuevo-cliente",

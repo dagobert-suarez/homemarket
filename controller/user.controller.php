@@ -14,7 +14,7 @@ class UserController{
 		$ip_user = $_SERVER['REMOTE_ADDR'];
 		$validation = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$response&remoteip=$ip_user");
 		$result = json_decode($validation);
-		if ($result->success==true) {
+		if ($result->success!=true) {
 			$i = 0;
 			foreach ($data as $row) {
 				$result = $this->validarEspacio($data[$i]);
@@ -26,14 +26,15 @@ class UserController{
 			}
 
 			$result = $this->validarEmail($data[7]);
-				if (!$result==false) {
+				if ($result==false) {
 					echo json_encode($result);
 					return;
 			}
 
 			$result = $this->validarPassword($data[9]);
-			if ($result==false) {
-				echo json_encode('');
+			if (!$result==false) {
+				echo json_encode('contra no valida');
+				return;
 			}
 			//antes de esta joda
 			$data[9]=password_hash($data[9], PASSWORD_DEFAULT);
@@ -118,7 +119,7 @@ class UserController{
 	}
 
 	function validarPassword($data){
-		if (strlen($data[9])<8) {
+		if (strlen($data)<8) {
 			return "la contraseña debe tener minimo 8 caracteres";
 		}else{
 			return false;
