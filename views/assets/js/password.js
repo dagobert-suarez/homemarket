@@ -11,8 +11,8 @@ $(function(){
 		// console.log(especial.test(pass));
 		if(mayus.test(pass)==false){
 				$("#mensaje").text("debe tener mayuscula").css("color","green");
-		}else if(especial.test(pass)==false){
-			$("#mensaje").text("debe tener caracter especial").css("color","green");
+		}else if(especial.test(pass)==true){
+			$("#mensaje").text("no debe tener caracter especial").css("color","green");
 
 		}else if(numbers.test(pass)==false){
 			$("#mensaje").text("debe tener un numero").css("color","green");

@@ -29,6 +29,7 @@ class viewsController{
 	function inicioCliente(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
 					echo "vista de cliente ";
+
 		}else{
 			header("Location: inicio");
 		}

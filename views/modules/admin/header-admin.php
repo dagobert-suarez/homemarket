@@ -13,6 +13,8 @@
 </header>
 
 
+
+
     <?php
     require_once 'registrar_producto.php';
     ?>

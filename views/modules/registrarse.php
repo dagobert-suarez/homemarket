@@ -4,27 +4,27 @@
 	<form id="frmregistro" >
 		<div class="form-gruop">
 			<label  class="required"  for="">Numero de documento:</label>
-			<input type="number" name="data[]" class="new" id="documento" placeholder="documento identidad" required>
+			<input type="number" name="data[]" class="new" id="documento" placeholder="documento identidad" >
 		</div>
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class="required"  for="">Nombre:</label>
-			<input type="text" name="data[]" id="nombre" class="pitp new" placeholder="Nombre" required>
+			<input type="text" name="data[]" id="nombre" class="pitp new" placeholder="Nombre" >
 		</div>
 		<div class="form-gruop">
 				<label  class="required"  for="">Apellido</label>
-				<input type="text" name="data[]" id="Apellido" class="pitp new"placeholder="Apellido" required>
+				<input type="text" name="data[]" id="Apellido" class="pitp new"placeholder="Apellido" >
 		</div>
 	</div>
 
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class="required"  for="">	Fecha de nacimiento</label>
-			<input type="date" name="data[]" id="fecha" class="new" required>
+			<input type="date" name="data[]" id="fecha" class="new" >
 		</div>
 		<div class="form-gruop">
 			<label  class="required" id="genero" for="">Genero</label>
-			<select name="data[]" class="new"  placeholder="Genero" required>
+			<select name="data[]" class="new"  placeholder="Genero" >
 				<option value="m">Hombre</option>
 				<option value="f">Mujer</option>
 				<option value="o">Otro</option>
@@ -44,7 +44,7 @@
 </div>
 	<div class="form-gruop">
 		<label  class="required"  for="">correo</label>
-		<input type="email" name="data[]" class="new" id="correo" placeholder="Correo" required>
+		<input type="email" name="data[]" class="new" id="correo" placeholder="Correo" >
 	</div>
 
 	<div class="form-gruop">
@@ -61,16 +61,16 @@
 
 	<div class="form-gruop">
 				<label  class="required"  for="">contraseña</label>
-				<input type="password" name="data[]" class="new" id="password" required>
+				<input type="password" name="data[]" class="new" id="password" >
 	</div>
 	<div id="mensaje"></div>
 	<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-				<input type="password" name="rpassword" id="rpassword" required>
+				<input type="password" name="rpassword" id="rpassword" >
 	</div>
 	<div class="form-gruop">
 			<label  class=" required" for="">crear cuenta como</label>
-			 <select name="data[]"  class="city new" required>
+			 <select name="data[]"  class="city new" >
 			 <option value=""></option>
 				 <?php
 				 foreach ($this->userModel->readRol() as $row){
@@ -94,6 +94,6 @@
 		<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
 	</div>
 <!-- <a href="registrosuper">registrarse como supermercado</a> -->
-<button type="submit" name="button" id="butreg" class="btntntr" >Registrarse como supermercado</button>
+
 </div>
 </div>

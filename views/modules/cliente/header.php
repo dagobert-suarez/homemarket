@@ -11,10 +11,7 @@
   <section class="">
     <div class="menu--top green1">
       <div class="content-profile">
-        <p><?php if (isset($_SESSION['user'])) {
-            echo"Hola:"." ".$_SESSION['user'];
-        }else{}
-       ?></p>
+
       </div>
       <ul>
         <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
