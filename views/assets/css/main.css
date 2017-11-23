@@ -9,7 +9,7 @@ body{
 .beach{
     height: 686px;
     /*background-color: #929293;*/
-    background-color:  rgb(87, 87, 87);
+    background-color:rgb(190, 190, 190);
     background-size: cover;
     margin-top: 0px;
 }
@@ -110,7 +110,7 @@ body{
 .one-slide{
   width: 100%;
   justify-content: center;
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(190, 190, 190);
   /*opacity: 0.5;*/
 
 
