@@ -46,6 +46,8 @@ window.onclick = function(outclick){
     }
 }
 
+
+// validaciones
 $("input[name='email']").focusout(function(){
     $.post("validar_usuario",{email:$(this).val()},function(result){
         var result = JSON.parse(result);

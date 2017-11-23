@@ -1,6 +1,6 @@
 
 <div id="loginmodal" class="login--form">
-	<form  class="modal-content anima" method="POST" action="validar" >
+	<form  class="modal-content" method="POST" action="validar" >
 		<div class="container-img">
 			<span id="close" class="close" >&times;</span>
 			<h1 class="title">Iniciar sesion</h1>
