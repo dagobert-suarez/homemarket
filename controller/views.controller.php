@@ -31,6 +31,11 @@ class viewsController{
 		require_once "views/modules/cliente/footer.php";
 	}
 
+	function admin(){
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/footer_admin.php";
+	}
+
 
 	function ingreso(){
 		if (isset($_SESSION['user'])) {
