@@ -1,4 +1,4 @@
-<section class="setregistrarse" id="registro">
+<div class="setregistrarse" id="registro">
 <div class="formpart">
 	<h1 class="regis">Registrate en homemarket</h1>
 	<form id="frmregistro" method="post" action="nuevo-cliente">
@@ -86,7 +86,7 @@
 	</form>
 </div>
 <div class="formtext ">
-	<h1 class="tlt ">
+	<h1 class="tlt">
 	  EMPIEZA UNA EXPERIENCIA CON HOME MARKET
 	</h1>
 	<div class="text-inf ">
@@ -94,4 +94,4 @@
 	</div>
 <a href="registrosuper">registrarse como supermercado</a>
 </div>
-</section>
+</div>

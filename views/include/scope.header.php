@@ -10,10 +10,8 @@
 	<body>
 		<section class="containerparal">
 			<header class="main-nav"><br>
-				<?php
-				require_once 'scope.menutop.php';
-				?>
-			</header>
+				<?php	require_once 'scope.menutop.php'; ?>
+			</header><br>
 			<div class="beach">
 				<?php
 				require_once 'scope.nav.php';
@@ -21,7 +19,8 @@
 				?>
 			</div>
 			<div class="beach2">
-				<?php
-				require_once 'views/modules/registrarse.php';
-				 ?>
+				<?php 	require_once 'views/modules/registrarse.php'; ?>
 			</div>
+		<div class="beach3">
+
+		</div>
