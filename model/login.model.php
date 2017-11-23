@@ -12,7 +12,7 @@ class LoginModel{
 
 	function user($nombre){
 		try {
-				$sql = "SELECT * FROM usuario WHERE email_usu = ? ";
+				$sql = "SELECT * FROM usuario INNER JOIN acceso ON usuario.doc_usu = acceso.doc_usu WHERE usuario.email_usu = ?  ";
 				$query = $this->pdo->prepare($sql);
 				$query->execute(array($nombre));
 				$result = $query->fetch(PDO::FETCH_BOTH);

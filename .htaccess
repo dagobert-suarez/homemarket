@@ -13,7 +13,7 @@ RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 #cliente
-RewriteRule ^cliente$ index.php?controller=views&a=cliente
+RewriteRule ^cliente$ index.php?controller=views&a=inicioCliente
 
 #admin
-RewriteRule ^admin$ index.php?controller=views&a=admin
+RewriteRule ^admin$ index.php?controller=views&a=inicioAdmin

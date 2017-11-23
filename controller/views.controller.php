@@ -26,9 +26,18 @@ class viewsController{
 		require_once "views/modules/registrosuper.php";
 		require_once "views/include/scope.footer.php";
 	}
-	function cliente(){
-		require_once "views/modules/cliente/header.php";
-		require_once "views/modules/cliente/footer.php";
+	function inicioCliente(){
+		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
+					echo "vista de cliente ";
+		}else{
+			header("Location: inicio");
+		}
+	}
+	function inicioAdmin(){
+			echo "vista de admin ";
+			require_once "views/modules/admin/header-admin.php";
+			require_once "views/modules/admin/registrar_producto.php";
+			require_once "views/modules/admin/footer_admin.php";
 	}
 
 	function admin(){
@@ -37,13 +46,13 @@ class viewsController{
 	}
 
 
-	function ingreso(){
-		if (isset($_SESSION['user'])) {
-			echo $_SESSION['user'];
-
-		}else{
-			header('Location: inicio');
-		}
-	}
+	// function ingreso(){
+	// 	if (isset($_SESSION['user'])) {
+	// 		echo $_SESSION['user'];
+  //
+	// 	}else{
+	// 		header('Location: inicio');
+	// 	}
+	// }
 }
 ?>
