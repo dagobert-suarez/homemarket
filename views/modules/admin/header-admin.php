@@ -19,9 +19,11 @@
         <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
       </ul>
     </div>
-
-    <div class="more">
-
+<header>
+  <?php
+  require_once 'registrar_producto.php';
+  ?>
+</header>
 
 
     </div>
