@@ -9,21 +9,10 @@
   </head>
   <body>
   <section class="">
-    <div class="menu--top green1">
-      <div class="content-profile">
-
-      </div>
-      <ul>
-        <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
-        <li><i class="fa fa-cog" aria-hidden="true"></i></li>
-        <li><i class="fa fa-sign-out" aria-hidden="true"></i></li>
-      </ul>
-    </div>
 <header>
-  <?php
-  require_once 'registrar_producto.php';
-  ?>
 </header>
 
 
-    </div>
+    <?php
+    require_once 'registrar_producto.php';
+    ?>

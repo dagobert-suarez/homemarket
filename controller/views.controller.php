@@ -34,7 +34,6 @@ class viewsController{
 		}
 	}
 	function inicioAdmin(){
-			echo "vista de admin ";
 			require_once "views/modules/admin/header-admin.php";
 			require_once "views/modules/admin/registrar_producto.php";
 			require_once "views/modules/admin/footer_admin.php";
