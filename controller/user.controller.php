@@ -9,19 +9,143 @@ class UserController{
 
 	function crear(){
 		$data=$_POST['data'];
-		 //print_r($data);
-		//die();
-		$data[9]=password_hash($data[9], PASSWORD_DEFAULT);
-		$token = md5($data[0].$data[1]);
-		$result = $this->users->createUser($data,$token);
-		echo $result;
+		$response = $_POST['cap'];
+		$secret_key = '6LdgiTkUAAAAAEc2e9YlcEiyD8nSWZu1YXc3SDWP';
+		$ip_user = $_SERVER['REMOTE_ADDR'];
+		$validation = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$response&remoteip=$ip_user");
+		$result = json_decode($validation);
+		if ($result->success==true) {
+			$i = 0;
+			foreach ($data as $row) {
+				$result = $this->validarEspacio($data[$i]);
+				if ($result==false) {
+					echo json_encode('llene');
+					return;
+				}
+				$i++;
+			}
 
-$response = $_POST['g-recaptcha-response'];
-$secret_key = '6LdgiTkUAAAAAEc2e9YlcEiyD8nSWZu1YXc3SDWP';
-$ip_user = $_SERVER['REMOTE_ADDR'];
-$validation = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$response&remoteip=$ip_user");
-$result = json_decode($validation);
+			$result = $this->validarEmail($data[7]);
+				if (!$result==false) {
+					echo json_encode($result);
+					return;
+			}
 
+			$result = $this->validarPassword($data[9]);
+			if ($result==false) {
+				echo json_encode('');
+			}
+			//antes de esta joda
+			$data[9]=password_hash($data[9], PASSWORD_DEFAULT);
+			$token = md5($data[0].$data[1]);
+
+			$result = $this->users->createUser($data,$token);
+			echo json_encode($result);
+
+		}else{
+			echo json_encode('haga el cap');
+		}
+
+
+
+
+	}
+
+
+
+		function validarEspacio($data){
+		if($data==''){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	function validarEmail($data){
+		if(filter_var($data, FILTER_VALIDATE_EMAIL)===false){
+			return false;
+		}else{
+			return true;
+		}
+
+
+	}
+
+	function caracterMax($data){
+		if(strelen($data[0])>15){
+			echo "excedio el maximo de caracteres ";
+		}else{
+			return false;
+		}
+
+
+		if(strelen($data[1])>50){
+			echo "excedio el maximo de caracteres ";
+		}else{
+			return false;
+		}
+
+		if(strelen($data[2])>50){
+			echo "excedio el maximo de caracteres ";
+		}else{
+			return false;
+		}
+
+		if(strelen($data[5])>11){
+			echo "excedio el maximo de caracteres ";
+		}else{
+			return false;
+		}
+
+		if(strelen($data[6])>7){
+			echo "excedio el maximo de caracteres ";
+		}else{
+			return false;
+		}
+
+		if(strelen($data[7])>50){
+			echo "excedio el maximo de caracteres ";
+		}else{
+			return false;
+		}
+
+		if(strelen($data[9])>50){
+			echo "excedio el maximo de caracteres ";
+		}else{
+			return false;
+		}
+
+	}
+
+	function validarPassword($data){
+		if (strlen($data[9])<8) {
+			return "la contraseña debe tener minimo 8 caracteres";
+		}else{
+			return false;
+		}
+		if(!preg_match('`[a-z]`', $data[9])){
+			return "debe tener una letra minuscula";
+		}else{
+			return false;
+		}
+
+		if(!preg_match('`[A-Z]`',$data[9])){
+			return "debe tener una letra mayuscula";
+		}else{
+			return false;
+		}
+
+		if(!preg_match('`[0-9]`', $data[9])){
+			return "debe tener un numero";
+		}else{
+			return false;
+		}
+
+		/*if(preg_match(), subject)){
+
+		}else{
+
+		}*/
 	}
 
 }
