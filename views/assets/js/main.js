@@ -79,8 +79,10 @@ $('#rpassword').focusout(function(){
     if (password===$('#rpassword').val()) {
       $("btntnt").prop("disabled",false);
       console.log("son correctos");
+      $('div.error').remove();
     }else{
       $("btntnt").prop("disabled",true);
+      $('#rpassword').after('<div class="error">no son correctos');
       console.log("no son iguales");
     }
 
