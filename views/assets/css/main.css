@@ -433,4 +433,28 @@ input[type=password]:focus,select:focus{
   background-color: #433d53;
   margin-top: -16px;
   height: 100px;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+}
+.copyright{
+  width: 30%;
+  margin: 5px 15px ;
+  justify-content: center;
+  color: darkorange;
+}
+.copyright ul{
+  list-style-type: none;
+  display: flex;
+}
+
+.icons-footer {
+  justify-content: flex-end;
+  font-size: 20px;
+  color: darkorange;
+}
+.icons-footer ul{
+  margin-top: 10px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }

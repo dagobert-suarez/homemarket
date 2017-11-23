@@ -2,12 +2,24 @@
 		</section>
 
 		<footer class="footer">
-			<p>© Copyright 2017 by HomeMarket	All Rights Reserved. |</p>
-			 <div class="">
-				<ul id="" class="menu">
-						<li id="" class="">Términos y Condiciones</li>
-						<li id="" class="">Política de Privacidad</li>
-			  </ul>
+			<div class="copyright">
+				<p>© Copyright 2017 by HomeMarket	All Rights Reserved. |</p>
+				<ul id="" class="">
+					<li>Términos y Condiciones. |</li>
+					<li>Política de Privacidad. |</li>
+				</ul>
+			</div>
+			<div class="contact">
+
+			</div>
+			 <div class="icons-footer">
+				 <h3>Siguenos en:</h3>
+				 <ul>
+						 <li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+						 <li><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+						 <li><i class="fa fa-pinterest-p" aria-hidden="true"></i></li>
+						 <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+			   </ul>
 				</div>
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
