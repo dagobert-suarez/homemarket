@@ -12,9 +12,6 @@
 <header>
 </header>
 
-
-
-
-    <?php
-    require_once 'registrar_producto.php';
-    ?>
+<?php
+require_once "createProduct.php";
+?>
