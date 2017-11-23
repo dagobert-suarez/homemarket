@@ -35,7 +35,7 @@
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class="opcional"  for="">celular</label>
-			<input type="bigint" name="data[]" class="new" id="celular">
+			<input type="number" name="data[]" class="new" id="celular">
 		</div>
 		<div class="form-gruop">
 			<label  class="opcional"  for="">telefono</label>

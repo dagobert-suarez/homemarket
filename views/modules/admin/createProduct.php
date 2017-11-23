@@ -1,7 +1,7 @@
 <section>
   <div class="">
     <h1>Registrar nuevo producto</h1>
-    <form class="" action="index.html" method="post">
+    <form class="" action="crear-producto" method="post">
       <div class="">
         <label for="">Nombre de producto</label>
         <input type="text" name="" value="">
