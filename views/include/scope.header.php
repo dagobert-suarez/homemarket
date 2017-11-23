@@ -16,7 +16,9 @@
 				<?php
 				require_once 'scope.nav.php';
 				require_once 'scope.login.php';
+				require_once 'scope.pasoapaso.php'
 				?>
+
 			</div>
 			<div class="beach2">
 				<?php 	require_once 'views/modules/registrarse.php'; ?>
