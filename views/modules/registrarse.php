@@ -9,11 +9,11 @@
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class="required"  for="">Nombre:</label>
-			<input type="text" name="data[]" id="nombre" class="pitp new" required>
+			<input type="text" name="data[]" id="nombre" class="pitp new" placeholder="Nombre" required>
 		</div>
 		<div class="form-gruop">
 				<label  class="required"  for="">Apellido</label>
-				<input type="text" name="data[]" id="Apellido" class="pitp new" required>
+				<input type="text" name="data[]" id="Apellido" class="pitp new"placeholder="Apellido" required>
 		</div>
 	</div>
 
@@ -24,7 +24,7 @@
 		</div>
 		<div class="form-gruop">
 			<label  class="required" id="genero" for="">Genero</label>
-			<select name="data[]" class="new" required>
+			<select name="data[]" class="new"  placeholder="Genero" required>
 				<option value="m">Hombre</option>
 				<option value="f">Mujer</option>
 				<option value="o">Otro</option>
@@ -44,7 +44,7 @@
 </div>
 	<div class="form-gruop">
 		<label  class="required"  for="">correo</label>
-		<input type="email" name="data[]" class="new" id="correo" placeholder="correo" required>
+		<input type="email" name="data[]" class="new" id="correo" placeholder="Correo" required>
 	</div>
 
 	<div class="form-gruop">
