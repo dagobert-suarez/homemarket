@@ -1,4 +1,4 @@
-<div class="shapes">
+<div class="shapes ">
   <div class="content-shapes">
     <div class="ribbon">
       <p>	paso 1</p>
