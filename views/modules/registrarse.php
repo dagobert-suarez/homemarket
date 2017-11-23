@@ -93,6 +93,7 @@
 	<div class="text-inf ">
 		<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
 	</div>
-<a href="registrosuper">registrarse como supermercado</a>
+<!-- <a href="registrosuper">registrarse como supermercado</a> -->
+<button type="submit" name="button" id="butreg" class="btntntr" >Registrarse como supermercado</button>
 </div>
 </div>

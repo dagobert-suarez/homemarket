@@ -8,7 +8,7 @@ body{
 
 .beach{
     height: 686px;
-    background-color: #13b092;
+    background-color: #929293;
     background-size: cover;
     margin-top: 0px;
 }
@@ -18,7 +18,7 @@ body{
 .beach2{
   height: 800px;
   background-size: cover;
-  background-color: red;
+  /*background-color: red;*/
   margin-top:0px;
 }
 .beach3{
@@ -123,7 +123,7 @@ body{
     overflow: visible;
 }
 .content-info{
-    z-index: 5;
+    z-index: 3;
     width: 100%;
     margin-top: -8.5%;
     padding-left: 20%;
@@ -136,7 +136,17 @@ body{
     width: 100%;
     height: 402px;
     opacity: 0.8;
-    justify-content: flex-start;
+}
+.info h1{
+  right: 10px;
+  padding: 7px 15px 0px;
+  font-size: 20px;
+}
+.info p{
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  padding: 5px 7px 10px 5px;
+
 }
 
 /*El indicador*/
@@ -329,6 +339,51 @@ input[type=password]:focus,select:focus{
     height: auto;
     background-color: rgb(254, 160, 0);
 }
+/*finaliza registro*/
+/*regsitrosuper*/
+.regigsup{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content-sup{
+  background-color: #ececec;
+  margin: 10% auto 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 28%;
+  font-family:'Roboto', sans-serif;
+}
+/*.btntntr{
+  background-color: #faac00;
+    color: rgb(0, 0, 0);
+    padding: 14px 30px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px 20px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border-radius: 4px;
+    width: 50%;
+
+}
+.btntntr:hover{
+    background-color: white;
+    border: 2px solid #faac00;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.3);
+}*/
 /*Está es la parte del login*/
 
 .login--form{
@@ -434,6 +489,7 @@ input[type=password]:focus,select:focus{
   margin-top: -16px;
   height: 100px;
   display: flex;
+  justify-content: space-between;;
   font-family: 'Roboto', sans-serif;
 }
 .copyright{
@@ -449,12 +505,15 @@ input[type=password]:focus,select:focus{
 
 .icons-footer {
   justify-content: flex-end;
-  font-size: 20px;
+  font-size: 17px;
   color: darkorange;
+  width: 30%;
+
 }
-.icons-footer ul{
+.icons-footer ul {
   margin-top: 10px;
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  /*justify-content: center;*/
+  padding: 5px 5px 5px 0px;
 }
