@@ -4,16 +4,16 @@
 	<form id="frmregistro" >
 		<div class="form-gruop">
 			<label  class="required"  for="">Numero de documento:</label>
-			<input type="number" name="data[]" class="new" id="documento" placeholder="documento identidad" >
+			<input type="number" name="data[]" class="new" id="documento" placeholder="documento identidad" required>
 		</div>
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class="required"  for="">Nombre:</label>
-			<input type="text" name="data[]" id="nombre" class="pitp new" placeholder="Nombre" >
+			<input type="text" name="data[]" id="nombre" class="pitp new" placeholder="Nombre" required>
 		</div>
 		<div class="form-gruop">
 				<label  class="required"  for="">Apellido</label>
-				<input type="text" name="data[]" id="Apellido" class="pitp new"placeholder="Apellido" >
+				<input type="text" name="data[]" id="Apellido" class="pitp new"placeholder="Apellido" required>
 		</div>
 	</div>
 

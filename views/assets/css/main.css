@@ -323,7 +323,7 @@ input[type=password]{
     outline: none;
     display: block;
 }
-label {
+.form-gruop label {
   margin: 0px 20px 1px;
 }
 .city{
