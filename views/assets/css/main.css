@@ -1,17 +1,17 @@
 /*@import "reset.css";*/
 @import "color.css";
-@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot|Lato  ');
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Lato|Montserrat|Noto+Sans|PT+Sans|Raleway|Roboto ');
 body{
   margin: 0;
   background-color: rgba(247, 252, 255, 0);
   }
 
 .beach{
-    height: 686px;
+    height: 699px;
     /*background-color: #929293;*/
     background-color:rgb(190, 190, 190);
     background-size: cover;
-    margin-top: 0px;
+    margin-top: -3px;
 }
 .beach:first-child {
     margin-top: 0;
@@ -64,7 +64,7 @@ body{
 .menu{
   width: 100%;
   height: 55px;
-  background-color: #4a4b4c;
+  background-color: #000000;
   margin-top: -1.5%;
   position: fixed;
   z-index: 1000;
@@ -125,34 +125,16 @@ body{
 }
 .img-c{
   width: 100%;
-  height:480px;
-}
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 4px;
-  margin-left: 45%;
-  margin-bottom: 11%;
-  font-size: 20px;
-  font-family:'Arimo',sans-serif;
+  height:665px;
 }
 
-/* numerador de texto (1/3 etc) */
-.numerador {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 .wrap-info{
     position: absolute;
-    height: 453px;
-    width: 220px;
+    height: 800px;
+    width: 100%;
     overflow: visible;
+    margin-top:10%;
+
 }
 .content-info{
     z-index: 3;
@@ -166,15 +148,25 @@ body{
     background-color: rgb(0, 0, 0);
     font-family: 'Lato', sans-serif;
     width: 100%;
-    height: 402px;
+    height: 655px;
+    margin-top:2.7%;
     opacity: 0.8;
 }
-.info h1{
-  right: 10px;
+ h1.infowel{
+  position: relative;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.3), 1px 1px 1px rgba(0,0,0,0.3), 0 0 10px #000;
+    letter-spacing: -1px;
+    padding-right: 4.7em;
+    font-size: 1.9em;
+    margin: .75em 0;
+    pointer-events: none;
+    font-family: 'Raleway',sans-serif;
+}
+  /*right: 10px;
   padding: 7px 20px 0px;
   font-size: 25px;
   font-family: 'Roboto', sans-serif;
-}
+}*/
 .info p{
   border-bottom: 2px solid #fff;
   padding-bottom: 10px;
@@ -197,7 +189,7 @@ body{
 }
 
 .active {
-  background-color: #13b090;
+  background-color: #ffab07;
 }
 
 @keyframes raz {
