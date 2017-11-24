@@ -6,7 +6,7 @@ class viewsController{
 		$this->userModel = new UserModel();
 	}
 	function main(){
-		require_once "views/include/scope.header.php";
+		require_once "views/include/scope.header-inicio.php";
 		// require_once "views/modules/registrarse.php"
 		require_once "views/include/scope.footer.php";
 	}

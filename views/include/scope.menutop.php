@@ -1,9 +1,9 @@
 <div class="menu">
-		<div class="logo--menu">
-				<img  class="logo--img"src="views/assets/image/logoprueba.jpg" alt="">
-		</div>
+		<!-- <div class="logo--menu"> -->
+				<!-- <img  class="logo--img"src="views/assets/image/logoprueba.jpg" alt=""> -->
+		<!-- </div> -->
 		<div class="container--menu">
-				<a href="inicio">Inicio</a>
+			<a href="inicio">Inicio</a>
 				<a href="super">Supermerdacos</a>
 				<a href="">Aliados</a>
 		</div>

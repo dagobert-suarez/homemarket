@@ -1,6 +1,6 @@
 /*@import "reset.css";*/
 @import "color.css";
-@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot|Lato  ');
 body{
   margin: 0;
   background-color: rgba(247, 252, 255, 0);
@@ -30,14 +30,12 @@ body{
   margin-top: 0px;
 }
 .shapes{
-  padding: 10px 25px;
+  padding: -10px;
   display: flex;
-  /*justify-content: center center;*/
-  margin: 40px 100px ;
+  justify-content: center;
+  margin: 20px 100px ;
   font-family: 'Roboto', sans-serif;
   color: white;
-
-  /*padding-top: 50px;*/
 
 }
 .content-shapes{
@@ -46,17 +44,17 @@ body{
 .triangle{
   width: 0;
   height: 0;
-  border-left: 60px solid #ffab07 ;
-  border-top:60px solid transparent ;
-  border-bottom:60px solid transparent ;
+  border-left: 50px solid #ffab07 ;
+  border-top:50px solid transparent ;
+  border-bottom:50px solid transparent ;
 }
 .ribbon{
     width: 0px;
     height: 0px;
-    border-top: 60px solid #ffab07;
-    border-left: 60px solid transparent;
-    border-right: 60px solid #ffab07;
-    border-bottom: 60px solid #ffab07;
+    border-top: 50px solid #ffab07;
+    border-left: 50px solid transparent;
+    border-right: 50px solid #ffab07;
+    border-bottom: 50px solid #ffab07;
 }
 
 .content-shapes:hover{
@@ -66,10 +64,11 @@ body{
 .menu{
   width: 100%;
   height: 55px;
-  background-color: #13b097;
+  background-color: #4a4b4c;
   margin-top: -1.5%;
   position: fixed;
   z-index: 1000;
+  opacity: 0.8;
 }
 .logo--menu{
   width: 20%;
@@ -101,9 +100,9 @@ body{
 /*.menu a:hover{
 }*/
 .menu a:hover{
-      background-color: #bdebe3;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
+      background-color: #00604d;
+      color: white;
+      cursor: pointer;
 }
 
 /*Está es la parte del slide en css*/
@@ -119,14 +118,14 @@ body{
 
 /* Slideshow container */
 .slideshow-container {
-  width: 75%;
-  /*margin-top: 4.5%;*/
-  margin: 2% auto 0% auto;
+  width: 100%;
+  margin-top: -3%;
+  /*margin: -2% auto 0% auto;*/
 
 }
 .img-c{
   width: 100%;
-  height:400px;
+  height:480px;
 }
 /* Caption text */
 .text {
@@ -159,21 +158,22 @@ body{
     z-index: 3;
     width: 100%;
     margin-top: -8.5%;
-    padding-left: 20%;
+    /*padding-left: 0%;*/
     color: #ffffff;
 
 }
 .info{
     background-color: rgb(0, 0, 0);
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Lato', sans-serif;
     width: 100%;
     height: 402px;
     opacity: 0.8;
 }
 .info h1{
   right: 10px;
-  padding: 7px 15px 0px;
-  font-size: 20px;
+  padding: 7px 20px 0px;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
 }
 .info p{
   border-bottom: 2px solid #fff;

@@ -1,4 +1,14 @@
 <div class="setregistrarse" id="registro">
+	<div class="formtext ">
+		<h1 class="tlt">
+			EMPIEZA UNA EXPERIENCIA CON HOME MARKET
+		</h1>
+		<div class="text-inf ">
+			<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
+		</div>
+		<!-- <a href="registrosuper">registrarse como supermercado</a> -->
+
+	</div>
 <div class="formpart">
 	<h1 class="regis">Registrate en homemarket</h1>
 	<form id="frmregistro" >
@@ -85,15 +95,5 @@
 
 		<button type="submit" name="registrar" id="raios" class="btntnt" >Registrarse</button>
 	</form>
-</div>
-<div class="formtext ">
-	<h1 class="tlt">
-	  EMPIEZA UNA EXPERIENCIA CON HOME MARKET
-	</h1>
-	<div class="text-inf ">
-		<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
-	</div>
-<!-- <a href="registrosuper">registrarse como supermercado</a> -->
-
 </div>
 </div>
