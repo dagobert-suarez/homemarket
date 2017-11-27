@@ -19,6 +19,7 @@ class LoginController{
 	echo json_encode($result);
 }
 
+
 	function validar(){
 		$correo = $_POST['email'];
 		$pass = $_POST['contra'];
