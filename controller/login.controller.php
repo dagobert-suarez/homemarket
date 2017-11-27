@@ -34,9 +34,9 @@ class LoginController{
 						// die($_SESSION['USER']['rol']);
 						if ($_SESSION['USER']['rol']==1) {
 								$_SESSION['USER']['CLIENT'] = true;
-								header ('Location: cliente');
+								header ('Location: inicioCliente');
 						}else {
-							header ('Location:admin');
+							header ('Location:inicioAdmin');
 						}
 				} else {
 				    echo '<h1>La contraseña es incorrecta</h1>.';

@@ -28,14 +28,15 @@ class viewsController{
 	}
 	function inicioCliente(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
-					echo "vista de cliente ";
+					require_once "views/modules/cliente/header.php";
+					require_once "views/modules/cliente/footer.php";
 		}else{
 			header("Location: inicio");
 		}
 	}
 	function inicioAdmin(){
 			require_once "views/modules/admin/header-admin.php";
-			require_once "views/modules/admin/registrar_producto.php";
+			require_once "views/modules/admin/createProduct.php";
 			require_once "views/modules/admin/footer_admin.php";
 	}
 
