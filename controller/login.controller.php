@@ -42,7 +42,7 @@ class LoginController{
 				    echo '<h1>La contraseña es incorrecta</h1>.';
 				}
 		}else{
-			echo '<h1>el usuario no existe</h1>';
+			echo '<h1>el usuario no existe/h1>';
 		}
 	}
 }
