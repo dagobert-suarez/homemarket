@@ -1,6 +1,17 @@
 var slideIndex = 0;
 showSlides();
 
+function miFuncion() {
+  var response = grecaptcha.getResponse();
+
+  if(response.length == 0){
+    alert("Falta verificar el Captcha");
+
+  } else {
+    document.getElementById('frmregistro').submit()
+  }
+}
+
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("Slides");
@@ -34,3 +45,48 @@ window.onclick = function(outclick){
         modal.style.display= "none";
     }
 }
+
+
+// validaciones
+$("input[name='email']").focusout(function(){
+    $.post("validar_usuario",{email:$(this).val()},function(result){
+        var result = JSON.parse(result);
+        $("span.error").remove();
+
+        if(result[0] == "false"){
+          $("input[name='email']").after("<span class='error'>"+result[1]+"</span>");
+          $(".btnsave").prop("disabled",true);
+        }else{
+          $("span.error").remove();
+          $(".btnsave").prop("disabled",false);
+        }
+    })
+})
+
+$('[name=email]').focus(function(){
+  // if ($(this).val().length == 0){
+    $("span.error").remove();
+  // }
+})
+
+/*******---verificar contraseña-----*****/
+$('#password').keyup(function(){
+    var password = $('#password').val();
+    console.log(password.length);
+
+});
+
+$('#rpassword').focusout(function(){
+    var password = $('#password').val();
+    if (password===$('#rpassword').val()) {
+      $("btntnt").prop("disabled",false);
+      console.log("son correctos");
+      $('div.error').remove();
+    }else{
+      $("btntnt").prop("disabled",true);
+      $('#rpassword').after('<div class="error">no son correctos');
+      console.log("no son iguales");
+    }
+
+
+});

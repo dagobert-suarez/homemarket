@@ -1,65 +1,65 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<section class="setregistrarse" id="registro">
+<div class="setregistrarse" id="registro">
+	<div class="formtext ">
+		<h1 class="tlt">
+			EMPIEZA UNA EXPERIENCIA CON HOME MARKET
+		</h1>
+		<div class="text-inf ">
+			<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
+		</div>
+		<!-- <a href="registrosuper">registrarse como supermercado</a> -->
+
+	</div>
 <div class="formpart">
 	<h1 class="regis">Registrate en homemarket</h1>
-	<form method="post" action="nuevo-cliente">
+	<form id="frmregistro" >
 		<div class="form-gruop">
-			<label  class=" required" for="">Numero de documento:</label>
-			<input type="number" name="data[]" placeholder="documento identidad" required>
+			<label  class="required"  for="">Numero de documento:</label>
+			<input type="number" name="data[]" class="new" id="documento" required>
 		</div>
 	<div class="content-form">
 		<div class="form-gruop">
-			<label  class=" required" for="">Primer Nombre:</label>
-			<input type="text" name="data[]" placeholder="nombre" class="pitp" required>
+			<label  class="required"  for="">Nombre:</label>
+			<input type="text" name="data[]" id="nombre" class="pitp new" required>
 		</div>
 		<div class="form-gruop">
-			<label  class=" opcional" for="">segundo Nombre</label>
-			<input type="text" name="data[]" placeholder="segundo nombre" class="pitp">
+				<label  class="required"  for="">Apellido</label>
+				<input type="text" name="data[]" id="Apellido" class="pitp new" required>
 		</div>
 	</div>
+
 	<div class="content-form">
 		<div class="form-gruop">
-				<label  class=" required" for="">Primer Apellido</label>
-				<input type="text" name="data[]" placeholder="apellido" class="pitp" required>
+			<label  class="required"  for="">	Fecha de nacimiento</label>
+			<input type="date" name="data[]" id="fecha" class="new" >
 		</div>
 		<div class="form-gruop">
-					<label  class=" opcional" for="">segundo Apellido</label>
-					<input type="text" name="data[]" placeholder="segundo apellido" class="pitp">
-		</div>
-	</div>
-	<div class="content-form">
-		<div class="form-gruop">
-			<label  class=" required" for="">Genero</label>
-			<select name="data[]" placeholder="Genero" required>
+			<label  class="required" id="genero" for="">Genero</label>
+			<select name="data[]" class="new"  placeholder="Genero" >
 				<option value="m">Hombre</option>
 				<option value="f">Mujer</option>
 				<option value="o">Otro</option>
 			</select>
+		</div>
 
-		</div>
-		<div class="form-gruop">
-			<label  class=" required" for="">	Fecha de nacimiento</label>
-			<input type="date" name="data[]" placeholder="fecha nacimiento" required>
-		</div>
 	</div>
 	<div class="content-form">
 		<div class="form-gruop">
-			<label  class=" required" for="">	celular</label>
-			<input type="number" name="data[]" placeholder="n celular" required>
+			<label  class="opcional"  for="">celular</label>
+			<input type="number" name="data[]" class="new" id="celular">
 		</div>
 		<div class="form-gruop">
-			<label  class=" opcional" for="">telefono</label>
-			<input type="number" name="data[]" placeholder="n telefono">
+			<label  class="opcional"  for="">telefono</label>
+			<input type="number" name="data[]" class="new" id="telefono">
 		</div>
 </div>
 	<div class="form-gruop">
-		<label  class=" required" for="">correo</label>
-		<input type="email" name="data[]" placeholder="correo" required>
+		<label  class="required"  for="">correo</label>
+		<input type="email" name="data[]" class="new" id="correo" placeholder="Correo" >
 	</div>
 
 	<div class="form-gruop">
-			<label  class=" required" for="">ciudad</label>
-			 <select name="data[]" placeholder="codigo de la ciudad" class="city">
+			<label  class="required"  for="">ciudad</label>
+			 <select name="data[]" class="city new" id="ciudad">
 			 <option value=""></option>
 				 <?php
 				 foreach ($this->userModel->readCities() as $row){
@@ -70,23 +70,30 @@
 	</div>
 
 	<div class="form-gruop">
-				<label  class="required" for="">contraseña</label>
-				<input type="password" name="data[]" placeholder="contraseña" required>
+				<label  class="required"  for="">contraseña</label>
+				<input type="password" name="data[]" class="new" id="password" >
 	</div>
+	<div id="mensaje"></div>
 	<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-				<input type="password" name="rpassword" placeholder="verificar contraseña" required>
+				<input type="password" name="rpassword" id="rpassword" >
 	</div>
-		<button type="submit" name="registrar" class="btntnt">Registrarse</button>
+	<div class="form-gruop">
+			<label  class=" required" for="">crear cuenta como</label>
+			 <select name="data[]"  class="city new" >
+			 <option value=""></option>
+				 <?php
+				 foreach ($this->userModel->readRol() as $row){
+					 echo "<option value='$row[0]'>$row[1]</option>";
+				 }
+				 ?>
+			 </select>
+	</div>
+	<div class="fomr-group" id="recaptcha">
+			<div class="g-recaptcha" data-theme="dark" data-sitekey="6LdgiTkUAAAAADv4ddSh-yCAAl-j15tc1K8CAQsv"></div>
+	</div>
+
+		<button type="submit" name="registrar" id="raios" class="btntnt" >Registrarse</button>
 	</form>
 </div>
-<div class="formtext">
-	<h1 class="tlt">
-	  EMPIEZA UNA EXPERIENCIA CON HOME MARKET
-	</h1>
-	<div class="text-inf">
-		<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
-	</div>
-<a href="registrosuper">registrarse como supermercado</a>
 </div>
-</section>

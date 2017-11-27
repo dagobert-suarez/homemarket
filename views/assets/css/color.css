@@ -1,0 +1,26 @@
+/*Paleta #1 de colores  */
+.orange1{
+  background-color:#ffab07;
+}
+.yellow1{
+  background-color: #e9d558;
+}
+.green1{
+  background-color: #72ad75;
+  color: black;
+}
+.blue1{
+  background-color: #0e8d94;
+}
+.gray2{
+  background-color: #f1f1f1;
+  color: #433d53;
+}
+.green2{
+  background-color: #00754d;
+  color: white;
+}
+/*font*/
+.gray1{
+  color: #433d53;
+}
