@@ -17,7 +17,12 @@ class ProductModel{
       $sql = "call crear_un_producto(?,?,?,?,?,?)";
       $query = $this->$pdo->prepare($sql);
       $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5]));
+
+      $msn = "Guardado con exito";
+    }catch (PDOException $e) {
+      die ($e->getMessage());
     }
+    return $msn;
   }
 
   function readCategory(){
