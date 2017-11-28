@@ -13,12 +13,11 @@ class LoginController{
 	if ($result!=array()){
 		$result = array("true","");
 	}else{
-		$result = array("false","El Usuario no existe por culpa de chetex");
+		$result = array("false","El Usuario no existe");
 	}
 
 	echo json_encode($result);
 }
-
 
 	function validar(){
 		$correo = $_POST['email'];
@@ -43,7 +42,7 @@ class LoginController{
 				    echo '<h1>La contraseña es incorrecta</h1>.';
 				}
 		}else{
-			echo '<h1>el usuario no existe/h1>';
+			echo '<h1>el usuario no existe</h1>';
 		}
 	}
 }

@@ -1,7 +1,7 @@
 <section>
   <div class="">
     <h1>Registrar nuevo producto</h1>
-    <form class="" action="crear-producto" method="post">
+    <form id="frmproducto" class="" action="crear-producto" method="post">
       <div class="">
         <label for="">Codigo de producto</label>
         <input type="number" name="data[]" value="">

@@ -17,3 +17,4 @@ RewriteRule ^inicioCliente$ index.php?controller=views&a=inicioCliente
 
 #admin
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
+RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear

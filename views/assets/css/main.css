@@ -70,13 +70,15 @@ body{
   z-index: 1000;
   opacity: 0.8;
 }
-.logo--menu{
+.logo--menu {
   width: 20%;
-  margin-left: 5%;
+  /*margin-left: 5%;*/
+  margin: 0px 60px;
   position: fixed;
+  z-index: 20000;
 }
 .logo--img{
-  width: 65px;
+  width: 75px;
   height: 50px;
 }
 .container--menu{
