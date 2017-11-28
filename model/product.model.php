@@ -12,7 +12,21 @@ class ProductModel{
     }
   }
 
-  function createProduct($data)
+  function createProduct($data){
+
+  }
+
+  function readCategory(){
+    try{
+    $sql="SELECT id_tip_pro,nom_tip_pro FROM tipo_producto ";
+    $query=$this->pdo->prepare($sql);
+    $query->execute();
+    $result = $query->fetchALL(PDO::FETCH_BOTH);
+    } catch (PDOException $e) {
+          $result = $e->getMessage();
+      }
+      return $result;
+  }
 
 }
 

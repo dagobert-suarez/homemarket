@@ -20,7 +20,14 @@
       </div>
       <div class="">
         <label for="">categoria producto</label>
-        <input type="text" name="data[]" value="" placeholder="ej.. lacteos, granos">
+        <select class="product" name="data[]">
+          <option value=""></option>
+          <?php
+          foreach ($this->ProductModel->readCategory() as $row) {
+            echo "<option value='$row[0]'>$row[1]</option>";
+          }
+          ?>
+        </select>
       </div>
       <button type="submit" name="guardar">Crear registro</button>
     </form>
