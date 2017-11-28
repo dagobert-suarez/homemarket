@@ -4,23 +4,23 @@
     <form class="" action="crear-producto" method="post">
       <div class="">
         <label for="">Codigo de producto</label>
-        <input type="text" name="" value="">
+        <input type="number" name="data[]" value="">
       </div>
       <div class="">
         <label for="">Nombre de producto</label>
-        <input type="text" name="" value="">
+        <input type="text" name="data[]" value="">
       </div>
       <div class="">
         <label for="">Descripcion de producto</label>
-        <input type="text" name="" value="">
+        <input type="text" name="data[]" value="">
       </div>
       <div class="">
         <label for="">Marca del producto</label>
-        <input type="text" name="" value="">
+        <input type="text" name="data[]" value="">
       </div>
       <div class="">
         <label for="">categoria producto</label>
-        <input type="text" name="" value="" placeholder="ej.. lacteos, granos">
+        <input type="text" name="data[]" value="" placeholder="ej.. lacteos, granos">
       </div>
     </form>
   </div>
