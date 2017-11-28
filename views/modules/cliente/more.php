@@ -1,6 +1,6 @@
 <div class="mas">
   <div class="content-title">
-    <h1 class="title">hola </h1>
+    <h1 class="titletan">hola </h1>
   </div>
   <div class="contentex">
   <ul>
