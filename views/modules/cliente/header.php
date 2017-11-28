@@ -27,6 +27,7 @@
       <?php
         require_once 'views/modules/cliente/more.php';
         require_once 'views/modules/cliente/content.gallery.php';
+        require_once 'views/modules/cliente/viewProduct.php';
 
       ?>
     </div>
