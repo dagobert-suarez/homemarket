@@ -12,7 +12,7 @@ class ProductModel{
     }
   }
 
-  
+  function createProduct($data)
 
 }
 
