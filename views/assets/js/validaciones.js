@@ -20,35 +20,7 @@ $("#frmregistro").submit(function(e) {
                         $('div.mensaje').remove();
                       }, 3000);
                   console.log(result);
-               }
-               error: function(result){
-                  console.log(result);
-               }
-          });
-          });
-
-$("#frmproducto").submit(function(e) {
-    e.preventDefault();
-            dataJson = [];
-            $(".new").each(function(){
-                structure = {};
-                structure = $(this).val();
-                dataJson.push(structure);
-            });
-           var  response = grecaptcha.getResponse();
-            console.log(dataJson);
-            $.ajax({
-              url: "nuevo-producto",
-              type: "POST",
-               dataType:'json',
-               data: ({data: dataJson , cap:response}),
-               success: function(result){
-                  $('#frmproducto').after('<div class="mensaje">'+result+'</div>');
-                   setTimeout(function(){
-                        $('div.mensaje').remove();
-                      }, 3000);
-                  console.log(result);
-               }
+               },
                error: function(result){
                   console.log(result);
                }

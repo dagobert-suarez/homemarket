@@ -1,4 +1,3 @@
-// este es el catchap de chetex
 var slideIndex = 0;
 showSlides();
 
@@ -13,7 +12,6 @@ function miFuncion() {
   }
 }
 
-// este es el slide de guffy
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("Slides");
@@ -71,8 +69,6 @@ $('[name=email]').focus(function(){
   // }
 })
 
-
-
 /*******---verificar contraseña-----*****/
 $('#password').keyup(function(){
     var password = $('#password').val();
@@ -88,7 +84,7 @@ $('#rpassword').focusout(function(){
       $('div.error').remove();
     }else{
       $("btntnt").prop("disabled",true);
-      $('#rpassword').after('<div class="error">las contraseñas no coinciden');
+      $('#rpassword').after('<div class="error">no son correctos');
       console.log("no son iguales");
     }
 

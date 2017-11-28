@@ -16,12 +16,10 @@ class UserController{
 		$result = json_decode($validation);
 		if ($result->success!=true) {
 			$i = 0;
-
-			
 			foreach ($data as $row) {
 				$result = $this->validarEspacio($data[$i]);
 				if ($result==false) {
-					echo json_encode('llene los campos');
+					echo json_encode('llene');
 					return;
 				}
 				$i++;
@@ -35,7 +33,7 @@ class UserController{
 
 			$result = $this->validarPassword($data[9]);
 			if (!$result==false) {
-				echo json_encode('no es valida');
+				echo json_encode('contra no valida');
 				return;
 			}
 			//antes de esta joda
@@ -46,7 +44,7 @@ class UserController{
 			echo json_encode($result);
 
 		}else{
-			echo json_encode('haga el capchat');
+			echo json_encode('haga el cap');
 		}
 
 
