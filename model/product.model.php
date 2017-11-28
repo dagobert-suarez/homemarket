@@ -13,7 +13,9 @@ class ProductModel{
   }
 
   function createProduct($data){
-
+    try{
+      $sql = "call crear_producto(?,?,?,?,?)";
+    }
   }
 
   function readCategory(){

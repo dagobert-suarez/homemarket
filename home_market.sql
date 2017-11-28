@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-11-2017 a las 22:42:58
+-- Tiempo de generación: 28-11-2017 a las 20:47:52
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.10
 
@@ -28,6 +28,15 @@ DELIMITER $$
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `consultar_usu` (IN `documento` INT(11))  BEGIN
 SELECT * FROM usuario where doc_usu=documento;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_super` (IN `nit_sup` VARCHAR(30), IN `nom_sup` VARCHAR(50), IN `dir_sup` VARCHAR(50), IN `tel_sup` INT(11), IN `cod_ciu` INT(11), IN `logo_sup` VARCHAR(255), IN `lon_sup` VARCHAR(100), IN `lat_sup` VARCHAR(100))  BEGIN
+INSERT INTO supermercado VALUES (nit_sup,nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,lon_sup,lat_sup);
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_un_producto` (IN `cod_pro` VARCHAR(50), IN `nom_pro` VARCHAR(50), IN `des_pro` VARCHAR(300), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT(11), IN `nom_tip_pro` VARCHAR(50))  BEGIN
+INSERT INTO tipo_producto VALUES (id_tip_pro,nom_tip_pro);
+INSERT INTO productos VALUES (cod_pro,nom_pro,des_pro,mar_pro,id_tip_pro);
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_usu` (IN `doc_usu` INT(11), IN `nom_usu` VARCHAR(50), IN `ape_usu` VARCHAR(50), IN `fech_nac_usu` DATETIME, IN `gen_usu` VARCHAR(30), IN `cel_usu` BIGINT(11), IN `tel_usu` INT(11), IN `email_usu` VARCHAR(50), IN `cod_ciu` INT(11), IN `id_rol` INT(11), IN `img` VARCHAR(255), IN `contra` VARCHAR(255), IN `token` VARCHAR(255))  BEGIN
@@ -58,8 +67,13 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`contra`, `token`, `doc_usu`) VALUES
+('12012', 'adqadasa', 15489),
 ('15487458', 'ascascaefasc', 1017257020),
-('12345', 'asdfdsas', 14548);
+('1546528', 'ASCAscsaczc<z', 154847),
+('145Sas', 'asdASDS', 154987),
+('12345', 'asdfdsas', 14548),
+('12345', 'qwdqwqw', 15487584),
+('10365124', 'sdssss', 1036679990);
 
 -- --------------------------------------------------------
 
@@ -132,7 +146,8 @@ CREATE TABLE `ciudad` (
 --
 
 INSERT INTO `ciudad` (`cod_ciu`, `nom_ciu`, `cod_dpto`) VALUES
-(5003, 'itagui', 21);
+(5003, 'itagui', 21),
+(50003, 'medellin', 21);
 
 -- --------------------------------------------------------
 
@@ -245,7 +260,7 @@ INSERT INTO `permisos` (`id_per`, `id_rol`, `C`, `R`, `U`, `D`) VALUES
 CREATE TABLE `productos` (
   `cod_pro` varchar(50) NOT NULL,
   `nom_pro` varchar(50) NOT NULL,
-  `des_pro` varchar(1000) DEFAULT NULL,
+  `des_pro` varchar(300) DEFAULT NULL,
   `mar_pro` varchar(30) NOT NULL,
   `id_tip_pro` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -255,7 +270,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`cod_pro`, `nom_pro`, `des_pro`, `mar_pro`, `id_tip_pro`) VALUES
-('54', 'arroz', 'libra de arroz de 500 g', 'diana', 3);
+('154', 'adsd', 'ADASAdqwdsdfdfdf', 'sdfawefaewfaf', 3),
+('54', 'arroz', 'libra de arroz de 500 g', 'diana', 3),
+('sadf', 'sadf', 'sadf', 'saf', 15),
+('wds', 'sadfa', 'sdf', 'sadf', 12);
 
 -- --------------------------------------------------------
 
@@ -384,7 +402,6 @@ CREATE TABLE `supermercado` (
   `nom_sup` varchar(50) DEFAULT NULL,
   `dir_sup` varchar(50) DEFAULT NULL,
   `tel_sup` int(11) DEFAULT NULL,
-  `loc_sup` varchar(50) DEFAULT NULL,
   `cod_ciu` int(11) DEFAULT NULL,
   `logo_sup` varchar(255) DEFAULT NULL,
   `lon_sup` varchar(100) DEFAULT NULL,
@@ -395,8 +412,13 @@ CREATE TABLE `supermercado` (
 -- Volcado de datos para la tabla `supermercado`
 --
 
-INSERT INTO `supermercado` (`nit_sup`, `nom_sup`, `dir_sup`, `tel_sup`, `loc_sup`, `cod_ciu`, `logo_sup`, `lon_sup`, `lat_sup`) VALUES
-('305.325.4458', 'exgordo', 'calle 98 # 50-10', 2587468, 'efhdu5d798', 5003, 'efsdcwde', 'sdcsfdef', 'dsfafsdfe');
+INSERT INTO `supermercado` (`nit_sup`, `nom_sup`, `dir_sup`, `tel_sup`, `cod_ciu`, `logo_sup`, `lon_sup`, `lat_sup`) VALUES
+('101487547', 'exito', 'calle 30 # 50-30', 154884, 50003, 'qwdws', 'asdfsf', 'asda'),
+('15974', 'exito', 'calle 30 # 50-30', 21548, 5003, 'asd', 'sdfsad', 'sdfsa'),
+('15dc', 'adsd', 'calle 30 # 50-30', 14154, 50003, 'sadfcawe', 'asfsd', 'sadf'),
+('21548758', 'exito', 'calle 30 # 50-30', 21548, 50003, 'dfsf', 'asdfsf', 'dfsfsdsf'),
+('305.325.4458', 'exgordo', 'calle 98 # 50-10', 2587468, 5003, 'efsdcwde', 'sdcsfdef', 'dsfafsdfe'),
+('fsad', 'sadf', 'saf', 158, 5003, 'asfas', 'sadf', 'sdf');
 
 -- --------------------------------------------------------
 
@@ -432,7 +454,9 @@ CREATE TABLE `tipo_producto` (
 --
 
 INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
-(3, 'arroz');
+(3, 'frutas'),
+(12, 'verduras'),
+(15, 'granos');
 
 -- --------------------------------------------------------
 
@@ -441,7 +465,7 @@ INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
 --
 
 CREATE TABLE `usuario` (
-  `doc_usu` int(11) NOT NULL,
+  `doc_usu` int(15) NOT NULL,
   `nom_usu` varchar(50) NOT NULL,
   `ape_usu` varchar(50) NOT NULL,
   `fech_nac_usu` datetime NOT NULL,
@@ -460,9 +484,12 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`doc_usu`, `nom_usu`, `ape_usu`, `fech_nac_usu`, `gen_usu`, `cel_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img`) VALUES
 (14548, 'sd', 'ds', '1995-02-02 00:00:00', 'hombre', 3146978585, 528257, 'ssdad@hotmail.com', 5003, 2, 'sdfsd'),
+(15489, 'sdfs', 'adsfa', '1995-03-10 00:00:00', 'mujer', 3124848, 46548, 'dwqdc@gmail.com', 5003, 2, 'sadd'),
 (154847, 'DAVID', 'LOPEZ', '1998-08-11 00:00:00', 'hombre', 3146978585, 2549685, 'david@hotmail.com', 5003, 2, 'efdfdsfdsas'),
 (154987, 'nods', 'fdsd', '1995-02-02 00:00:00', 'hombre', 31548795, 2598743, 'advidsv@hotmail.com', 5003, 2, 'wdsad'),
-(1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew');
+(15487584, 'nose', 'tampoco', '1995-02-02 00:00:00', 'mujer', 31254874, 2548745, 'nusd@hjotmail.com', 50003, 1, 'sadas'),
+(1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew'),
+(1036679990, 'juan pablo', 'restrepo garcia', '0000-00-00 00:00:00', 'hombre', 3046143729, 5881275, 'pablofrg98@gmail.com', 5003, 2, 'efdfdsfdsas');
 
 -- --------------------------------------------------------
 
@@ -646,7 +673,7 @@ ALTER TABLE `usuario_supermercado`
 -- AUTO_INCREMENT de la tabla `calificacion`
 --
 ALTER TABLE `calificacion`
-  MODIFY `id_cal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_cal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
@@ -664,7 +691,7 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `id_stock` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20186;
+  MODIFY `id_stock` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
@@ -691,6 +718,12 @@ ALTER TABLE `calificacion_usu`
   ADD CONSTRAINT `calificacion_usu_ibfk_3` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`);
 
 --
+-- Filtros para la tabla `ciudad`
+--
+ALTER TABLE `ciudad`
+  ADD CONSTRAINT `ciudad_ibfk_1` FOREIGN KEY (`cod_dpto`) REFERENCES `dpto` (`cod_dpto`) ON DELETE CASCADE;
+
+--
 -- Filtros para la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
@@ -702,7 +735,6 @@ ALTER TABLE `detalle_pedido`
 -- Filtros para la tabla `dpto`
 --
 ALTER TABLE `dpto`
-  ADD CONSTRAINT `dpto_ibfk_1` FOREIGN KEY (`cod_dpto`) REFERENCES `ciudad` (`cod_dpto`) ON DELETE CASCADE,
   ADD CONSTRAINT `dpto_ibfk_2` FOREIGN KEY (`cod_pais`) REFERENCES `pais` (`cod_pais`) ON DELETE CASCADE;
 
 --
