@@ -302,12 +302,30 @@ body{
 
 input[type=text],
 input[type=bigint],
-input[type=date],
 input[type=email],
-input[type=number],
+input[type=number]{
+    margin: 5px 20px 1px;
+    width: 70%;
+    padding: 8px 30px;
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
+    display: block;
+}
+/*input[type=date]{
+    margin: 5px 20px 1px;
+    width: 70%;
+    padding: 8px 30px;
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
+    display: block;
+}*/
 input[type=password]{
     margin: 5px 20px 1px;
-    width: 65%;
+    width: 70%;
     padding: 8px 30px;
     border: 1px solid rgb(182, 182, 182);
     line-height: 1.20;
@@ -318,8 +336,31 @@ input[type=password]{
 .form-gruop label {
   margin: 0px 20px 1px;
 }
+#genero{
+    margin: 0px 41px 1px;
+}
+.dte{
+    margin: 5px 20px 1px;
+    width: 75%;
+    padding: 8px 30px;
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
+    display: block;
+}
+.new{
+    margin: 5px 45px 1px;
+    width: 112%;
+    padding: 8px 30px;
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
+    display: block;
+}
 .city{
-  width: 73%;
+  width: 79%;
   display: block;
   outline:none;
   margin: 5px 20px 1px;
@@ -328,15 +369,15 @@ input[type=password]{
   font-size: 14px;
 }
 
-select{
+/*select{
   margin: 5px 20px 1px;
-  width: 90%;
+  width: 110%;
   padding: 8px 30px;
   border: 1px solid rgb(182, 182, 182);
   outline: none;
   font-size: 14px;
   display: block;
-}
+}*/
 input[type=text]:focus,
 input[type=date]:focus,
 input[type=email]:focus,
