@@ -22,6 +22,7 @@
         <label for="">categoria producto</label>
         <input type="text" name="data[]" value="" placeholder="ej.. lacteos, granos">
       </div>
+      <button type="submit" name="guardar">Crear registro</button>
     </form>
   </div>
 </section>
