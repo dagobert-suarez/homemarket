@@ -7,6 +7,10 @@ class productController{
   public function __CONSTRUCT(){
     $this->products = new productModel();
   }
+  function crear(){
+    $data=$_POST['$data'];
+    
+  }
 }
 
 ?>
