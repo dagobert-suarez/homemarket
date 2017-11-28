@@ -1,5 +1,3 @@
 <div class="gallery--lol">
-  <h2>Supermercados</h2>
-
-
+<h1>supermercado</h1>
 </div>
