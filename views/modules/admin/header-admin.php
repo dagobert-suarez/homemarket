@@ -10,7 +10,6 @@
   </head>
   <body>
   <section class="">
-<<<<<<< HEAD
     <?php
         require_once 'menuadmin.php';
     ?>
@@ -26,7 +25,7 @@
           ?>
 
     </div> -->
-=======
+
 <header>
   <?php
       require_once "createProduct.php";
