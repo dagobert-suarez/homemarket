@@ -11,9 +11,10 @@
   <body>
   <section class="">
 <header>
-</header>
+  <?php
+      require_once "createProduct.php";
+      require_once 'admin.php';
+  ?>
 
-<?php
-    require_once "createProduct.php";
-    require_once 'admin.php';
-?>
+  <a href="cerrar-sesion">salir</a>
+</header>
