@@ -35,4 +35,7 @@
 
   <a href="cerrar-sesion">salir</a>
 </header>
+<<<<<<< HEAD
+>>>>>>> 821c20ddbc105ff6783c7f487e3da5c761ca084a
+=======
 >>>>>>> 821c20ddbc105ff6783c7f487e3da5c761ca084a
