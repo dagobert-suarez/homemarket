@@ -18,7 +18,7 @@ $("#frmregistro").submit(function(e) {
                   $('#frmregistro').after('<div class="mensaje">'+result+'</div>');
                    setTimeout(function(){
                         $('div.mensaje').remove();
-                      }, 3000);
+                      }, 5000);
                   console.log(result);
                },
                error: function(result){
