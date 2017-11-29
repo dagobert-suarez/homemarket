@@ -31,13 +31,13 @@ body{
   list-style-type:none;
   /*position: fixed;*/
 }
+
 ul{
   text-decoration: none;
 }
 li i:hover{
   background-color: inherit;
   color:white;
-  cursor: pointer;
 }
 /*finaliza menú top*/
 /* inicio info-map*/
@@ -73,9 +73,16 @@ li i:hover{
     padding: 10px 12px;
     text-decoration: none;
 }
-.contentex ul li a:hover{
+/*.contentex ul li a:hover{
     background-color:orange;
     color: #000000;
+}*/
+.contentex ul li:hover{
+    background-color: #ffab07;
+    color: #433d53;
+    border-left: 10px solid #ffab07;
+    transition: 0.5s all ;
+    cursor: pointer;
 }
 
 .mas{
@@ -119,3 +126,5 @@ li i:hover{
     transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 /**/
+
+/*-*.**.*-*/

@@ -5,7 +5,7 @@
   <div class="contentex">
   <ul>
     <li><a href="#">supermercados</a></li>
-    <li><a href="#">Productos</a></li>
+    <li><a href="Productos">Productos</a></li>
     <li><a href="#">historial</a></li>
 
   </ul>

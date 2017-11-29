@@ -29,6 +29,11 @@ class productController{
 		}else{
 			header("Location: inicio");
 		}
+        function Productos(){
+            require_once "views/modules/cliente/header.php";
+            require_once "views/modules/cliente/viewProduct.php";
+            require_once "views/modules/cliente/footer.php";
+        }
 	}
 
 }
