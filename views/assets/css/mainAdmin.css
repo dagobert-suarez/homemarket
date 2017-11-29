@@ -1,0 +1,63 @@
+@import "reset.css";
+@import "color.css";
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
+
+body{
+    margin: 0px;
+    background-color:rgba(235, 235, 235, 0.08);
+}
+/*-*.*está es la parte del menu top*.*-*/
+.menu--top{
+    margin-top: -90px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 17px 0px;
+    text-align: center;
+    font-family: 'Cabin', sans-serif;
+    font-size: 18px;
+    position: fixed;
+    z-index: 10000;
+}
+.content-profile {
+  position:fixed;;
+  left: 1090px;
+  color: #121212;
+}
+.menu--top ul{
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
+  list-style-type:none;
+  /*position: fixed;*/
+}
+ul{
+  text-decoration: none;
+}
+li i:hover{
+  background-color: inherit;
+  color:white;
+  cursor: pointer;
+}
+/*finaliza menú top*/
+
+/*.content-admin{
+    margin-top: 50px;
+}*/
+
+/*-*.*Este es el articulo *.*-*/
+
+.wrap--content{
+  width: 100%;
+}
+.wrap--content article{
+    /*margin-top: 20rem;*/
+  background:rgba(136, 136, 136, 0.44) ;
+  width: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 100px auto;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+/*-*.* finaliza Este es el articulo *.*-*/

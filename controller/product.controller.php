@@ -10,24 +10,18 @@ class productController{
         $this->product = new ProductModel();
     }
 
-
-  function newProduct(){
-    $data = $_POST["data"];
-    $result = $this->$pdo->createProduct($data);
-    header("Location: inicioCliente");
-
-}
-
+//llama los datos de categoria
   function readCategory(){
     $data = $_POST["data"];
     $result = $this->pdo->readCategory($data);
     return $result;
   }
+  //visualiza los productos
   function viewProducts(){
     $result = $this->product->readProducts();
     return $result;
   }
-
+//inicio de sesion del cliente
   function inicioCliente(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
 					require_once "views/modules/cliente/header.php";

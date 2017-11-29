@@ -6,14 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="views/assets/css/maincliente.css">
+        <link rel="stylesheet" href="views/assets/css/mainAdmin.css">
   </head>
   <body>
   <section class="">
-<header>
-</header>
+<<<<<<< HEAD
+    <?php
+        require_once 'menuadmin.php';
+    ?>
+    <div class="wrap--content">
+                <!-- <?php require_once("views/include/scope.menutop.php"); ?> -->
 
-<?php
-    require_once "createProduct.php";
-    require_once 'admin.php';
-?>
+                <article>
+
+    <!-- <div class="content-admin">
+          <?php
+          // require_once "createProduct.php";
+          // require_once 'admin.php';
+          ?>
+
+    </div> -->
+=======
+<header>
+  <?php
+      require_once "createProduct.php";
+      require_once 'admin.php';
+  ?>
+
+  <a href="cerrar-sesion">salir</a>
+</header>
+>>>>>>> 821c20ddbc105ff6783c7f487e3da5c761ca084a
