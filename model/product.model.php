@@ -15,7 +15,7 @@ class ProductModel{
   function createProduct($data){
     try{
       $sql = "call crear_un_producto(?,?,?,?,?,?)";
-      $query = $this->$pdo->prepare($sql);
+      $query = $this->pdo->prepare($sql);
       $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5]));
 
       $msn = "Guardado con exito";
@@ -28,6 +28,17 @@ class ProductModel{
   function readCategory(){
     try{
     $sql="SELECT id_tip_pro,nom_tip_pro FROM tipo_producto ";
+    $query=$this->pdo->prepare($sql);
+    $query->execute();
+    $result = $query->fetchALL(PDO::FETCH_BOTH);
+    } catch (PDOException $e) {
+          $result = $e->getMessage();
+      }
+      return $result;
+  }
+  function readProducts(){
+    try{
+    $sql="SELECT * FROM productos ";
     $query=$this->pdo->prepare($sql);
     $query->execute();
     $result = $query->fetchALL(PDO::FETCH_BOTH);

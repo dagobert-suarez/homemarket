@@ -1,4 +1,6 @@
-<?php  ?>
+<?php
+    $data = $this->viewProducts();
+ ?>
 
 <div class="">
   <label>nombre_peli:</label>

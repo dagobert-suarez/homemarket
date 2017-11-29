@@ -26,14 +26,7 @@ class viewsController{
 		require_once "views/modules/registrosuper.php";
 		require_once "views/include/scope.footer.php";
 	}
-	function inicioCliente(){
-		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
-					require_once "views/modules/cliente/header.php";
-					require_once "views/modules/cliente/footer.php";
-		}else{
-			header("Location: inicio");
-		}
-	}
+
 	function inicioAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==2) {
 			require_once "views/modules/admin/header-admin.php";
