@@ -1,5 +1,6 @@
 <section>
   <div class="">
+    <div>
     <h1>Registrar nuevo producto</h1>
     <form id="frmproducto" class="" action="crear-producto" method="post">
       <div class="">
@@ -31,5 +32,6 @@
       </div>
       <button type="submit" name="guardar">Crear registro</button>
     </form>
+  </div>
   </div>
 </section>
