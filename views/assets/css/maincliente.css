@@ -189,6 +189,7 @@ li i:hover{
     }
     .supers{
         grid-template-columns: repeat(1,1fr);
+        padding-right: 10px;
     }
     .card{
         width: 100%;
@@ -211,6 +212,8 @@ li i:hover{
 @media (max-width: 360px) {
     .supers{
         grid-template-columns: repeat(1,1fr);
+        padding-right: 10px;
+        
     }
 }
 /**/
