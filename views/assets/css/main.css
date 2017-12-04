@@ -551,6 +551,34 @@ input[type=password]:focus,select:focus{
 
 }
 /*finalizo la parte del login*/
+/*-*.*pasoapaso*.*-*/
+.content .vc_row.full-width-wrap>.wpb_column, .full-width-wrap>.wf-cell, .full-width-wrap>.wpb_column, .full-width-wrap>.wpb_column>.vc_column-inner {
+    padding-left: 0;
+    padding-right: 0;
+}
+.service-section {
+    display: block;
+}
+
+.service-section {
+    display: block;
+}
+.wpb_column, .wpb_row {
+    position: relative;
+}
+.upb_video_class, .wpb_column, .wpb_row {
+    position: relative;
+}
+.vc_column_container {
+    padding-left: 0;
+    padding-right: 0;
+}
+@media (min-width: 768px)
+autoptimize_4e4…11dea0e.css:13
+.vc_col-sm-12 {
+    width: 100%;
+}
+/*-*.* fin pasoapaso*.*-*/
 /*footer*/
 .footer{
   background-color: #433d53;

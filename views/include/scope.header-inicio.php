@@ -25,5 +25,5 @@
 				<?php 	require_once 'views/modules/registrarse.php'; ?>
 			</div>
 		<div class="beach3">
-
+				<?php require_once 'scope.pasoapaso.php';?>
 		</div>

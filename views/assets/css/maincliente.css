@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "color.css";
+/*@import "responsicliente.css";*/
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
 body{
@@ -52,8 +53,8 @@ li i:hover{
 /* finaliza  info-map*/
 /*parte more*/
 .more{
-  display: flex;
-  width: 100%;
+      display: flex;
+      width: 100%;
   /*margin-top: 0%;*/
 }
 .content-title{
@@ -100,9 +101,12 @@ li i:hover{
 }
 .supers{
     margin: 5px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    /*justify-content: space-between;*/
 }
+
 .card{
     width: 19rem;
 }
@@ -124,6 +128,90 @@ li i:hover{
     cursor: pointer;
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
     transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+/*_*.*responsive cliente*.*_*/
+@media (max-width:1200px) {
+    .gallery--content{
+        width: 100%;
+        border-radius: 6px;
+    }
+    .supers{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width: 1050px) {
+    .supers{
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:20px;
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+    .card-img-top{
+        width: 100%;
+    }
+}
+@media (max-width: 800px) {
+    .gallery--content{
+        border-radius: 6px;
+    }
+    .supers{
+        grid-template-columns: repeat(2fr);
+        padding-right: 10px;
+    }
+    .mas{
+    /*padding: 5px 2.5px;*/
+    width: 28%;
+    margin: 2px 8px;
+
+    }
+    .card{
+        width: 100%;
+    }
+    .card-img-top{
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    .menu--top{
+        padding: 20px 0px;
+        align-items: flex-start;
+    }
+    .gallery--content{
+        width: 100%;
+    }
+    h1{
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .supers{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .card{
+        width: 100%;
+        /*height: 500px;*/
+    }
+    .card-img-top{
+        width: 100%;
+        height: auto;
+    }
+    .btn-go{
+        width: 100%;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: 1.7rem;
+    }
+    .mas{
+        display:none;
+    }
+}
+@media (max-width: 360px) {
+    .supers{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 /**/
 

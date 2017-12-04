@@ -1,4 +1,4 @@
-<div class="modules">
+<!-- <div class="modules">
 <?php
 
         $data = $this->viewProducts();
@@ -15,4 +15,4 @@
 
     }
     ?>
-</div>
+</div> -->
