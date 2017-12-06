@@ -52,9 +52,14 @@ li i:hover{
 .wrap--content{
   width: 100%;
 }
+.modules{
+
+}
 .wrap--content article .wrap--btns{
     display: flex;
     justify-content: flex-end;
+    padding-bottom:  2rem;
+    /*position: absolute;*/
     /*grid-template-columns: repeat(3,1fr)*/
 }
 .wrap--content article .wrap--btns ul{
