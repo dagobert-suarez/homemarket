@@ -21,6 +21,13 @@ class productController{
     $result = $this->product->readProducts();
     return $result;
   }
+  // crar nuevo super
+  function crear(){
+    require_once "views/modules/admin/header-admin.php";
+    require_once "views/modules/admin/createProduct.php";
+    require_once "views/modules/admin/footer_admin.php";
+
+  }
 //inicio de sesion del cliente
   function inicioCliente(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {

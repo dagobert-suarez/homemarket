@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="views/assets/css/mainAdmin.css">
+        <link rel="shortcut icon" href="views/assets/image/icono.ico">
   </head>
   <body>
   <section class="">
@@ -17,20 +18,8 @@
                 <!-- <?php require_once("views/include/scope.menutop.php"); ?> -->
 
                 <article>
-
-    <!-- <div class="content-admin">
-          <?php
-          // require_once "createProduct.php";
-          // require_once 'admin.php';
-          ?>
-
-    </div> -->
-
-<header>
-  <?php
-      require_once "createProduct.php";
-      require_once 'admin.php';
-  ?>
-
-  <a href="cerrar-sesion">salir</a>
-</header>
+<!-- 
+    <?php
+    require_once "index.php";
+    // require_once 'admin.php';
+    ?> -->

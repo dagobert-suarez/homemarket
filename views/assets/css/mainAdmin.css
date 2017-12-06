@@ -50,14 +50,38 @@ li i:hover{
 .wrap--content{
   width: 100%;
 }
+.wrap--content article .wrap--btns{
+    display: flex;
+    justify-content: flex-end;
+    /*grid-template-columns: repeat(3,1fr)*/
+}
+.wrap--content article .wrap--btns ul{
+  display: flex;
+}
+.wrap--content article .wrap--btns ul li{
+  background-color: #ffad07;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  color: #000;
+  margin-right: 10px;
+}
 .wrap--content article{
     /*margin-top: 20rem;*/
-  background:rgba(136, 136, 136, 0.44) ;
+  /*background:rgba(136,; 136, 136, 0.44) ;*/
+  background-color: #ddd;
   width: 90%;
   padding: 20px;
   box-sizing: border-box;
   margin: 100px auto;
   border-radius: 10px;
   color: rgb(0, 0, 0);
+}
+/*_*.*Responsi de la vista admin *.*_*/
+
+@media (max-width: 900px) {
+
+  .menu--top{
+
+  }
 }
 /*-*.* finaliza Este es el articulo *.*-*/
