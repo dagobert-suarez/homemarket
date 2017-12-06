@@ -4,7 +4,7 @@
 
 body{
     margin: 0px;
-    /*background-color:rgba(235, 235, 235, 0.08);}*/
+    /*background-color:rgba(235, 235, 235, 0.08);*/
     background-color: #efefef;
 
 }
@@ -69,8 +69,8 @@ li i:hover{
 }
 .wrap--content article{
     /*margin-top: 20rem;*/
-  /*background:rgba(136,; 136, 136, 0.44) ;*/
-  /*background-color: #efefef;*/
+  /*background:rgba(110, 110, 110, 0.20) ;*/
+  background-color: white;
   width: 90%;
   padding: 20px;
   box-sizing: border-box;
@@ -79,16 +79,23 @@ li i:hover{
   color: rgb(0, 0, 0);
 }
 /*_*.*formulario produto*.*_*/
+h1{
+  letter-spacing: -1.5px;
+  font-size: 2.5rem ;
+}
 
 label{
   display: block;
-  margin: 7px;
+  margin: 15px 0px 10px 0px;
+  font-size: 1.1rem;
 
 }
-input{
+input[type=text],
+input[type=number],
+textarea{
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #ccc;
   width: 50%;
   outline: none;
 }
@@ -98,8 +105,17 @@ select{
   outline: none;
   width: 20%;
 }
+.required::after{
+  content: " * ";
+  color: #fa7000;
+}
+.opcional::after{
+  content: " (Opcional) ";
+  color: rgb(191, 191, 191);
+  font-family: 'Cabin';
+}
 /*_*.* fin de el formulario produto*.*_*/
-/*-*.* finaliza Este es el articulo *.*-*/
+/*-*.* finaliza el articulo *.*-*/
 
 /*_*.*Responsi de la vista admin *.*_*/
 

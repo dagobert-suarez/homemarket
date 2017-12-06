@@ -2,7 +2,7 @@
 $("#frmregistro").submit(function(e) {
     e.preventDefault();
             dataJson = [];
-            $(".new").each(function(){
+            $(".new",".new2").each(function(){
                 structure = {};
                 structure = $(this).val();
                 dataJson.push(structure);

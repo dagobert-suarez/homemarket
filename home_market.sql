@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2017 a las 20:47:52
--- Versión del servidor: 10.1.28-MariaDB
--- Versión de PHP: 7.1.10
+-- Tiempo de generación: 06-12-2017 a las 19:32:07
+-- Versión del servidor: 10.1.26-MariaDB
+-- Versión de PHP: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -261,6 +261,7 @@ CREATE TABLE `productos` (
   `cod_pro` varchar(50) NOT NULL,
   `nom_pro` varchar(50) NOT NULL,
   `des_pro` varchar(300) DEFAULT NULL,
+  `img` varchar(100) NOT NULL,
   `mar_pro` varchar(30) NOT NULL,
   `id_tip_pro` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -269,11 +270,11 @@ CREATE TABLE `productos` (
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`cod_pro`, `nom_pro`, `des_pro`, `mar_pro`, `id_tip_pro`) VALUES
-('154', 'adsd', 'ADASAdqwdsdfdfdf', 'sdfawefaewfaf', 3),
-('54', 'arroz', 'libra de arroz de 500 g', 'diana', 3),
-('sadf', 'sadf', 'sadf', 'saf', 15),
-('wds', 'sadfa', 'sdf', 'sadf', 12);
+INSERT INTO `productos` (`cod_pro`, `nom_pro`, `des_pro`, `img`, `mar_pro`, `id_tip_pro`) VALUES
+('154', 'adsd', 'ADASAdqwdsdfdfdf', '', 'sdfawefaewfaf', 3),
+('54', 'arroz', 'libra de arroz de 500 g', '', 'diana', 3),
+('sadf', 'sadf', 'sadf', '', 'saf', 15),
+('wds', 'sadfa', 'sdf', '', 'sadf', 12);
 
 -- --------------------------------------------------------
 
@@ -674,25 +675,21 @@ ALTER TABLE `usuario_supermercado`
 --
 ALTER TABLE `calificacion`
   MODIFY `id_cal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
   MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
   MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `stock`
 --
 ALTER TABLE `stock`
   MODIFY `id_stock` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- Restricciones para tablas volcadas
 --

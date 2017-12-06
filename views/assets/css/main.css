@@ -341,9 +341,19 @@ input[type=password]{
 #genero{
     margin: 0px 41px 1px;
 }
-.dte{
+/*input[type=date] .new{
+    margin: 5px 0px 1px;
+    width: 20%;
+    padding: 8px 30px;
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
+    display: block;
+}*/
+.new{
     margin: 5px 20px 1px;
-    width: 75%;
+    width: 76%;
     padding: 8px 30px;
     border: 1px solid rgb(182, 182, 182);
     line-height: 1.20;
@@ -351,9 +361,9 @@ input[type=password]{
     outline: none;
     display: block;
 }
-.new{
-    margin: 5px 45px 1px;
-    width: 112%;
+.new2{
+    margin: 5px 46px 1px;
+    width: 111%;
     padding: 8px 30px;
     border: 1px solid rgb(182, 182, 182);
     line-height: 1.20;
