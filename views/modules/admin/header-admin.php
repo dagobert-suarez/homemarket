@@ -18,8 +18,7 @@
                 <!-- <?php require_once("views/include/scope.menutop.php"); ?> -->
 
                 <article>
-<!-- 
+<!--
     <?php
     require_once "index.php";
-    // require_once 'admin.php';
     ?> -->
