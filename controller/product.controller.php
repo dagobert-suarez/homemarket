@@ -10,13 +10,16 @@ class ProductController{
         $this->product = new ProductModel();
     }
 
+    function crearProduct(){
+      $data=$_POST['data'];  
+    }
 
   //visualiza los productos en la pagina de cliente
   function viewProducts(){
     $result = $this->product->readProducts();
     return $result;
   }
-  // crar nuevo super
+  // vista de los supermercados
   function crear(){
     require_once "views/modules/admin/header-admin.php";
     require_once "views/modules/admin/createProduct.php";

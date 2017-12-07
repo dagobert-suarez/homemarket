@@ -9,6 +9,7 @@ class UserModel{
 					die($e->getMessage());
 				}
 	}
+	//crear un usuario: envia datos a bd
 	function createUser($data,$token){
 			 try{
 
@@ -22,7 +23,7 @@ class UserModel{
 				  }
 					return $msn;
 			 }
-
+//llama los datos que estan en la tabla ciudad
 	function readCities(){
 		try{
 		$sql="SELECT cod_ciu,nom_ciu FROM ciudad ";
@@ -35,6 +36,7 @@ class UserModel{
       return $result;
   }
 
+//llama los datos de rol
 	function readRol(){
 		try{
 		$sql="SELECT id_rol,nom_rol FROM rol ";
