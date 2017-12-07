@@ -361,7 +361,7 @@ input[type=password]{
     outline: none;
     display: block;
 }
-.new2{
+#gender{
     margin: 5px 46px 1px;
     width: 111%;
     padding: 8px 30px;
@@ -379,6 +379,7 @@ input[type=password]{
   padding: 8px ;
   border: 1px solid rgb(182, 182, 182);
   font-size: 14px;
+  text-transform: uppercase;
 }
 
 /*select{

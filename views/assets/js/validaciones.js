@@ -2,7 +2,7 @@
 $("#frmregistro").submit(function(e) {
     e.preventDefault();
             dataJson = [];
-            $(".new",".new2").each(function(){
+            $(".new").each(function(){
                 structure = {};
                 structure = $(this).val();
                 dataJson.push(structure);
@@ -20,6 +20,7 @@ $("#frmregistro").submit(function(e) {
                         $('div.mensaje').remove();
                       }, 5000);
                   console.log(result);
+                   $("#frmregistro")[0].reset();
                },
                error: function(result){
                   console.log(result);

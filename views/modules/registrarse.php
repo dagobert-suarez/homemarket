@@ -34,7 +34,7 @@
 		</div>
 		<div class="form-gruop">
 			<label  class="required" id="genero" for="">Genero</label>
-			<select name="data[]" class="new2"  placeholder="Genero" >
+			<select name="data[]" class="new" id="gender"  placeholder="Genero" >
 				<option value="m">Hombre</option>
 				<option value="f">Mujer</option>
 				<option value="o">Otro</option>

@@ -16,6 +16,8 @@ RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 RewriteRule ^inicioCliente$ index.php?controller=product&a=inicioCliente
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
+RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados  
+
 
 #admin
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin

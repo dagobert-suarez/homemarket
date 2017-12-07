@@ -14,7 +14,7 @@ class UserController{
 		$ip_user = $_SERVER['REMOTE_ADDR'];
 		$validation = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$response&remoteip=$ip_user");
 		$result = json_decode($validation);
-		if ($result->success!=true) {
+		if ($result->success==true) {
 			$i = 0;
 			foreach ($data as $row) {
 				$result = $this->validarEspacio($data[$i]);

@@ -2,7 +2,7 @@
 //envio de datos de productos
 require_once 'model/product.model.php';
 
-class productController{
+class ProductController{
   private $product;
 
 
@@ -36,12 +36,18 @@ class productController{
 		}else{
 			header("Location: inicio");
 		}
-        function Productos(){
-            require_once "views/modules/cliente/header.php";
-            require_once "views/modules/cliente/viewProduct.php";
-            require_once "views/modules/cliente/footer.php";
-        }
 	}
+  function Productos(){
+    require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/viewProduct.php";
+    require_once "views/modules/cliente/footer.php";
+  }
+
+  function Supermercados(){
+    require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/viewSuper.php";
+    require_once "views/modules/cliente/footer.php";
+  }
 
 }
 

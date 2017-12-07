@@ -129,6 +129,36 @@ li i:hover{
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
     transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+article{
+  background-color: rgb(245, 245, 245);
+  width: 90%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin:  auto;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+/*_*.*produtos *.*_*/
+.Productos{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    /*justify-content: space-between;*/
+}
+
+.cardPro{
+    width: 160px;
+    border: 1px solid rgb(218, 218, 218);
+}
+.card-img-top{
+    width: 160px;
+    height: 160px;
+}
+/*_*.*produtos *.*_*/
+
+/*_*.* fin de produtos *.*_*/
 
 
 /*_*.*responsive cliente*.*_*/
@@ -213,7 +243,7 @@ li i:hover{
     .supers{
         grid-template-columns: repeat(1,1fr);
         padding-right: 10px;
-        
+
     }
 }
 /**/
