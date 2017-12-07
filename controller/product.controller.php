@@ -9,14 +9,12 @@ class ProductController{
     public function __CONSTRUCT(){
         $this->product = new ProductModel();
     }
+    function crear(){
+      $data=$_POST['data'];
+    }
 
-//llama los datos de categoria
-  function readCategory(){
-    $data = $_POST["data"];
-    $result = $this->pdo->readCategory($data);
-    return $result;
-  }
-  //visualiza los productos
+
+  //visualiza los productos en la pagina de cliente
   function viewProducts(){
     $result = $this->product->readProducts();
     return $result;
