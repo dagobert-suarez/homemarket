@@ -6,7 +6,7 @@ class UserController{
     public function __CONSTRUCT(){
         $this->users = new UserModel();
     }
-
+//todo estos, son las validaciones en los campos de registrarse en la landin
 	function crear(){
 		$data=$_POST['data'];
 		$response = $_POST['cap'];
@@ -33,7 +33,7 @@ class UserController{
 
 			$result = $this->validarPassword($data[9]);
 			if (!$result==false) {
-				echo json_encode('contra no valida');
+				echo json_encode('contraseña no valida');
 				return;
 			}
 			//antes de esta joda
@@ -44,7 +44,7 @@ class UserController{
 			echo json_encode($result);
 
 		}else{
-			echo json_encode('haga el cap');
+			echo json_encode('haga el recapchapt');
 		}
 
 
