@@ -9,9 +9,6 @@ class ProductController{
     public function __CONSTRUCT(){
         $this->product = new ProductModel();
     }
-    function crear(){
-      $data=$_POST['data'];
-    }
 
 
   //visualiza los productos en la pagina de cliente
