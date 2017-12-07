@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2017 a las 19:32:07
--- Versión del servidor: 10.1.26-MariaDB
--- Versión de PHP: 7.1.8
+-- Tiempo de generación: 07-12-2017 a las 18:35:25
+-- Versión del servidor: 10.1.19-MariaDB
+-- Versión de PHP: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -67,13 +65,9 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`contra`, `token`, `doc_usu`) VALUES
-('12012', 'adqadasa', 15489),
-('15487458', 'ascascaefasc', 1017257020),
-('1546528', 'ASCAscsaczc<z', 154847),
-('145Sas', 'asdASDS', 154987),
-('12345', 'asdfdsas', 14548),
-('12345', 'qwdqwqw', 15487584),
-('10365124', 'sdssss', 1036679990);
+('$2y$10$LrVETuI32iqYMduRnCGM6e.Rzf37SOyBAjNYSq/WCNjC3WHmXR6si', '5e97511ee4f8d898d4b573cdf384c2c7', 1023162650),
+('$2y$10$gkQjLsaEH38q5UWE5sI0JujnHg1cl51cl7ED1Ah69m.Hn3H7BcRCm', 'bd52883e55d1ef8c8b1290084b514220', 1000084530),
+('$2y$10$enyfpalCACYbM.6OfdOQX.ko.DGkWO0Zg3R5VXh8KSeZy/40C8ZRe', 'dc6302c4918a28eee730c27c4e420250', 54545645);
 
 -- --------------------------------------------------------
 
@@ -271,10 +265,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`cod_pro`, `nom_pro`, `des_pro`, `img`, `mar_pro`, `id_tip_pro`) VALUES
-('154', 'adsd', 'ADASAdqwdsdfdfdf', '', 'sdfawefaewfaf', 3),
-('54', 'arroz', 'libra de arroz de 500 g', '', 'diana', 3),
-('sadf', 'sadf', 'sadf', '', 'saf', 15),
-('wds', 'sadfa', 'sdf', '', 'sadf', 12);
+('', '', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -484,13 +475,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`doc_usu`, `nom_usu`, `ape_usu`, `fech_nac_usu`, `gen_usu`, `cel_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img`) VALUES
-(14548, 'sd', 'ds', '1995-02-02 00:00:00', 'hombre', 3146978585, 528257, 'ssdad@hotmail.com', 5003, 2, 'sdfsd'),
-(15489, 'sdfs', 'adsfa', '1995-03-10 00:00:00', 'mujer', 3124848, 46548, 'dwqdc@gmail.com', 5003, 2, 'sadd'),
-(154847, 'DAVID', 'LOPEZ', '1998-08-11 00:00:00', 'hombre', 3146978585, 2549685, 'david@hotmail.com', 5003, 2, 'efdfdsfdsas'),
-(154987, 'nods', 'fdsd', '1995-02-02 00:00:00', 'hombre', 31548795, 2598743, 'advidsv@hotmail.com', 5003, 2, 'wdsad'),
-(15487584, 'nose', 'tampoco', '1995-02-02 00:00:00', 'mujer', 31254874, 2548745, 'nusd@hjotmail.com', 50003, 1, 'sadas'),
-(1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew'),
-(1036679990, 'juan pablo', 'restrepo garcia', '0000-00-00 00:00:00', 'hombre', 3046143729, 5881275, 'pablofrg98@gmail.com', 5003, 2, 'efdfdsfdsas');
+(54545645, 'dagobert', 'suarez', '1998-10-31 00:00:00', 'm', 5445, 565654, 'dasuarez@gmail.com', 50003, 1, 'no'),
+(1000084530, 'Guffy', 'zapata', '1999-11-29 00:00:00', 'm', 0, 0, 'guffy@gmail.com', 50003, 1, 'no'),
+(1023162650, 'Dagobert', 'surez', '1999-09-27 00:00:00', 'm', 503, 503, 'dagobert@gmail.com', 50003, 2, 'no');
 
 -- --------------------------------------------------------
 
@@ -805,7 +792,6 @@ ALTER TABLE `usuario`
 ALTER TABLE `usuario_supermercado`
   ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`nit_sup`) REFERENCES `supermercado` (`nit_sup`),
   ADD CONSTRAINT `usuario_supermercado_ibfk_3` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`) ON DELETE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
