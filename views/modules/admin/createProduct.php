@@ -1,6 +1,16 @@
 <section>
   <div class="">
-    <h1>Registrar nuevo producto</h1>
+      <header>
+          <h1>Registrar nuevo producto</h1>
+
+      <!-- <div class="breadcrums"> -->
+            <!-- <ul> -->
+                <!-- <li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li> -->
+                <!-- <li><a href="Produtos">productos</a></li> -->
+                <!-- <li><a href=""></a></li> -->
+            <!-- </ul> -->
+      <!-- </div> -->
+  </header>
     <form id="frmproducto" class="" action="crear-producto" method="post">
       <div class="">
         <label for="" class="required">Codigo de producto:</label>
