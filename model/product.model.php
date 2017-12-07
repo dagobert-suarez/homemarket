@@ -1,6 +1,5 @@
 <?php
 // envio a la base de datos de los productos
-
 class ProductModel{
   private $pdo;
   public function __CONSTRUCT(){
@@ -11,8 +10,21 @@ class ProductModel{
       die($e->getMessage());
     }
   }
+//crear un nuevo producto: envia datos a bd
+  function createProduct(){
+    try{
+      $sql = "call crear_producto(?,?,?,?,?,?)";
+      $query = $this->pdo->prepare($sql);
+      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5]));
 
+      $msn = "registro con exito";
+    }catch (PDOException $e) {
+      die($e->getMessage());
+    }
+    return $msn;
+  }
 
+//llama los tipos de categorias en la bd
   function readCategory(){
     try{
     $sql="SELECT id_tip_pro,nom_tip_pro FROM tipo_producto ";
@@ -24,6 +36,8 @@ class ProductModel{
       }
       return $result;
   }
+
+  //llama todos los productos en la bd
   function readProducts(){
     try{
     $sql="SELECT * FROM productos ";

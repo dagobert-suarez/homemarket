@@ -5,7 +5,7 @@ function miFuncion() {
   var response = grecaptcha.getResponse();
 
   if(response.length == 0){
-    alert("Falta verificar el Captcha");
+    alert("Falta verificar el reCaptcha");
 
   } else {
     document.getElementById('frmregistro').submit()
@@ -29,7 +29,7 @@ function showSlides() {
     setTimeout(showSlides, 4000); // Cambia la imagen cada 3 segungos
 };
 
-// js de  login modal
+// js de  login modal:guffy
 var modal = document.getElementById('loginmodal');
 var btn = document.getElementById('mon');
 var cerrar = document.getElementById('close');
@@ -47,7 +47,7 @@ window.onclick = function(outclick){
 }
 
 
-// validaciones
+// validaciones en el login:dago
 $("input[name='email']").focusout(function(){
     $.post("validar_usuario",{email:$(this).val()},function(result){
         var result = JSON.parse(result);
@@ -69,7 +69,7 @@ $('[name=email]').focus(function(){
   // }
 })
 
-/*******---verificar contraseña-----*****/
+/*******---verificar contraseña:dago-----*****/
 $('#password').keyup(function(){
     var password = $('#password').val();
     console.log(password.length);
@@ -80,12 +80,12 @@ $('#rpassword').focusout(function(){
     var password = $('#password').val();
     if (password===$('#rpassword').val()) {
       $("btntnt").prop("disabled",false);
-      console.log("son correctos");
+      console.log("contraseñas coinciden");
       $('div.error').remove();
     }else{
       $("btntnt").prop("disabled",true);
-      $('#rpassword').after('<div class="error">no son correctos');
-      console.log("no son iguales");
+      $('#rpassword').after('<div class="error">contraseñas no coinciden');
+      console.log("no coinciden");
     }
 
 
