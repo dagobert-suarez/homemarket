@@ -18,15 +18,15 @@
         <label for="" class="required">Marca del producto:</label>
         <input type="text" name="data[]" value="">
       </div>
-<<<<<<< HEAD
         <div class="">
         <label for="" class="required">categoria producto:</label>
         <select class="product" name="data[]">
           <option value=""></option>
           <?php
-          // foreach ($this->ProductModel->readCategory() as $row) {
-          //   echo "<option value='$row[0]'>$row[1]</option>";
-          // }
+         $nada = array('nada','nadaa');
+          foreach ($nada as $row) {
+            echo "<option value='$row'>$row</option>";
+          }
           ?>
         </select>
         <div class="" >
@@ -37,7 +37,7 @@
             <button type="submit" name="guardar-producto">Crear registro</button>
 
         </div>
-=======
+
       <div class="" >
           <label for="" class="required">Imagen del producto:</label>
           <input type="file" name="data[]" value="">
