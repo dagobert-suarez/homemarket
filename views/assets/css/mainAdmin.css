@@ -10,7 +10,7 @@ body{
 }
 /*-*.*está es la parte del menu top*.*-*/
 .menu--top{
-    margin-top: -90px;
+    margin-top: -100px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -91,21 +91,21 @@ h1{
 
 label{
   display: block;
-  margin: 15px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
   font-size: 1.1rem;
 
 }
 input[type=text],
 input[type=number],
 textarea{
-  padding: 10px;
-  border-radius: 5px;
+  padding: 6px;
+  border-radius: 1px;
   border: 1px solid #ccc;
-  width: 50%;
+  width: 40%;
   outline: none;
 }
 select{
-  padding: 10px;
+  padding: 7px;
   border-radius: 4px;
   outline: none;
   width: 20%;
