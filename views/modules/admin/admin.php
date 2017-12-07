@@ -4,7 +4,7 @@
     <div class="wrap--btns">
       <ul>
         <li><a href="nuevo-producto">Nuevo producto</a></li>
-        <li><a href="#">Nuevo </a></li>
+        <li><a href="#">Nueva categoria</a></li>
         <li><a href="#">Nuevo </a></li>
       </ul>
     </div>

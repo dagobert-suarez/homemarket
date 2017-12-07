@@ -21,10 +21,6 @@
           <li> <a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
         </ul>
       </div>
-
-    <!-- <?php
-        //require_once 'menuadmin.php';
-    ?> -->
     <div class="wrap--content">
                 <!-- <?php require_once("views/include/scope.menutop.php"); ?> -->
 
