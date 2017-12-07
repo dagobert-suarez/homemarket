@@ -25,16 +25,14 @@
       <div class="">
         <label for="" class="required">categoria producto:</label>
           <select name="data[]" class="product">
-            <option value=""></option>
-              <?php
-              foreach ($this->ProductModel->readCategory() as $row){
-                echo "<option value='$row[0]'>$row[1]</option>";
-              }
-              ?>
-              <button type="button" name="button">guardar-registro</button>
+            <option value="">cereal</option>
+            <option value="">lateos</option>
+            <option value="">carnes</option>
           </select>
+          <div class="">
+            <button type="submit" name="button">guardar-registro</button>
+          </div>
       </div>
-
     </form>
   </div>
   <p>
@@ -43,4 +41,3 @@
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
-</section>
