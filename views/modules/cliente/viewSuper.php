@@ -1,6 +1,6 @@
 <div class="gallery--content">
 <h1 class="" >Supermercados</h1>
-<div class="supers">
+<!-- <div class="supers"> -->
 <div class="card" >
   <img class="card-img-top" src="views/assets/image/jumbo.png" alt="1">
   <div class="card-body">
@@ -28,8 +28,8 @@
 
   </div>
 </div>
-</div>
-<div class="supers">
+<!-- </div> -->
+<!-- <div class="supers"> -->
 <div class="card" >
   <img class="card-img-top" src="views/assets/image/d1.jpg" alt="4">
   <div class="card-body">
@@ -58,5 +58,5 @@
 
   </div>
 </div>
-</div>
+<!-- </div> -->
 </div>

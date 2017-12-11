@@ -15,18 +15,33 @@
       <div class="content-profile">
 
       </div>
-      <ul>
-
+      <div class="left">
+          <span><i class="fa fa-bars" aria-hidden="true" id="menu"></i><i class="fa fa-bars" aria-hidden="true" id="menu-mobile"></i></span>
+      </div>
+      <div class="r">
+      <ul class="options">
         <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
         <li><i class="fa fa-cog" aria-hidden="true"></i></li>
         <li> <a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
       </ul>
     </div>
+    </div>
+    <div class="wrap-menu-mobile">
+        <div class="close--mobile">&times;</div>
+        <ul>
+            <li>inicio</li>
+            <li><a href="Supermecados"></a>Supermercados</li>
+            <li><a href="Productos"></a>Productos</li>
+            <li>notificaciones</li>
+            <li>ajustes</li>
+            <li><a href="cerrar-sesion"></a>cerra sesion</li>
+        </ul>
+    </div>
     <div class="info-map gray1">
-      <div id="map">
-    
-      </div >
+    </div>
+    <div id="map">
 
+    </div >
     <div class="more">
       <?php
         require_once 'views/modules/cliente/more.php';

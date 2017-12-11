@@ -40,6 +40,9 @@ li i:hover{
   background-color: inherit;
   color:white;
 }
+.wrap-menu-mobile, .left{
+    display: none;
+}
 /*finaliza menú top*/
 /* inicio info-map*/
 .info-map{
@@ -100,15 +103,15 @@ li i:hover{
 /*content gallery*/
 .gallery--content{
     width: 75%;
-    background-color: #f1f1f1;
-}
-.supers{
-    margin: 50px;
     display: grid;
+    background-color: #f1f1f1;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 10px;
-    /*justify-content: space-between;*/
 }
+/*.supers{*/
+    /*margin: 50px;*/
+    /*justify-content: space-between;*/
+/*}*/
 
 .card{
     width: 19rem;
@@ -174,9 +177,9 @@ article{
     .gallery--content{
         width: 100%;
         border-radius: 6px;
+        grid-template-columns: repeat(3,1fr);
     }
     .supers{
-        grid-template-columns: repeat(3,1fr);
     }
     .Productos{
         grid-template-columns: repeat(3,1fr);
@@ -184,11 +187,17 @@ article{
     }
 }
 @media (max-width: 1050px) {
-    .supers{
+    /*.supers{
         grid-template-columns: repeat(2,1fr);
         grid-gap:20px;
         width: 100%;
-    }
+    }*/
+        .gallery--content{
+            grid-template-columns: repeat(2,1fr);
+            grid-gap:20px;
+            width: 100%;
+
+        }
     .card{
         width: 100%;
     }
@@ -203,10 +212,10 @@ article{
 @media (max-width: 800px) {
     .gallery--content{
         border-radius: 6px;
-    }
-    .supers{
         grid-template-columns: repeat(2fr);
         padding-right: 10px;
+    }
+    .supers{
     }
     .mas{
     /*padding: 5px 2.5px;*/
@@ -225,21 +234,33 @@ article{
         margin: 15px;
     }
 }
+@media (max-width: 768px) {
+    .options{
+        display: none !important;
+    }
+    .left{
+        display: block;
+    }
+}
 @media (max-width: 600px) {
     .menu--top{
         padding: 20px 0px;
         align-items: flex-start;
     }
+    article{
+        background-color: rgb(44, 185, 160);
+    }
     .gallery--content{
         width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        padding-right: 10px;
+        /*display: none;*/
     }
     h1{
         padding-bottom: 20px;
         text-align: center;
     }
     .supers{
-        grid-template-columns: repeat(1,1fr);
-        padding-right: 10px;
     }
     .card{
         width: 100%;
@@ -254,6 +275,7 @@ article{
         text-align: center;
         color: rgb(0, 0, 0);
         font-size: 1.7rem;
+        background-color: rgb(255, 194, 13);
     }
     .mas{
         display:none;
@@ -261,17 +283,30 @@ article{
     .Productos{
         grid-template-columns: repeat(2,1fr);
         margin: 15px;
+
     }
-    .card{
+    .cardPro{
         background-color: rgb(254, 175, 0);
-        margin: 10px;
+        margin: 10px 5px;
+        justify-content: space-around;
+        width: ;
+    }
+    #map{
+        position: relative;
+        text-align: center;
+        width: 100%;
+        /*margin-top:50px;*/
+        margin-bottom: 50px;
     }
 }
 @media (max-width: 360px) {
     .supers{
+
+    }
+    .gallery--content{
+
         grid-template-columns: repeat(1,1fr);
         padding-right: 10px;
-
     }
     .Productos{
         grid-template-columns: repeat(1,1fr);
