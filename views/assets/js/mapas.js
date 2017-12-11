@@ -32,16 +32,13 @@ map.drawRoute({
 
 GMaps.geolocate({
     success:function(position){
-        map.setCenter(position.coords.latitude.position.coords.longuitude)
+        map.setCenter(position.coords.latitude, position.coords.longitude)
     },
     error:function(error){
-            alert("En serio está usando este navegador?")
-    },
-    always:function{
-
+            alert("En serio está usando este navegador?");
     }
 
-})
+});
 // esto fue lo que hizo guille en la clase
 // var map = new GMaps({
 //    el: '#map',

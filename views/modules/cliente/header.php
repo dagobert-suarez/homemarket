@@ -23,8 +23,10 @@
       </ul>
     </div>
     <div class="info-map gray1">
-      <div id="map"></div>
-    </div>
+      <div id="map">
+    
+      </div >
+
     <div class="more">
       <?php
         require_once 'views/modules/cliente/more.php';

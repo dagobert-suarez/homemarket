@@ -42,9 +42,10 @@ die();
 		require_once "views/modules/admin/header-admin.php";
 		require_once "views/modules/admin/footer_admin.php";
 	}
-	//
+
 	// function incliente(){
 	// 	require_once "views/modules/cliente/header.php";
+	// 	require_once "views/modules/cliente/maps.php";
 	// 	require_once "views/modules/cliente/footer.php";
 	// }
 
