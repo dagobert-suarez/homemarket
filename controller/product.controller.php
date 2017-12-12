@@ -11,7 +11,7 @@ class ProductController{
     }
 
     function crearProduct(){
-      $data=$_POST['data'];  
+      $data=$_POST['data'];
     }
 
   //visualiza los productos en la pagina de cliente
@@ -49,6 +49,11 @@ class ProductController{
     require_once "views/modules/cliente/footer.php";
   }
 
+  function Produtosviewsadmin(){
+    require_once "views/modules/admin/header-admin.php";
+    require_once "views/modules/admin/productosviews.php";
+    require_once "views/modules/admin/footer_admin.php";
+  }
 }
 
 ?>

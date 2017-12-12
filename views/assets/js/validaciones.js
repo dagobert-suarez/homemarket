@@ -15,12 +15,13 @@ $("#frmregistro").submit(function(e) {
                dataType:'json',
                data: ({data: dataJson , cap:response}),
                success: function(result){
-                  $('#frmregistro').after('<div class="mensaje">'+result+'</div>');
-                   setTimeout(function(){
-                        $('div.mensaje').remove();
-                      }, 5000);
-                  console.log(result);
-                   $("#frmregistro")[0].reset();
+                $('#frmregistro').after('<div class="mensaje">'+result+'</div>');
+                 setTimeout(function(){
+                      $('div.mensaje').remove();
+                    }, 5000);
+                console.log(result);
+                 $("#frmregistro")[0].reset();
+                 grecaptcha.reset();
                },
                error: function(result){
                   console.log(result);

@@ -3,13 +3,13 @@
       <header>
           <h1>Registrar nuevo producto</h1>
 
-      <!-- <div class="breadcrums"> -->
-            <!-- <ul> -->
-                <!-- <li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li> -->
-                <!-- <li><a href="Produtos">productos</a></li> -->
+      <div class="breadcrums">
+            <ul>
+                <li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="Productosadmin">productos</a></li>
                 <!-- <li><a href=""></a></li> -->
-            <!-- </ul> -->
-      <!-- </div> -->
+            </ul>
+      </div>
   </header>
     <form id="frmproducto" class="" action="crear-producto" method="post">
       <div class="">
