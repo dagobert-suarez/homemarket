@@ -22,4 +22,5 @@ RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 #admin
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
 RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
+RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
 RewriteRule ^Productosadmin$ index.php?controller=product&a=Produtosviewsadmin

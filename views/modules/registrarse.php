@@ -1,7 +1,7 @@
 <div class="setregistrarse" id="registro">
 	<div class="formtext ">
 		<h1 class="tlt">
-			EMPIEZA UNA EXPERIENCIA CON HOME MARKET
+			EMPIEZA UNA EXPERIENCIA CON HOME MARKET ya
 		</h1>
 		<div class="text-inf ">
 			<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>

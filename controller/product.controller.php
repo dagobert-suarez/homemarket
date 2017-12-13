@@ -12,6 +12,12 @@ class ProductController{
 
     function crearProduct(){
       $data=$_POST['data'];
+      $result = json_decode($validation);
+      if ($result->success==true) {
+        $i = 0;
+      }else {
+        echo json_encode('faltaron');
+      }
     }
 
   //visualiza los productos en la pagina de cliente

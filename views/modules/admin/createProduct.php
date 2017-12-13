@@ -44,7 +44,7 @@
             <input type="file" name="data[]" value="" class="new">
         </div>
         <div class="">
-            <button type="submit" name="guardar-producto">Crear registro</button>
+            <button type="submit" name="guardar">Crear registro</button>
 
         </div>
     </form>
