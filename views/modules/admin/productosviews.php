@@ -16,12 +16,11 @@
         <td>roa</td>
         <td>granos</td>
         <td>
-      <a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-      <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
-    </td>
-
-    </tr>
+            <a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+        </td>
+      </tr>
     </tbody>
 
   </table>
