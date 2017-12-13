@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-12-2017 a las 18:35:25
--- Versión del servidor: 10.1.19-MariaDB
--- Versión de PHP: 5.6.28
+-- Tiempo de generación: 11-12-2017 a las 23:17:44
+-- Versión del servidor: 10.1.28-MariaDB
+-- Versión de PHP: 7.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -65,9 +67,8 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`contra`, `token`, `doc_usu`) VALUES
-('$2y$10$LrVETuI32iqYMduRnCGM6e.Rzf37SOyBAjNYSq/WCNjC3WHmXR6si', '5e97511ee4f8d898d4b573cdf384c2c7', 1023162650),
-('$2y$10$gkQjLsaEH38q5UWE5sI0JujnHg1cl51cl7ED1Ah69m.Hn3H7BcRCm', 'bd52883e55d1ef8c8b1290084b514220', 1000084530),
-('$2y$10$enyfpalCACYbM.6OfdOQX.ko.DGkWO0Zg3R5VXh8KSeZy/40C8ZRe', 'dc6302c4918a28eee730c27c4e420250', 54545645);
+('$2y$10$UN0dZE27.3XStQc4CEzQXuOSflKXreApGZkhvlrt.BHOFZF2CN6bq', '4d0f349527138fbaf6e7a32d4aa762a4', 48759512),
+('$2y$10$4vUcva8Hrx0N5THzf9IYHOhy9L5Tb3/edi178oGzl1gPnYF1b1g5y', 'fabe7fc6db20089505de1492a131e2b0', 15403631);
 
 -- --------------------------------------------------------
 
@@ -265,7 +266,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`cod_pro`, `nom_pro`, `des_pro`, `img`, `mar_pro`, `id_tip_pro`) VALUES
-('', '', '', '', '', NULL);
+('154', 'adsd', 'ADASAdqwdsdfdfdf', '', 'sdfawefaewfaf', 3),
+('54', 'arroz', 'libra de arroz de 500 g', '', 'diana', 3),
+('sadf', 'sadf', 'sadf', '', 'saf', 15),
+('wds', 'sadfa', 'sdf', '', 'sadf', 12);
 
 -- --------------------------------------------------------
 
@@ -475,9 +479,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`doc_usu`, `nom_usu`, `ape_usu`, `fech_nac_usu`, `gen_usu`, `cel_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img`) VALUES
-(54545645, 'dagobert', 'suarez', '1998-10-31 00:00:00', 'm', 5445, 565654, 'dasuarez@gmail.com', 50003, 1, 'no'),
-(1000084530, 'Guffy', 'zapata', '1999-11-29 00:00:00', 'm', 0, 0, 'guffy@gmail.com', 50003, 1, 'no'),
-(1023162650, 'Dagobert', 'surez', '1999-09-27 00:00:00', 'm', 503, 503, 'dagobert@gmail.com', 50003, 2, 'no');
+(15403631, 'samuel', 'sepulvedad', '1995-03-11 00:00:00', 'm', 3145698745, 3215694, 'samuel@hotmail.com', 50003, 1, 'no'),
+(48759512, 'carlos', 'perez', '1995-04-11 00:00:00', 'm', 3218695472, 5215698, 'carlos@gmail.com', 50003, 2, 'no'),
+(1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew');
 
 -- --------------------------------------------------------
 
@@ -662,21 +666,25 @@ ALTER TABLE `usuario_supermercado`
 --
 ALTER TABLE `calificacion`
   MODIFY `id_cal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
   MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
   MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `stock`
 --
 ALTER TABLE `stock`
   MODIFY `id_stock` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- Restricciones para tablas volcadas
 --
@@ -792,6 +800,7 @@ ALTER TABLE `usuario`
 ALTER TABLE `usuario_supermercado`
   ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`nit_sup`) REFERENCES `supermercado` (`nit_sup`),
   ADD CONSTRAINT `usuario_supermercado_ibfk_3` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`) ON DELETE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
