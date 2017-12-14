@@ -12,12 +12,10 @@ class ProductController{
 
     function crearProduct(){
       $data = $_POST['data'];
-<<<<<<< HEAD
-=======
+
 
       $result = $this->product->createProduct($data);
       header("Location: nuevo-producto");
->>>>>>> 61fee6d74b7349d3e26ec55ba676dcad9007b43e
       }
 
   //visualiza los productos en la pagina de cliente
