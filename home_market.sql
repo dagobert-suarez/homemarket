@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-12-2017 a las 05:34:18
--- Versión del servidor: 10.1.8-MariaDB
--- Versión de PHP: 5.6.14
+-- Tiempo de generación: 14-12-2017 a las 19:24:07
+-- Versión del servidor: 10.1.19-MariaDB
+-- Versión de PHP: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -30,6 +30,10 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_super` (IN `nit_sup` VARCHAR(30), IN `nom_sup` VARCHAR(50), IN `dir_sup` VARCHAR(50), IN `tel_sup` INT(11), IN `cod_ciu` INT(11), IN `logo_sup` VARCHAR(255), IN `lon_sup` VARCHAR(100), IN `lat_sup` VARCHAR(100))  BEGIN
 INSERT INTO supermercado VALUES (nit_sup,nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,lon_sup,lat_sup);
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_tipo_producto` (IN `id_tip_pro` INT(11), IN `nom_tip_pro` VARCHAR(50))  BEGIN
+INSERT INTO tipo_producto VALUES(id_tip_pro,nom_tip_pro);
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_un_producto` (IN `cod_pro` VARCHAR(50), IN `nom_pro` VARCHAR(50), IN `des_pro` VARCHAR(300), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT(11), IN `nom_tip_pro` VARCHAR(50))  BEGIN
