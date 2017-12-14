@@ -46,8 +46,6 @@
         <div class="">
             <button type="submit" name="guardar" class="btn">Crear registro</button>
 
-            <button type="submit" name="guardar">Crear Producto</button>
-
         </div>
     </form>
   </div>
