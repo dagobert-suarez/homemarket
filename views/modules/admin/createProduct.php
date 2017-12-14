@@ -7,7 +7,7 @@
             <ul>
                 <li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
                 <li><a href="Productosadmin">productos</a></li>
-                <!-- <li><a href=""></a></li> -->
+                <li><a href="">Crear producto</a></li>
             </ul>
       </div>
   </header>
@@ -44,7 +44,7 @@
             <input type="file" name="data[]" value="" class="new">
         </div>
         <div class="">
-            <button type="submit" name="guardar">Crear registro</button>
+            <button type="submit" name="guardar">Crear Producto</button>
 
         </div>
     </form>

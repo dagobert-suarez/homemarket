@@ -101,8 +101,19 @@ header .breadcrums ul{
     padding: 8px 0px;
     color: #433d53;
 }
+header .breadcrums ul{
+    font-size: 19px;
+    align-items: center;
+    display: flex;
+    padding: 8px 0px;
+    color: #433d53;
+}
 header .breadcrums ul li a:after{
     content: " / ";
+}
+header .breadcrums ul li:last-child,
+header .breadcrums ul li a:hover{
+    color: #fc3232;
 }
 
 label{
