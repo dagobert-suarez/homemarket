@@ -11,14 +11,8 @@ class ProductController{
     }
 
     function crearProduct(){
-      $data=$_POST['data'];
-      $result = json_decode($validation);
-      if ($result->success==true) {
-        $i = 0;
-      }else {
-        echo json_encode('faltaron');
+      $data = $_POST['data'];  
       }
-    }
 
   //visualiza los productos en la pagina de cliente
   function viewProducts(){
@@ -61,5 +55,6 @@ class ProductController{
     require_once "views/modules/admin/footer_admin.php";
   }
 }
+
 
 ?>

@@ -13,7 +13,7 @@ class ProductModel{
 //crear un nuevo producto: envia datos a bd
   function createProduct(){
     try{
-      $sql = "call crear_producto(?,?,?,?,?,?)";
+      $sql="INSERT INTO productos VALUES (?,?,?,?,?,?)";
       $query = $this->pdo->prepare($sql);
       $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5]));
 
