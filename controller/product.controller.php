@@ -11,7 +11,7 @@ class ProductController{
     }
 
     function crearProduct(){
-      $data = $_POST['data'];  
+      $data = $_POST['data'];
       }
 
   //visualiza los productos en la pagina de cliente

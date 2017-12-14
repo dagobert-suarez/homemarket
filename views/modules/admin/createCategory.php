@@ -2,6 +2,12 @@
 	<div class="">
 		<header>
 			<h1>Registrar categoria</h1>
+			<div class="breadcrums">
+						<ul>
+								<li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
+								<li><a href="">Crear categoria</a></li>
+						</ul>
+			</div>
 		</header>
 		<form id="frmcategory" class="" action="crearc-categoria" method="post">
 			<div class="">
@@ -13,7 +19,7 @@
 			<input type="text" name="data[]" value="">
 		</div>
 
-			<button type="submit" name="guardar">Crear Producto</button>
+			<button type="submit" name="guardar">Crear categoria</button>
 
 
 		</form>
