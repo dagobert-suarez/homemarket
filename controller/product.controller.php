@@ -21,7 +21,7 @@ class ProductController{
   //visualiza los productos en la pagina de cliente
   function viewProducts(){
     $result = $this->product->readProducts();
-    $return = $result;
+    return  $result;
 
   }
   // vista de los supermercados
