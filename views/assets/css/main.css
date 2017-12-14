@@ -614,7 +614,7 @@ autoptimize_4e4…11dea0e.css:13
 }
 
 /*responsi*/
-@media (max-width:1080px) {
+@media (max-width:1199px) {
   .menu{
   background-color: gray;
 
@@ -624,8 +624,21 @@ autoptimize_4e4…11dea0e.css:13
     width: 200px;
   }
 }
-@media (max-width:800px) {
+@media (max-width:991px) {
   .formtext{
   display: none;
   }
+}
+@media (max-width:767px) {
+
+}
+@media (max-width:575px) {
+  .formpart{
+  }
+
+  form .formgroup{
+    display: block;
+    background-color: rgb(21, 186, 247);
+  }
+
 }

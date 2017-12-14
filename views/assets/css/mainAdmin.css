@@ -113,7 +113,7 @@ header .breadcrums ul li a:after{
 }
 header .breadcrums ul li:last-child,
 header .breadcrums ul li a:hover{
-    color: #fc3232;
+    color: #ff3e0f;
 }
 
 label{
@@ -160,11 +160,11 @@ textarea:focus,select:focus{
   right:  10px;
   background-color: white;
   text-decoration: none;
-  border: 2px solid #ffe900;
+  border: 2px solid #ff3e0f;
   border-radius: 4px;
 }
 .frmbtn:hover{
-  background-color:#ffe900;
+  background-color:#ff3e0f;
   box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2);
   /* color: #434d10; */
 }
