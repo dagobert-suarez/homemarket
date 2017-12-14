@@ -9,7 +9,7 @@
 						</ul>
 			</div>
 		</header>
-		<form id="frmcategory" class="" action="crearc-categoria" method="post">
+		<form id="frmcategory" class="" action="crear-categoria" method="post">
 			<div class="">
 
 			<label for="" class="required">Codigo categoria</label>
@@ -36,17 +36,15 @@
 			</thead>
 			<tbody>
 				<?php
-
-
-
-					foreach ( $this->readCategory() as $row) {	?>
+					$data = $this->readCategory();
+					foreach ( $data as $row) {	?>
 				<tr>
-					<td><?php echo $row["iid_tip_pro"] ;?></td>
+					<td><?php echo $row["id_tip_pro"] ;?></td>
 					<td><?php echo $row["nom_tip_pro"] ;?></td>
 					<td>
-						<a href=""><i class="fa fa-pencil"></i></a>
-						<a href=""><i class="fa fa-info"></i></a>
-						<a href=""><i class="fa fa-trash"></i></a>
+						<a href=""><i class="fa fa-pencil">Editar</i></a>
+						<a href=""><i class="fa fa-info"></i>Detalles</a>
+						<a href=""><i class="fa fa-trash"></i>Eliminar</a>
 					</td>
 
 				</tr>

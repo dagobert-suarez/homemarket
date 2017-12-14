@@ -12,15 +12,27 @@ class ProductController{
 
     function crearProduct(){
       $data = $_POST['data'];
-
-
       $result = $this->product->createProduct($data);
       header("Location: nuevo-producto");
       }
 
+      //visualiza los productos en la pagina de cliente
+
+      function createCategory(){
+        $data = $_POST['data'];
+        $result = $this->product->createCategory($data);
+        header("Location: nueva-categoria");
+        }
+
   //visualiza los productos en la pagina de cliente
   function viewProducts(){
     $result = $this->product->readProducts();
+    return  $result;
+
+  }
+  //visualiza las  categorias en la pagina del admin
+  function readCategory(){
+    $result = $this->product->readCategory();
     return  $result;
 
   }

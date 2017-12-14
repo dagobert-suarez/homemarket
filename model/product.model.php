@@ -23,6 +23,19 @@ class ProductModel{
     }
     return $msn;
   }
+//crear una nueva categori envia datos a bd
+  function createCategory($data){
+    try{
+      $sql = "INSERT INTO tipo_producto(id_tip_pro,nom_tip_pro) VALUE (?,?)";
+      $query = $this->pdo->prepare($sql);
+      $query->execute(array($data[0],$data[1]));
+
+      $msn = "registro con exito";
+    }catch (PDOException $e) {
+      die($e->getMessage());
+    }
+    return $msn;
+  }
 
 //llama los tipos de categorias en la bd
   function readCategory(){

@@ -143,6 +143,22 @@ textarea:focus,select:focus{
   border-color: #ff9036;
   transition: 0.3s;
 }
+.dataTables_length select{
+    padding: 6px;
+    border-radius: 5px;
+    outline: none;
+    width: 40%;
+}
+.dataTables_length input[type=search]{
+    padding: 6px 6px;
+    outline: none;
+    border-radius: 5px;
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 1rem;
+    border: 2px solid #000;
+    outline: none;
+}
 .required::after{
   content: " * ";
   color: #fa7000;
