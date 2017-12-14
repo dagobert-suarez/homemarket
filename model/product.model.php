@@ -76,6 +76,18 @@ class ProductModel{
     return $msn;
   }
 
+  public function deletePro($data){
+    try{
+      $sql="DELETE FROM productos WHERE cod_pro = ?";
+      $query=$this->pdo->prepare($sql);
+      $query->execute(array($data));
+      $msn ="se elimino la categoria exitosamente";
+    } catch (PDOException $e) {
+      $msn = $e->getMessage();
+    }
+    return $msn;
+  }
+
 }
 
 ?>

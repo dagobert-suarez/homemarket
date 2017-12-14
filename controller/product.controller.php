@@ -54,7 +54,8 @@ class ProductController{
     function crearProduct(){
       $data = $_POST['data'];
       $result = $this->product->createProduct($data);
-      header("Location: nuevo-producto");
+      echo '<script language="javascript">alert("creado con exito");</script>';
+      echo "<script>window.location.href='nuevo-producto'</script>";
       }
 
       //visualiza los productos en la pagina de cliente
@@ -62,7 +63,8 @@ class ProductController{
       function createCategory(){
         $data = $_POST['data'];
         $result = $this->product->createCategory($data);
-        header("Location: nueva-categoria");
+        echo '<script language="javascript">alert("<div class="exit">creado con exito</div>");</script>';
+        echo "<script>window.location.href='nueva-categoria'</script>";
         }
 
   //visualiza los productos en la pagina de cliente
@@ -80,7 +82,14 @@ class ProductController{
  public function deleteProductType(){
     $data = $_GET['data'];
     $result = $this->product->deleteProduct($data);
-    header("Location: nueva-categoria");
+    echo '<script language="javascript">alert("ya se elimino");</script>';
+    echo "<script>window.location.href='nueva-categoria'</script>";
+  }
+ public function deleteProd(){
+    $data = $_GET['data'];
+    $result = $this->product->deletePro($data);
+    echo '<script language="javascript">alert("ya se elimino");</script>';
+    echo "<script>window.location.href='Productosadmin'</script>";
   }
 }
 
