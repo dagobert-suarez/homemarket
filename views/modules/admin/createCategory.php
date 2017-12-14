@@ -19,7 +19,7 @@
 			<input type="text" name="data[]" value="">
 		</div>
 
-			<button type="submit" name="guardar">Crear categoria</button>
+			<button type="submit" name="guardar" class="frmbtn">Crear categoria</button>
 
 
 		</form>
@@ -35,9 +35,14 @@
 				</tr>
 			</thead>
 			<tbody>
+				<?php
+
+
+
+					foreach ( $this->readCategory() as $row) {	?>
 				<tr>
-					<td>1234</td>
-					<td>Arroz</td>
+					<td><?php echo $row["iid_tip_pro"] ;?></td>
+					<td><?php echo $row["nom_tip_pro"] ;?></td>
 					<td>
 						<a href=""><i class="fa fa-pencil"></i></a>
 						<a href=""><i class="fa fa-info"></i></a>
@@ -45,6 +50,7 @@
 					</td>
 
 				</tr>
+			<?php } ?>
 			</tbody>
 
 		</table>

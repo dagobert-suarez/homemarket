@@ -14,11 +14,11 @@
     <form id="frmproducto" class="" action="crearProduct" method="post">
       <div class="">
         <label for="" class="required">Codigo de producto:</label>
-        <input type="number" name="data[]" value="" class="new">
+        <input type="number" name="data[]" value="" class="new" required>
       </div>
       <div class="">
         <label for="" class="required">Nombre de producto:</label>
-        <input type="text" name="data[]" value="" class="new">
+        <input type="text" name="data[]" value="" class="new" required>
       </div>
       <div class="">
         <label for="" class="opcional">Descripcion de producto:</label>
@@ -26,11 +26,11 @@
       </div>
       <div class="" >
         <label for="" class="required">Marca del producto:</label>
-        <input type="text" name="data[]" value="" class="new">
+        <input type="text" name="data[]" value="" class="new" required>
       </div>
         <div class="">
         <label for="" class="required">categoria producto:</label>
-        <select class="product" name="data[]" class="new">
+        <select class="product" name="data[]" class="new" required>
           <option value=""></option>
           <?php
 
@@ -44,7 +44,7 @@
             <input type="file" name="data[]" value="" class="new">
         </div>
         <div class="">
-            <button type="submit" name="guardar" class="btn">Crear registro</button>
+            <button type="submit" name="guardar" class="frmbtn">Crear Producto</button>
 
         </div>
     </form>

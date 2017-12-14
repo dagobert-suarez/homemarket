@@ -137,6 +137,12 @@ select{
   outline: none;
   width: 20%;
 }
+input[type=text]:focus,
+input[type=number]:focus,
+textarea:focus,select:focus{
+  border-color: #ffe900;
+  transition: 0.3s;
+}
 .required::after{
   content: " * ";
   color: #fa7000;
@@ -146,6 +152,23 @@ select{
   color: rgb(191, 191, 191);
   font-family: 'Cabin';
 }
+.frmbtn{
+  padding: 8px 10px;
+  width: 20%;
+  margin: 15px 0px ;
+  outline: none;
+  right:  10px;
+  background-color: white;
+  text-decoration: none;
+  border: 2px solid #ffe900;
+  border-radius: 4px;
+}
+.frmbtn:hover{
+  background-color:#ffe900;
+  box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  /* color: #434d10; */
+}
+
 /*_*.* fin de el formulario produto*.*_*/
 /*-*.* finaliza el articulo *.*-*/
 
