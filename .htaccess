@@ -12,6 +12,7 @@ RewriteRule ^super$ index.php?controller=views&a=super
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
+
 #cliente
 RewriteRule ^inicioCliente$ index.php?controller=product&a=inicioCliente
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
@@ -23,7 +24,10 @@ RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
 RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
-RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
-RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
 RewriteRule ^Productosadmin$ index.php?controller=product&a=Produtosviewsadmin
+#CRUD productos
+RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
+RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&data=$1
+#CRUD categoria
+RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
 RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
