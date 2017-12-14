@@ -21,5 +21,5 @@ $("frmproducto").submit(function (e) {
     error: function(result){
       console.log(result);
     }
-  })
-})
+  });
+});
