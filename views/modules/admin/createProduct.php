@@ -44,8 +44,12 @@
             <input type="file" name="data[]" value="" class="new">
         </div>
         <div class="">
+<<<<<<< HEAD
+            <button type="submit" name="guardar" class="btn">Crear registro</button>
+=======
 
             <button type="submit" name="guardar">Crear Producto</button>
+>>>>>>> 0b2b5ac98192fdc6bf6d286cd10dcb126c4986bb
 
         </div>
     </form>

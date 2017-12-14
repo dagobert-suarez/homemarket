@@ -46,10 +46,6 @@ class UserController{
 		}else{
 			echo json_encode('haga el recapchapt');
 		}
-
-
-
-
 	}
 
 
