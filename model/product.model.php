@@ -11,11 +11,11 @@ class ProductModel{
     }
   }
 //crear un nuevo producto: envia datos a bd
-  function createProduct(){
+  function createProduct($data){
     try{
-      $sql="INSERT INTO productos VALUES (?,?,?,?,?,?)";
+      $sql = "INSERT INTO productos(cod_pro,nom_pro,des_pro,mar_pro,id_tip_pro) VALUE (?,?,?,?,?)";
       $query = $this->pdo->prepare($sql);
-      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5]));
+      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4]));
 
       $msn = "registro con exito";
     }catch (PDOException $e) {
