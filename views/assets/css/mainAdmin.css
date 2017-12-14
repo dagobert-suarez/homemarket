@@ -117,7 +117,7 @@ header .breadcrums ul li a:hover{
     color: #ff3e0f;
 }
 .categorymodal{
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 1;
     overflow: auto;
@@ -127,6 +127,7 @@ header .breadcrums ul li a:hover{
     height: 100%;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
 }
 .modal-content-category{
     background-color: rgb(255, 255, 255);

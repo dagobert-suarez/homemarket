@@ -24,7 +24,7 @@ function showSlides() {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex-1].style.display ="block";
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 4000); // Cambia la imagen cada 3 segungos
 }
@@ -35,6 +35,10 @@ if (document.getElementById('close')) {
     var modal = document.getElementById('loginmodal');
     var btn = document.getElementById('mon');
     var cerrar = document.getElementById('close');
+    // crear categoria modal
+    var modalcategory = document.getElementById('categorymodal');
+    var categoryb = document.getElementById('btn-category');
+    var cerrarcatego = document.getElementById('close');
 
     btn.onclick = function(){
         modal.style.display ="block";
@@ -47,7 +51,19 @@ if (document.getElementById('close')) {
             modal.style.display= "none";
         }
     }
+    categoryb.onclick= function(){
+        modal.style.display = "block";
+    }
+    cerrarcatego.onclick = function(){
+        modal.style.display = "none";
+    }
+    window.onclick = function() {
+        if (outclick.target ==modalcategory) {
+        modal.style.display ="none";
+    }
+    }
 }
+
 
 
 // validaciones en el login:dago
