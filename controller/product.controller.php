@@ -30,6 +30,13 @@ class ProductController{
     require_once "views/modules/admin/footer_admin.php";
 
   }
+   // vista de las categorias
+    function crearCategoria(){
+      require_once "views/modules/admin/header-admin.php";
+      require_once "views/modules/admin/createCategory.php";
+      require_once "views/modules/admin/footer_admin.php";
+
+    }
 //inicio de sesion del cliente
   function inicioCliente(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
