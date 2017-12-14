@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2017 a las 23:17:44
--- Versión del servidor: 10.1.28-MariaDB
--- Versión de PHP: 7.1.10
+-- Tiempo de generación: 14-12-2017 a las 05:34:18
+-- Versión del servidor: 10.1.8-MariaDB
+-- Versión de PHP: 5.6.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -67,8 +65,11 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`contra`, `token`, `doc_usu`) VALUES
+('$2y$10$eCCNOj9Trrfic/.MpI/lIeEkepQ6Q.AQ1tM6FRInlKShlOGCdDPZi', '18370284b07d017653200b4b74022459', 1026162652),
+('$2y$10$85NjncUC5.JPn5rBZDevveyY0BUXBVGn.aWww7OJavObauH4kI.aG', '26a5046b582d353bdb86e7d3bfac60dc', 1026132690),
 ('$2y$10$UN0dZE27.3XStQc4CEzQXuOSflKXreApGZkhvlrt.BHOFZF2CN6bq', '4d0f349527138fbaf6e7a32d4aa762a4', 48759512),
-('$2y$10$4vUcva8Hrx0N5THzf9IYHOhy9L5Tb3/edi178oGzl1gPnYF1b1g5y', 'fabe7fc6db20089505de1492a131e2b0', 15403631);
+('$2y$10$4vUcva8Hrx0N5THzf9IYHOhy9L5Tb3/edi178oGzl1gPnYF1b1g5y', 'fabe7fc6db20089505de1492a131e2b0', 15403631),
+('$2y$10$Fhuf94q1MkirELIFrH0shOBfU.OkUUF8MHFDWixUFVK42.AWMF3Ou', 'ffc7675cab52690468f4fd056456ab9b', 1000084530);
 
 -- --------------------------------------------------------
 
@@ -266,7 +267,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`cod_pro`, `nom_pro`, `des_pro`, `img`, `mar_pro`, `id_tip_pro`) VALUES
+('1000', 'pastas', '', '', 'doria', 15),
+('1234', 'Queso', 'queso mosarrela', '', 'Colanta', 15),
 ('154', 'adsd', 'ADASAdqwdsdfdfdf', '', 'sdfawefaewfaf', 3),
+('262626', 'panelas', '', '', 'chirarar', 7),
 ('54', 'arroz', 'libra de arroz de 500 g', '', 'diana', 3),
 ('sadf', 'sadf', 'sadf', '', 'saf', 15),
 ('wds', 'sadfa', 'sdf', '', 'sadf', 12);
@@ -450,8 +454,19 @@ CREATE TABLE `tipo_producto` (
 --
 
 INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
+(1, 'Aceites'),
+(2, 'Licores'),
 (3, 'frutas'),
+(4, 'Pollo-Carne-pescado '),
+(5, 'Lacteos-Huevos'),
+(6, 'Pan-arepas-tortillas'),
+(7, 'Galletas-dulces '),
+(8, 'Aseo'),
+(9, 'Aseo personal'),
+(10, 'Carnes frias '),
+(11, 'Manufacturado'),
 (12, 'verduras'),
+(13, 'bebidas '),
 (15, 'granos');
 
 -- --------------------------------------------------------
@@ -481,7 +496,10 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`doc_usu`, `nom_usu`, `ape_usu`, `fech_nac_usu`, `gen_usu`, `cel_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img`) VALUES
 (15403631, 'samuel', 'sepulvedad', '1995-03-11 00:00:00', 'm', 3145698745, 3215694, 'samuel@hotmail.com', 50003, 1, 'no'),
 (48759512, 'carlos', 'perez', '1995-04-11 00:00:00', 'm', 3218695472, 5215698, 'carlos@gmail.com', 50003, 2, 'no'),
-(1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew');
+(1000084530, 'David', 'Herrera', '1999-11-29 00:00:00', 'm', 323, 35, 'guffyherrera150@gmail.com', 50003, 2, 'no'),
+(1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew'),
+(1026132690, 'Dagobert', 'Suarez', '1999-09-27 00:00:00', 'm', 300, 34, 'dagobertsuarez@gmail.com', 50003, 2, 'no'),
+(1026162652, 'Alexis', 'MuÃ±os', '1999-09-29 00:00:00', 'm', 3147145066, 34, 'amunoz185@misena.edu.co', 50003, 2, 'no');
 
 -- --------------------------------------------------------
 
@@ -666,25 +684,21 @@ ALTER TABLE `usuario_supermercado`
 --
 ALTER TABLE `calificacion`
   MODIFY `id_cal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
   MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
   MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `stock`
 --
 ALTER TABLE `stock`
   MODIFY `id_stock` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- Restricciones para tablas volcadas
 --
@@ -800,7 +814,6 @@ ALTER TABLE `usuario`
 ALTER TABLE `usuario_supermercado`
   ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`nit_sup`) REFERENCES `supermercado` (`nit_sup`),
   ADD CONSTRAINT `usuario_supermercado_ibfk_3` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`) ON DELETE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
