@@ -1,4 +1,4 @@
-onloadedmetadata=""<div class="wrap--datagrid">
+<div class="wrap--datagrid">
   <header>
     <h1>Aca puedes ver los produtos registrados </h1>
       <div class="breadcrums">
