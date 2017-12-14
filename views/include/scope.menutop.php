@@ -1,4 +1,4 @@
-<div class="menu">
+ <div class="menu">
 		<div class="logo--menu">
 		<img  class="logo--img" src="views/assets/image/logoHM.png" alt="" href="inicio">
 		</div>

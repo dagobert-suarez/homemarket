@@ -18,7 +18,3 @@
 			</div>
 	</form>
 </div>
-
-<!-- <?php
-// echo password_hash("9909", PASSWORD_DEFAULT);
-?> -->

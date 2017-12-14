@@ -1,15 +1,9 @@
 <section>
-	<div class="">
-		<header>
-			<h1>Registrar categoria</h1>
-			<div class="breadcrums">
-						<ul>
-								<li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
-								<li><a href="">Crear categoria</a></li>
-						</ul>
-			</div>
-		</header>
-		<form id="frmcategory" class="" action="crear-categoria" method="post">
+	<div  id="categorymodal" class="categorymodal">
+		
+		<form id="frmcategory" class="modal-content-category" action="crear-categoria" method="post">
+			<span id="close" class="close" >&times;</span>
+			<h1> Registrar categoria </h1>
 			<div class="">
 
 			<label for="" class="required">Codigo categoria</label>
@@ -24,7 +18,18 @@
 
 		</form>
 
-	</div><br>
+	</div>
+	<header>
+		<h1>Ver categoria</h1>
+		<div class="breadcrums">
+			<ul>
+				<li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
+				<li><a id="btn-category">Crear categoria</a></li>
+				<li><a href="producto">Categorias</a></li>
+			</ul>
+		</div>
+	</header>
+
 	<div class="wrap--datagrid">
 		<table id="dataGrid">
 			<thead class="tittledatag">
