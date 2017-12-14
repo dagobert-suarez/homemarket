@@ -63,6 +63,19 @@ class ProductModel{
       return $result;
   }
 
+  //elimina el tipo de categoria
+  public function deleteProduct($data){
+    try{
+      $sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
+      $query=$this->pdo->prepare($sql);
+      $query->execute(array($data));
+      $msn ="se elimino la categoria exitosamente";
+    } catch (PDOException $e) {
+      $msn = $e->getMessage();
+    }
+    return $msn;
+  }
+
 }
 
 ?>

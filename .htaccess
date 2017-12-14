@@ -26,3 +26,4 @@ RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
 RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
 RewriteRule ^Productosadmin$ index.php?controller=product&a=Produtosviewsadmin
+RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
