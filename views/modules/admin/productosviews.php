@@ -20,6 +20,7 @@
       </tr>
     </thead>
     <tbody>
+
       <?php
 
           $data = $this->viewProducts();
