@@ -4,11 +4,17 @@
 			<h1>Registrar categoria</h1>
 		</header>
 		<form id="frmcategory" class="" action="crearc-categoria" method="post">
+			<div class="">
+
 			<label for="" class="required">Codigo categoria</label>
 			<input type="number" name="data[]" value="">
 
 			<label for="" class="required">Nombre de la categoria</label>
 			<input type="text" name="data[]" value="">
+		</div>
+
+			<button type="submit" name="guardar">Crear Producto</button>
+
 
 		</form>
 
