@@ -116,8 +116,8 @@ header .breadcrums ul li:last-child,
 header .breadcrums ul li a:hover{
     color: #ff3e0f;
 }
-.categorymodal{
-    display: none;
+/* .categorymodal{
+    display: ;
     position: fixed;
     z-index: 1;
     overflow: auto;
@@ -128,21 +128,22 @@ header .breadcrums ul li a:hover{
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
     align-items: center;
-}
-.modal-content-category{
+} */
+/* .modal-content-category{
     background-color: rgb(255, 255, 255);
     margin: 10% auto 5% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
     font-family: 'Roboto', sans-serif;
-}
+} */
 .close{
     position: absolute;
     top: 0;
     right: 25px;
     color: #aaa;
     font-size: 35px;
+    display: none;
 }
 
 label{
@@ -235,9 +236,82 @@ background-color: rgb(196, 196, 196);
 
 /*_*.*Responsi de la vista admin *.*_*/
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
 
-  .menu--top{
+  input[type=text],
+  input[type=number],
+  textarea{
+    padding: 6px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+  }
+  select{
+    padding: 7px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
 
   }
+}
+@media (max-width: 360px) {
+
+input[type=file]{
+  display: block;
+  width: 70%;
+}
+  input[type=text],
+  input[type=number],
+  textarea{
+    padding: 6px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+  }
+  select{
+    padding: 7px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+
+  }
+  }
+  .frmbtn{
+    padding: 8px 10px;
+    width: 100%;
+    margin: 25px 0px ;
+    outline: none;
+    right:  10px;
+    background-color: white;
+    text-decoration: none;
+    border: 2px solid #ff9036;
+    border-radius: 4px;
+  }
+  header .breadcrums ul{
+      font-size: 16px;
+      align-items: center;
+      display: flex;
+      padding: 4px 0px;
+      color: #433d53;
+  }
+  input[type=search]{
+     padding: 4px 4px;
+     outline: none;
+     border-radius: 6px;
+     text-decoration: none;
+     list-style-type: none;
+     margin-bottom: 1rem;
+     border: 1px solid #c3c3c3;
+     /* width: 20%; */
+ }
+ header  h1{
+  letter-spacing: -1px;
+  font-size: 2rem ;
+  padding-bottom: 20px;
+  color: #433d53;
+}
+.wrap--datagrid{
+  
 }
