@@ -31,3 +31,4 @@ RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&
 #CRUD categoria
 RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
 RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
+RewriteRule ^updateProduct$ index.php?controller=views&a=updateProduct
