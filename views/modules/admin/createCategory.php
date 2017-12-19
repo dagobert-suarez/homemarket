@@ -2,8 +2,8 @@
 	<div  id="categorymodal" class="categorymodal">
 
 		<form id="frmcategory" class="modal-content-category" action="crear-categoria" method="post">
-			<span id="close" class="close" >&times;</span>
 			<h1> Registrar categoria </h1>
+			<span id="close" class="close" >&times;</span>
 			<div class="">
 
 			<label for="" class="required">Codigo de la categoria</label>
@@ -24,7 +24,7 @@
 		<div class="breadcrums">
 			<ul>
 				<li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
-				<li><a id="btn-category">Crear categoria</a></li>
+				<a id="btn-category">Crear categoria</a>
 				<li><a href="producto">Categorias</a></li>
 			</ul>
 		</div>
