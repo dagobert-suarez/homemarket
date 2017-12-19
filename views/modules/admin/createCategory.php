@@ -1,12 +1,12 @@
 <section>
 	<div  id="categorymodal" class="categorymodal">
-		
+
 		<form id="frmcategory" class="modal-content-category" action="crear-categoria" method="post">
 			<span id="close" class="close" >&times;</span>
 			<h1> Registrar categoria </h1>
 			<div class="">
 
-			<label for="" class="required">Codigo categoria</label>
+			<label for="" class="required">Codigo de la categoria</label>
 			<input type="number" name="data[]" value="">
 
 			<label for="" class="required">Nombre de la categoria</label>
