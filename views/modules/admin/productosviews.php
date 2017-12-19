@@ -1,6 +1,6 @@
 <div class="wrap--datagrid">
   <header>
-    <h1>Aca puedes ver los produtos registrados </h1>
+    <h1>Productos registrados </h1>
       <div class="breadcrums">
             <ul>
                 <li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>

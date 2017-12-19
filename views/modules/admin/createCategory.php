@@ -6,7 +6,7 @@
 			<span id="close" class="close" >&times;</span>
 			<div class="">
 
-			<label for="" class="required">Codigo categoria</label>
+			<label for="" class="required">Codigo de la categoria</label>
 			<input type="number" name="data[]" value="">
 
 			<label for="" class="required">Nombre de la categoria</label>
