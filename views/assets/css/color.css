@@ -5,12 +5,19 @@
 .orange2{
   background-color: #ff9036;
 }
+.orange3{
+  background-color: #fc770b;
+}
 .yellow1{
   background-color: #e9d558;
 }
 .green1{
   background-color: #72ad75;
   color: black;
+}
+.green2{
+  background-color: #00754d;
+  color: white;
 }
 .blue1{
   background-color: #0e8d94;
@@ -19,11 +26,7 @@
   background-color: #f1f1f1;
   color: #433d53;
 }
-.green2{
-  background-color: #00754d;
-  color: white;
-}
-/*font*/
+/*_*.*Font *.*_*/
 .gray1{
   color: #433d53;
 }

@@ -142,7 +142,6 @@ body{
     z-index: 3;
     width: 100%;
     margin-top: -8.5%;
-    /*padding-left: 0%;*/
     color: #ffffff;
 
 }
@@ -155,25 +154,47 @@ body{
     opacity: 0.8;
 }
  h1.infowel{
-  position: relative;
-    /*text-shadow: -1px -1px 1px rgba(0,0,0,0.3), 1px 1px 1px rgba(0,0,0,0.3), 0 0 10px #000;*/
-    letter-spacing: -1px;
+    position: sticky;
+    letter-spacing: -7px;
     padding-right: 4.7em;
-    font-size: 1.9em;
+    left: 40%;
+    font-size: 2.9em;
     margin: .75em 0;
     pointer-events: none;
     font-family: 'Raleway',sans-serif;
+    color: rgb(238, 37, 134);
 }
-  /*right: 10px;
-  padding: 7px 20px 0px;
-  font-size: 25px;
-  font-family: 'Roboto', sans-serif;
-}*/
-.info p{
-  /*border-bottom: 2px solid #fff;*/
-  padding-bottom: 0px;
-  padding: 5px 7px 0px 5px;
 
+ .info p{
+  /* padding-bottom: 0px;
+  padding: 5px 7px 0px 5px; */
+  color: rgb(235, 0, 255);
+  font-size: 1.2rem;
+  left:  40%;
+  display: block;
+  justify-content: space-around;
+
+}
+ .starbtn{
+  text-decoration: none;
+  padding: 7px 7px ;
+  font-size: 1.1rem;
+  /* background: radial-gradient(farthest-side at 40% 50%, #F7FE2E, #F7FE2E); */
+  background-color: darkorange;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  border: 2px solid  darkorange;
+  position: relative;
+  justify-content: center;
+  margin-top: 600px;
+  top: 330px;
+  left: 40%;
+}
+.starbtn:hover{
+  color:rgb(240, 240, 240) ;
+  background-color: #e03507;
+  border: 3px solid #e03507;
+  box-shadow: 0px 2px 2px 2px rgb(225, 53, 7);
 }
 
 /*El indicador*/
@@ -596,7 +617,7 @@ autoptimize_4e4…11dea0e.css:13
   padding: 5px 5px 5px 0px;
 }
 
-/*responsi*/
+/*_*.*Responsi del inicio *.*_*/
 @media (max-width:1199px) {
   .menu{
   background-color: gray;
@@ -613,11 +634,24 @@ autoptimize_4e4…11dea0e.css:13
   }
 }
 @media (max-width:767px) {
-
+  .frmregistro .content-form .form-gruop{
+    display: none;
+    background-color: rgb(199, 53, 174);
+  }
+.frmregistro .form-gruop{
+  display: block;
+  width: 50%;
+}
 }
 @media (max-width:575px) {
   .formpart{
   }
+   .modal-content{
+  width: 50%;
+}
+.close{
+  /* position: sticky; */
+}
 
   form .formgroup{
     display: block;

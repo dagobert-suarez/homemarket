@@ -240,25 +240,36 @@ background-color: rgb(196, 196, 196);
 /*-*.* finaliza el articulo *.*-*/
 
 /*_*.*Responsi de la vista admin *.*_*/
+@media (max-width: 1200px){
+
+
+  .dataTables_length select{
+      padding: 3px;
+      border-radius: 1px;
+      outline: none;
+      width: 40%;
+  }
+   input[type=search]{
+      padding: 4px 4px;
+      outline: none;
+      border-radius: 3px;
+      text-decoration: none;
+      list-style-type: none;
+      margin-bottom: 1rem;
+      border: 2px solid #c3c3c3;
+      outline: none;
+  }
+
+}
+@media (max-width:900px){
+
+}
 
 @media (max-width: 600px) {
-
-  input[type=text],
-  input[type=number],
-  textarea{
-    padding: 6px;
-    border-radius: 1px;
-    border: 1px solid #ccc;
-    width: 100%;
-    outline: none;
+  .wrap--datagrid #dataGrid{
+    background-color: rgb(0, 231, 255); 
   }
-  select{
-    padding: 7px;
-    border-radius: 4px;
-    outline: none;
-    width: 100%;
 
-  }
 }
 @media (max-width: 360px) {
 
@@ -281,7 +292,6 @@ input[type=file]{
     outline: none;
     width: 100%;
 
-  }
   }
   .frmbtn{
     padding: 8px 10px;
@@ -318,5 +328,7 @@ input[type=file]{
   color: #433d53;
 }
 .wrap--datagrid{
+display: none;
 
+}
 }
