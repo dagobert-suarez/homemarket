@@ -51,7 +51,7 @@ if (document.getElementById('close')) {
             modal.style.display= "none";
         }
     }
-    categoryb.onclick= function(){
+    categoryb.onclick = function(){
         modal.style.display = "block";
     }
     cerrarcatego.onclick = function(){

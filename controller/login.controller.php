@@ -39,7 +39,7 @@ class LoginController{
 							header ('Location:inicioAdmin');
 						}
 				} else {
-echo "contraseña invalida ";
+echo '<h1>contraseña invalida</h1>';
 				}
 		}else{
 			echo '<h1>el usuario no existe</h1>';
