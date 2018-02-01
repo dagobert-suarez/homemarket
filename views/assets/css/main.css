@@ -21,13 +21,21 @@ body{
   background-size: cover;
   margin-top:0px;
 }
-.beach3{
-    background: #13b092;
-    height: 350px;
-}
-
 .beach2:last-child{
-  margin-top: 0px;
+    margin-top: 0px;
+}
+.beach3{
+    background: rgba(187, 187, 187, 0.64);
+    background-size: cover;
+    height: 700px;
+}
+.beach4{
+    background-color: rgb(214, 49, 112);
+    height: 500px
+}
+h1 .toll{
+    font-size: 2rem;
+    color: rgb(191, 142, 15);
 }
 .shapes{
   padding: -10px;
@@ -153,24 +161,28 @@ body{
     margin-top:2.7%;
     opacity: 0.8;
 }
- h1.infowel{
-    position: sticky;
-    letter-spacing: -7px;
+   h1.infowel{
+    /* position: sticky; */
+
+    text-align: center;
+    margin:30px   50px 50px   ;
+    letter-spacing: 5px;
     padding-right: 4.7em;
     left: 40%;
     font-size: 2.9em;
     margin: .75em 0;
     pointer-events: none;
     font-family: 'Raleway',sans-serif;
-    color: rgb(238, 37, 134);
+    color:rgb(254, 254, 254) ;
 }
 
  .info p{
-  /* padding-bottom: 0px;
-  padding: 5px 7px 0px 5px; */
-  color: rgb(235, 0, 255);
+
+  text-align: center;
+  margin: 0px 10px 10px ;
+  color:#ff9036;
   font-size: 1.2rem;
-  left:  40%;
+  left:  50%;
   display: block;
   justify-content: space-around;
 
@@ -179,8 +191,7 @@ body{
   text-decoration: none;
   padding: 7px 7px ;
   font-size: 1.1rem;
-  /* background: radial-gradient(farthest-side at 40% 50%, #F7FE2E, #F7FE2E); */
-  background-color: darkorange;
+  /* background-color: darkorange; */
   border-radius: 3px;
   color: rgb(255, 255, 255);
   border: 2px solid  darkorange;
@@ -191,10 +202,10 @@ body{
   left: 40%;
 }
 .starbtn:hover{
-  color:rgb(240, 240, 240) ;
-  background-color: #e03507;
-  border: 3px solid #e03507;
-  box-shadow: 0px 2px 2px 2px rgb(225, 53, 7);
+  color: #f1f1f1;
+  background-color: darkorange;
+  /* border: 3px solid #e03507; */
+  /* box-shadow: 0px 2px 2px 2px rgb(225, 53, 7); */
 }
 
 /*El indicador*/
@@ -236,6 +247,13 @@ body{
     height: 100vh;
     background-color: rgb(255, 255, 255);
 
+}
+.setsupermercados{
+    margin-top: 10.5px;
+    display:flex;
+    width: 50;
+    height: 100vh;
+    /* background-color: rgb(199, 199, 199); */
 }
 .formpart{
     /*background: #f1f1f9;*/
