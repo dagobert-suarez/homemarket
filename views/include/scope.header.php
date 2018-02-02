@@ -21,12 +21,4 @@
 			</div>
 			<div class="beach2">
 				<?php 	require_once 'views/modules/registrarse.php'; ?>
-				<?php   require_once 'views/modules/supermercados.php'; ?>
-				
-			</div>
-			<div class="beach3">
-				<?php   require_once 'views/modules/supermercados.php'; ?>
-			</div>
-			<div class="beach4">
-				<?php   require_once ''; ?>
 			</div>
