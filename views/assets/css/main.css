@@ -41,12 +41,12 @@ h1 .toll{
 .super{
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-      font-family: 'Roboto',sans-serif;
+    padding-left: 50px;
+    padding-right: 90px;
 }
-.blockcontent{
-    top: initial;
+.block-content{
+    /* top: initial; */
+      font-family: 'Roboto',sans-serif;
 }
 .primerBloque{
     text-align: center;
