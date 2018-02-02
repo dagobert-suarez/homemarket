@@ -8,6 +8,7 @@ RewriteRule ^master$ index.php?controller=views&a=master
 RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
+RewriteRule ^neighbour$ index.php?controller=views&a=neighbour
 
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
