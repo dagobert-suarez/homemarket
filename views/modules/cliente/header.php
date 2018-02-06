@@ -10,23 +10,23 @@
         <link rel="shortcut icon" href="views/assets/image/icono.ico">
   </head>
   <body>
-  <section class="">
-    <div class="menu--top green1">
-      <div class="content-profile">
+      <div class="menu--top green1">
+          <div class="content-profile">
 
+          </div>
+          <div class="left">
+              <span><i class="fa fa-bars" aria-hidden="true" id="menu"></i><i class="fa fa-bars" aria-hidden="true" id="menu-mobile"></i></span>
+          </div>
+          <div class="r">
+              <ul class="options">
+                  <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
+                  <li><i class="fa fa-cog" aria-hidden="true"></i></li>
+                  <li> <a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+              </ul>
+          </div>
       </div>
-      <div class="left">
-          <span><i class="fa fa-bars" aria-hidden="true" id="menu"></i><i class="fa fa-bars" aria-hidden="true" id="menu-mobile"></i></span>
-      </div>
-      <div class="r">
-      <ul class="options">
-        <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
-        <li><i class="fa fa-cog" aria-hidden="true"></i></li>
-        <li> <a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-      </ul>
-    </div>
-    </div>
-    <div class="wrap-menu-mobile">
+  <section class="clien-one">
+    <!-- <div class="wrap-menu-mobile">
         <div class="close--mobile">&times;</div>
         <ul>
             <li>inicio</li>
@@ -36,16 +36,14 @@
             <li>ajustes</li>
             <li><a href="cerrar-sesion"></a>cerra sesion</li>
         </ul>
-    </div>
-    <div class="info-map gray1">
-    </div>
+    </div> -->
+    <!-- <div class="info-map gray1">
+    </div><br><br><br><br> -->
     <div id="map">
 
     </div >
     <div class="more">
       <?php
         require_once 'views/modules/cliente/more.php';
-        // require_once 'views/modules/cliente/content.gallery.php';
-        // require_once 'views/modules/cliente/viewProduct.php';
       ?>
     <article class="">
