@@ -25,7 +25,7 @@ body{
     margin-top: 0px;
 }
 .beach3{
-    background: rgba(187, 187, 187, 0.64);
+    background: rgba(232, 232, 232, 0.33);
     background-size: cover;
     height: 600px;
 }
@@ -37,27 +37,59 @@ h1 .toll{
     font-size: 2rem;
     color: rgb(191, 142, 15);
 }
+
 /*-*. Está esla parte de los supermercados .*-*/
-.super{
+.setsupermercados{
+    margin-top: 10.5px;
+    width: 50;
+    height: 100vh;
+    /* background-color: rgb(199, 199, 199); */
+}
+ .setsupermercados header{
+    padding-top: 50px;
+    height:  30vh;
+}
+.setsupermercados header picture img{
+    height: 100%;
+    width: 100%;
+    background-color:linear-gradient(to bottom, #000000 0%, #000000 100%);
+}
+.setsupermercados header{
+    background-color: linear-gradient(to bottom, #000000 0%, #000000 100%);
+}
+
+/* .super{
     margin-left: auto;
     margin-right: auto;
     padding-left: 50px;
     padding-right: 90px;
-}
-.block-content{
-    /* top: initial; */
-      font-family: 'Roboto',sans-serif;
-}
+} */
+
 .primerBloque{
     text-align: center;
-    padding: 2em 0;
+    /* padding: 2em 0; */
 }
-.supermercadoTitulo{
-    font-size: 1.5em;
+.primerBloque .supermercadoTitulo{
+    font-size: 1.3em;
     font-weight: 400;
-    color: #333;
-    max-width: 500px;
-    margin: 0 auto;  font-family: 'Roboto',sans-serif;
+    color: #435d53;
+    font-family: 'Roboto',sans-serif;
+    margin: 50px 15px 15px 20px ;
+}
+.supermercadoTitulo span{
+    color: #FF9036;
+    font-size: 1.3.1em;
+}
+.BuscarSuper input{
+    outline: none;
+    width: 250px;
+    padding: 8px 30px;
+    border:1px solid rgb(182, 182, 182) ;
+    border-radius: 8px;
+    line-height: 1.20px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+
 }
 /*-*. Aca  finaliza la parte de los supermercados .*-*/
 
@@ -272,13 +304,7 @@ h1 .toll{
     background-color: rgb(255, 255, 255);
 
 }
-.setsupermercados{
-    margin-top: 10.5px;
-    display:flex;
-    width: 50;
-    height: 100vh;
-    /* background-color: rgb(199, 199, 199); */
-}
+
 .formpart{
     /*background: #f1f1f9;*/
     background-color: rgb(255, 255, 255);
@@ -595,48 +621,22 @@ input[type=password]:focus,select:focus{
     to{transform: scale(1)}
 
 }
-/*finalizo la parte del login*/
-/*-*.*pasoapaso*.*-*/
-.content .vc_row.full-width-wrap>.wpb_column, .full-width-wrap>.wf-cell, .full-width-wrap>.wpb_column, .full-width-wrap>.wpb_column>.vc_column-inner {
-    padding-left: 0;
-    padding-right: 0;
-}
-.service-section {
-    display: block;
-}
-
-.service-section {
-    display: block;
-}
-.wpb_column, .wpb_row {
-    position: relative;
-}
-.upb_video_class, .wpb_column, .wpb_row {
-    position: relative;
-}
-.vc_column_container {
-    padding-left: 0;
-    padding-right: 0;
-}
-@media (min-width: 768px)
-autoptimize_4e4…11dea0e.css:13
-.vc_col-sm-12 {
-    width: 100%;
-}
-/*-*.* fin pasoapaso*.*-*/
-/*footer*/
+/*-*.* finalizo la parte del login*.*-*/
+/*-*.* footer*.*-*/
 .footer{
-  background-color: #433d53;
-  margin-top: -16px;
-  height: 100px;
+  /* background-color: #433d53; */
+  background-color: #333333;
+  /* margin-top: -16px; */
+  height:;
   display: flex;
-  justify-content: space-between;;
+  /* justify-content: space-between; */
   font-family: 'Roboto', sans-serif;
 }
 .copyright{
-  width: 30%;
-  margin: 5px 15px ;
+  width: 70%;
+  margin: 10px 0px ;
   justify-content: center;
+  display: flex;
   color: darkorange;
 }
 .copyright ul{
@@ -645,19 +645,23 @@ autoptimize_4e4…11dea0e.css:13
 }
 
 .icons-footer {
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
+  display:;
   font-size: 17px;
+  justify-content: space-between;
   color: darkorange;
-  width: 30%;
+  width: 16%;
 
 }
+
 .icons-footer ul {
   margin-top: 10px;
   list-style-type: none;
-  display: flex;
-  /*justify-content: center;*/
-  padding: 5px 5px 5px 0px;
+  display: flex     ;
+  justify-content: space-between;
+  padding: 1px 1px 1px 0px;
 }
+/*-*.* Fin footer *.*-*/
 
 /*_*.*Responsi del inicio *.*_*/
 @media (max-width:1199px) {

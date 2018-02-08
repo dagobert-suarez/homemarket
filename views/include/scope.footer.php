@@ -3,7 +3,7 @@
 
 		<footer class="footer">
 			<div class="copyright">
-				<p>© Copyright 2017 by HomeMarket	All Rights Reserved. |</p>
+				<p>© Copyright 2017 by HomeMarket	All Rights Reserved. </p>
 				<ul id="" class="">
 					<li>Términos y Condiciones. |</li>
 					<li>Política de Privacidad. |</li>
@@ -23,7 +23,6 @@
 				</div>
 		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 		<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
 		<script src="views/assets/js/main.js"></script>
 		<script src="views/assets/js/validaciones.js"></script>
