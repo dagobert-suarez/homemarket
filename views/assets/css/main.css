@@ -25,14 +25,11 @@ body{
     margin-top: 0px;
 }
 .beach3{
-    background: rgba(232, 232, 232, 0.33);
+    background:rgba(238, 238, 238, 0.31) ;
     background-size: cover;
     height: 600px;
 }
-.beach4{
-    background-color: rgb(214, 49, 112);
-    height: 500px
-}
+
 h1 .toll{
     font-size: 2rem;
     color: rgb(191, 142, 15);
@@ -46,24 +43,27 @@ h1 .toll{
     /* background-color: rgb(199, 199, 199); */
 }
  .setsupermercados header{
-    padding-top: 50px;
-    height:  30vh;
+    /* padding-top: 50px; */
+    height:  40vh;
+    background-color: linear-gradient(to bottom, #000000 0%, #000000 100%);
 }
+picture .supermer-info{
+    display: block;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    /* margin-top: 70px; */
+    margin-left:  180px;
+    /* z-index: 1000; */
+    font-family:"Lato", sans-serif;
+    position: absolute;
+}
+
 .setsupermercados header picture img{
     height: 100%;
     width: 100%;
     background-color:linear-gradient(to bottom, #000000 0%, #000000 100%);
+    opacity: 0.6;
 }
-.setsupermercados header{
-    background-color: linear-gradient(to bottom, #000000 0%, #000000 100%);
-}
-
-/* .super{
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 50px;
-    padding-right: 90px;
-} */
 
 .primerBloque{
     text-align: center;
@@ -74,10 +74,11 @@ h1 .toll{
     font-weight: 400;
     color: #435d53;
     font-family: 'Roboto',sans-serif;
-    margin: 50px 15px 15px 20px ;
+    margin: 30px 15px 15px 20px ;
 }
 .supermercadoTitulo span{
-    color: #FF9036;
+    /* color: #FF9036; */
+    color: #F0A830;
     font-size: 1.3.1em;
 }
 .BuscarSuper input{

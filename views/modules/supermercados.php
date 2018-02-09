@@ -1,17 +1,13 @@
 <div class= "setsupermercados" id="super">
     <header class="image-title">
         <picture>
-            <!-- <img src="views/assets/image/market.jpg" alt="Supermercados "> -->
+            <div class="supermer-info">
+                <h1>Supermercados</h1>
+            </div>
+            <img src="views/assets/image/supermer1.png" alt="Supermercados ">
 
         </picture>
 
-        <!-- <div class="block-content">
-            <div class="super">
-                <p>
-                </p>
-                <h1>S</h1>
-            </div>
-        </div> -->
     </header>
     <div class="supermercadosA">
         <div class="primerBloque">
