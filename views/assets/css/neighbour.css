@@ -1,0 +1,29 @@
+nav, header{
+  display: block;/*sirve para hacer reconocer todos los elementos en bloque*/
+}
+
+#menu {
+  background-color: black;
+  padding: 0px 20px;
+}
+
+#menu li {
+  display: inline-block;
+  list-style: none;
+  padding: 5px;
+  font: bold 14px verdana, sans-serif;
+}
+
+#menu ul li {
+  color: white;
+}
+
+#menu ul li:hover {
+  background-color: #eee;
+  color: #0c0c0c;
+  cursor: pointer;
+}
+
+#cabeza {
+  background-color: blue;
+}
