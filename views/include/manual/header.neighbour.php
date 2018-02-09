@@ -13,5 +13,7 @@
     <nav id="menu">
       <ul>
         <li><a href="inicio">inicio</a></li>
+        <li><a href="">supermercados</a></li>
+        <a id="mon">Iniciar sesión</a>
       </ul>
     </nav>
