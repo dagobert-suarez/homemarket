@@ -6,13 +6,19 @@
   background-color: #ff9036;
 }
 .orange3{
+  background-color: rgb(252, 119, 11);
   background-color: #fc770b;
+
 }
 .orange4{
     background-color: #F54828;
 }
 .orange5{
     background-color: #FF9036;
+}
+.orange6{
+    background-color: ;
+    color:  #F0A830;
 }
 .yellow1{
   background-color: #e9d558;
@@ -27,6 +33,9 @@
 }
 .blue1{
   background-color: #0e8d94;
+}
+.blue2{
+    background-color: #6a89c6;
 }
 .gray2{
   background-color: #f1f1f1;

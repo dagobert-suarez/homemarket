@@ -25,9 +25,9 @@ body{
     margin-top: 0px;
 }
 .beach3{
-    background:rgba(238, 238, 238, 0.31) ;
+    background:rgb(255, 255, 255) ;
     background-size: cover;
-    height: 600px;
+    height: 620px;
 }
 
 h1 .toll{
@@ -39,60 +39,62 @@ h1 .toll{
 .setsupermercados{
     margin-top: 10.5px;
     width: 50;
-    height: 100vh;
-    /* background-color: rgb(199, 199, 199); */
+    height: 620px;
+    background-color: linear-gradient(to bottom, #000000 0%, #000000 100%);
+
 }
  .setsupermercados header{
-    /* padding-top: 50px; */
-    height:  40vh;
-    background-color: linear-gradient(to bottom, #000000 0%, #000000 100%);
+    height:  45vh;
+
 }
-picture .supermer-info{
-    display: block;
+picture  h1{
+
     color: rgb(255, 255, 255);
     font-weight: bold;
-    /* margin-top: 70px; */
-    margin-left:  180px;
-    /* z-index: 1000; */
-    font-family:"Lato", sans-serif;
+    margin-top: 170px;
+    margin-left:  110px;
+    margin-bottom: 0px;
+    font-family:"Catamaran", sans-serif;
+    font-size: 2.8em;
     position: absolute;
+    border-bottom: 1px solid rgb(254, 254, 254);
+    letter-spacing: 1px;
+
 }
 
 .setsupermercados header picture img{
     height: 100%;
     width: 100%;
-    background-color:linear-gradient(to bottom, #000000 0%, #000000 100%);
-    opacity: 0.6;
+    border-radius: 3px;
+    /* background-color:linear-gradient(to bottom, #000000 0%, #000000 100%); */
 }
 
 .primerBloque{
     text-align: center;
-    /* padding: 2em 0; */
 }
 .primerBloque .supermercadoTitulo{
     font-size: 1.3em;
     font-weight: 400;
-    color: #435d53;
+    color: #6E6662;
     font-family: 'Roboto',sans-serif;
     margin: 30px 15px 15px 20px ;
 }
 .supermercadoTitulo span{
     /* color: #FF9036; */
     color: #F0A830;
-    font-size: 1.3.1em;
+    font-size: 1.3em;
 }
 .BuscarSuper input{
     outline: none;
-    width: 250px;
+    width: 350px;
     padding: 8px 30px;
     border:1px solid rgb(182, 182, 182) ;
     border-radius: 8px;
     line-height: 1.20px;
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
-
 }
-/*-*. Aca  finaliza la parte de los supermercados .*-*/
+/*-*.*2 Aca  finaliza la parte de los supermercados *.*-*/
 
 .shapes{
   padding: -10px;
@@ -479,8 +481,8 @@ input[type=password]:focus,select:focus{
     height: auto;
     background-color: rgb(254, 160, 0);
 }
-/*finaliza registro*/
-/*regsitrosuper*/
+/*.*-*finaliza registro.*-**/
+/*.*-*regsitrosuper*-*.*/
 .regigsup{
     display: none;
     position: fixed;
@@ -625,12 +627,9 @@ input[type=password]:focus,select:focus{
 /*-*.* finalizo la parte del login*.*-*/
 /*-*.* footer*.*-*/
 .footer{
-  /* background-color: #433d53; */
   background-color: #333333;
-  /* margin-top: -16px; */
   height:;
   display: flex;
-  /* justify-content: space-between; */
   font-family: 'Roboto', sans-serif;
 }
 .copyright{
@@ -638,7 +637,7 @@ input[type=password]:focus,select:focus{
   margin: 10px 0px ;
   justify-content: center;
   display: flex;
-  color: darkorange;
+  color: #6a88c5;
 }
 .copyright ul{
   list-style-type: none;
@@ -646,11 +645,9 @@ input[type=password]:focus,select:focus{
 }
 
 .icons-footer {
-  /* justify-content: flex-end; */
-  display:;
   font-size: 17px;
   justify-content: space-between;
-  color: darkorange;
+  color: #f1f1f1;
   width: 16%;
 
 }
