@@ -1,16 +1,16 @@
 nav, header{
   display: block;/*sirve para hacer reconocer todos los elementos en bloque*/
 }
-
+/*diseño del menú*/
 #menu {
-  background-color: black;
-  padding: 0px 20px;
+  background-color: green;
+  padding: 0px 25px;
 }
 
 #menu li {
   display: inline-block;
   list-style: none;
-  padding: 5px;
+  padding: 10px;
   font: bold 14px verdana, sans-serif;
 }
 
