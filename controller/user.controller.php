@@ -19,7 +19,7 @@ class UserController{
 			foreach ($data as $row) {
 				$result = $this->validarEspacio($data[$i]);
 				if ($result==false) {
-					echo json_encode('llene todos los campos');
+					echo json_encode('Llene todos los campos');
 					return;
 				}
 				$i++;
@@ -44,7 +44,7 @@ class UserController{
 			echo json_encode($result);
 
 		}else{
-			echo json_encode('haga el recapchapt');
+			echo json_encode('Haga el recapchapt');
 		}
 	}
 
