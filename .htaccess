@@ -36,3 +36,6 @@ RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductTy
 
 #empleado
 RewriteRule ^InicioWorker$ index.php?controller=views&a=InicioWorker
+
+#administrador
+RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin
