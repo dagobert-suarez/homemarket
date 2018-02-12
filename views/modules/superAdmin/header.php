@@ -5,3 +5,4 @@
     <title></title>
   </head>
   <body>
+    <a href="cerrar-sesion">salir</a>

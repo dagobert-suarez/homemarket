@@ -43,7 +43,7 @@ class LoginController{
 							header ('Location: InicioWorker');
 						}
 						else {
-							header ('Location:inicioAdmin');
+							header ('Location:InicioSuperAdmin');
 						}
 				} else {
 echo '<h1>contraseña invalida</h1>';

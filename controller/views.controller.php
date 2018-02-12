@@ -47,9 +47,9 @@ die();
 
 	function InicioSuperAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==4) {
-			require_once "views/modules/worker/header.php";
-			require_once "views/modules/worker/worker.php";
-			require_once "views/modules/worker/footer.php";
+			require_once "views/modules/superAdmin/header.php";
+			require_once "views/modules/superAdmin/superAdmin.php";
+			require_once "views/modules/superAdmin/footer.php";
 		}else {
 			die();
 			header ('Location: inicio');
