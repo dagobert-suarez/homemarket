@@ -16,11 +16,6 @@ class viewsController{
 		require_once "views/modules/inicio.php";
 		require_once "views/include/scope.footer.php";
 	}
-	function neighbour(){
-		require_once "views/include/manual/header.neighbour.php";
-		require_once "views/include/manual/scope.neighbour.php";
-		require_once "views/include/manual/footer.neighbour.php";
-	}
 	// function super(){
 	// 	require_once "views/include/scope.header.php";
 	// 	require_once "views/include/scope.prueba.php";
