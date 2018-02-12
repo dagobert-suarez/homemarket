@@ -16,11 +16,7 @@ class viewsController{
 		require_once "views/modules/inicio.php";
 		require_once "views/include/scope.footer.php";
 	}
-	// function super(){
-	// 	require_once "views/include/scope.header.php";
-	// 	require_once "views/include/scope.prueba.php";
-	// 	require_once "views/include/scope.footer.php";
-	// }
+
 	function registrosuper(){
 		require_once "views/include/scope.header.php";
 		require_once "views/modules/registrosuper.php";
@@ -35,6 +31,17 @@ class viewsController{
 		}else {
 die();
 			header("Location: inicio");
+		}
+	}
+
+	function InicioWorker(){
+		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==3) {
+			require_once "views/modules/worker/header.php";
+			require_once "views/modules/worker/worker.php";
+			require_once "views/modules/worker/footer.php";
+		}else {
+			die();
+			header ('Location: inicio');
 		}
 	}
 

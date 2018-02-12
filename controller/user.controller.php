@@ -47,7 +47,7 @@ class UserController{
 			echo json_encode('Haga el recapchapt');
 		}
 	}
-
+//los ajustes del cliente
 	function ajustes(){
 		require_once "views/modules/cliente/header.php";
 		require_once "views/modules/cliente/updateCliente.php";

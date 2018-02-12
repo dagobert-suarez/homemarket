@@ -21,7 +21,7 @@ RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 
 
-#admin
+#supermercado
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
 RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
@@ -33,3 +33,6 @@ RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&
 #CRUD categoria
 RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
 RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
+
+#empleado
+RewriteRule ^InicioWorker$ index.php?controller=views&a=InicioWorker

@@ -35,7 +35,14 @@ class LoginController{
 						if ($_SESSION['USER']['rol']==1) {
 								$_SESSION['USER']['CLIENT'] = true;
 								header ('Location: inicioCliente');
-						}else {
+						}elseif ($_SESSION['USER']['rol']==2) {
+							$_SESSION['USER']['CLIENT'] = true;
+							header ('Location: inicioAdmin');
+						}elseif (($_SESSION['USER']['rol']==3)) {
+							$_SESSION['USER']['CLIENT'] = true;
+							header ('Location: InicioWorker');
+						}
+						else {
 							header ('Location:inicioAdmin');
 						}
 				} else {
