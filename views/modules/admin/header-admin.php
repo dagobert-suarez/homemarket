@@ -25,7 +25,6 @@
         </ul>
       </div>
     <div class="wrap--content">
-                <!-- <?php require_once("views/include/scope.menutop.php"); ?> -->
 
                 <article>
 <!--

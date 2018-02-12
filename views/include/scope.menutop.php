@@ -8,7 +8,7 @@
 
 				<!-- <a href="neighbour">Aliados</a> -->
 
-				<a href="neighbour">explora</a>
+
 
 		</div>
 		<div class="container--menu2">
