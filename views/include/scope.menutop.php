@@ -5,6 +5,7 @@
 		<div class="container--menu">
 			<a href="inicio">Inicio</a>
 				<a href="#super">Supermercados</a>
+				<a href="explora">explora</a>
 		</div>
 		<div class="container--menu2">
 				<a href="#registro">Registrarse</a>

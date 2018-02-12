@@ -61,11 +61,11 @@ die();
 		require_once "views/modules/admin/footer_admin.php";
 	}
 
-	// function incliente(){
-	// 	require_once "views/modules/cliente/header.php";
-	// 	require_once "views/modules/cliente/maps.php";
-	// 	require_once "views/modules/cliente/footer.php";
-	// }
+	function explora(){
+		require_once "views/include/manual/header.php";
+		require_once "views/include/manual/manual.php";
+		require_once "views/include/manual/footer.php";
+	}
 
 
 	// function ingreso(){
