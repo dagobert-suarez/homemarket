@@ -9,6 +9,7 @@ RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
 
+#validar usuario
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
@@ -37,5 +38,5 @@ RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductTy
 #empleado
 RewriteRule ^InicioWorker$ index.php?controller=views&a=InicioWorker
 
-#administrador
+#super administrador
 RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin
