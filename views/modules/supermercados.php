@@ -1,10 +1,10 @@
 <div class= "setsupermercados" id="super">
     <header class="image-title">
         <picture>
-            <div class="supermer-info">
-                <h1>Supermercados</h1>
+            <div class="">
+                <h1 class="supermer-info">Supermercados</h1>
             </div>
-            <img src="views/assets/image/supermer1.png" alt="Supermercados ">
+            <img src="views/assets/image/marketsup2.png" alt="Supermercados ">
 
         </picture>
 
