@@ -48,7 +48,11 @@ class UserController{
 		}
 	}
 
-
+	function ajustes(){
+		require_once "views/modules/cliente/header.php";
+		require_once "views/modules/cliente/updateCliente.php";
+		require_once "views/modules/cliente/footer.php";
+	}
 
 		function validarEspacio($data){
 		if($data==''){
@@ -113,6 +117,7 @@ class UserController{
 		}
 
 	}
+
 
 	function validarPassword($data){
 		if (strlen($data)<8) {
