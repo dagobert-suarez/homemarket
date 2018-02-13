@@ -1,1 +1,1 @@
-    <h1>bienvenido sean ustedes vagos</h1>
+    <h1>bienvenidos sean ustedes vagos</h1>
