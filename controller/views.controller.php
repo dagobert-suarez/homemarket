@@ -49,9 +49,9 @@ die();
 	}
 
 	function newWorker(){
-		require_once "views/modules/modules/admin/header.php";
-		require_once "views/modules/modules/admin/createNewWorker.php";
-		require_once "views/modules/modules/admin/footer.php";
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/createNewWorker.php";
+		require_once "views/modules/admin/footer_admin.php";
 	}
 
 //todo sobre el empleado
