@@ -34,13 +34,14 @@ section.container1k{
     margin-bottom: 40px;
 }
  .main--nav .info--nav2 nav ul{
-     border-top: 1px solid #323232;
-     border-bottom: 1px solid #323232;
-    padding-top: 20px;
+    border-top: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+    padding-top: 15px;
     padding-bottom: 40px;
  }
 .main--nav nav ul a li{
     padding: 10px;
+    padding-left:20px;
 }
 
 .main--nav nav ul a li:hover{
@@ -58,6 +59,7 @@ section.container1k{
     justify-content:flex-end;
     padding: 20px 0;
     background-color: #FEFEFE;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.63);
 }
 
 .wrap--content .menu--top ul{

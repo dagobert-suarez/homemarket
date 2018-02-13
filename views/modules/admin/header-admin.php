@@ -13,8 +13,16 @@
 
   </head>
   <body>
-  <section class="">
-      <div class="menu--top green1">
+  <section class="container1S">
+      <header class="main--nav black1">
+          <?php
+        //esto seria lo de el menú del admin  (los require_once)
+           ?>
+      </header>
+      <div class="wrap--content">
+          <?php require_once("views/modules/admin/menuadmin.php") ?>
+      </div>
+      <div class="menu--top gray1 ">
         <div class="content-profile">
 
         </div>
@@ -27,7 +35,3 @@
     <div class="wrap--content">
 
                 <article>
-<!--
-    <?php
-    require_once "index.php";
-    ?> -->
