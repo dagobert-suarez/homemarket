@@ -11,13 +11,14 @@
   </head>
   <body>
       <section class="container1k">
-        <header class="main--nav nose">
+        <header class="main--nav black1">
             <!-- <div class="icon--mobile">
                 <i class="fa fa-window-close"></i>
             </div> -->
             <?php
             require_once("views/modules/worker/profile.php");
             require_once("views/modules/worker/navigator.php");
+            require_once("views/modules/worker/navigator2.php")
             ?>
         </header>
         <div class="wrap--content">
