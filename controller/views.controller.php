@@ -5,6 +5,8 @@ class viewsController{
 	public function __CONSTRUCT(){
 		$this->userModel = new UserModel();
 	}
+
+	//de la pagina principal
 	function main(){
 		require_once "views/include/scope.header-inicio.php";
 		// require_once "views/modules/registrarse.php"
@@ -17,12 +19,19 @@ class viewsController{
 		require_once "views/include/scope.footer.php";
 	}
 
-	function registrosuper(){
-		require_once "views/include/scope.header.php";
-		require_once "views/modules/registrosuper.php";
-		require_once "views/include/scope.footer.php";
+	// function registrosuper(){
+	// 	require_once "views/include/scope.header.php";
+	// 	require_once "views/modules/registrosuper.php";
+	// 	require_once "views/include/scope.footer.php";
+	// }
+
+	function explora(){
+		require_once "views/include/manual/header.php";
+		require_once "views/include/manual/manual.php";
+		require_once "views/include/manual/footer.php";
 	}
 
+	//todo sobre admin
 	function inicioAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==2) {
 			require_once "views/modules/admin/header-admin.php";
@@ -34,6 +43,18 @@ die();
 		}
 	}
 
+	function admin(){
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/footer_admin.php";
+	}
+
+	function newWorker(){
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/createNewWorker.php";
+		require_once "views/modules/admin/footer_admin.php";
+	}
+
+//todo sobre el empleado
 	function InicioWorker(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==3) {
 			require_once "views/modules/worker/header.php";
@@ -45,6 +66,7 @@ die();
 		}
 	}
 
+//todo sobre el superadmin
 	function InicioSuperAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==4) {
 			require_once "views/modules/superAdmin/header.php";
@@ -56,16 +78,6 @@ die();
 		}
 	}
 
-	function admin(){
-		require_once "views/modules/admin/header-admin.php";
-		require_once "views/modules/admin/footer_admin.php";
-	}
-
-	function explora(){
-		require_once "views/include/manual/header.php";
-		require_once "views/include/manual/manual.php";
-		require_once "views/include/manual/footer.php";
-	}
 
 
 	// function ingreso(){

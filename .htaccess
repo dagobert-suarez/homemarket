@@ -35,6 +35,8 @@ RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&
 #CRUD categoria
 RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
 RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
+#CRUD empleado
+RewriteRule ^nuevo-empleado$ index.php?controller=views&a=newWorker
 
 #empleado
 RewriteRule ^InicioWorker$ index.php?controller=views&a=InicioWorker

@@ -5,7 +5,7 @@
       <ul>
         <li><a href="nuevo-producto">Nuevo producto</a></li>
         <li><a href="nueva-categoria">Nueva categoria</a></li>
-        <li><a href="#">Registrar empleado </a></li>
+        <li><a href="nuevo-empleado">Registrar empleado </a></li>
       </ul>
     </div>
     <div class="">
