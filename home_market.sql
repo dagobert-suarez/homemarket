@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-02-2018 a las 19:07:32
--- Versión del servidor: 10.1.28-MariaDB
--- Versión de PHP: 7.1.10
+-- Tiempo de generación: 13-02-2018 a las 18:27:52
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 7.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -71,15 +69,10 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`contra`, `token`, `doc_usu`) VALUES
-('$2y$10$Z2AIFlhW8CE0aFN3m7j0P.te2RR4k.GDFZfADMcA0STdY5Y0wytHO', '031afcbd2af5ac5bf17da10c8b7f0cec', 12345),
-('$2y$10$eCCNOj9Trrfic/.MpI/lIeEkepQ6Q.AQ1tM6FRInlKShlOGCdDPZi', '18370284b07d017653200b4b74022459', 1026162652),
-('$2y$10$85NjncUC5.JPn5rBZDevveyY0BUXBVGn.aWww7OJavObauH4kI.aG', '26a5046b582d353bdb86e7d3bfac60dc', 1026132690),
-('$2y$10$Y8Bv9K11c685aO8u0OsC0.3uN.3Fc6u1P7BAW3dugaEBAbKzHjqnC', '4c3663a3250a1c4cd7d6301eb4f1d4be', 123456789),
-('$2y$10$UN0dZE27.3XStQc4CEzQXuOSflKXreApGZkhvlrt.BHOFZF2CN6bq', '4d0f349527138fbaf6e7a32d4aa762a4', 48759512),
-('$2y$10$g284QT8uQKyu5y6H.7RCW.4LK2SO3NYhX47J9A79kMajOQm6UmnWC', 'c15ad76dbc263e0b3a7f54e364a75f21', 145441),
-('$2y$10$4vUcva8Hrx0N5THzf9IYHOhy9L5Tb3/edi178oGzl1gPnYF1b1g5y', 'fabe7fc6db20089505de1492a131e2b0', 15403631),
-('$2y$10$YDm8ADEfb.YFWL5ayb6lYuP9Ge5m/6S4Km0fm.J1d6UPlDYZb0FJS', 'fd6049777387e192eca53451bc7a7ed1', 102030),
-('$2y$10$Fhuf94q1MkirELIFrH0shOBfU.OkUUF8MHFDWixUFVK42.AWMF3Ou', 'ffc7675cab52690468f4fd056456ab9b', 1000084530);
+('$2y$10$dUq5Zfh1XKiS3mobZF5Ea.ZWLhGGUNWw3f4CU8XZuX.Mf24OW4GaW', '30de62e8e12e24bbcee2855d61729e7e', 66567567),
+('$2y$10$y5S7PYCRURm0Wd0l9O.bwu31zn0PzzvvoUzKU5fRROTnXtXzKskHS', 'b7ebde740f2cd5c67f70188f5a277f57', 76767),
+('$2y$10$YyDy1G1heY1wtHsGW0wRNuBe76sEoTkydEZTV6bCOAZRdC0k8naZW', 'b84361bd683b0e843e6f275384af21c8', 1029192938),
+('$2y$10$xzZG72p6Z8KgOtimnbIsqOPs3mZR2fCsj0LhXhJfIXSd9b5MWRKia', 'fa570c992802bcdcdd93b5400c47ae44', 5675675);
 
 -- --------------------------------------------------------
 
@@ -345,7 +338,9 @@ CREATE TABLE `rol` (
 
 INSERT INTO `rol` (`id_rol`, `nom_rol`) VALUES
 (1, 'cliente'),
-(2, 'supermercado');
+(2, 'supermercado'),
+(3, 'empleado'),
+(4, 'administrador');
 
 -- --------------------------------------------------------
 
@@ -433,16 +428,10 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`doc_usu`, `nom_usu`, `ape_usu`, `fech_nac_usu`, `gen_usu`, `cel_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img`) VALUES
-(12345, 'e', 'e', '2018-02-08 00:00:00', 'f', 1, 1, '12345@misena.edu.co', 5003, 2, 'no'),
-(102030, 'aguevada', 'calsones', '1997-12-12 00:00:00', 'o', 301245, 54875, 'ac@gmail.com', 50003, 1, 'no'),
-(145441, 'dsf', 'sdfas', '2018-01-01 00:00:00', 'm', 254541, 4154, 'nosepero@hotmail.com', 50003, 2, 'no'),
-(15403631, 'samuel', 'sepulvedad', '1995-03-11 00:00:00', 'm', 3145698745, 3215694, 'samuel@hotmail.com', 50003, 1, 'no'),
-(48759512, 'carlos', 'perez', '1995-04-11 00:00:00', 'm', 3218695472, 5215698, 'carlos@gmail.com', 50003, 2, 'no'),
-(123456789, 'Fabio ', 'castillo', '1998-12-03 00:00:00', 'm', 6543212345, 2134567, 'fabian@gmail.com', 50003, 1, 'no'),
-(1000084530, 'David', 'Herrera', '1999-11-29 00:00:00', 'm', 323, 35, 'guffyherrera150@gmail.com', 50003, 2, 'no'),
-(1017257020, 'david', 'urrego', '1998-03-11 00:00:00', 'hombre', 3146974040, 2590722, 'davidurrego2010@hotmail.com', 5003, 1, 'fdsfweew'),
-(1026132690, 'Dagobert', 'Suarez', '1999-09-27 00:00:00', 'm', 300, 34, 'dagobertsuarez@gmail.com', 50003, 2, 'no'),
-(1026162652, 'Alexis', 'MuÃ±os', '1999-09-29 00:00:00', 'm', 3147145066, 34, 'amunoz185@misena.edu.co', 50003, 2, 'no');
+(76767, 'second', 'second', '1990-04-05 00:00:00', 'm', 657656, 7675656, 'second@gmail.com', 50003, 2, 'no'),
+(5675675, 'dfgdf', 'fgdfgd', '1999-04-04 00:00:00', 'm', 54655, 545664, 'empleado@gmail.com', 50003, 3, 'no'),
+(66567567, 'first', 'first', '1999-04-04 00:00:00', 'm', 456564, 5645656, 'first@gmail.com', 50003, 1, 'no'),
+(1029192938, 'dagobert', 'suarez', '1999-02-21 00:00:00', 'm', 656756, 656756, 'superadmin@gmail.com', 50003, 4, 'no');
 
 -- --------------------------------------------------------
 
@@ -599,19 +588,16 @@ ALTER TABLE `usuario_supermercado`
 --
 ALTER TABLE `calificacion`
   MODIFY `id_cal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
   MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
   MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- Restricciones para tablas volcadas
 --
@@ -699,7 +685,6 @@ ALTER TABLE `usuario`
 ALTER TABLE `usuario_supermercado`
   ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`nit_sup`) REFERENCES `supermercado` (`nit_sup`),
   ADD CONSTRAINT `usuario_supermercado_ibfk_3` FOREIGN KEY (`doc_usu`) REFERENCES `usuario` (`doc_usu`) ON DELETE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
