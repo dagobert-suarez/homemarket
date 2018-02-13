@@ -1,0 +1,59 @@
+@import "reset.css";
+@import "color.css";
+/*@import "responsicliente.css";*/
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
+
+section.container1k{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    background-color: #f2f4f4;
+}
+/*-*.*Menú principal*.*-*/
+.main--nav{
+    max-width: 100px;
+    min-width: 100px;
+    min-height: 100vh;
+}
+.main--nav nav ul{
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #293138;
+    box-shadow: 0 -5px 0 #d1d1d1;
+}
+.main-nav nav ul li {
+    padding: 10px;
+}
+
+.main-nav nav ul li:hover{
+    background-color: #f2f4f4;
+    color: #fff;
+    border-left: 10px solid #fc3232;
+    transition: 0.5s all;
+}
+
+.wrap--content{
+    width: 100%;
+}
+.wrap--content .menu--top{
+    display: flex;
+    justify-content:flex-end;
+    padding: 20px 0;
+    background-color: #FEFEFE;
+}
+
+.wrap--content .menu--top ul{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+.wrap--content article{
+    background-color: #fefefe;
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    border-radius: 10px;
+    color: #EBEBEB;
+}
+/*-*.* Fin de Menú principal*.*-*/

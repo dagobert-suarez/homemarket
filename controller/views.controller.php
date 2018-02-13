@@ -37,7 +37,7 @@ die();
 	function InicioWorker(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==3) {
 			require_once "views/modules/worker/header.php";
-			require_once "views/modules/worker/worker.php";
+			// require_once "views/modules/worker/worker.php";
 			require_once "views/modules/worker/footer.php";
 		}else {
 			die();

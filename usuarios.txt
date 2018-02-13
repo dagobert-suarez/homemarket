@@ -1,9 +1,15 @@
 
-Davidk2@gmail.com Cliente
-Davidpk2
 
-Guffypk@gmail.com Supermecados
-Guffypk2
+roles
+Cliente
+first@gmail.com
+D1agobert
 
-Alexis@gmail.com
-Alex123
+second@gmail.com
+D2agobert
+
+empleado@gmail.com
+D3agobert
+
+superadmin@gmail.com
+D4agobert
