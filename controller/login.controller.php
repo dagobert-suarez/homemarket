@@ -19,6 +19,16 @@ class LoginController{
 	echo json_encode($result);
 }
 
+  // function validar_password(){
+	// 	$result = $this->pass->contra($_POST['doc_usu']);
+	// 	if ($ressult!=array()) {
+	// 		$result = array("true","");
+	// 	}else{
+	// 		$result = array("false","contraseña invalida");
+	// 	}
+	// 	echo json_encode($result);
+	// }
+
 	function validar(){
 		$correo = $_POST['email'];
 		$pass = $_POST['contra'];
