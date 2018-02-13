@@ -6,14 +6,25 @@
 section.container1k{
     display: flex;
     font-family: 'Roboto', sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     background-color: #f2f4f4;
 }
 /*-*.*Menú principal*.*-*/
 .main--nav{
-    max-width: 100px;
-    min-width: 100px;
+    max-width: 170px;
+    min-width: 170px;
     min-height: 100vh;
+    border-bottom: 3px solid darkorange;
+}
+.userProfile{
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+}
+.userProfile--img{
+    width: 70%;
+    margin: 0 auto 20px;
 }
 .main--nav nav ul{
     margin-top: 20px;
@@ -21,14 +32,14 @@ section.container1k{
     border-top: 2px solid #293138;
     box-shadow: 0 -5px 0 #d1d1d1;
 }
-.main-nav nav ul li {
+.main--nav nav ul li{
     padding: 10px;
 }
 
-.main-nav nav ul li:hover{
+.main--nav nav ul li:hover{
     background-color: #f2f4f4;
-    color: #fff;
-    border-left: 10px solid #fc3232;
+    color:  #1F2122;
+    border-left: 5px solid darkorange;
     transition: 0.5s all;
 }
 

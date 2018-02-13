@@ -16,6 +16,7 @@
                 <i class="fa fa-window-close"></i>
             </div> -->
             <?php
+            require_once("views/modules/worker/profile.php");
             require_once("views/modules/worker/navigator.php");
             ?>
         </header>
