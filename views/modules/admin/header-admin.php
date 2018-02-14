@@ -17,6 +17,8 @@
       <header class="main--nav black1">
           <?php
         //esto seria lo de el menú del admin  (los require_once)
+            require_once("views/modules/admin/profileS.php")
+
            ?>
       </header>
       <div class="wrap--content">
