@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>tu eres el admin</title>
+    <title>Dashboard Supermercado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,24 +16,35 @@
   <section class="container1S">
       <header class="main--nav black1">
           <?php
-        //esto seria lo de el menú del admin  (los require_once)
+
             require_once("views/modules/admin/profileS.php")
 
            ?>
       </header>
       <div class="wrap--content">
-          <?php require_once("views/modules/admin/menuadmin.php") ?>
-      </div>
-      <div class="menu--top gray1 ">
-        <div class="content-profile">
+          <?php
 
-        </div>
-        <ul>
-          <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
-          <li><i class="fa fa-cog" aria-hidden="true"></i></li>
-          <li> <a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-        </ul>
+           require_once("views/modules/admin/menuTopad.php");
+
+         ?>
+         <div class="wrap--in">
+                <header>
+                    <h3>informacion</h3>
+                </header>
+         </div>
+         <div class="wrap-info">
+             <div class="wrap-fa">
+                    <header>
+                        <h3>informacion</h3>
+                    </header>
+            <p>lo </p>        
+             </div>
+             <div class="wrap-sell">
+                     <header>
+                         <h3>ventas</h3>
+                     </header>
+                     <p>lo las ventas </p>
+              </div>
       </div>
-    <div class="wrap--content">
 
                 <article>

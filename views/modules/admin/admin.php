@@ -3,9 +3,6 @@
   <p> este el el inico del administrador donde pude reslizar las tareas </p>
     <div class="wrap--btns">
       <ul>
-        <li><a href="nuevo-producto">Nuevo producto</a></li>
-        <li><a href="nueva-categoria">Nueva categoria</a></li>
-        <li><a href="nuevo-empleado">Registrar empleado </a></li>
       </ul>
     </div>
     <div class="">

@@ -1,12 +1,12 @@
-<section>
+<!-- <section> -->
   <div class="">
       <header>
           <h1>Registrar nuevo producto</h1>
 
       <div class="breadcrums">
             <ul>
-                <li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="Productosadmin">productos</a></li>
+                <li><a href="InicioWorker"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="Productos-empleado">productos</a></li>
                 <li><a href="">Crear producto</a></li>
             </ul>
       </div>

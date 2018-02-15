@@ -6,16 +6,16 @@ class ProductController{
   private $product;
   // vista de los supermercados
   function crear(){
-    require_once "views/modules/admin/header-admin.php";
-    require_once "views/modules/admin/createProduct.php";
-    require_once "views/modules/admin/footer_admin.php";
+    require_once "views/modules/worker/header.php";
+    require_once "views/modules/worker/createProduct.php";
+    require_once "views/modules/worker/footer.php";
 
   }
   // vista de las categorias
   function crearCategoria(){
-    require_once "views/modules/admin/header-admin.php";
-    require_once "views/modules/admin/createCategory.php";
-    require_once "views/modules/admin/footer_admin.php";
+    require_once "views/modules/worker/header.php";
+    require_once "views/modules/worker/createCategory.php";
+    require_once "views/modules/worker/footer.php";
 
   }
   //inicio de sesion del cliente
@@ -41,10 +41,10 @@ class ProductController{
     require_once "views/modules/cliente/footer.php";
   }
 
-  function Produtosviewsadmin(){
-    require_once "views/modules/admin/header-admin.php";
-    require_once "views/modules/admin/productosviews.php";
-    require_once "views/modules/admin/footer_admin.php";
+  function Produtosviewsworker(){
+    require_once "views/modules/worker/header.php";
+    require_once "views/modules/worker/productosviews.php";
+    require_once "views/modules/worker/footer.php";
   }
 
     public function __CONSTRUCT(){

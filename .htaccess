@@ -25,21 +25,22 @@ RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 
 #supermercado
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
-RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
-RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
-RewriteRule ^Registrar-empleado$ index.php?controller=newworker&a=registroEmpleado
-RewriteRule ^Productosadmin$ index.php?controller=product&a=Produtosviewsadmin
-#CRUD productos
-RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
-RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&data=$1
-#CRUD categoria
-RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
-RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
+
 #CRUD empleado
+RewriteRule ^Registrar-empleado$ index.php?controller=newworker&a=registroEmpleado
 RewriteRule ^nuevo-empleado$ index.php?controller=views&a=newWorker
 
 #empleado
 RewriteRule ^InicioWorker$ index.php?controller=views&a=InicioWorker
+#CRUD productos#
+RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
+RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
+RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
+RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&data=$1
+RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewsworker
+#CRUD categoria
+RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
+RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
 
 #super administrador
 RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin

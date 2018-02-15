@@ -3,9 +3,9 @@
     <h1>Productos registrados </h1>
       <div class="breadcrums">
             <ul>
-                <li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="InicioWorker"><i class="fa fa-home"></i>Home</a></li>
                 <li><a href="nuevo-producto">Agregar Producto</a></li>
-                <li><a href="Productosadmin">productos</a></li>
+                <li><a href="">productos</a></li>
             </ul>
       </div>
   </header>

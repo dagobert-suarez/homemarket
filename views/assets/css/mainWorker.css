@@ -59,7 +59,14 @@ section.container1k{
     justify-content:flex-end;
     padding: 20px 0;
     background-color: #FEFEFE;
-    border-bottom: 1px solid rgba(50, 50, 50, 0.63);
+    border-bottom: 1px solid rgba(161, 161, 161, 0.63);
+}
+.wrap--content .menu--two{
+    display: flex;
+    justify-content:flex-end;
+    padding: 20px 0;
+    background-color: #FEFEFE;
+    /* border-bottom: 1px solid rgba(50, 50, 50, 0.63); */
 }
 
 .wrap--content .menu--top ul{
@@ -77,3 +84,132 @@ section.container1k{
     color: #EBEBEB;
 }
 /*-*.* Fin de Menú principal*.*-*/
+/*_*.*formulario produto*.*_*/
+header{
+    /
+    margin: 5px 0px 20px 0px;
+}
+ header  h1{
+  letter-spacing: -1.5px;
+  font-size: 2.5rem ;
+  padding-bottom: 20px;
+  color: #433d53;
+
+}
+header .breadcrums ul{
+    font-size: 19px;
+    align-items: center;
+    display: flex;
+    padding: 8px 0px;
+    color: #433d53;
+}
+header .breadcrums ul{
+    font-size: 19px;
+    align-items: center;
+    display: flex;
+    padding: 8px 0px;
+    color: #433d53;
+}
+header .breadcrums ul li a:after{
+    content: " / ";
+}
+header .breadcrums ul li:last-child,
+header .breadcrums ul li a:hover{
+    color: #ff3e0f;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    color: #aaa;
+    font-size: 35px;
+    display: none;
+}
+
+label{
+  display: block;
+  margin: 10px 0px 10px 0px;
+  font-size: 1.1rem;
+  color: #433d53;
+
+}
+input[type=text],
+input[type=number],
+textarea{
+  padding: 6px;
+  border-radius: 1px;
+  border: 1px solid #ccc;
+  width: 40%;
+  outline: none;
+}
+select{
+  padding: 7px;
+  border-radius: 4px;
+  outline: none;
+  width: 20%;
+}
+input[type=text]:focus,
+input[type=number]:focus,
+textarea:focus,select:focus{
+  border-color: #ff9036;
+  transition: 0.3s;
+}
+.dataTables_length select{
+    padding: 3px;
+    border-radius: 1px;
+    outline: none;
+    width: 40%;
+}
+ input[type=search]{
+    padding: 4px 4px;
+    outline: none;
+    border-radius: 3px;
+    text-decoration: none;
+    list-style-type: none;
+    margin-bottom: 1rem;
+    border: 2px solid #c3c3c3;
+    outline: none;
+}
+.tittledatag{
+    background-color: #ff9036;
+}
+tbody tr{
+color: #433d53;
+background-color: rgb(196, 196, 196);
+}
+.exit{
+    color:rgb(0, 5, 252);
+    font-size: 1rem;
+}
+.dataTable tbody.no-footer.even{
+    background-color: rgb(119, 0, 255);
+
+}
+.required::after{
+  content: " * ";
+  color: #fa7000;
+}
+.opcional::after{
+  content: " (Opcional) ";
+  color: rgb(191, 191, 191);
+  font-family: 'Cabin';
+}
+.frmbtn{
+  padding: 8px 10px;
+  width: 30%;
+  margin: 25px 0px ;
+  outline: none;
+  right:  10px;
+  background-color: white;
+  text-decoration: none;
+  border: 2px solid #ff9036;
+  border-radius: 4px;
+}
+.frmbtn:hover{
+  background-color:#ff9036;
+  box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  color:white;
+}
+
+/*_*.* fin de el formulario produto*.*_*/
