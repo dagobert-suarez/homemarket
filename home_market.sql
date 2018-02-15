@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-02-2018 a las 18:27:52
+-- Tiempo de generación: 15-02-2018 a las 19:42:32
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.0.15
 
@@ -70,6 +70,7 @@ CREATE TABLE `acceso` (
 
 INSERT INTO `acceso` (`contra`, `token`, `doc_usu`) VALUES
 ('$2y$10$dUq5Zfh1XKiS3mobZF5Ea.ZWLhGGUNWw3f4CU8XZuX.Mf24OW4GaW', '30de62e8e12e24bbcee2855d61729e7e', 66567567),
+('$2y$10$uuxzhad6NLiNTrJE3igDzeUggUvNm55o2CjbwP65VwWQS/wwAW75a', '4d6b3d14fb83a06d0dd1d3b0e48fcdb3', 67567566),
 ('$2y$10$y5S7PYCRURm0Wd0l9O.bwu31zn0PzzvvoUzKU5fRROTnXtXzKskHS', 'b7ebde740f2cd5c67f70188f5a277f57', 76767),
 ('$2y$10$YyDy1G1heY1wtHsGW0wRNuBe76sEoTkydEZTV6bCOAZRdC0k8naZW', 'b84361bd683b0e843e6f275384af21c8', 1029192938),
 ('$2y$10$xzZG72p6Z8KgOtimnbIsqOPs3mZR2fCsj0LhXhJfIXSd9b5MWRKia', 'fa570c992802bcdcdd93b5400c47ae44', 5675675);
@@ -431,6 +432,7 @@ INSERT INTO `usuario` (`doc_usu`, `nom_usu`, `ape_usu`, `fech_nac_usu`, `gen_usu
 (76767, 'second', 'second', '1990-04-05 00:00:00', 'm', 657656, 7675656, 'second@gmail.com', 50003, 2, 'no'),
 (5675675, 'dfgdf', 'fgdfgd', '1999-04-04 00:00:00', 'm', 54655, 545664, 'empleado@gmail.com', 50003, 3, 'no'),
 (66567567, 'first', 'first', '1999-04-04 00:00:00', 'm', 456564, 5645656, 'first@gmail.com', 50003, 1, 'no'),
+(67567566, 'cosa', 'cosa', '1990-07-06 00:00:00', 'o', 6778, 786786788, 'cosa@gmail.com', 5003, 3, 'no'),
 (1029192938, 'dagobert', 'suarez', '1999-02-21 00:00:00', 'm', 656756, 656756, 'superadmin@gmail.com', 50003, 4, 'no');
 
 -- --------------------------------------------------------

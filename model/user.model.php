@@ -9,7 +9,7 @@ class UserModel{
 					die($e->getMessage());
 				}
 	}
-	//crear un usuario: envia datos a bd
+	//crear un usuario: envia datos de registro a bd
 	function createUser($data,$token){
 			 try{
 
