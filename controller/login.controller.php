@@ -56,7 +56,7 @@ class LoginController{
 							header ('Location:InicioSuperAdmin');
 						}
 				} else {
-					echo '<script language="javascript">alert("<div class="exit">crontaseña incorrecta</div>");</script>';
+					// echo '<script language="javascript">alert("<div class="exit">crontraseña incorrecta</div>");</script>';
 	        echo "<script>window.location.href='inicio'</script>";
 				}
 		}else{
