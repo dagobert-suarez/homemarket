@@ -56,7 +56,8 @@ class LoginController{
 							header ('Location:InicioSuperAdmin');
 						}
 				} else {
-echo '<h1>contraseña invalida</h1>';
+					echo '<script language="javascript">alert("<div class="exit">crontaseña incorrecta</div>");</script>';
+	        echo "<script>window.location.href='inicio'</script>";
 				}
 		}else{
 			echo '<h1>el usuario no existe</h1>';
