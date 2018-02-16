@@ -23,6 +23,10 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+			 // actualizar  datos del usuario
+			// function updateWorker(){
+			//
+			// }
 //llama los datos que estan en la tabla ciudad
 	function readCities(){
 		try{

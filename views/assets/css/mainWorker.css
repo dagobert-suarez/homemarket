@@ -15,7 +15,6 @@ section.container1k{
     min-width: 170px;
     min-height: 100vh;
     border-bottom: 3px solid darkorange;
-    box-shadow: 10px 10px 0px 0px rgb(221, 221, 221);
 }
 .userProfile{
     width: 90%;
@@ -48,7 +47,7 @@ section.container1k{
 .main--nav nav ul a li:hover{
     background-color: #f2f4f4;
     color:  #1F2122;
-    border-left: 5px solid darkorange;
+    border-left: 25px solid #F1f3f3;
     transition: 0.4s all;
 }
 
@@ -68,6 +67,13 @@ section.container1k{
     padding: 20px 0;
     background-color: #FEFEFE;
     /* border-bottom: 1px solid rgba(50, 50, 50, 0.63); */
+}
+.wrap--content .menu--top .user--name{
+    text-transform: uppercase;
+    margin-right:  750px;
+}
+.wrap--content .menu--top .user--name::before{
+    content: " Bienvenido : "
 }
 
 .wrap--content .menu--top ul{
