@@ -29,7 +29,7 @@
         <td><?php echo $row["cod_pro"]; ?></td>
         <td><?php echo $row["nom_pro"]; ?></td>
         <td><?php echo $row["mar_pro"]; ?></td>
-        <td><?php echo $row["des_pro"]; ?></td><!--aca seria la categoria del producto para que sepa dago -->
+        <td><?php echo $row["des_pro"]; ?></td>
         <td>
             <a href="updateProduct"><i class="fa fa-pencil" aria-hidden="true"></i></a>
             <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>

@@ -15,6 +15,7 @@ section.container1k{
     min-width: 170px;
     min-height: 100vh;
     border-bottom: 3px solid darkorange;
+    box-shadow: 10px 10px 0px 0px rgb(221, 221, 221);
 }
 .userProfile{
     width: 90%;
@@ -100,15 +101,9 @@ header .breadcrums ul{
     font-size: 19px;
     align-items: center;
     display: flex;
-    padding: 8px 0px;
+    padding: 20px 0px;
     color: #433d53;
-}
-header .breadcrums ul{
-    font-size: 19px;
-    align-items: center;
-    display: flex;
-    padding: 8px 0px;
-    color: #433d53;
+
 }
 header .breadcrums ul li a:after{
     content: " / ";
@@ -155,13 +150,8 @@ textarea:focus,select:focus{
   border-color: #ff9036;
   transition: 0.3s;
 }
-.dataTables_length select{
-    padding: 3px;
-    border-radius: 1px;
-    outline: none;
-    width: 40%;
-}
- input[type=search]{
+/*_*.*Comienza  el dataGrid *.*_*/
+input[type=search]{
     padding: 4px 4px;
     outline: none;
     border-radius: 3px;
@@ -171,12 +161,23 @@ textarea:focus,select:focus{
     border: 2px solid #c3c3c3;
     outline: none;
 }
+.dataTables_length select{
+    padding: 3px;
+    border-radius: 1px;
+    outline: none;
+    width: 40%;
+}
 .tittledatag{
     background-color: #ff9036;
 }
 tbody tr{
 color: #433d53;
 background-color: rgb(196, 196, 196);
+}
+
+ tbody td{
+    border: 1px solid rgba(30, 33, 33, 0.32);
+    text-align:center;
 }
 .exit{
     color:rgb(0, 5, 252);
@@ -186,6 +187,7 @@ background-color: rgb(196, 196, 196);
     background-color: rgb(119, 0, 255);
 
 }
+/* _*.* Fin dataGrid*.*_ */
 .required::after{
   content: " * ";
   color: #fa7000;
