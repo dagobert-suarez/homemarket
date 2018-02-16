@@ -40,6 +40,7 @@ class LoginController{
 			if (password_verify($pass, $result['contra'])) {
 				$_SESSION['USER']['rol']=$result['id_rol'];
 				$_SESSION['USER']['ID']=$result['doc_usu'];
+				$_SESSION['USER']['NAME']=$result['nom_usu'];
 				    // echo "<h1>¡ingreso corretamente</h1>" ;
 						// die($_SESSION['USER']['rol']);
 						if ($_SESSION['USER']['rol']==1) {
