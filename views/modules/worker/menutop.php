@@ -4,7 +4,7 @@
     </div> -->
     <div class="user--name">
         <?php
-         $_SESSION['USER']['NAME'];
+        echo $_SESSION['USER']['NAME'];
         ?>
     </div>
     <ul>
