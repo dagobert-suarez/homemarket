@@ -24,7 +24,7 @@
 		<div class="breadcrums">
 			<ul>
 				<li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
-				<a id="btn-category">Crear categoria</a>
+				<li><a id="btn-category">Crear categoria</a></li>
 				<li><a href="producto">Categorias</a></li>
 			</ul>
 		</div>
