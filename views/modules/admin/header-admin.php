@@ -27,24 +27,6 @@
            require_once("views/modules/admin/menuTopad.php");
 
          ?>
-         <div class="wrap--in">
-                <header>
-                    <h3>informacion</h3>
-                </header>
-         </div>
-         <div class="wrap-info">
-             <div class="wrap-fa">
-                    <header>
-                        <h3>informacion</h3>
-                    </header>
-            <p>lo </p>        
-             </div>
-             <div class="wrap-sell">
-                     <header>
-                         <h3>ventas</h3>
-                     </header>
-                     <p>lo las ventas </p>
-              </div>
-      </div>
+    
 
-                <article>
+                <!-- <article> -->

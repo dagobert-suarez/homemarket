@@ -10,7 +10,7 @@ $(function(){
 		var pass = $("#password").val();
 		// console.log(especial.test(pass));
 		if(mayus.test(pass)==false){
-				$("#mensaje").text("debe tener mayuscula").css("color","green");
+				$("#mensaje").text("Debe tener mayuscula").css("color","green");
 		}else if(especial.test(pass)==true){
 			$("#mensaje").text("no debe tener caracter especial").css("color","green");
 
@@ -32,6 +32,7 @@ $(function(){
 		// }else{
 		// 	$("#mensaje").text("insegura").css("color","red");
 		// }
+		
 
 
 	});

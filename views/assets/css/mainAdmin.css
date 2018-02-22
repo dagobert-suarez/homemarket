@@ -78,16 +78,23 @@ ul{
     /* padding: 20px; */
     box-sizing: border-box;
     margin: 30px auto;
+    padding: 10px;
     /* height: 40vh; */
 }
 .wrap--content .wrap--in header{
     border-bottom: 1.5px solid rgba(161, 161, 161, 0.63) ;
+    padding: 5px;
+}
+.wrap--content .wrap--in .wrap-in-text P{
+    padding: 10px;
 }
 .wrap--content .wrap-info{
-    display: flex;
-    justify-content: space-between;
-    margin: 30px auto;
-    width: 95%;
+
+    width: 100%;
+    padding: 5px  15px  10px;
+    display: grid;
+    grid-template-columns: repeat(3    ,2fr);
+
 }
 .wrap--content .wrap-info .wrap-fa header,
 .wrap--content .wrap-info .wrap-sell header{
@@ -103,6 +110,16 @@ ul{
     background-color: #FEFEFE;
     width: 48%;
     border: 1px solid rgba(161, 161, 161, 0.63);
+}
+.wrap-info .wrap-cont-info{
+    width:98%;
+    height: 70px;
+    margin: 5px;
+    background-color: #455661;
+    border: 1px solid #323232;
+    grid-gap:50px;
+    color: white;
+
 }
 /*finaliza menú top*/
 
