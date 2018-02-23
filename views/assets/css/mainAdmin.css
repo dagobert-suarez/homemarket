@@ -1,5 +1,7 @@
 @import "reset.css";
 @import "color.css";
+@import "animate.css";
+
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
 
@@ -16,6 +18,16 @@ section.container1S{
     border-bottom: 3px solid darkorange;
 
 }
+.userProfile{
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+}
+.userProfile--img{
+    width: 70%;
+    margin: 0 auto 20px;
+}
 .main--nav nav ul{
     margin-top: 20px;
     padding-top: 10px;
@@ -31,8 +43,8 @@ section.container1S{
 .main--nav nav ul a li:hover{
     background-color: #f2f4f4;
     color:  #1F2122;
-    border-left: 5px solid darkorange;
-    transition: 0.4s all;
+    border-left: 15px solid #f2f4f4;
+    transition: 0.3s all;
 }
 
 .wrap--content{
@@ -51,6 +63,20 @@ section.container1S{
     justify-content: space-around;
     /* font-size: 15px; */
 }
+.wrap--content .menuS--top .user--name{
+    text-transform: uppercase;
+    margin-right:  750px;
+}
+.wrap--content .menuS--top .user--name::before{
+    content: " Bienvenido : "
+}
+
+.wrap--content .menuS--top ul li span .toolttip{
+    width: 20px;
+    border: 1px solid rgba(161,161,161,0.63);
+    background-color: lime;
+}
+
 /*-*.*está es la parte del menu top*.*-*/
 .content-profile {
   position:fixed;;
@@ -67,7 +93,7 @@ section.container1S{
 ul{
   text-decoration: none;
 }
-.menu--top li i:hover{
+.menu--top li i :hover{
   background-color: inherit;
   color:white;
   cursor: pointer;
@@ -75,11 +101,9 @@ ul{
 .wrap--content .wrap--in{
     background-color: #fefefe;
     width: 95%;
-    /* padding: 20px; */
     box-sizing: border-box;
     margin: 30px auto;
     padding: 10px;
-    /* height: 40vh; */
 }
 .wrap--content .wrap--in header{
     border-bottom: 1.5px solid rgba(161, 161, 161, 0.63) ;
@@ -89,7 +113,6 @@ ul{
     padding: 10px;
 }
 .wrap--content .wrap-info{
-
     width: 100%;
     padding: 5px  15px  10px;
     display: grid;
@@ -98,8 +121,8 @@ ul{
 }
 .wrap--content .wrap-info .wrap-fa header,
 .wrap--content .wrap-info .wrap-sell header{
-    border-bottom: 1px solid rgba(161, 161, 161, 0.63);
     padding: 5px;
+    border-bottom: 1px solid rgba(161, 161, 161, 0.63);
 }
 .wrap--content .wrap-info .wrap-fa p,
 .wrap--content .wrap-info .wrap-sell p{
@@ -112,13 +135,15 @@ ul{
     border: 1px solid rgba(161, 161, 161, 0.63);
 }
 .wrap-info .wrap-cont-info{
-    width:98%;
+    widows: 98px;%;
     height: 70px;
     margin: 5px;
-    background-color: #455661;
-    border: 1px solid #323232;
+    background-color: #A9B1AA;
+    border: 1px solid rgba(161,161,161,0.63);
+    border-radius:6px;
     grid-gap:50px;
-    color: white;
+    animation-name: swing;
+    animation-duration:1s;
 
 }
 /*finaliza menú top*/

@@ -17,7 +17,8 @@
       <header class="main--nav black1">
           <?php
 
-            require_once("views/modules/admin/profileS.php")
+            require_once("views/modules/admin/profileS.php");
+            require_once("views/modules/admin/Navigator.php");
 
            ?>
       </header>
@@ -27,6 +28,6 @@
            require_once("views/modules/admin/menuTopad.php");
 
          ?>
-    
+
 
                 <!-- <article> -->
