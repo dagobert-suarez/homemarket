@@ -123,6 +123,7 @@ ul{
 .wrap--content .wrap-info .wrap-sell header{
     padding: 5px;
     border-bottom: 1px solid rgba(161, 161, 161, 0.63);
+    text-align:justify;
 }
 .wrap--content .wrap-info .wrap-fa p,
 .wrap--content .wrap-info .wrap-sell p{
@@ -142,7 +143,7 @@ ul{
     border: 1px solid rgba(161,161,161,0.63);
     border-radius:6px;
     grid-gap:50px;
-    animation-name: swing;
+    animation-name: bounceInDown;
     animation-duration:1s;
 
 }
