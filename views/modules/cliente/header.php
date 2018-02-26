@@ -12,16 +12,15 @@
   <body>
       <section>
           <header class="menu--top black1">
-              <?php require_once "views/modules/cliente/menuTopC.php" ?>
-          </header>
+              <?php require_once("views/modules/cliente/menuTopC.php"); ?>
+          </header><bR>
 
+          <div id="map">
 
-  <!-- <section class="clien-one"> -->
-
-    <div id="map">
-
-    </div >
-    <div class="more">
-      <?php
-        require_once 'views/modules/cliente/more.php';
-      ?>
+          </div >
+<div class="wrap--content">
+    <?php
+    require_once("views/modules/cliente/navigator.php");
+    // include('views/modules/cliente/contenedor.php');
+    ?>
+    
