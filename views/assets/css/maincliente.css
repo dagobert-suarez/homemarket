@@ -115,8 +115,8 @@ li i:hover{
     margin: 5px;
     width: 75%;
     display: grid;
-    background-color: #f1f1f1;
-    grid-template-columns: repeat(3,1fr);
+    /* background-color: #f1f1f1; */
+    grid-template-columns: repeat(4,1fr);
     grid-gap: 2px;
 }
 /*.supers{*/
@@ -125,10 +125,17 @@ li i:hover{
 /*}*/
 
 .card{
-    width: 19rem;
+    width: 240px;
+    border: 1px solid rgba(161,161,161,0.63);
+}
+.card:hover{
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #433d53;
 }
 .card-img-top{
-    width: 300px;
+    width: 238px;
     height: 200px;
 }
 .btn-go{
@@ -139,11 +146,10 @@ li i:hover{
     color: white;
 }
 .btn-go:hover{
-    /*background-color: ;*/
-    /*color: black;*/
-    color: #433d53;
-    cursor: pointer;
+
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    color: #433d53;
     transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 article{
