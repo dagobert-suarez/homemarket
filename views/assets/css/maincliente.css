@@ -3,11 +3,22 @@
 /*@import "responsicliente.css";*/
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
-body{
-  margin: 0;
-  /*top: 0;
-  padding: 0;*/
+section.container1C{
+    display: flex;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    background-color: #ffffff;
 }
+
+.main--nav{
+    max-width: 120px;
+    min-width: 120px;
+    min-height: 100vh;
+    border: 1px solid rgba(161,161,161,0.63);
+}
+
+
+
 /*está es la parte del menu top*/
 .menu--top{
   width: 100%;

@@ -15,6 +15,9 @@
   <body>
   <section class="container1S">
       <header class="main--nav black1">
+          <div class="icon--mobile">
+              <i class="fa fa-window-close"></i>
+          </div>
           <?php
 
             require_once("views/modules/admin/profileS.php");

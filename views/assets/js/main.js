@@ -97,3 +97,6 @@ $('#rpassword').focusout(function(){
 
 
 });
+$(".icon--mobile").click(function() {
+    $("header.main--nav").toggleClass("open--nav")
+})

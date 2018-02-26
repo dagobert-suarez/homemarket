@@ -1,4 +1,4 @@
-        </article>
+        
       </div>
     <section>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-bUo_Xxq8oI14snVCDCyacbWJgyoJRf0&callback=initMap"></script> -->

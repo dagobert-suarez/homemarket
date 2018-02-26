@@ -10,22 +10,13 @@
         <link rel="shortcut icon" href="views/assets/image/icono.ico">
   </head>
   <body>
-      <div class="menu--top green1">
-          <div class="content-profile">
+      <section>
+          <header class="menu--top black1">
+              <?php require_once "views/modules/cliente/menuTopC.php" ?>
+          </header>
 
-          </div>
-          <div class="left">
-              <span><i class="fa fa-bars" aria-hidden="true" id="menu"></i><i class="fa fa-bars" aria-hidden="true" id="menu-mobile"></i></span>
-          </div>
-          <div class="r">
-              <ul class="options">
-                  <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
-                  <li><a href="Ajustes"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-                  <li> <a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-              </ul>
-          </div>
-      </div>
-  <section class="clien-one">
+
+  <!-- <section class="clien-one"> -->
 
     <div id="map">
 
@@ -34,5 +25,3 @@
       <?php
         require_once 'views/modules/cliente/more.php';
       ?>
-
-    <article class="">
