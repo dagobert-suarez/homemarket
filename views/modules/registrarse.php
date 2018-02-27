@@ -14,26 +14,26 @@
 	<form id="frmregistro" >
 		<div class="form-gruop">
 			<label  class="required"  for="">Numero de documento:</label>
-			<input type="number" name="data[]" class="new" id="documento" placeholder="documento identidad" required>
+			<input type="number" name="data[]" class="new" id="documento" placeholder="documento identidad" >
 		</div>
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class="required"  for="">Nombre:</label>
-			<input type="text" name="data[]" id="nombre" class="pitp new" placeholder="Nombre" required>
+			<input type="text" name="data[]" id="nombre" class="pitp new" placeholder="Nombre" >
 		</div>
 		<div class="form-gruop">
 				<label  class="required"  for="">Apellido</label>
-				<input type="text" name="data[]" id="Apellido" class="pitp new"placeholder="Apellido" required>
+				<input type="text" name="data[]" id="apellido" class="pitp new"placeholder="Apellido" >
 		</div>
 	</div>
 
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class="required"  for="">	Fecha de nacimiento</label>
-			<input type="date" name="data[]" id="fecha" class="new" >
+			<input type="date"  name="data[]" max="2000-01-01" min="1950-01-01" id="fecha" class="new" >
 		</div>
 		<div class="form-gruop">
-			<label  class="required" id="genero" for="">Genero</label>
+			<label  class="required"  for="">Genero</label>
 			<select name="data[]" class="new" id="gender"  placeholder="Genero" >
 				<option value="m">Hombre</option>
 				<option value="f">Mujer</option>
@@ -54,7 +54,7 @@
 </div>
 	<div class="form-gruop">
 		<label  class="required"  for="">correo</label>
-		<input type="email" name="data[]" class="new" id="correo" placeholder="Correo" >
+		<input type="text" name="data[]" class="new" id="correo" placeholder="Correo" >
 	</div>
 
 	<div class="form-gruop">
@@ -93,7 +93,7 @@
 			<div class="g-recaptcha" data-theme="dark" data-sitekey="6LdgiTkUAAAAADv4ddSh-yCAAl-j15tc1K8CAQsv"></div>
 	</div>
 
-		<button type="submit" name="registrar" id="raios" class="btntnt" >Registrarse</button>
+		<button type="submit" name="registrar" id="frm" class="btntnt" >Registrarse</button>
 	</form>
 </div>
 </div>

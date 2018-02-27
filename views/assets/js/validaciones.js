@@ -1,6 +1,7 @@
 
 $("#frmregistro").submit(function(e) {
     e.preventDefault();
+
             dataJson = [];
             $(".new").each(function(){
                 structure = {};
@@ -27,4 +28,5 @@ $("#frmregistro").submit(function(e) {
                   console.log(result);
                }
           });
+
           });
