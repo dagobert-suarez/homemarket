@@ -26,7 +26,7 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display ="block";
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 4000); // Cambia la imagen cada 3 segungos
+    setTimeout(showSlides, 4000); // Cambia la imagen cada 4 segungos
 }
 
 // js de  login modal:guffy
@@ -89,9 +89,13 @@ $('#rpassword').focusout(function(){
       $('div.error').remove();
     }else{
       $("btntnt").prop("disabled",true);
-      $('#rpassword').after('<div class="error">contraseñas no coinciden');
+      $('#rpassword').after('<div class="error" style="colo", "red">Las contraseñas no coinciden</div>');
+
       console.log("no coinciden");
     }
 
 
 });
+$(".icon--mobile").click(function() {
+    $("header.main--nav").toggleClass("open--nav")
+})

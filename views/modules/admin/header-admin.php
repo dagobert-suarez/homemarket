@@ -15,9 +15,13 @@
   <body>
   <section class="container1S">
       <header class="main--nav black1">
+          <div class="icon--mobile">
+              <i class="fa fa-window-close"></i>
+          </div>
           <?php
 
-            require_once("views/modules/admin/profileS.php")
+            require_once("views/modules/admin/profileS.php");
+            require_once("views/modules/admin/Navigator.php");
 
            ?>
       </header>
@@ -27,24 +31,6 @@
            require_once("views/modules/admin/menuTopad.php");
 
          ?>
-         <div class="wrap--in">
-                <header>
-                    <h3>informacion</h3>
-                </header>
-         </div>
-         <div class="wrap-info">
-             <div class="wrap-fa">
-                    <header>
-                        <h3>informacion</h3>
-                    </header>
-            <p>lo </p>        
-             </div>
-             <div class="wrap-sell">
-                     <header>
-                         <h3>ventas</h3>
-                     </header>
-                     <p>lo las ventas </p>
-              </div>
-      </div>
 
-                <article>
+
+                <!-- <article> -->

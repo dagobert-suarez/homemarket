@@ -1,3 +1,4 @@
+
 @import "reset.css";
 @import "color.css";
 /*@import "responsicliente.css";*/
@@ -15,7 +16,6 @@ section.container1k{
     min-width: 170px;
     min-height: 100vh;
     border-bottom: 3px solid darkorange;
-    box-shadow: 10px 10px 0px 0px rgb(221, 221, 221);
 }
 .userProfile{
     width: 90%;
@@ -44,12 +44,17 @@ section.container1k{
     padding: 10px;
     padding-left:20px;
 }
+.main--nav .info--nav nav ul a li i:hover{
+    color: #dda041;
+}
 
 .main--nav nav ul a li:hover{
     background-color: #f2f4f4;
     color:  #1F2122;
-    border-left: 5px solid darkorange;
+
+    border-left: 25px solid #F1f3f3;
     transition: 0.4s all;
+
 }
 
 .wrap--content{
@@ -69,6 +74,13 @@ section.container1k{
     background-color: #FEFEFE;
     /* border-bottom: 1px solid rgba(50, 50, 50, 0.63); */
 }
+.wrap--content .menu--top .user--name{
+    text-transform: uppercase;
+    margin-right:  750px;
+}
+.wrap--content .menu--top .user--name::before{
+    content: " Bienvenido : "
+}
 
 .wrap--content .menu--top ul{
     width: 200px;
@@ -76,7 +88,7 @@ section.container1k{
     justify-content: space-around;
 }
 .wrap--content article{
-    background-color: #fefefe;
+    background-color: #FEFEFE;
     width: 90%;
     padding: 20px;
     box-sizing: border-box;
@@ -86,6 +98,9 @@ section.container1k{
 }
 /*-*.* Fin de Menú principal*.*-*/
 /*_*.*formulario produto*.*_*/
+.categorymodal h1{
+    color: #465661;
+}
 header{
     /
     margin: 5px 0px 20px 0px;
@@ -94,23 +109,34 @@ header{
   letter-spacing: -1.5px;
   font-size: 2.5rem ;
   padding-bottom: 20px;
-  color: #433d53;
+  color: #465661;
 
 }
-header .breadcrums ul{
+header .breadcrums ul {
     font-size: 19px;
     align-items: center;
     display: flex;
+    margin-bottom: 10px;
     padding: 20px 0px;
     color: #433d53;
+    border-bottom: 1px solid rgba(161, 161, 161, 0.63);
 
 }
+
+/* header .breadcrums ul li {
+    background-color: darkorange;
+    padding: 12px;
+    border-top-right-radius:6px;
+    border-top-left-radius:6px;
+} */
 header .breadcrums ul li a:after{
     content: " / ";
+    color: #dda041;
 }
 header .breadcrums ul li:last-child,
 header .breadcrums ul li a:hover{
     color: #ff3e0f;
+    color :#dda041;
 }
 
 .close{
@@ -175,9 +201,14 @@ color: #433d53;
 background-color: rgb(196, 196, 196);
 }
 
+ thead {
+    text-align:center;
+
+}
  tbody td{
     border: 1px solid rgba(30, 33, 33, 0.32);
     text-align:center;
+    color: #465661;
 }
 .exit{
     color:rgb(0, 5, 252);
@@ -190,7 +221,7 @@ background-color: rgb(196, 196, 196);
 /* _*.* Fin dataGrid*.*_ */
 .required::after{
   content: " * ";
-  color: #fa7000;
+  color: #dda041;
 }
 .opcional::after{
   content: " (Opcional) ";

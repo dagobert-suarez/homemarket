@@ -35,7 +35,7 @@ class viewsController{
 	function inicioAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==2) {
 			require_once "views/modules/admin/header-admin.php";
-			require_once "views/modules/admin/admin.php";
+			require_once "views/modules/admin/Dashboard.php";
 			require_once "views/modules/admin/footer_admin.php";
 		}else {
 die();

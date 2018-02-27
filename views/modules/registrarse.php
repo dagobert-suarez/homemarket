@@ -65,12 +65,12 @@
 
 	<div class="form-gruop">
 				<label  class="required"  for="">contraseña</label>
-				<input type="password" name="data[]" class="new" id="password" >
+				<input type="password" name="data[]" class="new" id="password" placeholder="Minimo(8) caracteres, incluir almenos un numero y una Mayuscula" >
 	</div>
 	<div id="mensaje"></div>
 	<div class="form-gruop">
 				<label  class="required" for="">verificar contraseña</label>
-				<input type="password" name="rpassword" id="rpassword" >
+				<input type="password" name="rpassword" id="rpassword"  placeholder="Minimo(8) caracteres, incluir almenos un numero y una Mayuscula">
 	</div>
 	<div class="form-gruop">
 			<label  class=" required" for="">crear cuenta como</label>

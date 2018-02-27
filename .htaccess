@@ -41,6 +41,8 @@ RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewswor
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
+RewriteRule ^settings-worker$ index.php?controller=user&a=settingsworker
+
 
 #super administrador
 RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin

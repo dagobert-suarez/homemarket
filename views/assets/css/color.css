@@ -1,4 +1,5 @@
 /*Paleta #1 de colores  */
+/*-*.*Naranja*.*-*/
 .orange1{
   background-color:#ffab07;
 }
@@ -20,9 +21,14 @@
     background-color: ;
     color:  #F0A830;
 }
+/*-*.*Fin Naranja*.*-*/
+/*-*.*Yellow *.*-*/
+
 .yellow1{
   background-color: #e9d558;
 }
+/*-*.*Fin Yellow *.*-*/
+
 .green1{
   background-color: #72ad75;
   color: black;
@@ -37,28 +43,44 @@
 .blue2{
     background-color: #6a89c6;
 }
-.gray2{
-  background-color: #f1f1f1;
-  color: #433d53;
-}
-/*_*.*Font *.*_*/
-.gray1{
-  color: #433d53;
-}
+/*-*.*Gris *.*-*/
+
 .gary3{
     background-color: #FEFEFE;
     background-color: rgb(254, 254, 254);
     color: #EBEBEB;
 }
+.gray2{
+    background-color: #f1f1f1;
+    color: #433d53;
+}
 .gray4{
     background-color: #EAEAEA;
 }
+/*-*.* Fin Gris*.*-*/
+/*-*.*Negro*.*-*/
+
 .black1{
     background-color: #1F2122;
     background-color: rgb(31, 33, 34);
     color: #D0D5D7;
 }
-
+/*-*.* Fin Negro*.*-*/
+/*-*.*Blanco*.*-*/
 .white1{
     background-color: #F6F6F6;
+}
+
+/*-*.* Fin Blanco*.*-*/
+/*  colores para el texto*/
+/*_*.*Font *.*_*/
+.gray1{
+    color: #433d53;
+}
+.darkblue{
+    color: #465661;
+}
+.dataTable.no-footer .even{
+    background-color: rgba(230, 230, 230, 0.59);
+
 }
