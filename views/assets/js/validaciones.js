@@ -1,4 +1,3 @@
-
 $("#frmregistro").submit(function(e) {
     e.preventDefault();
 
