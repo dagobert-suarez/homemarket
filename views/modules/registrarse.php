@@ -12,10 +12,7 @@
 <div class="formpart">
 	<h1 class="regis">Registrate en homemarket</h1>
 	<form id="frmregistro" >
-		<div class="form-gruop">
-			<label  class="required"  for="">Numero de documento:</label>
-			<input type="number" name="data[]" class="new" id="documento" placeholder="documento identidad" required>
-		</div>
+
 	<div class="content-form">
 		<div class="form-gruop">
 			<label  class="required"  for="">Nombre:</label>
@@ -43,10 +40,7 @@
 
 	</div>
 	<div class="content-form">
-		<div class="form-gruop">
-			<label  class="opcional"  for="">celular</label>
-			<input type="number" name="data[]" class="new" id="celular">
-		</div>
+
 		<div class="form-gruop">
 			<label  class="opcional"  for="">telefono</label>
 			<input type="number" name="data[]" class="new" id="telefono">

@@ -48,7 +48,7 @@ if (document.getElementById('close')) {
             modal.style.display= "none";
         }
     }
-  
+
 }
 
 
@@ -81,7 +81,6 @@ $('#password').keyup(function(){
     console.log(password.length);
 
 });
-
 $('#rpassword').focusout(function(){
     var password = $('#password').val();
     if (password===$('#rpassword').val()) {

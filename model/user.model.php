@@ -13,9 +13,9 @@ class UserModel{
 	function createUser($data,$token){
 			 try{
 
-				 	$sql = "call crear_usu(?,?,?,?,?,?,?,?,?,?,?,?,?)";
-					$query = $this->pdo->prepare($sql);
-					$query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[10],'no',$data[9],$token));
+				 $sql = "call crear_usu(?,?,?,?,?,?,?,?,?,?,?,?)";
+				 $query = $this->pdo->prepare($sql);
+				 $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[9],'no',$data[8],$token));
 
 					$msn = "Guardado con exito";
 					}catch (PDOException $e) {
