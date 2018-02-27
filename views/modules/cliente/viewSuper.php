@@ -1,5 +1,4 @@
 <div class="gallery--content">
-<h1 class="" >Supermercados</h1>
 <!-- <div class="supers"> -->
 <div class="card" >
   <img class="card-img-top" src="views/assets/image/jumbo.png" alt="1">

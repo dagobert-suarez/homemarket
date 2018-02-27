@@ -18,10 +18,11 @@ class ProductController{
     require_once "views/modules/worker/footer.php";
 
   }
-  //inicio de sesion del cliente
+  //---------inicio de sesion del cliente-------//
   function inicioCliente(){
     if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
       require_once "views/modules/cliente/header.php";
+      require_once "views/modules/cliente/navigator.php";
       require_once "views/modules/cliente/footer.php";
     }else{
       header("Location: inicio");
@@ -37,6 +38,7 @@ class ProductController{
   //inicio de session del cliente donde muestra los supermercados
   function Supermercados(){
     require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/menuTopC.php";
     require_once "views/modules/cliente/viewSuper.php";
     require_once "views/modules/cliente/footer.php";
   }

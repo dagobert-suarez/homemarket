@@ -23,7 +23,7 @@ class ProductModel{
     }
     return $msn;
   }
-//crear una nueva categori envia datos a bd
+//crear una nueva categoria envia datos a bd
   function createCategory($data){
     try{
       $sql = "INSERT INTO tipo_producto(id_tip_pro,nom_tip_pro) VALUE (?,?)";

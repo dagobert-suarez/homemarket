@@ -81,7 +81,6 @@ $('#password').keyup(function(){
     console.log(password.length);
 
 });
-
 $('#rpassword').focusout(function(){
     var password = $('#password').val();
     if (password===$('#rpassword').val()) {
@@ -97,3 +96,6 @@ $('#rpassword').focusout(function(){
 
 
 });
+$(".icon--mobile").click(function() {
+    $("header.main--nav").toggleClass("open--nav")
+})

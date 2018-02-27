@@ -1,4 +1,7 @@
 <div class="menuS--top">
+    <div class="icon--mobile">
+        <i class="fa fa-bars"></i>
+    </div>
     <div class="user--name">
         <?php
         echo $_SESSION['USER']['NAME'];

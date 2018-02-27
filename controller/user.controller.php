@@ -25,26 +25,25 @@ class UserController{
 				$i++;
 			}
 
-			$result = $this->validarEmail($data[7]);
-				if ($result==false) {
-					echo json_encode($result);
-					return;
+			$result = $this->validarEmail($data[6]);
+			if ($result==false) {
+				echo json_encode($result);
+				return;
 			}
 
-			$result = $this->validarPassword($data[9]);
+			$result = $this->validarPassword($data[8]);
 			if (!$result==false) {
 				echo json_encode('contraseña no valida');
 				return;
 			}
 			//antes de esta joda
-			$data[9]=password_hash($data[9], PASSWORD_DEFAULT);
+			$data[8]=password_hash($data[8], PASSWORD_DEFAULT);
 			$token = md5($data[0].$data[1]);
 
 			$result = $this->users->createUser($data,$token);
 			echo json_encode($result);
-
 		}else{
-			echo json_encode('Haga el recapchapt');
+			echo json_encode('falta hacer el recapchat');//hacer recapchat
 		}
 	}
 //los ajustes del cliente
@@ -70,86 +69,65 @@ class UserController{
 	}
 
 	function validarEmail($data){
-		if(filter_var($data, FILTER_VALIDATE_EMAIL)===false){
-			return false;
-		}else{
-			return true;
-		}
-
-
+	if(filter_var($data, FILTER_VALIDATE_EMAIL)===false){
+		return false;
+	}else{
+		return true;
 	}
+}
 
-	function caracterMax($data){
-		if(strelen($data[0])>15){
-			echo "excedio el maximo de caracteres ";
-		}else{
-			return false;
-		}
+	//
+	// function caracterMax($data){
+	// 	if(strelen($data[0])>50){
+	// 		echo "excedio el maximo de caracteres ";
+	// 	}else{
+	// 		return false;
+	// 	}
+	//
+	// 	if(strelen($data[1])>50){
+	// 		echo "excedio el maximo de caracteres ";
+	// 	}else{
+	// 		return false;
+	// 	}
+	//
+	// 	if(strelen($data[4])>7){
+	// 		echo "excedio el maximo de caracteres ";
+	// 	}else{
+	// 		return false;
+	// 	}
+	//
+	// 	if(strelen($data[5])>50){
+	// 		echo "excedio el maximo de caracteres ";
+	// 	}else{
+	// 		return false;
+	// 	}
+	// }
 
-
-		if(strelen($data[1])>50){
-			echo "excedio el maximo de caracteres ";
-		}else{
-			return false;
-		}
-
-		if(strelen($data[2])>50){
-			echo "excedio el maximo de caracteres ";
-		}else{
-			return false;
-		}
-
-		if(strelen($data[5])>11){
-			echo "excedio el maximo de caracteres ";
-		}else{
-			return false;
-		}
-
-		if(strelen($data[6])>7){
-			echo "excedio el maximo de caracteres ";
-		}else{
-			return false;
-		}
-
-		if(strelen($data[7])>50){
-			echo "excedio el maximo de caracteres ";
-		}else{
-			return false;
-		}
-
-		if(strelen($data[9])>50){
-			echo "excedio el maximo de caracteres ";
-		}else{
-			return false;
-		}
-
-	}
-
-
+//solo la parte de validar contraseña
 	function validarPassword($data){
 		if (strlen($data)<8) {
 			return "la contraseña debe tener minimo 8 caracteres";
 		}else{
 			return false;
 		}
-		if(!preg_match('`[a-z]`', $data[9])){
+		if(!preg_match('`[a-z]`', $data[8])){
 			return "debe tener una letra minuscula";
 		}else{
 			return false;
 		}
 
-		if(!preg_match('`[A-Z]`',$data[9])){
+		if(!preg_match('`[A-Z]`',$data[8])){
 			return "debe tener una letra mayuscula";
 		}else{
 			return false;
 		}
 
-		if(!preg_match('`[0-9]`', $data[9])){
+		if(!preg_match('`[0-9]`', $data[8])){
 			return "debe tener un numero";
 		}else{
 			return false;
 		}
-
+//esto es de otra cosa
 		/*if(preg_match(), subject)){
 
 		}else{

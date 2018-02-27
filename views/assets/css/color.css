@@ -80,3 +80,7 @@
 .darkblue{
     color: #465661;
 }
+.dataTable.no-footer .even{
+    background-color: rgba(230, 230, 230, 0.59);
+
+}

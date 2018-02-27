@@ -108,6 +108,8 @@ ul{
 .wrap--content .wrap--in header{
     border-bottom: 1.5px solid rgba(161, 161, 161, 0.63) ;
     padding: 5px;
+    text-align: justify;
+    text-justify: kashida;
 }
 .wrap--content .wrap--in .wrap-in-text P{
     padding: 10px;
@@ -281,4 +283,36 @@ input[type=file]{
 display: none;
 
 }
+}
+.menu--top .icon--mobile{
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+}
+
+.icon--mobile{
+    display: none;
+}
+@media screen and (max-width:820px){
+    .hideTd{ display: none;}
+}
+@media screen and (max-width:899px){
+
+    header.main--nav{
+        display: none;
+    }
+    .menu--top .icon--mobile{
+        display: block;
+    }
+    .open--nav{
+        display: block !important;
+        position: absolute;
+        z-index: 5;
+    }
+    .open--nav .icon--mobile{
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: block;
+    }
 }
