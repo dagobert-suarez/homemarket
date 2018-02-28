@@ -1,16 +1,7 @@
 
 var slideIndex = 0;
 
-function miFuncion() {
-  var response = grecaptcha.getResponse();
 
-  if(response.length == 0){
-    alert("Falta verificar el reCaptcha");
-
-  } else {
-    document.getElementById('frmregistro').submit()
-  }
-}
 
 function showSlides() {
     var i;

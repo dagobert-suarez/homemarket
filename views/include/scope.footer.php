@@ -22,8 +22,8 @@
 			   </ul>
 				</div>
 		</footer>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- <script src='https://www.google.com/recaptcha/api.js?hl=es'></script> -->
 		<script src="views/assets/js/main.js"></script>
 		<script src="views/assets/js/validaciones.js"></script>
 		<script src="views/assets/js/password.js"></script>

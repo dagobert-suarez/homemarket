@@ -29,7 +29,7 @@
          <header>
              <h3> las cosas</h3>
          </header>
-         <p>muchos</p>
+
      </div>
      <div class="wrap-cont-info">
          <header>
@@ -47,6 +47,6 @@
            </header>
            <p>muchos</p>
        </div>
-       
+
    </div>
 </div>
