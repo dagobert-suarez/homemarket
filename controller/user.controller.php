@@ -27,7 +27,7 @@ class UserController{
 
 			$result = $this->validarEmail($data[5]);
 			if ($result==false) {
-				echo json_encode($result);
+				echo json_encode("corre naskfjhvh");
 				return;
 			}
 
@@ -45,7 +45,7 @@ class UserController{
 				$dataUser = $this->users->readByCorreo($data[5]);
 				$dataUser = $this->users->crearAcceso(array($token,$data[7],$dataUser['id_usu']));
 				if ($dataUser==true) {
-					echo json_encode("¡Bien! ya estás registrado");
+					echo json_encode(true);
 				}else{
 					echo json_encode("Vaya que mala suerte, intentelo de nuevo");
 				}

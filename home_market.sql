@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-02-2018 a las 18:45:21
+-- Tiempo de generación: 01-03-2018 a las 19:51:45
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -30,13 +30,18 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `buscarPro` (IN `nom_pro` VARCHAR(30
 SELECT nom_pro, des_pro, img_pro,mar_pro, valVen_pro, nom_tip_pro FROM productos INNER JOIN tipo_producto WHERE productos.id_tip_pro = tipo_producto.id_tip_pro;
 END$$
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `CrearAcceso` (IN `token` VARCHAR(255), IN `contra` VARCHAR(255), IN `usu` INT)  NO SQL
+BEGIN 
+INSERT INTO acceso VALUES(token,contra,usu);
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_categoria` (IN `id_tip_pro` INT, IN `nom_tip_pro` VARCHAR(30))  BEGIN
 INSERT INTO tipo_producto VALUES (id_tip_pro,nom_tip_pro);
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `id_pro` INT, IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `img_pro` VARCHAR(255), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `fec_ing_pro` DATE, IN `uniMed_pro` VARCHAR(30), IN `valCom_pro` FLOAT, IN `valVen_pro` FLOAT)  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `img_pro` VARCHAR(255), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `fec_ing_pro` DATE, IN `uniMed_pro` VARCHAR(30), IN `valCom_pro` FLOAT, IN `valVen_pro` FLOAT)  BEGIN
  
- INSERT INTO productos VALUES (id_pro,nom_pro,des_pro,img_pro,mar_pro,id_tip_pro,can_pro,fec_ing_pro,uniMed_pro,valCom_pro,valVen_pro);
+ INSERT INTO productos VALUES (nom_pro,des_pro,img_pro,mar_pro,id_tip_pro,can_pro,fec_ing_pro,uniMed_pro,valCom_pro,valVen_pro);
  
  END$$
 
@@ -52,10 +57,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_sup` (IN `id_sup` INT, IN `no
   
   END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_usu` (IN `id_usu` INT, IN `nom_usu` VARCHAR(50), IN `ape_usu` VARCHAR(50), IN `fec_nac_usu` DATE, IN `gen_usu` VARCHAR(20), IN `tel_usu` VARCHAR(11), IN `email_usu` VARCHAR(50), IN `cod_ciu` INT, IN `id_rol` INT, IN `img_usu` VARCHAR(255), IN `token` VARCHAR(255), IN `contra` VARCHAR(255))  BEGIN
-insert into usuario values(id_usu,nom_usu,ape_usu,fec_nac_usu,gen_usu,tel_usu,email_usu,cod_ciu,id_rol,img_usu);
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_usu` (IN `nom_usu` VARCHAR(50), IN `ape_usu` VARCHAR(50), IN `fec_nac_usu` DATE, IN `gen_usu` VARCHAR(20), IN `tel_usu` VARCHAR(11), IN `email_usu` VARCHAR(50), IN `cod_ciu` INT, IN `id_rol` INT)  BEGIN
+insert into usuario (nom_usu,ape_usu,fec_nac_usu,gen_usu,tel_usu,email_usu,cod_ciu,id_rol) values(nom_usu,ape_usu,fec_nac_usu,gen_usu,tel_usu,email_usu,cod_ciu,id_rol);
 
-INSERT INTO acceso VALUES(token,contra,id_usu); 
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `eliminarPro` (`id_pro` INT)  BEGIN 
@@ -130,6 +134,19 @@ CREATE TABLE `acceso` (
   `id_usu` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `acceso`
+--
+
+INSERT INTO `acceso` (`token`, `contra`, `id_usu`) VALUES
+('51f057ff4f452f2b5607538418068066', '$2y$10$7YRpbIrj.YIp2kaKxtx4xOXJEksPvPCjfzQhIELSQQEn.KbHMMLmq', 20),
+('5f2f9c1fa9357c5a5707c976d142550b', '$2y$10$2Foo5gXvdlCqn08lBwsLxe.Dvz3VH983VNlrLfFAPh7z7z2GWura.', 14),
+('66abee6b95901f3bddf45796b2d15b5a', '$2y$10$RNi5ooY/foDjZpdqfOawLeYkvvLwNA1QnayUg5Xu6TJN5O9gKXUDC', 13),
+('7a807b4f1e222ce31ce33cdbdcd0ed82', '$2y$10$fbyBCZ7K4hFwWA6DARGJx.MWrFKLLc6Aweky11N2w0qs4Ru7JKlbO', 16),
+('99c6c3e33d8d604704f351677e121e59', '$2y$10$3uoYf7bw9Jfpq68610zFfuSf6l/MGyjIgdIbfaP8.V1Axo0kH0PV6', 15),
+('b49f88b31a28d80eaa6b37f438bf391e', '$2y$10$itcBRG9KCTC9YjSsGDeo1..4NrwpcIvdy5oaBoVYy1M1gYPb5kSsi', 18),
+('b5b998acfab60179866c09379f183779', '$2y$10$GfAP2tRhcxEYogtfXVIbw.Xjsu2.5i1Ze1KOoSl0xoDjerg0kVeU2', 19);
+
 -- --------------------------------------------------------
 
 --
@@ -181,6 +198,13 @@ CREATE TABLE `ciudad` (
   `nom_ciu` varchar(30) NOT NULL,
   `cod_dpto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ciudad`
+--
+
+INSERT INTO `ciudad` (`cod_ciu`, `nom_ciu`, `cod_dpto`) VALUES
+(1, 'Medellin', 0);
 
 -- --------------------------------------------------------
 
@@ -389,7 +413,8 @@ CREATE TABLE `tipo_producto` (
 --
 
 INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
-(1, 'guffy');
+(1, 'guffy'),
+(213123, 'cereales');
 
 -- --------------------------------------------------------
 
@@ -409,6 +434,19 @@ CREATE TABLE `usuario` (
   `id_rol` int(11) DEFAULT NULL,
   `img_usu` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usu`, `nom_usu`, `ape_usu`, `fec_nac_usu`, `gen_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img_usu`) VALUES
+(13, 'hjkhjk', 'gjhghjg', '1999-12-31', 'm', '98789', '7@11.c', 1, 1, NULL),
+(14, 'dagobert', 'suarez', '1999-12-12', 'm', '67877878', 'dagobert@gmail.com', 1, 1, NULL),
+(15, 'alex', 'myuÃ±o<', '1988-02-13', 'm', '1234567', 'alex@gmail.com', 1, 3, NULL),
+(16, '98797', '123', '1999-12-29', 'm', '6757', 'hgjhg@hoadsa.c', 1, 3, NULL),
+(18, 'jhkhkj', 'hjkh', '1999-12-30', 'f', '8976', '786@aa.c', 1, 2, NULL),
+(19, 'alexis', 'muÃ±ox', '1999-04-23', 'm', '1234567', 'alexis@gmail.com', 1, 1, NULL),
+(20, 'sena', 'calatrava', '2000-01-01', 'm', '213123', 'adssadsafdsa@hotmail.com', 1, 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -599,13 +637,13 @@ ALTER TABLE `supermercado`
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
 ALTER TABLE `tipo_producto`
-  MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213124;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Restricciones para tablas volcadas
