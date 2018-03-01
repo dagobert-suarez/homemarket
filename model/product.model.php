@@ -10,25 +10,27 @@ class ProductModel{
       die($e->getMessage());
     }
   }
+
+  //crear una nueva categoria envia datos a bd
+    function createCategory($data){
+      try{
+        $sql = "call crear_categoria(?)";
+        $query = $this->pdo->prepare($sql);
+        $query->execute(array($data[0]));
+
+        $msn = "registro con exito";
+      }catch (PDOException $e) {
+        die($e->getMessage());
+      }
+      return $msn;
+    }
+
 //crear un nuevo producto: envia datos a bd
   function createProduct($data){
     try{
       $sql = "INSERT INTO productos(cod_pro,nom_pro,des_pro,mar_pro,id_tip_pro) VALUE (?,?,?,?,?)";
       $query = $this->pdo->prepare($sql);
       $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4]));
-
-      $msn = "registro con exito";
-    }catch (PDOException $e) {
-      die($e->getMessage());
-    }
-    return $msn;
-  }
-//crear una nueva categoria envia datos a bd
-  function createCategory($data){
-    try{
-      $sql = "INSERT INTO tipo_producto(id_tip_pro,nom_tip_pro) VALUE (?,?)";
-      $query = $this->pdo->prepare($sql);
-      $query->execute(array($data[0],$data[1]));
 
       $msn = "registro con exito";
     }catch (PDOException $e) {
