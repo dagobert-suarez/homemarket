@@ -21,6 +21,7 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+
 	function readByCorreo($data){
 			 try{
 				 $sql = "SELECT * FROM usuario WHERE email_usu = ?";
