@@ -55,6 +55,8 @@ class ProductController{
 
     function crearProduct(){
       $data = $_POST['data'];
+
+
          $result = $this->product->createProduct($data);
          echo '<script language="javascript">alert("creado con exito");</script>';
          echo "<script>window.location.href='nuevo-producto'</script>";
