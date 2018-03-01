@@ -26,7 +26,7 @@
           $data = $this->viewProducts();
       foreach ($data as $row) { ?>
       <tr class="even">
-        <td><?php echo $row["cod_pro"]; ?></td>
+        <td><?php echo $row["id_pro"]; ?></td>
         <td><?php echo $row["nom_pro"]; ?></td>
         <td><?php echo $row["mar_pro"]; ?></td>
         <td><?php echo $row["des_pro"]; ?></td>

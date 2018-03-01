@@ -1,6 +1,6 @@
 /*@import "reset.css";*/
 @import "color.css";
-@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Lato|Montserrat|Noto+Sans|PT+Sans|Raleway|Roboto ');
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Lato|Montserrat|Noto+Sans|PT+Sans|Raleway|Roboto:100,300,400 ');
 body{
   margin: 0;
   background-color: rgba(247, 252, 255, 0);
@@ -95,39 +95,9 @@ picture  h1{
     font-family: "Montserrat", sans-serif;
 }
 /*-*.*2 Aca  finaliza la parte de los supermercados *.*-*/
+/* --------------------------------------------------- */
 
-.shapes{
-  padding: -10px;
-  display: flex;
-  justify-content: center;
-  margin: 20px 100px ;
-  font-family: 'Roboto', sans-serif;
-  color: white;
 
-}
-.content-shapes{
-  display: flex;
-}
-.triangle{
-  width: 0;
-  height: 0;
-  border-left: 50px solid #ffab07 ;
-  border-top:50px solid transparent ;
-  border-bottom:50px solid transparent ;
-}
-.ribbon{
-    width: 0px;
-    height: 0px;
-    border-top: 50px solid #ffab07;
-    border-left: 50px solid transparent;
-    border-right: 50px solid #ffab07;
-    border-bottom: 50px solid #ffab07;
-}
-
-.content-shapes:hover{
-  color:#433d53;
-  cursor: pointer;
-}
 .menu{
   width: 100%;
   height: 55px;
@@ -139,7 +109,6 @@ picture  h1{
 }
 .logo--menu {
   width: 20%;
-  /*margin-left: 5%;*/
   margin: 0px 60px;
   position: fixed;
   z-index: 20000;
@@ -233,18 +202,25 @@ picture  h1{
     pointer-events: none;
     font-family: 'Raleway',sans-serif;
     color:rgb(254, 254, 254) ;
+    padding-top: 20px;
 }
 
  .info p{
 
   text-align: center;
-  margin: 0px 10px 10px ;
-  color:#ff9036;
-  font-size: 1.2rem;
-  left:  50%;
+  margin: 10px 10px 10px ;
+  color:#fff;
+  /* font-size: 1.2rem; */
   display: block;
   justify-content: space-around;
+  font-size: 28px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin-top: 20px;
 
+}
+.info p span{
+    color: #DDA917;
 }
  .starbtn{
   text-decoration: none;
