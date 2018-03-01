@@ -35,11 +35,11 @@ class LoginController{
 		$result = $this->users->user($_POST['email']);
 
 		if ($result!=array()){
-			$contra = $this->users->contra($result['doc_usu']);
+			$contra = $this->users->contra($result['id_usu']);
 			 // print_r($result);
 			if (password_verify($pass, $result['contra'])) {
 				$_SESSION['USER']['rol']=$result['id_rol'];
-				$_SESSION['USER']['ID']=$result['doc_usu'];
+				$_SESSION['USER']['ID']=$result['id_usu'];
 				$_SESSION['USER']['NAME']=$result['nom_usu'];
 				    // echo "<h1>¡ingreso corretamente</h1>" ;
 						// die($_SESSION['USER']['rol']);

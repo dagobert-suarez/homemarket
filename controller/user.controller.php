@@ -19,7 +19,7 @@ class UserController{
 			foreach ($data as $row) {
 				$result = $this->validarEspacio($data[$i]);
 				if ($result==false) {
-					echo json_encode('Llene todos los campos');
+					echo json_encode('Tienes que llenar todos los campos');
 					return;
 				}
 				$i++;
@@ -33,7 +33,7 @@ class UserController{
 
 			$result = $this->validarPassword($data[7]);
 			if (!$result==false) {
-				echo json_encode('contraseña no valida');
+				echo json_encode('al parecer la contraseña no es valida');
 				return;
 			}
 			//antes de esta joda
@@ -45,9 +45,9 @@ class UserController{
 				$dataUser = $this->users->readByCorreo($data[5]);
 				$dataUser = $this->users->crearAcceso(array($token,$data[7],$dataUser['id_usu']));
 				if ($dataUser==true) {
-					echo json_encode("Exito");
+					echo json_encode("¡Bien! ya estás registrado");
 				}else{
-					echo json_encode("Error");
+					echo json_encode("Vaya que mala suerte, intentelo de nuevo");
 				}
 			}
 	}
