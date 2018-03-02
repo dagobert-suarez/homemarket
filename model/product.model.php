@@ -28,11 +28,8 @@ class ProductModel{
 //crear un nuevo producto: envia datos a bd
   function createProduct($data){
     try{
-<<<<<<< HEAD
       $sql = "INSERT INTO productos(nom_pro,des_pro,mar_pro,id_tip_pro) VALUE (?,?,?,?,?)";
-=======
       $sql = "INSERT INTO productos(id_pro,nom_pro,des_pro,mar_pro,id_tip_pro,img_pro) VALUE (?,?,?,?,?,?)";
->>>>>>> 85952de62b8b24cfa7a44f78fb2bd56337b75adf
       $query = $this->pdo->prepare($sql);
       $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5]));
 
