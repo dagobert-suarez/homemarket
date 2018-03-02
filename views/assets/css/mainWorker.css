@@ -16,6 +16,7 @@ section.container1k{
     min-width: 170px;
     min-height: 100vh;
     border-bottom: 3px solid darkorange;
+    z-index: 100;
 }
 .userProfile{
     width: 90%;
@@ -29,16 +30,17 @@ section.container1k{
 }
 .main--nav .info--nav nav ul{
     margin-top: 20px;
-    padding-top: 10px;
+    padding-top: 15px;
     border-top: 1px solid #323232;
     /* box-shadow: 0 -5px 0 #d1d1d1; */
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+
 }
  .main--nav .info--nav2 nav ul{
     border-top: 1px solid #323232;
     border-bottom: 1px solid #323232;
     padding-top: 15px;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
  }
 .main--nav nav ul a li{
     padding: 10px;
@@ -72,7 +74,6 @@ section.container1k{
     justify-content:flex-end;
     padding: 20px 0;
     background-color: #FEFEFE;
-    /* border-bottom: 1px solid rgba(50, 50, 50, 0.63); */
 }
 .wrap--content .menu--top .user--name{
     text-transform: uppercase;
@@ -88,15 +89,16 @@ section.container1k{
     justify-content: space-around;
 }
 .wrap--content article{
-    background-color: #FEFEFE;
-    width: 90%;
+    background-color: #F1F3F3;
+    width: 95%;
     padding: 20px;
     box-sizing: border-box;
     margin: 30px auto;
-    border-radius: 10px;
+    border-radius: 1px;
     color: #EBEBEB;
 }
 /*-*.* Fin de Menú principal*.*-*/
+/* ---------------------------- */
 /*_*.*formulario produto*.*_*/
 .categorymodal h1{
     color: #465661;
@@ -123,12 +125,6 @@ header .breadcrums ul {
 
 }
 
-/* header .breadcrums ul li {
-    background-color: darkorange;
-    padding: 12px;
-    border-top-right-radius:6px;
-    border-top-left-radius:6px;
-} */
 header .breadcrums ul li a:after{
     content: " / ";
     color: #dda041;

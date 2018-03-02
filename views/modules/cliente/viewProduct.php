@@ -8,7 +8,7 @@
     foreach ($data as $row) { ?>
 
       <div class="cardPro" >
-        <img class="card-img-top-pro" src="views/assets/image/produc/<?php echo $row["des_pro"];?>"id="<?php echo $row["id_tip_pro"]; ?>"  alt="<?php echo $row["id_tip_pro"]; ?>">
+        <img class="card-img-top-pro" src="views/assets/image/productos/<?php echo $row["des_pro"];?>"id="<?php echo $row["id_tip_pro"]; ?>"  alt="<?php echo $row["id_tip_pro"]; ?>">
         <div class="nombre-produt">
           <h2><?php echo $row["nom_pro"]; ?></h2>
         </div>

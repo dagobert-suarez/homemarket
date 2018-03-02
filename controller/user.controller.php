@@ -15,6 +15,7 @@ class UserController{
 		// 	echo json_encode("Campo");
 		// }
 		// return;
+		// 741569
 			$i = 0;
 			foreach ($data as $row) {
 				$result = $this->validarEspacio($data[$i]);
@@ -27,7 +28,7 @@ class UserController{
 
 			$result = $this->validarEmail($data[5]);
 			if ($result==false) {
-				echo json_encode("corre naskfjhvh");
+				echo json_encode("corre no valido");
 				return;
 			}
 
@@ -62,7 +63,7 @@ class UserController{
 	//los ajustes del empleado
 	 function settingsworker(){
 		 require_once "views/modules/worker/header.php";
-		 require_once "views/modules/worker/.php";
+		 require_once "views/modules/worker/ajustesEm.php";
 		 require_once "views/modules/worker/footer.php";
 	 }
 

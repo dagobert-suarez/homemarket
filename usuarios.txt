@@ -2,14 +2,9 @@
 
 roles
 Cliente
-first@gmail.com
-D1agobert
 
-second@gmail.com
-D2agobert
+alex@gmail.com
+Alex1234
 
-empleado@gmail.com
-D3agobert
-
-superadmin@gmail.com
-D4agobert
+guffyk2@gmail.com
+David1234
