@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <title>manual-usuario</title>
     <style>
-      body {
-        background-color: blue;
-      }
       header{
         background-color: green;
       }
