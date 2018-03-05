@@ -41,6 +41,18 @@
         <label for="" class="required">cantidad</label>
         <input type="number" name="data[]" class="new">
       </div>
+      <div class="">
+        <label for="" class="required">medida</label>
+        <input type="text" name="data[]" class="new">
+      </div>
+      <div class="">
+        <label for="" class="required">valor compra</label>
+        <input type="number" name="data[]" class="new">
+      </div>
+      <div class="">
+        <label for="" class="required">valor venta</label>
+        <input type="number" name="data[]" class="new">
+      </div>
         <div class="" >
             <label for="" class="required">Imagen del producto:</label>
             <input type="file" name="data[]" value="" class="new">
