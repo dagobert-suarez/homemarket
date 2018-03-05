@@ -58,7 +58,8 @@ class LoginController{
 						}
 				} else {
 					// echo '<script language="javascript">alert("<div class="exit">crontraseña incorrecta</div>");</script>';
-	        echo "<script>window.location.href='inicio'</script>";
+					echo '<script languaje>alert("contraseña incorrecta")</script>';
+					echo "<script>window.location.href='inicio'</script>";
 				}
 		}else{
 			echo '<h1>el usuario no existe</h1>';

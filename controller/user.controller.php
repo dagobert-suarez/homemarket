@@ -28,13 +28,13 @@ class UserController{
 
 			$result = $this->validarEmail($data[5]);
 			if ($result==false) {
-				echo json_encode("corre no valido");
+				echo json_encode("correo mal escrito");
 				return;
 			}
 
 			$result = $this->validarPassword($data[7]);
 			if (!$result==false) {
-				echo json_encode('al parecer la contraseña no es valida');
+				echo json_encode('contraseña no cumple con lo pedido');
 				return;
 			}
 			//antes de esta joda
