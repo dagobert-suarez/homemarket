@@ -55,6 +55,7 @@ die();
 	}
 
 //todo sobre el empleado
+// --------------------- //
 	function InicioWorker(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==3) {
 			require_once "views/modules/worker/header.php";
@@ -66,7 +67,16 @@ die();
 		}
 	}
 
+	//los ajustes del empleado
+	// ----------------------- //
+	 function settingsworker(){
+		 require_once "views/modules/worker/header.php";
+		 require_once "views/modules/worker/updateWorker.php";
+		 require_once "views/modules/worker/footer.php";
+	 }
+
 //todo sobre el superadmin
+// ---------------------------//
 	function InicioSuperAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==4) {
 			require_once "views/modules/superAdmin/header.php";

@@ -53,6 +53,7 @@ class ProductModel{
   }
 
   //llama todos los productos en la bd
+  // ----------------------------------- //
   function readProducts(){
     try{
     $sql="SELECT * FROM productos ";
@@ -65,7 +66,13 @@ class ProductModel{
       return $result;
   }
 
+  // Actualizar producto
+   // -------------------- //
+        
+
+
   //elimina el tipo de categoria
+  // ---------------------------- //
   public function deleteProduct($data){
     try{
       $sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
