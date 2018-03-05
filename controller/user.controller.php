@@ -28,7 +28,7 @@ class UserController{
 
 			$result = $this->validarEmail($data[5]);
 			if ($result==false) {
-				echo json_encode("corre no valido");
+				echo json_encode("correo escrito mal");
 				return;
 			}
 
