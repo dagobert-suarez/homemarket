@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.6.5.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2018 a las 19:51:45
--- Versión del servidor: 10.1.29-MariaDB
--- Versión de PHP: 7.2.0
+-- Tiempo de generación: 05-03-2018 a las 18:48:25
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 7.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -35,13 +33,15 @@ BEGIN
 INSERT INTO acceso VALUES(token,contra,usu);
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_categoria` (IN `id_tip_pro` INT, IN `nom_tip_pro` VARCHAR(30))  BEGIN
-INSERT INTO tipo_producto VALUES (id_tip_pro,nom_tip_pro);
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_categoria` (IN `nom_tip_pro` VARCHAR(30))  BEGIN
+INSERT INTO tipo_producto
+(nom_tip_pro)
+values(nom_tip_pro);
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `img_pro` VARCHAR(255), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `fec_ing_pro` DATE, IN `uniMed_pro` VARCHAR(30), IN `valCom_pro` FLOAT, IN `valVen_pro` FLOAT)  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `img_pro` VARCHAR(255), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valCom_pro` FLOAT, IN `valVen_pro` FLOAT)  BEGIN
  
- INSERT INTO productos VALUES (nom_pro,des_pro,img_pro,mar_pro,id_tip_pro,can_pro,fec_ing_pro,uniMed_pro,valCom_pro,valVen_pro);
+ INSERT INTO productos VALUES (nom_pro,des_pro,mar_pro,id_tip_pro,can_pro,img_pro,uniMed_pro,valCom_pro,valVen_pro);
  
  END$$
 
@@ -139,13 +139,13 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`token`, `contra`, `id_usu`) VALUES
-('51f057ff4f452f2b5607538418068066', '$2y$10$7YRpbIrj.YIp2kaKxtx4xOXJEksPvPCjfzQhIELSQQEn.KbHMMLmq', 20),
+('09d1d2636296f0c6bc8965851e1bb480', '$2y$10$CTYHbrIC6npAquYz9Dj8dO6qjlhbs0DcksdfbfebpjoQ3NtCZxume', 29),
 ('5f2f9c1fa9357c5a5707c976d142550b', '$2y$10$2Foo5gXvdlCqn08lBwsLxe.Dvz3VH983VNlrLfFAPh7z7z2GWura.', 14),
 ('66abee6b95901f3bddf45796b2d15b5a', '$2y$10$RNi5ooY/foDjZpdqfOawLeYkvvLwNA1QnayUg5Xu6TJN5O9gKXUDC', 13),
-('7a807b4f1e222ce31ce33cdbdcd0ed82', '$2y$10$fbyBCZ7K4hFwWA6DARGJx.MWrFKLLc6Aweky11N2w0qs4Ru7JKlbO', 16),
-('99c6c3e33d8d604704f351677e121e59', '$2y$10$3uoYf7bw9Jfpq68610zFfuSf6l/MGyjIgdIbfaP8.V1Axo0kH0PV6', 15),
-('b49f88b31a28d80eaa6b37f438bf391e', '$2y$10$itcBRG9KCTC9YjSsGDeo1..4NrwpcIvdy5oaBoVYy1M1gYPb5kSsi', 18),
-('b5b998acfab60179866c09379f183779', '$2y$10$GfAP2tRhcxEYogtfXVIbw.Xjsu2.5i1Ze1KOoSl0xoDjerg0kVeU2', 19);
+('a8803de898afa25d6187da0ef1fca749', '$2y$10$Yhi12CDWbh5sbPX983Ulp.1CF83f4XVBThH9lAmPH8BzGFk.Ocfhi', 28),
+('b4b871c87f927762c3671e9b582a459d', '$2y$10$oqb09eEtnSUg61yrFw/r4.jbQwqENupyWHnhByPSv2p1U0XF9l0QW', 24),
+('bfed46efc9182d0bf84c7fabe25dee79', '$2y$10$/nAy4ctydxOL3hSLOWyG0OK899JTQxkSTDCIZCQdouwTTX8BaKi2W', 37),
+('e54ac43814edc3eadb46f3789a2a44a2', '$2y$10$lNY8GOmtbp8ytkWYr8s64eUqbSfv2QbQauapgigggc.IXZW1bfaji', 38);
 
 -- --------------------------------------------------------
 
@@ -413,8 +413,10 @@ CREATE TABLE `tipo_producto` (
 --
 
 INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
-(1, 'guffy'),
-(213123, 'cereales');
+(1, 'carnes'),
+(2, 'pastas'),
+(3, 'granos'),
+(4, 'lacteos');
 
 -- --------------------------------------------------------
 
@@ -440,13 +442,14 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usu`, `nom_usu`, `ape_usu`, `fec_nac_usu`, `gen_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img_usu`) VALUES
-(13, 'hjkhjk', 'gjhghjg', '1999-12-31', 'm', '98789', '7@11.c', 1, 1, NULL),
-(14, 'dagobert', 'suarez', '1999-12-12', 'm', '67877878', 'dagobert@gmail.com', 1, 1, NULL),
-(15, 'alex', 'myuÃ±o<', '1988-02-13', 'm', '1234567', 'alex@gmail.com', 1, 3, NULL),
-(16, '98797', '123', '1999-12-29', 'm', '6757', 'hgjhg@hoadsa.c', 1, 3, NULL),
-(18, 'jhkhkj', 'hjkh', '1999-12-30', 'f', '8976', '786@aa.c', 1, 2, NULL),
-(19, 'alexis', 'muÃ±ox', '1999-04-23', 'm', '1234567', 'alexis@gmail.com', 1, 1, NULL),
-(20, 'sena', 'calatrava', '2000-01-01', 'm', '213123', 'adssadsafdsa@hotmail.com', 1, 3, NULL);
+(25, 'dagobert', 'suarez', '1999-09-27', 'm', '4356523', 'cliente@gmail.com', 1, 1, NULL),
+(26, 'dagobert', 'suarez', '1999-12-12', 'm', '2121212', 'dasuarez@gmail.com', 1, 1, NULL),
+(28, 'daniel', 'acevedo', '1998-12-12', 'm', '23232', 'daniel@gmail.com', 1, 1, NULL),
+(29, 'empleado', 'delsuper', '1995-02-12', 'm', '1212321', 'empleado@gmail.com', 1, 3, NULL),
+(30, 'dagobert', 'suarez', '1978-12-12', 'm', '656576', 'dagobertagudelo@hotmail.com', 1, 1, NULL),
+(35, 'dagobert', 'suarez', '1978-12-12', 'm', '656576', 'supersuper@hotmail.com', 1, 1, NULL),
+(37, 'sajdnjn', 'kjand', '1998-05-05', 'm', '65789', 'prueba@gmail.com', 1, 1, NULL),
+(38, 'daneilo', 'torogil', '1999-08-31', 'm', '4563456', 'daneilo@hotmail.com', 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -596,55 +599,46 @@ ALTER TABLE `usuario_supermercado`
 --
 ALTER TABLE `calificacion`
   MODIFY `id_cal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
   MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
   MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
   MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
   MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT de la tabla `supermercado`
 --
 ALTER TABLE `supermercado`
   MODIFY `id_sup` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
 ALTER TABLE `tipo_producto`
-  MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213124;
-
+  MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
+  MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- Restricciones para tablas volcadas
 --
@@ -726,7 +720,6 @@ ALTER TABLE `usuario`
 ALTER TABLE `usuario_supermercado`
   ADD CONSTRAINT `usuario_supermercado_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`id_usu`) ON UPDATE CASCADE,
   ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`id_sup`) REFERENCES `supermercado` (`id_sup`) ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
