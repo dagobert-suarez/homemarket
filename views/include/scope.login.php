@@ -14,7 +14,7 @@
 			<input type="password" name="contra" placeholder="contraseña" required>
 		</div>
 			<div class="botns">
-				<a  href=""class="">Olvidaste tu Comtraseña</a>
+				<a  href=""class="">Olvidaste tu Contraseña</a>
 				<button class="btnsave">entrar</button>
 			</div>
 	</form>

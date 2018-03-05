@@ -73,14 +73,7 @@ class UserController{
 		require_once "views/modules/cliente/footer.php";
 	}
 
-	//los ajustes del empleado
-	// ----------------------- //
-	 function settingsworker(){
-		 require_once "views/modules/worker/header.php";
-		 require_once "views/modules/worker/ajustesEm.php";
-		 require_once "views/modules/worker/footer.php";
-	 }
-
+	
 		function validarEspacio($data){
 		if($data==''){
 			return false;
