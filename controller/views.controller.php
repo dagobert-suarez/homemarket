@@ -87,6 +87,13 @@ die();
 			header ('Location: inicio');
 		}
 	}
+	//los ajustes del Supermercado
+	// ----------------------- //
+	 function settingsSuper(){
+		 require_once "views/modules/admin/header-admin.php";
+		 require_once "views/modules/admin/updateADS.php";
+		 // require_once "views/modules/admin/footer-admin.php";
+	 }
 
 
 
