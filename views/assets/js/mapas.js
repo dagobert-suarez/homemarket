@@ -2,8 +2,8 @@
 
 var map = new GMaps({
    el: '#map',
-  lat: 6.255806,
-  lng: -75.574377,
+  lat: 6.254123205945811,
+  lng: -75.56560824176222,
   mapTypeId: 'hybrid'//terrain, satellite,hybrid//
 });
 
@@ -75,7 +75,7 @@ GMaps.geolocate({
 //   strokeOpacity: 0.6,
 //   strokeWeight: 5
 // });
-//
+
 // GMaps.geolocate({
 //   success:function(position){
 //     map.setCenter(position.coords.latitude, position.coords.longitude);

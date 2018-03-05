@@ -53,7 +53,20 @@ class UserController{
 			}
 	}
 
-//los ajustes del cliente
+	//---------inicio de sesion del cliente-------//
+	// --------------------------------------------- //
+    function inicioCliente(){
+      if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
+        require_once "views/modules/cliente/header.php";
+        require_once "views/modules/cliente/navigator.php";
+        // require_once "views/modules/cliente/maps.php";
+        require_once "views/modules/cliente/footer.php";
+      }else{
+        header("Location: inicio");
+      }
+    }
+	//los ajustes del cliente
+	// ----------------------- //
 	function ajustes(){
 		require_once "views/modules/cliente/header.php";
 		require_once "views/modules/cliente/updateCliente.php";
@@ -61,6 +74,7 @@ class UserController{
 	}
 
 	//los ajustes del empleado
+	// ----------------------- //
 	 function settingsworker(){
 		 require_once "views/modules/worker/header.php";
 		 require_once "views/modules/worker/ajustesEm.php";
@@ -83,32 +97,6 @@ class UserController{
 	}
 }
 
-	//
-	// function caracterMax($data){
-	// 	if(strelen($data[0])>50){
-	// 		echo "excedio el maximo de caracteres ";
-	// 	}else{
-	// 		return false;
-	// 	}
-	//
-	// 	if(strelen($data[1])>50){
-	// 		echo "excedio el maximo de caracteres ";
-	// 	}else{
-	// 		return false;
-	// 	}
-	//
-	// 	if(strelen($data[4])>7){
-	// 		echo "excedio el maximo de caracteres ";
-	// 	}else{
-	// 		return false;
-	// 	}
-	//
-	// 	if(strelen($data[5])>50){
-	// 		echo "excedio el maximo de caracteres ";
-	// 	}else{
-	// 		return false;
-	// 	}
-	// }
 
 //solo la parte de validar contraseña
 	function validarPassword($data){

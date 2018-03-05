@@ -11,6 +11,7 @@ section.container1C{
 }
 
 /*está es la parte del menu top*/
+/* --------------------------- */
 .menu--top{
   width: 100%;
   display: flex;
@@ -92,8 +93,60 @@ li i:hover{
     border: 1px solid rgba(161,161,161,0.63);
 }
 /*_*.* finaliza Top menú y navigator*.*_*/
+/* ------------------------------------ */
+/*_*.* Esta es la parte de los ajutes*.*_*/
+/* ------------------------------------ */
+.module--Sett{
+    background-color: white;
+    width: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    border-radius: 1px;
+    border : 1px solid rgba(161,161,161, 0.93);
+    font-family:  'Noto_Sans',sans-serif;
+    color: #465661;
+    display: flex;
+    flex-direction: column;
+}
+.module--Sett h1{
+    color: #465661;
+    font-style: oblique;
+    margin-bottom: 10px;
+    text-align:  center;
+}
+.module--Sett .wrap-form .form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+
+}
+.module--Sett .wrap-form .form-group input[type="text"],input[type="number"],input[type="date"],input[type="password"]{
+    width: 45%;
+    outline: none;
+    margin: 5px 1px 1px;
+    padding: 6px 30px;
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+}
+.module--Sett .wrap-form .form-group .btnsave{
+    width: 45%;
+    margin-top: 15px;
+    padding: 7px ;
+}
+.module--Sett .wrap-form .form-group .btnsave:hover{
+    box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
+    background-color: blue;
+    color: white;
+}
+
+
+
+/*_*.* Finaliza la parte de los ajutes*.*_*/
+/* ------------------------------------ */
 
 /* inicio info-map*/
+/* ----------------- */
 .clien-one{
     margin-top: 0px;
     height: auto;
@@ -163,6 +216,7 @@ article{
 }
 
 /*_*.*produtos *.*_*/
+/* ------------------ */
 .Productos{
     margin: 5px;
     display: grid;
@@ -190,6 +244,7 @@ article{
 
 
 /*_*.*responsive cliente*.*_*/
+/* -------------------------  */
 @media (max-width:1200px) {
     .gallery--content{
         width: 100%;

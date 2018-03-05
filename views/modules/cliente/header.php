@@ -16,7 +16,5 @@
               require_once "views/modules/cliente/menuTopC.php";?>
           </header><bR>
 
-          <div id="map">
 
-          </div >
 <div class="wrap--content">

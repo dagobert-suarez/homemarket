@@ -13,7 +13,7 @@
         <div class="primerBloque">
             <div style>
                 <h2 class="supermercadoTitulo">
-                    <span>"Home market</span> cuenta con # de <span>Supermercados.</span>
+                    <span>"Home market</span> cuenta con # de <span>Supermercados </span>a tu servios.
                     Encuentra tu <span>Home market</span> más cercano y su horario."
                     <!-- <p>tambien encuentra tu hotel ideal al mejor precio !Hotel tribago¡ </p> -->
                 </h2>

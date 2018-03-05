@@ -49,14 +49,14 @@
 			<div class="form-gruop">
 					<label  class="required"  for="">ciudad</label>
 					 <select name="data[]" class="city new" id="ciudad">
-					 <option value="">
+
 
 						 <?php
 						 foreach ($this->userModel->readCities() as $row){
 							 echo "<option value='$row[0]'>$row[1]</option>";
 						 }
 						 ?>
-					 </option>
+				
 					 </select>
 			</div>
 

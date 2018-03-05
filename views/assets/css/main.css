@@ -35,7 +35,9 @@ h1 .toll{
     color: rgb(191, 142, 15);
 }
 
+
 /*-*. Está esla parte de los supermercados .*-*/
+/* ------------------------------------------ */
 .setsupermercados{
     margin-top: 10.5px;
     width: 50;
@@ -66,6 +68,7 @@ picture  h1{
     height: 100%;
     width: 100%;
     border-radius: 3px;
+
     /* background-color:linear-gradient(to bottom, #000000 0%, #000000 100%); */
 }
 
@@ -584,7 +587,7 @@ input[type=password]:focus,select:focus{
 }
 .botns{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 10px;
 }
 #mon{
@@ -638,6 +641,7 @@ input[type=password]:focus,select:focus{
 /*-*.* Fin footer *.*-*/
 
 /*_*.*Responsi del inicio *.*_*/
+/* ------------------------------- */
 @media (max-width:1199px) {
   .menu{
   background-color: gray;
