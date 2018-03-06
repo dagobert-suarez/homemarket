@@ -52,9 +52,9 @@ die();
 		require_once "views/modules/admin/footer_admin.php";
 	}
 
-	function newWorker(){
+	function Workers(){
 		require_once "views/modules/admin/header-admin.php";
-		require_once "views/modules/admin/createNewWorker.php";
+		require_once "views/modules/admin/Empleados.php";
 		require_once "views/modules/admin/footer_admin.php";
 	}
 
