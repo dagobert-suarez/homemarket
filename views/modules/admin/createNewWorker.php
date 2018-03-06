@@ -18,4 +18,5 @@
     <label for="">aqui es donde hay que arreglar lo del rol</label>
     <input type="text" name="data[]" value="">
   </form>
+  <h1>jajajaja aún falta validaar los registros</h1>
 </div>
