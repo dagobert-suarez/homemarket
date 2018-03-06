@@ -39,7 +39,7 @@
       </div>
       <div class="">
         <label for="" class="required">cantidad</label>
-        <input type="number" name="data[]" class="new">
+        <input type="number" name="data[]">
       </div>
       <div class="">
         <label for="" class="required">medida</label>

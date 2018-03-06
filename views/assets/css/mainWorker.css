@@ -17,12 +17,14 @@ section.container1k{
     min-height: 100vh;
     border-bottom: 3px solid darkorange;
     z-index: 100;
+
 }
 .userProfile{
     width: 90%;
     box-sizing: border-box;
     margin: auto;
     text-align: center;
+    background-color: ;
 }
 .userProfile--img{
     width: 70%;
@@ -105,14 +107,11 @@ section.container1k{
 .categorymodal h1{
     color: #465661;
 }
-header{
-    /
-    margin: 5px 0px 20px 0px;
-}
+
  header  h1{
   letter-spacing: -1.5px;
   font-size: 2.5rem ;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   color: #465661;
 
 }
@@ -137,14 +136,6 @@ header .breadcrums ul li a:hover{
     color :#dda041;
 }
 
-.close{
-    position: absolute;
-    top: 0;
-    right: 25px;
-    color: #aaa;
-    font-size: 35px;
-    display: none;
-}
 
 label{
   display: block;
@@ -154,7 +145,6 @@ label{
 
 }
 input[type=text],
-input[type=number],
 textarea{
   padding: 6px;
   border-radius: 1px;
@@ -162,6 +152,13 @@ textarea{
   width: 40%;
   outline: none;
 }
+input[type=file]{
+  border-radius: 1px;
+  margin: 5px ;
+  outline: none;
+  color: #465661;
+}
+
 select{
   padding: 7px;
   border-radius: 4px;
@@ -174,17 +171,49 @@ textarea:focus,select:focus{
   border-color: #ff9036;
   transition: 0.3s;
 }
-/*_*.*Comienza  el dataGrid *.*_*/
 input[type=search]{
-    padding: 4px 4px;
-    outline: none;
-    border-radius: 3px;
-    text-decoration: none;
-    list-style-type: none;
-    margin-bottom: 1rem;
-    border: 2px solid #c3c3c3;
-    outline: none;
+  padding: 4px 4px;
+  outline: none;
+  border-radius: 3px;
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 1rem;
+  border: 2px solid #c3c3c3;
+  outline: none;
 }
+.required::after{
+  content: " * ";
+  color: #dda041;
+}
+.opcional::after{
+  content: " (Opcional) ";
+  color: rgb(191, 191, 191);
+  font-family: 'Cabin';
+}
+.frmbtn{
+  padding: 8px 10px;
+  width: 30%;
+  margin: 20px 5px;
+  outline: none;
+  right:  10px;
+  background-color: white;
+  text-decoration: none;
+  border: 2px solid #ff9036;
+  border-radius: 4px;
+}
+.frmbtn:hover{
+  background-color:#ff9036;
+  box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  outline: none;
+  color:white;
+}
+/*_*.* fin de el formulario produto*.*_*/
+/* ------------------------------------ */
+
+
+/*_*.*Comienza  el dataGrid *.*_*/
+/* ------------------------------- */
+
 .dataTables_length select{
     padding: 3px;
     border-radius: 1px;
@@ -192,7 +221,8 @@ input[type=search]{
     width: 40%;
 }
 .tittledatag{
-    background-color: #ff9036;
+    /* background-color: #ff9036; */
+    background-color: rgba(255, 144, 54, 0.84);
 }
 tbody tr{
 color: #433d53;
@@ -217,34 +247,6 @@ background-color: rgb(196, 196, 196);
 
 }
 /* _*.* Fin dataGrid*.*_ */
-.required::after{
-  content: " * ";
-  color: #dda041;
-}
-.opcional::after{
-  content: " (Opcional) ";
-  color: rgb(191, 191, 191);
-  font-family: 'Cabin';
-}
-.frmbtn{
-  padding: 8px 10px;
-  width: 30%;
-  margin: 25px 0px ;
-  outline: none;
-  right:  10px;
-  background-color: white;
-  text-decoration: none;
-  border: 2px solid #ff9036;
-  border-radius: 4px;
-}
-.frmbtn:hover{
-  background-color:#ff9036;
-  box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2);
-  color:white;
-}
-
-/*_*.* fin de el formulario produto*.*_*/
-/* ------------------------------------ */
 
 /*_*.* Esta es la parte de los ajustes*.*_*/
 /* ------------------------------------ */

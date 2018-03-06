@@ -3,7 +3,6 @@
 
 		<form id="frmcategory" class="modal-content-category" action="crear-categoria" method="post">
 			<h1> Registrar categoria </h1>
-			<span id="close" class="close" >&times;</span>
 			<div class="">
 
 			<label for="" class="required">Nombre de la categoria</label>
@@ -20,7 +19,7 @@
 		<h1>Ver categoria</h1>
 		<div class="breadcrums">
 			<ul>
-				<li><a href="inicioAdmin"><i class="fa fa-home"></i>Home</a></li>
+				<li><a href="InicioWorker"><i class="fa fa-home"></i>Home</a></li>
 				<li><a id="btn-category">Crear categoria</a></li>
 				<li><a href="producto">Categorias</a></li>
 			</ul>
