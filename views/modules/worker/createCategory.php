@@ -21,7 +21,7 @@
 			<ul>
 				<li><a href="InicioWorker"><i class="fa fa-home"></i>Home</a></li>
 				<li><a id="btn-category">Crear categoria</a></li>
-				<li><a href="producto">Categorias</a></li>
+				<li><a href="">Categorias</a></li>
 			</ul>
 		</div>
 	</header>

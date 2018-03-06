@@ -59,11 +59,30 @@ class ProductController{
       //visualiza los productos en la pagina de cliente
 
       function createCategory(){
-        $data = $_POST['data'];
-        $result = $this->product->createCategory($data);
-        echo '<script language="javascript">alert("<div class="exit">creado con exito</div>");</script>';
-        echo "<script>window.location.href='nueva-categoria'</script>";
+        $data=$_POST['data'];
+
+        $i = 0;
+        foreach ($data as $row) {
+          $result = $this->validarEspacio($data[$i]);
+          if ($result==false) {
+            echo json_encode("no se registra sin el nombre");
+            return;
+          }
+          $i++;
         }
+        $result = $this->product->createCategory($data);
+        if ($result==true) {
+          $dataType = $this->product->readByProduct($data[0]);
+          if ($dataType==true) {
+            echo json_encode(true);
+          }else {
+            echo json_encode("mala suerte");
+          }
+        }
+        // echo '<script language="javascript">alert("<div class="exit">creado con exito</div>");</script>';
+        // echo "<script>window.location.href='nueva-categoria'</script>";
+
+      }
 
   //visualiza los productos en la pagina de cliente
   function viewProducts(){

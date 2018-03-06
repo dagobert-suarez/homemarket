@@ -73,7 +73,7 @@ class UserController{
 		require_once "views/modules/cliente/footer.php";
 	}
 
-	
+
 		function validarEspacio($data){
 		if($data==''){
 			return false;

@@ -5,5 +5,17 @@
     <input type="text" name="data[]" value="">
     <label for="">appellido worker</label>
     <input type="text" name="data[]" value="">
+    <label for="">fech nacimiento</label>
+    <input type="text" name="data[]" value="">
+    <label for="">gen_usu</label>
+    <input type="text" name="data[]" value="">
+    <label for="">telefono</label>
+    <input type="text" name="data[]" value="">
+    <label for="">el correo ese</label>
+    <input type="text" name="data[]" value="">
+    <label for="">la ciudad(falta la consulta)</label>
+    <input type="text" name="data[]" value="">
+    <label for="">aqui es donde hay que arreglar lo del rol</label>
+    <input type="text" name="data[]" value="">
   </form>
 </div>

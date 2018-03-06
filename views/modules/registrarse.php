@@ -56,7 +56,7 @@
 							 echo "<option value='$row[0]'>$row[1]</option>";
 						 }
 						 ?>
-				
+
 					 </select>
 			</div>
 
@@ -80,7 +80,7 @@
 						 ?>
 					 </select>
 			</div>
-		<button type="submit"  class="btntnt" >Registrarse</button>
+		<button type="submit" class="btntnt" >Registrarse</button>
 	</form>
 </div>
 </div>
