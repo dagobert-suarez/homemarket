@@ -22,7 +22,7 @@
     <label for="">gen_usu</label>
     <input type="text" name="data[]" value="">
     <label for="">telefono</label>
-    <input type="text" name="data[]" value="">
+    <input type="nuber" name="data[]" value="">
     <label for="">el correo ese</label>
     <input type="text" name="data[]" value="">
     <label for="">la ciudad(falta la consulta)</label>
