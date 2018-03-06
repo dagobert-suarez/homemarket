@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      guffy aquí va el manual de usuario para que lo terminemos en este estilo
+      guffy aquí va el manual de usuario para que lo terminemos en este estilo u otro que diga
     </header>
     <nav>
       <a href="inicio">inicio</a>
