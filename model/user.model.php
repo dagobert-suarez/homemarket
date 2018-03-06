@@ -44,6 +44,18 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+
+			 public function readTodos(){
+				 try {
+					 $sql="SELECT COUNT(*) FROM supermercado";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute();
+					 $result =  $query->fetch(PDO::FETCH_BOTH);
+				 } catch (PDOException $e) {
+						 $result = $e->getMessage();
+				 }
+					return $result;
+			 }
 			 // actualizar  datos del usuario
 			// function updateWorker(){
 			//
