@@ -3,18 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>manual-usuario</title>
-    <style>
-      header{
-        background-color: green;
-      }
-      nav{
-        background-color: white;
-      }
-    </style>
+    <link rel="stylesheet" href="views/assets/css/manual.css">
   </head>
   <body>
     <header>
-      la cabeza de la página
+      guffy aquí va el manual de usuario para que lo terminemos en este estilo
     </header>
     <nav>
       <a href="inicio">inicio</a>
