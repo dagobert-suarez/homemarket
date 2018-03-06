@@ -5,6 +5,10 @@ class viewsController{
 	public function __CONSTRUCT(){
 		$this->userModel = new UserModel();
 	}
+	function  readTodos(){
+		$result = $this->userModel->readTodos()[0];
+		return $result	;
+	}
 
 	//de la pagina principal
 	function main(){
@@ -59,7 +63,7 @@ die();
 	function InicioWorker(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==3) {
 			require_once "views/modules/worker/header.php";
-			// require_once "views/modules/worker/worker.php";
+			require_once "views/modules/worker/mainWork.php";
 			require_once "views/modules/worker/footer.php";
 		}else {
 			die();

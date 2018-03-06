@@ -133,7 +133,7 @@ ul{
 }
 .wrap--content .wrap-info .wrap-fa,
 .wrap--content .wrap-info .wrap-sell{
-    background-color: #FEFEFE;
+    /* background-color: #FEFEFE; */
     width: 48%;
     border: 1px solid rgba(161, 161, 161, 0.63);
 }
@@ -141,7 +141,8 @@ ul{
     widows: 98px;%;
     height: 90px;
     margin: 5px;
-    background-color: #FDFDFD;
+    background-color: #585858;
+    /* background-color: #FDFDFD; */
     border: 1px solid rgba(161,161,161,0.3);
     border-radius:2px;
     grid-gap:50px;

@@ -14,3 +14,6 @@ Juan1234
 
 clienteC@gmail.com
 Cliente1234
+
+supermer@gmail.com
+supermer1234

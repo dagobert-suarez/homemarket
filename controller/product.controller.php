@@ -71,6 +71,8 @@ class ProductController{
     return  $result;
 
   }
+  
+
   //visualiza las  categorias en la pagina del admin
   function readCategory(){
     $result = $this->product->readCategory();

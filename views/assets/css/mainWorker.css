@@ -222,7 +222,9 @@ input[type=search]{
 }
 .tittledatag{
     /* background-color: #ff9036; */
-    background-color: rgba(255, 144, 54, 0.84);
+    /* background-color: rgba(255, 144, 54, 0.84);*/
+    background-color: #a9b1aa;
+
 }
 tbody tr{
 color: #433d53;
@@ -302,3 +304,13 @@ background-color: rgb(196, 196, 196);
 
 /*_*.* Finaliza la parte de los ajutes*.*_*/
 /* ------------------------------------ */
+.row-one .widget-firs{
+  width: 32%;
+  border: 1px solid #f5f1f1;
+  padding: 0px;
+}
+
+/*_*.*  Principal del empleado*.*_*/
+/* ---------------------------------------- */
+/*_*.* Finaliza  el Principal del empleado*.*_*/
+/* ------------------------------------------- */

@@ -66,9 +66,10 @@ class ProductModel{
       return $result;
   }
 
+
   // Actualizar producto
    // -------------------- //
-        
+
 
 
   //elimina el tipo de categoria
