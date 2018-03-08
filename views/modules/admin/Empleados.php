@@ -24,7 +24,7 @@
               <div class="content-form">
                   <div class="form-group">
                       <label for="">fech nacimiento</label>
-                      <input type="datetime-local" name="data[]" value="">
+                      <input type="date" name="data[]" value="">
                   </div>
                   <div class="form-group">
                       <label for="">genero emplead@</label>
@@ -38,7 +38,8 @@
               <div class="content-form">
                   <div class="form-group">
                       <label for="">telefono</label>
-                      <input type="nuber" name="data[]" value="">
+                      <input type="number" name="data[]" value="">
+                      <!-- <input type="nuber" name="data[]" value=""> -->
                   </div>
                   <div class="form-group">
                       <label for="">el correo ese</label>
