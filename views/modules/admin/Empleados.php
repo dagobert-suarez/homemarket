@@ -16,19 +16,31 @@
         <label for="">last name worker</label>
         <input type="text" name="data[]" value="">
         <label for="">fech nacimiento</label>
-        <input type="text" name="data[]" value="">
+        <input type="datetime-local" name="data[]" value="">
         <label for="">gen_usu</label>
-        <input type="text" name="data[]" value="">
+        <select class="" name="data[]">
+          <option value="m">hombre</option>
+          <option value="f">mujer</option>
+          <option value="o">otro</option>
+        </select>
         <label for="">telefono</label>
         <input type="nuber" name="data[]" value="">
         <label for="">el correo ese</label>
-        <input type="text" name="data[]" value="">
+        <input type="email" name="data[]" value="">
         <label for="">la ciudad(falta la consulta)</label>
-        <input type="text" name="data[]" value="">
+        <select class="city new" name="data[]">
+          <?php
+          foreach ($this->userModel->readCities() as $row){
+            echo "<option value='$row[0]'>$row[1]</option>";
+          }
+          ?>
+        </select>
         <label for="">contraseña</label>
         <input type="password" name="data[]" value="">
         <label for="">el rol ese</label>
-        <input type="text" name="data[]" value="">
+        <select class="" name="">
+
+        </select>
         <button type="button" name="button" class="btntnt">enviar</button>
       </form>
       <h1>the record is missing</h1>
