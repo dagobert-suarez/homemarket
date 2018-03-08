@@ -18,7 +18,7 @@
             <input type="text" name="data[]" value="">
             <label for="">fech nacimiento</label>
             <input type="datetime-local" name="data[]" value="">
-            <label for="">gen_usu</label>
+            <label for="">genero emplead@</label>
             <select class="" name="data[]">
               <option value="m">hombre</option>
               <option value="f">mujer</option>

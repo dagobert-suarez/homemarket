@@ -76,7 +76,9 @@ class UserModel{
 //llama los datos de rol
 	function readRol(){
 		try{
-		$sql="SELECT id_rol,nom_rol FROM rol ";
+			$uno = 1;
+			$dos = 2;
+		$sql="SELECT id_rol,nom_rol FROM rol limit 2";
 		$query=$this->pdo->prepare($sql);
     $query->execute();
     $result = $query->fetchALL(PDO::FETCH_BOTH);
