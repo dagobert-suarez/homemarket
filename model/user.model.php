@@ -9,6 +9,7 @@ class UserModel{
 					die($e->getMessage());
 				}
 	}
+
 	//crear un usuario: envia datos de registro a bd
 	function createUser($data,$token){
 			 try{
@@ -22,6 +23,7 @@ class UserModel{
 					return $msn;
 			 }
 
+			 // consulta en usuario el email
 	function readByCorreo($data){
 			 try{
 				 $sql = "SELECT * FROM usuario WHERE email_usu = ?";
@@ -33,6 +35,8 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+
+			 //para crear la contraseña
 	function crearAcceso($data){
 			 try{
 				 $sql = "call CrearAcceso(?,?,?)";
@@ -45,6 +49,7 @@ class UserModel{
 					return $msn;
 			 }
 
+			 //hace la consulta del numero de supermercados
 			 public function readTodos(){
 				 try {
 					 $sql="SELECT COUNT(*) FROM supermercado";
@@ -56,7 +61,7 @@ class UserModel{
 				 }
 					return $result;
 			 }
-			 // llama todo los  empleados (cantidad)del empleados
+			 // llama todo los  empleados (cantidad)de empleados
 			function maLass(){
 				try{
 					$sql= "SELECT COUNT(*) FROM usuario";
@@ -69,7 +74,7 @@ class UserModel{
 				// return $result;
 				return 1;
 			}
-// llama los datos que estan en la tabla ciudad
+// llama las ciudades registradas en bd
 	function readCities(){
 		try{
 		$sql="SELECT cod_ciu,nom_ciu FROM ciudad ";
@@ -82,11 +87,9 @@ class UserModel{
 	      return $result;
 	  	}
 
-//llama los datos de rol
+//llama los dos primeros roles que hay en bd
 	function readRol(){
 		try{
-			$uno = 1;
-			$dos = 2;
 		$sql="SELECT id_rol,nom_rol FROM rol limit 2";
 		$query=$this->pdo->prepare($sql);
 	    $query->execute();
@@ -96,6 +99,20 @@ class UserModel{
 	      }
 	      return $result;
   }
+
+	// para probar en el worker - llama solo el rol del empleado
+	// function readRolWorker(){
+	// 	try{
+	// 		$sql="SELECT id_rol,nom_rol FROM rol limit 3 offset 3";
+	// 		$query=$this->pdo->prepare($sql);
+	// 		$query->execute();
+	// 		$result = $query->fetchALL(PDO::FETCH_BOTH);
+	// 	} catch (PDOException $e){
+	// 		$result = $e->getMessage();
+	// 	}
+	// 	return $result;
+	// }
+
 	// function readEm(){
 	// 	try{
 	// 		$sql = "SELECT id_usu,id_rol FROM usuario";
