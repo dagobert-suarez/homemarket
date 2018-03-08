@@ -39,7 +39,6 @@
                   <div class="form-group">
                       <label for="">telefono</label>
                       <input type="number" name="data[]" value="">
-                      <!-- <input type="nuber" name="data[]" value=""> -->
                   </div>
                   <div class="form-group">
                       <label for="">el correo ese</label>
@@ -59,7 +58,7 @@
                   </div>
                   <div class="form-group">
                       <label for="">contraseña</label>
-                      <input type="password" name="data[]" value="" class="passrd">
+                      <input type="password" name="data[]" value="" class="noda">
                   </div>
               </div>
               <div class="content-form">
@@ -78,7 +77,7 @@
                   </div>
               </div>
           </form>
-          <h1>the record is missing</h1>
+          <!-- <h1>the record is missing</h1> -->
         </div>
       </div>
 

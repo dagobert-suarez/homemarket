@@ -197,7 +197,6 @@ ul{
   padding-bottom: 15px;
   box-sizing: border-box;
   margin: 10px  auto;
-  justify-content: center;
   text-align:center;
 }
 .module--worker h1{
@@ -208,11 +207,10 @@ ul{
 }
 .tab {
     /* float: left; */
-    width: 90%;
-    margin: 15px 90px 0px   80px;
+    width: 80%;
+    margin: 15px 520px 0px 80px;
     border: 1px solid rgba(161,161,161,0.53);
     display: flex;
-    /* padding-bottom: 45px;
     hei
     /* background-color:#FEFEFE; */
 }
@@ -225,6 +223,7 @@ ul{
     border: none;
     outline: none;
     text-align: center;
+    align-items: center;
     cursor: pointer;
     transition: 0.3s;
     font-size: 17px;
@@ -232,7 +231,7 @@ ul{
 
 .tab button:hover {
     background-color: #ddd;
-    border-left: 10px solid #ddd;
+    /* border-left: 10px solid #ddd; */
 }
 
 .tab button.active {
@@ -242,14 +241,14 @@ ul{
 .contentfo {
     /* float: left; */
     padding: 0px 12px;
-    margin-top:15px;
-    margin-left: 50px;
-    width: 70%;
+    margin: 15px 60px 0px 80px;
+    width: 80%;
     border-left: none;
     background-color: #FEFEFE;
     border: 1px solid rgba(161, 161, 161, 0.53);
     justify-content: space-around;
     font-family:'Catamaran',sans-serif;
+    align-items: center;
     display: flex;
 }
 .contentfo h3{
@@ -259,6 +258,7 @@ ul{
     display: flex;
     padding: 5px;
     justify-content: flex-start;
+    margin: 0px 170px;
     /* width: 100%; */
 }
 input[type=text],
@@ -266,28 +266,31 @@ input[type=email],
 input[type=number],
 input[type=password]
 ,select{
-    /* margin: 5px 20px 1px; */
-    /* width: 95%; */
-    /* padding: 6px 15px; */
+    margin: 5px 20px 1px;
+    width: 95%;
+    padding: 6px 15px;
     border: 1px solid rgb(182, 182, 182);
     line-height: 1.20;
     font-size: 14px;
     outline: none;
     display: block;
-    border-radius: 4px;
 }
-input[type=password],input[type=date]{
-    /* margin: 5px 20px 1px;
+
+input[type=date]{
+display: block;
+}
+.noda{
+    padding: 6px 10px;
     width: 100%;
-    padding: 6px 15px;
-    border-radius:6px ;
-    line-height: 1.20;
-    font-size: 14px; */
-    outline: none;
-    display: block;
+    margin:25px 50px 0px 100px;
 }
 .formWorker label{
-    margin: 0px 20px 1px;
+    /* margin: 0px 10px 1px; */
+}
+.btntnt{
+    padding: 6px 10px;
+    width: 100%;
+    margin:25px 50px 0px 100px;
 }
 
 /*  Fin Registro del empleado */
