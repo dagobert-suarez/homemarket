@@ -1,5 +1,4 @@
 <div class="module--worker">
-
   <h1>Empleados</h1>
   <div class="tab">
     <button class="btntabs" onclick="openCity(event, 'Nuevo')" id="defaultOpen">Nuevo</button>
@@ -11,10 +10,16 @@
     <h3>Nuevo</h3>
     <div class="formWorker">
       <form class="frmworker" action="index.html" method="post">
-        <label for="">niombre del empleado</label>
-        <input type="text" name="data[]" value="">
-        <label for="">appellido worker</label>
-        <input type="text" name="data[]" value="">
+          <div class="content-form">
+              <div class="form-group">
+                  <label for="">niombre del empleado</label>
+                  <input type="text" name="data[]" value="">
+
+              </div>
+              <label for="">appellido worker</label>
+              <input type="text" name="data[]" value="">
+
+          </div>
         <label for="">fech nacimiento</label>
         <input type="text" name="data[]" value="">
         <label for="">gen_usu</label>
@@ -34,12 +39,12 @@
 
   <div id="Empleados" class="contentfo">
     <h3>Empleados</h3>
-    <p>Empleados is the capital of France.</p>
+    <p>Empleados is </p>
   </div>
 
   <div id="Nose" class="contentfo">
     <h3>Nose</h3>
-    <p>Nose is the capital of Japan.</p>
+    <p>Nose is</p>
   </div>
 
 </div>

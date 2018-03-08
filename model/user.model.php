@@ -56,34 +56,43 @@ class UserModel{
 				 }
 					return $result;
 			 }
-			 // actualizar  datos del usuario
-			// function updateWorker(){
-			//
-			// }
-//llama los datos que estan en la tabla ciudad
+			 // llama todo los  empleados (cantidad)del empleados
+			function maLass(){
+				try{
+					$sql= "SELECT COUNT(*) FROM usuario";
+					$query=$this->pdo->prepare($sql);
+					$query->execute();
+					$result=  $query->fetch(PDO::FETCH_BOTH);
+				}catch(PDOException $e){
+					$result = $e-> getMessage();
+				}
+				// return $result;
+				return 1;
+			}
+// llama los datos que estan en la tabla ciudad
 	function readCities(){
 		try{
 		$sql="SELECT cod_ciu,nom_ciu FROM ciudad ";
 		$query=$this->pdo->prepare($sql);
-    $query->execute();
-    $result = $query->fetchALL(PDO::FETCH_BOTH);
-    } catch (PDOException $e) {
-          $result = $e->getMessage();
-      }
-      return $result;
-  }
+	    $query->execute();
+	    $result = $query->fetchALL(PDO::FETCH_BOTH);
+	    } catch (PDOException $e) {
+	          $result = $e->getMessage();
+	      }
+	      return $result;
+	  	}
 
 //llama los datos de rol
 	function readRol(){
 		try{
 		$sql="SELECT id_rol,nom_rol FROM rol ";
 		$query=$this->pdo->prepare($sql);
-    $query->execute();
-    $result = $query->fetchALL(PDO::FETCH_BOTH);
-    } catch (PDOException $e) {
-          $result = $e->getMessage();
-      }
-      return $result;
+	    $query->execute();
+	    $result = $query->fetchALL(PDO::FETCH_BOTH);
+	    } catch (PDOException $e) {
+	          $result = $e->getMessage();
+	      }
+	      return $result;
   }
 	// function readEm(){
 	// 	try{
@@ -91,12 +100,12 @@ class UserModel{
 	// 		$query=$this->pdo->prepare($sql);
 	// 		$query->execute();
 	// 		$result = $query->fetchALL(PDO::FETCH_BOTH);
-	// 	}catch (PDOException $e){
+	// 		}catch (PDOException $e){
 	// 		$result = $e->getMessage();
-	// 	}
-	// 	return $result;
-	// 	var_dump $result;
-	// }
+	// 		}
+	// 		return $result;
+	// 		var_dump $result;
+	// 		}
 
 }
 ?>

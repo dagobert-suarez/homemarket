@@ -2,13 +2,18 @@
 require_once("model/user.model.php");
 class viewsController{
 		private $userModel;
-	public function __CONSTRUCT(){
+		public function __CONSTRUCT(){
 		$this->userModel = new UserModel();
 	}
+
 	function  readTodos(){
 		$result = $this->userModel->readTodos()[0];
 		return $result	;
 	}
+	 function maLass(){
+		 $result = $this->userModel->maLass()[0];
+		 return $result;
+	 }
 
 	//de la pagina principal
 	function main(){

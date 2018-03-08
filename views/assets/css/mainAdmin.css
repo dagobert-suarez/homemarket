@@ -212,8 +212,11 @@ ul{
 .tab {
     float: left;
     width: 25%;
-    margin-top: 30px;
-    background-color:#FEFEFE;
+    margin-top: 15px;
+    border: 1px solid rgba(161,161,161,0.53);
+    /* padding-bottom: 45px;
+    hei
+    /* background-color:#FEFEFE; */
 }
 .tab button {
     display: block;
@@ -241,10 +244,30 @@ ul{
 .contentfo {
     float: left;
     padding: 0px 12px;
-    margin-top:30px;
+    margin-top:15px;
     width: 70%;
     border-left: none;
     background-color: #FEFEFE;
+    border: 1px solid rgba(161, 161, 161, 0.53);
+    justify-content: space-around;
+    font-family:'Catamaran',sans-serif;
+}
+.contentfo h3{
+    margin: 15px auto;
+}
+.formWorker label{
+    margin: 0px 20px 1px;
+}
+.formWorker input{
+    
+    margin: 5px 20px 1px;
+    width: 40%;
+    padding: 8px 30px;
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
+    display: block;
 }
 
 /*  Fin Registro del empleado */
