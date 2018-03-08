@@ -13,10 +13,10 @@ $("#frmworker").submit(function(e) {
                data: ({data: dataJson }),
                success: function(result){
                  if (result==true) {
-                   $("#frmregistro")[0].reset();
-                   $('#frmregistro').after('<div class="mensaje">"¡Bien! ya está registrado"</div>');
+                   $("#frmworker")[0].reset();
+                   $('#frmworker').after('<div class="mensaje">"¡Bien! ya está registrado"</div>');
                  }
-                $('#frmregistro').after('<div class="mensaje">'+result+'</div>');
+                $('#frmworker').after('<div class="mensaje">'+result+'</div>');
                  setTimeout(function(){
                       $('div.mensaje').remove();
                     }, 5000);

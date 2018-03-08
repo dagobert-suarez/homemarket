@@ -1,4 +1,4 @@
-
+<!-- empieza lo de los ajustes -->
 <div class="module--Sett">
     <header >
         <h1 class="sett">Ajustes <i class="fa fa-gears"></i></h1>
@@ -41,3 +41,4 @@
     </div>
 
 </div>
+<!-- terminan los ajustes -->

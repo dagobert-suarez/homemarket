@@ -72,7 +72,6 @@
 			<div class="form-gruop">
 					<label  class=" required" for="">crear cuenta como</label>
 					 <select name="data[]"  class="city new" >
-					 <option value=""></option>
 						 <?php
 						 foreach ($this->userModel->readRol() as $row){
 							 echo "<option value='$row[0]'>$row[1]</option>";

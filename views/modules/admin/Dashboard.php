@@ -1,3 +1,4 @@
+<!-- la Dashboard -->
 <div class="wrap--in">
        <header>
            <h1>Hola Supermercado</h1>
@@ -50,3 +51,4 @@
 
    </div>
 </div>
+<!-- termina dashboard -->
