@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-03-2018 a las 23:48:13
--- Versión del servidor: 10.1.28-MariaDB
--- Versión de PHP: 7.1.11
+-- Tiempo de generación: 08-03-2018 a las 22:16:16
+-- Versión del servidor: 10.1.29-MariaDB
+-- Versión de PHP: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -36,26 +36,24 @@ INSERT INTO acceso VALUES(token,contra,usu);
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_categoria` (IN `nom_tip_pro` VARCHAR(30))  BEGIN
-INSERT INTO tipo_producto
-(nom_tip_pro)
-values(nom_tip_pro);
+INSERT INTO tipo_producto(nom_tip_pro) VALUES (nom_tip_pro);
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `img_pro` VARCHAR(255), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valCom_pro` FLOAT, IN `valVen_pro` FLOAT)  BEGIN
  
- INSERT INTO productos VALUES (nom_pro,des_pro,mar_pro,id_tip_pro,can_pro,img_pro,uniMed_pro,valCom_pro,valVen_pro);
+ INSERT INTO productos(nom_pro,des_pro,img_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valCom_pro,valVen_pro) VALUES (nom_pro,des_pro,img_pro,mar_pro,id_tip_pro,can_pro,fec_ing_pro,uniMed_pro,valCom_pro,valVen_pro);
  
  END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_prov` (IN `id_prov` INT, IN `nom_prov` VARCHAR(50), IN `dir_prov` VARCHAR(30), IN `tel_prov` VARCHAR(11))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_prov` (IN `nom_prov` VARCHAR(50), IN `dir_prov` VARCHAR(30), IN `tel_prov` VARCHAR(11))  BEGIN
 
-INSERT INTO proveedores VALUES (id_prov,nom_prov,dir_prov,tel_prov);
+INSERT INTO proveedores(nom_prov,dir_prov,tel_prov) VALUES (nom_prov,dir_prov,tel_prov);
 
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_sup` (IN `id_sup` INT, IN `nom_sup` VARCHAR(50), IN `dir_sup` VARCHAR(50), IN `tel_sup` VARCHAR(11), IN `cod_ciu` INT, IN `logo_sup` VARCHAR(255), IN `lon_sup` VARCHAR(100), IN `lat_sup` VARCHAR(100))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_sup` (IN `nom_sup` VARCHAR(50), IN `dir_sup` VARCHAR(50), IN `tel_sup` VARCHAR(11), IN `cod_ciu` INT, IN `logo_sup` VARCHAR(255), IN `lon_sup` VARCHAR(100), IN `lat_sup` VARCHAR(100))  BEGIN
   
-  INSERT INTO supermercado VALUES(id_sup,nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,lon_sup,lat_sup);
+  INSERT INTO supermercado(nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,lon_sup,lat_sup) VALUES(nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,lon_sup,lat_sup);
   
   END$$
 
@@ -136,22 +134,6 @@ CREATE TABLE `acceso` (
   `id_usu` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `acceso`
---
-
-INSERT INTO `acceso` (`token`, `contra`, `id_usu`) VALUES
-('09d1d2636296f0c6bc8965851e1bb480', '$2y$10$CTYHbrIC6npAquYz9Dj8dO6qjlhbs0DcksdfbfebpjoQ3NtCZxume', 29),
-('0ae1e6ddf3d2ce0f0032bec13d1fe101', '$2y$10$yRR52V16dXgqpgcO5aKhd.bokqm.3AHAPyJPQ6NwOfI9KbpeMtfeC', 114),
-('29563b8eb9dd6ff692a304a526ba3cd6', '$2y$10$JDYvC1zC17xL0de0UbOv9eectFWJIj/YUtERfrmAdzWZKEBa5RsYy', 233),
-('3a344bf88dae7cad35f8f5eeef14260d', '$2y$10$V04blI/9cNGS2GqScEdMIOZrpnJKNTAZQ7zfI8PPjei7TNbI4wSzu', 234),
-('5f2f9c1fa9357c5a5707c976d142550b', '$2y$10$2Foo5gXvdlCqn08lBwsLxe.Dvz3VH983VNlrLfFAPh7z7z2GWura.', 14),
-('66abee6b95901f3bddf45796b2d15b5a', '$2y$10$RNi5ooY/foDjZpdqfOawLeYkvvLwNA1QnayUg5Xu6TJN5O9gKXUDC', 13),
-('a8803de898afa25d6187da0ef1fca749', '$2y$10$Yhi12CDWbh5sbPX983Ulp.1CF83f4XVBThH9lAmPH8BzGFk.Ocfhi', 28),
-('b4b871c87f927762c3671e9b582a459d', '$2y$10$oqb09eEtnSUg61yrFw/r4.jbQwqENupyWHnhByPSv2p1U0XF9l0QW', 24),
-('bfed46efc9182d0bf84c7fabe25dee79', '$2y$10$/nAy4ctydxOL3hSLOWyG0OK899JTQxkSTDCIZCQdouwTTX8BaKi2W', 37),
-('e54ac43814edc3eadb46f3789a2a44a2', '$2y$10$lNY8GOmtbp8ytkWYr8s64eUqbSfv2QbQauapgigggc.IXZW1bfaji', 38);
-
 -- --------------------------------------------------------
 
 --
@@ -162,13 +144,6 @@ CREATE TABLE `calificacion` (
   `id_cal` int(11) NOT NULL,
   `pun_cal` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `calificacion`
---
-
-INSERT INTO `calificacion` (`id_cal`, `pun_cal`) VALUES
-(1, '5');
 
 -- --------------------------------------------------------
 
@@ -242,7 +217,7 @@ CREATE TABLE `dpto` (
 --
 
 INSERT INTO `dpto` (`cod_dpto`, `nom_dpto`, `cod_pais`) VALUES
-(0, 'VALLE', 654);
+(0, 'antioquia', 654);
 
 -- --------------------------------------------------------
 
@@ -260,8 +235,7 @@ CREATE TABLE `pais` (
 --
 
 INSERT INTO `pais` (`cod_pais`, `nom_pais`) VALUES
-(0, 'china'),
-(654, 'COLOMBIA');
+(654, 'colombia');
 
 -- --------------------------------------------------------
 
@@ -276,13 +250,6 @@ CREATE TABLE `pedido` (
   `id_usu` int(11) DEFAULT NULL,
   `dir_ped` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `pedido`
---
-
-INSERT INTO `pedido` (`cod_ped`, `emp_ped`, `fec_ped`, `id_usu`, `dir_ped`) VALUES
-(1, 1, '2018-02-06', 1, 'calle 56 # 34-77');
 
 -- --------------------------------------------------------
 
@@ -320,19 +287,10 @@ CREATE TABLE `productos` (
   `mar_pro` varchar(30) NOT NULL,
   `id_tip_pro` int(11) DEFAULT NULL,
   `can_pro` int(11) DEFAULT NULL,
-  `fec_ing_pro` date DEFAULT NULL,
   `uniMed_pro` varchar(30) DEFAULT NULL,
   `valCom_pro` float DEFAULT NULL,
   `valVen_pro` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `productos`
---
-
-INSERT INTO `productos` (`id_pro`, `nom_pro`, `des_pro`, `img_pro`, `mar_pro`, `id_tip_pro`, `can_pro`, `fec_ing_pro`, `uniMed_pro`, `valCom_pro`, `valVen_pro`) VALUES
-(1, 'arroz', 'arroz', '', 'roa', 1, 4, '0000-00-00', 'kl', 1000, 2000),
-(2, 'Huevos', 'nas', NULL, 'los huwboa', NULL, 22, '2018-03-06', 'canasta', 3000, 4000);
 
 -- --------------------------------------------------------
 
@@ -346,13 +304,6 @@ CREATE TABLE `proveedores` (
   `dir_prov` varchar(30) NOT NULL,
   `tel_prov` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `proveedores`
---
-
-INSERT INTO `proveedores` (`id_prov`, `nom_prov`, `dir_prov`, `tel_prov`) VALUES
-(1, 'coca-cola', 'calle 09-089', '213456');
 
 -- --------------------------------------------------------
 
@@ -403,14 +354,6 @@ CREATE TABLE `supermercado` (
   `lat_sup` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `supermercado`
---
-
-INSERT INTO `supermercado` (`id_sup`, `nom_sup`, `dir_sup`, `tel_sup`, `cod_ciu`, `logo_sup`, `lon_sup`, `lat_sup`) VALUES
-(1, 'los buenos', '2537', '32323', 1, NULL, NULL, NULL),
-(2, 'las malas', 'safewr324', '234', 1, NULL, NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -421,23 +364,6 @@ CREATE TABLE `tipo_producto` (
   `id_tip_pro` int(11) NOT NULL,
   `nom_tip_pro` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `tipo_producto`
---
-
-INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
-(1, 'carnes'),
-(2, 'pastas'),
-(3, 'granos'),
-(5, 'Lacteos'),
-(6, 'Carnes Frias'),
-(11, 'Cuidado Personal'),
-(12, 'Aseo'),
-(14, 'Bebidas'),
-(17, 'Drogueria'),
-(18, 'Frutas y verduras'),
-(19, 'Licores');
 
 -- --------------------------------------------------------
 
@@ -457,23 +383,6 @@ CREATE TABLE `usuario` (
   `id_rol` int(11) DEFAULT NULL,
   `img_usu` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `usuario`
---
-
-INSERT INTO `usuario` (`id_usu`, `nom_usu`, `ape_usu`, `fec_nac_usu`, `gen_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`, `img_usu`) VALUES
-(25, 'dagobert', 'suarez', '1999-09-27', 'm', '4356523', 'cliente@gmail.com', 1, 1, NULL),
-(26, 'dagobert', 'suarez', '1999-12-12', 'm', '2121212', 'dasuarez@gmail.com', 1, 1, NULL),
-(28, 'daniel', 'acevedo', '1998-12-12', 'm', '23232', 'daniel@gmail.com', 1, 1, NULL),
-(29, 'empleado', 'delsuper', '1995-02-12', 'm', '1212321', 'empleado@gmail.com', 1, 3, NULL),
-(30, 'dagobert', 'suarez', '1978-12-12', 'm', '656576', 'dagobertagudelo@hotmail.com', 1, 1, NULL),
-(35, 'dagobert', 'suarez', '1978-12-12', 'm', '656576', 'supersuper@hotmail.com', 1, 1, NULL),
-(37, 'sajdnjn', 'kjand', '1998-05-05', 'm', '65789', 'prueba@gmail.com', 1, 1, NULL),
-(38, 'daneilo', 'torogil', '1999-08-31', 'm', '4563456', 'daneilo@hotmail.com', 1, 1, NULL),
-(114, 'david', 'herrera', '1999-11-29', 'm', '323', 'clienteC@gmail.com', 1, 1, NULL),
-(233, 'juan', 'Slas', '1999-11-29', 'm', '277', 'juanEmple@gmail.com', 1, 3, NULL),
-(234, 'david', 'guffy', '1999-11-29', 'm', '3233', 'supermer@gmail.com', 1, 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -628,13 +537,13 @@ ALTER TABLE `calificacion`
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `permisos`
@@ -646,7 +555,7 @@ ALTER TABLE `permisos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
@@ -658,23 +567,29 @@ ALTER TABLE `proveedores`
 -- AUTO_INCREMENT de la tabla `supermercado`
 --
 ALTER TABLE `supermercado`
-  MODIFY `id_sup` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_sup` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
 ALTER TABLE `tipo_producto`
-  MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213124;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=235;
+  MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `acceso`
+--
+ALTER TABLE `acceso`
+  ADD CONSTRAINT `acceso_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`id_usu`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `calificacion_supermercado`
@@ -682,6 +597,77 @@ ALTER TABLE `usuario`
 ALTER TABLE `calificacion_supermercado`
   ADD CONSTRAINT `calificacion_supermercado_ibfk_1` FOREIGN KEY (`id_sup`) REFERENCES `supermercado` (`id_sup`) ON UPDATE CASCADE,
   ADD CONSTRAINT `calificacion_supermercado_ibfk_2` FOREIGN KEY (`id_cal`) REFERENCES `calificacion` (`id_cal`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `calificacion_usu`
+--
+ALTER TABLE `calificacion_usu`
+  ADD CONSTRAINT `calificacion_usu_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`id_usu`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `calificacion_usu_ibfk_2` FOREIGN KEY (`id_cal`) REFERENCES `calificacion` (`id_cal`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `ciudad`
+--
+ALTER TABLE `ciudad`
+  ADD CONSTRAINT `ciudad_ibfk_1` FOREIGN KEY (`cod_dpto`) REFERENCES `dpto` (`cod_dpto`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `detalle_pedido`
+--
+ALTER TABLE `detalle_pedido`
+  ADD CONSTRAINT `detalle_pedido_ibfk_1` FOREIGN KEY (`id_pro`) REFERENCES `productos` (`id_pro`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `detalle_pedido_ibfk_2` FOREIGN KEY (`cod_ped`) REFERENCES `pedido` (`cod_ped`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `dpto`
+--
+ALTER TABLE `dpto`
+  ADD CONSTRAINT `dpto_ibfk_1` FOREIGN KEY (`cod_pais`) REFERENCES `pais` (`cod_pais`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `pedido`
+--
+ALTER TABLE `pedido`
+  ADD CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`id_usu`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `permisos`
+--
+ALTER TABLE `permisos`
+  ADD CONSTRAINT `permisos_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`id_tip_pro`) REFERENCES `tipo_producto` (`id_tip_pro`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `proveedores_productos`
+--
+ALTER TABLE `proveedores_productos`
+  ADD CONSTRAINT `proveedores_productos_ibfk_1` FOREIGN KEY (`id_prov`) REFERENCES `proveedores` (`id_prov`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `proveedores_productos_ibfk_2` FOREIGN KEY (`id_pro`) REFERENCES `productos` (`id_pro`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `supermercado`
+--
+ALTER TABLE `supermercado`
+  ADD CONSTRAINT `supermercado_ibfk_1` FOREIGN KEY (`cod_ciu`) REFERENCES `ciudad` (`cod_ciu`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`cod_ciu`) REFERENCES `ciudad` (`cod_ciu`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuario_supermercado`
+--
+ALTER TABLE `usuario_supermercado`
+  ADD CONSTRAINT `usuario_supermercado_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`id_usu`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`id_sup`) REFERENCES `supermercado` (`id_sup`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
