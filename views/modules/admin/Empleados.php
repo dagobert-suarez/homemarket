@@ -11,41 +11,71 @@
         <h3>New</h3>
         <div class="formWorker">
           <form class="frmworker" action="index.html">
-            <label for="">name worker</label>
-            <input type="text" name="data[]" value="">
-            <label for="">last name worker</label>
-            <input type="text" name="data[]" value="">
-            <label for="">fech nacimiento</label>
-            <input type="datetime-local" name="data[]" value="">
-            <label for="">genero emplead@</label>
-            <select class="" name="data[]">
-              <option value="m">Hombre</option>
-              <option value="f">Mujer</option>
-              <option value="o">Mtro</option>
-            </select>
-            <label for="">telefono</label>
-            <input type="nuber" name="data[]" value="">
-            <label for="">el correo ese</label>
-            <input type="email" name="data[]" value="">
-            <label for="">la ciudad</label>
-            <select class="city new" name="data[]">
-              <?php
-              foreach ($this->userModel->readCities() as $row){
-                echo "<option value='$row[0]'>$row[1]</option>";
-              }
-              ?>
-            </select>
-            <label for="">contraseña</label>
-            <input type="password" name="data[]" value="" class="passrd">
-            <label for="">el rol ese</label>
-            <select class="" name="data[]">
-              <?php
-              foreach ($this->userModel->readRol() as $row){
-                echo "<option value='$row[0]'>$row[1]</option>";
-              }
-              ?>
-            </select>
-            <button type="button" name="button" class="btntnt">enviar</button>
+              <div class="content-form">
+                    <div class="form-group">
+                        <label for="">name worker</label>
+                        <input type="text" name="data[]" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="">last name worker</label>
+                        <input type="text" name="data[]" value="">
+                    </div>
+              </div>
+              <div class="content-form">
+                  <div class="form-group">
+                      <label for="">fech nacimiento</label>
+                      <input type="datetime-local" name="data[]" value="">
+                  </div>
+                  <div class="form-group">
+                      <label for="">genero emplead@</label>
+                      <select class="" name="data[]">
+                          <option value="m">Hombre</option>
+                          <option value="f">Mujer</option>
+                          <option value="o">Mtro</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="content-form">
+                  <div class="form-group">
+                      <label for="">telefono</label>
+                      <input type="nuber" name="data[]" value="">
+                  </div>
+                  <div class="form-group">
+                      <label for="">el correo ese</label>
+                      <input type="email" name="data[]" value="">
+                  </div>
+              </div>
+              <div class="content-form">
+                  <div class="form-group">
+                      <label for="">la ciudad</label>
+                      <select class="city new" name="data[]">
+                          <?php
+                          foreach ($this->userModel->readCities() as $row){
+                              echo "<option value='$row[0]'>$row[1]</option>";
+                          }
+                          ?>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <label for="">contraseña</label>
+                      <input type="password" name="data[]" value="" class="passrd">
+                  </div>
+              </div>
+              <div class="content-form">
+                  <div class="form-group">
+                      <label for="">el rol ese</label>
+                      <select class="" name="data[]">
+                          <?php
+                          foreach ($this->userModel->readRol() as $row){
+                              echo "<option value='$row[0]'>$row[1]</option>";
+                          }
+                          ?>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                      <button type="button" name="button" class="btntnt">enviar</button>
+                  </div>
+              </div>
           </form>
           <h1>the record is missing</h1>
         </div>

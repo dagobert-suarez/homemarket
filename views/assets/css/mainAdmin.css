@@ -251,15 +251,40 @@ ul{
     border: 1px solid rgba(161, 161, 161, 0.53);
     justify-content: space-around;
     font-family:'Catamaran',sans-serif;
+    display: flex;
 }
 .contentfo h3{
     margin: 15px auto;
 }
-.formWorker label{
-    margin: 0px 20px 1px;
+.content-form {
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
 }
-.formWorker input,select, .passrd{
-
+input[type=text],
+input[type=date],
+input[type=email],
+input[type="number"]{
+    margin: 5px 10px 1px;
+    width: 50%;
+    /* padding: 8px 30px; */
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
+    display: block;
+}
+input[type=password],select{
+    margin: 5px 10px 1px;
+    width: 70%;
+    /* padding: 8px 30px; */
+    border: 1px solid rgb(182, 182, 182);
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
+    display: block;
+}
+/* .content-form ,input,select, .passrd{
     margin: 5px 20px 1px;
     width: 40%;
     padding: 8px 30px;
@@ -268,6 +293,9 @@ ul{
     font-size: 14px;
     outline: none;
     display: block;
+} */
+.formWorker label{
+    margin: 0px 20px 1px;
 }
 
 /*  Fin Registro del empleado */
