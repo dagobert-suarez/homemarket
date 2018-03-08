@@ -103,7 +103,7 @@ class UserModel{
 	// para probar en el worker - llama solo el rol del empleado
 	function readRolWorker(){
 		try{
-			$sql="SELECT id_rol,nom_rol FROM rol limit 2 offset 1";
+			$sql="SELECT id_rol,nom_rol FROM rol limit 1 offset 2";
 			$query=$this->pdo->prepare($sql);
 			$query->execute();
 			$result = $query->fetchALL(PDO::FETCH_BOTH);
