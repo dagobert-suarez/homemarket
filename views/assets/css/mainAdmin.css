@@ -258,8 +258,8 @@ ul{
 .formWorker label{
     margin: 0px 20px 1px;
 }
-.formWorker input{
-    
+.formWorker input,select, .passrd{
+
     margin: 5px 20px 1px;
     width: 40%;
     padding: 8px 30px;

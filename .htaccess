@@ -26,6 +26,7 @@ RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 #supermercado
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
 RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
+RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
 
 
 #CRUD empleado

@@ -13,24 +13,24 @@
 
   </head>
   <body>
-  <section class="container1S">
-      <header class="main--nav black1">
-          <div class="icon--mobile">
-              <i class="fa fa-window-close"></i>
-          </div>
-          <?php
+    <section class="container1S">
+        <header class="main--nav black1">
+            <div class="icon--mobile">
+                <i class="fa fa-window-close"></i>
+            </div>
+            <?php
 
-            require_once("views/modules/admin/profileS.php");
-            require_once("views/modules/admin/Navigator.php");
+              require_once("views/modules/admin/profileS.php");
+              require_once("views/modules/admin/Navigator.php");
+
+             ?>
+        </header>
+        <div class="wrap--content">
+            <?php
+
+             require_once("views/modules/admin/menuTopad.php");
 
            ?>
-      </header>
-      <div class="wrap--content">
-          <?php
-
-           require_once("views/modules/admin/menuTopad.php");
-
-         ?>
 
 
-                <!-- <article> -->
+                  <!-- termina el header -->

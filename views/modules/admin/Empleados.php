@@ -1,50 +1,64 @@
-<div class="module--worker">
-  <h1>Empleados</h1>
-  <div class="tab">
-    <button class="btntabs" onclick="openCity(event, 'Nuevo')" id="defaultOpen">Nuevo</button>
-    <button class="btntabs" onclick="openCity(event, 'Empleados')">Empleados</button>
-    <button class="btntabs" onclick="openCity(event, 'Nose')">Nose</button>
-  </div>
+    <div class="module--worker">
 
-  <div id="Nuevo" class="contentfo">
-    <h3>Nuevo</h3>
-    <div class="formWorker">
-      <form class="frmworker" action="index.html" method="post">
-          <div class="content-form">
-              <div class="form-group">
-                  <label for="">niombre del empleado</label>
-                  <input type="text" name="data[]" value="">
+      <h1>Empleados</h1>
+      <div class="tab">
+        <button class="btntabs" onclick="openCity(event, 'Nuevo')" id="defaultOpen">Nuevo</button>
+        <button class="btntabs" onclick="openCity(event, 'Empleados')">Empleados</button>
+        <button class="btntabs" onclick="openCity(event, 'Nose')">Nose</button>
+      </div>
 
-              </div>
-              <label for="">appellido worker</label>
-              <input type="text" name="data[]" value="">
+      <div id="Nuevo" class="contentfo">
+        <h3>New</h3>
+        <div class="formWorker">
+          <form class="frmworker" action="index.html">
+            <label for="">name worker</label>
+            <input type="text" name="data[]" value="">
+            <label for="">last name worker</label>
+            <input type="text" name="data[]" value="">
+            <label for="">fech nacimiento</label>
+            <input type="datetime-local" name="data[]" value="">
+            <label for="">genero emplead@</label>
+            <select class="" name="data[]">
+              <option value="m">Hombre</option>
+              <option value="f">Mujer</option>
+              <option value="o">Mtro</option>
+            </select>
+            <label for="">telefono</label>
+            <input type="nuber" name="data[]" value="">
+            <label for="">el correo ese</label>
+            <input type="email" name="data[]" value="">
+            <label for="">la ciudad</label>
+            <select class="city new" name="data[]">
+              <?php
+              foreach ($this->userModel->readCities() as $row){
+                echo "<option value='$row[0]'>$row[1]</option>";
+              }
+              ?>
+            </select>
+            <label for="">contraseña</label>
+            <input type="password" name="data[]" value="" class="passrd">
+            <label for="">el rol ese</label>
+            <select class="" name="data[]">
+              <?php
+              foreach ($this->userModel->readRol() as $row){
+                echo "<option value='$row[0]'>$row[1]</option>";
+              }
+              ?>
+            </select>
+            <button type="button" name="button" class="btntnt">enviar</button>
+          </form>
+          <h1>the record is missing</h1>
+        </div>
+      </div>
 
-          </div>
-        <label for="">fech nacimiento</label>
-        <input type="text" name="data[]" value="">
-        <label for="">gen_usu</label>
-        <input type="text" name="data[]" value="">
-        <label for="">telefono</label>
-        <input type="nuber" name="data[]" value="">
-        <label for="">el correo ese</label>
-        <input type="text" name="data[]" value="">
-        <label for="">la ciudad(falta la consulta)</label>
-        <input type="text" name="data[]" value="">
-        <label for="">aqui es donde hay que arreglar lo del rol</label>
-        <input type="text" name="data[]" value="">
-      </form>
-      <h1>falta guardar registro</h1>
+      <div id="Empleados" class="contentfo">
+        <h3>Empleados</h3>
+        <p>Empleados is the capital of France.</p>
+      </div>
+
+      <div id="Nose" class="contentfo">
+        <h3>Nose</h3>
+        <p>Nose is the capital of Japan.</p>
+      </div>
+
     </div>
-  </div>
-
-  <div id="Empleados" class="contentfo">
-    <h3>Empleados</h3>
-    <p>Empleados is </p>
-  </div>
-
-  <div id="Nose" class="contentfo">
-    <h3>Nose</h3>
-    <p>Nose is</p>
-  </div>
-
-</div>
