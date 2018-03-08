@@ -40,7 +40,7 @@ class viewsController{
 		require_once "views/include/manual/footer.php";
 	}
 
-	//todo sobre admin
+	//las sessiones del administrador del supermercado
 	function inicioAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==2) {
 			require_once "views/modules/admin/header-admin.php";
@@ -63,7 +63,13 @@ die();
 		require_once "views/modules/admin/footer_admin.php";
 	}
 
-//todo sobre el empleado
+	function mySuper(){
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/mySuper.php";
+		require_once "views/modules/admin/footer_admin.php";
+	}
+
+//las sessiones del empeado - inicio
 // --------------------- //
 	function InicioWorker(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==3) {
@@ -77,7 +83,6 @@ die();
 	}
 
 	//los ajustes del empleado
-	// ----------------------- //
 	 function settingsworker(){
 		 require_once "views/modules/worker/header.php";
 		 require_once "views/modules/worker/updateWorker.php";
