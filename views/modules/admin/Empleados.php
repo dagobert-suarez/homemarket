@@ -66,7 +66,7 @@
                       <label for="">el rol ese</label>
                       <select class="" name="data[]">
                           <?php
-                          foreach ($this->userModel->readRol() as $row){
+                          foreach ($this->userModel->readRolWorker() as $row){
                               echo "<option value='$row[0]'>$row[1]</option>";
                           }
                           ?>

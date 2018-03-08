@@ -10,7 +10,7 @@ class UserModel{
 				}
 	}
 
-	//crear un usuario: envia datos de registro a bd
+	//crear un usuario: envia datos de registro a bd ajam
 	function createUser($data,$token){
 			 try{
 				 $sql = "call crear_usu(?,?,?,?,?,?,?,?)";
@@ -101,17 +101,17 @@ class UserModel{
   }
 
 	// para probar en el worker - llama solo el rol del empleado
-	// function readRolWorker(){
-	// 	try{
-	// 		$sql="SELECT id_rol,nom_rol FROM rol limit 3 offset 3";
-	// 		$query=$this->pdo->prepare($sql);
-	// 		$query->execute();
-	// 		$result = $query->fetchALL(PDO::FETCH_BOTH);
-	// 	} catch (PDOException $e){
-	// 		$result = $e->getMessage();
-	// 	}
-	// 	return $result;
-	// }
+	function readRolWorker(){
+		try{
+			$sql="SELECT id_rol,nom_rol FROM rol limit 2 offset 1";
+			$query=$this->pdo->prepare($sql);
+			$query->execute();
+			$result = $query->fetchALL(PDO::FETCH_BOTH);
+		} catch (PDOException $e){
+			$result = $e->getMessage();
+		}
+		return $result;
+	}
 
 	// function readEm(){
 	// 	try{
