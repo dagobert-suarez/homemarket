@@ -8,12 +8,12 @@
   </div>
 
   <div id="Nuevo" class="contentfo">
-    <h3>Nuevo</h3>
+    <h3>New</h3>
     <div class="formWorker">
       <form class="frmworker" action="index.html" method="post">
-        <label for="">niombre del empleado</label>
+        <label for="">name worker</label>
         <input type="text" name="data[]" value="">
-        <label for="">appellido worker</label>
+        <label for="">last name worker</label>
         <input type="text" name="data[]" value="">
         <label for="">fech nacimiento</label>
         <input type="text" name="data[]" value="">
@@ -25,10 +25,13 @@
         <input type="text" name="data[]" value="">
         <label for="">la ciudad(falta la consulta)</label>
         <input type="text" name="data[]" value="">
-        <label for="">aqui es donde hay que arreglar lo del rol</label>
+        <label for="">contraseña</label>
+        <input type="password" name="data[]" value="">
+        <label for="">el rol ese</label>
         <input type="text" name="data[]" value="">
+        <button type="button" name="button" class="btntnt">enviar</button>
       </form>
-      <h1>falta guardar registro</h1>
+      <h1>the record is missing</h1>
     </div>
   </div>
 
