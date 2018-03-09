@@ -2,9 +2,9 @@
 
       <h1>Empleados</h1>
       <div class="tab">
-        <button class="btntabs" onclick="openCity(event, 'Nuevo')" id="defaultOpen">Nuevo</button>
-        <button class="btntabs" onclick="openCity(event, 'Empleados')">Empleados</button>
-        <button class="btntabs" onclick="openCity(event, 'Nose')">Nose</button>
+        <button class="btntabs" onclick="openCity(event, 'Nuevo')" id="defaultOpen"><i class="fa fa-plus"></i> Nuevo</button>
+        <button class="btntabs" onclick="openCity(event, 'Empleados')"><i class="fa fa-user"></i> Empleados</button>
+        <button class="btntabs" onclick="openCity(event, 'Nose')"><i class="fa fa-question"></i> Nose</button>
       </div>
 
       <div id="Nuevo" class="contentfo">
@@ -83,7 +83,19 @@
 
       <div id="Empleados" class="contentfo">
         <h3>Empleados</h3>
-        <p>Empleados is the capital of France.</p>
+        <p>Empleados is</p>
+        <table>
+                <tr>
+                    <th>niose</th>
+                    <th>nose</th>
+                    <th>nodse</th>
+                </tr>
+                <tr>
+                    <tb>niose</tb>
+                    <tb>nose</tb>
+                    <tb>nodse</tb>
+                </tr>
+        </table>
       </div>
 
       <div id="Nose" class="contentfo">

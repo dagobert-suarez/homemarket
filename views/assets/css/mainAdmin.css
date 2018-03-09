@@ -78,6 +78,7 @@ section.container1S{
 }
 
 /*-*.*está es la parte del menu top*.*-*/
+/* --------------------------------------- */
 .content-profile {
   position:fixed;;
   left: 1090px;
@@ -141,7 +142,8 @@ ul{
     widows: 98px;%;
     height: 90px;
     margin: 5px;
-    background-color: #585858;
+    /* background-color: #585858; */
+    background-color: #CBCBCB;
     /* background-color: #FDFDFD; */
     border: 1px solid rgba(161,161,161,0.3);
     border-radius:2px;
@@ -230,7 +232,7 @@ ul{
 }
 
 .tab button:hover {
-    background-color: #ddd;
+    background-color: #CBCBCB;
     /* border-left: 10px solid #ddd; */
 }
 
@@ -264,11 +266,12 @@ ul{
 input[type=text],
 input[type=email],
 input[type=number],
-input[type=password]
+input[type=password],
+input[type=date]
 ,select{
     margin: 5px 20px 1px;
     width: 95%;
-    padding: 6px 15px;
+    padding: 5px 15px;
     border: 1px solid rgb(182, 182, 182);
     line-height: 1.20;
     font-size: 14px;
@@ -276,16 +279,14 @@ input[type=password]
     display: block;
 }
 
-input[type=date]{
-display: block;
-}
+
 .noda{
     padding: 6px 10px;
     width: 100%;
     margin:25px 50px 0px 100px;
 }
 .formWorker label{
-    /* margin: 0px 10px 1px; */
+    margin: 0px 0px 1px;
 }
 .btntnt{
     padding: 6px 10px;

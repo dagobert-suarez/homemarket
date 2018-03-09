@@ -51,6 +51,8 @@ class ProductModel{
       }
       return $result;
   }
+  
+
 
   //llama todos los productos en la bd
   // ----------------------------------- //
