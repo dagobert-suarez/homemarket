@@ -130,7 +130,18 @@ die();
 		 require_once "views/modules/admin/updateADS.php";
 		 // require_once "views/modules/admin/footer-admin.php";
 	 }
-
+	 	// Artuiculos
+		// -------------
+		 function articulos(){
+			require_once "views/modules/admin/header-admin.php";
+			require_once "views/modules/admin/articulos.php";
+		}
+		// Información
+	// -------------
+	 function informacion(){
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/informacion.php";
+	}
 
 
 	// function ingreso(){
