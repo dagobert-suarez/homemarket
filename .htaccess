@@ -36,6 +36,11 @@ RewriteRule ^Empleados$ index.php?controller=views&a=Workers
 
 #empleado
 RewriteRule ^InicioWorker$ index.php?controller=views&a=InicioWorker
+RewriteRule ^settings-worker$ index.php?controller=views&a=settingsworker
+RewriteRule ^Retrasos$ index.php?controller=views&a=retrasos
+RewriteRule ^Pedidos$ index.php?controller=views&a=pedidos
+RewriteRule ^Proveedores$ index.php?controller=views&a=proveedores
+
 #CRUD productos#
 RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
 RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
@@ -45,7 +50,6 @@ RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewswor
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
-RewriteRule ^settings-worker$ index.php?controller=views&a=settingsworker
 
 
 #super administrador

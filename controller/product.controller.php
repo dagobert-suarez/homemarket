@@ -90,7 +90,7 @@ class ProductController{
     return  $result;
 
   }
-  
+
 
   //visualiza las  categorias en la pagina del admin
   function readCategory(){
@@ -98,6 +98,11 @@ class ProductController{
     return  $result;
 
   }
+   public function updateProc(){
+       $data =$_POST['data'];
+       $result = $this->product->updateProc($data);
+       // header("Location:")  
+   }
  public function deleteProductType(){
     $data = $_GET['data'];
     $result = $this->product->deleteProduct($data);

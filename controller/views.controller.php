@@ -83,9 +83,31 @@ die();
 	}
 
 	//los ajustes del empleado
+	// ------------------------------
 	 function settingsworker(){
 		 require_once "views/modules/worker/header.php";
 		 require_once "views/modules/worker/updateWorker.php";
+		 require_once "views/modules/worker/footer.php";
+	 }
+	 // Retrasos
+	 // ---------
+	 function retrasos(){
+		 require_once "views/modules/worker/header.php";
+		 require_once "views/modules/worker/retrasos.php";
+		 require_once "views/modules/worker/footer.php";
+	 }
+	 // Pedidos
+	 // ---------
+	 function pedidos(){
+		 require_once "views/modules/worker/header.php";
+		 require_once "views/modules/worker/pedidos.php";
+		 require_once "views/modules/worker/footer.php";
+	 }
+	 // Provedores
+	 // ---------
+	 function proveedores(){
+		 require_once "views/modules/worker/header.php";
+		 require_once "views/modules/worker/proveedores.php";
 		 require_once "views/modules/worker/footer.php";
 	 }
 

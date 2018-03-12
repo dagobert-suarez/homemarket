@@ -5,11 +5,10 @@
                     </li></a>
                     <a class="item" href="nuevo-producto"><li><i class="fa fa-shopping-basket" aria-hidden="true"></i> Productos</li></a>
                     <!-- <a class="item" href=""><li><i class="fa fa-users" aria-hidden="true"></i> Clientes</li></a> -->
-                    <a class="item" href=""><li><i class="fa fa-calendar" aria-hidden="true"></i> Retrasos</li></a>
-                    <a class="item" href=""><li><i class="fa fa-shopping-basket" aria-hidden="true"></i> Pedidos</li></a>
-                    <!-- <a class="item" href=""><li><i class="fa fa-tags" aria-hidden="true"></i> Clientes</li></a> -->
-                    <!-- <a class="item" href=""><li><i class="fa fa-bell" aria-hidden="true"></i> Retrasos</li></a> -->
-                    <!-- <a class="item" href=""><li><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</li></a> -->
+                    <a class="item" href="Retrasos"><li><i class="fa fa-calendar" aria-hidden="true"></i> Retrasos</li></a>
+                    <a class="item" href="Pedidos"><li><i class="fa fa-shopping-cart" aria-hidden="true"></i> Pedidos</li></a>
+                    <a class="item" href="Proveedores"><li><i class="fa fa-address-book-o" aria-hidden="true"></i> Proveedores</li></a>
+
                 </ul>
             </nav>
         </div>

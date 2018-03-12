@@ -51,7 +51,7 @@ class ProductModel{
       }
       return $result;
   }
-  
+
 
 
   //llama todos los productos en la bd
@@ -71,6 +71,17 @@ class ProductModel{
 
   // Actualizar producto
    // -------------------- //
+  public function updateProc(){
+      try{
+          $sql= "UPDATE productos SET  nom_pro = ?, des_pro = ?, img_pro = ?, mar_pro = ?, id_tip_pro = ? , can_pro = ?, 	fec_ing_pro = ?, uniMed_pro = ?, valCom_pro = ?, valVen_pro = ? WHERE id_pro = ?";
+          $query-> $this->pdo->prepare($sql);
+          $query->execute($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[9],$data[10],$data[0]);
+          $msn= "Modificado Exitosamente";
+      }catch (PDOException $e){
+          $msn = $e->getMessage();
+      }
+      return $msn;
+  }
 
 
 
