@@ -67,7 +67,7 @@ body {font-family: "Lato", sans-serif;}
     border: 1px solid #ccc;
     background-color: #f1f1f1;
     width: 20%;
-    height: 500px;
+    height: 1000px;
 }
 
 /* Style the buttons inside the tab */
@@ -102,7 +102,7 @@ body {font-family: "Lato", sans-serif;}
     border: 1px solid #ccc;
     width: 80%;
     border-left: none;
-    height: 500px;
+    height: 1000px;
 }
 </style>
 
@@ -114,6 +114,10 @@ body {font-family: "Lato", sans-serif;}
   <button  "'Requerimientos')">Requerimientos:</button>
   <button class="tablinks" onclick="openCity(event, 'sistema')">Requisitos de conocimiento para manejar el sistema:</button>
   <button class="tablinks" onclick="openCity(event, 'hardware')">Requerimientos de hardware y software:</button>
+  <button class="tablinks" onclick="openCity(event, 'Instalación')">Instalación</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
   <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
 </div>
 
@@ -155,9 +159,10 @@ body {font-family: "Lato", sans-serif;}
   <p>-	Apache </p>
 
 </div>
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="Instalación" class="tabcontent">
+  <h3>Instalación</h3>
+  <p>Esta parte es muy importante, por lo tanto, hay que ser muy detallados en la explicación se recomienda escribir paso a paso y con palabras claras y entendibles para el usuario, incluso se pueden anexar capturas de pantallas, como los comandos en caso de ser necesarios.</p>
+  <p>Ejemplo:</p>
 </div>
 <div id="Tokyo" class="tabcontent">
   <h3>Tokyo</h3>
