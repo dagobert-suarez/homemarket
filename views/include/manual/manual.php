@@ -57,68 +57,22 @@ function showSlides(n) {
 }
 </script> -->
 
-<style>
-
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
-/* Style the tab */
-.tab {
-    float: left;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width: 20%;
-    height: 1000px;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-    display: block;
-    background-color: inherit;
-    color: black;
-    padding: 22px 16px;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    transition: 0.3s;
-    font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current "tab button" class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 80%;
-    border-left: none;
-    height: 1000px;
-}
-</style>
 
 <p><center>MANUAL DE USUARIO:</center></p>
 
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Objetivo')" id="defaultOpen">Objetivo del manual</button>
   <button class="tablinks" onclick="openCity(event, 'Descripción')">Descripción</button>
-  <button  "'Requerimientos')">Requerimientos:</button>
+  <button  class="tablinks" "'Requerimientos')">Requerimientos:</button>
   <button class="tablinks" onclick="openCity(event, 'sistema')">Requisitos de conocimiento para manejar el sistema:</button>
   <button class="tablinks" onclick="openCity(event, 'hardware')">Requerimientos de hardware y software:</button>
   <button class="tablinks" onclick="openCity(event, 'Instalación')">Instalación</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'software')">Estructura del software y reglas básicas para moverse en la aplicación</button>
+  <button class="tablinks" onclick="openCity(event, 'Ingreso')">Ingreso al sistema</button>
+  <button class="tablinks" onclick="openCity(event, 'Interfaz')">Interfaz gráfica</button>
+  <button class="tablinks" onclick="openCity(event, 'Mapa')">Mapa de navegación</button>
+  <button class="tablinks" onclick="openCity(event, 'Descr')">Descripción</button>
+  <button class="tablinks" onclick="openCity(event, 'informacion')">Información Adicional:</button>
 </div>
 
 <div id="Objetivo" class="tabcontent">
@@ -164,36 +118,27 @@ body {font-family: "Lato", sans-serif;}
   <p>Esta parte es muy importante, por lo tanto, hay que ser muy detallados en la explicación se recomienda escribir paso a paso y con palabras claras y entendibles para el usuario, incluso se pueden anexar capturas de pantallas, como los comandos en caso de ser necesarios.</p>
   <p>Ejemplo:</p>
 </div>
-<div id="Tokyo" class="tabcontent">
+<div id="software" class="tabcontent">
   <h3>Tokyo</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
-<div id="Tokyo" class="tabcontent">
+<div id="Ingreso" class="tabcontent">
   <h3>Tokyo</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
-<div id="Tokyo" class="tabcontent">
+<div id="Interfaz" class="tabcontent">
   <h3>Tokyo</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
-
-<script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-
-<!-- fin del manual  -->
+<div id="Mapa" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<div id="Descr" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<div id="informacion" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
