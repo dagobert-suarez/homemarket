@@ -1,7 +1,22 @@
 $(document).ready(function() {
     $("#dataGrid").DataTable()
 } );
+// modal de la categoria
+// ----------------------
+$(".abrirmodal").click(function() {
+ // $(".fondo").css("display","block");
+ $(".fondo").toggle();
+ $(".wrap").toggle();
+});
 
+$(".fondo").click(function() {
+ // $(".fondo").css("display","none");
+ $(".fondo").toggle();
+ $(".wrap").toggle();
+});
+
+// validacion
+// ---------------------
 $("#frmcategory").submit(function(e) {
 e.preventDefault();
         dataJson = [];
@@ -31,3 +46,12 @@ e.preventDefault();
            }
       });
 });
+
+// var fondo = document.getElementById('fondo');
+// var wrap = document.getElementById('wrap');
+// var abrir = document-getElementById('abrirmodal');
+
+// abrir.onclick = function(){
+//     fondo.style.display "block";
+//     wrap.style.display "block";
+// };

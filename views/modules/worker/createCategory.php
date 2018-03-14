@@ -51,7 +51,22 @@
 				</tr>
 			<?php } ?>
 			</tbody>
-
 		</table>
+		<!--  Actualizar Categoria -->
+	<div class="fondo"></div>
+	<div class="wrap">
+		<div class="wea">
+			<div class="wrap-tit">
+				<h1>Actualizar Categoria</h1>
+				<i class="fa fa-close"></i>
+			</div>
+			<div class="wrap-bod">
+					<label for="">Nombre de la categoria</label>
+					<input type="text" name="" value=""><br>
+					<button type="button" name="button">Actualizar</button>
+
+			</div>
+		</div>
+	</div>
 	</div>
 </section>
