@@ -190,6 +190,7 @@ ul{
 }
 /* -*.* finaliza el articulo *.*- */
 /* ------------------------------------ */
+
 /* Registro del empleado */
 /* ------------------------ */
 .module--worker{
@@ -257,13 +258,13 @@ ul{
     margin: 15px auto;
 }
 .content-form {
-    display: flex;
+    display: block;
     padding: 5px;
     justify-content: flex-start;
     margin: 0px 170px;
     /* width: 100%; */
 }
-input[type=text],
+/* input[type=text],
 input[type=email],
 input[type=number],
 input[type=password],
@@ -277,7 +278,7 @@ input[type=date]
     font-size: 14px;
     outline: none;
     display: block;
-}
+} */
 
 
 .noda{

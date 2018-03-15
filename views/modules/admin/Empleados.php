@@ -9,7 +9,7 @@
 
       <div id="Nuevo" class="contentfo">
         <h3>New</h3>
-        <div class="form">
+        <div class="frmworker">
           <form class="frmregistro" action="index.html">
               <div class="content-form">
                     <div class="form-group">
