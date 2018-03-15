@@ -6,7 +6,7 @@
 		<div class="text-inf ">
 			<p>Crea tú cuenta y empieza a disfrutar de todos nuestros beneficios.</p>
 		</div>
-		<!-- <a href="registrosuper">registrarse como supermercado</a> -->
+		<!-- <a href="registrosuper">registrarse como supermercado@</a> -->
 
 	</div>
 <div class="formpart">

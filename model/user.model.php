@@ -10,7 +10,7 @@ class UserModel{
 				}
 	}
 
-	//crear un usuario: envia datos de registro a bd ajam
+	//crear un usuario: envia datos de registro a bd ajampla
 	function createUser($data,$token){
 			 try{
 				 $sql = "call crear_usu(?,?,?,?,?,?,?,?)";

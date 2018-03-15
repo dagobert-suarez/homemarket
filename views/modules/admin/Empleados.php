@@ -9,11 +9,11 @@
 
       <div id="Nuevo" class="contentfo">
         <h3>New</h3>
-        <div class="formWorker">
-          <form class="frmworker" action="index.html">
+        <div class="form">
+          <form class="frmregistro" action="index.html">
               <div class="content-form">
                     <div class="form-group">
-                        <label for="">name worker</label>
+                        <label for="">name workerr</label>
                         <input type="text" name="data[]" value="">
                     </div>
                     <div class="form-group">

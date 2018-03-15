@@ -49,7 +49,7 @@ RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&
 RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewsworker
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
-RewriteRule ^crear-categoria$ index.php?controller=product&a=createCategory
+RewriteRule ^createCategory$ index.php?controller=product&a=createCategory
 
 
 #super administrador
