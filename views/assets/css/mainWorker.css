@@ -260,10 +260,7 @@ input[type=search]{
     width: 40%;
 }
 .tittledatag{
-    /* background-color: #ff9036; */
-    /* background-color: rgba(255, 144, 54, 0.84);*/
     background-color: #a9b1aa;
-
 }
 tbody tr{
 color: #433d53;
@@ -272,20 +269,19 @@ background-color: rgb(196, 196, 196);
 
  thead {
     text-align:center;
-
 }
- tbody td{
+ tbody td,thead td{
     border: 1px solid rgba(30, 33, 33, 0.32);
     text-align:center;
     color: #465661;
 }
-.exit{
+ .exit{
     color:rgb(0, 5, 252);
     font-size: 1rem;
 }
-.dataTable tbody.no-footer.even{
-    background-color: rgb(119, 0, 255);
 
+.dataTable tbody.no-footer.even{
+    background-color: rgb(0, 0, 0);
 }
 /* _*.* Fin dataGrid*.*_ */
 /* -------------------------  */
@@ -342,9 +338,7 @@ background-color: rgb(196, 196, 196);
     margin: 10px;
     align-items: center;
 }
-/* .wrap-bod .bod{
-    display: block;
-} */
+
 /*  Fin Modal de Actualizar categoria */
 /* ------------------------------- */
 
