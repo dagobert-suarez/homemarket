@@ -8,12 +8,33 @@ $(".abrirmodal").click(function() {
  $(".fondo").toggle();
  $(".wrap").toggle();
 });
-
+$(".close").click(function(){
+    $(".fondo").toggle();
+    $(".wrap").toggle();
+});
 $(".fondo").click(function() {
  // $(".fondo").css("display","none");
  $(".fondo").toggle();
  $(".wrap").toggle();
 });
+// Fin de la modal de la categoria
+// --------------------------------
+
+// Modal de Detalles
+// -----------------------
+$(".modalDet").click(function(){
+    $(".fondo-det").toggle();
+    $(".wrap-det").toggle();
+});
+// $(".closedet").click(function(){
+//     $(".fondo-det").toggle();
+//     $(".wrap-det").toggle();
+// });
+$(".fondo-det").click(function() {
+    $(".fondo-det").toggle();
+    $(".wrap-det").toggle();
+});
+
 
 // validacion
 // ---------------------

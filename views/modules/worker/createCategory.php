@@ -43,8 +43,8 @@
 					<td><?php echo $row["id_tip_pro"] ;?></td>
 					<td><?php echo $row["nom_tip_pro"] ;?></td>
 					<td>
-						<a href=""><i class="fa fa-pencil">Editar</i></a>
-						<a href=""><i class="fa fa-info"></i>Detalles</a>
+						<a href="#" class="abrirmodal"><i class="fa fa-pencil">Editar</i></a>
+						<a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a>
 						<a href="eliminar-tipo-<?php echo $row['id_tip_pro'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
 					</td>
 
@@ -52,21 +52,41 @@
 			<?php } ?>
 			</tbody>
 		</table>
-		<!--  Actualizar Categoria -->
+	<!--  Actualizar Categoria -->
+	<!-- ----------------------------->
 	<div class="fondo"></div>
 	<div class="wrap">
 		<div class="wea">
 			<div class="wrap-tit">
 				<h1>Actualizar Categoria</h1>
-				<i class="fa fa-close"></i>
+				<i class="close">&times</i>
 			</div>
 			<div class="wrap-bod">
-					<label for="">Nombre de la categoria</label>
+					<label for="">Nombre de la categoria:</label>
 					<input type="text" name="" value=""><br>
 					<button type="button" name="button">Actualizar</button>
 
 			</div>
 		</div>
 	</div>
+	<!--Fin de el Actualizar  -->
+	<!-- -------------------------->
+	<!-- Detalles -->
+	<!-- ---------------->
+	<div class="fondo-det"></div>
+	<div class="wrap-det">
+		<div class="wea-det">
+			<div class="wrap-tit">
+				<h1>Detalles de la  Categoria</h1>
+				<i class="closedet">&times</i>
+			</div>
+			<div class="wrap-bod">
+				<p>La vista para el detalle de la categoria</p>
+					<label for="">Nombre de la categoria:</label>
+					<br>
+		</div>
+	</div>
+	<!--  Fin de Detalles -->
+	<!-- --------------------->
 	</div>
 </section>

@@ -105,9 +105,6 @@ section.container1k{
 /* ---------------------------- */
 .down{
     cursor: pointer;
-    /* float: left;
-    /* justify-content: space-around; */
-
 }
 .down .down-all{
     font-size: 16px;
@@ -121,7 +118,7 @@ section.container1k{
     display: none;
     position: absolute;
     background-color: #FDFDFD;
-    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.3);
     min-width: 160px;
     margin-top: 15px;
     z-index: 1;
@@ -340,6 +337,39 @@ background-color: rgb(196, 196, 196);
 }
 
 /*  Fin Modal de Actualizar categoria */
+/* ------------------------------- */
+/* Modal de Detalles categoria */
+/* ------------------------------- */
+.fondo-det{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.68);
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    position: fixed;
+}
+.wrap-det{
+    display: none;
+    width: 10px;
+    height: 100px;
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #FEFEFE;
+}
+.wea-det{
+    width: 700px;
+    height: auto;
+    background: #FEFEFE;
+    margin: 150px 400px;
+    padding: 15px;
+    color: #465661;
+    font-family: 'Montserrat',sans-serif;
+}
+/*  Fin Modal de Detalles categoria */
 /* ------------------------------- */
 
 /*_*.* Esta es la parte de los ajustes*.*_*/

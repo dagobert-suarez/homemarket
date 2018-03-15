@@ -31,9 +31,9 @@
         <td><?php echo $row["mar_pro"]; ?></td>
         <td><?php echo $row["des_pro"]; ?></td>
         <td>
-            <a href="updateProduct"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-            <a href="eliminar-producto-<?php echo $row['cod_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-pencil" aria-hidden="true">Editar</i></a>
+            <a href="#"><i class="fa fa-info-circle" aria-hidden="true">Detalles</i></a>
+            <a href="eliminar-producto-<?php echo $row['cod_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true">Eliminar</i></a>
         </td>
       </tr>
       <?php
