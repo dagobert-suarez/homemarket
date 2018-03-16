@@ -1,90 +1,23 @@
-* {box-sizing:border-box}
+@import "reset.css";
+@import "color.css";
+@import "animate.css";
 
-.slide-container{
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Roboto');
+
+ *{box-sizing: border-box}
+/* body {font-family: "Lato", sans-serif;} */
+a{
+    font-size: 20px;
+    padding: 8px 10px;
+    font-family: sans-serif;
+    margin: 15px  auto;
+    border: 2px solid rgb(108, 108, 108);
+    border-radius: 4px;
 }
-
-.mySlides{
-  display: none;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: gray;
-  font-weight: bold;
-  font-size: 40px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-.next{
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover{
-  background-color: rgba(0,0,0,0.8);
-}
-
-.text {
-  color: #9E9E9E;
-  font-size: 40px;
-  padding: 12px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif;}
+h1{
+        font-family: sans-serif;
+        margin: 15px;
+        }
 /* Style the tab */
 .tab {
     float: left;
@@ -122,9 +55,47 @@ body {font-family: "Lato", sans-serif;}
 /* Style the tab content */
 .tabcontent {
     float: left;
-    padding: 0px 12px;
+    padding: 15px 15px;
     border: 1px solid #ccc;
     width: 80%;
     border-left: none;
     height: 949px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 18px;
+    text-align: center;
 }
+
+.footer{
+  background-color: #333333;
+  height:;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+}
+.copyright{
+  width: 70%;
+  margin: 10px 0px ;
+  justify-content: center;
+  display: flex;
+  color: #6a88c5;
+}
+.copyright ul{
+  list-style-type: none;
+  display: flex;
+}
+
+.icons-footer {
+  font-size: 17px;
+  justify-content: space-between;
+  color: #f1f1f1;
+  width: 16%;
+
+}
+
+.icons-footer ul {
+  margin-top: 10px;
+  list-style-type: none;
+  display: flex     ;
+  justify-content: space-between;
+  padding: 1px 1px 1px 0px;
+}
+/*-*.* Fin footer *.*-*/
