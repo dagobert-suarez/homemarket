@@ -1,0 +1,113 @@
+@import "reset.css";
+@import "color.css";
+@import "animate.css";
+
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
+
+
+section.container1S{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    background-color:  #f1f2f2;
+}
+.main--nav{
+    max-width: 180px;
+    min-width: 180px;
+	min-height:100vh;
+    background-color: #FEFEFE;
+	border-right: 1px solid rgba(161, 161, 161, 0.63);
+}
+.userProfile{
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+}
+.userProfile--img{
+    width: 70%;
+    margin: 0 auto 20px;
+}
+.main--nav nav ul{
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(161, 161, 161, 0.63);
+    border-bottom:1px solid rgba(161, 161, 161, 0.63);
+    padding-bottom: 30px;
+}
+.main--nav nav ul a li{
+    padding: 15px;
+    padding-left:20px;
+}
+.main--nav nav ul a li:hover{
+    background-color: #F0F1F1;
+    color:  black;
+    border-left: 10px solid #FEBF0D;
+    transition: 0.3s all;
+}
+.wrap--content{
+    width: 100%;
+}
+.wrap--content .menuS--top{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+    background-color: #FEFEFE;
+    border-bottom: 1px solid rgba(161, 161, 161, 0.63);
+}
+.wrap--content .menuS--top ul{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    /* font-size: 15px; */
+}
+.wrap--content .menuS--top .user--name{
+    text-transform: uppercase;
+    margin-right:  750px;
+}
+.wrap--content .menuS--top .user--name::before{
+    content: " Bienvenido : "
+}
+
+.wrap--content .menuS--top ul li span .toolttip{
+    width: 20px;
+    border: 1px solid rgba(161,161,161,0.63);
+    background-color: lime;
+}
+/*  Perfil */
+/* ---------------------------- */
+.down{
+    cursor: pointer;
+}
+.down .down-all{
+    font-size: 16px;
+    outline: none;
+    padding: 12px 14px;
+    margin: 0px;
+    position: relative;
+    /* display: inline-block; */
+}
+.content-down{
+    display: none;
+    position: absolute;
+    background-color: #FDFDFD;
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+    border-top:  1px solid rgba(161,161,161,0.63);
+    min-width: 160px;
+    margin-top: 12px;
+    z-index: 1;
+}
+.content-down li{
+    text-decoration: none;
+    padding: 12px 14px;
+    display: block;
+
+}
+.content-down li:hover{
+    background-color: #ddd;
+}
+.down:hover .content-down{
+    display: block;
+}
+/*Fin de Perfil  */
+/*--------------------------------------  */

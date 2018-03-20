@@ -14,11 +14,11 @@
           <div class="content-form">
                 <div class="form-group">
                     <label class="required" for="">Nombres del Empleado:</label>
-                    <input class="k"  type="text" name="data[]" value="">
+                    <input class="k"  type="text" name="data[]" placeholder="Nombres" value="">
                 </div>
                 <div class="form-group">
                     <label class="required" for="">Apellidos del Empleado:</label>
-                    <input  class="k" type="text" name="data[]" value="">
+                    <input  class="k" type="text" name="data[]" placeholder="Apellidos" value="">
                 </div>
           </div>
           <div class="content-form">
@@ -38,11 +38,11 @@
           <div class="content-form">
               <div class="form-group">
                   <label class="opcional" for="">Teléfono:</label>
-                  <input  class="k" type="number" name="data[]" value="">
+                  <input  class="k" type="number" name="data[]" placeholder="Teléfono" value="">
               </div>
               <div class="form-group">
                   <label class="required" for="">Correo del Empleado:</label>
-                  <input  class="k" type="email" name="data[]" value="">
+                  <input  class="k" type="email" name="data[]" placeholder="Correo" value="">
               </div>
           </div>
           <div class="content-form">
@@ -58,7 +58,7 @@
               </div>
               <div class="form-group">
                   <label class="required" for="">Contraseña:</label>
-                  <input  class="k" type="password" name="data[]" value="" class="noda">
+                  <input  class="k" type="password" name="data[]" value="" placeholder="Contraseña" class="noda">
               </div>
           </div>
           <div class="content-form">

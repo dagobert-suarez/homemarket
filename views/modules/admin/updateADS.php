@@ -26,6 +26,11 @@
             <input type="number" name="" value="" >
         </div>
         <div class="form-group">
+            <label  class="required" for="">Contraseña Actual:</label>
+            <input type="password" name="" class=""placeholder="contraseña">
+
+        </div>
+        <div class="form-group">
             <label for="">Contraseña:</label>
             <input type="password" name="" value="" placeholder="contraseña">
 
