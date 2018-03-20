@@ -9,11 +9,11 @@
 
       <div id="Nuevo" class="contentfo">
         <h3>New</h3>
-        <div class="formWorker">
-          <form class="frmworker" action="index.html">
+        <div class="frmworker">
+          <form class="frmregistro">
               <div class="content-form">
                     <div class="form-group">
-                        <label for="">name worker</label>
+                        <label for="">name workerr</label>
                         <input type="text" name="data[]" value="">
                     </div>
                     <div class="form-group">
@@ -72,10 +72,10 @@
                           ?>
                       </select>
                   </div>
-                  <div class="form-group">
+                </div>
+                  <!-- <div class="form-group"> -->
                       <button type="button" name="button" class="btntnt">enviar</button>
-                  </div>
-              </div>
+                  <!-- </div> -->
           </form>
           <!-- <h1>the record is missing</h1> -->
         </div>

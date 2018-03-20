@@ -7,11 +7,16 @@
         echo $_SESSION['USER']['NAME'];
         ?>
     </div>
-    <ul>
-        <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
-        <li><a href="settings-worker"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
-        <li> <a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+    <div class="down">
+        <a href="#" class="down-all">Perfil <i class="fa fa-caret-down"></i></a>
+        <div class="content-down">
+            <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
+            <li><a href="settings-worker"><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</a></li>
 
-    </li>
+        </div>
+    </div>
+    <ul>
+        <li> <a href="cerrar-sesion">Cerrar Sesion <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+
     </ul>
 </div>

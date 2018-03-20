@@ -31,15 +31,51 @@
         <td><?php echo $row["mar_pro"]; ?></td>
         <td><?php echo $row["des_pro"]; ?></td>
         <td>
-            <a href="updateProduct"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-            <a href="eliminar-producto-<?php echo $row['cod_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+            <a href="#" class="abrirmodal"><i class="fa fa-pencil" aria-hidden="true">Editar</i></a>
+            <a href="#" class="modalDet"><i class="fa fa-info-circle" aria-hidden="true">Detalles</i></a>
+            <a href="eliminar-producto-<?php echo $row['cod_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true">Eliminar</i></a>
         </td>
       </tr>
       <?php
     }
       ?>
     </tbody>
-
   </table>
+  <!--  Actualizar Producto -->
+  <!-- ----------------------------->
+  <div class="fondo"></div>
+  <div class="wrap">
+      <div class="wea">
+          <div class="wrap-tit">
+              <h1>Actualizar Producto</h1>
+              <i class="close">&times</i>
+          </div>
+          <div class="wrap-bod">
+                  <label for="">Nombre de la Producto:</label>
+                  <input type="text" name="" value=""><br><label for="">descripcion de la Producto:</label>
+                  <input type="text" name="" value=""><br>
+                  <button type="button" name="button">Actualizar</button>
+
+          </div>
+      </div>
+  </div>
+  <!--Fin de el Actualizar producto -->
+  <!-- -------------------------->
+  <!-- Detalles -->
+  <!-- ---------------->
+  <div class="fondo-det"></div>
+  <div class="wrap-det">
+      <div class="wea-det">
+          <div class="wrap-tit">
+              <h1>Detalles  del productos</h1>
+              <i class="closedet">&times;</i>
+          </div>
+          <div class="wrap-bod">
+              <p>La vista para el detalle del productos</p>
+                  <label for="">Nombre del productos:</label>
+                  <br>
+      </div>
+  </div>
+  <!--  Fin de Detalles -->
+  <!-- --------------------->
 </div>
