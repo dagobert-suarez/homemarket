@@ -43,19 +43,19 @@
                       <input  class="kfile" type="file" name="data[]" value="">
                   </div>
                   <div class="form-group">
+                      <button type="button" name="button" class="btntnt">Registrar</button>
+                  </div>
+                  <!-- <div class="form-group">
                       <label class="required" for="">Longitude:</label>
                       <input  class="k" type="bigint" name="data[]" placeholder="Longitude" value="">
-                  </div>
+                  </div> -->
               </div>
               <div class="content-form">
-
+<!--
                   <div class="form-group">
                       <label class="required" for="">Latitude:</label>
                       <input  class="k" type="bigint" name="data[]" placeholder="Latitude" class="noda">
-                  </div>
-                  <div class="form-group">
-                      <button type="button" name="button" class="btntnt">Registrar</button>
-                  </div>
+                  </div> -->
               </div>
           </form>
           <!-- <h1>the record is missing</h1> -->
