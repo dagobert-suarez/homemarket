@@ -35,11 +35,33 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+	function readBy($data){
+			 try{
+				 $sql = "SELECT * FROM usuario WHERE id_usu = ?";
+				 $query = $this->pdo->prepare($sql);
+				 $query->execute(array($data));
+					 $msn = $query->fetch(PDO::FETCH_BOTH);
+					}catch (PDOException $e) {
+						die($e->getMessage());
+				  }
+					return $msn;
+			 }
 
 			 //para crear la contraseña
 	function crearAcceso($data){
 			 try{
 				 $sql = "call CrearAcceso(?,?,?)";
+				 $query = $this->pdo->prepare($sql);
+				 $query->execute($data);
+					 $msn = true;
+					}catch (PDOException $e) {
+						die($e->getMessage());
+				  }
+					return $msn;
+			 }
+	function update($data){
+			 try{
+				 $sql = "call modificarUsuario(?,?,?,?,?)";
 				 $query = $this->pdo->prepare($sql);
 				 $query->execute($data);
 					 $msn = true;

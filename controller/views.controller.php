@@ -14,6 +14,16 @@ class viewsController{
 		 $result = $this->userModel->maLass()[0];
 		 return $result;
 	 }
+	 function readBy($data){
+		 $result = $this->userModel->readBy($data);
+		 return $result;
+	 }
+	 function update(){
+		 $data = $_POST['data'];
+		 $data[]=$_SESSION['USER']['ID'];
+		 $result = $this->userModel->update($data);
+		 header("Location: settings-Super");
+	 }
 
 	//de la pagina principal
 	function main(){

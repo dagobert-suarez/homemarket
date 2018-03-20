@@ -2,7 +2,6 @@
 
 <h1><i class="fa fa-book"> MANUAL DE USUARIO:</i></h1>
 
-
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Objetivo')" id="defaultOpen">Objetivo del manual</button>
   <button class="tablinks" onclick="openCity(event, 'Descripción')">Descripción</button>
