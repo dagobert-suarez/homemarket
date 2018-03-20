@@ -247,7 +247,6 @@ ul{
 }
 
 .tab button:hover {
-
     background-color: #CBCBCB;
 }
 
@@ -304,7 +303,7 @@ ul{
 
 }
 .form-group .k{
-    padding: 6px 6px;
+    padding: 5px 15px;
     border-radius: 1px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -315,7 +314,7 @@ ul{
     margin: 2px;
 }
 .form-group .kfile{
-   padding: 6px 8px;
+   padding: 5px 15px;
     border-radius: 1px;
     border-radius: 4px;
     width:70%;
@@ -323,13 +322,18 @@ ul{
     display: block;
 }
 .form-group .ks{
-    padding: 6px 6px;
+    padding: 5px 15px;
     border-radius: 1px;
     border: 1px solid #ccc;
     width:45%;
     border-radius: 4px;
     outline: none;
     display: block;
+}
+.k:focus, .ks:focus, .kf:focus{
+    /* border-color:#ff8200; */
+    border-color: #FEBE09;
+    transition: 0.2s;
 }
 .btntnt{
     padding: 6px 10px;

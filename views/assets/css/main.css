@@ -433,7 +433,6 @@ input[type=number]:focus,
 input[type=password]:focus,select:focus{
     border-color:#ff8200;
     transition: 0.4s;
-
 }
 
 .required::after{
