@@ -119,18 +119,18 @@ ul{
     padding: 5px  15px  10px;
     margin: 10px 0px 10px 10px;
     display: grid;
-    grid-template-columns: repeat(4   ,1fr);
+    grid-template-columns: repeat(4,1fr);
 
 }
 
 .wrap-info .wrap-cont-info{
-    widows: 98px;%;
+    /* widows: 100%; */
     height: 90px;
     margin: 5px;
     padding: 5px;
     background-color: #CBCBCB;
     border: 1px solid rgba(161,161,161,0.3);
-    border-radius:2px;
+    border-radius:1px;
     animation-name: bounceInDown;
     animation-duration:1s;
 
@@ -157,6 +157,7 @@ ul{
     min-width: 160px;
     margin-top: 15px;
     z-index: 1;
+    border: 1px solid rgba(161,161,161,0.63);
 }
 .content-down li{
     text-decoration: none;
@@ -257,7 +258,7 @@ ul{
 .contentfo {
     padding: 0px 12px 15px;
     margin: 10px 0px 0px 50px;
-    width: 88%;
+    width: 90%;
     background-color: #FEFEFE;
     border: 1px solid rgba(161, 161, 161, 0.53);
     border-radius: 4px;
@@ -303,7 +304,7 @@ ul{
 
 }
 .form-group .k{
-    padding: 6px 8px;
+    padding: 6px 6px;
     border-radius: 1px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -322,7 +323,7 @@ ul{
     display: block;
 }
 .form-group .ks{
-    padding: 6px;
+    padding: 6px 6px;
     border-radius: 1px;
     border: 1px solid #ccc;
     width:45%;
@@ -334,12 +335,12 @@ ul{
     padding: 6px 10px;
     box-sizing: border-box;
     outline: none;
-    width: 60%;
+    width: 45%;
     display: block;
     margin: 15px 0px 0px 0px;
 }
 .btntnt:hover{
-  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.72);
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.72);
 }
 
 /*  Fin Registro del empleado */

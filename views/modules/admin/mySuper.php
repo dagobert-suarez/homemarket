@@ -2,8 +2,8 @@
 
     <h1>Supermercados</h1>
     <div class="tab">
-        <button class="btntabs" onclick="openCity(event, 'Nuevo')" id="defaultOpen"><i class="fa fa-plus"></i> Nuevo</button>
-        <button class="btntabs" onclick="openCity(event, 'Supermercados')"><i class="fa fa-user"></i> Supermercados</button>
+        <button class="btntabs" onclick="openCity(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
+        <button class="btntabs" onclick="openCity(event, 'Supermercados' )"id="defaultOpen"><i class="fa fa-building"></i> Supermercados</button>
         <button class="btntabs" onclick="openCity(event, 'Nose')"><i class="fa fa-question"></i> Nose</button>
       </div>
 
@@ -43,7 +43,7 @@
                       <input  class="kfile" type="file" name="data[]" value="">
                   </div>
                   <div class="form-group">
-                      <label class="required" for="">Longuitude:</label>
+                      <label class="required" for="">Longitude:</label>
                       <input  class="k" type="bigint" name="data[]" value="">
                   </div>
               </div>
