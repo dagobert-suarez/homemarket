@@ -89,7 +89,6 @@ section.container1S{
   display: flex;
   justify-content: space-around;
   list-style-type:none;
-  /*position: fixed;*/
 }
 ul{
   text-decoration: none;
@@ -116,36 +115,22 @@ ul{
     padding: 10px;
 }
 .wrap--content .wrap-info{
-    width: 100%;
+    width: 96%;
     padding: 5px  15px  10px;
+    margin: 10px 0px 10px 10px;
     display: grid;
     grid-template-columns: repeat(4   ,1fr);
 
 }
-.wrap--content .wrap-info .wrap-fa header,
-.wrap--content .wrap-info .wrap-sell header{
-    padding: 5px;
-    border-bottom: 1px solid rgba(161, 161, 161, 0.63);
-    text-align:justify;
-}
-.wrap--content .wrap-info .wrap-fa p,
-.wrap--content .wrap-info .wrap-sell p{
-    padding: 10px ;
-}
-.wrap--content .wrap-info .wrap-fa,
-.wrap--content .wrap-info .wrap-sell{
-    /* background-color: #FEFEFE; */
-    width: 48%;
-    border: 1px solid rgba(161, 161, 161, 0.63);
-}
+
 .wrap-info .wrap-cont-info{
     widows: 98px;%;
     height: 90px;
     margin: 5px;
+    padding: 5px;
     background-color: #CBCBCB;
     border: 1px solid rgba(161,161,161,0.3);
     border-radius:2px;
-    grid-gap:50px;
     animation-name: bounceInDown;
     animation-duration:1s;
 
@@ -187,14 +172,10 @@ ul{
 }
 /*Fin de Perfil  */
 /*--------------------------------------  */
-
-/*.content-admin{
-    margin-top: 50px;
-}*/
+/
 
 /*-*.*Este es el articulo *.*-*/
-
-
+/*------------------------------*/
 .wrap--content article .wrap--btns{
     display: flex;
     justify-content: flex-end;
@@ -243,16 +224,14 @@ ul{
     text-align:  center;
 }
 .tab {
-    /* float: left; */
-    width: 80%;
-    margin: 15px 520px 0px 80px;
+    width: 90%;
+    margin: 15px 0px 0px 50px;
     border: 1px solid rgba(161,161,161,0.53);
+    border-radius: 4px;
     display: flex;
-    hei
-    /* background-color:#FEFEFE; */
+
 }
 .tab button {
-    /* display: block; */
     background-color: inherit;
     color: black;
     padding: 15px 16px;
@@ -267,8 +246,8 @@ ul{
 }
 
 .tab button:hover {
+
     background-color: #CBCBCB;
-    /* border-left: 10px solid #ddd; */
 }
 
 .tab button.active {
@@ -276,13 +255,12 @@ ul{
 }
 
 .contentfo {
-    /* float: left; */
-    padding: 0px 12px;
-    margin: 15px 60px 0px 80px;
-    width: 80%;
-    border-left: none;
+    padding: 0px 12px 15px;
+    margin: 10px 0px 0px 50px;
+    width: 88%;
     background-color: #FEFEFE;
     border: 1px solid rgba(161, 161, 161, 0.53);
+    border-radius: 4px;
     justify-content: space-around;
     font-family:'Catamaran',sans-serif;
     align-items: center;
@@ -290,43 +268,78 @@ ul{
 }
 .contentfo h3{
     margin: 15px auto;
+    color: #465661;
 }
 .content-form {
-    display: block;
-    padding: 5px;
-    justify-content: flex-start;
-    margin: 0px 170px;
-    /* width: 100%; */
+   display: grid;
+    grid-template-columns: repeat(2 ,1fr);
 }
-/* input[type=text],
-input[type=email],
-input[type=number],
-input[type=password],
-input[type=date]
-,select{
-    margin: 5px 20px 1px;
-    width: 95%;
-    padding: 5px 15px;
-    border: 1px solid rgb(182, 182, 182);
-    line-height: 1.20;
-    font-size: 14px;
+.form-group{
+  margin: 10px 20px 0px;
+   display:block;
+   justify-content: left;r
+}
+.required{
+  display: block;
+  font-size: 17px;
+  text-align: left;
+  margin:0px 0px 5px 6px;
+}
+.required::after{
+    content: " * ";
+    color: #fa7000;
+}
+.opcional{
+  display: block;
+  font-size: 17px;
+  text-align: left;
+  margin:0px 0px 5px 6px;
+}
+.opcional::after{
+    content: " (Opcional) ";
+    color: gray;
+    font-family: 'Cabin';
+    font-style: oblique;
+
+}
+.form-group .k{
+    padding: 6px 8px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width:60%;
     outline: none;
     display: block;
-} */
-
-
-.noda{
-    padding: 6px 10px;
-    width: 100%;
-    margin:25px 50px 0px 100px;
+    background-color: inherit;
+    margin: 2px;
 }
-.formWorker label{
-    margin: 0px 0px 1px;
+.form-group .kfile{
+   padding: 6px 8px;
+    border-radius: 1px;
+    border-radius: 4px;
+    width:70%;
+    outline: none;
+    display: block;
+}
+.form-group .ks{
+    padding: 6px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    width:45%;
+    border-radius: 4px;
+    outline: none;
+    display: block;
 }
 .btntnt{
     padding: 6px 10px;
-    width: 100%;
-    margin:25px 50px 0px 100px;
+    box-sizing: border-box;
+    outline: none;
+    width: 60%;
+    display: block;
+    margin: 15px 0px 0px 0px;
+}
+.btntnt:hover{
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.72);
 }
 
 /*  Fin Registro del empleado */
