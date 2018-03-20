@@ -1,9 +1,9 @@
 <!-- empieza menu -->
 
       <div class="menuS--top">
-          <div class="icon--mobile">
+          <!-- <div class="icon--mobile">
               <i class="fa fa-bars"></i>
-          </div>
+          </div> -->
           <div class="user--name">
               <?php
               echo $_SESSION['USER']['NAME'];
@@ -12,8 +12,8 @@
           <div class="down">
               <a href="#" class="down-all">Perfil <i class="fa fa-caret-down"></i></a>
               <div class="content-down">
-                  <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
-                  <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</a></li>
+                  <li><a href=""><i class="fa fa-bell" aria-hidden="true"></i>  Notificaciones</a></li>
+                  <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i>  Ajustes</a></li>
 
               </div>
           </div>

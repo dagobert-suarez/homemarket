@@ -30,19 +30,19 @@ section.container1S{
 }
 .main--nav nav ul{
     margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #323232;
-    border-bottom:1px solid #323232;
+    padding-top: 12px;
+    border-top: 1px solid rgba(161, 161, 161, 0.63);
+    border-bottom:1px solid rgba(161, 161, 161, 0.63);
     padding-bottom: 30px;
 }
 .main--nav nav ul a li{
-    padding: 13px;
+    padding: 15px;
     padding-left:20px;
 }
 .main--nav nav ul a li:hover{
-    background-color: rgba(31, 33, 34,0.15);
+    background-color: #F0F1F1;
     color:  black;
-    border-left: 5px solid rgb(31,33,34);
+    border-left: 10px solid #FEBF0D;
     transition: 0.3s all;
 }
 .wrap--content{
@@ -91,9 +91,10 @@ section.container1S{
     display: none;
     position: absolute;
     background-color: #FDFDFD;
-    box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.3);
+    border-top:  1px solid rgba(161,161,161,0.63);
     min-width: 160px;
-    margin-top: 15px;
+    margin-top: 12px;
     z-index: 1;
 }
 .content-down li{
@@ -110,5 +111,3 @@ section.container1S{
 }
 /*Fin de Perfil  */
 /*--------------------------------------  */
-
-
