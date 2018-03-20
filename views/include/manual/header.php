@@ -10,11 +10,6 @@
   </head>
   <body>
     <header>
-<<<<<<< HEAD
-      
-=======
-
->>>>>>> ba6b39dec8388cea42b2c470493cae2a1b766ff7
     </header>
     <nav>
       <a href="inicio"><i class="fa fa-angle-double-left"> inicio</i></a>
