@@ -311,7 +311,7 @@ ul{
     outline: none;
     display: block;
     background-color: inherit;
-    margin: 2px;
+    margin: 5px;
 }
 .form-group .kfile{
    padding: 5px 15px;
@@ -329,6 +329,7 @@ ul{
     border-radius: 4px;
     outline: none;
     display: block;
+    margin:5px;
 }
 .k:focus, .ks:focus, .kf:focus{
     /* border-color:#ff8200; */

@@ -42,9 +42,9 @@
                       <label  class="required" for="">Logo del Supermercado:</label>
                       <input  class="kfile" type="file" name="data[]" value="">
                   </div>
-                  <div class="form-group">
-                      <button type="button" name="button" class="btntnt">Registrar</button>
-                  </div>
+                      <div class="form-group">
+                          <button type="button" name="button" class="btntnt">Registrar</button>
+                      </div>
                   <!-- <div class="form-group">
                       <label class="required" for="">Longitude:</label>
                       <input  class="k" type="bigint" name="data[]" placeholder="Longitude" value="">
