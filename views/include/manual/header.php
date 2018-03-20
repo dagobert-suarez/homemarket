@@ -10,6 +10,7 @@
   </head>
   <body>
     <header>
+    <header>
     </header>
     <nav>
       <a href="inicio"><i class="fa fa-angle-double-left"> inicio</i></a>

@@ -5,7 +5,7 @@
 
     </header>
     <div class="wrap-form">
-        <p>Actualizar la contraseña, los datos personales</p>
+        <!-- <p>Actualizar la contraseña, los datos personales</p> -->
         <div class="form-group">
             <label for="">Nombre:</label>
             <input type="text" name="" value="" placeholder="Nombre">
