@@ -85,13 +85,14 @@ class UserController{
 		}
 	}
 
-	function validarEmail($data){
+	function validarEmail($data){ 	
 	if(filter_var($data, FILTER_VALIDATE_EMAIL)===false){
 		return false;
 	}else{
 		return true;
 	}
 }
+
 
 
 //solo la parte de validar contraseña

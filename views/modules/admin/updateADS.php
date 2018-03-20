@@ -30,7 +30,7 @@ $data = $this->readBy($_SESSION['USER']['rol']);
                 <input type="number" name="data[]" value="<?php echo $data['tel_usu']?>" >
             </div>
             <div class="form-group">
-                <button type="submit" name="button" class="btnsave">Actualizar</button>
+                <button type="submit" name="button" class="btnact">Actualizar</button>
             </div>
         </form>
         <div class="form-group">

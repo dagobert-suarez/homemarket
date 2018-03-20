@@ -31,9 +31,9 @@
         <td><?php echo $row["mar_pro"]; ?></td>
         <td><?php echo $row["des_pro"]; ?></td>
         <td>
-            <a href="#" class="abrirmodal"><i class="fa fa-pencil" aria-hidden="true">Editar</i></a>
-            <a href="#" class="modalDet"><i class="fa fa-info-circle" aria-hidden="true">Detalles</i></a>
-            <a href="eliminar-producto-<?php echo $row['cod_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true">Eliminar</i></a>
+            <a href="#" class="abrirmodal"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+            <a href="#" class="modalDet"><i class="fa fa-info-circle" aria-hidden="true"></i>Detalles</a>
+            <a href="eliminar-producto-<?php echo $row['cod_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true"></i>Eliminar</a>
         </td>
       </tr>
       <?php
@@ -52,6 +52,8 @@
           </div>
           <div class="wrap-bod">
                   <label for="">Nombre de la Producto:</label>
+                  <input type="text" name="" value=""><br><label for="">descripcion de la Producto:</label>
+                  <input type="text" name="" value=""><br><label for="">Marca de la Producto:</label>
                   <input type="text" name="" value=""><br><label for="">descripcion de la Producto:</label>
                   <input type="text" name="" value=""><br>
                   <button type="button" name="button">Actualizar</button>

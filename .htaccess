@@ -30,7 +30,7 @@ RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 RewriteRule ^mi-supermercado$ index.php?controller=views&a=mySuper
 RewriteRule ^Articulos$ index.php?controller=views&a=articulos
 RewriteRule ^Información$ index.php?controller=views&a=informacion
-RewriteRule ^actualizar-datos$ index.php?controller=views&a=update
+RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado
 RewriteRule ^Registrar-empleado$ index.php?controller=nworkers&a=registroEmpleado
 RewriteRule ^Empleados$ index.php?controller=views&a=Workers
@@ -51,6 +51,8 @@ RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewswor
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^createCategory$ index.php?controller=product&a=createCategory
+RewriteRule ^actualizar-categoria$ index.php?controller=product&a=updateCat&data=$1
+
 
 
 #super administrador

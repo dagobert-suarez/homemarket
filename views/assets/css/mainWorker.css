@@ -97,7 +97,7 @@ section.container1k{
     box-sizing: border-box;
     margin: 10px auto;
     border-radius: 1px;
-    color: #EBEBEB;
+    color: #465966;
 }
 /*-*.* Fin de Menú principal*.*-*/
 /* ---------------------------- */
@@ -335,6 +335,10 @@ background-color: rgb(196, 196, 196);
     margin: 10px;
     align-items: center;
 }
+.close{
+    cursor: pointer;
+    font-size: 30px;
+}
 
 /*  Fin Modal de Actualizar categoria */
 /* ------------------------------- */
@@ -368,6 +372,10 @@ background-color: rgb(196, 196, 196);
     padding: 15px;
     color: #465661;
     font-family: 'Montserrat',sans-serif;
+}
+.closedet{
+    font-size: 30px;
+    cursor: pointer;
 }
 /*  Fin Modal de Detalles categoria */
 /* ------------------------------- */
