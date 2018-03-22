@@ -1,6 +1,6 @@
 <!-- empieza lo de los ajustes -->
 <?php
-$data = $this->readBy($_SESSION['USER']['rol']);
+// $data = $this->readBy($_SESSION['USER']['rol']);
 ?>
 <div class="module--Sett">
     <header >

@@ -135,6 +135,15 @@ ul{
     animation-duration:1s;
 
 }
+.wrap-info .wrap-cont-info header{
+    padding: 3px;
+}
+.wrap-info .wrap-cont-info p{
+    font-size: 18px;
+    padding: 10px 0px 5px 8px;
+    text-transform: full-width;
+    color: rgba(85, 85, 85, 0.92);
+}
 /*finaliza menú top*/
 /*  Perfil */
 /* ---------------------------- */

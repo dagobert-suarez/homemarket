@@ -14,7 +14,7 @@
        </div>
 </div>
 <div class="wrap-info">
-    
+
      <div class="wrap-cont-info">
          <header>
              <h3> las cosas</h3>
@@ -23,19 +23,19 @@
      </div>
      <div class="wrap-cont-info">
          <header>
-             <h3></h3>
+             <h3> Proveedores</h3>
          </header>
-         <p>muchos</p>
+         <p>Cantidad de Proveedores <?php echo  $this->maLass(); ?> </p>
      </div> <div class="wrap-cont-info">
           <header>
-              <h3></h3>
+              <h3>Categorías</h3>
           </header>
-          <p>muchos</p>
+          <p>Cantidad de Categorías</p>
       </div> <div class="wrap-cont-info">
            <header>
-               <h3></h3>
+               <h3>Empleados</h3>
            </header>
-           <p>muchos</p>
+           <p>Cantidad de Empleados</p>
        </div>
 
    </div>
