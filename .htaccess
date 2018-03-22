@@ -23,6 +23,8 @@ RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
+RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
+
 
 
 #supermercado
@@ -47,6 +49,8 @@ RewriteRule ^settings-worker$ index.php?controller=views&a=settingsworker
 RewriteRule ^Retrasos$ index.php?controller=views&a=retrasos
 RewriteRule ^Pedidos$ index.php?controller=views&a=pedidos
 RewriteRule ^ProveedoresEm$ index.php?controller=views&a=proveedoresEm
+RewriteRule ^actualizar-datosEm$ index.php?controller=views&a=updateEm
+
 
 #CRUD productos
 #----------------

@@ -35,6 +35,11 @@ class ProductController{
     require_once "views/modules/cliente/viewSuper.php";
     require_once "views/modules/cliente/footer.php";
   }
+  function mySuper(){
+      require_once "views/modules/admin/header-admin.php";
+      require_once "views/modules/admin/mySuper.php";
+      require_once "views/modules/admin/footer_admin.php";
+  }
 
   function Produtosviewsworker(){
     require_once "views/modules/worker/header.php";

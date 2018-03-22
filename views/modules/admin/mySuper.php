@@ -73,19 +73,23 @@
         <!-- ----------------->
       <div id="Categorias" class="contentfo">
         <h3>Categorías</h3>
-        <button type="button" id="abrirCate" name="button">Nueva categoría</button>
+        <button type="button" id="openCate" name="button">Nueva categoría</button>
         <div id="fondo"></div>
         <div id="wrapmodal">
             <div id="modal">
-                <h3>Nueva Categoría</h3>
-                <i class="close">&times</i>
-                <form class="" action="" method="post">
+                <div class="wrap-tit">
+                    <h1>Nueva Categoría</h1>
+                    <i id="closeCate"  class="close">&times;</i>
+                </div>
+                <div class="wrap-bod">
                     <div class="form-group">
-                        <label class="required" for="">Nombre de la Categoría:</label>
-                        <input  class="ks" type="text" name="" value="" placeholder="Nombre">
+                        <form  action="" method="post">
+                            <label class="required" for="">Nombre de la categoría:</label>
+                            <input class="k" type="text" name="" value="" placeholder="Nombre"><br>
+                            <button type="submit" name="button">Registrar</button>
+                        </form>
                     </div>
-                    <button type="submit" name="button">Registrar </button>
-                </form>
+                </div>
             </div>
         </div>
       </div>

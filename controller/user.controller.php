@@ -68,6 +68,13 @@ class UserController{
         header("Location: inicio");
       }
     }
+	function updatecli(){
+		$data = $_POST['data'];
+		$data[]=$_SESSION['USER']['ID'];
+		$result = $this->userModel->update($data);
+		header("Location: Ajustes");
+	}
+
 	//los ajustes del cliente
 	// ----------------------- //
 	function ajustes(){
@@ -85,7 +92,7 @@ class UserController{
 		}
 	}
 
-	function validarEmail($data){ 	
+	function validarEmail($data){
 	if(filter_var($data, FILTER_VALIDATE_EMAIL)===false){
 		return false;
 	}else{

@@ -19,6 +19,7 @@ document.getElementById("defaultOpen").click();
 
 //  Fin   de Esta es la parte de los tabs
 // -----------------------------
+
 // Modal de la Categoria
 //  --------------------------
 // var fondo = document.getElementById('fondo');
@@ -29,17 +30,18 @@ document.getElementById("defaultOpen").click();
 //     fondo.style.display "block";
 //     wrap.style.display "block";
 // };
- var abrirCate = document.getElementById('abrirCate');
+ var openCate = document.getElementById('openCate');
  var fondo = document.getElementById('fondo');
  var wrap = document.getElementById('wrap');
  var wrapmodal = document.getElementById('wrapmodal');
+ var close = document.getElementById('closeCate')
 
- abrirCate.onclick = function(){
+ openCate.onclick = function(){
      fondo.style.display = "block";
      wrapmodal.style.display = "block";
  };
 
- fondo.onclick = function(){
+close.onclick = function(){
      fondo.style.display = "none";
      wrapmodal.style.display = "none";
  };

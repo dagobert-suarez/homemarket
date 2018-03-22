@@ -96,6 +96,13 @@ die();
 			header ('Location: inicio');
 		}
 	}
+	// Actualizar los datos del Empleados
+	function updateEm(){
+		$data = $_POST['data'];
+		$data[]=$_SESSION['USER']['ID'];
+		$result = $this->userModel->update($data);
+		header("Location: settings-worker");
+	}
 
 	//los ajustes del empleado
 	// ------------------------------
