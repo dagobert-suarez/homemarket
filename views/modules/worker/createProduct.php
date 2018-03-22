@@ -46,6 +46,7 @@
         <select class="" name="data[]">
           <option value="">kg</option>
           <option value="">lb</option>
+          <option value="">gr</option>
           <option value="">lts</option>
         </select>
       </div>
