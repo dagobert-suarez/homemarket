@@ -6,7 +6,7 @@
           </div>
           <div class="user--name">
               <?php
-              // echo $_SESSION['USER']['NAME'];
+              echo $_SESSION['USER']['NAME'];
               ?>
           </div>
           <div class="down">
