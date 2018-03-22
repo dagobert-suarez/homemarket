@@ -1,4 +1,7 @@
-function openCity(evt, cityName) {
+// Esta es la parte de los tabs
+// -----------------------------
+
+function Name(evt, cityName) {
     var i, contentfo, btntabs;
     contentfo = document.getElementsByClassName("contentfo");
     for (i = 0; i < contentfo.length; i++) {
@@ -11,6 +14,8 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+//  Fin   de Esta es la parte de los tabs
+// -----------------------------

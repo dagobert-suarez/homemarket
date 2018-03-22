@@ -2,9 +2,10 @@
 
     <h1>Supermercados</h1>
     <div class="tab">
-        <button class="btntabs" onclick="openCity(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
-        <button class="btntabs" onclick="openCity(event, 'Supermercados' )"id="defaultOpen"><i class="fa fa-building"></i> Supermercados</button>
-        <button class="btntabs" onclick="openCity(event, 'Nose')"><i class="fa fa-question"></i> Nose</button>
+        <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
+        <button class="btntabs" onclick="Name(event, 'Supermercados' )"id="defaultOpen"><i class="fa fa-building"></i> Supermercados</button>
+        <button class="btntabs" onclick="Name(event, 'Categorias')"><i class="fa fa-clipboard"></i> Categorias</button>
+        <button class="btntabs" onclick="Name(event, 'Productos')"><i class="fa fa-shopping-basket"></i> Productos</button>
       </div>
 
       <div id="Nuevo" class="contentfo">
@@ -43,7 +44,7 @@
                       <input  class="kfile" type="file" name="data[]" value="">
                   </div>
                       <div class="form-group">
-                          <button type="button" name="button" class="btntnt">Registrar</button>
+                          <button type="submit" name="button" class="btntnt">Registrar</button>
                       </div>
                   <!-- <div class="form-group">
                       <label class="required" for="">Longitude:</label>
@@ -61,13 +62,22 @@
           <!-- <h1>the record is missing</h1> -->
         </div>
       </div>
-
+      <!-- Supermercado-->
+      <!-- ----------------->
       <div id="Supermercados" class="contentfo">
         <h3>Supermercados</h3>
+        <p> para ver los supermercados</p>
 
       </div>
-
-      <div id="Nose" class="contentfo">
-        <h3>Nose</h3>
+        <!-- Categoria -->
+        <!-- ----------------->
+      <div id="Categorias" class="contentfo">
+        <h3>Categorias</h3>
       </div>
+      <!-- Productos -->
+      <!-- ----------------->
+      <div id="Productos" class="contentfo">
+        <h3>Productos</h3>
+      </div>
+
 </div>
