@@ -51,6 +51,17 @@ class ProductModel{
       }
       return $result;
   }
+  function updateCat(){
+    try{
+    $sql="UPDATE tipo_producto SET nom_tip_pro=nom_tip_pro WHERE id_tip_pro=id_tip_pro;";
+    $query=$this->pdo->prepare($sql);
+    $query->execute($data[1],$data[0]);
+    $result = $query->fetchALL(PDO::FETCH_BOTH);
+    } catch (PDOException $e) {
+          $result = $e->getMessage();
+      }
+      return $result;
+  }
 
 
 

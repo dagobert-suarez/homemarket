@@ -51,7 +51,6 @@ class ProductController{
          $result = $this->product->createProduct($data);
          echo '<script language="javascript">alert("creado con exito");</script>';
          echo "<script>window.location.href='nuevo-producto'</script>";
-
       }
       // ------------------- //
 
@@ -74,13 +73,22 @@ class ProductController{
 
   }
 
+// Categorias
+// ------------
 
   //visualiza las  categorias en la pagina del admin
   function readCategory(){
     $result = $this->product->readCategory();
     return  $result;
-
   }
+  public function updateCat(){
+         $data =$_POST['data'];
+         $result = $this->product->updateCat($data);
+         // print_r
+         // header("Location:")
+     }
+
+
    public function updateProc(){
        $data =$_POST['data'];
        $result = $this->product->updateProc($data);

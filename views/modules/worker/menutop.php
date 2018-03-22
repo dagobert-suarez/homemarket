@@ -4,13 +4,13 @@
     </div> -->
     <div class="user--name">
         <?php
-        echo $_SESSION['USER']['NAME'];
+        // echo $_SESSION['USER']['NAME'];
         ?>
     </div>
     <div class="down">
         <a href="#" class="down-all">Perfil <i class="fa fa-caret-down"></i></a>
         <div class="content-down">
-            <li><i class="fa fa-bell" aria-hidden="true"></i> </li>
+            <li><i class="fa fa-bell" aria-hidden="true"></i> Notificaciones</li>
             <li><a href="settings-worker"><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</a></li>
 
         </div>
