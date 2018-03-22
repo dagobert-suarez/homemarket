@@ -12,7 +12,7 @@
           <div class="down">
               <a href="#" class="down-all">Perfil <i class="fa fa-caret-down"></i> </a>
               <div class="content-down">
-                  <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i>Notificaciones</a> </li>
+                  <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i> Notificaciones</a> </li>
                   <li><a href="settings-Super"><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</a></li>
 
               </div>

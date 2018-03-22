@@ -4,7 +4,7 @@
     <div class="tab">
         <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
         <button class="btntabs" onclick="Name(event, 'Supermercados' )"id="defaultOpen"><i class="fa fa-building"></i> Supermercados</button>
-        <button class="btntabs" onclick="Name(event, 'Categorias')"><i class="fa fa-clipboard"></i> Categorias</button>
+        <button class="btntabs" onclick="Name(event, 'Categorias')"><i class="fa fa-clipboard"></i> Categorías</button>
         <button class="btntabs" onclick="Name(event, 'Productos')"><i class="fa fa-shopping-basket"></i> Productos</button>
       </div>
 
@@ -72,7 +72,22 @@
         <!-- Categoria -->
         <!-- ----------------->
       <div id="Categorias" class="contentfo">
-        <h3>Categorias</h3>
+        <h3>Categorías</h3>
+        <button type="button" id="abrirCate" name="button">Nueva categoría</button>
+        <div id="fondo"></div>
+        <div id="wrapmodal">
+            <div id="modal">
+                <h3>Nueva Categoría</h3>
+                <i class="close">&times</i>
+                <form class="" action="" method="post">
+                    <div class="form-group">
+                        <label class="required" for="">Nombre de la Categoría:</label>
+                        <input  class="ks" type="text" name="" value="" placeholder="Nombre">
+                    </div>
+                    <button type="submit" name="button">Registrar </button>
+                </form>
+            </div>
+        </div>
       </div>
       <!-- Productos -->
       <!-- ----------------->
