@@ -93,7 +93,6 @@ class ProductController{
          // header("Location:")
      }
 
-
    public function updateProc(){
        $data =$_POST['data'];
        $result = $this->product->updateProc($data);
@@ -112,6 +111,4 @@ class ProductController{
     echo "<script>window.location.href='Productosadmin'</script>";
   }
 }
-
-
 ?>
