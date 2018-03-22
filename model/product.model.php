@@ -28,9 +28,9 @@ class ProductModel{
 //crear un nuevo producto: envia datos a bd
   function createProduct($data){
     try{
-      $sql = "call crear_pro(?,?,?,?,?,?,?,?)";
+      $sql = "call crear_pro(?,?,?,?,?,?,?,?,?)";
       $query = $this->pdo->prepare($sql);
-      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
+      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8]));
 
       $msn = "registro con exito";
     }catch (PDOException $e) {

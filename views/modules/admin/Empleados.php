@@ -10,14 +10,14 @@
   <div id="Nuevo" class="contentfo">
     <h3>Registrar Empleado</h3>
     <div class="frmworker">
-      <form class="frmregistro">
+      <form id="frmregistro">
           <div class="content-form">
                 <div class="form-group">
-                    <label class="required" for="">Nombres del Empleado:</label>
+                    <label class="required" for="">Nombre del Empleados:</label>
                     <input class="k"  type="text" name="data[]" placeholder="Nombres" value="">
                 </div>
                 <div class="form-group">
-                    <label class="required" for="">Apellidos del Empleado:</label>
+                    <label class="required" for="">Apellido del Empleado:</label>
                     <input  class="k" type="text" name="data[]" placeholder="Apellidos" value="">
                 </div>
           </div>
@@ -38,11 +38,11 @@
           <div class="content-form">
               <div class="form-group">
                   <label class="opcional" for="">Teléfono:</label>
-                  <input  class="k" type="number" name="data[]" placeholder="Teléfono" value="">
+                  <input  class="k" type="number" name="data[]" placeholder="Teléfono" value="" id="telefono">
               </div>
               <div class="form-group">
                   <label class="required" for="">Correo del Empleado:</label>
-                  <input  class="k" type="email" name="data[]" placeholder="Correo" value="">
+                  <input  class="k" type="email" name="data[]" placeholder="Correo" value="" id="correo">
               </div>
           </div>
           <div class="content-form">
@@ -58,8 +58,12 @@
               </div>
               <div class="form-group">
                   <label class="required" for="">Contraseña:</label>
-                  <input  class="k" type="password" name="data[]" value="" placeholder="Contraseña" class="noda">
+                  <input  class="k" type="password"  name="data[]" value="" placeholder="Contraseña" class="noda" id="password">
               </div>
+              <!-- <div class="form-gruop">
+                    <label  class="required" for="">verificar contraseña</label>
+                    <input type="password" name="rpassword" id="rpassword"  placeholder="Minimo(8) caracteres, incluir almenos un numero y una Mayuscula">
+              </div> -->
           </div>
           <div class="content-form">
               <div class="form-group">
