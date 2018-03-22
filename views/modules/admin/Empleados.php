@@ -13,13 +13,9 @@
       <form id="frmregistro">
           <div class="content-form">
                 <div class="form-group">
-<<<<<<< HEAD
-                    <label class="required" for="">Nombres del Empleado:</label>
-                    <input class="k"  type="text" name="data[]" placeholder="Nombres" value="" re>
-=======
+
                     <label class="required" for="">Nombre del Empleados:</label>
                     <input class="k"  type="text" name="data[]" placeholder="Nombres" value="">
->>>>>>> b6eb3670e590e015ac50d44031bc27a727989c20
                 </div>
                 <div class="form-group">
                     <label class="required" for="">Apellido del Empleado:</label>
