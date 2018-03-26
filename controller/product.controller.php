@@ -81,7 +81,8 @@ class ProductController{
 // Categorias
 // ------------
 
-  //visualiza las  categorias en la pagina del admin
+// crud categorias
+  //visualiza las  categorias en la pagina del empleado
   function readCategory(){
     $result = $this->product->readCategory();
     return  $result;
@@ -92,6 +93,12 @@ class ProductController{
          header("Location:nueva-categoria");
      }
 
+     public function readByCategory($data){
+       $result = $this->product->readByCat($data);
+       return $result;
+     }
+
+     // crud productos
    public function updateProc(){
        $data =$_POST['data'];
        $result = $this->product->updateProc($data);

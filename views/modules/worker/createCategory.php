@@ -1,3 +1,6 @@
+<?php
+	$dataCategory = $this -> readByCategory($_GET["data"]);
+?>
 <section>
 	<div  class="categorymodal">
 		<form  class="modal-content-category" action="createCategory" method="post">
@@ -60,8 +63,8 @@
 			<div class="wrap-bod">
 				<form  name="frmCategory" action="actualizar-categoria" method="post">
 					<label for="">Nombre de la categoria:</label>
-					<input type="text" readonly name="data[]" value="<?php echo $_GET["data"] ?>"><br>
-					<input type="text" name="data[]" value="<?php echo $dataProduct["nom_tip_pro"];?>"><br>
+	
+					<input type="text" name="data[]" required value="<?php echo $dataCategory["nom_tip_pro"];?>"><br>
 					<button type="submit" name="button">Actualizar</button>
 				</form>
 
