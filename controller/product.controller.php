@@ -104,11 +104,11 @@ class ProductController{
     echo '<script language="javascript">alert("ya se elimino");</script>';
     echo "<script>window.location.href='nueva-categoria'</script>";
   }
- public function deleteProd(){
+ public function deleteProduct(){
     $data = $_GET['data'];
     $result = $this->product->deletePro($data);
     echo '<script language="javascript">alert("ya se elimino");</script>';
-    echo "<script>window.location.href='Productosadmin'</script>";
+    echo "<script>window.location.href='Productos-empleado'</script>";
   }
 }
 ?>

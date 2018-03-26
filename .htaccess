@@ -57,7 +57,7 @@ RewriteRule ^actualizar-datosEm$ index.php?controller=views&a=updateEm
 RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
 RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
 RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
-RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&data=$1
+RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProduct&data=$1
 RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewsworker
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria

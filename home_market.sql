@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-03-2018 a las 21:34:55
--- Versión del servidor: 10.1.21-MariaDB
--- Versión de PHP: 7.0.15
+-- Tiempo de generación: 22-03-2018 a las 23:32:08
+-- Versión del servidor: 10.1.29-MariaDB
+-- Versión de PHP: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -28,6 +30,30 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `buscarPro` (IN `nom_pro` VARCHAR(30
 SELECT nom_pro, des_pro, img_pro,mar_pro, valVen_pro, nom_tip_pro FROM productos INNER JOIN tipo_producto WHERE productos.id_tip_pro = tipo_producto.id_tip_pro;
 END$$
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `consulta_categoria` (IN `nom_tip_pro` VARCHAR(30))  BEGIN 
+SELECT nom_tip_pro AS Nombre FROM tipo_producto WHERE nom_tip_pro=tipo_producto.nom_tip_pro;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `consulta_em` ()  BEGIN 
+SELECT nom_usu AS Nombre,ape_usu AS Apellido,gen_usu AS Sexo,tel_usu AS Telefono,email_usu AS Email FROM usuario WHERE id_rol=3;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `consulta_pedido` ()  BEGIN 
+SELECT fec_ped,nom_usu,id_usu_emp,nom_sup,tot_com FROM pedido inner JOIN usuario ON pedido.id_usu= usuario.id_usu inner JOIN supermercado ON pedido.id_sup=supermercado.id_sup;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `consulta_productos` (IN `nom_pro` VARCHAR(30))  BEGIN 
+SELECT nom_pro AS Nombre,des_pro AS Descripcion,mar_pro AS Marca,uniMed_pro AS Medida,valVen_pro AS Precio FROM productos WHERE nom_pro=productos.nom_pro;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `consulta_proveedor` (`nom_prov` VARCHAR(30))  BEGIN 
+SELECT nom_prov AS Nombre, dir_prov AS Dirección, tel_prov AS Telefono FROM proveedores WHERE nom_prov=proveedores.nom_prov;
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `consulta_super` (`nom_sup` VARCHAR(30))  BEGIN
+SELECT nom_sup AS Nombre,dir_sup AS Direccion,tel_sup AS Telefono,logo_sup AS Logo FROM supermercado WHERE nom_sup=supermercado.nom_sup;
+END$$
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `CrearAcceso` (IN `token` VARCHAR(255), IN `contra` VARCHAR(255), IN `usu` INT)  NO SQL
 BEGIN 
 INSERT INTO acceso VALUES(token,contra,usu);
@@ -41,9 +67,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pedido` (IN `emp_ped` INT, IN
 INSERT INTO pedido(emp_ped,fec_ped,id_usu,dir_ped,id_sup) VALUES(emp_ped,fec_ped,id_usu,dir_ped,id_sup);
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT, IN `img_pro` VARCHAR(255), IN `id_sup` INT)  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `img_pro` VARCHAR(255), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT, IN `id_sup` INT)  BEGIN
  
- INSERT INTO productos(nom_pro,des_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro) VALUES (nom_pro,des_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro);
+ INSERT INTO productos(nom_pro,des_pro,img_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro) VALUES (nom_pro,des_pro,img_pro,mar_pro,id_tip_pro,can_pro,fec_ing_pro,uniMed_pro,valVen_pro);
  
  END$$
 
@@ -150,7 +176,7 @@ CREATE TABLE `acceso` (
 
 INSERT INTO `acceso` (`token`, `contra`, `id_usu`) VALUES
 ('380480d3f4782f8907e65f2b0516c479', '$2y$10$6uRqKoW7awkijHOmY7aMD.uIvhUFQSxAXfv7Yr4yUwkjsjb.tZnOi', 6790),
-('5f2f9c1fa9357c5a5707c976d142550b', '$2y$10$aOeM769yhmbEVHC6Nf.J/.KPTt8gG9aa3z1jMB3lHKpGQxqRbAV6y', 6791),
+('ceb22451d38fab0fdc3e6e18d3241584', '$2y$10$ZdClOZGo0sEKYUQI6svdDuSHuzz0sM0.VdeKxyaMqcQnDoYahaHbi', 6791),
 ('sqwlk8j76t3ewrtyn', 'asdfertyut', 6789);
 
 -- --------------------------------------------------------
@@ -292,19 +318,21 @@ INSERT INTO `pais` (`cod_pais`, `nom_pais`) VALUES
 
 CREATE TABLE `pedido` (
   `cod_ped` int(30) NOT NULL,
-  `emp_ped` int(11) DEFAULT NULL,
   `fec_ped` date DEFAULT NULL,
   `id_usu` int(11) DEFAULT NULL,
   `dir_ped` varchar(30) DEFAULT NULL,
-  `id_sup` int(11) DEFAULT NULL
+  `id_sup` int(11) DEFAULT NULL,
+  `id_usu_emp` int(11) DEFAULT NULL,
+  `tot_com` decimal(18,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `pedido`
 --
 
-INSERT INTO `pedido` (`cod_ped`, `emp_ped`, `fec_ped`, `id_usu`, `dir_ped`, `id_sup`) VALUES
-(456, 1, '2018-03-13', 6789, 'mmmk ,.', NULL);
+INSERT INTO `pedido` (`cod_ped`, `fec_ped`, `id_usu`, `dir_ped`, `id_sup`, `id_usu_emp`, `tot_com`) VALUES
+(456, '2018-03-13', 6789, 'mmmk ,.', NULL, NULL, NULL),
+(457, '2018-03-06', 6789, 'dsfghw4', 1, 1, '2345.00');
 
 -- --------------------------------------------------------
 
@@ -353,10 +381,7 @@ CREATE TABLE `productos` (
 
 INSERT INTO `productos` (`id_pro`, `nom_pro`, `des_pro`, `img_pro`, `mar_pro`, `id_tip_pro`, `can_pro`, `uniMed_pro`, `valVen_pro`, `id_sup`) VALUES
 (3, 'arroz', 'arroz', NULL, 'roa', 22456, 3, 'kg', 1213460, NULL),
-(5, 'cosas', 'decosas', '1600', 'mascosas', 22456, 12, 'libra', 1400, NULL),
-(6, 'pastas', 'de las buenas', '1700', 'doria', 22456, 12, 'kg', 1500, NULL),
-(7, 'pastas', 'buenas', '1600', 'doria', 22456, 12, 'kg', 1200, NULL),
-(8, 'afsfas', 'sadsadsadasaaas', '123213', 'asd', 22456, 23322, '32133', 123121000000, NULL);
+(4, 'LECHE', 'asdfghj', NULL, 'colanta', 22456, 234, 'l', 2098, 1);
 
 -- --------------------------------------------------------
 
@@ -483,8 +508,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id_usu`, `nom_usu`, `ape_usu`, `fec_nac_usu`, `gen_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`) VALUES
 (6789, 'alex', 'muñoz', '2018-03-12', 'm', '12345678', 'alex@gmail.com', 1, 1),
-(6790, 'David', 'Herrera', '1999-11-29', 'm', '323', 'guffyk2@gmail.com', 1, 1),
-(6791, 'dagobert', 'suarez', '1999-09-27', 'm', '12121212', 'dago@gmail.com', 1, 3);
+(6790, 'David', 'Herrera', '1999-11-29', 'm', '323', 'guffyk2@gmail.com', 1, 2),
+(6791, 'alex', 'muÃ±oz', '1999-05-31', 'm', '23456', 'alexis@gmail.com', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -647,46 +672,55 @@ ALTER TABLE `usuario_supermercado`
 --
 ALTER TABLE `calificacion`
   MODIFY `id_cal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
   MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=457;
+  MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=458;
+
 --
 -- AUTO_INCREMENT de la tabla `permisos`
 --
 ALTER TABLE `permisos`
   MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
   MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=766;
+
 --
 -- AUTO_INCREMENT de la tabla `supermercado`
 --
 ALTER TABLE `supermercado`
   MODIFY `id_sup` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
 ALTER TABLE `tipo_producto`
   MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22457;
+
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6792;
+
 --
 -- Restricciones para tablas volcadas
 --
@@ -776,6 +810,7 @@ ALTER TABLE `usuario`
 ALTER TABLE `usuario_supermercado`
   ADD CONSTRAINT `usuario_supermercado_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`id_usu`) ON UPDATE CASCADE,
   ADD CONSTRAINT `usuario_supermercado_ibfk_2` FOREIGN KEY (`id_sup`) REFERENCES `supermercado` (`id_sup`) ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
