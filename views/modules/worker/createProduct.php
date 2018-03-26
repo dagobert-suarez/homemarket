@@ -51,10 +51,6 @@
         </select>
       </div>
       <div class="">
-        <label for="" class="required">valor compra</label>
-        <input type="number" name="data[]" class="new">
-      </div>
-      <div class="">
         <label for="" class="required">valor venta</label>
         <input type="number" name="data[]" class="new">
       </div>

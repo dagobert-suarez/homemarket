@@ -88,9 +88,8 @@ class ProductController{
   }
   public function updateCat(){
          $data =$_POST['data'];
-         $result = $this->product->updateCat($data);
-         // print_r
-         // header("Location:")
+         $result = $this->product->updateCategory($data);
+         header("Location:nueva-categoria");
      }
 
    public function updateProc(){

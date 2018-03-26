@@ -56,12 +56,13 @@
 				<h1>Actualizar Categoria</h1>
 				<i class="close">&times</i>
 			</div>
-			<div class="wrap-bod">
-				<form  action="" method="post">
-					<label for="">Nombre de la categoria:</label>
-					<input type="text" name="" value=""><br>
-					<button type="submit" name="button">Actualizar</button>
 
+			<div class="wrap-bod">
+				<form  name="frmCategory" action="actualizar-categoria" method="post">
+					<label for="">Nombre de la categoria:</label>
+					<input type="text" readonly name="data[]" value="<?php echo $_GET["data"] ?>"><br>
+					<input type="text" name="data[]" value="<?php echo $dataProduct["nom_tip_pro"];?>"><br>
+					<button type="submit" name="button">Actualizar</button>
 				</form>
 
 			</div>

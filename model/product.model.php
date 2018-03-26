@@ -28,9 +28,9 @@ class ProductModel{
 //crear un nuevo producto: envia datos a bd
   function createProduct($data){
     try{
-      $sql = "call crear_pro(?,?,?,?,?,?,?,?,?)";
+      $sql = "call crear_pro(?,?,?,?,?,?,?,?)";
       $query = $this->pdo->prepare($sql);
-      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8]));
+      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
 
       $msn = "registro con exito";
     }catch (PDOException $e) {
@@ -51,16 +51,19 @@ class ProductModel{
       }
       return $result;
   }
-  function updateCat(){
+  function updateCategory(){
     try{
-    $sql="UPDATE tipo_producto SET nom_tip_pro=nom_tip_pro WHERE id_tip_pro=id_tip_pro;";
+      $sql="call modificarTipo";
+    // $sql="UPDATE tipo_producto SET nom_tip_pro = ? WHERE id_tip_pro = ? ";
     $query=$this->pdo->prepare($sql);
     $query->execute($data[1],$data[0]);
-    $result = $query->fetchALL(PDO::FETCH_BOTH);
+    // $result = $query->fetchALL(PDO::FETCH_BOTH);
+    $msn ="Ya modificó";
     } catch (PDOException $e) {
-          $result = $e->getMessage();
+          // $result = $e->getMessage();
+          $msn = $e->getMessage();
       }
-      return $result;
+      return $msn;
   }
 
 
