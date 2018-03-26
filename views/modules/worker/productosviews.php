@@ -33,7 +33,7 @@
         <td>
             <a href="#" class="abrirmodal"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
             <a href="#" class="modalDet"><i class="fa fa-info-circle" aria-hidden="true"></i>Detalles</a>
-            <a href="eliminar-producto-<?php echo $row['cod_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true"></i>Eliminar</a>
+            <a href="eliminar-producto-<?php echo $row['id_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true"></i>Eliminar</a>
         </td>
       </tr>
       <?php
