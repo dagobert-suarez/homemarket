@@ -80,7 +80,7 @@ $('#rpassword').focusout(function(){
       $('div.error').remove();
     }else{
       $("btntnt").prop("disabled",true);
-      $('#rpassword').after('<div class="error" style="colo", "red">Las contraseñas no coinciden</div>');
+      $('#rpassword').after('<div class="error" style="color", "red">Las contraseñas no coinciden</div>');
 
       console.log("no coinciden");
     }

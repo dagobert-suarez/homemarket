@@ -3,6 +3,7 @@
       <div class="menuS--top">
           <div class="icon--mobile">
               <i class="fa fa-bars"></i>
+
           </div>
           <div class="user--name">
               <?php
@@ -17,9 +18,10 @@
 
               </div>
           </div>
-          <ul>
+          <div class="log-out">
+            <ul>
               <li> <a href="cerrar-sesion">Cerrar Sesion <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
-
-          </ul>
+            </ul>
+          </div>
       </div>
 <!-- termina menu -->
