@@ -1,8 +1,11 @@
-
+// Modal del  Supérmecado menú para el Responsive
+// ------------------------------------
+$(".icon--mobile").click(function() {
+    $("header.main--nav").toggleClass("open--nav")
+})
+// Slide de la Landing
+// -------------------
 var slideIndex = 0;
-
-
-
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("Slides");
@@ -41,10 +44,8 @@ if (document.getElementById('close')) {
     }
 
 }
-
-
-
 // validaciones en el login:dago
+// -----------------------------------
 $("input[name='email']").focusout(function(){
     $.post("validar_usuario",{email:$(this).val()},function(result){
         var result = JSON.parse(result);
@@ -80,13 +81,9 @@ $('#rpassword').focusout(function(){
       $('div.error').remove();
     }else{
       $("btntnt").prop("disabled",true);
-      $('#rpassword').after('<div class="error" style="colo", "red">Las contraseñas no coinciden</div>');
+      $('#rpassword').after('<div class="error" style="color", "red">Las contraseñas no coinciden</div>');
 
       console.log("no coinciden");
     }
 
-
 });
-$(".icon--mobile").click(function() {
-    $("header.main--nav").toggleClass("open--nav")
-})
