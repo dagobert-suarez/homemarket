@@ -45,3 +45,8 @@ close.onclick = function(){
      fondo.style.display = "none";
      wrapmodal.style.display = "none";
  };
+ // // Modal del menú para el Responsive
+ // // ------------------------------------
+ // $(".icon--mobile").click(function() {
+ //     $("header.main--nav").toggleClass("open--nav")
+ // })
