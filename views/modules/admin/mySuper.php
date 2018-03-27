@@ -73,7 +73,8 @@
         <!-- ----------------->
       <div id="Categorias" class="contentfo">
         <h3>Categorías</h3>
-        <button type="button" id="openCate" name="button">Nueva categoría</button>
+        <button type="button" id="openCate" name="button">Nueva categoría</button><br><br>
+        <p>Aca se mostraran las Categorias Registradas.</p>
         <div id="fondo"></div>
         <div id="wrapmodal">
             <div id="modal">

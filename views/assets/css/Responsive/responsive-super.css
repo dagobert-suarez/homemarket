@@ -44,6 +44,21 @@
   .menuS--top .user--name{display: none;}
   .menuS--top .down{display: none;}
   .menuS--top .log-out{display: none;}
+
+  .module--worker{
+    width: 95%;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    margin: 5px  auto;
+    text-align:center;
+  }
+  .module--worker h1{
+      color: #465661;
+      font-style: oblique;
+      margin-bottom: 5px;
+      text-align:  center;
+  }
   .tab {
       width: 90%;
       margin: 10px  auto;
@@ -63,6 +78,29 @@
       font-family:'Catamaran',sans-serif;
       align-items: center;
       display: flex;
+  }
+  #modal{
+      width: 300px; height: auto;
+      background-color: #FEFEFE;
+      margin: 50px auto;
+      z-index: 3;
+      padding: 15px;
+  }
+  .wrap-bod{
+      margin: 25px auto;
+      justify-content: center;
+  }
+  .wrap-bod .form-group .k{
+    width: 100%;
+    margin-bottom:  10px;
+  }
+  .wrap-bod button{
+      outline: none;
+      padding: 8px 10px;
+      margin: 5px;
+      width: 50%;
+      align-items: center;
+
   }
 }
 /* Media screen de 900px */
