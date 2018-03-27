@@ -11,6 +11,9 @@
 }
 /* Media screen de 1100px  */
 @media screen and (max-width:1100px){
+  .icon--mobile{
+    font-size: 20px;
+  }
 
   .open--nav{
     display: block !important;
@@ -107,8 +110,18 @@
       width: 50%;
       align-items: center;
 
+    }
   }
-}
+  .module--Sett{
+      margin: 10px auto;
+      width: 90%;
+      background-color: #FEFEFE;
+      border: 1px solid rgba(161, 161, 161, 0.53);
+      border-radius: 4px;
+      justify-content: space-around;
+      font-family:'Catamaran',sans-serif;
+      align-items: center;
+  }
 /* Media screen de 900px */
 @media (max-width:900px){
   main--nav{

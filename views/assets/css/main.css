@@ -117,8 +117,14 @@ picture  h1{
   margin: 7px 0px 7px 12px;
 
 }
-.icon--mobile .menu-res{
-  display: none;
+.menu-res a{
+  display: block;
+  display:flex;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 15px;
+
 }
 .logo--menu {
   width: 13%;
@@ -299,8 +305,12 @@ picture  h1{
 }
 
 .formpart{
+    /*background: #f1f1f9;*/
+    /* background-color: rgb(255, 255, 255); */
+    /* margin-top: 45px ; */
     margin: 45px 0px 0px 0px;
     width: 50%;
+    border-radius: 6px;
     padding: 5px 5px;
     font-family:'Roboto', sans-serif;
     display: block;
@@ -308,6 +318,7 @@ picture  h1{
 .content-form{
     display: flex;
     padding: 5px;
+    /* margin: 0px 40px 0px 40px; */
     justify-content: flex-start;
 }
 
@@ -395,7 +406,7 @@ input[type=password]{
     display: block;
 }
 .form-gruop label {
-  margin: 2px 20px 4px;
+  margin: 0px 20px 1px;
 }
 #genero{
     margin: 0px 41px 1px;

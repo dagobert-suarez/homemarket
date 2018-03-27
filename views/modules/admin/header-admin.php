@@ -17,7 +17,8 @@
     <section class="container1S">
         <header class="main--nav black1">
             <div class="icon--mobile">
-                <i class="fa fa-window-close"></i>
+                <!-- <i class="fa fa-window-close"></i> -->
+                <i class="fa fa-times" aria-hidden="true"></i>
             </div>
             <?php
 

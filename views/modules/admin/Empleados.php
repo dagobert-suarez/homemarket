@@ -1,6 +1,6 @@
 <div class="module--worker">
 
-  <h1>Empleadoss</h1>
+  <h1>Empleados</h1>
   <div class="tab">
     <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
     <button class="btntabs" onclick="Name(event, 'Empleados')" id="defaultOpen"><i class="fa fa-user"></i> Empleados</button>

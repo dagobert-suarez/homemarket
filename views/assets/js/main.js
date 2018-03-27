@@ -3,8 +3,6 @@
 $(".icon--mobile").click(function() {
     $("header.main--nav").toggleClass("open--nav")
 })
-// Modal de responsive para la Landing
-// ---------------------------------------
 
 // Slide de la Landing
 // -------------------
