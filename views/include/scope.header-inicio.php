@@ -17,7 +17,6 @@
 				<?php
 				require_once 'scope.nav.php';
 				require_once 'scope.login.php';
-				// require_once 'scope.pasoapaso.php'
 				?>
 
 			</div>

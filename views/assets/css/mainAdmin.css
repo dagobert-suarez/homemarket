@@ -45,6 +45,17 @@ section.container1S{
     border-left: 15px solid #f2f4f4;
     transition: 0.3s all;
 }
+.main--nav nav .user{display: none;}
+.main--nav nav .user a li {
+  padding: 10px;
+  padding-left:20px;
+}
+.main--nav nav .user a li:hover{
+    background-color: #f2f4f4;
+    color:  #1F2122;
+    border-left: 15px solid #f2f4f4;
+    transition: 0.3s all;
+}
 
 .wrap--content{
     width: 100%;

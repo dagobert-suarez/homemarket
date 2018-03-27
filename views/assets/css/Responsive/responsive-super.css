@@ -26,6 +26,11 @@
   header.main--nav{
     display: none;
   }
+  .main--nav nav .user{display: block;;}
+
+  .wrap--content{
+    height: 100vh;
+  }
   .wrap--content .menuS--top{
       display: flex;
       justify-content: flex-start;
@@ -41,6 +46,7 @@
     margin: 0px 0px 0px 15px;
     font-size: 32px;
   }
+
   .menuS--top .user--name{display: none;}
   .menuS--top .down{display: none;}
   .menuS--top .log-out{display: none;}
