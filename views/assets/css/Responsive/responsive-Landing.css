@@ -3,7 +3,14 @@
 /*  Media screen de 1170px*/
 @media (max-width:1170px) {
   .menu{
-  background-color:black;
+    background-color:black;
+    width: 100%;
+    height: 55px;
+    background-color: #000000;
+    margin-top: -4.7%;
+    margin-bottom: 10px;
+    z-index: 1000;
+    opacity: 0.8;
   }
   .icon--mobile{
     display: block;
@@ -14,7 +21,7 @@
 }
 
 /*  Media screen de 900px*/
-@media (max-width:767px) {
+@media (max-width:900px) {
   .setregistrarse{
     display:grid;
     grid-template-columns: (1,2fr);
@@ -26,13 +33,12 @@
       margin: 10px 0px 0px 10px;
       width: 95%;
       font-family:'Roboto', sans-serif;
-      background-color: rgb(230, 230, 230);
       display: block;
   }
   .regis{
-      margin:0px 10px ;
+      margin:0px 0px 5px 20px;
       padding-bottom: 10px;
-      width: 100%;
+      width: 90%;
       border-bottom: 2px solid #faac00 ;
       font-size: 25px;
       font-family: 'Noto_Sans', sans-serif;
@@ -42,20 +48,82 @@
   width: 50%;
 }
 }
-@media (max-width:575px) {
-  .formpart{
+@media (max-width:600px) {
+  .one-slide{
+    display: none;
   }
+  .content-form{
+      display: flex;
+      flex-direction:column;
+      padding: 5px;
+      justify-content: flex-start;
+  }
+  .new{
+      margin: 5px 20px;
+      width: 70%;
+      padding: 8px 30px;
+      border: 1px solid rgb(182, 182, 182);
+      line-height: 1.20;
+      font-size: 14px;
+      outline: none;
+      display: block;
+  }
+  #gender{
+    background-color: inherit;
+    margin: 5px 20px;
+    width: 81%;
+    border-radius: 3px;
+  }
+  .city{
+    width: 81%;
+    display: block;
+    border-radius: 3px;
+    outline:none;
+  }
+  .btntnt{
+      background-color: white;
+      color: rgb(0, 0, 0);
+      border: 1px solid #faac00;
+      padding: 10px 30px;
+      outline: none;
+      text-decoration: none;
+      margin: 15px 20px;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      border-radius: 3px;
+      width: 60%;
+      justify-content: center;
+      align-content: center;
 
+  }
+  .btntnt:hover{
+      background-color: #faac00;
+      color: rgb(0, 0, 0);
+      box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.3);
+  }
    .modal-content{
   width: 50%;
 }
-.close{
-  /* position: sticky; */
-}
 
-  form .formgroup{
+}
+/* Media screen de 360px */
+@media (max-width:360px) {
+
+
+input[type=password],
+input[type=text],
+input[type=number],
+input[type=date]{
+    margin: 5px 20px 3px;
+    width: 69%;
+    padding: 8px 20px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 1.9px;
+    line-height: 1.20;
+    font-size: 14px;
+    outline: none;
     display: block;
-    background-color: rgb(21, 186, 247);
-  }
+}
 
 }
