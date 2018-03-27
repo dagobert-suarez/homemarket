@@ -123,9 +123,9 @@ ul{
 }
 
 .wrap-info .wrap-cont-info{
-    /* widows: 100%; */
+    widows: 100%;
     height: 90px;
-    /* margin: 5px; */
+    margin: 5px;
     /* padding: 5px; */
     background-color: #CBCBCB;
     border: 1px solid rgba(161,161,161,0.3);
@@ -135,15 +135,16 @@ ul{
 
 }
 .wrap-info .wrap-cont-info header{
-    padding: 3px;
-    color :red;
+    padding: 5px;
     font-size: 16px;
+    color: rgba(85, 85, 85, 0.92);
+
 }
 .wrap-info .wrap-cont-info p{
-    font-size: 18px;
-    padding: 10px 0px 5px 8px;
+    font-size: 22px;
+    padding: 5px 0px 5px 8px;
     text-transform: full-width;
-    color: rgba(85, 85, 85, 0.92);
+    /* color: rgba(85, 85, 85, 0.92); */
 }
 /*finaliza menú top*/
 /*  Perfil */

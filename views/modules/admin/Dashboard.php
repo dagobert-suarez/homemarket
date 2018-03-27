@@ -2,7 +2,7 @@
 <div class="wrap--in">
        <header>
            <h1>Hola Supermercado</h1>
-           <p> este el el inico del administrador donde pude reslizar las tareas </p>
+           <p> Este el el inico del administrador donde puede reslizar  las tareas </p>
        </header>
        <div class="wrap-in-text">
            <p>
@@ -19,6 +19,7 @@
          <header>
              <h3> las cosas</h3>
          </header>
+         <p>17</p>
             <?php echo $this->maLass(); ?>
      </div>
      <div class="wrap-cont-info">

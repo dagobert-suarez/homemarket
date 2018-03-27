@@ -15,7 +15,7 @@
   .open--nav{
     display: block !important;
     position: absolute;
-    z-index: 5;
+    z-index: 3;
   }
   .open--nav .icon--mobile{
     position: absolute;
@@ -29,12 +29,12 @@
   .wrap--content .menuS--top{
       display: flex;
       justify-content: flex-start;
-      padding: 20px 0;
+      padding: 12px 0;
       background-color: #FEFEFE;
       font-size: 22px;
       border-bottom: 1px solid rgba(161, 161, 161, 0.63);
-      background-color: rgba(77, 77, 77, 0.85);
-      color: white;
+      background-color: rgb(31, 33, 34);
+      color: #D0D5D7;
   }
   .menuS--top .icon--mobile{
     display: block;
@@ -128,31 +128,83 @@
   }
 /* Media screen de 560px */
 @media (max-width: 560px) {
+  .wrap--content .wrap--in{
+      background-color: #fefefe;
+      width: 95%;
+      box-sizing: border-box;
+      margin: 20px auto;
+      border-radius: 3px;
+      padding: 7px;
+  }
+  .wrap--content .wrap--in header{
+      border-bottom: 1.5px solid rgba(161, 161, 161, 0.63) ;
+      padding:2px auto;
+      text-align: justify;
+      text-justify: kashida;
+  }
 
   .wrap--content .wrap-info{
       width: 95%;
-      padding: 5px  15px  10px;
-      margin: 10px auto;
+      padding: 5px  10px 5px 5px;
+      margin: 1px auto;
       display: grid;
       grid-template-columns: repeat(2,2fr);
   }
   .wrap-info .wrap-cont-info{
-      height: 90px;
+      height: 80px;
       margin: 3px;
-      /* padding: 5px; */
       background-color: #CBCBCB;
       border: 1px solid rgba(161,161,161,0.3);
-      border-radius:3px;
+      border-radius:1px;
       animation-name: bounceInDown;
       animation-duration:1s;
 
   }
+  .wrap-info .wrap-cont-info header{
+      padding: 3px;
+      font-size: 15px;
+      color: rgba(85, 85, 85, 0.92);
+
+  }
   .wrap-info .wrap-cont-info p{
-      font-size: 13px;
+      font-size: 18px;
       padding: 5px 0px 0px 3px;
       text-transform: full-width;
       color: rgba(85, 85, 85, 0.92);
   }
+.tab{
+  width: 95%;
+  margin: 10px  auto;
+  border: 1px solid rgba(161,161,161,0.53);
+  border-radius: 4px;
+  display:grid;
+  grid-template-columns: repeat(2,2fr)
+}
+.tab button {
+    background-color: inherit;
+    color: black;
+    padding: 15px 16px;
+    width: 100%;
+    border:1px solid rgba(161, 161, 161, 0.53);
+    outline: none;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+.contentfo {
+    padding: 0px 12px 15px;
+    margin: 10px auto;
+    width: 95%;
+    background-color: #FEFEFE;
+    border: 1px solid rgba(161, 161, 161, 0.53);
+    border-radius: 4px;
+    justify-content: space-around;
+    font-family:'Catamaran',sans-serif;
+    align-items: center;
+    display: flex;
+}
 }
 /* Media screen de 360px */
 @media (max-width: 360px) {
