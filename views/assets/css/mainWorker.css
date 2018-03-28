@@ -55,7 +55,6 @@ section.container1k{
 .main--nav nav ul a li:hover{
     background-color: #f2f4f4;
     color:  #1F2122;
-
     border-left: 25px solid #F1f3f3;
     transition: 0.4s all;
 
