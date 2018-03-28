@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "color.css";
+@import "animate.css";
 /*@import "responsicliente.css";*/
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
@@ -46,32 +47,44 @@ li i:hover{
 .left{
     display:block;
     margin:   0px 0px 0px 15px;
+    cursor: pointer;
 }
 #ground{
   display: none;
   width: 100%;
   height: 100vh;
   top: 0px; left: 0px;
-  background-color: rgba(3, 3, 3, 0.72);
+  background-color: rgba(3, 3, 3, 0.62);
   z-index: 1;
   position:fixed;
 }
 #modal{
   display: none;
   top: 0px; left: 0px;
-  /* background-color: rgb(31, 33, 34); */
+  background-color: rgb(32, 32, 32);
+  border-bottom-right-radius:33%;
+  animation-name: bounceIn;
+  animation-duration:0.8s;
   color: #D0D5D7;
   position: fixed;
   width: 250px;
   height: 100vh;
   z-index: 2;
 }
+#modal .closemenu{
+  font-size: 30px;
+  margin-top: 11px;
+  margin-left: 85%;
+}
+#modal .closemenu:hover{
+  color: rgb(250, 11, 11);
+  cursor:  pointer;
+}
 #modal nav ul{
   font-size: 17px;
   margin-top: 20px;
   padding-top: 15px;
   border-top: 1px solid #323232;
-  /* box-shadow: 0 -5px 0 #d1d1d1; */
   margin-bottom: 15px;
 
 }
@@ -84,6 +97,7 @@ li i:hover{
   color:  #1F2122;
   border-left: 25px solid #F1f3f3;
   transition: 0.4s all;
+  cursor: pointer;
 }
 .wrap--content{
     width: 100%;
