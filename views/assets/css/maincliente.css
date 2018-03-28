@@ -231,6 +231,23 @@ li i:hover{
     /*margin: 50px;*/
     /*justify-content: space-between;*/
 /*}*/
+.buscador{
+  /* background-color: blue; */
+  text-align: center;
+  padding: 5px auto;
+  display: none;
+}
+.buscador .sch{
+  display: none;
+  outline: none;
+  width: 350px;
+  padding: 8px 30px;
+  border:1px solid rgb(182, 182, 182) ;
+  border-radius: 8px;
+  line-height: 1.20px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
 
 .card{
     width: 240px;

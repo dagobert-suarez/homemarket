@@ -1,10 +1,14 @@
-*_*.*responsive cliente*.*_*/
+/* *_*.*responsive cliente*.*_*/
 /* -------------------------  */
+/* Media screen de 1200px  */
 @media (max-width:1200px) {
     .gallery--content{
         width: 100%;
         border-radius: 6px;
         grid-template-columns: repeat(3,1fr);
+    }
+    .card{
+      width: 300px;
     }
     .supers{
     }
@@ -13,12 +17,15 @@
         margin: 15px;
     }
 }
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
     /*.supers{
         grid-template-columns: repeat(2,1fr);
         grid-gap:20px;
         width: 100%;
     }*/
+    .all{
+      display: none;
+    }
         .gallery--content{
             grid-template-columns: repeat(2,1fr);
             grid-gap:20px;
@@ -26,7 +33,8 @@
 
         }
     .card{
-        width: 100%;
+        width:85%;
+        margin: 15px auto;
     }
     .card-img-top{
         width: 100%;
@@ -62,9 +70,9 @@
     }
 }
 @media (max-width: 768px) {
-    .options{
+    /* .options{
         display: none !important;
-    }
+    } */
     .left{
         display: block;
     }
@@ -89,6 +97,8 @@
     }
     .supers{
     }
+    .buscador{display: block; background-color: red; width:100%; text-align:center; padding: 5px;}
+    .buscador .sch{display: block;}
     .card{
         width: 100%;
         /*height: 500px;*/
@@ -131,17 +141,24 @@
 
     }
     .gallery--content{
-
         grid-template-columns: repeat(1,1fr);
-        padding-right: 10px;
+        margin:5px;
     }
     .Productos{
         grid-template-columns: repeat(1,1fr);
         margin: 15px;
         padding-bottom: 20px;
     }
+    .buscador{
+      display: block;
+      background-color: blue;
+      width:90%;
+      align-items: center;
+      padding: 5px;}
+    .buscador .sch{display: block; width: 90%; text-align: center;}
     .card{
-        margin: 10px;
+        /* margin: 10px; */
+        width: 90%;
 
     }
 }
