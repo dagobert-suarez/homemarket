@@ -68,7 +68,7 @@ class UserController{
       if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
         require_once "views/modules/cliente/header.php";
         require_once "views/modules/cliente/navigator.php";
-        require_once "views/modules/cliente/maps.php";
+        // require_once "views/modules/cliente/maps.php";
         require_once "views/modules/cliente/footer.php";
       }else{
         header("Location: inicio");
