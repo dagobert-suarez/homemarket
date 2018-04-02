@@ -66,4 +66,40 @@ class LoginController{
 		}
 	}
 }
+#editar de USUARIO
+#..................................
+// public function editarUsuarioController(){
+//
+// 	$datosController = $_GET["id"];
+// 	$respuesta = datos::editarUsuarioModel($datosController, "usuario");
+// 	echo '<input type="hidden" value="'.$respuesta["id"].'">
+// 				<input type="text" value="'.$respuesta["usuario"].'" name="usuarioEditar" required>
+// 				<input type="text" value="'.$respuesta["password"].'" name="passwordEditar" required>
+// 				<input type="email" value="'.$respuesta["email"].'" name="emailEditar" required>
+				// <input type="submit" value="Actualizar">' ;
+// }
+#Actualizar de USUARIO
+#..................................
+// public function ActualizarUsuarioController(){
+// 			if(isset($_POST["usuarioEditar"])){
+// 				if (preg_match('/^[a-zA-Z0-9]*$/',$_POST["usuarioEditar"])&&
+// 						preg_match('/^[a-zA-Z0-9]*$/',$_POST["passwordEditar"])&&
+// 						preg_match('/^[^0-9][a-zA-Z0-9]+([.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+([.][a-zA-Z0-9]+)*[.][a-zA-Z]{2,4}$/',$_POST["emailEditar"])){
+// 							$encriptar = crypt($_POST["passwordIngreso"],'$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
+// 				$datosController = array($_POST ["usuarioEditar"],
+// 																 $encriptar,
+// 																 $_POST ["emailEditar"]);
+// 				$respuesta = datos::actualizarUsuarioModel($datosController, "usuario");
+// 				if ($respuesta == "success") {
+// 					$_SESSION["message"]="Modificado";
+// 					header ("location:usuario");
+//
+// 				}
+// 				else {
+// 					echo "error";
+// 				}
+// 			}
+// 		}
+// }
+
 ?>
