@@ -10,8 +10,8 @@ class viewsController{
 		$result = $this->userModel->readTodos()[0];
 		return $result	;
 	}
-	 function maLass(){
-		 $result = $this->userModel->maLass()[0];
+	 function prove(){
+		 $result = $this->userModel->prove()[0];
 		 return $result;
 	 }
 	 function readBy($data){
@@ -123,6 +123,16 @@ die();
 			header ('Location: inicio');
 		}
 	}
+	function selectCates(){
+		$result = $this->userModel->selectCates()[0];
+		return $result;
+	}
+	function selectProdu(){
+		$result = $this->userModel->selectProdu()[0];
+		return $result;
+	}
+	
+
 	// Actualizar los datos del Empleados
 	function updateEm(){
 		$data = $_POST['data'];

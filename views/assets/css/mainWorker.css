@@ -91,11 +91,11 @@ section.container1k{
 }
 .wrap--content article{
     background-color: #F1F3F3;
-    width: 95%;
-    padding: 20px;
+    /* background-color: lime; */
     box-sizing: border-box;
+    width: 95%;
+    padding: 15px;
     margin: 10px auto;
-    border-radius: 1px;
     color: #465966;
 }
 /*-*.* Fin de Menú principal*.*-*/
@@ -137,6 +137,38 @@ section.container1k{
 }
 /*Fin de Perfil  */
 /*--------------------------------------  */
+.wrap-info{
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+.wrap-info .wrap-cont-info{
+    widows: 100%;
+    height: 90px;
+    margin: 5px;
+    /* padding: 5px; */
+    background-color: #CBCBCB;
+    border: 1px solid rgba(161,161,161,0.3);
+    border-radius:1px;
+    animation-name: bounceInDown;
+    animation-duration:1s;
+
+}
+.wrap-info .wrap-cont-info header{
+    padding: 5px;
+    font-size: 16px;
+    color: rgba(85, 85, 85, 0.92);
+
+}
+.wrap-info .wrap-cont-info p{
+    font-size: 22px;
+    padding: 5px 0px 5px 8px;
+    text-transform: full-width;
+    /* color: rgba(85, 85, 85, 0.92); */
+}
 
 /*_*.*formulario produto*.*_*/
 /* ----------------------------- */

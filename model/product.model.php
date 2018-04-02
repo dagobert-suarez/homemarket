@@ -2,7 +2,7 @@
 // envio a la base de datos de los productos
 class ProductModel{
   private $pdo;
-  public function __CONSTRUCT(){
+   function __CONSTRUCT(){
     try {
       $this->pdo = DataBase::openDB();
       $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -66,7 +66,7 @@ class ProductModel{
           return $msn;
         }
 
-        public function readByCat($data){
+         function readByCat($data){
     try {
         $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
         $query=$this->pdo->prepare($sql);
@@ -77,6 +77,7 @@ class ProductModel{
     }
     return $result;
 }
+
 
 
 
@@ -97,7 +98,7 @@ class ProductModel{
 
   // Actualizar producto
    // -------------------- //
-  public function updateProc(){
+   function updateProc(){
       try{
           $sql= "UPDATE productos SET  nom_pro = ?, des_pro = ?, img_pro = ?, mar_pro = ?, id_tip_pro = ? , can_pro = ?, 	fec_ing_pro = ?, uniMed_pro = ?, valCom_pro = ?, valVen_pro = ? WHERE id_pro = ?";
           $query-> $this->pdo->prepare($sql);
@@ -113,7 +114,7 @@ class ProductModel{
 
   //elimina el tipo de categoria
   // ---------------------------- //
-  public function deleteProduct($data){
+   function deleteProduct($data){
     try{
       $sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
       $query=$this->pdo->prepare($sql);
@@ -125,7 +126,7 @@ class ProductModel{
     return $msn;
   }
 
-  public function deletePro($data){
+   function deletePro($data){
     try{
       $sql="DELETE FROM productos WHERE id_pro = ?";
       $query=$this->pdo->prepare($sql);

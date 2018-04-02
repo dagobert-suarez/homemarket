@@ -296,6 +296,15 @@ ul{
    display: grid;
     grid-template-columns: repeat(2 ,1fr);
 }
+.content-form2{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.form-group2{
+  margin: 10px 20px 0px;
+   display:block;
+   justify-content: left;r
+}
 .form-group{
   margin: 10px 20px 0px;
    display:block;
@@ -323,12 +332,23 @@ ul{
     font-family: 'Cabin';
     font-style: oblique;
 }
+.form-group2 .k{
+    padding: 5px 12px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width:60%;
+    outline: none;
+    display: block;
+    background-color: inherit;
+    margin: 5px;
+}
 .form-group .k{
     padding: 5px 15px;
     border-radius: 1px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width:60%;
+    width:100%;
     outline: none;
     display: block;
     background-color: inherit;

@@ -84,7 +84,7 @@ class UserModel{
 					return $result;
 			 }
 			 // llama todo los  empleados (cantidad)de empleados
-			function maLass(){
+			function prove(){
 				try{
 					$sql= "SELECT COUNT(*) FROM proveedores";
 					$query=$this->pdo->prepare($sql);
@@ -93,9 +93,10 @@ class UserModel{
 				}catch(PDOException $e){
 					$result = $e-> getMessage();
 				}
-				// return $result;
-				return 1;
+				return $result;
+				// return 1;
 			}
+
 // llama las ciudades registradas en bd
 	function readCities(){
 		try{
@@ -131,6 +132,28 @@ class UserModel{
 			$result = $query->fetchALL(PDO::FETCH_BOTH);
 		} catch (PDOException $e){
 			$result = $e->getMessage();
+		}
+		return $result;
+	}
+	function selectCates(){
+	    try{
+	        $sql= "SELECT COUNT(*) FROM tipo_producto";
+	        $query=$this->pdo->prepare($sql);
+	        $query->execute();
+	        $result=  $query->fetch(PDO::FETCH_BOTH);
+	    }catch(PDOException $e){
+	        $result = $e-> getMessage();
+	    }
+		return $result;
+	}
+	function selectProdu(){
+		try{
+			$sql= "SELECT COUNT(*) FROM productos";
+			$query=$this->pdo->prepare($sql);
+			$query->execute();
+			$result= $query->fetch(PDO::FETCH_BOTH);
+		}catch(PDOException $e){
+			$result = $e-> getMessage();
 		}
 		return $result;
 	}
