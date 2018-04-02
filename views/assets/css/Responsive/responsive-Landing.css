@@ -9,6 +9,7 @@
     display: block;
   }
   .logo--menu{display: none;}
+  .menu-res{display: none;}
   .container--menu{display: none;}
   .container--menu2{display: none;}
 }

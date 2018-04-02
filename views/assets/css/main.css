@@ -118,7 +118,7 @@ picture  h1{
 
 }
 .menu-res a{
-  display: block;
+  display:none;
   display:flex;
   color: rgb(255, 255, 255);
   text-align: center;

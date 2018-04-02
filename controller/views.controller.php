@@ -82,7 +82,34 @@ die();
 		require_once "views/modules/admin/header-admin.php";
 		require_once "views/modules/admin/proveedores.php";
 		require_once "views/modules/admin/footer_admin.php";
-	}
+	}	// Artuiculos
+	 // -------------
+		function articulos(){
+		 require_once "views/modules/admin/header-admin.php";
+		 require_once "views/modules/admin/articulos.php";
+		 require_once "views/modules/admin/footer_admin.php";
+	 }
+	 // Información
+ // -------------
+	function informacion(){
+	 require_once "views/modules/admin/header-admin.php";
+	 require_once "views/modules/admin/informacion.php";
+	 require_once "views/modules/admin/footer_admin.php";
+ }
+ // Notificaciones
+ // --------------------------
+ function notificaciones(){
+	 require_once "views/modules/admin/header-admin.php";
+	 require_once "views/modules/admin/notificaciones.php";
+	 require_once "views/modules/admin/footer_admin.php";
+ }
+	 //los ajustes del Supermercado
+	 // ----------------------- //
+		function settingsSuper(){
+			require_once "views/modules/admin/header-admin.php";
+			require_once "views/modules/admin/updateADS.php";
+			require_once "views/modules/admin/footer_admin.php";
+		}
 
 //las sessiones del empeado - inicio
 // --------------------- //
@@ -145,25 +172,7 @@ die();
 			header ('Location: inicio');
 		}
 	}
-	//los ajustes del Supermercado
-	// ----------------------- //
-	 function settingsSuper(){
-		 require_once "views/modules/admin/header-admin.php";
-		 require_once "views/modules/admin/updateADS.php";
-		 // require_once "views/modules/admin/footer-admin.php";
-	 }
-	 	// Artuiculos
-		// -------------
-		 function articulos(){
-			require_once "views/modules/admin/header-admin.php";
-			require_once "views/modules/admin/articulos.php";
-		}
-		// Información
-	// -------------
-	 function informacion(){
-		require_once "views/modules/admin/header-admin.php";
-		require_once "views/modules/admin/informacion.php";
-	}
+
 
 
 	// function ingreso(){
