@@ -32,7 +32,7 @@
                   <select class="ks" name="data[]">
                       <option value="m">Hombre</option>
                       <option value="f">Mujer</option>
-                      <option value="o">Mtro</option>
+                      <option value="o">Otro</option>
                   </select>
               </div>
           </div>
