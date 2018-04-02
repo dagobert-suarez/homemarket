@@ -35,6 +35,11 @@ class ProductController{
     require_once "views/modules/cliente/viewSuper.php";
     require_once "views/modules/cliente/footer.php";
   }
+  function mySuper(){
+      require_once "views/modules/admin/header-admin.php";
+      require_once "views/modules/admin/mySuper.php";
+      require_once "views/modules/admin/footer_admin.php";
+  }
 
   function Produtosviewsworker(){
     require_once "views/modules/worker/header.php";
@@ -76,19 +81,24 @@ class ProductController{
 // Categorias
 // ------------
 
-  //visualiza las  categorias en la pagina del admin
+// crud categorias
+  //visualiza las  categorias en la pagina del empleado
   function readCategory(){
     $result = $this->product->readCategory();
     return  $result;
   }
   public function updateCat(){
          $data =$_POST['data'];
-         $result = $this->product->updateCat($data);
-         // print_r
-         // header("Location:")
+         $result = $this->product->updateCategory($data);
+         header("Location:nueva-categoria");
      }
 
+     public function readByCategory($data){
+       $result = $this->product->readByCat($data);
+       return $result;
+     }
 
+     // crud productos
    public function updateProc(){
        $data =$_POST['data'];
        $result = $this->product->updateProc($data);
@@ -100,13 +110,11 @@ class ProductController{
     echo '<script language="javascript">alert("ya se elimino");</script>';
     echo "<script>window.location.href='nueva-categoria'</script>";
   }
- public function deleteProd(){
+ public function deleteProduct(){
     $data = $_GET['data'];
     $result = $this->product->deletePro($data);
     echo '<script language="javascript">alert("ya se elimino");</script>';
-    echo "<script>window.location.href='Productosadmin'</script>";
+    echo "<script>window.location.href='Productos-empleado'</script>";
   }
 }
-
-
 ?>

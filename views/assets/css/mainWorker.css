@@ -55,7 +55,6 @@ section.container1k{
 .main--nav nav ul a li:hover{
     background-color: #f2f4f4;
     color:  #1F2122;
-
     border-left: 25px solid #F1f3f3;
     transition: 0.4s all;
 
@@ -121,6 +120,7 @@ section.container1k{
     box-shadow: 0px 8px 6px 0px rgba(0, 0, 0, 0.3);
     min-width: 160px;
     margin-top: 15px;
+    border-top: 1px solid rgba(161,161,161,0.63);
     z-index: 1;
 }
 .content-down li{
@@ -326,7 +326,6 @@ background-color: rgb(196, 196, 196);
 }
 .wrap-bod{
     margin: 30px auto;
-    /* display: flex; */
     justify-content: center;
 }
 .wrap-bod button{

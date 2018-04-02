@@ -78,6 +78,11 @@ die();
 		require_once "views/modules/admin/mySuper.php";
 		require_once "views/modules/admin/footer_admin.php";
 	}
+	function proveedores(){
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/proveedores.php";
+		require_once "views/modules/admin/footer_admin.php";
+	}
 
 //las sessiones del empeado - inicio
 // --------------------- //
@@ -90,6 +95,13 @@ die();
 			die();
 			header ('Location: inicio');
 		}
+	}
+	// Actualizar los datos del Empleados
+	function updateEm(){
+		$data = $_POST['data'];
+		$data[]=$_SESSION['USER']['ID'];
+		$result = $this->userModel->update($data);
+		header("Location: settings-worker");
 	}
 
 	//los ajustes del empleado
@@ -115,7 +127,7 @@ die();
 	 }
 	 // Provedores
 	 // ---------
-	 function proveedores(){
+	 function proveedoresEm(){
 		 require_once "views/modules/worker/header.php";
 		 require_once "views/modules/worker/proveedores.php";
 		 require_once "views/modules/worker/footer.php";

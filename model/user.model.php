@@ -86,7 +86,7 @@ class UserModel{
 			 // llama todo los  empleados (cantidad)de empleados
 			function maLass(){
 				try{
-					$sql= "SELECT COUNT(*) FROM usuario";
+					$sql= "SELECT COUNT(*) FROM proveedores";
 					$query=$this->pdo->prepare($sql);
 					$query->execute();
 					$result=  $query->fetch(PDO::FETCH_BOTH);

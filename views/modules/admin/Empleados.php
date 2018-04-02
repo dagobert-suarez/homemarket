@@ -1,10 +1,10 @@
 <div class="module--worker">
 
-  <h1>Empleadoss</h1>
+  <h1>Empleados</h1>
   <div class="tab">
-    <button class="btntabs" onclick="openCity(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
-    <button class="btntabs" onclick="openCity(event, 'Empleados')" id="defaultOpen"><i class="fa fa-user"></i> Empleados</button>
-    <button class="btntabs" onclick="openCity(event, 'Nose')"><i class="fa fa-question"></i> Nose</button>
+    <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
+    <button class="btntabs" onclick="Name(event, 'Empleados')" id="defaultOpen"><i class="fa fa-user"></i> Empleados</button>
+    <button class="btntabs" onclick="Name(event, 'Permisos')"><i class="fa fa-check-square-o"></i>  Permisos</button>
   </div>
 
   <div id="Nuevo" class="contentfo">
@@ -13,6 +13,7 @@
       <form id="frmregistro">
           <div class="content-form">
                 <div class="form-group">
+
                     <label class="required" for="">Nombre del Empleados:</label>
                     <input class="k"  type="text" name="data[]" placeholder="Nombres" value="">
                 </div>
@@ -77,7 +78,7 @@
                   </select>
               </div>
               <div class="form-group">
-                  <button type="button" name="button" class="btntnt">Registrar</button>
+                  <button type="submit" name="button" class="btntnt">Registrar</button>
               </div>
             </div>
 
@@ -91,8 +92,8 @@
 
   </div>
 
-  <div id="Nose" class="contentfo">
-    <h3>Nose</h3>
+  <div id="Permisos" class="contentfo">
+    <h3> Permisos</h3>
   </div>
 
 </div>

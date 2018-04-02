@@ -2,7 +2,7 @@
 <div class="wrap--in">
        <header>
            <h1>Hola Supermercado</h1>
-           <p> este el el inico del administrador donde pude reslizar las tareas </p>
+           <p> Este el el inico del administrador donde puede reslizar  las tareas </p>
        </header>
        <div class="wrap-in-text">
            <p>
@@ -14,28 +14,29 @@
        </div>
 </div>
 <div class="wrap-info">
-    
+
      <div class="wrap-cont-info">
          <header>
              <h3> las cosas</h3>
          </header>
+         <p>17</p>
             <?php echo $this->maLass(); ?>
      </div>
      <div class="wrap-cont-info">
          <header>
-             <h3></h3>
+             <h3> Proveedores</h3>
          </header>
-         <p>muchos</p>
+         <p>Cantidad de Proveedores <?php echo  $this->maLass(); ?> </p>
      </div> <div class="wrap-cont-info">
           <header>
-              <h3></h3>
+              <h3>Categorías</h3>
           </header>
-          <p>muchos</p>
+          <p>Cantidad de Categorías</p>
       </div> <div class="wrap-cont-info">
            <header>
-               <h3></h3>
+               <h3>Empleados</h3>
            </header>
-           <p>muchos</p>
+           <p>Cantidad de Empleados</p>
        </div>
 
    </div>

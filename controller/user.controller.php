@@ -58,6 +58,12 @@ class UserController{
 
 	//---------inicio de sesion del cliente-------//
 	// --------------------------------------------- //
+	function readBy($data){
+		$result = $this->userModel->readBy($data);
+		return $result;
+	}
+
+
     function inicioCliente(){
       if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
         require_once "views/modules/cliente/header.php";
@@ -68,6 +74,13 @@ class UserController{
         header("Location: inicio");
       }
     }
+	function updatecli(){
+		$data = $_POST['data'];
+		$data[]=$_SESSION['USER']['ID'];
+		$result = $this->userModel->update($data);
+		header("Location: Ajustes");
+	}
+
 	//los ajustes del cliente
 	// ----------------------- //
 	function ajustes(){
@@ -85,7 +98,7 @@ class UserController{
 		}
 	}
 
-	function validarEmail($data){ 	
+	function validarEmail($data){
 	if(filter_var($data, FILTER_VALIDATE_EMAIL)===false){
 		return false;
 	}else{

@@ -1,4 +1,7 @@
 <div class="gallery--content">
+  <div class="buscador">
+    <input  class="sch" type="search" name="" value="" placeholder="Buscar Supermercados">
+  </div>
 <!-- <div class="supers"> -->
 <div class="card" >
   <img class="card-img-top" src="views/assets/image/jumbo.png" alt="1">
@@ -58,4 +61,5 @@
   </div>
 </div>
 <!-- </div> -->
+
 </div>

@@ -1,7 +1,7 @@
   RewriteEngine on
 
 #principal
-
+#----------------
 RewriteRule ^inicio$ index.php?controller=views
 RewriteRule ^ingreso$ index.php?controller=views&a=ingreso
 RewriteRule ^master$ index.php?controller=views&a=master
@@ -11,42 +11,53 @@ RewriteRule ^super$ index.php?controller=views&a=super
 RewriteRule ^explora$ index.php?controller=views&a=explora
 
 #validar usuario
+#----------------
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 
 #cliente
+#----------------
 RewriteRule ^inicioCliente$ index.php?controller=user&a=inicioCliente
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
+RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
+
 
 
 #supermercado
+#----------------
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
 RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
 RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 RewriteRule ^mi-supermercado$ index.php?controller=views&a=mySuper
 RewriteRule ^Articulos$ index.php?controller=views&a=articulos
 RewriteRule ^Información$ index.php?controller=views&a=informacion
+RewriteRule ^Proveedores$ index.php?controller=views&a=proveedores
+
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado
 RewriteRule ^Registrar-empleado$ index.php?controller=nworkers&a=registroEmpleado
 RewriteRule ^Empleados$ index.php?controller=views&a=Workers
 
 #empleado
+#----------------
 RewriteRule ^InicioWorker$ index.php?controller=views&a=InicioWorker
 RewriteRule ^settings-worker$ index.php?controller=views&a=settingsworker
 RewriteRule ^Retrasos$ index.php?controller=views&a=retrasos
 RewriteRule ^Pedidos$ index.php?controller=views&a=pedidos
-RewriteRule ^Proveedores$ index.php?controller=views&a=proveedores
+RewriteRule ^ProveedoresEm$ index.php?controller=views&a=proveedoresEm
+RewriteRule ^actualizar-datosEm$ index.php?controller=views&a=updateEm
 
-#CRUD productos#
+
+#CRUD productos
+#----------------
 RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
 RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
 RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
-RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProd&data=$1
+RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProduct&data=$1
 RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewsworker
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
@@ -56,4 +67,5 @@ RewriteRule ^actualizar-categoria$ index.php?controller=product&a=updateCat&data
 
 
 #super administrador
+#----------------
 RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin

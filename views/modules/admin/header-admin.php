@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="views/assets/css/mainAdmin.css">
+        <link rel="stylesheet" href="views/assets/css/Responsive/responsive-super.css">
         <link rel="shortcut icon" href="views/assets/image/icono.ico">
 
   </head>
@@ -16,7 +17,8 @@
     <section class="container1S">
         <header class="main--nav black1">
             <div class="icon--mobile">
-                <i class="fa fa-window-close"></i>
+                <!-- <i class="fa fa-window-close"></i> -->
+                <i class="fa fa-times" aria-hidden="true"></i>
             </div>
             <?php
 
