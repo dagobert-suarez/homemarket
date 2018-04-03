@@ -56,6 +56,7 @@ class UserController{
 			}
 	}
 
+
 	//---------inicio de sesion del cliente-------//
 	// --------------------------------------------- //
 	function readBy($data){

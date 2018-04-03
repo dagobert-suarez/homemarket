@@ -81,6 +81,8 @@ class UserModel{
 				 }
 				 return $msn;
 			 }
+
+
 			 //hace la consulta del numero de supermercados
 			 public function readTodos(){
 				 try {
