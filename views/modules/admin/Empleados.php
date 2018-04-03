@@ -9,8 +9,8 @@
 
   <div id="Nuevo" class="contentfo">
     <h3>Registrar Empleado</h3>
-    <div class="frmworker">
-      <form id="frmregistro" method="post" action="nuevo-empleado">
+    <div class="szs">
+      <form id="frmworker" method="post" action="nuevo-empleado">
           <div class="content-form">
                 <div class="form-group">
 

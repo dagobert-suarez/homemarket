@@ -1,5 +1,5 @@
 validación js del empleado
-$("#frmrWorker").submit(function(e) {
+$("#frmWorker").submit(function(e) {
     e.preventDefault();
             dataJson = [];
             $(".new").each(function(){

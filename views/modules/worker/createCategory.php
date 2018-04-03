@@ -1,7 +1,7 @@
 <?php
 	// $dataCategory = $this -> readByCategory($_GET["data"]);
 ?>
-<section>5
+<section>
 	<div  class="categorymodal">
 		<form  class="modal-content-category" action="createCategory" method="post">
 			<h1> Registrar categoria </h1>
