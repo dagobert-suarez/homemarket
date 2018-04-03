@@ -95,6 +95,7 @@ class ProductController{
          header("Location:nueva-categoria");
      }
 
+
      public function readByCategory($data){
        $result = $this->product->readByCat($data);
        return $result;

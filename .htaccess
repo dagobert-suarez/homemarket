@@ -31,11 +31,12 @@ RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
 #----------------
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
 RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
-RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 RewriteRule ^mi-supermercado$ index.php?controller=views&a=mySuper
+RewriteRule ^Proveedores$ index.php?controller=views&a=proveedores
 RewriteRule ^Articulos$ index.php?controller=views&a=articulos
 RewriteRule ^Información$ index.php?controller=views&a=informacion
-RewriteRule ^Proveedores$ index.php?controller=views&a=proveedores
+RewriteRule ^Notificaciones$ index.php?controller=views&a=notificaciones
+RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado

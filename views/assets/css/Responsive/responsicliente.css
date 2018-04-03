@@ -2,6 +2,9 @@
     .supers{
         grid-template-columns: repeat(3,1fr);
     }
+    nav{
+      display: none;
+    }
 }
 @media (max-width: 1000px) {
     .supers{

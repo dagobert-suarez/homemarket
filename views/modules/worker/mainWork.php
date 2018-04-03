@@ -1,36 +1,29 @@
-<div class="main--page">
-  <div class="row-one">
-    <div class="widget-firs">
-      <p>dashboard del Empleado</p>
-      <div class="stast-left">
-        <h5>1</h5>
-        <h3></h3>
-      </div>
-      <div class="stast-right">
+<h3>Dashboard</h3>
+<div class="wrap-info">
 
-      </div>
+     <div class="wrap-cont-info">
+         <header>
+             <h3> las cosas</h3>
+         </header>
+         <p>17</p>
+     </div>
+     <div class="wrap-cont-info">
+         <header>
+             <h3>Categorías</h3>
+         </header>
+         <p><?php echo $this-> selectCates(); ?> </p>
 
-    </div>
-    <div class="widget-med">
-      <div class="stast-left">
-        <h5>2</h5>
-        <h3></h3>
-      </div>
-      <div class="stast-right">
+     </div> <div class="wrap-cont-info">
+          <header>
+              <h3>Productos</h3>
+          </header>
+          <p><?php echo $this-> selectProdu(); ?></p>
 
-      </div>
-    </div>
-    <div class="widget-last">
-      <div class="stast-left">
-        <h5>3</h5>
-        <h3></h3>
-      </div>
-      <div class="stast-right">
+      </div> <div class="wrap-cont-info">
+           <header>
+               <h3> Proveedores</h3>
+           </header>
+           <p><?php echo  $this->prove(); ?> </p>
+       </div>
 
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
+   </div>

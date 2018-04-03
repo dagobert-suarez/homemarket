@@ -1,3 +1,13 @@
+var openmenu = document.getElementById('open-m-r');
+var modalmenu = document.getElementById('modal-menu');
+var closemenu = document.getElementById('close-m-r');
+
+openmenu.onclick = function() {
+  modalmenu.style.display = "block";
+}
+closemenu.onclick = function() {
+  modalmenu.style.display = "none";
+}
 // Modal del  Supérmecado menú para el Responsive
 // ------------------------------------
 $(".icon--mobile").click(function() {
