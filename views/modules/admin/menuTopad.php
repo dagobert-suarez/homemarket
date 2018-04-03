@@ -15,7 +15,6 @@
               <div class="content-down">
                   <li><a href="Notificaciones"><i class="fa fa-bell" aria-hidden="true"></i> Notificaciones</a> </li>
                   <li><a href="settings-Super"><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</a></li>
-
               </div>
           </div>
           <div class="log-out">

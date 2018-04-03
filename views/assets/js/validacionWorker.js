@@ -1,4 +1,5 @@
-$("#frmregistro").submit(function(e) {
+validación js del empleado
+$("#frmWorker").submit(function(e) {
     e.preventDefault();
             dataJson = [];
             $(".new").each(function(){
@@ -7,16 +8,16 @@ $("#frmregistro").submit(function(e) {
                 dataJson.push(structure);
             });
             $.ajax({
-              url: "Empleados",
+              url: "nuevo-Empleado",
               type: "POST",
                dataType:'json',
                data: ({data: dataJson }),
                success: function(result){
                  if (result==true) {
-                   $("#frmregistro")[0].reset();
-                   $('#frmregistro').after('<div class="mensaje">"¡Bien! Ya esta registrado"</div>');
+                   $("#frmWorker")[0].reset();
+                   $('#frmWorker').after('<div class="mensaje">"¡Bien! Ya esta registrado"</div>');
                  }
-                $('#frmregistro').after('<div class="mensaje">'+result+'</div>');
+                $('#frmWorker').after('<div class="mensaje">'+result+'</div>');
                  setTimeout(function(){
                       $('div.mensaje').remove();
                     }, 5000);
