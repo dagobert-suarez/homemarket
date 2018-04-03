@@ -51,20 +51,30 @@ class ProductModel{
       }
       return $result;
   }
-  function updateCategory(){
-    try{
-      // $sql="call modificarTipo";
-      $sql="UPDATE tipo_producto SET nom_tip_pro = ? WHERE id_tip_pro = ? ";
-      $query=$this->pdo->prepare($sql);
-      $query->execute(array($data[1],$data[0]));
-    // $result = $query->fetchALL(PDO::FETCH_BOTH);
-      $msn ="Ya modificó";
+
+  public function updateCategory($data){
+      try {
+          $sql="UPDATE tipo_producto SET nom_tip_pro = ? WHERE id_tip_pro = ? ";
+          $query=$this->pdo->prepare($sql);
+          $query->execute(array($data[1],$data[0]));
+          $msn ="ya modificó";
       } catch (PDOException $e) {
-          // $result = $e->getMessage();
-            $msn = $e->getMessage();
+          $msn = $e->getMessage();
+      }
+      return $msn;
+  }
+
+        public function readByCat2($data){
+          try {
+              $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
+              $query=$this->pdo->prepare($sql);
+              $query->execute(array($data));
+              $result = $query->fetch(PDO::FETCH_BOTH);
+          } catch (PDOException $e) {
+              $result = $e->getMessage();
           }
-          return $msn;
-        }
+          return $result;
+      }
 
          function readByCat($data){
     try {
@@ -77,7 +87,6 @@ class ProductModel{
     }
     return $result;
 }
-
 
 
 

@@ -1,8 +1,7 @@
 
 @import "reset.css";
-@import "color.css";
-/*@import "responsicliente.css";*/
-@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
+@import "color.css";@import "animate.css";
+ @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
 section.container1k{
     display: flex;
@@ -141,15 +140,13 @@ section.container1k{
     width: 100%;
     margin: 10px auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-
+    grid-template-columns: repeat(5,1fr);
 }
 
 .wrap-info .wrap-cont-info{
-    widows: 100%;
+    width: 90%;
     height: 90px;
     margin: 5px;
-    /* padding: 5px; */
     background-color: #CBCBCB;
     border: 1px solid rgba(161,161,161,0.3);
     border-radius:1px;
@@ -164,7 +161,7 @@ section.container1k{
 
 }
 .wrap-info .wrap-cont-info p{
-    font-size: 22px;
+    font-size: 20px;
     padding: 5px 0px 5px 8px;
     text-transform: full-width;
     /* color: rgba(85, 85, 85, 0.92); */

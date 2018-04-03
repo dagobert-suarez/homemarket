@@ -1,6 +1,6 @@
 <?php
 //envio de datos de productos
-require_once ("model/product.model.php");
+require_once("model/product.model.php");
 
 class ProductController{
   private $product;
@@ -87,9 +87,11 @@ class ProductController{
     $result = $this->product->readCategory();
     return  $result;
   }
+
   public function updateCat(){
-         $data =$_POST['data'];
+         $data = $_POST['data'];
          $result = $this->product->updateCategory($data);
+         // echo "<script>history.back(1)</script>";
          header("Location:nueva-categoria");
      }
 

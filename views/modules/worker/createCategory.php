@@ -63,8 +63,7 @@
 			<div class="wrap-bod">
 				<form  name="frmCategory" action="actualizar-categoria" method="post">
 					<label for="">Nombre de la categoria:</label>
-
-					<input type="text" name="data[]" required value="<?php echo $dataCategory ["nom_tip_pro"] ;?>"><br>
+					<input type="text" name="data[]" required value="<?php echo $dataCategory["nom_tip_pro"];?>"><br>
 					<button type="submit" name="button">Actualizar</button>
 				</form>
 
