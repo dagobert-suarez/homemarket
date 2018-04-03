@@ -70,7 +70,17 @@ class UserModel{
 				  }
 					return $msn;
 			 }
-
+			 public function createSuper($data){
+				 try{
+					 $sql="INSERT INTO supermercado(nom_sup,dir_sup,tel_sup,cod_ciu,log_sup) VALUES (?,?,?,?,?)";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute(array($data[0],$data[1],$data[2]),$data[3]);
+					 $msn ="Guardado Exitoxamente";
+				 } catch(PDOException $e){
+					 $msn = $e->getMessage();
+				 }
+				 return $msn;
+			 }
 			 //hace la consulta del numero de supermercados
 			 public function readTodos(){
 				 try {

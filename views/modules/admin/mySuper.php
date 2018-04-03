@@ -2,8 +2,8 @@
 
     <h1>Supermercados</h1>
     <div class="tab">
-        <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
         <button class="btntabs" onclick="Name(event, 'Supermercados' )"id="defaultOpen"><i class="fa fa-building"></i> Supermercados</button>
+        <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
         <button class="btntabs" onclick="Name(event, 'Categorias')"><i class="fa fa-clipboard"></i> Categorías</button>
         <button class="btntabs" onclick="Name(event, 'Productos')"><i class="fa fa-shopping-basket"></i> Productos</button>
       </div>
@@ -11,21 +11,21 @@
       <div id="Nuevo" class="contentfo">
         <h3>Registrar Supermercado</h3>
         <div class="frmworker">
-          <form class="frmregistro">
+          <form class="frmSuper" action="guardar-super" method="post" enctype="multipart/form-data">
               <div class="content-form">
                     <div class="form-group">
                         <label class="required" for="" >Nombre del Supermercado:</label>
-                        <input class="k"  type="text" name="data[]" value="" placeholder="Nombre" required>
+                        <input class="k"  type="text" name="data[]" value="" placeholder="Nombre">
                     </div>
                     <div class="form-group">
                         <label  class="required" for="">Direccion:</label>
-                        <input  class="k" type="text" name="data[]" placeholder="Direccion" value="">
+                        <input  class="k" type="text" name="data[]" placeholder="Direccion" >
                     </div>
               </div>
               <div class="content-form">
                   <div class="form-group">
                       <label  class="required" for="">Teléfono:</label>
-                      <input  class="k" type="number" name="data[]" placeholder="Teléfono" value="">
+                      <input  class="k" type="number" name="data[]" placeholder="Teléfono" >
                   </div>
                    <div class="form-group">
                       <label  class="required" for="">Ciudad:</label>
@@ -41,7 +41,7 @@
               <div class="content-form">
                   <div class="form-group">
                       <label  class="required" for="">Logo del Supermercado:</label>
-                      <input  class="kfile" type="file" name="data[]" value="">
+                      <input  class="kfile" type="file" name="file">
                   </div>
                       <div class="form-group">
                           <button type="submit" name="button" class="btntnt">Registrar</button>
@@ -66,14 +66,62 @@
       <!-- ----------------->
       <div id="Supermercados" class="contentfo">
         <h3>Supermercados</h3>
-        <p> para ver los supermercados</p>
+        <table id="dataGrid">
+            <thead class="tittledatag">
+                <tr>
+
+                    <td>Nombre</td>
+                    <td>Apellidos</td>
+                    <td>Teléfono</td>
+                    <td>Correo</td>
+                    <td>Aciones</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Juan Carlos</td>
+                    <td>Muños Munera</td>
+                    <td>323</td>
+                    <td>JuanM@gmail.com</td>
+                    <td>
+                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Debora</td>
+                    <td>Cabezas</td>
+                    <td>255555</td>
+                    <td>DeboraC@gmail.com</td>
+                    <td>
+                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aquiles</td>
+                    <td>Brinco</td>
+                    <td>3014561</td>
+                    <td>Aquiles@gmail.com</td>
+                    <td>
+                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
 
       </div>
         <!-- Categoria -->
         <!-- ----------------->
       <div id="Categorias" class="contentfo">
         <h3>Categorías</h3>
-        <button type="button" id="openCate" name="button">Nueva categoría</button><br><br>
+        <button type="button" id="openCate" name="button">Nueva categoría</button>
         <p>Aca se mostraran las Categorias Registradas.</p>
         <div id="fondo"></div>
         <div id="wrapmodal">
@@ -93,6 +141,54 @@
                 </div>
             </div>
         </div>
+        <!-- <table id="dataGrid">
+            <thead class="tittledatag">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Apellidos</td>
+                    <td>Teléfono</td>
+                    <td>Correo</td>
+                    <td>Aciones</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>Juan Carlos</td>
+                    <td>Muños Munera</td>
+                    <td>323</td>
+                    <td>JuanM@gmail.com</td>
+                    <td>
+                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Debora</td>
+                    <td>Cabezas</td>
+                    <td>255555</td>
+                    <td>DeboraC@gmail.com</td>
+                    <td>
+                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aquiles</td>
+                    <td>Brinco</td>
+                    <td>3014561</td>
+                    <td>Aquiles@gmail.com</td>
+                    <td>
+                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table> -->
       </div>
       <!-- Productos -->
       <!-- ----------------->
