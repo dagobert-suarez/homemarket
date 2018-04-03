@@ -141,7 +141,7 @@ die();
 		            die("lo sentimos ese archivo ya existe");
 		          }else{
 					  move_uploaded_file($_FILES["file"]["tmp_name"],"views/assets/image/super/".$filename);
-					  $data[2] = $filename;
+					  $data[4] = $filename;
 					}
 				}else{
 				  die("Error: no se puede reconocer la imagen intente nuevamente");
@@ -155,6 +155,30 @@ die();
 	        header("Location: mi-supermercado");
 
 			}
+			// Seleccionar Todos los Supermercados
+			public function readAllSup(){
+				$result = $this->userModel->readAllSup();
+				return $result;
+			}
+			 // Seleccionar por Supermercados
+			 public function readBySup(){
+				 $resut = $this->userModel->readBySup();
+				 return $resut;
+			 }
+			 // Actualizar Supermercado
+			 public function updateSup(){
+				 	$data = $_POST['data'];
+					$result = $this->userModel->updateSup($data);
+					header("Location: mi-supermercado"); 
+			 }
+			 // Eliminar Supermercado
+			 public function deleteSup(){
+				 $data = $_GET['data'];
+				 $result = $this->userModel->deleteSup($data);
+
+				 header("Location: mi-supermercado") ;
+			 }
+
 
 
 //las sessiones del empeado - inicio

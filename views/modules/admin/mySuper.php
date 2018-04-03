@@ -24,8 +24,8 @@
               </div>
               <div class="content-form">
                   <div class="form-group">
-                      <label  class="required" for="">Teléfono:</label>
-                      <input  class="k" type="number" name="data[]" placeholder="Teléfono" >
+                      <label class="required" for="">Teléfono:</label>
+                      <input class="k" type="number" name="data[]" placeholder="Teléfono" >
                   </div>
                    <div class="form-group">
                       <label  class="required" for="">Ciudad:</label>
@@ -71,50 +71,32 @@
                 <tr>
 
                     <td>Nombre</td>
-                    <td>Apellidos</td>
+                    <td>Direccion</td>
                     <td>Teléfono</td>
-                    <td>Correo</td>
                     <td>Aciones</td>
                 </tr>
             </thead>
             <tbody>
-
+                <?php
+                $item =1;
+                foreach($this->readAllSup() as $row){?>
                 <tr>
-                    <td>Juan Carlos</td>
-                    <td>Muños Munera</td>
-                    <td>323</td>
-                    <td>JuanM@gmail.com</td>
+                    <td><?php echo $row["nom_sup"] ;?></td>
+                    <td><?php echo $row["dir_sup"] ;?></td>
+                    <td><?php echo $row["tel_sup"] ;?></td>
                     <td>
-                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                        <a href="#" class="abrirmodal"><i class="fa fa-pencil"></i> Editar</a>
+                        <a href="#"class=""id=""><i class="fa fa-eye"></i> Detalles</a>
+                        <a href="eliminar-supermercado-<?php echo $row['id_sup'];?>"><i class="fa fa-trash"></i> Eliminar</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>Debora</td>
-                    <td>Cabezas</td>
-                    <td>255555</td>
-                    <td>DeboraC@gmail.com</td>
-                    <td>
-                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Aquiles</td>
-                    <td>Brinco</td>
-                    <td>3014561</td>
-                    <td>Aquiles@gmail.com</td>
-                    <td>
-                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
-                    </td>
-                </tr>
-
+                <?php
+                $item++;
+                    }
+                    ?>
             </tbody>
         </table>
+        <div id="fondo"></div>
 
       </div>
         <!-- Categoria -->

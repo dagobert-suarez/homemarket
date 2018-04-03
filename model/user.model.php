@@ -70,13 +70,64 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+			 // Crear Supermercado
 			 public function createSuper($data){
 				 try{
-					 $sql="INSERT INTO supermercado(nom_sup,dir_sup,tel_sup,cod_ciu,log_sup) VALUES (?,?,?,?,?)";
+					 $sql="INSERT INTO supermercado(nom_sup, dir_sup, tel_sup, cod_ciu,logo_sup)
+					 			VALUES (?,?,?,?,?)";
 					 $query=$this->pdo->prepare($sql);
-					 $query->execute(array($data[0],$data[1],$data[2]),$data[3]);
+					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4] ) ) ;
 					 $msn ="Guardado Exitoxamente";
 				 } catch(PDOException $e){
+					 $msn = $e->getMessage();
+				 }
+
+				 return $result;
+			 }
+			 // Seleccionar todos
+			 public function readAllSup(){
+				 try{
+					 $sql="SELECT * FROM supermercado";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute();
+					 $result = $query->fetchALL(PDO::FETCH_BOTH);
+				 } catch (PDOException $e){
+					 $result = $e->getMessage();
+				 }
+				 return $result;
+			 }
+			 // Seleccionar por Supermercado
+			 public function readBySup($data){
+				 try{
+					$sql="SELECT * FROM supermercado WHERE id_sup = ?";
+					$query=$this->pdo->prepare($sql);
+					$query->execute(array($data));
+					$result = $query->fetch(PDO::FETCH_BOTH);
+				} catch(PDOException $e){
+					$result = $e->getMessage();
+				}
+				return $result;
+			 }
+			 // Actualizar Supermercados
+			 public function updateSup($data){
+				 try{
+					 $sql="UPDATE supermercado SET nom_sup = ? , dir_sup = ? , tel_sup = ? cod_ciu = ? , logo_sup = ?";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4]));
+					 $msn = "Modificado Exitosamente";
+				 } catch (PDOException $e){
+					 $msn = $e->getMessage();
+				 }
+				 return $msn;
+			 }
+			 // Eliminar Supermercados
+			 public function deleteSup($data){
+				 try {
+					 $sql="DELETE FROM supermercado WHERE id_sup = ?";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute(array($data));
+					 $msn="Eliminado Exitoxamente";
+				 } catch (PDOException $e) {
 					 $msn = $e->getMessage();
 				 }
 				 return $msn;
