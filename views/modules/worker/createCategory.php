@@ -1,5 +1,5 @@
 <?php
-	// $dataCategory = $this -> readByCategory($_GET["data"]);
+	$dataProduct = $this -> readByCategory($_GET["data"]);
 ?>
 <section>
 	<div  class="categorymodal">
@@ -61,10 +61,10 @@
 			</div>
 
 			<div class="wrap-bod">
-				<form  name="frmCategory" action="actualizar-categoria" method="post">
+				<form  name="frmCategory" action="actualizando-categoria" method="post">
 					<label for="">Nombre de la categoria:</label>
-
-					<input type="text" name="data[]" required value="<?php echo $dataCategory["nom_tip_pro"];?>"><br>
+					                <input type="text" readonly name="data[]" value="<?php echo $_GET["data"] ?>">
+					<input type="text" name="data[]" placeholder="ingrese nuevo nombre" required value="<?php echo $dataProduct["nom_tip_pro"];?>"><br>
 					<button type="submit" name="button">Actualizar</button>
 				</form>
 

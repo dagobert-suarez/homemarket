@@ -62,7 +62,7 @@ RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewswor
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^createCategory$ index.php?controller=product&a=createCategory
-RewriteRule ^actualizar-categoria$ index.php?controller=product&a=updateCat&data=$1
+RewriteRule ^actualizando-categoria$ index.php?c=product&a=updateCat
 
 
 
