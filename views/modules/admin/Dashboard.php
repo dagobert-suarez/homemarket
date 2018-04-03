@@ -17,21 +17,20 @@
 
      <div class="wrap-cont-info">
          <header>
-             <h3> las cosas</h3>
+             <h3>Supermercados</h3>
          </header>
-         <p>17</p>
-            <?php echo $this->maLass(); ?>
+         <p>Cantidad: 17</p>
      </div>
      <div class="wrap-cont-info">
          <header>
              <h3> Proveedores</h3>
          </header>
-         <p>Cantidad de Proveedores <?php echo  $this->maLass(); ?> </p>
+         <p>Cantidad: <?php echo  $this->prove(); ?> </p>
      </div> <div class="wrap-cont-info">
           <header>
               <h3>Categorías</h3>
           </header>
-          <p>Cantidad de Categorías</p>
+          <p>Cantidad: <?php echo $this-> selectCates(); ?> </p>
       </div> <div class="wrap-cont-info">
            <header>
                <h3>Empleados</h3>
