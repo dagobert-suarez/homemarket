@@ -2,8 +2,8 @@
 
     <h1>Provedores</h1>
     <div class="tab">
-        <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
         <button class="btntabs" onclick="Name(event, 'Proveedores' )"id="defaultOpen"><i class="fa fa-address-book-o"></i> Proveedores</button>
+        <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
       </div>
 
       <div id="Nuevo" class="contentfo">
@@ -36,7 +36,42 @@
 
       <div id="Proveedores" class="contentfo">
         <h3>Proveedores</h3>
-        <p> para ver los Proveedores</p>
+        <!-- <p> para ver los Proveedores</p> -->
+        <table id="dataGrid">
+			<thead class="tittledatag">
+				<tr>
+
+                    <td>Nombre del Proveedor</td>
+                    <td>Direccion</td>
+                    <td>Teléfono</td>
+					<td>Aciones</td>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					<td>Juan Carlos</td>
+					<td>Carrera 38</td>
+                    <td>323</td>
+					<td>
+						<a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+						<a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+						<a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+					</td>
+				</tr>
+                <tr>
+					<td>Coca cola</td>
+					<td>Carrera 38 # 40-59 </td>
+                    <td>255555</td>
+					<td>
+						<a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+						<a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+						<a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
 
       </div>
 

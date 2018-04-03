@@ -2,8 +2,8 @@
 
   <h1>Empleados</h1>
   <div class="tab">
+      <button class="btntabs" onclick="Name(event, 'Empleados')" id="defaultOpen"><i class="fa fa-user"></i> Empleados</button>
     <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
-    <button class="btntabs" onclick="Name(event, 'Empleados')" id="defaultOpen"><i class="fa fa-user"></i> Empleados</button>
     <button class="btntabs" onclick="Name(event, 'Permisos')"><i class="fa fa-check-square-o"></i>  Permisos</button>
   </div>
 
@@ -89,6 +89,56 @@
 
   <div id="Empleados" class="contentfo">
     <h3>Empleados</h3>
+
+    <table id="dataGrid">
+        <thead class="tittledatag">
+            <tr>
+
+                <td>Nombre</td>
+                <td>Apellidos</td>
+                <td>Teléfono</td>
+                <td>Correo</td>
+                <td>Aciones</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Juan Carlos</td>
+                <td>Muños Munera</td>
+                <td>323</td>
+                <td>JuanM@gmail.com</td>
+                <td>
+                    <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                    <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                    <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Debora</td>
+                <td>Cabezas</td>
+                <td>255555</td>
+                <td>DeboraC@gmail.com</td>
+                <td>
+                    <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                    <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                    <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Aquiles</td>
+                <td>Brinco</td>
+                <td>3014561</td>
+                <td>Aquiles@gmail.com</td>
+                <td>
+                    <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
+                    <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                    <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
 
   </div>
 

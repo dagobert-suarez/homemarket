@@ -1,8 +1,7 @@
 
 @import "reset.css";
-@import "color.css";
-/*@import "responsicliente.css";*/
-@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
+@import "color.css";@import "animate.css";
+ @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
 section.container1k{
     display: flex;

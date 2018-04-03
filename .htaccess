@@ -38,6 +38,9 @@ RewriteRule ^Información$ index.php?controller=views&a=informacion
 RewriteRule ^Notificaciones$ index.php?controller=views&a=notificaciones
 RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 
+#crud
+RewriteRule ^guardar-super$ index.php?controller=views&a=newSuper
+
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado
 RewriteRule ^Registrar-empleado$ index.php?controller=nworkers&a=registroEmpleado

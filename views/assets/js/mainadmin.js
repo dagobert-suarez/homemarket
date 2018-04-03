@@ -1,7 +1,29 @@
+$(document).ready(function() {
+    $("#dataGrid").DataTable({
+     "language":{
+      "lengthMenu":"Registros: _MENU_",
+      "zeroRecords": "No se encontraron registros",
+            "info": "Página _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay registros aún.",
+            "infoFiltered": "(filtrados de un total de _MAX_ registros)",
+            "search" :"Buscar:",
+            "LoadingRecords": "Cargando ...",
+            "Processing": "Procesando...",
+            "SearchPlaceholder": "Comience a teclear...",
+            "previous": "Anterior",
+            "paginate": {
+            "previous": "Anterior",
+            "next": "Siguiente",
+    }
+     }
+    }
+
+    )
+} );
+
 // Esta es la parte de los tabs
 // -----------------------------
-
-function Name(evt, cityName) {
+function Name(evt, nName) {
     var i, contentfo, btntabs;
     contentfo = document.getElementsByClassName("contentfo");
     for (i = 0; i < contentfo.length; i++) {
@@ -11,7 +33,7 @@ function Name(evt, cityName) {
     for (i = 0; i < btntabs.length; i++) {
         btntabs[i].className = btntabs[i].className.replace(" active", "");
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(nName).style.display = "block";
     evt.currentTarget.className += " active";
 }
 // Get the element with id="defaultOpen" and click on it
@@ -45,6 +67,7 @@ close.onclick = function(){
      fondo.style.display = "none";
      wrapmodal.style.display = "none";
  };
+
  // // Modal del menú para el Responsive
  // // ------------------------------------
  // $(".icon--mobile").click(function() {
