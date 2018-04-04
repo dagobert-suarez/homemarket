@@ -25,8 +25,6 @@ RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
 
-
-
 #supermercado
 #----------------
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
@@ -40,6 +38,7 @@ RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 
 #crud
 RewriteRule ^guardar-super$ index.php?controller=views&a=newSuper
+RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
 RewriteRule ^eliminar-supermercado-(\w+)$ index.php?controller=views&a=deleteSup&data=$1
 
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1

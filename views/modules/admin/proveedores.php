@@ -9,24 +9,24 @@
       <div id="Nuevo" class="contentfo">
         <h3>Registrar Proveedor</h3>
         <div class="frmworker">
-            <form class="" action="" method="post">
+            <form class="frmprovee" action="guardar-provee" method="post" enctype="multipart/form-data">
                 <div class="content-form">
                     <div class="form-group">
                         <label class="required">Nombre del Proveedor:</label>
-                        <input class="k" type="text" name="" value="">
+                        <input class="k" type="text" name="data[]" value="" placeholder="Nombre">
                     </div>
                     <div class="form-group">
                         <label class="required">Direccion del Proveedor:</label>
-                        <input class="k" type="text" name="" value="">
+                        <input class="k" type="text" name="data[]" value="" placeholder="Direccion">
                     </div>
                 </div>
                 <div class="content-form">
                     <div class="form-group">
                         <label class="required">Teléfono del Proveedor:</label>
-                        <input class="k" type="number" name="" value="">
+                        <input class="k" type="number" name="data[]" value="" placeholder="Teléfono">
                     </div>
                     <div class="form-group">
-                        <button type="submit" name="button">Regitrar</button>
+                        <button type="submit" name="button"  class="btntnt">Registrar</button>
                     </div>
                 </div>
             </form>
@@ -40,36 +40,28 @@
         <table id="dataGrid">
 			<thead class="tittledatag">
 				<tr>
-
-                    <td>Nombre del Proveedor</td>
-                    <td>Direccion</td>
-                    <td>Teléfono</td>
+          <td>Nombre del Proveedor</td>
+          <td>Direccion</td>
+          <td>Teléfono</td>
 					<td>Aciones</td>
 				</tr>
 			</thead>
 			<tbody>
-
+        <?php
+        $item =1;
+          foreach($this->readAllProv() as $row){?>
 				<tr>
-					<td>Juan Carlos</td>
-					<td>Carrera 38</td>
-                    <td>323</td>
+					<td><?php echo $row["nom_prov"] ;?></td>
+					<td><?php echo $row["dir_prov"] ;?></td>
+          <td><?php echo $row["tel_prov"] ;?></td>
 					<td>
 						<a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
 						<a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
 						<a href="#"><i class="fa fa-trash"></i>Eliminar</a>
 					</td>
 				</tr>
-                <tr>
-					<td>Coca cola</td>
-					<td>Carrera 38 # 40-59 </td>
-                    <td>255555</td>
-					<td>
-						<a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-						<a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-						<a href="#"><i class="fa fa-trash"></i>Eliminar</a>
-					</td>
-				</tr>
-
+        <?php $item ++;
+      } ?>
 			</tbody>
 		</table>
 

@@ -84,7 +84,7 @@ class UserModel{
 
 				 return $result;
 			 }
-			 // Seleccionar todos
+			 // Seleccionar todos los supermercados
 			 public function readAllSup(){
 				 try{
 					 $sql="SELECT * FROM supermercado";
@@ -147,7 +147,47 @@ class UserModel{
 					return $result;
 			 }
 			 // llama todo los  empleados (cantidad)de empleados
-			function prove(){
+
+			// Proveedores
+			// ---------------------
+			public function createProvee($data){
+				try{
+					$sql=" INSERT INTO proveedores (nom_prov,dir_prov,tel_prov) VALUES (?,?,?)";
+					$query=$this->pdo->prepare($sql);
+					$query->execute(array($data[0],$data[1],$data[2])) ;
+					$msn ="Guardado Exitoxamente";
+				} catch(PDOException $e){
+					$msn = $e->getMessage();
+				}
+					return $msn;
+			}
+			// Selecionar Todos los Proveedores
+			 public function readAllProv(){
+				 try{
+					 $sql="SELECT * FROM proveedores";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute();
+					 $result = $query->fetchALL(PDO::FETCH_BOTH);
+				 } catch (PDOException $e){
+					 $result = $e->getMessage();
+				 }
+				 return $result;
+			 }
+			 // Selecionar por Proveedor
+			 public function readByProv(){
+				 try{
+					 $sql="SELECT * FROM proveedores WHERE id_prov = ?";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute();
+					 $result = $query->fetch(PDO::FETCH_BOTH);
+				 } catch (PDOException $e){
+					 $result = $e->getMessage();
+				 }
+				 return $result;
+			 }
+
+
+			 public function prove(){
 				try{
 					$sql= "SELECT COUNT(*) FROM proveedores";
 					$query=$this->pdo->prepare($sql);
@@ -157,9 +197,7 @@ class UserModel{
 					$result = $e-> getMessage();
 				}
 				return $result;
-				// return 1;
 			}
-
 // llama las ciudades registradas en bd
 	function readCities(){
 		try{

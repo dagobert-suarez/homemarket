@@ -169,7 +169,7 @@ die();
 			 public function updateSup(){
 				 	$data = $_POST['data'];
 					$result = $this->userModel->updateSup($data);
-					header("Location: mi-supermercado"); 
+					header("Location: mi-supermercado");
 			 }
 			 // Eliminar Supermercado
 			 public function deleteSup(){
@@ -178,6 +178,28 @@ die();
 
 				 header("Location: mi-supermercado") ;
 			 }
+
+			 // Proveedores
+			 // --------------------------
+			 // Crear Proveedor
+			 public function newProvee(){
+	 			$data = $_POST['data'];
+	 			$result = $this->userModel->createProvee($data);
+				// print_r ($data);
+	 	    header("Location: Proveedores");
+	 			}
+				// selecionar todos proveedores
+				public function readAllProv(){
+					$result= $this->userModel->readAllProv();
+					return $result;
+				}
+				// Selecionar por provvedor
+				public function readByProv(){
+					$result= $this->userModel->readByProv();
+					return $result;
+				}
+
+
 
 
 

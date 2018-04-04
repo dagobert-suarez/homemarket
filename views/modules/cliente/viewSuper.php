@@ -3,15 +3,24 @@
     <input  class="sch" type="search" name="" value="" placeholder="Buscar Supermercados">
   </div>
 <!-- <div class="supers"> -->
+
+<!-- <?php
+$item =1;
+// foreach($this->readAllSup() as $row){?>
+} ?> -->
 <div class="card" >
   <img class="card-img-top" src="views/assets/image/jumbo.png" alt="1">
   <div class="card-body">
-    <h4 class="card-title">Jumbo</h4>
+    <h4 class="card-title"></h4>
     <p class="card-text"></p>
     <a href="#" class="btn-go">ir a mercar</a>
-
   </div>
 </div>
+
+<!-- <?php
+$item++;
+    // }
+    ?> -->
 <div class="card" >
   <img class="card-img-top" src="views/assets/image/surti.png" alt="2">
   <div class="card-body">
