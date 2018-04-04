@@ -185,6 +185,19 @@ class UserModel{
 				 }
 				 return $result;
 			 }
+			 // Actualizar Proveedor
+			 // Eliminar Proveedor
+			 public function deleteProv($data){
+				 try{
+					 $sql= "DELETE FROM proveedores WHERE id_prov = ?";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute(array($data));
+					 $msn="Eliminado Exitosamente";
+				 }catch (PDOException $e){
+					 $msn= $e->getMessage();
+				 }
+				 return $msn;
+			 }
 
 
 			 public function prove(){
