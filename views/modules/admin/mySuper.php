@@ -86,7 +86,7 @@
                     <td><?php echo $row["tel_sup"] ;?></td>
                     <td>
                         <a href="#" class="abrirmodal"><i class="fa fa-pencil"></i> Editar</a>
-                        <a href="#"class=""id=""><i class="fa fa-eye"></i> Detalles</a>
+                        <a href="#"class=""id="opendet"><i class="fa fa-eye"></i> Detalles</a>
                         <a href="eliminar-supermercado-<?php echo $row['id_sup'];?>"><i class="fa fa-trash"></i> Eliminar</a>
                     </td>
                 </tr>
@@ -97,6 +97,22 @@
             </tbody>
         </table>
         <div id="fondo"></div>
+        <div id="wrapmodal">
+            <div id="modaldet">
+                <div class="wrap-tit">
+                    <h3>Detalle</h3>
+                    <i id="closeCate"  class="close">&times;</i>
+                </div>
+                <div class="wrap-bod">
+                    <label for="">Nombre: <?php echo ['nom_sup']; ?></label>
+                    <label for="">Direccion: <?php echo ['dir_sup']; ?></label>
+                    <label for="">Teléfono: <?php echo ['tel_sup']; ?></label>
+                    <img src="views/assets/imge/super/<?php echo ['logo_sup']; ?>" alt="">
+                </div>
+
+            </div>
+        </div>
+
 
       </div>
         <!-- Categoria -->

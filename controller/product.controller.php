@@ -119,5 +119,17 @@ class ProductController{
     echo '<script language="javascript">alert("ya se elimino");</script>';
     echo "<script>window.location.href='Productos-empleado'</script>";
   }
+
+  // supermercados
+  // Seleccionar Todos los Supermercados
+    public function readAllSup(){
+      $result = $this->product->readAllSup();
+      return $result;
+    }
+   // Seleccionar por Supermercados
+   public function readBySup(){
+       $resut = $this->product->readBySup();
+       return $resut;
+   }
 }
 ?>

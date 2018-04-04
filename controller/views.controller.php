@@ -197,6 +197,11 @@ die();
 					return $result;
 				}
 				// Actualizar Proveedor
+				public function updateProv(){
+					$data= $_POST['data'];
+					$result=$this->userModel->updateProv($data);
+					return $result;
+				}
 				// Eliminar Proveedor
 				public function deleteProv(){
 					$data = $_GET['data'];
