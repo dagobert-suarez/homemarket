@@ -18,7 +18,15 @@ class ProductController{
     require_once "views/modules/worker/footer.php";
 
   }
-
+  // Cliente
+  //inicio de session del cliente donde muestra los supermercados
+  function Supermercados(){
+      require_once "views/modules/cliente/header.php";
+      require_once "views/modules/cliente/menuTopC.php";
+      require_once "views/modules/cliente/navigator.php";
+      require_once "views/modules/cliente/viewSuper.php";
+      require_once "views/modules/cliente/footer.php";
+  }
   //inicio de session del cliente donde muestra los productos
   function Productos(){
     require_once "views/modules/cliente/header.php";
@@ -27,14 +35,6 @@ class ProductController{
     require_once "views/modules/cliente/footer.php";
   }
 
-  //inicio de session del cliente donde muestra los supermercados
-  function Supermercados(){
-    require_once "views/modules/cliente/header.php";
-    require_once "views/modules/cliente/menuTopC.php";
-    require_once "views/modules/cliente/navigator.php";
-    require_once "views/modules/cliente/viewSuper.php";
-    require_once "views/modules/cliente/footer.php";
-  }
   function mySuper(){
       require_once "views/modules/admin/header-admin.php";
       require_once "views/modules/admin/mySuper.php";
