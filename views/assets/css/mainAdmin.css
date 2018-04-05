@@ -432,7 +432,7 @@ background-color: rgb(196, 196, 196);
 
 /* _*.* Fin dataGrid*.*_ */
 /* -------------------------  */
-/* Categoria  */
+/*Modal  Categoria  */
 /* --------------- */
 #fondo{
     display: none;
@@ -480,6 +480,29 @@ background-color: rgb(196, 196, 196);
 }
 /* Fin de la  Categoria  */
 /* --------------- */
+/* Modal de Detalle Supermercado */
+/* -------------------------------------*/
+#wrapmodalsup{
+    display: none;
+    margin: 0px auto;
+    top: 0px;left: 0px;
+    width:100%; height: 100vh;
+    position: fixed; z-index:2;
+}
+#modaldetsup{
+    width: 650px; height: auto;
+    /* background-color: #FEFEFE; */
+    top: 0px; left: 0px;
+    display: none;
+    background-color: lime;
+    margin: 150px auto;
+    z-index: 3;
+    padding: 15px;
+}
+
+/* Fin Modal de Detalle Supermercado */
+/* -------------------------------------*/
+
 /*_*.* Esta es la parte de los ajustes*.*_*/
 /* ------------------------------------ */
 .module--Sett{

@@ -19,7 +19,7 @@
          <header>
              <h3>Supermercados</h3>
          </header>
-         <p>Cantidad: 17</p>
+         <p>Cantidad: <?php echo $this->readTodos(); ?></p>
      </div>
      <div class="wrap-cont-info">
          <header>

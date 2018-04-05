@@ -26,7 +26,7 @@
           <input type="text" name="data[]" value="" class="new" required>
         </div>
         <div class="">
-          <label for="" class="required">categoria producto:</label>
+          <label for="" class="required">Categoria producto:</label>
           <select class="product" name="data[]" class="new" required>
             <option value=""></option>
             <?php
@@ -38,11 +38,11 @@
         </select>
       </div>
       <div class="">
-        <label for="" class="required">cantidad</label>
+        <label for="" class="required">Cantidad:</label>
         <input type="number" name="data[]">
       </div>
       <div class="">
-        <label for="" class="required">medida</label>
+        <label for="" class="required">Medida:</label>
         <select class="" name="data[]">
           <option value="">kg</option>
           <option value="">lb</option>
@@ -56,7 +56,7 @@
       </div>
         <div class="" >
             <label for="" class="required">Imagen del producto:</label>
-            <input type="file" name="data[]" value="" class="new">
+            <input type="file" name="file" value="" class="new">
         </div>
         <div class="">
             <button type="submit" name="guardar" class="frmbtn">Crear Producto</button>
