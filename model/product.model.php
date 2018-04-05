@@ -31,6 +31,7 @@ class ProductModel{
       $sql = "call crear_pro(?,?,?,?,?,?,?,?)";
       $query = $this->pdo->prepare($sql);
       $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
+
       $msn = "registro con exito";
     }catch (PDOException $e) {
       die($e->getMessage());
@@ -75,18 +76,6 @@ class ProductModel{
           }
           return $result;
       }
-
-//          function readByCat($data){
-//     try {
-//         $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
-//         $query=$this->pdo->prepare($sql);
-//         $query->execute(array($data));
-//         $result = $query->fetch(PDO::FETCH_BOTH);
-//     } catch (PDOException $e) {
-//         $result = $e->getMessage();
-//     }
-//     return $result;
-// }
 
 
 
