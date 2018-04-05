@@ -56,7 +56,7 @@
       </div>
         <div class="" >
             <label for="" class="required">Imagen del producto:</label>
-            <input type="file" name="file" value="" class="new">
+          <input type="file" name="data[]" value="" class="new">
         </div>
         <div class="">
             <button type="submit" name="guardar" class="frmbtn">Crear Producto</button>

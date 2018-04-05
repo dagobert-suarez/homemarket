@@ -37,6 +37,7 @@ class ProductModel{
       die($e->getMessage());
     }
     return $msn;
+
   }
 
 //llama los tipos de categorias en la bd
@@ -64,7 +65,7 @@ class ProductModel{
       return $msn;
   }
 
-        public function readByCat2($data){
+        public function readByCat($data){
           try {
               $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
               $query=$this->pdo->prepare($sql);
@@ -76,17 +77,17 @@ class ProductModel{
           return $result;
       }
 
-         function readByCat($data){
-    try {
-        $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
-        $query=$this->pdo->prepare($sql);
-        $query->execute(array($data));
-        $result = $query->fetch(PDO::FETCH_BOTH);
-    } catch (PDOException $e) {
-        $result = $e->getMessage();
-    }
-    return $result;
-}
+//          function readByCat($data){
+//     try {
+//         $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
+//         $query=$this->pdo->prepare($sql);
+//         $query->execute(array($data));
+//         $result = $query->fetch(PDO::FETCH_BOTH);
+//     } catch (PDOException $e) {
+//         $result = $e->getMessage();
+//     }
+//     return $result;
+// }
 
 
 
