@@ -38,8 +38,9 @@ RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 
 #crud
 RewriteRule ^guardar-super$ index.php?controller=views&a=newSuper
-RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
 RewriteRule ^eliminar-supermercado-(\w+)$ index.php?controller=views&a=deleteSup&data=$1
+RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
+RewriteRule ^eliminar-provee-(\w+)$ index.php?controller=views&a=deleteProv&data=$1
 
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado

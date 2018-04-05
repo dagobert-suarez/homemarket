@@ -57,7 +57,7 @@
 					<td>
 						<a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
 						<a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-						<a href="#"><i class="fa fa-trash"></i>Eliminar</a>
+						<a href="eliminar-provee-<?php echo $row['id_prov'];?>"><i class="fa fa-trash"></i>Eliminar</a>
 					</td>
 				</tr>
         <?php $item ++;

@@ -185,6 +185,30 @@ class UserModel{
 				 }
 				 return $result;
 			 }
+			 // Actualizar Proveedor
+			 public function updateProv(){
+				 try{
+					 $sql="UPDATE proveedores SET nom_prov = ? , dir_prov = ?, tel_prov = ? ";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute(array($data[0], $data[1], $data[2]));
+					 $msn= "Modificado Exitosamente";
+				 } catch (PDOException $e){
+					 $msn= $e->getMessage();
+				 }
+				 return $msn;
+			 }
+			 // Eliminar Proveedor
+			 public function deleteProv($data){
+				 try{
+					 $sql= "DELETE FROM proveedores WHERE id_prov = ?";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute(array($data));
+					 $msn="Eliminado Exitosamente";
+				 }catch (PDOException $e){
+					 $msn= $e->getMessage();
+				 }
+				 return $msn;
+			 }
 
 
 			 public function prove(){

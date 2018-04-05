@@ -68,6 +68,21 @@ close.onclick = function(){
      wrapmodal.style.display = "none";
  };
 
+ // Modal del Detalle supermercado
+ var opendetsup = document.getElementById('opendetsup');
+ var wrapmodalsup = document.getElementById('wrapmodalsup');
+ var modaldetsup = document.getElementById('modaldetsup');
+
+ opendetsup.onclick = function(){
+     fondo.style.display = "block";
+     modaldetsup.style.display = "block";
+ };
+ fondo.onclick = function(){
+     fondo.style.display = "none";
+     modaldetsup.style.display = "none";
+ }
+
+
  // // Modal del menú para el Responsive
  // // ------------------------------------
  // $(".icon--mobile").click(function() {
