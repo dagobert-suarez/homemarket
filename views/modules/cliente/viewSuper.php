@@ -9,7 +9,7 @@
 <!-- <div class="supers"> -->
 
 <div class="card" >
-  <img class="card-img-top" src="views/assets/image/super/<?php echo $row["logo_sup"];?>" alt="1">
+  <img class="card-img-top" src="views/assets/image/super/<?php echo $row["logo_sup"];?>" alt="Logo del Supermercado">
   <div class="card-body">
     <h5 class="card-title"><?php echo $row["nom_sup"]; ?></h5>
     <p class="card-text"><?php echo $row["dir_sup"]; ?></p>
