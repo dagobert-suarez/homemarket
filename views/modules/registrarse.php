@@ -24,11 +24,11 @@
 						</div>
 						<div class="content-form">
 							<div class="form-gruop">
-								<label  class="required"  for="">	Fecha de nacimiento</label>
+								<label  class="required"  for="">	Fecha de nacimiento:</label>
 								<input type="date"  name="data[]" max="2000-01-01" min="1950-01-01" id="fecha" class="new" >
 							</div>
 							<div class="form-gruop">
-								<label  class="required"  for="">Genero</label>
+								<label  class="required"  for="">Genero:</label>
 								<select name="data[]" class="new" id="gender"  placeholder="Genero" >
 									<option value="m">Hombre</option>
 									<option value="f">Mujer</option>
@@ -38,16 +38,16 @@
 						</div>
 						<div class="content-form">
 							<div class="form-gruop">
-								<label  class="opcional"  for="">telefono</label>
+								<label  class="required"  for="">telefono:</label>
 								<input type="number" name="data[]" class="new" id="telefono">
 							</div>
 					</div>
 					<div class="form-gruop">
-						<label  class="required"  for="">correo</label>
+						<label  class="required"  for="">Correo:</label>
 						<input type="text" name="data[]" class="new" id="correo" placeholder="Correo" >
 					</div>
 						<div class="form-gruop">
-								<label  class="required"  for="">ciudad</label>
+								<label  class="required"  for="">Ciudad</label>
 								 <select name="data[]" class="city new" id="ciudad">
 
 
