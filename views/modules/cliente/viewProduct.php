@@ -8,12 +8,12 @@
     foreach ($data as $row) { ?>
 
       <div class="cardPro" >
-        <img class="card-img-top-pro" src="views/assets/image/productos/<?php echo $row["des_pro"];?>"id="<?php echo $row["id_tip_pro"]; ?>"  alt="<?php echo $row["id_tip_pro"]; ?>">
+        <img class="card-img-top-pro" src="views/assets/image/productos/<?php echo $row["img_pro"]; ?>" alt="<?php echo $row["id_tip_pro"]; ?>">
         <div class="nombre-produt">
-          <h2><?php echo $row["nom_pro"]; ?></h2>
+          <h3><?php echo $row["nom_pro"]; ?></h3>
         </div>
         <div class="descrip-produt">
-          <h2><?php echo $row["des_pro"]; ?></h2>
+          <h4><?php echo $row["valVen_pro"]; ?></h4>
         </div>
         <!-- <h4 class="card-title-pro">Jumbo</h4> -->
         <p class="card-text-pro"></p>
@@ -25,22 +25,3 @@
     ?>
 </div>
 </div>
-<!-- <div class="cardPro" >
-  <img class="card-img-top-pro" src=" " alt="1">
-  <div class="card-body-pro">
-    <h4 class="card-title-pro">carne</h4>
-    <p class="card-text-pro"></p> -->
-    <!-- <a href="#" class="btn-go">ir a mercar</a> -->
-
-  <!-- </div>
-</div>
-<div class="cardPro" >
-  <img class="card-img-top-pro" src=" " alt="1">
-  <div class="card-body-pro">
-    <h4 class="card-title-pro">pan </h4>
-    <p class="card-text-pro"></p> -->
-    <!-- <a href="#" class="btn-go">ir a mercar</a> -->
-<!--
-  </div>
-</div>
-</div> -->
