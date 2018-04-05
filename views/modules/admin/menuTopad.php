@@ -6,13 +6,10 @@
 
           </div>
           <div class="user--name">
-<<<<<<< HEAD
 
-=======
               <?php
               // echo $_SESSION['USER']['NAME'];
               ?>
->>>>>>> 28238146ea42fcc0a736562fc25de165e8501536
           </div>
           <div class="down">
               <a href="#" class="down-all"><i class="fa fa-user-o"></i> Perfil <i class="fa fa-caret-down"></i> </a>
