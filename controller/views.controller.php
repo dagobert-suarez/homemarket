@@ -38,12 +38,6 @@ class viewsController{
 		require_once "views/include/scope.footer.php";
 	}
 
-	// function registrosuper(){
-	// 	require_once "views/include/scope.header.php";
-	// 	require_once "views/modules/registrosuper.php";
-	// 	require_once "views/include/scope.footer.php";
-	// }
-
 	function explora(){
 		require_once "views/include/manual/header.php";
 		require_once "views/include/manual/manual.php";
@@ -57,7 +51,7 @@ class viewsController{
 			require_once "views/modules/admin/Dashboard.php";
 			require_once "views/modules/admin/footer_admin.php";
 		}else {
-die();
+			die();
 			header("Location: inicio");
 		}
 	}
@@ -115,7 +109,7 @@ die();
 			$data = $_POST['data'];
 
 			if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0){
-				  $allowed = array("jpg"=>"image/jpg", "jpeg"=>"image/jpeg","png"=>"imagen/png", "gif"=>"imagen/gif");
+				  $allowed = array("jpg"=>"image/jpg", "jpeg"=>"image/jpeg","png"=>"image/png", "gif"=>"image/gif");
 				  $filetype = $_FILES["file"]["type"];
 				  $filesize = $_FILES["file"]["size"];
 				  $extention = pathinfo($_FILES["file"]["name"]);
@@ -137,7 +131,7 @@ die();
 				  }
 				  //mine type
 		          if (in_array($filetype, $allowed)) {
-		            if (file_exists("views/assets/image/gender/".$filename)) {
+		            if (file_exists("views/assets/image/super/".$filename)) {
 		            die("lo sentimos ese archivo ya existe");
 		          }else{
 					  move_uploaded_file($_FILES["file"]["tmp_name"],"views/assets/image/super/".$filename);
@@ -152,7 +146,9 @@ die();
 			}
 
 			$result = $this->userModel->createSuper($data);
-	        header("Location: mi-supermercado");
+			echo '<script language="javascript">alert("<div class="exit">!Creado con exito¡</div>");</script>';
+	        echo "<script>window.location.href='mi-supermercado'</script>";
+	        // header("Location: mi-supermercado");
 
 			}
 			// Seleccionar Todos los Supermercados

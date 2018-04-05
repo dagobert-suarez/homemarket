@@ -1,11 +1,11 @@
 <div class="gallery--content">
+    <div class="buscador">
+        <input  class="sch" type="search" name="" value="" placeholder="Buscar Supermercados">
+    </div>
     <?php
     $item =1;
     foreach ($this->readAllSup() as $row){?>
 
-  <div class="buscador">
-    <input  class="sch" type="search" name="" value="" placeholder="Buscar Supermercados">
-  </div>
 <!-- <div class="supers"> -->
 
 <div class="card" >

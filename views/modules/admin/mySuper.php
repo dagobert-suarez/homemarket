@@ -46,22 +46,13 @@
                       <div class="form-group">
                           <button type="submit" name="button" class="btntnt">Registrar</button>
                       </div>
-                  <!-- <div class="form-group">
-                      <label class="required" for="">Longitude:</label>
-                      <input  class="k" type="bigint" name="data[]" placeholder="Longitude" value="">
-                  </div> -->
               </div>
               <div class="content-form">
-<!--
-                  <div class="form-group">
-                      <label class="required" for="">Latitude:</label>
-                      <input  class="k" type="bigint" name="data[]" placeholder="Latitude" class="noda">
-                  </div> -->
               </div>
           </form>
-          <!-- <h1>the record is missing</h1> -->
         </div>
       </div>
+
       <!-- Supermercado-->
       <!-- ----------------->
       <div id="Supermercados" class="contentfo">
@@ -86,7 +77,7 @@
                     <td><?php echo $row["tel_sup"] ;?></td>
                     <td>
                         <a href="#" class="abrirmodal"><i class="fa fa-pencil"></i> Editar</a>
-                        <a href="#"class=""id="opendet"><i class="fa fa-eye"></i> Detalles</a>
+                        <a href="#"class=""id="opendetsup"><i class="fa fa-eye"></i> Detalles</a>
                         <a href="eliminar-supermercado-<?php echo $row['id_sup'];?>"><i class="fa fa-trash"></i> Eliminar</a>
                     </td>
                 </tr>
@@ -97,17 +88,17 @@
             </tbody>
         </table>
         <div id="fondo"></div>
-        <div id="wrapmodal">
-            <div id="modaldet">
+        <div id="wrapmodalsup">
+            <div id="modaldetSup">
                 <div class="wrap-tit">
                     <h3>Detalle</h3>
                     <i id="closeCate"  class="close">&times;</i>
                 </div>
                 <div class="wrap-bod">
-                    <label for="">Nombre: <?php echo ['nom_sup']; ?></label>
-                    <label for="">Direccion: <?php echo ['dir_sup']; ?></label>
-                    <label for="">Teléfono: <?php echo ['tel_sup']; ?></label>
-                    <img src="views/assets/imge/super/<?php echo ['logo_sup']; ?>" alt="">
+                    <label for="">Nombre: </label>
+                    <label for="">Direccion: </label>
+                    <label for="">Teléfono: </label>
+                    <img src="" alt="">
                 </div>
 
             </div>
