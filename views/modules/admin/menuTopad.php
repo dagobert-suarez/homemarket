@@ -6,9 +6,7 @@
 
           </div>
           <div class="user--name">
-              <?php
-              echo $_SESSION['USER']['NAME'];
-              ?>
+
           </div>
           <div class="down">
               <a href="#" class="down-all"><i class="fa fa-user-o"></i> Perfil <i class="fa fa-caret-down"></i> </a>
