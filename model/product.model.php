@@ -23,6 +23,7 @@ class ProductModel{
       }
       return $msn;
     }
+<<<<<<< HEAD
     //llama los tipos de categorias en la bd
     function readCategory(){
         try{
@@ -58,6 +59,19 @@ class ProductModel{
             $msn = $e->getMessage();
         }
         return $msn;
+=======
+
+//crear un nuevo producto: envia datos a bd
+  function createProduct($data){
+    try{
+      $sql = "call crear_pro(?,?,?,?,?,?,?,?)";
+      $query = $this->pdo->prepare($sql);
+      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
+
+      $msn = "registro con exito";
+    }catch (PDOException $e) {
+      die($e->getMessage());
+>>>>>>> f3d4b8e28cc786e1bdfef07c0258f62dc254e903
     }
 
     // Productos
@@ -76,18 +90,6 @@ class ProductModel{
 
       }
 
-
-//          function readByCat($data){
-//     try {
-//         $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
-//         $query=$this->pdo->prepare($sql);
-//         $query->execute(array($data));
-//         $result = $query->fetch(PDO::FETCH_BOTH);
-//     } catch (PDOException $e) {
-//         $result = $e->getMessage();
-//     }
-//     return $result;
-// }
 
 
 

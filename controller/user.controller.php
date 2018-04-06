@@ -35,6 +35,12 @@ class UserController{
 				return;
 			}
 
+			$result = $this-> validarTelefono($data[4]);
+			if ($result==false){
+				echo json_encode("solo numeros");
+				return;
+			}
+
 			$result = $this->validarPassword($data[7]);
 			if (!$result==false) {
 				echo json_encode('contraseña no cumple con lo pedido');
@@ -101,6 +107,13 @@ class UserController{
 		 return $resut;
 	 }
 
+		function validarTelefono($data){
+			if (filter_var($data,FILTER_VALIDATE_INT)===false) {
+				return false;
+			}else{
+				return true;
+			}
+		}
 
 		function validarEspacio($data){
 		if($data==''){
