@@ -101,6 +101,17 @@ class UserController{
 		require_once "views/modules/cliente/updateCliente.php";
 		require_once "views/modules/cliente/footer.php";
 	}
+	// supermercados
+	// Seleccionar Todos los Supermercados
+	  public function readAllSup(){
+		$result = $this->product->readAllSup();
+		return $result;
+	  }
+	 // Seleccionar por Supermercados
+	 public function readBySup(){
+		 $resut = $this->product->readBySup();
+		 return $resut;
+	 }
 
 		function validarTelefono($data){
 			if (filter_var($data,FILTER_VALIDATE_INT)===false) {
@@ -142,39 +153,31 @@ class UserController{
 		return true;
 	}
 }
-
-
-
-//solo la parte de validar contraseña
+//  validaciones  de la contraseña
 	function validarPassword($data){
 		if (strlen($data)<8) {
-			return "la contraseña debe tener minimo 8 caracteres";
+			return "La contraseña Debe tener minimo 8 caracteres";
 		}else{
 			return false;
 		}
 		if(!preg_match('`[a-z]`', $data[7])){
-			return "debe tener una letra minuscula";
+			return "Debe tener una letra minuscula";
 		}else{
 			return false;
 		}
 
 		if(!preg_match('`[A-Z]`',$data[7])){
-			return "debe tener una letra mayuscula";
+			return "Debe tener una letra mayuscula";
 		}else{
 			return false;
 		}
 
 		if(!preg_match('`[0-9]`', $data[7])){
-			return "debe tener un numero";
+			return "Debe tener un numero";
 		}else{
 			return false;
 		}
-//esto es de otra cosa
-		/*if(preg_match(), subject)){
 
-		}else{
-
-		}*/
 	}
 
 }

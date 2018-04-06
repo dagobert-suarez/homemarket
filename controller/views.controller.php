@@ -28,15 +28,14 @@ class viewsController{
 	//de la pagina principal
 	function main(){
 		require_once "views/include/scope.header-inicio.php";
-		// require_once "views/modules/registrarse.php"
 		require_once "views/include/scope.footer.php";
 	}
 
-	function master(){
-		require_once "views/include/scope.header.php";
-		require_once "views/modules/inicio.php";
-		require_once "views/include/scope.footer.php";
-	}
+	// function master(){
+	// 	require_once "views/include/scope.header.php";
+	// 	require_once "views/modules/inicio.php";
+	// 	require_once "views/include/scope.footer.php";
+	// }
 
 	function explora(){
 		require_once "views/include/manual/header.php";
@@ -104,7 +103,8 @@ class viewsController{
 			require_once "views/modules/admin/updateADS.php";
 			require_once "views/modules/admin/footer_admin.php";
 		}
-
+		// Supermercados
+		// -----------------
 		public function newSuper(){
 			$data = $_POST['data'];
 
@@ -204,6 +204,32 @@ class viewsController{
 					$result= $this->userModel->deleteProv($data);
 					header("Location: Proveedores");
 				}
+				// Categorias
+				//  Crear categorias  desde Supermercado
+				function crearCategoria(){
+				  $data = $_POST['data'];
+				  $result = $this->userModel->crearCategoria($data);
+					header("Location: mi-supermercado");
+				}
+				function readCategory(){
+					$result = $this->userModel->readCategory();
+					return  $result;
+				}
+				public function readByCategory($data){
+					$result = $this->userModel->readByCat($data);
+					return $result;
+				}
+				public function updateCat(){
+					$data = $_POST['data'];
+					$result = $this->userModel->updateCategory($data);
+					header("Location:mi-supermercado");
+				}
+				public function deletecate(){
+					$data = $_GET['data'];
+					$resut = $this->userModel->deletecate($data);
+					header("Location: mi-supermercado");
+				}
+
 
 
 

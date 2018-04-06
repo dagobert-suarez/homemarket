@@ -222,18 +222,61 @@ class UserModel{
 				}
 				return $result;
 			}
-// llama las ciudades registradas en bd
-	function readCities(){
-		try{
-		$sql="SELECT cod_ciu,nom_ciu FROM ciudad ";
-		$query=$this->pdo->prepare($sql);
-	    $query->execute();
-	    $result = $query->fetchALL(PDO::FETCH_BOTH);
-	    } catch (PDOException $e) {
-	          $result = $e->getMessage();
-	      }
-	      return $result;
-	  	}
+
+			// categorias
+			// -------------------
+			// Categorias supermercados
+			function crearCategoria($data){
+		      try{
+		        $sql = "call crear_categoria(?)";
+		        $query = $this->pdo->prepare($sql);
+		        $query->execute(array($data[0]));
+		        $msn = "registro con exito";
+		      }catch (PDOException $e) {
+		       $msn = $e->getMessage();
+		      }
+		      return $msn;
+		    }
+			//llama los tipos de categorias en la bd
+			function readCategory(){
+				try{
+					$sql="SELECT id_tip_pro,nom_tip_pro FROM tipo_producto ";
+					$query=$this->pdo->prepare($sql);
+					$query->execute();
+					$result = $query->fetchALL(PDO::FETCH_BOTH);
+				} catch (PDOException $e) {
+					$result = $e->getMessage();
+				}
+				return $result;
+			}
+			// Actualizar Categorias
+			// Eliminar Categorias
+			public function deletecate($data){
+				try{
+					$sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
+					$query=$this->pdo->prepare($sql);
+					$query->execute(array($data));
+					$msn= "Eliminado Exitoxamente";
+				} catch (PDOException $e){
+					$msn = $e->getMessage();
+				}
+				return $msn;
+			}
+
+
+			// Ciudades
+			// llama las ciudades registradas en bd
+				function readCities(){
+					try{
+					$sql="SELECT cod_ciu,nom_ciu FROM ciudad ";
+					$query=$this->pdo->prepare($sql);
+				    $query->execute();
+				    $result = $query->fetchALL(PDO::FETCH_BOTH);
+				    } catch (PDOException $e) {
+				          $result = $e->getMessage();
+				      }
+				      return $result;
+				  	}
 
 //llama los dos primeros roles que hay en bd
 	function readRol(){

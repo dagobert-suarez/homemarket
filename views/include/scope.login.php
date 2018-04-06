@@ -15,7 +15,7 @@
 		</div>
 			<div class="botns">
 				<!-- <i class="fa fa-eye"> Mostrar Contrseña</i> -->
-				<a  href=""class="">Olvidaste tu Contraseña</a>
+				<!-- <a  href=""class="">Olvidaste tu Contraseña</a> -->
 				<button class="btnsave">entrar</button>
 			</div>
 	</form>

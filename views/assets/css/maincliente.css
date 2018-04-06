@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
 section.container1C{
+    margin-top: 50px;
     display: flex;
     font-family: 'Roboto',sans-serif;
     font-size: 15px;
@@ -21,7 +22,7 @@ section.container1C{
   text-align: center;
   font-family: 'Cabin', sans-serif;
   font-size: 25px;
-  z-index: 10000;
+  z-index: 10;
 }
 .content-profile {
   position:fixed;;

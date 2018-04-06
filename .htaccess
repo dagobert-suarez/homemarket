@@ -41,6 +41,10 @@ RewriteRule ^guardar-super$ index.php?controller=views&a=newSuper
 RewriteRule ^eliminar-supermercado-(\w+)$ index.php?controller=views&a=deleteSup&data=$1
 RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
 RewriteRule ^eliminar-provee-(\w+)$ index.php?controller=views&a=deleteProv&data=$1
+RewriteRule ^guardar-categoria$ index.php?controller=views&a=crearCategoria
+RewriteRule ^eliminar-cate-(\w+)$ index.php?controller=views&a=deletecate&data=$1
+
+
 
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado

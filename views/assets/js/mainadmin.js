@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#dataGrid").DataTable({
+    $(".dataGrid").DataTable({
      "language":{
       "lengthMenu":"Registros: _MENU_",
       "zeroRecords": "No se encontraron registros",
@@ -56,7 +56,7 @@ document.getElementById("defaultOpen").click();
  var fondo = document.getElementById('fondo');
  var wrap = document.getElementById('wrap');
  var wrapmodal = document.getElementById('wrapmodal');
- var close = document.getElementById('closeCate')
+ var close = document.getElementById('closeCate');
 
  openCate.onclick = function(){
      fondo.style.display = "block";
@@ -68,19 +68,19 @@ close.onclick = function(){
      wrapmodal.style.display = "none";
  };
 
- // Modal del Detalle supermercado
- var opendetsup = document.getElementById('opendetsup');
- var wrapmodalsup = document.getElementById('wrapmodalsup');
- var modaldetsup = document.getElementById('modaldetsup');
-
- opendetsup.onclick = function(){
-     fondo.style.display = "block";
-     modaldetsup.style.display = "block";
- };
- fondo.onclick = function(){
-     fondo.style.display = "none";
-     modaldetsup.style.display = "none";
- }
+ // // Modal del Detalle supermercado
+ // var opendetsup = document.getElementById('opendetsup');
+ // var wrapmodalsup = document.getElementById('wrapmodalsup');
+ // var modaldetsup = document.getElementById('modaldetsup');
+ //
+ // opendetsup.onclick = function(){
+ //     fondo.style.display = "block";
+ //     modaldetsup.style.display = "block";
+ // };
+ // fondo.onclick = function(){
+ //     fondo.style.display = "none";
+ //     modaldetsup.style.display = "none";
+ // }
 
 
  // // Modal del menú para el Responsive
@@ -88,3 +88,16 @@ close.onclick = function(){
  // $(".icon--mobile").click(function() {
  //     $("header.main--nav").toggleClass("open--nav")
  // })
+
+ // modal de producto
+ var openPro = document.getElementById('openPro');
+ var ground = document.getElementById('ground');
+ var wrapmodalpro = document.getElementById('wrapmodalpro');
+ var modalpro = document.getElementById('modalpro');
+
+ openPro.onclick = function(){
+    ground.style.display = "block";
+     // wrapmodalpro.style.display = "block";
+     // modalpro.style.display = "block";
+
+  }
