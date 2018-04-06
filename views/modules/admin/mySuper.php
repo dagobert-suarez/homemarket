@@ -5,7 +5,7 @@
         <button class="btntabs" onclick="Name(event, 'Supermercados' )"id="defaultOpen"><i class="fa fa-building"></i> Supermercados</button>
         <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
         <button class="btntabs" onclick="Name(event, 'Categorias')"><i class="fa fa-clipboard"></i> Categorías</button>
-        <button class="btntabs" onclick="Name(event, 'Productos')"><i class="fa fa-shopping-basket"></i> Productos</button>
+        <!-- <button class="btntabs" onclick="Name(event, 'Productos')"><i class="fa fa-shopping-basket"></i> Productos</button> -->
       </div>
 
       <div id="Nuevo" class="contentfo">
@@ -111,8 +111,7 @@
       <div id="Categorias" class="contentfo">
         <h3>Categorías</h3>
         <button type="button" id="openCate" name="button">Nueva categoría</button>
-        <p>Aca se mostraran las Categorias Registradas.</p><br>
-        <table class="dataGrid">
+        <table  class="dataGrid">
 			<thead class="tittledatag">
 				<tr>
 					<td>#</td>
@@ -161,6 +160,13 @@
       <!-- ----------------->
       <div id="Productos" class="contentfo">
         <h3>Productos</h3>
+        <button type="button" id="openPro" name="button">Nuevo Producto</button>
+        <div id="ground"></div>
+        <div id="wrapmodalpro">
+            <div id="modalpro">
+
+            </div>
+        </div>
       </div>
 
 </div>

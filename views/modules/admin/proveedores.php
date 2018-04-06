@@ -37,7 +37,7 @@
       <div id="Proveedores" class="contentfo">
         <h3>Proveedores</h3>
         <!-- <p> para ver los Proveedores</p> -->
-        <table id="dataGrid">
+        <table class="dataGrid">
 			<thead class="tittledatag">
 				<tr>
           <td>Nombre del Proveedor</td>

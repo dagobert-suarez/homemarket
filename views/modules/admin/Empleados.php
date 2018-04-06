@@ -14,11 +14,11 @@
           <div class="content-form">
                 <div class="form-group">
 
-                    <label class="required" for="">Nombre del Empleados:</label>
+                    <label class="required" for="">Nombre del Empleado:</label>
                     <input class="k"  type="text" name="data[]" placeholder="Nombres" value="">
                 </div>
                 <div class="form-group">
-                    <label class="required" for="">Apellido del Empleado:</label>
+                    <label class="required" for="">Apellidos del Empleado:</label>
                     <input  class="k" type="text" name="data[]" placeholder="Apellidos" value="">
                 </div>
           </div>
@@ -90,7 +90,7 @@
   <div id="Empleados" class="contentfo">
     <h3>Empleados</h3>
 
-    <table id="dataGrid">
+    <table class="dataGrid">
         <thead class="tittledatag">
             <tr>
 

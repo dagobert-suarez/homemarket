@@ -502,6 +502,31 @@ background-color: rgb(196, 196, 196);
 
 /* Fin Modal de Detalle Supermercado */
 /* -------------------------------------*/
+/* Modal de Producto */
+/* ---------------------------- */
+#ground{
+    display:none;
+    background-color: rgba(0, 0, 0, 0.72);
+    position: fixed; z-index: 3;
+    width: 100%; height: 100vh;
+    top: 0px; left: 0px;
+}
+#wrapmodalpro{
+    display: none;
+    margin: 0px auto;
+    top: 0px;left: 0px;
+    width:100%; height: 100vh;
+    position: fixed; z-index:2;
+}
+#modalpro{
+    width: 650px; height: auto;
+    /* background-color: #FEFEFE; */
+    display: none;
+    background-color: lime;
+    margin: 150px auto;
+    z-index: 3;
+    padding: 15px;
+}
 
 /*_*.* Esta es la parte de los ajustes*.*_*/
 /* ------------------------------------ */
