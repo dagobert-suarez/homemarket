@@ -31,13 +31,19 @@ class UserController{
 
 			$result = $this->validarEmail($data[5]);
 			if ($result==false) {
-				echo json_encode("correo mal escrito");
+				echo json_encode("Email no valido");
 				return;
 			}
 
+			// $result = $this->validarFecha($data[2]);
+			// if($result==false){
+			// 	echo json_encode("fecha incorrecta");
+			// 	return;
+			// }
+
 			$result = $this-> validarTelefono($data[4]);
 			if ($result==false){
-				echo json_encode("solo numeros");
+				echo json_encode("debe ingresar un telefono valido");
 				return;
 			}
 
@@ -99,10 +105,27 @@ class UserController{
 		function validarTelefono($data){
 			if (filter_var($data,FILTER_VALIDATE_INT)===false) {
 				return false;
-			}else{
+			}
+			elseif ($data <0) {
+				return false;
+			}
+			else{
 				return true;
 			}
 		}
+
+		// function validarFecha($data){
+		// 	$valor = explode('/',$data);
+		// 	$resta = date("Y")-$valor[2];
+		// 	if ($resta <18 && $resta>80) {
+		// 		return false;
+		// 	}else{
+		// 		return true;
+		// 	}
+		//
+		// 	// (count($valor)==3 && checkdate($valor[1],$valor[0],$valor[2]))
+		//
+		// }
 
 		function validarEspacio($data){
 		if($data==''){
