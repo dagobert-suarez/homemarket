@@ -10,7 +10,7 @@
     <div class="down">
         <a href="#" class="down-all"><i class="fa fa-user-o"></i> Perfil <i class="fa fa-caret-down"></i></a>
         <div class="content-down">
-            <li><i class="fa fa-bell" aria-hidden="true"></i> Notificaciones</li>
+            <!-- <li><i class="fa fa-bell" aria-hidden="true"></i> Notificaciones</li> -->
             <li><a href="settings-worker"><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</a></li>
 
         </div>
