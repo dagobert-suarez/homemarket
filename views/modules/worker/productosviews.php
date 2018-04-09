@@ -46,18 +46,22 @@
   <div class="fondo"></div>
   <div class="wrap">
       <div class="wea">
+          <?php
+            $dataProduct = $this->readByproc(["data"]);
+           ?>
           <div class="wrap-tit">
               <h1>Actualizar Producto</h1>
               <i class="close">&times</i>
           </div>
           <div class="wrap-bod">
+              <form class="" action="Actualizar" method="post" enctype="multipart/form-data">
                   <label for="">Nombre de la Producto:</label>
-                  <input type="text" name="" value=""><br><label for="">descripcion de la Producto:</label>
-                  <input type="text" name="" value=""><br><label for="">Marca de la Producto:</label>
-                  <input type="text" name="" value=""><br><label for="">descripcion de la Producto:</label>
-                  <input type="text" name="" value=""><br>
-                  <button type="button" name="button">Actualizar</button>
-
+                  <input type="text" name="data[]" value="<?php echo $data["data"] ;?>"><br><label for="">descripcion de la Producto:</label>
+                  <input type="text" name="data[]" value=""><br><label for="">Marca de la Producto:</label>
+                  <input type="text" name="data[]" value=""><br><label for="">descripcion de la Producto:</label>
+                  <input type="text" name="data[]" value=""><br>
+                  <button type="submit" name="button">Actualizar</button>
+              </form>
           </div>
       </div>
   </div>
@@ -68,13 +72,16 @@
   <div class="fondo-det"></div>
   <div class="wrap-det">
       <div class="wea-det">
+          <?php
+            $data = $this->readByproc(["data"]);
+           ?>
           <div class="wrap-tit">
-              <h1>Detalles  del productos</h1>
+              <h1>Detalles  del producto</h1>
               <i class="closedet">&times;</i>
           </div>
           <div class="wrap-bod">
               <p>La vista para el detalle del productos</p>
-                  <label for="">Nombre del productos:</label>
+                  <label for="">Nombre del productos:<?php print_r($data)  ?></label>
                   <br>
       </div>
   </div>

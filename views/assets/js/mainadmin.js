@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $(".dataGrid").DataTable({
      "language":{
-      "lengthMenu":"Registros: _MENU_",
+      "lengthMenu":"Mostrar: _MENU_",
       "zeroRecords": "No se encontraron registros",
             "info": "Página _PAGE_ de _PAGES_",
             "infoEmpty": "No hay registros aún.",
@@ -68,20 +68,7 @@ close.onclick = function(){
      wrapmodal.style.display = "none";
  };
 
- // // Modal del Detalle supermercado
- // var opendetsup = document.getElementById('opendetsup');
- // var wrapmodalsup = document.getElementById('wrapmodalsup');
- // var modaldetsup = document.getElementById('modaldetsup');
- //
- // opendetsup.onclick = function(){
- //     fondo.style.display = "block";
- //     modaldetsup.style.display = "block";
- // };
- // fondo.onclick = function(){
- //     fondo.style.display = "none";
- //     modaldetsup.style.display = "none";
- // }
-
+ //  Modal del editar supermercado
 
  // // Modal del menú para el Responsive
  // // ------------------------------------
@@ -100,4 +87,5 @@ close.onclick = function(){
      // wrapmodalpro.style.display = "block";
      // modalpro.style.display = "block";
 
-  }
+ };
+ 

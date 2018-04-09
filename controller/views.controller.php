@@ -142,12 +142,12 @@ class viewsController{
 				}
 
 			}else {
-			  die("Error ".$_FILE["file"]["error"]);
+			  die("Error ".$_FILES["file"]["error"]);
 			}
 
 			$result = $this->userModel->createSuper($data);
-			echo '<script language="javascript">alert("<div class="exit">!Creado con exito¡</div>");</script>';
-	        echo "<script>window.location.href='mi-supermercado'</script>";
+			echo '<script language="javascript">alert("creado con exito");</script>';
+			echo "<script>window.location.href='mi-supermercado'</script>";
 	        // header("Location: mi-supermercado");
 
 			}

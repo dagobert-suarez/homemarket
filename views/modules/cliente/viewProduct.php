@@ -1,14 +1,13 @@
 <div class="modules">
   <div class="Productos">
 <?php
-
         $data = $this->viewProducts();
-    // print_r($data);
-
-    foreach ($data as $row) { ?>
+        foreach ($data as $row) { ?>
 
       <div class="cardPro" >
-        <img class="card-img-top-pro" src="views/assets/image/productos/<?php echo $row["img_pro"]; ?>" alt="<?php echo $row["id_tip_pro"]; ?>">
+        <!-- <img class="card-img-top-pro" src="views/assets/image/productos/<?php echo $row["img_pro"]; ?>" alt="<?php echo $row["id_tip_pro"]; ?>">  -->
+           <img class="card-img-top-pro" src="views/assets/image/productos/automercado-granos-frijolesycubaces21_grande.png" alt="<?php echo $row["id_tip_pro"]; ?>">
+           <!-- <a href="<?php echo $row["id_tip_pro"]; ?>" class="addpro">Agregar</a> -->
         <div class="nombre-produt">
           <h3><?php echo $row["nom_pro"]; ?></h3>
         </div>
