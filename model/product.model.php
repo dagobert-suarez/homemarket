@@ -59,7 +59,7 @@ class ProductModel{
             $msn = $e->getMessage();
         }
         return $msn;
-<<<<<<< HEAD
+
     }
 
 //crear un nuevo producto: envia datos a bd
@@ -73,10 +73,10 @@ class ProductModel{
   //     die($e->getMessage());
   //
   //   }
-=======
+
 }
 
->>>>>>> 3cbfa6bb36588cc37d9dfba80eb5a86afb612094
+
 
     // Productos
     // --------------
