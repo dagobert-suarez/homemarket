@@ -35,17 +35,37 @@ class UserController{
 				return;
 			}
 
-			// $result = $this->validarFecha($data[2]);
-			// if($result==false){
-			// 	echo json_encode("fecha incorrecta");
-			// 	return;
-			// }
 
 			$result = $this-> validarTelefono($data[4]);
 			if ($result==false){
-				echo json_encode("debe ingresar un telefono valido");
+				echo json_encode('debe ingresar un telefono valido');
 				return;
 			}
+
+			$result = $this-> validarNombre($data[0]);
+			if ($result==false) {
+				echo json_encode('nombre no valido');
+				return;
+			}
+
+			$result = $this-> validarCaracter($data[0]);
+			if ($result==false) {
+				echo json_encode('nombre no valido');
+				return;
+			}
+
+			$result = $this-> validarApe($data[1]);
+			if ($result==false) {
+				echo json_encode('apellido no valido');
+				return;
+			}
+
+			$result = $this-> validarCaracterApe($data[1]);
+			if ($result==false) {
+				echo json_encode('apellido no valido');
+				return;
+			}
+
 
 			$result = $this->validarPassword($data[7]);
 			if (!$result==false) {
@@ -101,17 +121,6 @@ class UserController{
 		require_once "views/modules/cliente/updateCliente.php";
 		require_once "views/modules/cliente/footer.php";
 	}
-	// supermercados
-	// Seleccionar Todos los Supermercados
-	  public function readAllSup(){
-		$result = $this->product->readAllSup();
-		return $result;
-	  }
-	 // Seleccionar por Supermercados
-	 public function readBySup(){
-		 $resut = $this->product->readBySup();
-		 return $resut;
-	 }
 
 		function validarTelefono($data){
 			if (filter_var($data,FILTER_VALIDATE_INT)===false) {
@@ -125,18 +134,6 @@ class UserController{
 			}
 		}
 
-		// function validarFecha($data){
-		// 	$valor = explode('/',$data);
-		// 	$resta = date("Y")-$valor[2];
-		// 	if ($resta <18 && $resta>80) {
-		// 		return false;
-		// 	}else{
-		// 		return true;
-		// 	}
-		//
-		// 	// (count($valor)==3 && checkdate($valor[1],$valor[0],$valor[2]))
-		//
-		// }
 
 		function validarEspacio($data){
 		if($data==''){
@@ -153,31 +150,86 @@ class UserController{
 		return true;
 	}
 }
-//  validaciones  de la contraseña
+
+	function validarNombre($data){
+		if(strlen($data)<5 || strlen($data)>20){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	function validarCaracter($data){
+		$permitidos = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+		for ($i=0; $i <strlen($data); $i++) {
+			if (strpos($permitidos,substr($data,$i,1))==false) {
+				return false;
+			}else{
+				return true;
+			}
+		}
+
+	}
+
+
+
+	function validarApe($data){
+		if(strlen($data)<5 || strlen($data)>20){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	function validarCaracterApe($data){
+		$permitidos = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+		for ($i=0; $i <strlen($data); $i++) {
+			if (strpos($permitidos,substr($data,$i,1))==false) {
+				return false;
+			}else{
+				return true;
+			}
+		}
+
+	}
+
+
+
+
+
+
+
+
+//solo la parte de validar contraseña
 	function validarPassword($data){
 		if (strlen($data)<8) {
-			return "La contraseña Debe tener minimo 8 caracteres";
+			return "la contraseña debe tener minimo 8 caracteres";
 		}else{
 			return false;
 		}
 		if(!preg_match('`[a-z]`', $data[7])){
-			return "Debe tener una letra minuscula";
+			return "debe tener una letra minuscula";
 		}else{
 			return false;
 		}
 
 		if(!preg_match('`[A-Z]`',$data[7])){
-			return "Debe tener una letra mayuscula";
+			return "debe tener una letra mayuscula";
 		}else{
 			return false;
 		}
 
 		if(!preg_match('`[0-9]`', $data[7])){
-			return "Debe tener un numero";
+			return "debe tener un numero";
 		}else{
 			return false;
 		}
+//esto es de otra cosa
+		/*if(preg_match(), subject)){
 
+		}else{
+
+		}*/
 	}
 
 }

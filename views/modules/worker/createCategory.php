@@ -1,5 +1,5 @@
 <?php
-$dataCategory = $this -> readByCategory($_GET["data"]); 
+$dataCategory = $this -> readByCategory($_GET["data"]);
 ?>
 	<section>
 		<div  class="categorymodal">
