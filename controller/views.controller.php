@@ -39,7 +39,7 @@ class viewsController{
 
 	function explora(){
 		require_once "views/include/manual/header.php";
-		require_once "views/include/manual/manual.php";
+		// require_once "views/include/manual/manual.php";
 		require_once "views/include/manual/footer.php";
 	}
 
