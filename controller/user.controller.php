@@ -44,7 +44,7 @@ class UserController{
 
 			$result = $this-> validarNombre($data[0]);
 			if ($result==false) {
-				echo json_encode('nombre no valido');
+				echo json_encode('nombre invalido');
 				return;
 			}
 
@@ -123,7 +123,7 @@ class UserController{
 	}
 
 		function validarTelefono($data){
-			if (filter_var($data,FILTER_VALIDATE_INT)===false) {
+			if (filter_var($data,FILTER_VALIDATE_INT)===false && strlen($data)<=7 || strlen($data)>11 ) {
 				return false;
 			}
 			elseif ($data <0) {
@@ -152,7 +152,7 @@ class UserController{
 }
 
 	function validarNombre($data){
-		if(strlen($data)<5 || strlen($data)>20){
+		if(strlen($data)<3 || strlen($data)>20){
 			return false;
 		}else{
 			return true;
@@ -160,21 +160,17 @@ class UserController{
 	}
 
 	function validarCaracter($data){
-		$permitidos = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
-		for ($i=0; $i <strlen($data); $i++) {
-			if (strpos($permitidos,substr($data,$i,1))==false) {
-				return false;
-			}else{
-				return true;
-			}
-		}
-
+	$patron_texto = "/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ\s]+$/";
+	if (!preg_match ($patron_texto,$data)) {
+		return false;
+	}else{
+		return true;
 	}
-
+}
 
 
 	function validarApe($data){
-		if(strlen($data)<5 || strlen($data)>20){
+		if(strlen($data)<=3 || strlen($data)>20){
 			return false;
 		}else{
 			return true;
@@ -192,11 +188,6 @@ class UserController{
 		}
 
 	}
-
-
-
-
-
 
 
 
