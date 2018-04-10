@@ -44,7 +44,7 @@ class UserController{
 
 			$result = $this-> validarNombre($data[0]);
 			if ($result==false) {
-				echo json_encode('nombre no valido');
+				echo json_encode('nombre invalido');
 				return;
 			}
 
@@ -127,7 +127,7 @@ class UserController{
 	}
 
 		function validarTelefono($data){
-			if (filter_var($data,FILTER_VALIDATE_INT)===false) {
+			if (filter_var($data,FILTER_VALIDATE_INT)===false && strlen($data)<=7 || strlen($data)>11 ) {
 				return false;
 			}
 			elseif ($data <0) {
@@ -154,7 +154,7 @@ class UserController{
 }
 	// Validar Nombre
 	function validarNombre($data){
-		if(strlen($data)<5 || strlen($data)>20){
+		if(strlen($data)<3 || strlen($data)>20){
 			return false;
 		}else{
 			return true;
@@ -162,19 +162,21 @@ class UserController{
 	}
 	// Validar nombre
 	function validarCaracter($data){
-		$permitidos = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
-		for ($i=0; $i <strlen($data); $i++) {
-			if (strpos($permitidos,substr($data,$i,1))==false) {
-				return false;
-			}else{
-				return true;
-			}
-		}
-
+	$patron_texto = "/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ\s]+$/";
+	if (!preg_match ($patron_texto,$data)) {
+		return false;
+	}else{
+		return true;
 	}
+<<<<<<< HEAD
 	// Validar Apellido
+=======
+}
+
+
+>>>>>>> adad1fb6584c7e14b275605e5b0b9add518a3eb0
 	function validarApe($data){
-		if(strlen($data)<5 || strlen($data)>20){
+		if(strlen($data)<=3 || strlen($data)>20){
 			return false;
 		}else{
 			return true;
@@ -193,7 +195,13 @@ class UserController{
 
 	}
 
+<<<<<<< HEAD
 	//solo la parte de validar contraseña
+=======
+
+
+//solo la parte de validar contraseña
+>>>>>>> adad1fb6584c7e14b275605e5b0b9add518a3eb0
 	function validarPassword($data){
 		if (strlen($data)<8) {
 			return "La contraseña debe tener minimo 8 caracteres";
