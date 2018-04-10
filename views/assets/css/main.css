@@ -540,7 +540,8 @@ input[type=password]:focus,select:focus{
 }
 
 .login--form input[type=email],
-.login--form input[type=password]{
+.login--form input[type=password],
+.login--form input[type=text]{
     border: 1px solid rgb(182, 182, 182);
     margin: 6px ;
     width: 100%;
