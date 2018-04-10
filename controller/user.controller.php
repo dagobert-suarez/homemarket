@@ -168,13 +168,12 @@ class UserController{
 	}else{
 		return true;
 	}
-<<<<<<< HEAD
+
 	// Validar Apellido
-=======
+
 }
 
 
->>>>>>> adad1fb6584c7e14b275605e5b0b9add518a3eb0
 	function validarApe($data){
 		if(strlen($data)<=3 || strlen($data)>20){
 			return false;
@@ -195,13 +194,9 @@ class UserController{
 
 	}
 
-<<<<<<< HEAD
+
 	//solo la parte de validar contraseña
-=======
-
-
 //solo la parte de validar contraseña
->>>>>>> adad1fb6584c7e14b275605e5b0b9add518a3eb0
 	function validarPassword($data){
 		if (strlen($data)<8) {
 			return "La contraseña debe tener minimo 8 caracteres";
