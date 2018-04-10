@@ -217,14 +217,14 @@ li i:hover{
 
 
 /*_*.* finaliza  info-map*.*_*/
+/* ------------------------------- */
 
-
-/*content gallery*/
+/*Empieza  Supermercados   */
+/* ------------------------ */
 .gallery--content {
     margin: 5px;
     width: 75%;
     display: grid;
-    /* background-color: #f1f1f1; */
     grid-template-columns: repeat(4,1fr);
     grid-gap: 2px;
 }
@@ -295,7 +295,8 @@ article{
   border-radius: 10px;
   color: rgb(0, 0, 0);
 }
-
+/* Fin Supermercados */
+/* -----------------------------  */
 /*_*.*produtos *.*_*/
 /* ------------------ */
 .Productos{
@@ -352,6 +353,36 @@ article{
     color: rgba(161,161,161,0.63);
 }
 
-/*_*.*produtos *.*_*/
-
 /*_*.* fin de produtos *.*_*/
+/* ------------------------------ */
+/* Información Por Supermercado  */
+/* ----------------------------- */
+.infoSup{
+    background: #FEFEFE;
+    color: lime;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    width: 100%; height: 32vh;
+    margin:-10px 15px 0px 15px;padding: 5px;
+    border: 2px solid rgba(161, 161, 161, 0.99);
+    border-radius: 3px;
+}
+.infoSup .wrap-info-img{
+    border: 2px solid darkorange;
+    width: 40%;
+}
+.infoSup .wrap-info{
+    display:flex;
+    flex-direction: column;
+    border:2px solid red;
+    width: auto;
+}
+.infoSup .wrap-info label{
+    margin-top: 12px;
+    padding: 12px;
+    color: black;
+    font-size: 20px;
+}
+/* Fin de Información Por Supermercado */
+/* --------------------------- */

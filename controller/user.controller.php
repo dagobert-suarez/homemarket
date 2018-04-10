@@ -107,18 +107,22 @@ class UserController{
         header("Location: inicio");
       }
     }
+	//los ajustes del cliente
+	// ----------------------- //
 	function updatecli(){
 		$data = $_POST['data'];
 		$data[]=$_SESSION['USER']['ID'];
 		$result = $this->userModel->update($data);
 		header("Location: Ajustes");
 	}
-
-	//los ajustes del cliente
-	// ----------------------- //
 	function ajustes(){
 		require_once "views/modules/cliente/header.php";
 		require_once "views/modules/cliente/updateCliente.php";
+		require_once "views/modules/cliente/footer.php";
+	}
+	function BySupercado(){
+		require_once "views/modules/cliente/header.php";
+		require_once "views/modules/cliente/PorSupermercado.php";
 		require_once "views/modules/cliente/footer.php";
 	}
 
@@ -133,8 +137,6 @@ class UserController{
 				return true;
 			}
 		}
-
-
 		function validarEspacio($data){
 		if($data==''){
 			return false;
@@ -150,7 +152,7 @@ class UserController{
 		return true;
 	}
 }
-
+	// Validar Nombre
 	function validarNombre($data){
 		if(strlen($data)<5 || strlen($data)>20){
 			return false;
@@ -158,7 +160,7 @@ class UserController{
 			return true;
 		}
 	}
-
+	// Validar nombre
 	function validarCaracter($data){
 		$permitidos = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 		for ($i=0; $i <strlen($data); $i++) {
@@ -170,9 +172,7 @@ class UserController{
 		}
 
 	}
-
-
-
+	// Validar Apellido
 	function validarApe($data){
 		if(strlen($data)<5 || strlen($data)>20){
 			return false;
@@ -180,7 +180,7 @@ class UserController{
 			return true;
 		}
 	}
-
+	// Validar contraseña
 	function validarCaracterApe($data){
 		$permitidos = "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 		for ($i=0; $i <strlen($data); $i++) {
@@ -193,34 +193,25 @@ class UserController{
 
 	}
 
-
-
-
-
-
-
-
-//solo la parte de validar contraseña
+	//solo la parte de validar contraseña
 	function validarPassword($data){
 		if (strlen($data)<8) {
-			return "la contraseña debe tener minimo 8 caracteres";
+			return "La contraseña debe tener minimo 8 caracteres";
 		}else{
 			return false;
 		}
 		if(!preg_match('`[a-z]`', $data[7])){
-			return "debe tener una letra minuscula";
+			return "Debe tener una letra minuscula";
 		}else{
 			return false;
 		}
-
 		if(!preg_match('`[A-Z]`',$data[7])){
-			return "debe tener una letra mayuscula";
+			return "Debe tener una letra mayuscula";
 		}else{
 			return false;
 		}
-
 		if(!preg_match('`[0-9]`', $data[7])){
-			return "debe tener un numero";
+			return "Debe tener un numero";
 		}else{
 			return false;
 		}
