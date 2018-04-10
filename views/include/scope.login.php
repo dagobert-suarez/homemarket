@@ -12,8 +12,8 @@
 		<div class="container-form">
 			<label   class="required" for="txtpass"><b>Contraseña</b> </label>
 			<input type="password" id="mostar"  name="contra" placeholder="contraseña" required>
-			<!-- <input type="checkbox" id="show">Mostrar Cotraseña -->
-			<i class="fa fa-eye" id="show"> Mostrar Contraseña</i>
+			<input type="checkbox" id="show">Mostrar Cotraseña
+
 		</div>
 
 			<div class="botns">
