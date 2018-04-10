@@ -51,12 +51,12 @@
         </select>
       </div>
       <div class="">
-        <label for="" class="required">valor venta</label>
+        <label for="" class="required">Valor venta:</label>
         <input type="number" name="data[]" class="new">
       </div>
         <div class="" >
             <label for="" class="required">Imagen del producto:</label>
-          <input type="file" name="data[]" value="" class="new">
+          <input type="file" name="file" class="new">
         </div>
         <div class="">
             <button type="submit" name="guardar" class="frmbtn">Crear Producto</button>

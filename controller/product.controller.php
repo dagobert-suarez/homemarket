@@ -69,7 +69,7 @@ class ProductController{
               $extention = pathinfo($filename, PATHINFO_EXTENSION);
 
               if (!array_key_exists($extention, $allowed)) {
-                die("Error: favor seleccione un formato valido (.jpg, .png, .gif, jpeg)");
+                die("Error: favor seleccione un formato valido (.jpg, .png, .gif, .jpeg)");
               }
               $maxsize= 2 * 1024 * 1024;
               if($filesize > $maxsize){
@@ -81,7 +81,8 @@ class ProductController{
                 die("lo sentimos ese archivo ya existe");
               }else{
                   move_uploaded_file($_FILES["file"]["tmp_name"],"views/assets/image/productos/".$filename);
-                  $data[4] = $filename;
+                  $data[7] = $filename;
+                  // $data[4] = $filename;
                 }
             }else{
               die("Error: no se puede reconocer la imagen intente nuevamente");
@@ -99,6 +100,10 @@ class ProductController{
       function viewProducts(){
           $result = $this->product->readProducts();
           return  $result;
+      }
+      public function readByproc(){
+          $resut = $this->product->readByproc();
+          return $resut;
       }
       public function updateProc(){
           $data =$_POST['data'];
