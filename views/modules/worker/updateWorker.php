@@ -9,8 +9,9 @@
 
     </header>
     <div class="wrap-form">
+      <h1>en procceso de desarrollo</h1>
         <!-- <p>Actualizar la contraseña, los datos personales</p> -->
-        <form  action="actualizar-datosEm" method="post">
+        <!-- <form  action="actualizar-datosEm" method="post">
             <div class="form-group">
                 <label for="">Nombre:</label>
                 <input type="text" name="data[]" value="<?php echo $data['nom_usu']?>" placeholder="Nombre">
@@ -33,21 +34,21 @@
             <div class="form-group">
                 <button type="submit" name="button" class="btnact">Actualizar</button>
             </div>
-        </form>
-        <div class="form-group">
+        </form> -->
+        <!-- <div class="form-group">
             <label  class="required" for="">Contraseña Actual:</label>
-            <input type="password" name="" class=""placeholder="contraseña" value="">
+            <input type="password" name="" class=""placeholder="contraseña" value=""> -->
 
-        </div>
+        <!-- </div>
         <div class="form-group">
             <label for="">Contraseña:</label>
-            <input type="password" name="" value="" placeholder="contraseña">
+            <input type="password" name="" value="" placeholder="contraseña"> -->
 
-        </div>
+        <!-- </div>
         <div class="form-group">
             <label for=""> Validar Contraseña:</label>
             <input type="password" name="" value="" placeholder="contaseña">
-        </div>
+        </div> -->
 
 
     </div>
