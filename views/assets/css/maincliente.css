@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
 
 section.container1C{
+    margin-top: 50px;
     display: flex;
     font-family: 'Roboto',sans-serif;
     font-size: 15px;
@@ -21,7 +22,7 @@ section.container1C{
   text-align: center;
   font-family: 'Cabin', sans-serif;
   font-size: 25px;
-  z-index: 10000;
+  z-index: 10;
 }
 .content-profile {
   position:fixed;;
@@ -62,7 +63,7 @@ li i:hover{
   display: none;
   top: 0px; left: 0px;
   background-color: rgb(32, 32, 32);
-  border-bottom-right-radius:33%;
+  border-bottom-right-radius:13%;
   animation-name: bounceIn;
   animation-duration:0.8s;
   color: #D0D5D7;
@@ -77,7 +78,7 @@ li i:hover{
   margin-left: 85%;
 }
 #modal .closemenu:hover{
-  color: rgb(250, 11, 11);
+  color: rgb(250, 111, 11);
   cursor:  pointer;
 }
 #modal nav ul{
@@ -101,7 +102,9 @@ li i:hover{
 }
 .wrap--content{
     width: 100%;
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
 }
 .all{
     width: 15%;
@@ -207,7 +210,6 @@ li i:hover{
     height: auto;
 }
 #map{
-
     width: 90%;
     padding: 5px;
     height: 60vh;
@@ -216,14 +218,14 @@ li i:hover{
 
 
 /*_*.* finaliza  info-map*.*_*/
+/* ------------------------------- */
 
-
-/*content gallery*/
+/*Empieza  Supermercados   */
+/* ------------------------ */
 .gallery--content {
     margin: 5px;
     width: 75%;
     display: grid;
-    /* background-color: #f1f1f1; */
     grid-template-columns: repeat(4,1fr);
     grid-gap: 2px;
 }
@@ -294,30 +296,118 @@ article{
   border-radius: 10px;
   color: rgb(0, 0, 0);
 }
+/* Fin Supermercados */
+/* -----------------------------  */
 
+/* Información Por Supermercado  */
+/* ----------------------------- */
+.infoSup{
+    background: #FEFEFE;
+    color: lime;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 18% 52% 30%;
+    /* grid-template-columns: 30% 52% 18%; */
+    grid-gap: 3px;
+    width: 97%; height: 32vh;
+    margin:-10px 17px 0px 17px;padding: 5px;
+    border-bottom:2px solid rgba(161, 161, 161, 0.99);
+}
+.infoSup .wrap-info-img{
+    border: 2px solid rgb(158, 0, 255);
+    width: auto;
+}
+.infoSup .wrap-info-img .logo--img{
+    /* width: 210px;height: 170px; */
+    justify-content: center;
+    margin: 12px auto;
+}
+.infoSup .wrap-info-logo{
+    border: 2px solid rgb(0, 125, 255);
+    width: auto;
+}
+.infoSup .wrap-info{
+    display:flex;
+    flex-direction: column;
+    border:2px solid rgb(255, 0, 76);
+    width: auto;
+}
+.infoSup .wrap-info label{
+    margin-top: 12px;
+    padding: 12px;
+    color: black;
+    font-size: 18px;
+    text-align: justify;
+}
+.wrap--infosup{
+    border: 2px solid rgb(0, 62, 250);
+    width: 95%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 15px auto;
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 20% 80%;
+}
+/* Fin de Información Por Supermercado */
+/* --------------------------- */
 /*_*.*produtos *.*_*/
 /* ------------------ */
 .Productos{
-    margin: 5px;
+    margin: 0px;
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-gap: 0px;
+    /* justify-content: stretch; */
+    grid-gap: 5px;
+    border: 1px solid rgb(210, 146, 80);
     /*justify-content: space-between;*/
 }
 
 .cardPro{
-    width: 160px;
-    border: 1px solid #ddd;
+    width: 180px;
+    border: 1px solid rgba(161, 161, 161, 0.63);
+    border-radius: 3px;
     background: transparent;
+    justify-content: flex-start;
+    margin: 8px auto;
+
 }
 .card-img-top-pro{
-    width: 160px;
-    height: 160px;
+    width: 175px; height: 175px;
+    margin:2px;
+    /* margin-bottom: 5px; */
+    /* border: 1px dotted rgba(228, 23, 23, 0.63); */
 }
-.card-img-top-pro:hover,
-.cardPro:hover{
+
+.cardPro:hover {
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
-/*_*.*produtos *.*_*/
+.cardPro .addpro{
+    display: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    width: 100px;
+    background-color: lime;
+    position: absolute;
+}
+.cardPro .nombre-produt h3{
+    margin:  5px;
+    font-size: 1.4rem;
+    color: #465661;
+    border-top: 2px dotted rgba(161,161,161,0.63);
+    text-transform: inherit;
+}
+
+.cardPro .descrip-produt h4{
+    padding: 5px;
+    font-size: 1.3rem;
+    color: #465661;
+}
+.cardPro .descrip-produt h4::before{
+    content: " $ ";
+    color: rgba(161,161,161,0.63);
+}
 
 /*_*.* fin de produtos *.*_*/
+/* ------------------------------ */

@@ -23,8 +23,8 @@ $(document).ready(function() {
 
 // modal de la categoria
 // ----------------------
+// $(".fondo").css("display","block");
 $(".abrirmodal").click(function() {
- // $(".fondo").css("display","block");
  $(".fondo").toggle();
  $(".wrap").toggle();
 });
@@ -46,10 +46,10 @@ $(".modalDet").click(function(){
     $(".fondo-det").toggle();
     $(".wrap-det").toggle();
 });
-// $(".closedet").click(function(){
-//     $(".fondo-det").toggle();
-//     $(".wrap-det").toggle();
-// });
+$(".closedet").click(function(){
+    $(".fondo-det").toggle();
+    $(".wrap-det").toggle();
+});
 $(".fondo-det").click(function() {
     $(".fondo-det").toggle();
     $(".wrap-det").toggle();

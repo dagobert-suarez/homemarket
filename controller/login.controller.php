@@ -9,12 +9,12 @@ class LoginController{
     }
 
 		function validar_usuario(){
-	$result = $this->users->user($_POST['email']);
-	if ($result!=array()){
-		$result = array("true","");
-	}else{
-		$result = array("false","El Usuario no existe");
-	}
+			$result = $this->users->user($_POST['email']);
+		if ($result!=array()){
+			$result = array("true","");
+		}else{
+			$result = array("false","El Usuario no existe");
+		}
 
 	echo json_encode($result);
 }
@@ -59,7 +59,10 @@ class LoginController{
 				} else {
 					// echo '<script language="javascript">alert("<div class="exit">crontraseña incorrecta</div>");</script>';
 					echo '<script languaje>alert("contraseña incorrecta")</script>';
+					// echo "Contraseña incorrecta !intente nuevamente¡";
 					echo "<script>window.location.href='inicio'</script>";
+					// $result = array("false","contraseña incorrecta");
+
 				}
 		}else{
 			echo '<h1>el usuario no existe</h1>';

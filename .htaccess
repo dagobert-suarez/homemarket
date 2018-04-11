@@ -24,6 +24,7 @@ RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
+RewriteRule ^PorSupermercado$ index.php?controller=user&a=BySupercado
 
 #supermercado
 #----------------
@@ -38,9 +39,14 @@ RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 
 #crud
 RewriteRule ^guardar-super$ index.php?controller=views&a=newSuper
+RewriteRule ^editar-supermercado(\w+)$ index.php?controller=views&a=updateSup
 RewriteRule ^eliminar-supermercado-(\w+)$ index.php?controller=views&a=deleteSup&data=$1
 RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
 RewriteRule ^eliminar-provee-(\w+)$ index.php?controller=views&a=deleteProv&data=$1
+RewriteRule ^guardar-categoria$ index.php?controller=views&a=crearCategoria
+RewriteRule ^eliminar-cate-(\w+)$ index.php?controller=views&a=deletecate&data=$1
+
+
 
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado

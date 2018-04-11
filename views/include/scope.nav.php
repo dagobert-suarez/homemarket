@@ -4,7 +4,7 @@
 			<div class="content-info">
 					<div class="info">
 						<h1 class="infowel"></h1>
-						<p><span style="color:#DDA917;">Home Market</span> es una <span>plataforma</span> donde puedes encontrar
+						<p><span >Home Market</span> es una <span>plataforma</span> donde puedes encontrar
 						<span>supermercados</span> y una gran variedad de <span>productos</span> los cuales puedes agregar a tu carrito de <span>compras</span> </p>
 
 						<a class="starbtn" href="#registro">Registrate con Home Market</a>

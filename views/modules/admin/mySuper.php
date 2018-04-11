@@ -5,7 +5,7 @@
         <button class="btntabs" onclick="Name(event, 'Supermercados' )"id="defaultOpen"><i class="fa fa-building"></i> Supermercados</button>
         <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
         <button class="btntabs" onclick="Name(event, 'Categorias')"><i class="fa fa-clipboard"></i> Categorías</button>
-        <button class="btntabs" onclick="Name(event, 'Productos')"><i class="fa fa-shopping-basket"></i> Productos</button>
+        <!-- <button class="btntabs" onclick="Name(event, 'Productos')"><i class="fa fa-shopping-basket"></i> Productos</button> -->
       </div>
 
       <div id="Nuevo" class="contentfo">
@@ -57,7 +57,7 @@
       <!-- ----------------->
       <div id="Supermercados" class="contentfo">
         <h3>Supermercados</h3>
-        <table id="dataGrid">
+        <table class="dataGrid">
             <thead class="tittledatag">
                 <tr>
 
@@ -87,12 +87,12 @@
                     ?>
             </tbody>
         </table>
-        <div id="fondo"></div>
+        <!-- <div id="fondodet"></div>
         <div id="wrapmodalsup">
             <div id="modaldetSup">
                 <div class="wrap-tit">
                     <h3>Detalle</h3>
-                    <i id="closeCate"  class="close">&times;</i>
+                    <i id="closeCate"  class="closedet">&times;</i>
                 </div>
                 <div class="wrap-bod">
                     <label for="">Nombre: </label>
@@ -102,7 +102,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
 
       </div>
@@ -111,7 +111,31 @@
       <div id="Categorias" class="contentfo">
         <h3>Categorías</h3>
         <button type="button" id="openCate" name="button">Nueva categoría</button>
-        <p>Aca se mostraran las Categorias Registradas.</p>
+        <table  class="dataGrid">
+			<thead class="tittledatag">
+				<tr>
+					<td>#</td>
+					<td>Nombre categoria</td>
+					<td>Aciones</td>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					$data = $this->readCategory();
+					foreach ( $data as $row) {	?>
+				<tr>
+					<td><?php echo $row["id_tip_pro"] ;?></td>
+					<td><?php echo $row["nom_tip_pro"] ;?></td>
+					<td>
+						<a href="#" class="abrirmodal"><i class="fa fa-pencil"></i>Editar</a>
+						<a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a>
+						<a href="eliminar-cate-<?php echo $row['id_tip_pro'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
+					</td>
+
+				</tr>
+			<?php } ?>
+			</tbody>
+		</table>
         <div id="fondo"></div>
         <div id="wrapmodal">
             <div id="modal">
@@ -121,68 +145,28 @@
                 </div>
                 <div class="wrap-bod">
                     <div class="form-group">
-                        <form  action="" method="post">
+                        <form class="frmCat"  action="guardar-categoria" method="post">
                             <label class="required" for="">Nombre de la categoría:</label>
-                            <input class="k" type="text" name="" value="" placeholder="Nombre"><br>
+                            <input class="k" type="text" name="data[]" value="" placeholder="Nombre"><br>
                             <button type="submit" name="button">Registrar</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <table id="dataGrid">
-            <thead class="tittledatag">
-                <tr>
-                    <td>Nombre</td>
-                    <td>Apellidos</td>
-                    <td>Teléfono</td>
-                    <td>Correo</td>
-                    <td>Aciones</td>
-                </tr>
-            </thead>
-            <tbody>
 
-                <tr>
-                    <td>Juan Carlos</td>
-                    <td>Muños Munera</td>
-                    <td>323</td>
-                    <td>JuanM@gmail.com</td>
-                    <td>
-                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Debora</td>
-                    <td>Cabezas</td>
-                    <td>255555</td>
-                    <td>DeboraC@gmail.com</td>
-                    <td>
-                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Aquiles</td>
-                    <td>Brinco</td>
-                    <td>3014561</td>
-                    <td>Aquiles@gmail.com</td>
-                    <td>
-                        <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                        <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-                        <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table> -->
       </div>
       <!-- Productos -->
       <!-- ----------------->
       <div id="Productos" class="contentfo">
         <h3>Productos</h3>
+        <button type="button" id="openPro" name="button">Nuevo Producto</button>
+        <div id="ground"></div>
+        <div id="wrapmodalpro">
+            <div id="modalpro">
+
+            </div>
+        </div>
       </div>
 
 </div>

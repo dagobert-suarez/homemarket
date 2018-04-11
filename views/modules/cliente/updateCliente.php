@@ -1,6 +1,7 @@
 <!-- empieza lo de los ajustes -->
 <?php
 // $data = $this->readBy($_SESSION['USER']['rol']);
+    $data = $this->readbyusu();
 ?>
 <div class="module--Sett">
     <header >
@@ -9,10 +10,11 @@
     </header>
     <div class="wrap-form">
         <!-- <p>Actualizar la contraseña, los datos personales</p> -->
+        <label for="">Correo: <?php echo $data["email_usu"]; ?></label>
         <form  action="actualizar-datosCli" method="post">
             <div class="form-group">
                 <label for="">Nombre:</label>
-                <input type="text" name="data[]" value="<?php echo $data['nom_usu']?>" placeholder="Nombre">
+                <input type="text" name="data[]" value="<?php echo $data['nom_usu'];?>" placeholder="Nombre">
 
             </div>
             <div class="form-group">

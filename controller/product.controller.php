@@ -18,7 +18,15 @@ class ProductController{
     require_once "views/modules/worker/footer.php";
 
   }
-
+  // Cliente
+  //inicio de session del cliente donde muestra los supermercados
+  function Supermercados(){
+      require_once "views/modules/cliente/header.php";
+      require_once "views/modules/cliente/menuTopC.php";
+      require_once "views/modules/cliente/navigator.php";
+      require_once "views/modules/cliente/viewSuper.php";
+      require_once "views/modules/cliente/footer.php";
+  }
   //inicio de session del cliente donde muestra los productos
   function Productos(){
     require_once "views/modules/cliente/header.php";
@@ -27,14 +35,6 @@ class ProductController{
     require_once "views/modules/cliente/footer.php";
   }
 
-  //inicio de session del cliente donde muestra los supermercados
-  function Supermercados(){
-    require_once "views/modules/cliente/header.php";
-    require_once "views/modules/cliente/menuTopC.php";
-    require_once "views/modules/cliente/navigator.php";
-    require_once "views/modules/cliente/viewSuper.php";
-    require_once "views/modules/cliente/footer.php";
-  }
   function mySuper(){
       require_once "views/modules/admin/header-admin.php";
       require_once "views/modules/admin/mySuper.php";
@@ -69,7 +69,7 @@ class ProductController{
               $extention = pathinfo($filename, PATHINFO_EXTENSION);
 
               if (!array_key_exists($extention, $allowed)) {
-                die("Error: favor seleccione un formato valido (.jpg, .png, .gif, jpeg)");
+                die("Error: favor seleccione un formato valido (.jpg, .png, .gif, .jpeg)");
               }
               $maxsize= 2 * 1024 * 1024;
               if($filesize > $maxsize){
@@ -81,7 +81,8 @@ class ProductController{
                 die("lo sentimos ese archivo ya existe");
               }else{
                   move_uploaded_file($_FILES["file"]["tmp_name"],"views/assets/image/productos/".$filename);
-                  $data[4] = $filename;
+                  $data[7] = $filename;
+                  // $data[4] = $filename;
                 }
             }else{
               die("Error: no se puede reconocer la imagen intente nuevamente");
@@ -100,13 +101,17 @@ class ProductController{
           $result = $this->product->readProducts();
           return  $result;
       }
+      public function readByproc(){
+          $resut = $this->product->readByproc();
+          return $resut;
+      }
       public function updateProc(){
           $data =$_POST['data'];
           $result = $this->product->updateProc($data);
           // header("Location:")
       }
       // crud productos
-
+      // --------------------------
       public function deleteProduct(){
           $data = $_GET['data'];
           $result = $this->product->deletePro($data);
@@ -121,7 +126,7 @@ class ProductController{
       function createCategory(){
         $data = $_POST['data'];
         $result = $this->product->createCategory($data);
-        echo '<script language="javascript">alert("<div class="exit">Creado con exito</div>");</script>';
+        echo '<script language="javascript">alert("<div class="exit">Creada con exito</div>");</script>';
         echo "<script>window.location.href='nueva-categoria'</script>";
 
       }
@@ -142,15 +147,15 @@ class ProductController{
           }
 
           // supermercados
-          // Seleccionar Todos los Supermercados
-            public function readAllSup(){
-              $result = $this->product->readAllSup();
-              return $result;
-            }
            // Seleccionar por Supermercados
-           public function readBySup(){
-               $resut = $this->product->readBySup();
-               return $resut;
+          function readBySup(){
+               $result=$this->product->readBySup();
+               return $result;
+           }
+           // Seleccionar Todos los Supermercados
+           function readAllSup(){
+               $result = $this->product->readAllSup();
+               return $result;
            }
 }
 ?>
