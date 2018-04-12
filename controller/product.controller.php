@@ -111,7 +111,7 @@ class ProductController{
           // header("Location:")
       }
       // crud productos
-
+      // --------------------------
       public function deleteProduct(){
           $data = $_GET['data'];
           $result = $this->product->deletePro($data);
@@ -126,7 +126,7 @@ class ProductController{
       function createCategory(){
         $data = $_POST['data'];
         $result = $this->product->createCategory($data);
-        echo '<script language="javascript">alert("<div class="exit">Creado con exito</div>");</script>';
+        echo '<script language="javascript">alert("<div class="exit">Creada con exito</div>");</script>';
         echo "<script>window.location.href='nueva-categoria'</script>";
 
       }
@@ -147,15 +147,15 @@ class ProductController{
           }
 
           // supermercados
-          // Seleccionar Todos los Supermercados
-            public function readAllSup(){
-              $result = $this->product->readAllSup();
-              return $result;
-            }
            // Seleccionar por Supermercados
-           public function readBySup(){
-               $resut = $this->product->readBySup();
-               return $resut;
+          function readBySup(){
+               $result=$this->product->readBySup();
+               return $result;
+           }
+           // Seleccionar Todos los Supermercados
+           function readAllSup(){
+               $result = $this->product->readAllSup();
+               return $result;
            }
 }
 ?>

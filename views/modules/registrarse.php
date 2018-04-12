@@ -38,7 +38,7 @@
 						</div>
 						<div class="content-form">
 							<div class="form-gruop">
-								<label  class="required"  for="">telefono:</label>
+								<label  class="required"  for="">Teléfono o Celular:</label>
 								<input type="number" name="data[]" class="new" id="telefono">
 							</div>
 					</div>
@@ -47,21 +47,17 @@
 						<input type="text" name="data[]" class="new" id="correo" placeholder="Correo" >
 					</div>
 						<div class="form-gruop">
-								<label  class="required"  for="">Ciudad</label>
+								<label  class="required"  for="">Ciudad:</label>
 								 <select name="data[]" class="city new" id="ciudad">
-
-
 									 <?php
 									 foreach ($this->userModel->readCities() as $row){
 										 echo "<option value='$row[0]'>$row[1]</option>";
 									 }
 									 ?>
-
 								 </select>
 						</div>
-
 						<div class="form-gruop">
-									<label  class="required"  for="">contraseña</label>
+									<label  class="required"  for="">Contraseña:</label>
 									<input type="password" name="data[]" class="new" id="password" placeholder="Minimo(8) caracteres, incluir almenos un numero y una Mayuscula" >
 						</div>
 						<div id="mensaje"></div>

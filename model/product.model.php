@@ -96,7 +96,7 @@ class ProductModel{
 
 
 
-  //llama todos los productos en la bd
+  // llama todos los productos en la bd
   // ----------------------------------- //
   function readProducts(){
     try{
@@ -108,8 +108,9 @@ class ProductModel{
           $result = $e->getMessage();
       }
       return $result;
-  }
-  public function readByproc(){
+    }
+  // Leer por productos
+   function readByproc(){
       try {
           $sql= "SELECT * FROM productos WHERE id_pro = ?";
           $query=$this->pdo->prepare($sql);
@@ -119,8 +120,7 @@ class ProductModel{
           $result = $e->getMessage();
       }
       return $result;
-  }
-
+    }
 
   // Actualizar producto
    // -------------------- //
@@ -135,9 +135,18 @@ class ProductModel{
       }
       return $msn;
   }
-
-
-
+// Elimina el producto 
+  function deletePro($data){
+      try{
+          $sql="DELETE FROM productos WHERE id_pro = ?";
+          $query=$this->pdo->prepare($sql);
+          $query->execute(array($data));
+          $msn ="se eliminó el producto exitosamente";
+      } catch (PDOException $e) {
+          $msn = $e->getMessage();
+      }
+      return $msn;
+  }
   //elimina el tipo de categoria
   // ---------------------------- //
    function deleteProduct($data){
@@ -149,38 +158,27 @@ class ProductModel{
     } catch (PDOException $e) {
       $msn = $e->getMessage();
     }
-    return $msn;
+        return $msn;
   }
 
-   function deletePro($data){
-    try{
-      $sql="DELETE FROM productos WHERE id_pro = ?";
-      $query=$this->pdo->prepare($sql);
-      $query->execute(array($data));
-      $msn ="se eliminó el producto exitosamente";
-    } catch (PDOException $e) {
-      $msn = $e->getMessage();
-    }
-    return $msn;
-  }
 
 
   // Supermercados
   // ----------------
   // Seleccionar todos los supermercados
-   public function readAllSup(){
+    function readAllSup(){
        try{
            $sql="SELECT * FROM supermercado";
            $query=$this->pdo->prepare($sql);
            $query->execute();
            $result = $query->fetchALL(PDO::FETCH_BOTH);
        } catch (PDOException $e){
-           $result = $e->getMessage();
+           $result=$e->getMessage();
        }
        return $result;
    }
    // Seleccionar por Supermercado
-   public function readBySup($data){
+    function readBySup($data){
        try{
           $sql="SELECT * FROM supermercado WHERE id_sup = ?";
           $query=$this->pdo->prepare($sql);
@@ -192,5 +190,5 @@ class ProductModel{
       return $result;
    }
 
-}
+// }
 ?>

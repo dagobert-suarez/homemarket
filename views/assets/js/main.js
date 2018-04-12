@@ -35,6 +35,17 @@ function showSlides() {
 }
 
 // js de  login modal:guffy
+var show = document.getElementById('show');
+
+show.onclick = function(){
+    var mostar = document.getElementById('mostar');
+    if(mostar.type  === "password"){
+        mostar.type = "text";
+    } else {
+        mostar.type = "password";
+    }
+};
+
 if (document.getElementById('close')) {
     showSlides();
     var modal = document.getElementById('loginmodal');

@@ -19,7 +19,7 @@
           <i id="close-m-r">&times;</i>
              <a href="inicio"><i class="fa fa-home"></i> Inicio</a>
              <a href="#super"><i class="fa fa-building"></i>Supermercados</a>
-             <a href="explora">Explora</a>
+             <!-- <a href="explora">Explora</a> -->
              <a href="#registro">Registrarse</a>
              <a id="mon">Iniciar sesión</a>
         </div>

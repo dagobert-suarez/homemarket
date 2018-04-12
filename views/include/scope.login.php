@@ -11,8 +11,11 @@
 		</div>
 		<div class="container-form">
 			<label   class="required" for="txtpass"><b>Contraseña</b> </label>
-			<input type="password"  name="contra" placeholder="contraseña" required >
+			<input type="password" id="mostar"  name="contra" placeholder="contraseña" required>
+			<input type="checkbox" id="show">Mostrar Cotraseña
+
 		</div>
+
 			<div class="botns">
 				<!-- <i class="fa fa-eye"> Mostrar Contrseña</i> -->
 				<!-- <a  href=""class="">Olvidaste tu Contraseña</a> -->

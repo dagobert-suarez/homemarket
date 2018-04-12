@@ -63,8 +63,9 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 				<div class="wrap-bod">
 					<form  name="frmCategory" action="actualizar-categoria" method="post">
 						<label for="">Nombre de la categoria:</label>
-						<input type="text" name="data[]" required value="<?php echo $dataCategory["nom_tip_pro"];?>"><br>
+						<input type="text" name="data[]" required value=""><br>
 						<button type="submit" name="button">Actualizar</button>
+						<h1>en procceso de desarrollo</h1>
 					</form>
 
 				</div>
@@ -83,7 +84,7 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 				</div>
 				<div class="wrap-bod">
 					<p>La vista para el detalle de la categoria</p>
-						<label for="">Nombre de la categoria:</label>
+						<label for="">en procceso de desarrollo</label>
 						<br>
 			</div>
 		</div>
