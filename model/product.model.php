@@ -62,24 +62,11 @@ class ProductModel{
 
     }
 
-//crear un nuevo producto: envia datos a bd
-  // function createProduct($data){
-  //   try{
-  //     $sql = "call crear_pro(?,?,?,?,?,?,?,?)";
-  //     $query = $this->pdo->prepare($sql);
-  //     $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
-  //     $msn = "registro con exito";
-  //   }catch (PDOException $e) {
-  //     die($e->getMessage());
-  //
-  //   }
 
-}
 
 
 
     // Productos
-    // --------------
     //crear un nuevo producto: envia datos a bd
       function createProduct($data){
         try{
@@ -97,7 +84,7 @@ class ProductModel{
 
 
   // llama todos los productos en la bd
-  // ----------------------------------- //
+
   function readProducts(){
     try{
     $sql="SELECT * FROM productos ";
@@ -123,7 +110,7 @@ class ProductModel{
     }
 
   // Actualizar producto
-   // -------------------- //
+
    function updateProc(){
       try{
           $sql= "call modificarPro(?,?,?,?,?,?,?,?,?,?)";
@@ -135,7 +122,7 @@ class ProductModel{
       }
       return $msn;
   }
-// Elimina el producto 
+// Elimina el producto
   function deletePro($data){
       try{
           $sql="DELETE FROM productos WHERE id_pro = ?";
@@ -190,5 +177,5 @@ class ProductModel{
       return $result;
    }
 
-// }
+ }
 ?>

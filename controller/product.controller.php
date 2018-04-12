@@ -103,7 +103,7 @@ class ProductController{
       }
       public function readByproc(){
           $resut = $this->product->readByproc();
-          return $resut;
+          return $result;
       }
       public function updateProc(){
           $data =$_POST['data'];
