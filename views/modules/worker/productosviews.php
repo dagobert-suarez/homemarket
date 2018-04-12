@@ -31,7 +31,7 @@
         <td><?php echo $row["mar_pro"]; ?></td>
         <td><?php echo $row["des_pro"]; ?></td>
         <td>
-            <a href="#" class="abrirmodal"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+            <a href="actualizar-producto-<?php echo $row['id_pro'] ;?>-<?php echo $row['nom_pro']; ?>" class=""><i class="fa fa-pencil" aria-hidden="true"></i>Actualizar</a>
             <a href="#" class="modalDet"><i class="fa fa-info-circle" aria-hidden="true"></i>Detalles</a>
             <a href="eliminar-producto-<?php echo $row['id_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true"></i>Eliminar</a>
         </td>

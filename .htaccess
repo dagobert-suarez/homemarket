@@ -70,6 +70,8 @@ RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
 RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
 RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProduct&data=$1
 RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewsworker
+RewriteRule ^actualizando-producto$ index.php?controller=product&a=updateProc
+RewriteRule ^actualizar-producto-(\w+)-(\w+)$ index.php?controller=product&a=updateProductos&data=$1&data2=$2
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^createCategory$ index.php?controller=product&a=createCategory

@@ -46,6 +46,11 @@ class ProductController{
     require_once "views/modules/worker/productosviews.php";
     require_once "views/modules/worker/footer.php";
   }
+  function updateProductos(){
+      require_once "views/modules/worker/header.php";
+      require_once "views/modules/worker/updateproduct.php";
+      // require_once "views/modules/worker/.php";
+  }
 
     public function __CONSTRUCT(){
         $this->product = new ProductModel();
@@ -102,11 +107,12 @@ class ProductController{
           return  $result;
       }
       public function readByproc(){
-          $resut = $this->product->readByproc();
+          $id = $_GET["data"];
+          $result = $this->product->readByproc($id);
           return $result;
       }
       public function updateProc(){
-          $data =$_POST['data'];
+          $data = $_POST['data'];
           $result = $this->product->updateProc($data);
           // header("Location:")
       }

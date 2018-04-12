@@ -97,11 +97,11 @@ class ProductModel{
       return $result;
     }
   // Leer por productos
-   function readByproc(){
+   function readByproc($id){
       try {
-          $sql= "SELECT * FROM productos WHERE id_pro = ?";
+          $sql= "SELECT * FROM productos WHERE id_pro = (?)";
           $query=$this->pdo->prepare($sql);
-          $query->execute();
+          $query->execute(array($id));
           $result = $query->fetch(PDO::FETCH_BOTH);
       } catch (PDOException $e) {
           $result = $e->getMessage();
@@ -110,12 +110,11 @@ class ProductModel{
     }
 
   // Actualizar producto
-
-   function updateProc(){
+   function updateProc($data){
       try{
           $sql= "call modificarPro(?,?,?,?,?,?,?,?,?,?)";
-          $query-> $this->pdo->prepare($sql);
-          $query->execute($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[9],$data[10],$data[0]);
+          $query->$this->pdo->prepare($sql);
+          $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[9],$data[10],$data[0]));
           $msn= "Modificado Exitosamente";
       }catch (PDOException $e){
           $msn = $e->getMessage();
