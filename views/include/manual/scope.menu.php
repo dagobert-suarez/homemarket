@@ -1,13 +1,11 @@
-<div class="menu">
-  <div class="logo--menu">
-    <img  class="logo--img" src="views/assets/image/logoHM.png" alt="Many">
-  </div>
-  <div class="container--menu">
-    <a href="inicio">inicio</a>
-    <a href="#super">super</a>
-    <a href="explora">explora</a>
-  </div>
-  <div class="text">
-    <h3>manual de usuario interactivo</h3>
-  </div>
-</div>
+  <nav id="menu">
+    <div class="container--menu">
+      <ul>
+        <li><img  class="logo--img" src="views/assets/image/logoHM.png" alt="Many"></li>
+        <li><a href="inicio">inicio</a></li>
+        <li><a href="#super">super</a></li>
+        <li><a href="explora">explora</a></li>
+        <li><h3>manual de usuario interactivo</h3></li>
+      </ul>
+    </div>
+  </nav>

@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="views/assets/css/manual.css">
   </head>
   <body>
-    <header>
-      <?php	require_once 'scope.menu.php'; ?>
-    <header>
-    </header>
-    <nav>
-    </nav>
+    <section>
+
+      <header>
+        <?php	require_once 'scope.menu.php'; ?>
+      <header>
+      </header>
