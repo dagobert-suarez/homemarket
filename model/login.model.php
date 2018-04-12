@@ -12,7 +12,7 @@ class LoginModel{
 
 	function user($nombre){
 		try {
-				$sql = "SELECT * FROM usuario INNER JOIN acceso ON usuario.id_usu = acceso.id_usu WHERE usuario.email_usu = ?  ";
+		$sql = "SELECT * FROM usuario INNER JOIN acceso ON usuario.id_usu = acceso.id_usu WHERE usuario.email_usu = ?  ";
 				$query = $this->pdo->prepare($sql);
 				$query->execute(array($nombre));
 				$result = $query->fetch(PDO::FETCH_BOTH);
@@ -22,6 +22,20 @@ class LoginModel{
 		}
 
 	}
+
+	function supermercado($id_rol){
+		try {
+		$sql = "SELECT usuario_supermercado.id_sup FROM usuario INNER JOIN usuario_supermercado ON
+					(usuario.id_usu = usuario_supermercado.id_usu)
+					and usuario.id_rol = ?  ";
+					$query = $this->pdo->prepare($sql);
+					$query->execute(array($id_rol));
+					$result = $query->fetch(PDO::FETCH_BOTH);
+					return $result;
+	}catch (PDOException $e) {
+		die($e->getMessage());
+	}
+}
 
 	function contra($usu){
 		try {

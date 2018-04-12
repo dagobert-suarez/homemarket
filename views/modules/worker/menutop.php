@@ -5,6 +5,7 @@
     <div class="user--name">
         <?php
         // echo $_SESSION['USER']['NAME'];
+        echo $_SESSION['SUPERMERCADO']['supermarket'];
         ?>
     </div>
     <div class="down">
