@@ -99,11 +99,11 @@ class ProductModel{
       return $result;
     }
   // Leer por productos
-   function readByproc($id){
+   function readByproc($data){
       try {
           $sql= "SELECT * FROM productos WHERE id_pro = (?)";
           $query=$this->pdo->prepare($sql);
-          $query->execute(array($id));
+          $query->execute(array($data));
           $result = $query->fetch(PDO::FETCH_BOTH);
       } catch (PDOException $e) {
           $result = $e->getMessage();
@@ -115,15 +115,24 @@ class ProductModel{
    function updateProc($data){
       try{
           // $sql= "call modificarPro(?,?,?,?,?,?,?,?)";
-          $sql="UPDATE productos SET nom_pro = ?, des_pro = ?, img_pro = ?, mar_pro = ?, id_tip_pro = ?, can_pro = ?, uniMed_pro = ?, valVen_pro = ? WHERE id_pro = ?";
-          $query=$this->pdo->prepare($sql);
-          // $query->execute(array($data[0]))};
-          $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[0]));
-          $msn= "Modificado Exitosamente";
-      }catch (PDOException $e){
-          $msn = $e->getMessage();
-      }
-      return $msn;
+      //     $sql="UPDATE productos SET nom_pro = ? WHERE id_pro = ?";
+      //     $query=$this->pdo->prepare($sql);
+      //     $query->execute(array($data[0],$data[1]));
+      //     $msn= "Modificado Exitosamente";
+      // }catch (PDOException $e){
+      //     $msn = $e->getMessage();
+      // }
+      // return $msn;
+      $sql = "UPDATE productos SET nom_pro = ?, des_pro = ? WHERE id_pro = ?";
+      $query = $this->pdo->prepare($sql);
+      $query->execute(array($data[0], $data[1], $data[2]));
+
+      $msn = "modificado con exito";
+
+     }catch(PDOException $e){
+       $msn = $e->getMessage();
+     }
+     return $msn;
   }
 // Elimina el producto
   function deletePro($data){

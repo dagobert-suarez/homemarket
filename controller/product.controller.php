@@ -106,22 +106,26 @@ class ProductController{
           $result = $this->product->readProducts();
           return  $result;
       }
-      public function readByproc(){
-          $id = $_GET["data"];
-          $result = $this->product->readByproc($id);
+      public function readByIdproc($data){
+          $result=$this->product->readByproc($data);
           return $result;
+          // $id = $_GET["data"];
+          // $result = $this->product->readByproc($id);
+          // return $result;
       }
+
       public function updateProc(){
           $data = $_POST['data'];
           $result = $this->product->updateProc($data);
-          print_r($data);
-          die();
-          // echo '<script language="javascript">alert("Modificado con exito");</script>';
+          // print_r($data);
+          // die();
+          // die();
+          echo '<script language="javascript">alert("Modificado con exito");</script>';
           // echo "<script>window.location.href='Productos-empleado'</script>";
-          // header("Location:")
+          header("Location: Productos-empleado");
       }
       // crud productos
-      // --------------------------
+
       public function deleteProduct(){
           $data = $_GET['data'];
           $result = $this->product->deletePro($data);
