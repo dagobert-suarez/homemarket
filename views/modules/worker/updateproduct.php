@@ -34,8 +34,8 @@
        <option value="gr">gr</option>
        <option value="lts">lts</option>
      </select>
-     <!-- <label for="">Valor venta:</label>
-     <input type="number" name="data[]"  value="<?php echo $dataProduct["valVen_pro"] ?>"> -->
+     <label for="">Valor venta:</label>
+     <input type="number" name="data[]"  value="<?php echo $dataProduct["valVen_pro"] ?>">
 
 
      <input type="text" readonly name="data[]" value="<?php echo $_GET["data"]; ?>">
