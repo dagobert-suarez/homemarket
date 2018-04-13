@@ -1,6 +1,5 @@
 <?php
 // envio a la base de datos de los productos
-
 class ProductModel{
   private $pdo;
    function __CONSTRUCT(){
@@ -71,10 +70,9 @@ class ProductModel{
     //crear un nuevo producto: envia datos a bd
       function createProduct($data){
         try{
-          $sql = "call crear_pro(?,?,?,?,?,?,?,?,?,?)";
+          $sql = "call crear_pro(?,?,?,?,?,?,?,?)";
           $query = $this->pdo->prepare($sql);
-          $data[9]=$_SESSION['SUPERMERCADO']['supermarket'];
-          $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[9]));
+          $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
           $msn = "registro con exito";
         }catch (PDOException $e) {
           die($e->getMessage());
@@ -116,7 +114,7 @@ class ProductModel{
       try{
           $sql= "call modificarPro(?,?,?,?,?,?,?,?,?,?)";
           $query->$this->pdo->prepare($sql);
-          $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[9],$data[10],$data[0]));
+              $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[9],$data[10],$data[0]));
           $msn= "Modificado Exitosamente";
       }catch (PDOException $e){
           $msn = $e->getMessage();
