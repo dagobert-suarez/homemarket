@@ -114,9 +114,11 @@ class ProductModel{
   // Actualizar producto
    function updateProc($data){
       try{
-          $sql= "call modificarPro(?,?,?,?,?,?,?,?,?,?)";
-          $query->$this->pdo->prepare($sql);
-          $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[9],$data[10],$data[0]));
+          // $sql= "call modificarPro(?,?,?,?,?,?,?,?)";
+          $sql="UPDATE productos SET nom_pro = ?, des_pro = ?, img_pro = ?, mar_pro = ?, id_tip_pro = ?, can_pro = ?, uniMed_pro = ?, valVen_pro = ? WHERE id_pro = ?";
+          $query=$this->pdo->prepare($sql);
+          // $query->execute(array($data[0]))};
+          $query->execute(array($data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7],$data[8],$data[0]));
           $msn= "Modificado Exitosamente";
       }catch (PDOException $e){
           $msn = $e->getMessage();
