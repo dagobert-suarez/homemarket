@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-04-2018 a las 21:34:58
+-- Tiempo de generación: 13-04-2018 a las 22:11:22
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -63,9 +63,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pedido` (IN `emp_ped` INT, IN
 INSERT INTO pedido(emp_ped,fec_ped,id_usu,dir_ped,id_sup) VALUES(emp_ped,fec_ped,id_usu,dir_ped,id_sup);
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT, IN `img_pro` VARCHAR(255))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT, IN `img_pro` VARCHAR(255), IN `id_sup` INT)  BEGIN
  
- INSERT INTO productos(nom_pro,des_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro) VALUES (nom_pro,des_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro);
+ INSERT INTO productos(nom_pro,des_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro,id_sup) VALUES (nom_pro,des_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro,id_sup);
  
  END$$
 
@@ -122,9 +122,9 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `login` (`email_usu` VARCHAR(50))  B
 SELECT * FROM usuario INNER JOIN acceso ON(usuario.id_usu_usu=acceso.id_usu_usu) WHERE usuario.email_usu = email;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarPro` (IN `id_pro` INT, IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `img_pro` VARCHAR(30), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `fec_ing_pro` DATE, IN `uniMed_pro` VARCHAR(30), IN `valCom_pro` FLOAT, IN `valVen_pro` FLOAT)  BEGIN 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarPro` (IN `nom_pro` VARCHAR(30), IN `des_pro` VARCHAR(300), IN `img_pro` VARCHAR(255), IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT)  BEGIN 
 
-UPDATE productos SET nom_pro=nom_pro,des_pro=des_pro,img_pro=img_pro,mar_pro=mar_pro,id_tip_pro=id_tip_pro,can_pro=can_pro,fec_ing_pro=fec_ing_pro, uniMed_pro=uniMed_pro,valCom_pro=valCom_pro,valVen_pro=valVen_pro WHERE id_pro=id_pro;
+UPDATE productos SET nom_pro=nom_pro,des_pro=des_pro,img_pro=img_pro,mar_pro=mar_pro,id_tip_pro=id_tip_pro,can_pro=can_pro, uniMed_pro=uniMed_pro,valVen_pro=valVen_pro WHERE id_pro=id_pro;
 
 END$$
 
@@ -175,15 +175,7 @@ CREATE TABLE `acceso` (
 --
 
 INSERT INTO `acceso` (`token`, `contra`, `id_usu`) VALUES
-('279ee21db1193ff718d998290568b9b5', '$2y$10$Vpk0QMSi8KhJrt2q1nMHL.q18o3wKnz0krwyd96bpgkKsKWZ5o5qK', 5),
-('380480d3f4782f8907e65f2b0516c479', '$2y$10$6uRqKoW7awkijHOmY7aMD.uIvhUFQSxAXfv7Yr4yUwkjsjb.tZnOi', 2),
-('436a185e65d8c62c74a4321b7cabc78f', '$2y$10$pmOVdDOtUY7tjlPwBV0KCuNViPK8L4Oudngf2jJT/z3OdnL0ZB9My', 235),
-('522748524ad010358705b6852b81be4c', '$2y$10$.PqOTr0xMWXI0mUuCaWf5Ocqw7mssC0rOsty7lvqdgsEcZFayyIde', 7),
-('5c3b6cf2bdf692ff39b4d9d9b1887453', '$2y$10$zIZXQqOoM.91bQ0v/wiVseFOjSNPBLcRIqWeXug7VtvWCRbu8s7ca', 6),
-('b9e32abfa1a7318c15644c437d0b83fd', '$2y$10$K6..veZK08.Kgu.IjxG.K.hjNvNaYHCKncmoNBx.pjEtAbKZQOeXm', 137),
-('c28bcdc2987591eaa78b9148ac5e7792', '$2y$10$KmKYefJP4kqmYXBctr5y2.neicmVsiFSJ0H0F1XTdT.eOT9vtliBK', 4),
-('ceb22451d38fab0fdc3e6e18d3241584', '$2y$10$ZdClOZGo0sEKYUQI6svdDuSHuzz0sM0.VdeKxyaMqcQnDoYahaHbi', 3),
-('sqwlk8j76t3ewrtyn', 'asdfertyut', 1);
+('ceb22451d38fab0fdc3e6e18d3241584', '$2y$10$ZdClOZGo0sEKYUQI6svdDuSHuzz0sM0.VdeKxyaMqcQnDoYahaHbi', 3);
 
 -- --------------------------------------------------------
 
@@ -217,24 +209,6 @@ CREATE TABLE `calificacion_supermercado` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `calificacion_usu`
---
-
-CREATE TABLE `calificacion_usu` (
-  `id_cal` int(11) NOT NULL,
-  `id_usu` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `calificacion_usu`
---
-
-INSERT INTO `calificacion_usu` (`id_cal`, `id_usu`) VALUES
-(1, 1);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `ciudad`
 --
 
@@ -264,13 +238,6 @@ CREATE TABLE `detalle_pedido` (
   `val_tot` float DEFAULT NULL,
   `cod_ped` int(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `detalle_pedido`
---
-
-INSERT INTO `detalle_pedido` (`id_ped`, `id_pro`, `can_pro`, `val_tot`, `cod_ped`) VALUES
-(2, 3, 23456, 23453500, 1);
 
 -- --------------------------------------------------------
 
@@ -325,35 +292,6 @@ CREATE TABLE `pedido` (
   `tot_com` decimal(18,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `pedido`
---
-
-INSERT INTO `pedido` (`cod_ped`, `fec_ped`, `id_usu`, `dir_ped`, `id_sup`, `id_usu_emp`, `tot_com`) VALUES
-(1, '2018-03-13', 1, 'mmmk ,.', NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `permisos`
---
-
-CREATE TABLE `permisos` (
-  `id_per` int(11) NOT NULL,
-  `id_rol` int(11) DEFAULT NULL,
-  `C` int(11) DEFAULT NULL,
-  `R` int(11) DEFAULT NULL,
-  `U` int(11) DEFAULT NULL,
-  `D` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `permisos`
---
-
-INSERT INTO `permisos` (`id_per`, `id_rol`, `C`, `R`, `U`, `D`) VALUES
-(1, 4, 1, 1, 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -378,13 +316,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_pro`, `nom_pro`, `des_pro`, `img_pro`, `mar_pro`, `id_tip_pro`, `can_pro`, `uniMed_pro`, `valVen_pro`, `id_sup`) VALUES
-(3, 'arroz', 'arroz', NULL, 'roa', 1, 3, 'kg', 1213460, NULL),
-(7, 'leche', 'zx', '', 'a', 3, 34, '', 345, NULL),
-(8, 'grano', '', '', 'dasf', 11, 21423, '', 354, NULL),
-(9, 'cereal', '', '', 'mamaÃ­nes', 9, 12, '', 3200, NULL),
-(10, 'licor', 'bla', 'Assassinâ€™s_Creed_461783 (2).jpg', 'jack daniels', 14, 3, '', 499999, NULL),
-(11, 'cosa', 'cos', '18-Fondos-de-pantalla-HD-del-honguito-de-Mario-Bros-hongo.jpg', 'cosa', 14, 12345, '', 23456, NULL),
-(12, 'carnes', 'carbnes', NULL, 'carnes', 14, 123, '', 123, NULL);
+(3, 'algo', 'rico arroz', 'img', 'roa', 16, 6, 'lb', 1929, NULL);
 
 -- --------------------------------------------------------
 
@@ -404,9 +336,7 @@ CREATE TABLE `proveedores` (
 --
 
 INSERT INTO `proveedores` (`id_prov`, `nom_prov`, `dir_prov`, `tel_prov`) VALUES
-(1, 'coca-cola', 'q134ty', '12345yu'),
-(3, 'Noe', 'Transversal 32 # 43-29', '2546756'),
-(4, 'ZenÃº', 'Carrera 20 # 12-60', '3459807');
+(1, 'coca-cola', 'q134ty', '12345yu');
 
 -- --------------------------------------------------------
 
@@ -489,6 +419,8 @@ CREATE TABLE `tipo_producto` (
 --
 
 INSERT INTO `tipo_producto` (`id_tip_pro`, `nom_tip_pro`) VALUES
+(16, 'aseo'),
+(15, 'carnes'),
 (14, 'grano+'),
 (13, 'lacteos');
 
@@ -504,7 +436,7 @@ CREATE TABLE `usuario` (
   `ape_usu` varchar(50) NOT NULL,
   `fec_nac_usu` date NOT NULL,
   `gen_usu` varchar(20) NOT NULL,
-  `tel_usu` varchar(11) NOT NULL,
+  `tel_usu` varchar(20) NOT NULL,
   `email_usu` varchar(50) NOT NULL,
   `cod_ciu` int(11) DEFAULT NULL,
   `id_rol` int(11) DEFAULT NULL
@@ -515,15 +447,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usu`, `nom_usu`, `ape_usu`, `fec_nac_usu`, `gen_usu`, `tel_usu`, `email_usu`, `cod_ciu`, `id_rol`) VALUES
-(1, 'alex', 'muñoz', '2018-03-12', 'm', '12345678', 'alex@gmail.com', 345, 1),
-(2, 'David', 'Herrera', '1999-11-29', 'm', '323', 'guffyk2@gmail.com', 345, 2),
-(3, 'alex', 'muÃ±oz', '1999-05-31', 'm', '23456', 'alexis@gmail.com', 345, 3),
-(4, 'david', 'zpt', '1999-11-29', 'm', '323', 'zpt@gmail.com', 345, 3),
-(5, 'David ', 'Herrera', '1999-11-29', 'm', '323', 'cliente@gmail.com', 345, 1),
-(6, 'Cliente', 'Cliente', '1999-11-29', 'm', '323', 'clienteC@gmail.com', 345, 1),
-(7, 'd', 's', '1999-11-12', 'm', '3456', 'alex@gmail.org', 345, 1),
-(137, 'Supermercado', 'super', '1999-11-29', 'm', '323', 'supermercado@gmail.com', 345, 2),
-(235, 'David', 'zapata', '1999-11-29', 'm', '4234', 'guffy@gmail.com', 345, 1);
+(3, 'alex', 'muÃ±oz', '1999-05-31', 'm', '23456', 'alexis@gmail.com', 345, 3);
 
 -- --------------------------------------------------------
 
@@ -562,14 +486,6 @@ ALTER TABLE `calificacion_supermercado`
   ADD KEY `id_cal` (`id_cal`);
 
 --
--- Indices de la tabla `calificacion_usu`
---
-ALTER TABLE `calificacion_usu`
-  ADD PRIMARY KEY (`id_usu`,`id_cal`),
-  ADD KEY `id_cal` (`id_cal`),
-  ADD KEY `id_usu` (`id_usu`);
-
---
 -- Indices de la tabla `ciudad`
 --
 ALTER TABLE `ciudad`
@@ -604,13 +520,6 @@ ALTER TABLE `pedido`
   ADD PRIMARY KEY (`cod_ped`),
   ADD KEY `id_usu` (`id_usu`),
   ADD KEY `id_sup` (`id_sup`);
-
---
--- Indices de la tabla `permisos`
---
-ALTER TABLE `permisos`
-  ADD PRIMARY KEY (`id_per`),
-  ADD KEY `id_rol` (`id_rol`);
 
 --
 -- Indices de la tabla `productos`
@@ -686,31 +595,25 @@ ALTER TABLE `calificacion`
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de la tabla `permisos`
---
-ALTER TABLE `permisos`
-  MODIFY `id_per` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_prov` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `supermercado`
@@ -722,13 +625,13 @@ ALTER TABLE `supermercado`
 -- AUTO_INCREMENT de la tabla `tipo_producto`
 --
 ALTER TABLE `tipo_producto`
-  MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_tip_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+  MODIFY `id_usu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
@@ -746,13 +649,6 @@ ALTER TABLE `acceso`
 ALTER TABLE `calificacion_supermercado`
   ADD CONSTRAINT `calificacion_supermercado_ibfk_1` FOREIGN KEY (`id_sup`) REFERENCES `supermercado` (`id_sup`) ON UPDATE CASCADE,
   ADD CONSTRAINT `calificacion_supermercado_ibfk_2` FOREIGN KEY (`id_cal`) REFERENCES `calificacion` (`id_cal`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `calificacion_usu`
---
-ALTER TABLE `calificacion_usu`
-  ADD CONSTRAINT `calificacion_usu_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`id_usu`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `calificacion_usu_ibfk_2` FOREIGN KEY (`id_cal`) REFERENCES `calificacion` (`id_cal`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `ciudad`
@@ -779,12 +675,6 @@ ALTER TABLE `dpto`
 ALTER TABLE `pedido`
   ADD CONSTRAINT `pedido_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`id_usu`) ON UPDATE CASCADE,
   ADD CONSTRAINT `pedido_ibfk_2` FOREIGN KEY (`id_sup`) REFERENCES `supermercado` (`id_sup`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `permisos`
---
-ALTER TABLE `permisos`
-  ADD CONSTRAINT `permisos_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `productos`

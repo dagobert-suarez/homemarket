@@ -115,20 +115,33 @@ h3{
 }
 .uno{
   background: red;
- background-color: #0e8d94;
+ /* background-color: #0e8d94; */
+ color: rgb(233, 233, 233);
+ background-color: #24CCEA;
+ font-family: 'Roboto',sans-serif;
+
 }
 .dos{
-    background-color: #72ad75;
+    /* background-color: #72ad75; */
+    background-color: #FD4541;
+    color: rgb(233, 233, 233);
+    font-family: 'Roboto',sans-serif;
     border-radius: 2px;
 
 }
 .tres{
   border-radius: 2px;
   /* background: yellow; */
+  color: rgb(233, 233, 233);
+  font-family: 'Roboto',sans-serif;
   background-color: rgb(252, 119, 11);
 
 }
 .cuatro{
   border-radius: 2px;
-  background-color: #6a89c6;
+  /* background-color: #6a89c6; */
+  background-color: #6B59CB;
+  font-family: 'Roboto',sans-serif;
+  color: rgb(233, 233, 233);
+
 }
