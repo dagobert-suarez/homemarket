@@ -12,32 +12,32 @@
      <input type="text" name="data[]" value="<?php echo $dataProduct["nom_pro"];?>">
      <label for="">descripcion del Producto:</label>
      <textarea name="data[]" ><?php echo $dataProduct["des_pro"];?></textarea>
+     <!-- <label for="">Imagen producto:</label>
+     <input type="file" name="data[]" value="<?php echo $dataProduct["img_pro"] ?>"><br><br> -->
      <label for="">Marca de la Producto:</label>
      <input type="text" name="data[]" value="<?php echo $dataProduct["mar_pro"];?>">
-     <label for="">categoria de la Producto:</label>
-     <select class="product" name="data[]" value="">
-       <option value=""></option>
-        <?php
-      foreach ($this->product->readCategory() as $row) {
-          echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";
-          }
-       ?>
-   </select>
+     <!-- <label for="">categoria de la Producto:</label>
+     <select class="product" name="data[]" value="<?php echo $dataProduct["id_tip_pro"];?>"> -->
+       <!-- <option value=""></option> -->
+       <!-- <?php
+       // foreach ($this->product->readCategory() as $row) {
+       //   echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";
+       // }
+       ?> -->
+   <!-- </select> -->
      <label for="">Cantidad producto:</label>
      <input type="number" name="data[]" value="<?php echo $dataProduct["can_pro"];?>">
      <label for="">Unidad medida:</label>
-     <select class="" name="data[]">
-       <option value="">kg</option>
-       <option value="">lb</option>
-       <option value="">gr</option>
-       <option value="">lts</option>
+     <select name="data[]"  value="<?php echo $dataProduct["uniMed_pro"];?>">
+       <option value="kg">kg</option>
+       <option value="lb">lb</option>
+       <option value="gr">gr</option>
+       <option value="lts">lts</option>
      </select>
-     <label for="">Valor venta:</label>
-     <input type="number" name="data[]"  value="<?php echo $dataProduct["valVen_pro"] ?>">
+     <!-- <label for="">Valor venta:</label>
+     <input type="number" name="data[]"  value="<?php echo $dataProduct["valVen_pro"] ?>"> -->
 
-     <label for="">Imagen producto:</label>
-     <input type="file" name="data[]" value="<?php echo $dataProduct["img_pro"] ?>"><br><br>
 
-     <input type="hidden" readonly name="data[]" value="<?php echo $_GET["data"]; ?>">
+     <input type="text" readonly name="data[]" value="<?php echo $_GET["data"]; ?>">
      <button type="submit" name="button">Actualizar</button>
  </form>
