@@ -57,10 +57,9 @@
         echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";} ?>
       </select>
     </div>
+    <div class="form-group">
 
-
-
-
+    </div>
 </div>
 
  </form>
