@@ -3,9 +3,9 @@
     <h1>Productos registrados </h1>
       <div class="breadcrums">
             <ul>
-                <li><a href="InicioWorker"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="nuevo-producto">Agregar Producto</a></li>
-                <li><a href="">productos</a></li>
+                <li><a href="InicioWorker"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="nuevo-producto"><i class="fa fa-plus-square"></i> Agregar Producto</a></li>
+                <li><a href=""><i class="fa fa-shopping-basket"></i> Productos</a></li>
             </ul>
       </div>
   </header>
@@ -14,22 +14,21 @@
       <tr>
         <th>#</th>
         <th>Nombre</th>
+        <th>Descripcion</th>
         <th>Marca</th>
-        <th>Categoria</th>
         <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
-
       <?php
-
           $data = $this->viewProducts();
-      foreach ($data as $row) { ?>
+          foreach ($data as $row) {
+      ?>
       <tr class="even">
         <td><?php echo $row["id_pro"]; ?></td>
         <td><?php echo $row["nom_pro"]; ?></td>
-        <td><?php echo $row["mar_pro"]; ?></td>
         <td><?php echo $row["des_pro"]; ?></td>
+        <td><?php echo $row["mar_pro"]; ?></td>
         <td>
             <a href="actualizar-producto-<?php echo $row['id_pro'] ;?>" class=""><i class="fa fa-pencil" aria-hidden="true"></i>Actualizar</a>
             <a href="#" class="modalDet"><i class="fa fa-info-circle" aria-hidden="true"></i>Detalles</a>
@@ -81,7 +80,7 @@
           </div>
           <div class="wrap-bod">
               <p>La vista para el detalle del productos</p>
-                  <label for="">Nombre del productos:<?php print_r($data)  ?></label>
+                  <label for="">Nombre del productos:</label>
                   <br>
       </div>
   </div>

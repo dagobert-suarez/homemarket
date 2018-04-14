@@ -1,67 +1,75 @@
 <section>
   <div class="">
       <header>
-          <h1>Registrar nuevo producto</h1>
+          <h1>Registrar Producto</h1>
 
       <div class="breadcrums">
             <ul>
-                <li><a href="InicioWorker"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="Productos-empleado">productos</a></li>
-                <li><a href="">Crear producto</a></li>
+                <li><a href="InicioWorker"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="Productos-empleado"><i class="fa fa-shopping-basket"></i> Productos</a></li>
+                <li><a href=""><i class="fa fa-plus-square"></i> Crear producto</a></li>
             </ul>
       </div>
   </header>
+  <div class="content">
     <form id="frmproducto" class="" action="crearProduct" method="post">
-
-        <div class="">
-          <label for="" class="required">Nombre de producto:</label>
-          <input type="text" name="data[]" value="" class="new" required>
-        </div>
-        <div class="">
-          <label for="" class="opcional">Descripcion de producto:</label>
-          <textarea type="text" name="data[]" value="" class="new"></textarea>
-        </div>
-        <div class="" >
+      <div class="content-form">
+          <div class="form-group">
+            <label for="" class="required">Nombre de producto:</label>
+            <input type="text" class="k" name="data[]" value="" class="new" required>
+          </div>
+          <div class="form-group">
+            <label for="" class="opcional">Descripcion de producto:</label>
+            <textarea type="text" class="k" name="data[]" value="" class="new"></textarea>
+          </div>
+      </div>
+      <div class="content-form">
+        <div class="form-group" >
           <label for="" class="required">Marca del producto:</label>
-          <input type="text" name="data[]" value="" class="new" required>
+          <input type="text" class="k" name="data[]" value="" class="new" required>
         </div>
-        <div class="">
+        <div class="form-group">
           <label for="" class="required">Categoria producto:</label>
-          <select class="product" name="data[]" class="new" required>
+          <select class="product"  name="data[]" class="new" required>
             <option value=""></option>
             <?php
-
-            foreach ($this->product->readCategory() as $row) {
-              echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";
+              foreach ($this->product->readCategory() as $row) {
+                echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";
               }
             ?>
-        </select>
-      </div>
-      <div class="">
-        <label for="" class="required">Cantidad:</label>
-        <input type="number" name="data[]">
-      </div>
-      <div class="">
-        <label for="" class="required">Medida:</label>
-        <select class="" name="data[]">
-          <option value="">kg</option>
-          <option value="">lb</option>
-          <option value="">gr</option>
-          <option value="">lts</option>
-        </select>
-      </div>
-      <div class="">
-        <label for="" class="required">Valor venta:</label>
-        <input type="number" name="data[]" class="new">
-      </div>
-        <div class="" >
-            <label for="" class="required">Imagen del producto:</label>
-          <input type="file" name="file" class="new">
+          </select>
         </div>
-        <div class="">
+      </div>
+      <div class="content-form">
+        <div class="form-group">
+          <label for="" class="required">Cantidad:</label>
+          <input type="number" class="k" name="data[]">
+        </div>
+        <div class="form-group">
+          <label for="" class="required">Medida:</label>
+          <select class="ks" name="data[]">
+            <option value="">kg</option>
+            <option value="">lb</option>
+            <option value="">gr</option>
+            <option value="">lts</option>
+          </select>
+        </div>
+      </div>
+      <div class="content-form">
+        <div class="form-group">
+          <label for="" class="required">Valor venta:</label>
+          <input type="number" class="k" name="data[]" class="new">
+        </div>
+        <div class="form-group" >
+          <label for="" class="required">Imagen del producto:</label>
+          <input type="file"class="kfile" name="file" class="new">
+        </div>
+      </div>
+        <div class="form-group">
             <button type="submit" name="guardar" class="frmbtn">Crear Producto</button>
 
         </div>
     </form>
+  </div>
   </div>
 </section>

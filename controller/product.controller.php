@@ -5,19 +5,6 @@ require_once("model/product.model.php");
 class ProductController{
   private $product;
   // vista de los supermercados
-  function crear(){
-    require_once "views/modules/worker/header.php";
-    require_once "views/modules/worker/createProduct.php";
-    require_once "views/modules/worker/footer.php";
-
-  }
-  // vista de las categorias
-  function crearCategoria(){
-    require_once "views/modules/worker/header.php";
-    require_once "views/modules/worker/createCategory.php";
-    require_once "views/modules/worker/footer.php";
-
-  }
   // Cliente
   //inicio de session del cliente donde muestra los supermercados
   function Supermercados(){
@@ -40,16 +27,32 @@ class ProductController{
       require_once "views/modules/admin/mySuper.php";
       require_once "views/modules/admin/footer_admin.php";
   }
+  // Empleado
+  // -------------
+  // Crear Producto
+  function crear(){
+    require_once "views/modules/worker/header.php";
+    require_once "views/modules/worker/createProduct.php";
+    require_once "views/modules/worker/footer.php";
 
+  }
+  // Ver los producto empleado
   function Produtosviewsworker(){
     require_once "views/modules/worker/header.php";
     require_once "views/modules/worker/productosviews.php";
     require_once "views/modules/worker/footer.php";
   }
+  // Actualizar productos
   function updateProductos(){
       require_once "views/modules/worker/header.php";
       require_once "views/modules/worker/updateproduct.php";
-      // require_once "views/modules/worker/.php";
+      require_once "views/modules/worker/footer.php";
+  }
+  // Crear categoria
+  function crearCategoria(){
+    require_once "views/modules/worker/header.php";
+    require_once "views/modules/worker/createCategory.php";
+    require_once "views/modules/worker/footer.php";
   }
 
     public function __CONSTRUCT(){

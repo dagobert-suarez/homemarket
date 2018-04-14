@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
 $dataCategory = $this -> readByCategory($_GET["data"]);
-?>
+?> -->
 	<section>
 		<div  class="categorymodal">
 			<form  class="modal-content-category" action="createCategory" method="post">
@@ -8,7 +8,7 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 				<div class="">
 
 				<label for="" class="required">Nombre de la categoria:</label>
-				<input type="text" name="data[]" value="" required>
+				<input type="text" class="k" name="data[]" value="" required>
 			</div>
 				<button type="submit" name="guardar" class="frmbtn">Crear categoria</button>
 			</form>
@@ -17,9 +17,9 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 			<h1>Ver categoria</h1>
 			<div class="breadcrums">
 				<ul>
-					<li><a href="InicioWorker"><i class="fa fa-home"></i>Home</a></li>
-					<li><a href="">Crear categoria</a></li>
-					<li><a href="">Categorias</a></li>
+					<li><a href="InicioWorker"><i class="fa fa-home"></i> Home</a></li>
+					<!-- <li><a href=""> 	Crear categoria</a></li> -->
+					<li><a href=""><i class="fa fa-clipboard" aria-hidden="true"></i>	Categorias</a></li>
 				</ul>
 			</div>
 		</header>
@@ -63,7 +63,7 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 				<div class="wrap-bod">
 					<form  name="frmCategory" action="actualizar-categoria" method="post">
 						<label for="">Nombre de la categoria:</label>
-						<input type="text" name="data[]" required value=""><br>
+						<input type="text" class="k" name="data[]" required value=""><br>
 						<button type="submit" name="button">Actualizar</button>
 						<h1>en procceso de desarrollo</h1>
 					</form>

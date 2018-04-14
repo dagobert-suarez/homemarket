@@ -11,44 +11,44 @@
     <div class="wrap-form">
       <h1>en procceso de desarrollo</h1>
         <!-- <p>Actualizar la contraseña, los datos personales</p> -->
-        <!-- <form  action="actualizar-datosEm" method="post">
+        <form  action="actualizar-datosEm" method="post">
             <div class="form-group">
                 <label for="">Nombre:</label>
-                <input type="text" name="data[]" value="<?php echo $data['nom_usu']?>" placeholder="Nombre">
+                <input type="text" class="k" name="data[]" value="<?php echo $data['nom_usu']?>" placeholder="Nombre">
 
             </div>
             <div class="form-group">
                 <label for="">Apellido:</label>
-                <input type="text" name="data[]" value="<?php echo $data['ape_usu']?>" placeholder="Apellido">
+                <input type="text" class="k" name="data[]" value="<?php echo $data['ape_usu']?>" placeholder="Apellido">
 
             </div>
             <div class="form-group">
                 <label for="">Fecha de Nacimiento:</label>
-                <input type="date" name="data[]" value="<?php echo $data['fec_nac_usu']?>" >
+                <input type="date" class="k" name="data[]" value="<?php echo $data['fec_nac_usu']?>" >
 
             </div>
             <div class="form-group">
                 <label for="">Telefono o Celular:</label>
-                <input type="number" name="data[]" value="<?php echo $data['tel_usu']?>" >
+                <input type="number" class="kn" name="data[]" value="<?php echo $data['tel_usu']?>" >
             </div>
             <div class="form-group">
                 <button type="submit" name="button" class="btnact">Actualizar</button>
             </div>
-        </form> -->
-        <!-- <div class="form-group">
+        </form>
+        <div class="form-group">
             <label  class="required" for="">Contraseña Actual:</label>
-            <input type="password" name="" class=""placeholder="contraseña" value=""> -->
+            <input type="password" class="k" name="" class=""placeholder="contraseña" value="">
 
-        <!-- </div>
+        </div>
         <div class="form-group">
             <label for="">Contraseña:</label>
-            <input type="password" name="" value="" placeholder="contraseña"> -->
+            <input type="password" class="k" name="" value="" placeholder="contraseña">
 
-        <!-- </div>
+        </div>
         <div class="form-group">
             <label for=""> Validar Contraseña:</label>
-            <input type="password" name="" value="" placeholder="contaseña">
-        </div> -->
+            <input type="password" class="k" name="" value="" placeholder="contaseña">
+        </div>
 
 
     </div>
