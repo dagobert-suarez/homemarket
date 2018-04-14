@@ -106,7 +106,7 @@ h3{
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 8px;
-  grid-template-rows: auto 130px;
+  grid-template-rows: 600px 130px;
 }
 .uno, .dos, .tres, .cuatro{
   background: lime;
@@ -144,4 +144,18 @@ h3{
   font-family: 'Roboto',sans-serif;
   color: rgb(233, 233, 233);
 
+}
+/* ------------------------------- */
+/* ------------------------------- */
+/* Lorem */
+.lorem{
+  display: grid;
+  grid-template-rows: auto auto;
+  z-index: 4;
+}
+.lorem .ask{
+  background-color: rgb(58, 144, 16);
+}
+.lorem .answer{
+  background-color: rgb(146, 134, 177);
 }

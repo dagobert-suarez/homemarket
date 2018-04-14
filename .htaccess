@@ -9,6 +9,7 @@ RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
 RewriteRule ^explora$ index.php?controller=views&a=explora
+RewriteRule ^lorem$ index.php?controller=views&a=lorem
 
 #validar usuario
 #----------------

@@ -30,16 +30,15 @@ class viewsController{
 		require_once "views/include/scope.header-inicio.php";
 		require_once "views/include/scope.footer.php";
 	}
-
-	// function master(){
-	// 	require_once "views/include/scope.header.php";
-	// 	require_once "views/modules/inicio.php";
-	// 	require_once "views/include/scope.footer.php";
-	// }
-
+	// manual de usuario
 	function explora(){
 		require_once "views/include/manual/header.php";
-		// require_once "views/include/manual/manual.php";
+		require_once "views/include/manual/modules/info.php";
+		require_once "views/include/manual/footer.php";
+	}
+	function lorem(){
+		require_once "views/include/manual/header.php";
+		require_once "views/include/manual/modules/lorem.php";
 		require_once "views/include/manual/footer.php";
 	}
 

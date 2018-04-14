@@ -23,11 +23,11 @@
        <div class="uno">
            <h2>Manual</h2>
 
-           <p>lorem</p>
+           <a href="lorem">lorem</a>
        </div>
        <div class="dos">
            <h2>Manual</h2>
-           
+
        </div>
      </div>
   </div>

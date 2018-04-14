@@ -14,5 +14,4 @@
         <?php	require_once 'scope.menu.php'; ?>
       </header>
       <div class="content">
-          <?php require_once 'scope.info.php' ?>
-      </div>
+          <!-- <?php include 'scope.info.php' ?> -->
