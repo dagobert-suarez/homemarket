@@ -19,7 +19,7 @@
                 <input class="k" type="number" name="" value="">
             </div>
             <div class="form-group">
-                <button type="submit" name="button">Regitrar</button>
+                <button type="submit" name="button" class="frmbtn">Registrar</button>
             </div>
         </div>
     </form>
