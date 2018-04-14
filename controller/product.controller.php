@@ -118,10 +118,9 @@ class ProductController{
           $data = $_POST['data'];
           $result = $this->product->updateProc($data);
           // print_r($data);
-          // die();
-          // die();
-          // echo '<script language="javascript">alert("Modificado con exito");</script>';
-          // echo "<script>window.location.href='Productos-empleado'</script>";
+
+          echo '<script language="javascript">alert("Modificado con exito");</script>';
+          echo "<script>window.location.href='Productos-empleado'</script>";
           header("Location: Productos-empleado");
       }
       // crud productos

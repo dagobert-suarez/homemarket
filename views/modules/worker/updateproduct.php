@@ -10,11 +10,13 @@
  <form class="" action="actualizando-producto" method="post" enctype="multipart/form-data">
      <label for="">Nombre de la Producto:</label>
      <input type="text" name="data[]" value="<?php echo $dataProduct["nom_pro"];?>">
-     <label for="">descripcion del Producto:</label>
+     <label for="">Descripcion del Producto:</label>
+
+     <!-- <label for="">Imagen del Producto:</label>
+     <input type="file" name="file" value="<?php echo $dataProduct["img_pro"] ?>"><br><br> -->
+
      <textarea name="data[]" ><?php echo $dataProduct["des_pro"];?></textarea>
-     <!-- <label for="">Imagen producto:</label>
-     <input type="file" name="data[]" value="<?php echo $dataProduct["img_pro"] ?>"><br><br> -->
-     <label for="">Marca de la Producto:</label>
+     <label for="">Marca producto:</label>
      <input type="text" name="data[]" value="<?php echo $dataProduct["mar_pro"];?>">
      <label for="">Cantidad producto:</label>
      <input type="number" name="data[]" value="<?php echo $dataProduct["can_pro"];?>">
@@ -31,7 +33,7 @@
      <label for="">categoria de la Producto:</label>
      <select class="product" name="data[]" value="<?php echo $dataProduct["id_tip_pro"];?>"> -->
        <option value=""></option>
-       <?php
+      <?php
        foreach ($this->product->readCategory() as $row) {
          echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";
        }
