@@ -123,7 +123,7 @@ class ProductModel{
       //     $msn = $e->getMessage();
       // }
       // return $msn;
-      $sql = "UPDATE productos SET nom_pro = ?, des_pro = ?, mar_pro = ?, can_pro = ?, uniMed_pro = ?, valVen_pro = ?, img_pro = ?  WHERE id_pro = ?";
+      $sql = "UPDATE productos SET nom_pro = ?, des_pro = ?, mar_pro = ?, can_pro = ?, uniMed_pro = ?, valVen_pro = ?, id_tip_pro = ? WHERE id_pro = ?";
       $query = $this->pdo->prepare($sql);
       $query->execute(array($data[0], $data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
 
@@ -132,8 +132,8 @@ class ProductModel{
      }catch(PDOException $e){
        $msn = $e->getMessage();
      }
-     echo $msn;
-     die();
+     // echo $msn;
+     // die();
      return $msn;
 
   }

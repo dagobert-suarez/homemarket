@@ -127,16 +127,14 @@ class UserController{
 	}
 
 		function validarTelefono($data){
-			if (filter_var($data,FILTER_VALIDATE_INT)===false && strlen($data)<=7 || strlen($data)>11 ) {
+			if (filter_var($data,FILTER_VALIDATE_INT)===false && strlen($data)<7 || strlen($data)>11) {
 				return false;
-			}
-			elseif ($data <0) {
-				return false;
-			}
-			else{
+			}else{
 				return true;
 			}
 		}
+
+
 		function validarEspacio($data){
 		if($data==''){
 			return false;
