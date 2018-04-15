@@ -173,5 +173,35 @@ class ProductController{
                $result = $this->product->readAllSup();
                return $result;
            }
+           // ProveedoresEm
+    			 // --------------------------
+    			 // Crear Proveedor
+    			 public function createProvee(){
+    	 			$data = $_POST['data'];
+    	 			$result = $this->product->createProvee($data);
+    	 	    	header("Location: ProveedoresEm");
+    	 			}
+    				// selecionar todos proveedores
+    				public function readAllProv(){
+    					$result= $this->product->readAllProv();
+    					return $result;
+    				}
+    				// Selecionar por provvedor
+    				public function readByProv(){
+    					$result= $this->product->readByProv();
+    					return $result;
+    				}
+    				// Actualizar Proveedor
+    				public function updateProv(){
+    					$data= $_POST['data'];
+    					$result=$this->product->updateProv($data);
+    					return $result;
+    				}
+    				// Eliminar Proveedor
+    				public function deleteProv(){
+    					$data = $_GET['data'];
+    					$result= $this->product->deleteProv($data);
+    					header("Location: ProveedoresEm");
+    				}
 }
 ?>
