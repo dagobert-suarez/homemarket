@@ -191,6 +191,67 @@ class ProductModel{
       }
       return $result;
    }
+   // Proveedores
+   // ---------------------
+   public function createProvee($data){
+     try{
+       $sql=" INSERT INTO proveedores (nom_prov,dir_prov,tel_prov) VALUES (?,?,?)";
+       $query=$this->pdo->prepare($sql);
+       $query->execute(array($data[0],$data[1],$data[2])) ;
+       $msn ="Guardado Exitoxamente";
+     } catch(PDOException $e){
+       $msn = $e->getMessage();
+     }
+       return $msn;
+   }
+   // Selecionar Todos los Proveedores
+    public function readAllProv(){
+      try{
+        $sql="SELECT * FROM proveedores";
+        $query=$this->pdo->prepare($sql);
+        $query->execute();
+        $result = $query->fetchALL(PDO::FETCH_BOTH);
+      } catch (PDOException $e){
+        $result = $e->getMessage();
+      }
+      return $result;
+    }
+    // Selecionar por Proveedor
+    public function readByProv(){
+      try{
+        $sql="SELECT * FROM proveedores WHERE id_prov = ?";
+        $query=$this->pdo->prepare($sql);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_BOTH);
+      } catch (PDOException $e){
+        $result = $e->getMessage();
+      }
+      return $result;
+    }
+    // Actualizar Proveedor
+    public function updateProv(){
+      try{
+        $sql="UPDATE proveedores SET nom_prov = ? , dir_prov = ?, tel_prov = ? ";
+        $query=$this->pdo->prepare($sql);
+        $query->execute(array($data[0], $data[1], $data[2]));
+        $msn= "Modificado Exitosamente";
+      } catch (PDOException $e){
+        $msn= $e->getMessage();
+      }
+      return $msn;
+    }
+    // Eliminar Proveedor
+    public function deleteProv($data){
+      try{
+        $sql= "DELETE FROM proveedores WHERE id_prov = ?";
+        $query=$this->pdo->prepare($sql);
+        $query->execute(array($data));
+        $msn="Eliminado Exitosamente";
+      }catch (PDOException $e){
+        $msn= $e->getMessage();
+      }
+      return $msn;
+    }
 
  }
 ?>

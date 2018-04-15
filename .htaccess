@@ -77,6 +77,8 @@ RewriteRule ^actualizar-producto-(\w+)$ index.php?controller=product&a=updatePro
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^createCategory$ index.php?controller=product&a=createCategory
 RewriteRule ^actualizando-categoria$ index.php?c=product&a=updateCat
+#CRUD proveedores
+Rewriterule ^registrar-provee$ index.php?controller=product&a=createProvee
 
 
 
