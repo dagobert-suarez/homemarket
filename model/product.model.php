@@ -10,7 +10,8 @@ class ProductModel{
       die($e->getMessage());
     }
   }
-  //  Categorias
+
+  //CRUD de Categorias
   //crear una nueva categoria envia datos a bd
     function createCategory($data){
       try{
@@ -36,7 +37,7 @@ class ProductModel{
         }
         return $result;
     }
-    // leer por categoría
+    // leer un tipo de categoria
     public function readByCat($data){
         try {
             $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
@@ -61,13 +62,21 @@ class ProductModel{
         return $msn;
 
     }
+    //elimina el tipo de categoria
+    function deleteProduct($data){
+     try{
+       $sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
+       $query=$this->pdo->prepare($sql);
+       $query->execute(array($data));
+       $msn ="se elimino la categoria exitosamente";
+     } catch (PDOException $e) {
+       $msn = $e->getMessage();
+     }
+         return $msn;
+   }
 
-
-
-
-
-    // Productos
-    //crear un nuevo producto: envia datos a bd
+    // CRUD de Productos
+    //crear un nuevo producto
       function createProduct($data){
         try{
           $sql = "call crear_pro(?,?,?,?,?,?,?,?,?)";
@@ -80,11 +89,7 @@ class ProductModel{
         return $msn;
       }
 
-
-
-
-  // llama todos los productos en la bd
-
+  // llama todos los productos
   function readProducts(){
     try{
     $sql="SELECT * FROM productos ";
@@ -96,7 +101,8 @@ class ProductModel{
       }
       return $result;
     }
-  // Leer por productos
+
+  // Lee un producto
    function readByproc($data){
       try {
           $sql= "SELECT * FROM productos WHERE id_pro = (?)";
@@ -113,7 +119,6 @@ class ProductModel{
    function updateProc($data){
      print_r($data);
       try{
-
       $sql= "call modificarPro(?,?,?,?,?,?,?,?)";
       //     $sql="UPDATE productos SET nom_pro = ? WHERE id_pro = ?";
       //     $query=$this->pdo->prepare($sql);
@@ -135,8 +140,8 @@ class ProductModel{
      echo $msn;
      die();
      return $msn;
-
   }
+
 // Elimina el producto
   function deletePro($data){
       try{
@@ -149,24 +154,8 @@ class ProductModel{
       }
       return $msn;
   }
-  //elimina el tipo de categoria
-  // ---------------------------- //
-   function deleteProduct($data){
-    try{
-      $sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
-      $query=$this->pdo->prepare($sql);
-      $query->execute(array($data));
-      $msn ="se elimino la categoria exitosamente";
-    } catch (PDOException $e) {
-      $msn = $e->getMessage();
-    }
-        return $msn;
-  }
 
-
-
-  // Supermercados
-  // ----------------
+  // CRUD de Supermercados
   // Seleccionar todos los supermercados
     function readAllSup(){
        try{
@@ -191,8 +180,9 @@ class ProductModel{
       }
       return $result;
    }
+
+   //CRUD de proveeddores
    // Proveedores
-   // ---------------------
    public function createProvee($data){
      try{
        $sql=" INSERT INTO proveedores (nom_prov,dir_prov,tel_prov) VALUES (?,?,?)";
