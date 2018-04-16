@@ -103,7 +103,7 @@ class ProductController{
          echo '<script language="javascript">alert("creado con exito");</script>';
          echo "<script>window.location.href='nuevo-producto'</script>";
       }
-      // ------------------- //
+
 
       function viewProducts(){
           $result = $this->product->readProducts();
@@ -120,10 +120,12 @@ class ProductController{
       public function updateProc(){
           $data = $_POST['data'];
           $result = $this->product->updateProc($data);
-          // print_r($data);
+          print_r($data);
 
           echo '<script language="javascript">alert("Modificado con exito");</script>';
           echo "<script>window.location.href='Productos-empleado'</script>";
+          // echo '<script language="javascript">alert("Modificado con exito");</script>';
+          // echo "<script>window.location.href='Productos-empleado'</script>";
           // header("Location: Productos-empleado");
       }
       // crud productos
