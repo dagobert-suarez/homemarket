@@ -174,11 +174,13 @@ class ProductController{
           }
 
           // supermercados
+
            // Seleccionar por Supermercados
-          function readBySup($data){
+          function readByIdSup($data){
                $result=$this->product->readBySup($data);
                return $result;
            }
+
            // Seleccionar Todos los Supermercados
            function readAllSup(){
                $result = $this->product->readAllSup();
