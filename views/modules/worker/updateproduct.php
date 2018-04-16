@@ -6,36 +6,45 @@
 
  ?>
  <!-- <p>uniMed_pro,valVen_pro,img_pro</p> -->
+
+ <form class="" action="actualizando-producto" method="post" enctype="multipart/form-data">
+
  <header>
    <h1>Actualizar Producto</h1>
  </header>
- <div class="content">
 
+ <div class="content">
    <form class="" action="actualizando-producto" method="post" enctype="multipart/form-data">
      <label for="" class="see" >Id del producto: <?php echo $_GET["data"]; ?></label>
         <!-- <input type="text" readonly name="data[]" value="<?php echo $_GET["data"]; ?>"> -->
+
+
         <div class="content-form">
             <div class="form-group">
               <label for="" class="required">Nombre de la Producto:</label>
               <input type="text" class="k" name="data[]" value="<?php echo $dataProduct["nom_pro"];?>">
             </div>
+
             <div class="form-group">
               <label for=""class="opcional">Descripcion del Producto:</label>
               <textarea name="data[]" class="k" ><?php echo $dataProduct["des_pro"];?></textarea>
             </div>
+
         </div>
-       <!-- <label for="">Imagen producto:</label>
-       <input type="file" name="data[]" value="<?php echo $dataProduct["img_pro"] ?>"><br><br> -->
-       <div class="content-form">
+
+        <div class="content-form">
          <div class="form-group">
            <label for=""class="required">Marca de el Producto:</label>
            <input type="text" class="k" name="data[]" value="<?php echo $dataProduct["mar_pro"];?>">
          </div>
+
          <div class="form-group">
            <label for=""class="required">Cantidad del producto:</label>
            <input class="k" type="number"  name="data[]" value="<?php echo $dataProduct["can_pro"];?>">
          </div>
+         
        </div>
+
        <div class="content-form">
          <div class="form-group">
            <label for="" class="required">Unidad medida:</label>
@@ -46,11 +55,13 @@
              <option value="lts">lts</option>
            </select>
          </div>
+
          <div class="form-group">
            <label for="" class="required">Valor venta:</label>
            <input type="number"class="k" name="data[]"  value="<?php echo $dataProduct["valVen_pro"] ?>">
          </div>
        </div>
+
       <div class="content-form">
         <div class="form-group">
           <label for="" class="required">Categoria del Producto:</label>
@@ -58,12 +69,20 @@
             <option value=""></option>
             <?php
             foreach ($this->product->readCategory() as $row) {
-              echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";} ?>
+              echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";}
+              ?>
             </select>
           </div>
+
+          <label for="">Imagen producto:</label>
+          <input type="file" name="data[]" value="<?php echo $dataProduct["img_pro"] ?>"><br><br>
+
           <div class="form-group">
             <button type="submit" name="button" class="btnact">Actualizar</button>
           </div>
       </div>
+
+
    </form>
+
 </div>
