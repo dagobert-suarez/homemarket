@@ -1,6 +1,6 @@
           <nav>
             <ul>
-              <a href="#"><li><i class="fa fa-home"></i> Dashboard</li></a>
+              <a href="Dashboard-Super"><li><i class="fa fa-home"></i> Dashboard</li></a>
               <a href="#"><li><i class="fa fa-check-square-o"></i> Permisos</li></a>
               <a href="#"><li><i class="fa fa-building-o" aria-hidden="true"></i> nose</li></a>
               <a href="#"><li><i class="fa fa-tags" aria-hidden="true"></i> Contenido</li></a>

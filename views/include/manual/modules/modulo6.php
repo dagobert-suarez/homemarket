@@ -1,7 +1,7 @@
 <i class="back"><a href="explora" >&lt;Volver</a></i>
 <div class="modulo1">
   <div class="ask">
-    <h1>Modulo 1</h1>
+    <h1>Modulo 6</h1>
     <h2>¿Titulo Pregunta?</h2>
   </div>
   <div class="answer">

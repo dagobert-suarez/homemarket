@@ -8,8 +8,14 @@ RewriteRule ^master$ index.php?controller=views&a=master
 RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
+#manual de usuario
 RewriteRule ^explora$ index.php?controller=views&a=explora
-RewriteRule ^lorem$ index.php?controller=views&a=lorem
+RewriteRule ^modulo1$ index.php?controller=views&a=lorem
+RewriteRule ^modulo2$ index.php?controller=views&a=modulo2
+RewriteRule ^modulo3$ index.php?controller=views&a=modulo3
+RewriteRule ^modulo4$ index.php?controller=views&a=modulo4
+RewriteRule ^modulo5$ index.php?controller=views&a=modulo5
+RewriteRule ^modulo6$ index.php?controller=views&a=modulo6
 
 #validar usuario
 #----------------
@@ -25,7 +31,7 @@ RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
-RewriteRule ^PorSupermercado$ index.php?controller=user&a=BySupercado
+RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=user&a=BySupermercado&data=$1
 
 #supermercado
 #----------------
@@ -79,9 +85,9 @@ RewriteRule ^createCategory$ index.php?controller=product&a=createCategory
 RewriteRule ^actualizando-categoria$ index.php?c=product&a=updateCat
 #CRUD proveedores
 Rewriterule ^registrar-provee$ index.php?controller=product&a=createProvee
-
-
+RewriteRule ^eliminar-Provee-(\w+)$ index.php?controller=product&a=deleteProvee&data=$1
 
 #super administrador
 #----------------
 RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin
+RewriteRule ^Dashboard-Super$ index.php?controller=views&a=mainSuper

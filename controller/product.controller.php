@@ -126,6 +126,11 @@ class ProductController{
 
           echo '<script language="javascript">alert("Modificado con exito");</script>';
           echo "<script>window.location.href='Productos-empleado'</script>";
+<<<<<<< HEAD
+=======
+          // echo '<script language="javascript">alert("Modificado con exito");</script>';
+          // echo "<script>window.location.href='Productos-empleado'</script>";
+>>>>>>> 5319c201d8e2dab39d59a5cd6bdc0809cedc3397
           // header("Location: Productos-empleado");
       }
       // crud productos
@@ -166,8 +171,8 @@ class ProductController{
 
           // supermercados
            // Seleccionar por Supermercados
-          function readBySup(){
-               $result=$this->product->readBySup();
+          function readBySup($data){
+               $result=$this->product->readBySup($data);
                return $result;
            }
            // Seleccionar Todos los Supermercados
@@ -181,7 +186,10 @@ class ProductController{
     			 public function createProvee(){
     	 			$data = $_POST['data'];
     	 			$result = $this->product->createProvee($data);
-    	 	    	header("Location: ProveedoresEm");
+            echo '<script language="javascript">alert("Creado con exito");</script>';
+            echo "<script>window.location.href='ProveedoresEm'</script>";
+            // print_r($data);
+    	 	    	// header("Location: ProveedoresEm");
     	 			}
     				// selecionar todos proveedores
     				public function readAllProv(){
@@ -200,10 +208,10 @@ class ProductController{
     					return $result;
     				}
     				// Eliminar Proveedor
-    				public function deleteProv(){
+    				public function deleteProvee(){
     					$data = $_GET['data'];
     					$result= $this->product->deleteProv($data);
-    					header("Location: ProveedoresEm");
+    					header("Location:ProveedoresEm");
     				}
 }
 ?>

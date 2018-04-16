@@ -41,6 +41,31 @@ class viewsController{
 		require_once "views/include/manual/modules/lorem.php";
 		require_once "views/include/manual/footer.php";
 	}
+	function modulo2(){
+		require_once "views/include/manual/header.php";
+		require_once "views/include/manual/modules/modulo2.php";
+		require_once "views/include/manual/footer.php";
+	}
+	function modulo3(){
+		require_once "views/include/manual/header.php";
+		require_once "views/include/manual/modules/modulo3.php";
+		require_once "views/include/manual/footer.php";
+	}
+	function modulo4(){
+		require_once "views/include/manual/header.php";
+		require_once "views/include/manual/modules/modulo4.php";
+		require_once "views/include/manual/footer.php";
+	}
+	function modulo5(){
+		require_once "views/include/manual/header.php";
+		require_once "views/include/manual/modules/modulo5.php";
+		require_once "views/include/manual/footer.php";
+	}
+	function modulo6(){
+		require_once "views/include/manual/header.php";
+		require_once "views/include/manual/modules/modulo6.php";
+		require_once "views/include/manual/footer.php";
+	}
 
 	//las sessiones del administrador del supermercado
 	function inicioAdmin(){
@@ -298,12 +323,19 @@ class viewsController{
 	function InicioSuperAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==4) {
 			require_once "views/modules/superAdmin/header.php";
-			require_once "views/modules/superAdmin/superAdmin.php";
+			// require_once "views/modules/superAdmin/superAdmin.php";
 			require_once "views/modules/superAdmin/footer.php";
-		}else {
-			die();
-			header ('Location: inicio');
 		}
+		// else {
+		// 	die();
+		// 	header ('Location: inicio');
+		// }
+	}
+
+	function mainSuper(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/superAdmin.php";
+		require_once "views/modules/superAdmin/footer.php";
 	}
 
 

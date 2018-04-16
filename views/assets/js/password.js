@@ -12,7 +12,7 @@ $(function(){
 		if(mayus.test(pass)==false){
 
 				$("#mensaje").text("debe tener por lo menos una mayuscula").css("color","green");
-				
+
 				$("#mensaje").text("Debe tener mayuscula").css("color","green");
 
 		}else if(especial.test(pass)==true){

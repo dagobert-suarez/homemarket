@@ -61,7 +61,7 @@ class UserModel{
 			 }
 	function update($data){
 			 try{
-				 $sql = "call modificarUsuario(?,?,?,?,?)";
+				 $sql = "call modificarUsu(?,?,?,?,?,?)";
 				 $query = $this->pdo->prepare($sql);
 				 $query->execute($data);
 					 $msn = true;
