@@ -119,11 +119,13 @@ class ProductController{
 
       public function updateProc(){
           $data = $_POST['data'];
+          $img = $_FILES['file'];
+          $data[]=$img['name'];
+          copy($img['tmp_name'],"views/assets/image/productos/".$img['name']);
           $result = $this->product->updateProc($data);
-          print_r($data);
 
-          // echo '<script language="javascript">alert("Modificado con exito");</script>';
-          // echo "<script>window.location.href='Productos-empleado'</script>";
+          echo '<script language="javascript">alert("Modificado con exito");</script>';
+          echo "<script>window.location.href='Productos-empleado'</script>";
           // header("Location: Productos-empleado");
       }
       // crud productos
