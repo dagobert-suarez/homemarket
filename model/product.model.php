@@ -198,21 +198,23 @@ class ProductModel{
       return $result;
     }
     // Selecionar por Proveedor
-    public function readByProv(){
+    public function readByProv($data){
       try{
         $sql="SELECT * FROM proveedores WHERE id_prov = ?";
         $query=$this->pdo->prepare($sql);
-        $query->execute();
+        $query->execute(array($data));
         $result = $query->fetch(PDO::FETCH_BOTH);
       } catch (PDOException $e){
         $result = $e->getMessage();
       }
       return $result;
     }
+
     // Actualizar Proveedor
-    public function updateProv(){
+    public function updateProv($data){
       try{
-        $sql="UPDATE proveedores SET nom_prov = ? , dir_prov = ?, tel_prov = ? ";
+        // $sql="UPDATE proveedores SET nom_prov = ? , dir_prov = ?, tel_prov = ? ";
+        $sql = "call modificarProv(?,?,?)";
         $query=$this->pdo->prepare($sql);
         $query->execute(array($data[0], $data[1], $data[2]));
         $msn= "Modificado Exitosamente";

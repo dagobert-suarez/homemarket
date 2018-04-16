@@ -95,6 +95,11 @@ class viewsController{
 		require_once "views/modules/admin/mySuper.php";
 		require_once "views/modules/admin/footer_admin.php";
 	}
+	function updateSuper(){
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/updatesuper.php";
+		require_once "views/modules/admin/footer_admin.php";
+	}
 	function proveedores(){
 		require_once "views/modules/admin/header-admin.php";
 		require_once "views/modules/admin/proveedores.php";
