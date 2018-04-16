@@ -54,7 +54,7 @@
           <td><?php echo $row["dir_prov"] ;?></td>
           <td><?php echo $row["tel_prov"] ;?></td>
           <td>
-            <a href="#" class="abrirmodal"><i class="fa fa-pencil"></i>Editar</a>
+            <a href="actualizar-provee-<?php echo $row['id_prov'] ;?>" class="abrirmodal"><i class="fa fa-pencil"></i>Editar</a>
             <a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a>
             <a href="eliminar-Provee-<?php echo $row['id_prov'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
           </td>

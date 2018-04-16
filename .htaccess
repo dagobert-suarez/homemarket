@@ -46,7 +46,8 @@ RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 
 #crud
 RewriteRule ^guardar-super$ index.php?controller=views&a=newSuper
-RewriteRule ^editar-supermercado(\w+)$ index.php?controller=views&a=updateSup
+RewriteRule ^editar-supermercado$ index.php?controller=views&a=updateSup
+RewriteRule ^actualizar-super-(\w+)$ index.php?controller=views&a=updatesuper&data=$1
 RewriteRule ^eliminar-supermercado-(\w+)$ index.php?controller=views&a=deleteSup&data=$1
 RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
 RewriteRule ^eliminar-provee-(\w+)$ index.php?controller=views&a=deleteProv&data=$1
@@ -84,7 +85,9 @@ RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^createCategory$ index.php?controller=product&a=createCategory
 RewriteRule ^actualizando-categoria$ index.php?c=product&a=updateCat
 #CRUD proveedores
-Rewriterule ^registrar-provee$ index.php?controller=product&a=createProvee
+RewriteRule ^registrar-provee$ index.php?controller=product&a=createProvee
+RewriteRule ^actualizar-provee-(\w+)$ index.php?controller=product&a=updateProvee&data=$1
+RewriteRule ^actualizando-prove$ index.php?controller=product&a=updateProv
 RewriteRule ^eliminar-Provee-(\w+)$ index.php?controller=product&a=deleteProvee&data=$1
 
 #super administrador

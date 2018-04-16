@@ -10,7 +10,8 @@ class ProductModel{
       die($e->getMessage());
     }
   }
-  //  Categorias
+
+  //CRUD de Categorias
   //crear una nueva categoria envia datos a bd
     function createCategory($data){
       try{
@@ -36,7 +37,7 @@ class ProductModel{
         }
         return $result;
     }
-    // leer por categoría
+    // leer un tipo de categoria
     public function readByCat($data){
         try {
             $sql="SELECT * FROM tipo_producto WHERE id_tip_pro = ?";
@@ -61,13 +62,21 @@ class ProductModel{
         return $msn;
 
     }
+    //elimina el tipo de categoria
+    function deleteProduct($data){
+     try{
+       $sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
+       $query=$this->pdo->prepare($sql);
+       $query->execute(array($data));
+       $msn ="se elimino la categoria exitosamente";
+     } catch (PDOException $e) {
+       $msn = $e->getMessage();
+     }
+         return $msn;
+   }
 
-
-
-
-
-    // Productos
-    //crear un nuevo producto: envia datos a bd
+    // CRUD de Productos
+    //crear un nuevo producto
       function createProduct($data){
         try{
           $sql = "call crear_pro(?,?,?,?,?,?,?,?,?)";
@@ -80,11 +89,7 @@ class ProductModel{
         return $msn;
       }
 
-
-
-
-  // llama todos los productos en la bd
-
+  // llama todos los productos
   function readProducts(){
     try{
     $sql="SELECT * FROM productos ";
@@ -96,7 +101,8 @@ class ProductModel{
       }
       return $result;
     }
-  // Leer por productos
+
+  // Lee un producto
    function readByproc($data){
       try {
           $sql= "SELECT * FROM productos WHERE id_pro = (?)";
@@ -111,19 +117,9 @@ class ProductModel{
 
   // Actualizar producto
    function updateProc($data){
-     print_r($data);
+     // print_r($data);
       try{
-
       $sql= "call modificarPro(?,?,?,?,?,?,?,?)";
-      //     $sql="UPDATE productos SET nom_pro = ? WHERE id_pro = ?";
-      //     $query=$this->pdo->prepare($sql);
-      //     $query->execute(array($data[0],$data[1]));
-      //     $msn= "Modificado Exitosamente";
-      // }catch (PDOException $e){
-      //     $msn = $e->getMessage();
-      // }
-      // return $msn;
-      // $sql = "UPDATE productos SET nom_pro = ?, des_pro = ?, mar_pro = ?, can_pro = ?, uniMed_pro = ?, valVen_pro = ?, id_tip_pro = ? WHERE id_pro = ?";
       $query = $this->pdo->prepare($sql);
       $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
 
@@ -132,11 +128,11 @@ class ProductModel{
      }catch(PDOException $e){
        $msn = $e->getMessage();
      }
-     echo $msn;
-     die();
+     // echo $msn;
+     // die();
      return $msn;
-
   }
+
 // Elimina el producto
   function deletePro($data){
       try{
@@ -149,24 +145,8 @@ class ProductModel{
       }
       return $msn;
   }
-  //elimina el tipo de categoria
-  // ---------------------------- //
-   function deleteProduct($data){
-    try{
-      $sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
-      $query=$this->pdo->prepare($sql);
-      $query->execute(array($data));
-      $msn ="se elimino la categoria exitosamente";
-    } catch (PDOException $e) {
-      $msn = $e->getMessage();
-    }
-        return $msn;
-  }
 
-
-
-  // Supermercados
-  // ----------------
+  // CRUD de Supermercados
   // Seleccionar todos los supermercados
     function readAllSup(){
        try{
@@ -191,8 +171,9 @@ class ProductModel{
       }
       return $result;
    }
+
+   //CRUD de proveeddores
    // Proveedores
-   // ---------------------
    public function createProvee($data){
      try{
        $sql=" INSERT INTO proveedores (nom_prov,dir_prov,tel_prov) VALUES (?,?,?)";
@@ -217,21 +198,23 @@ class ProductModel{
       return $result;
     }
     // Selecionar por Proveedor
-    public function readByProv(){
+    public function readByProv($data){
       try{
         $sql="SELECT * FROM proveedores WHERE id_prov = ?";
         $query=$this->pdo->prepare($sql);
-        $query->execute();
+        $query->execute(array($data));
         $result = $query->fetch(PDO::FETCH_BOTH);
       } catch (PDOException $e){
         $result = $e->getMessage();
       }
       return $result;
     }
+
     // Actualizar Proveedor
-    public function updateProv(){
+    public function updateProv($data){
       try{
-        $sql="UPDATE proveedores SET nom_prov = ? , dir_prov = ?, tel_prov = ? ";
+        // $sql="UPDATE proveedores SET nom_prov = ? , dir_prov = ?, tel_prov = ? ";
+        $sql = "call modificarProv(?,?,?)";
         $query=$this->pdo->prepare($sql);
         $query->execute(array($data[0], $data[1], $data[2]));
         $msn= "Modificado Exitosamente";

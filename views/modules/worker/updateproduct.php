@@ -42,7 +42,7 @@
            <label for=""class="required">Cantidad del producto:</label>
            <input class="k" type="number"  name="data[]" value="<?php echo $dataProduct["can_pro"];?>">
          </div>
-         
+
        </div>
 
        <div class="content-form">
@@ -69,13 +69,18 @@
             <option value=""></option>
             <?php
             foreach ($this->product->readCategory() as $row) {
-              echo "<option value='".$row['id_tip_pro']."'>".$row['nom_tip_pro']."</option>";}
+              if ($dataProduct['id_tip_pro']==$row['id_tip_pro']) {
+                echo "<option value='$row[0]' selected>$row[1]</option>";
+              }else{
+                echo "<option value='$row[0]'>$row[1]</option>";
+              }
+            }
               ?>
             </select>
           </div>
 
           <label for="">Imagen producto:</label>
-          <input type="file" name="data[]" value="<?php echo $dataProduct["img_pro"] ?>"><br><br>
+          <input type="file" name="file" value=""><br><br>
 
           <div class="form-group">
             <button type="submit" name="button" class="btnact">Actualizar</button>

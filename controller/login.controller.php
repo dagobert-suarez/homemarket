@@ -3,11 +3,11 @@ require_once "model/login.model.php";
 class LoginController{
 	private $users;
 
-
     public function __CONSTRUCT(){
         $this->users = new LoginModel();
     }
 
+		//valida que el correo exista
 		function validar_usuario(){
 			$result = $this->users->user($_POST['email']);
 		if ($result!=array()){
@@ -32,7 +32,6 @@ class LoginController{
 	function validar(){
 		$correo = $_POST['email'];
 		$pass = $_POST['contra'];
-
 		$result = $this->users->user($_POST['email']);
 
 		$result_idsup = $this->users->supermercado($result['id_rol']);

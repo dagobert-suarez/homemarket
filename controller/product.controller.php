@@ -53,6 +53,14 @@ class ProductController{
     require_once "views/modules/worker/header.php";
     require_once "views/modules/worker/createCategory.php";
     require_once "views/modules/worker/footer.php";
+
+  }
+
+  // updateProve
+  function updateProvee(){
+    require_once "views/modules/worker/header.php";
+    require_once "views/modules/worker/updateprovee.php";
+    require_once "views/modules/worker/footer.php";
   }
 
     public function __CONSTRUCT(){
@@ -119,13 +127,13 @@ class ProductController{
 
       public function updateProc(){
           $data = $_POST['data'];
+          $img = $_FILES['file'];
+          $data[]=$img['name'];
+          copy($img['tmp_name'],"views/assets/image/productos/".$img['name']);
           $result = $this->product->updateProc($data);
-          print_r($data);
 
           echo '<script language="javascript">alert("Modificado con exito");</script>';
           echo "<script>window.location.href='Productos-empleado'</script>";
-          // echo '<script language="javascript">alert("Modificado con exito");</script>';
-          // echo "<script>window.location.href='Productos-empleado'</script>";
           // header("Location: Productos-empleado");
       }
       // crud productos
@@ -148,6 +156,7 @@ class ProductController{
         echo "<script>window.location.href='nueva-categoria'</script>";
 
       }
+
           // crud categorias
           //visualiza las  categorias en la pagina del empleado
           function readCategory(){
@@ -188,12 +197,12 @@ class ProductController{
     	 			}
     				// selecionar todos proveedores
     				public function readAllProv(){
-    					$result= $this->product->readAllProv();
+    					$result = $this->product->readAllProv();
     					return $result;
     				}
     				// Selecionar por provvedor
-    				public function readByProv(){
-    					$result= $this->product->readByProv();
+    				public function readByProv($data){
+    					$result= $this->product->readByProv($data);
     					return $result;
     				}
     				// Actualizar Proveedor
