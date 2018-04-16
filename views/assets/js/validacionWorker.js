@@ -1,4 +1,4 @@
-validación js del empleado
+// validación js del empleado
 $("#frmWorker").submit(function(e) {
     e.preventDefault();
             dataJson = [];

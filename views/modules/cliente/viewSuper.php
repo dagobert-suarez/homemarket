@@ -10,7 +10,7 @@
           <div class="card-body">
             <h5 class="card-title"><?php echo $row["nom_sup"]; ?></h5>
             <p class="card-text"><?php echo $row["dir_sup"]; ?></p>
-            <a href="PorSupermercado<<?php echo $row["id_sup"]; ?>" class="btn-go">ir a mercar</a>
+            <a href="PorSupermercado-<?php echo $row["id_sup"]; ?>" class="btn-go">ir a mercar</a>
           </div>
         </div>
     <?php

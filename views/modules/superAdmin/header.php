@@ -11,12 +11,11 @@
         <link rel="shortcut icon" href="views/assets/image/icono.ico">
   </head>
   <body>
-       <section class="container1S">  
+       <section class="container1S">
         <header class="main--nav ">
-
-           <!--  <div class="icon--mobile">
+            <!-- <div class="icon--mobile">
                 <i class="fa fa-window-close">&times;</i>
-            </div -->
+            </div> -->
             <?php
 
               require_once("views/modules/SuperAdmin/profileS.php");
@@ -24,13 +23,10 @@
 
              ?>
         </header>
-        <div class="wrap--content ">
+        <div class="wrap--content">
          <?php
-      
-             require_once("views/modules/SuperAdmin/menuTopsuA.php");
-                  require_once("views/modules/SuperAdmin/superAdmin.php");
-           
+         require_once("views/modules/SuperAdmin/lol.php");
+         require_once("views/modules/SuperAdmin/menuAdmin.php");
+
            ?>
-
-
-   
+           <article class="">

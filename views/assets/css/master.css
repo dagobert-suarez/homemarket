@@ -1,10 +1,7 @@
 @import "reset.css";
 @import "color.css";
 @import "animate.css";
-
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Montserrat|Noto+Sans|PT+Sans|Cabin|Robot');
-
-
 section.container1S{
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -14,9 +11,9 @@ section.container1S{
 .main--nav{
     max-width: 180px;
     min-width: 180px;
-	min-height:100vh;
+	  min-height:100vh;
     background-color: #FEFEFE;
-	border-right: 1px solid rgba(161, 161, 161, 0.63);
+	  border-right: 1px solid rgba(161, 161, 161, 0.63);
 }
 .userProfile{
     width: 90%;
@@ -74,6 +71,15 @@ section.container1S{
     border: 1px solid rgba(161,161,161,0.63);
     background-color: lime;
 }
+.wrap--content article{
+    /* background-color: #F1F3F3; */
+    background-color: lime;
+    box-sizing: border-box;
+    width: 95%;
+    padding: 15px;
+    margin: 10px auto;
+    color: #465966;
+}
 /*  Perfil */
 /* ---------------------------- */
 .down{
@@ -111,3 +117,14 @@ section.container1S{
 }
 /*Fin de Perfil  */
 /*--------------------------------------  */
+
+h1{
+  color: red;
+  z-index: 5;
+  margin-top: 50px;
+  position: absolute;
+}
+.uno{
+  background-color: red;
+  margin: 50px;
+}

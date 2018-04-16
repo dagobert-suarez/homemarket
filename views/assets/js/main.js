@@ -10,9 +10,9 @@ closemenu.onclick = function() {
 }
 // Modal del  Supérmecado menú para el Responsive
 // ------------------------------------
-$(".icon--mobile").click(function() {
-    $("header.main--nav").toggleClass("open--nav")
-})
+// $(".icon--mobile").click(function() {
+//     $("header.main--nav").toggleClass("open--nav")
+// })
 
 // Slide de la Landing
 // -------------------

@@ -469,10 +469,12 @@ input[type=search]{
 }
 .tittledatag{
     background-color: #a9b1aa;
+    padding: 6px ;
 }
 tbody tr{
 color: #433d53;
 background-color: rgb(196, 196, 196);
+padding: 10px;
 }
 
  thead {

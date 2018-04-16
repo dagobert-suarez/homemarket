@@ -1,20 +1,20 @@
-<h1>Registar Proveedor</h1><br>
+<h1>Registrar Proveedor</h1><br>
   <div class="content">
       <form class="" action="registrar-provee" method="post">
         <div class="content-form">
           <div class="form-group">
             <label class="required">Nombre del Proveedor:</label>
-            <input class="k" type="text" name="" value="">
+            <input class="k" type="text" name="data[]" value="">
           </div>
           <div class="form-group">
             <label class="required">Direccion del Proveedor:</label>
-            <input class="k" type="text" name="" value="">
+            <input class="k" type="text" name="data[]" value="">
           </div>
         </div>
         <div class="content-form">
           <div class="form-group">
             <label class="required">Teléfono del Proveedor:</label>
-            <input class="k" type="number" name="" value="">
+            <input class="k" type="number" name="data[]" value="">
           </div>
           <div class="form-group">
             <button type="submit" name="button" class="frmbtn">Registrar</button>
@@ -56,7 +56,7 @@
           <td>
             <a href="#" class="abrirmodal"><i class="fa fa-pencil"></i>Editar</a>
             <a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a>
-            <a href="eliminar-tipo-<?php echo $row['id_tip_pro'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
+            <a href="eliminar-Provee-<?php echo $row['id_prov'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
           </td>
 
         </tr>

@@ -120,7 +120,7 @@ class UserController{
 		require_once "views/modules/cliente/updateCliente.php";
 		require_once "views/modules/cliente/footer.php";
 	}
-	function BySupercado(){
+	function BySupermercado(){
 		require_once "views/modules/cliente/header.php";
 		require_once "views/modules/cliente/PorSupermercado.php";
 		require_once "views/modules/cliente/footer.php";
