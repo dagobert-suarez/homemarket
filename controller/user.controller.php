@@ -9,7 +9,6 @@ class UserController{
 //todo estos, son las validaciones en los campos de registrarse en la landin
 // visualiza la cantidad de Supermercados
 
-
 	function crear(){
 		$data=$_POST['data'];
 		// print_r($data);

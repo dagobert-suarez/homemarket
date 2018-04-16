@@ -99,36 +99,32 @@ class viewsController{
 		require_once "views/modules/admin/header-admin.php";
 		require_once "views/modules/admin/proveedores.php";
 		require_once "views/modules/admin/footer_admin.php";
-	}	// Artuiculos
-	 // -------------
+	}
+	// Artuiculos
 		function articulos(){
 		 require_once "views/modules/admin/header-admin.php";
 		 require_once "views/modules/admin/articulos.php";
 		 require_once "views/modules/admin/footer_admin.php";
 	 }
 	 // Información
- // -------------
 	function informacion(){
 	 require_once "views/modules/admin/header-admin.php";
 	 require_once "views/modules/admin/informacion.php";
 	 require_once "views/modules/admin/footer_admin.php";
  }
  // Notificaciones
- // --------------------------
  function notificaciones(){
 	 require_once "views/modules/admin/header-admin.php";
 	 require_once "views/modules/admin/notificaciones.php";
 	 require_once "views/modules/admin/footer_admin.php";
  }
 	 //los ajustes del Supermercado
-	 // ----------------------- //
 		function settingsSuper(){
 			require_once "views/modules/admin/header-admin.php";
 			require_once "views/modules/admin/updateADS.php";
 			require_once "views/modules/admin/footer_admin.php";
 		}
 		// Supermercados
-		// -----------------
 		public function newSuper(){
 			$data = $_POST['data'];
 
@@ -173,7 +169,6 @@ class viewsController{
 			echo '<script language="javascript">alert("creado con exito");</script>';
 			echo "<script>window.location.href='mi-supermercado'</script>";
 	        // header("Location: mi-supermercado");
-
 			}
 			// Seleccionar Todos los Supermercados
 			public function readAllSup(){
@@ -199,7 +194,6 @@ class viewsController{
 			 }
 
 			 // Proveedores
-			 // --------------------------
 			 // Crear Proveedor
 			 public function newProvee(){
 	 			$data = $_POST['data'];
