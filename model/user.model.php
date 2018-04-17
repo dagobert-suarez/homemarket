@@ -97,7 +97,7 @@ class UserModel{
 				 return $result;
 			 }
 			 // Seleccionar por Supermercado
-			 public function readBySup($data){
+			  function readBySup($data){
 				 try{
 					$sql="SELECT * FROM supermercado WHERE id_sup = ?";
 					$query=$this->pdo->prepare($sql);
@@ -111,7 +111,7 @@ class UserModel{
 			 // Actualizar Supermercados
 			 public function updateSup($data){
 				 try{
-					 $sql="UPDATE supermercado SET nom_sup = ? , dir_sup = ? , tel_sup = ? cod_ciu = ? , logo_sup = ?";
+					 $sql="call modificarSup(?,?,?,?,?)";
 					 $query=$this->pdo->prepare($sql);
 					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4]));
 					 $msn = "Modificado Exitosamente";

@@ -176,17 +176,17 @@ class viewsController{
 	        // header("Location: mi-supermercado");
 			}
 			// Seleccionar Todos los Supermercados
-			public function readAllSup(){
+			 function readAllSup(){
 				$result = $this->userModel->readAllSup();
 				return $result;
 			}
 			 // Seleccionar por Supermercados
-			 public function readBySup(){
-				 $resut = $this->userModel->readBySup();
+			  function readByIdSup($data){
+				 $resut = $this->userModel->readBySup($data);
 				 return $resut;
 			 }
 			 // Actualizar Supermercado
-			 public function updateSup(){
+			  function updateSup(){
 				 	$data = $_POST['data'];
 					$result = $this->userModel->updateSup($data);
 					header("Location: mi-supermercado");
