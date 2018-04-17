@@ -2,19 +2,19 @@
 <div class="modulo1">
   <div class="ask">
     <h1>Productos</h1>
-    <!-- <h2>¿Titulo Pregunta?</h2> -->
+    <h2>¿Titulo Pregunta?</h2>
   </div>
   <div class="answer">
     <p>Respuesta .</p>
     <div class="slideshow-container">
 
-    <div class="mySlides fade">
+    <div class="mySlides faz">
       <img class="img" src="views/assets/image/manual/ground.jpg" >
     </div>
-    <div class="mySlides fade">
+    <div class="mySlides faz">
         <img class="img"src="views/assets/image/manual/ground1.jpg" >
     </div>
-    <div class="mySlides fade">
+    <div class="mySlides faz">
         <img class="img"src="views/assets/image/manual/ground3.jpg" >
     </div>
 

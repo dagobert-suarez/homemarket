@@ -204,7 +204,7 @@ h3{
 /* Lorem */
 .modulo1{
   display: grid;
-  grid-template-rows: 270px auto;
+  grid-template-rows: 130px auto;
   /* background-image: url(../image/manual/keyboard2.jpg); */
    background-color: rgb(110, 111, 106);
   background-size: 100%;
@@ -214,21 +214,22 @@ h3{
 }
 
 .ask{
-  margin-top: 15px;
+  margin-top: 10px;
   background-color: inherit;
   color: white;
   font-family: sans-serif;
+  font-weight: 400;
   text-align:  center;
 }
 .ask h1{
-  padding-top: 95px;
+  padding-top: 3px;
   padding-bottom: 10px;
-  font-size: 45px;
+  font-size: 35px;
   /* color:#FC4541; */
 }
 .answer{
   background-color: inherit;
-  margin-top: 15px;
+  margin-top: 1px;
   font-family: sans-serif;
   font-size: 18px;
   background-color:white;
@@ -338,7 +339,7 @@ h3{
 }
 
 @-webkit-keyframes faz {
-  from {opacity: .5}
+  from {opacity: .4}
   to {opacity: 1}
 }
 
