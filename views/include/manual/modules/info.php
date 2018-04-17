@@ -55,13 +55,13 @@
            <a href="modulo3">¿Pregunta 4?</a>
            <a href="modulo3">¿Pregunta 5?</a>
        </div>
-       <div class="dos">
+       <!-- <div class="dos">
            <h2>Modulo 6</h2>
            <a href="modulo6">¿Pregunta 1?</a>
            <a href="modulo6">¿Pregunta 2?</a>
            <a href="modulo6">¿Pregunta 3?</a>
            <a href="modulo6">¿Pregunta 4?</a>
            <a href="modulo6">¿Pregunta 5?</a>
-       </div>
+       </div> -->
      </div>
   </div>

@@ -2,21 +2,21 @@
 <div class="modulo1">
   <div class="ask">
     <h1>Registro</h1>
-    <h2>¿Titulo Pregunta?</h2>
+    <!-- <h2>¿Titulo Pregunta?</h2> -->
   </div>
   <div class="answer">
     <p>Respuesta .</p>
     <div class="slideshow-container">
 
     <div class="mySlides faz">
-      <img src="views/assets/image/manual/ground2.jpg" >
+      <img class="img" src="views/assets/image/manual/ground2.jpg" >
     </div>
     <div class="mySlides faz">
-        <img src="views/assets/image/manual/ground1.jpg" >
+        <img class="img" src="views/assets/image/manual/ground1.jpg" >
     </div>
 
     <div class="mySlides faz">
-        <img src="views/assets/image/manual/ground3.jpg" >
+        <img class="img" src="views/assets/image/manual/ground3.jpg" >
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
