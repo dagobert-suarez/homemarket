@@ -211,7 +211,8 @@ class ProductController{
     				public function updateProv(){
     					$data= $_POST['data'];
     					$result=$this->product->updateProv($data);
-    					return $result;
+              echo '<script language="javascript">alert("Modificado con exito");</script>';
+              echo "<script>window.location.href='ProveedoresEm'</script>";
     				}
     				// Eliminar Proveedor
     				public function deleteProvee(){
