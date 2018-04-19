@@ -126,11 +126,8 @@ class ProductController{
 
           echo '<script language="javascript">alert("Modificado con exito");</script>';
           echo "<script>window.location.href='Productos-empleado'</script>";
-<<<<<<< HEAD
-=======
           // echo '<script language="javascript">alert("Modificado con exito");</script>';
           // echo "<script>window.location.href='Productos-empleado'</script>";
->>>>>>> 5319c201d8e2dab39d59a5cd6bdc0809cedc3397
           // header("Location: Productos-empleado");
       }
       // crud productos

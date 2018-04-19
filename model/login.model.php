@@ -23,19 +23,6 @@ class LoginModel{
 		}
 	}
 
-	//consultando contraseña
-	function contra($usu){
-		try {
-				$sql = "SELECT * FROM acceso WHERE id_usu = ? ";
-				$query = $this->pdo->prepare($sql);
-				$query->execute(array($usu));
-				$result = $query->fetch(PDO::FETCH_BOTH);
-				return $result;
-		}catch (PDOException $e) {
-			die($e->getMessage());
-		}
-	}
-
 	//consultando id del supermercado para la variable de sesión
 	function supermercado($id_rol){
 		try {
@@ -46,6 +33,19 @@ class LoginModel{
 					$query->execute(array($id_rol));
 					$result = $query->fetch(PDO::FETCH_BOTH);
 					return $result;
+		}catch (PDOException $e) {
+			die($e->getMessage());
+		}
+	}
+
+	//consultando contraseña
+	function contra($usu){
+		try {
+				$sql = "SELECT * FROM acceso WHERE id_usu = ? ";
+				$query = $this->pdo->prepare($sql);
+				$query->execute(array($usu));
+				$result = $query->fetch(PDO::FETCH_BOTH);
+				return $result;
 		}catch (PDOException $e) {
 			die($e->getMessage());
 		}
