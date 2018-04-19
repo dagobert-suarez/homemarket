@@ -3,7 +3,7 @@
   <h1>Empleados</h1>
   <div class="tab">
       <button class="btntabs" onclick="Name(event, 'Empleados')" id="defaultOpen"><i class="fa fa-user"></i> Empleados</button>
-    <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-plus"></i> Nuevo</button>
+    <button class="btntabs" onclick="Name(event, 'Nuevo')" ><i class="fa fa-user-plus"></i> Nuevo</button>
     <button class="btntabs" onclick="Name(event, 'Permisos')"><i class="fa fa-check-square-o"></i>  Permisos</button>
   </div>
 
@@ -38,7 +38,7 @@
           </div>
           <div class="content-form">
               <div class="form-group">
-                  <label class="opcional" for="">Teléfono:</label>
+                  <label class="required" for="">Teléfono:</label>
                   <input  class="k" type="number" name="data[]" placeholder="Teléfono" value="" id="telefono">
               </div>
               <div class="form-group">
@@ -71,6 +71,7 @@
                   <label  class="required" for="">Rol:</label>
                   <select class="ks" name="data[]">
                       <?php
+
                       foreach ($this->userModel->readRolWorker() as $row){
                           echo "<option value='$row[0]'>$row[1]</option>";
                       }
@@ -93,7 +94,6 @@
     <table class="dataGrid">
         <thead class="tittledatag">
             <tr>
-
                 <td>Nombre</td>
                 <td>Apellidos</td>
                 <td>Teléfono</td>
@@ -102,41 +102,23 @@
             </tr>
         </thead>
         <tbody>
-
+            <?php
+                $item =1;
+                $data = $this->readAllEm();
+                foreach( $data as $row){?>
             <tr>
-                <td>Juan Carlos</td>
-                <td>Muños Munera</td>
-                <td>323</td>
-                <td>JuanM@gmail.com</td>
+                <td><?php echo $row['nom_usu'];?></td>
+                <td><?php echo $row['ape_usu'];?></td>
+                <td><?php echo $row['tel_usu'];?></td>
+                <td><?php echo $row['email_usu'];?></td>
                 <td>
-                    <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                    <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+                    <a href="actualizar-empleado-<?php echo $row['id_usu'];?>" class=""><i class="fa fa-pencil"></i>Editar</a>
+                    <a href="#"class=""id=""><i class="fa fa-eye"></i>Detalles</a>
                     <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
                 </td>
             </tr>
-            <tr>
-                <td>Debora</td>
-                <td>Cabezas</td>
-                <td>255555</td>
-                <td>DeboraC@gmail.com</td>
-                <td>
-                    <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                    <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-                    <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Aquiles</td>
-                <td>Brinco</td>
-                <td>3014561</td>
-                <td>Aquiles@gmail.com</td>
-                <td>
-                    <a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-                    <a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
-                    <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
-                </td>
-            </tr>
-
+            <?php $item ++;
+          } ?>
         </tbody>
     </table>
 

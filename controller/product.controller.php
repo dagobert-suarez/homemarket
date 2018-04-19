@@ -195,8 +195,8 @@ class ProductController{
     			 public function createProvee(){
     	 			$data = $_POST['data'];
     	 			$result = $this->product->createProvee($data);
-            echo '<script language="javascript">alert("Creado con exito");</script>';
-            echo "<script>window.location.href='ProveedoresEm'</script>";
+                    echo '<script language="javascript">alert("Creado con exito");</script>';
+                    echo "<script>window.location.href='ProveedoresEm'</script>";
             // print_r($data);
     	 	    	// header("Location: ProveedoresEm");
     	 			}
@@ -214,6 +214,7 @@ class ProductController{
     				public function updateProv(){
     					$data= $_POST['data'];
     					$result=$this->product->updateProv($data);
+
               echo '<script language="javascript">alert("Modificado con exito");</script>';
               echo "<script>window.location.href='ProveedoresEm'</script>";
     				}

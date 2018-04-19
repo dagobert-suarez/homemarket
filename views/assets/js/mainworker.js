@@ -112,9 +112,9 @@ function Name(evt, nName) {
     }
     document.getElementById(nName).style.display = "block";
     evt.currentTarget.className += " active";
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
 }
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
 
 //  Fin   de Esta es la parte de los tabs
 // -----------------------------

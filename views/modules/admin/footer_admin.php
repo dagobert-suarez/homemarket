@@ -8,7 +8,7 @@
       <script src="views/assets/js/gmaps.js"></script>
       <script src="views/assets/js/validacionWorker.js"></script>
       <script src="views/assets/js/mapas.js"></script>
-      <script src="views/assets/js/main.js"></script>
+      <!-- <script src="views/assets/js/main.js"></script> -->
       <script src=views/assets/js/mainAdmin.js></script>
     </section>
 
