@@ -95,19 +95,19 @@ h3{
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 8px;
-  grid-template-rows:350px auto;
+  grid-template-rows:350px 330px;
 }
 .wrapGrid2{
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 8px;
-  grid-template-rows: 280px auto ;
+  grid-template-rows: 340px 355px;
 }
 .wrapGrid3{
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 8px;
-  grid-template-rows: 370px auto;
+  grid-template-rows: 370px 250px;
 }
 /* .uno, .dos, .tres, .cuatro{
   background: lime;
@@ -125,6 +125,10 @@ h3{
    animation-duration:1s;
    padding: 0px 0px 15px 0px;
 
+}
+.uno i, .dos i, .tres i, .cuatro i{
+  padding: 10px 0px 10px 0px;
+  font-size: 85px;
 }
 .uno h2, .dos h2, .tres h2, .cuatro h2{
   /* background-color: pink; */
@@ -181,13 +185,14 @@ h3{
 /* ------------------------------- */
 .back{
   margin: 5px 5px;padding: 10px;
-  background-color: lightblue;
+  background-color: #24CBE9;
   border-radius: 3px;
   font-size: 18px;
   font-family: monospace;
   position: absolute;
   position: fixed;
   animation-name:fadeInDownBig;
+  z-index: 2;
   cursor: pointer;
   animation-duration:1s;
 }
@@ -199,27 +204,32 @@ h3{
 /* Lorem */
 .modulo1{
   display: grid;
-  grid-template-rows: 270px auto;
-  background-image: url(../image/manual/key.jpg);
+  grid-template-rows: 130px auto;
+  /* background-image: url(../image/manual/keyboard2.jpg); */
+   background-color: rgb(110, 111, 106);
   background-size: 100%;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.modulo1 .ask{
-  margin-top: 15px;
+
+.ask{
+  margin-top: 10px;
   background-color: inherit;
   color: white;
   font-family: sans-serif;
+  font-weight: 400;
   text-align:  center;
 }
-.modulo1 .ask h1{
-  padding-top: 10px;
+.ask h1{
+  padding-top: 3px;
   padding-bottom: 10px;
+  font-size: 35px;
+  /* color:#FC4541; */
 }
-.modulo1 .answer{
+.answer{
   background-color: inherit;
-  margin-top: 15px;
+  margin-top: 1px;
   font-family: sans-serif;
   font-size: 18px;
   background-color:white;
@@ -228,7 +238,117 @@ h3{
   animation-name: bounceInLeft;
   animation-duration: 1s;
 }
-.modulo1 .answer p{
+.answer p{
   margin:8px 35px 8px 35px;
-text-align: center;
+    text-align: center;
+}
+/* Slide  */
+/* ---------------- */
+* {box-sizing: border-box;}
+/* .mySlides {display: none;} */
+
+/* img {vertical-align: middle;} */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000%;
+  /* border: 1px solid pink; */
+  position: relative;
+  margin: 10px 10px 10px 15px;
+  height: 65vh;
+  border-radius: 10px;
+}
+.mySlides{
+    /* display: flex;
+    flex-direction: row; */
+}
+.img{
+    width: 70%;
+    margin:  0px 150px 0px 150px;
+    height:400px;
+    border-radius: 10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color:rgb(70, 70, 70) ;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  /* left: -50px; */
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(84, 84, 84, 0.8);
+  color:white;
+}
+
+
+.text {
+  color: #a69a9a;
+  font-size: 15px;
+  padding: 8px 12px;
+  position:absolute;
+  /* bottom: 8px; */
+  top: 0px;
+  width: 80%;
+  text-align: inherit;
+  margin:  0px 140px 10px 100px;
+
+}
+/* The indicators */
+.showers{
+    text-align: center;
+}
+.indicator{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .indicator:hover {
+  background-color:#24CBE9;
+}
+
+/* Fading animation */
+.faz {
+  -webkit-animation-name: faz;
+  -webkit-animation-duration: 1.5s;
+  animation-name: faz;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes faz {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes faz {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }

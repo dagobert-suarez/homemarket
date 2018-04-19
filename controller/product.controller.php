@@ -53,6 +53,14 @@ class ProductController{
     require_once "views/modules/worker/header.php";
     require_once "views/modules/worker/createCategory.php";
     require_once "views/modules/worker/footer.php";
+
+  }
+
+  // updateProve
+  function updateProvee(){
+    require_once "views/modules/worker/header.php";
+    require_once "views/modules/worker/updateprovee.php";
+    require_once "views/modules/worker/footer.php";
   }
 
     public function __CONSTRUCT(){
@@ -126,8 +134,11 @@ class ProductController{
 
           echo '<script language="javascript">alert("Modificado con exito");</script>';
           echo "<script>window.location.href='Productos-empleado'</script>";
+<<<<<<< HEAD
           // echo '<script language="javascript">alert("Modificado con exito");</script>';
           // echo "<script>window.location.href='Productos-empleado'</script>";
+=======
+>>>>>>> 51822bc0ffeefe497bbd345f1d36485e77825ae5
           // header("Location: Productos-empleado");
       }
       // crud productos
@@ -150,6 +161,7 @@ class ProductController{
         echo "<script>window.location.href='nueva-categoria'</script>";
 
       }
+
           // crud categorias
           //visualiza las  categorias en la pagina del empleado
           function readCategory(){
@@ -167,11 +179,13 @@ class ProductController{
           }
 
           // supermercados
+
            // Seleccionar por Supermercados
-          function readBySup($data){
+          function readByIdSup($data){
                $result=$this->product->readBySup($data);
                return $result;
            }
+
            // Seleccionar Todos los Supermercados
            function readAllSup(){
                $result = $this->product->readAllSup();
@@ -190,12 +204,12 @@ class ProductController{
     	 			}
     				// selecionar todos proveedores
     				public function readAllProv(){
-    					$result= $this->product->readAllProv();
+    					$result = $this->product->readAllProv();
     					return $result;
     				}
     				// Selecionar por provvedor
-    				public function readByProv(){
-    					$result= $this->product->readByProv();
+    				public function readByProv($data){
+    					$result= $this->product->readByProv($data);
     					return $result;
     				}
     				// Actualizar Proveedor

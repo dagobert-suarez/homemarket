@@ -76,7 +76,7 @@
                     <td><?php echo $row["dir_sup"] ;?></td>
                     <td><?php echo $row["tel_sup"] ;?></td>
                     <td>
-                        <a href="#" class="abrirmodal"><i class="fa fa-pencil"></i> Editar</a>
+                        <a href="actualizar-super-<?php echo $row['id_sup']?>" class="abrirmodal"><i class="fa fa-pencil"></i> Editar</a>
                         <a href="#"class=""id="opendetsup"><i class="fa fa-eye"></i> Detalles</a>
                         <a href="eliminar-supermercado-<?php echo $row['id_sup'];?>"><i class="fa fa-trash"></i> Eliminar</a>
                     </td>
