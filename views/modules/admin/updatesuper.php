@@ -25,9 +25,9 @@ $dataSuper = $this->readByIdSup($_GET["data"]);
             </div>
              <div class="form-group">
                 <label  class="required" for="">Ciudad:</label>
-                <select class="ks" name="data[]" value="<?php echo $dataSuper["cod_ciu"];?>">
+                <select class="k" name="data[]" value="<?php echo $dataSuper["cod_ciu"];?>">
                   <?php
-                  foreach ($this->userModel->readCities() as $row){
+                  foreach ($this->userModel->readCities() as $row) {
                     if ($dataSuper['cod_ciu']==$row['cod_ciu']) {
                       echo "<option value='$row[0]' selected>$row[1]</option>";
                     }else{

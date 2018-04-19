@@ -188,8 +188,15 @@ class viewsController{
 			 // Actualizar Supermercado
 			  function updateSup(){
 				 	$data = $_POST['data'];
+					$img = $_FILES['file'];
+					$data[]=$img['name'];
+					copy($img['tmp_name'],"views/assets/image/super/".$img['name']);
+
 					$result = $this->userModel->updateSup($data);
-					header("Location: mi-supermercado");
+
+					echo '<script language="javascript">alert("Modificado con exito");</script>';
+          echo "<script>window.location.href='mi-supermercado'</script>";
+
 			 }
 			 // Eliminar Supermercado
 			 public function deleteSup(){
