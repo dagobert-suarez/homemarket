@@ -35,16 +35,16 @@ class UserModel{
 				  }
 					return $msn;
 			 }
-	function readBy($data){
-			 try{
-				 $sql = "SELECT * FROM usuario WHERE id_usu = ?";
-				 $query = $this->pdo->prepare($sql);
-				 $query->execute(array($data));
-					 $msn = $query->fetch(PDO::FETCH_BOTH);
-					}catch (PDOException $e) {
-						die($e->getMessage());
-				  }
-					return $msn;
+	function readById($data){
+		try {
+				$sql= "SELECT * FROM usuario WHERE id_usu = ?";
+				$query=$this->pdo->prepare($sql);
+				$query->execute(array($data));
+				$result = $query->fetch(PDO::FETCH_BOTH);
+		} catch (PDOException $e) {
+				$result = $e->getMessage();
+		}
+		return $result;
 			 }
 
 			 //para crear la contraseña
@@ -61,17 +61,16 @@ class UserModel{
 			 }
 	function update($data){
 			 try{
-				 $sql = "call modificarUsu(?,?,?,?,?,?)";
+				 $sql = "call modificarUsu(?,?,?,?,?)";
 				 $query = $this->pdo->prepare($sql);
-				 $query->execute($data);
-					 $msn = true;
-					}catch (PDOException $e) {
-						die($e->getMessage());
-				  }
-					return $msn;
+				 $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4]));
+				 $msn = "modificado con exito";
+	      }catch(PDOException $e){
+	        $msn = $e->getMessage();
 			 }
+		 }
 			 // Crear Supermercado
-			 public function createSuper($data){
+			  function createSuper($data){
 				 try{
 					 $sql="INSERT INTO supermercado(nom_sup, dir_sup, tel_sup, cod_ciu,logo_sup)
 					 			VALUES (?,?,?,?,?)";
@@ -85,7 +84,7 @@ class UserModel{
 				 return $result;
 			 }
 			 // Seleccionar todos los supermercados
-			 public function readAllSup(){
+			  function readAllSup(){
 				 try{
 					 $sql="SELECT * FROM supermercado";
 					 $query=$this->pdo->prepare($sql);
@@ -109,7 +108,7 @@ class UserModel{
 				return $result;
 			 }
 			 // Actualizar Supermercados
-			 public function updateSup($data){
+			  function updateSup($data){
 				 try{
 					 $sql="call modificarSup(?,?,?,?,?)";
 					 $query=$this->pdo->prepare($sql);
@@ -121,7 +120,7 @@ class UserModel{
 				 return $msn;
 			 }
 			 // Eliminar Supermercados
-			 public function deleteSup($data){
+			  function deleteSup($data){
 				 try {
 					 $sql="DELETE FROM supermercado WHERE id_sup = ?";
 					 $query=$this->pdo->prepare($sql);
@@ -135,7 +134,7 @@ class UserModel{
 
 
 			 //hace la consulta del numero de supermercados
-			 public function readTodos(){
+			  function readTodos(){
 				 try {
 					 $sql="SELECT COUNT(*) FROM supermercado";
 					 $query=$this->pdo->prepare($sql);
@@ -150,7 +149,7 @@ class UserModel{
 
 			// Proveedores
 			// ---------------------
-			public function createProvee($data){
+			 function createProvee($data){
 				try{
 					$sql=" INSERT INTO proveedores (nom_prov,dir_prov,tel_prov) VALUES (?,?,?)";
 					$query=$this->pdo->prepare($sql);
@@ -162,7 +161,7 @@ class UserModel{
 					return $msn;
 			}
 			// Selecionar Todos los Proveedores
-			 public function readAllProv(){
+			  function readAllProv(){
 				 try{
 					 $sql="SELECT * FROM proveedores";
 					 $query=$this->pdo->prepare($sql);
@@ -174,7 +173,7 @@ class UserModel{
 				 return $result;
 			 }
 			 // Selecionar por Proveedor
-			 public function readByProv(){
+			  function readByProv(){
 				 try{
 					 $sql="SELECT * FROM proveedores WHERE id_prov = ?";
 					 $query=$this->pdo->prepare($sql);
@@ -186,7 +185,7 @@ class UserModel{
 				 return $result;
 			 }
 			 // Actualizar Proveedor
-			 public function updateProv(){
+			  function updateProv(){
 				 try{
 					 $sql="UPDATE proveedores SET nom_prov = ? , dir_prov = ?, tel_prov = ? ";
 					 $query=$this->pdo->prepare($sql);
@@ -198,7 +197,7 @@ class UserModel{
 				 return $msn;
 			 }
 			 // Eliminar Proveedor
-			 public function deleteProv($data){
+			  function deleteProv($data){
 				 try{
 					 $sql= "DELETE FROM proveedores WHERE id_prov = ?";
 					 $query=$this->pdo->prepare($sql);
@@ -211,7 +210,7 @@ class UserModel{
 			 }
 
 
-			 public function prove(){
+			  function prove(){
 				try{
 					$sql= "SELECT COUNT(*) FROM proveedores";
 					$query=$this->pdo->prepare($sql);
@@ -251,7 +250,7 @@ class UserModel{
 			}
 			// Actualizar Categorias
 			// Eliminar Categorias
-			public function deletecate($data){
+			function deletecate($data){
 				try{
 					$sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
 					$query=$this->pdo->prepare($sql);
