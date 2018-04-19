@@ -27,45 +27,36 @@ class UserController{
 				}
 				$i++;
 			}
-
 			$result = $this->validarEmail($data[5]);
 			if ($result==false) {
 				echo json_encode("Email no valido");
 				return;
 			}
-
-
 			$result = $this-> validarTelefono($data[4]);
 			if ($result==false){
 				echo json_encode('debe ingresar un telefono valido');
 				return;
 			}
-
 			$result = $this-> validarNombre($data[0]);
 			if ($result==false) {
 				echo json_encode('nombre invalido');
 				return;
 			}
-
 			$result = $this-> validarCaracter($data[0]);
 			if ($result==false) {
 				echo json_encode('nombre no valido');
 				return;
 			}
-
 			$result = $this-> validarApe($data[1]);
 			if ($result==false) {
 				echo json_encode('apellido no valido');
 				return;
 			}
-
 			$result = $this-> validarCaracterApe($data[1]);
 			if ($result==false) {
 				echo json_encode('apellido no valido');
 				return;
 			}
-
-
 			$result = $this->validarPassword($data[7]);
 			if (!$result==false) {
 				echo json_encode('contraseña no cumple con lo pedido');
@@ -87,11 +78,14 @@ class UserController{
 			}
 	}
 
-
 	//---------inicio de sesion del cliente-------//
 	// --------------------------------------------- //
 	function readBy($data){
 		$result = $this->userModel->readBy($data);
+		return $result;
+	}
+	function readAllEm(){
+		$result = $this->userModel->readAllEm();
 		return $result;
 	}
 

@@ -46,6 +46,17 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+	function readAllEm(){
+		try {
+			$sql="SELECT * FROM usuario";
+			$query=$this->pdo->prepare($sql);
+			$query->execute();
+			$result= $query->fetchALL(PDO::FETCH_BOTH);
+		} catch (PDOException $e) {
+			$result = $e->getMessage();
+		}
+		return $result;
+	}
 
 			 //para crear la contraseña
 	function crearAcceso($data){

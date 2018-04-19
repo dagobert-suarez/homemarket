@@ -9,13 +9,13 @@ RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
 #manual de usuario
-RewriteRule ^explora$ index.php?controller=views&a=explora
-RewriteRule ^modulo1$ index.php?controller=views&a=lorem
-RewriteRule ^modulo2$ index.php?controller=views&a=modulo2
-RewriteRule ^modulo3$ index.php?controller=views&a=modulo3
-RewriteRule ^modulo4$ index.php?controller=views&a=modulo4
-RewriteRule ^modulo5$ index.php?controller=views&a=modulo5
-RewriteRule ^modulo6$ index.php?controller=views&a=modulo6
+RewriteRule ^explora$ index.php?controller=manual&a=explora
+RewriteRule ^modulo1$ index.php?controller=manual&a=lorem
+RewriteRule ^modulo2$ index.php?controller=manual&a=modulo2
+RewriteRule ^modulo3$ index.php?controller=manual&a=modulo3
+RewriteRule ^modulo4$ index.php?controller=manual&a=modulo4
+RewriteRule ^modulo5$ index.php?controller=manual&a=modulo5
+RewriteRule ^modulo6$ index.php?controller=manual&a=modulo6
 
 #validar usuario
 #----------------
@@ -36,13 +36,15 @@ RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=user&a=BySupermercado&d
 #supermercado
 #----------------
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
-RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
 RewriteRule ^mi-supermercado$ index.php?controller=views&a=mySuper
 RewriteRule ^Proveedores$ index.php?controller=views&a=proveedores
 RewriteRule ^Articulos$ index.php?controller=views&a=articulos
 RewriteRule ^Información$ index.php?controller=views&a=informacion
 RewriteRule ^Notificaciones$ index.php?controller=views&a=notificaciones
 RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
+#crud empleado
+RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
+RewriteRule ^actualizar-empleado(\w+)$ index.php?controller=user&a=update
 
 #crud
 RewriteRule ^guardar-super$ index.php?controller=views&a=newSuper
@@ -53,8 +55,6 @@ RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
 RewriteRule ^eliminar-provee-(\w+)$ index.php?controller=views&a=deleteProv&data=$1
 RewriteRule ^guardar-categoria$ index.php?controller=views&a=crearCategoria
 RewriteRule ^eliminar-cate-(\w+)$ index.php?controller=views&a=deletecate&data=$1
-
-
 
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado
