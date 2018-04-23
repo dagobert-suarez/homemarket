@@ -5,21 +5,21 @@
        <div class="uno">
            <i class="fa fa-user-plus"></i>
            <h2>Registro</h2>
-           <a href="modulo1-r1">¿Pregunta 1?</a>
-           <a href="modulo1-r2">¿Pregunta 2?</a>
-           <a href="modulo1-r3">¿Pregunta 3?</a>
-           <a href="modulo1-r4">¿Pregunta 4?</a>
-           <a href="modulo1-r5">¿Pregunta 5?</a>
+           <a href="modulo1r1">¿Pregunta 1?</a>
+           <a href="modulo1r2">¿Pregunta 2?</a>
+           <a href="modulo1r3">¿Pregunta 3?</a>
+           <a href="modulo1r4">¿Pregunta 4?</a>
+           <a href="modulo1r5">¿Pregunta 5?</a>
 
        </div>
        <div class="dos">
            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
            <h2>Pedidos</h2>
-           <a href="modulo2-r1">¿Pregunta 1?</a>
-           <a href="modulo2-r2">¿Pregunta 2?</a>
-           <a href="modulo2-r3">¿Pregunta 3?</a>
-           <a href="modulo2-r4">¿Pregunta 4?</a>
-           <a href="modulo2-r5">¿Pregunta 5?</a>
+           <a href="modulo2r1">¿Pregunta 1?</a>
+           <a href="modulo2r2">¿Pregunta 2?</a>
+           <a href="modulo2r3">¿Pregunta 3?</a>
+           <a href="modulo2r4">¿Pregunta 4?</a>
+           <a href="modulo2r5">¿Pregunta 5?</a>
 
        </div>
      </div>
