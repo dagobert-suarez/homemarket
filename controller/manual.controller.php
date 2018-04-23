@@ -1,6 +1,6 @@
 <?php
  class manualController{
-     // manual de usuario
+     // manual de usuario 
  	function explora(){
  		require_once "views/include/manual/header.php";
  		require_once "views/include/manual/modules/info.php";
