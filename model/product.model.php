@@ -105,7 +105,7 @@ class ProductModel{
   // Lee un producto
    function readByproc($data){
       try {
-          $sql= "SELECT * FROM productos WHERE id_pro = (?)";
+          $sql= "SELECT * FROM productos WHERE id_pro = ?";
           $query=$this->pdo->prepare($sql);
           $query->execute(array($data));
           $result = $query->fetch(PDO::FETCH_BOTH);

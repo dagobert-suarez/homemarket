@@ -1,6 +1,6 @@
 <!-- empieza lo de los ajustes -->
 <?php
-// $data = $this->readBy($_SESSION['USER']['rol']);
+ // $data = $this->readById($_SESSION['USER']['rol']);
 $dataUser = $this->readBy($_GET["data"]);
 ?>
 <div class="module--Sett">
@@ -34,13 +34,29 @@ $dataUser = $this->readBy($_GET["data"]);
                     <input class="k" type="number" name="data[]" value="<?php echo $dataUser['tel_usu']?>" >
                 </div>
             </div>
+
+            <div class="form-group">
+               <label  class="required" for="">Ciudad:</label>
+               <select class="k" name="data[]" value="<?php echo $dataUser["cod_ciu"];?>">
+                 <?php
+                 foreach ($this->userModel->readCities() as $row) {
+                   if ($dataUser['cod_ciu']==$row['cod_ciu']) {
+                     echo "<option value='$row[0]' selected>$row[1]</option>";
+                   }else{
+                     echo "<option value='$row[0]'>$row[1]</option>";
+                   }
+                 }
+                 ?>
+               </select>
+           </div>
+
             <div class="content-form">
                 <div class="form-group">
                     <button type="submit" name="button" class="btnact">Actualizar</button>
                 </div>
             </div>
         </form>
-        <h1>Contraseña</h1>
+        <!-- <h1>Contraseña</h1>
             <div class="content-form2">
                 <div class="form-group2">
                     <label  class="required" for="">Contraseña Actual:</label>
@@ -54,7 +70,7 @@ $dataUser = $this->readBy($_GET["data"]);
                     <label for=""> Validar Contraseña:</label>
                     <input  class="k" type="password" name="" value="" placeholder="contaseña">
                 </div>
-            </div>
+            </div> -->
 
     </div>
 

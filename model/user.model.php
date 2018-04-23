@@ -35,7 +35,7 @@ class UserModel{
 				  }
 					return $msn;
 			 }
-	function readById($data){
+	function readBy($data){
 		try {
 				$sql= "SELECT * FROM usuario WHERE id_usu = ?";
 				$query=$this->pdo->prepare($sql);
@@ -48,7 +48,7 @@ class UserModel{
 			 }
 	function readAllEm(){
 		try {
-			$sql="SELECT * FROM usuario";
+			$sql="SELECT * FROM usuario WHERE id_rol = 3";
 			$query=$this->pdo->prepare($sql);
 			$query->execute();
 			$result= $query->fetchALL(PDO::FETCH_BOTH);

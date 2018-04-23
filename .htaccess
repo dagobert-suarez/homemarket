@@ -11,7 +11,17 @@ RewriteRule ^super$ index.php?controller=views&a=super
 #manual de usuario
 RewriteRule ^explora$ index.php?controller=manual&a=explora
 RewriteRule ^modulo1$ index.php?controller=manual&a=lorem
+ReweiteRule ^modulo1-r1$ index.php?controller=manual&a=mo1res1
+ReweiteRule ^modulo1-r2$ index.php?controller=manual&a=mo1res2
+ReweiteRule ^modulo1-r3$ index.php?controller=manual&a=mo1res3
+ReweiteRule ^modulo1-r4$ index.php?controller=manual&a=mo1res4
+ReweiteRule ^modulo1-r5$ index.php?controller=manual&a=mo1res5
 RewriteRule ^modulo2$ index.php?controller=manual&a=modulo2
+ReweiteRule ^modulo2-r1$ index.php?controller=manual&a=mo2res1
+ReweiteRule ^modulo2-r2$ index.php?controller=manual&a=mo2res2
+ReweiteRule ^modulo2-r3$ index.php?controller=manual&a=mo2res3
+ReweiteRule ^modulo2-r4$ index.php?controller=manual&a=mo2res4
+ReweiteRule ^modulo2-r5$ index.php?controller=manual&a=mo2res5
 RewriteRule ^modulo3$ index.php?controller=manual&a=modulo3
 RewriteRule ^modulo4$ index.php?controller=manual&a=modulo4
 RewriteRule ^modulo5$ index.php?controller=manual&a=modulo5
