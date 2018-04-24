@@ -5,37 +5,31 @@
        <div class="uno">
            <i class="fa fa-user-plus"></i>
            <h2>Registro</h2>
-<<<<<<< HEAD
            <a href="modulo1-r1">¿Como puedo crear un cuenta?</a>
            <a href="modulo1-r2">¿Como inicio mi cuenta?</a>
            <a href="modulo1-r3">¿Como puedo configurar mi cuenta?</a>
            <a href="modulo1-r4">¿Como puedo recuperar mi cuenta si perdi mi contraseña?</a>
            <a href="modulo1-r5">¿Como elimino mi cuenta?</a>
-=======
            <a href="modulo1r1">¿Pregunta 1?</a>
            <a href="modulo1r2">¿Pregunta 2?</a>
            <a href="modulo1r3">¿Pregunta 3?</a>
            <a href="modulo1r4">¿Pregunta 4?</a>
            <a href="modulo1r5">¿Pregunta 5?</a>
->>>>>>> 3eef72d7e1acecc41d9339bb3f7b3fd40c6f41d6
 
        </div>
        <div class="dos">
            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
            <h2>Pedidos</h2>
-<<<<<<< HEAD
            <a href="modulo4">¿Como hacer un pedido?</a>
            <a href="modulo4">¿Como saber la cobertura del supermercado donde hago mi pedido?</a>
            <a href="modulo4">¿Cual es la forma de pago de un pedido?</a>
            <a href="modulo4">¿Donde puedo ver el historial de mis pedidos?</a>
            <!-- <a href="modulo2-r5">¿Pregunta 5?</a> -->
-=======
            <a href="modulo2r1">¿Pregunta 1?</a>
            <a href="modulo2r2">¿Pregunta 2?</a>
            <a href="modulo2r3">¿Pregunta 3?</a>
            <a href="modulo2r4">¿Pregunta 4?</a>
            <a href="modulo2r5">¿Pregunta 5?</a>
->>>>>>> 3eef72d7e1acecc41d9339bb3f7b3fd40c6f41d6
 
        </div>
      </div>
