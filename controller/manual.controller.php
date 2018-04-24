@@ -1,6 +1,6 @@
 <?php
  class manualController{
-     // manual de usuario 
+     // manual de usuario
  	function explora(){
  		require_once "views/include/manual/header.php";
  		require_once "views/include/manual/modules/info.php";
@@ -14,12 +14,12 @@
  	}
   function mo1res1(){
     require_once "views/include/manual/header.php";
-    require_once "views/include/manual/respuestas/mod1.respuesta1.php";
+    require_once "views/include/manual/respuestas/mod1-respuesta1.php";
     require_once "views/include/manual/footer.php";
   }
   function mo1res2(){
     require_once "views/include/manual/header.php";
-    require_once "views/include/manual/respuestas/mod1.respuesta2.php";
+    require_once "views/include/manual/respuestas/mod1-respuesta2.php";
     require_once "views/include/manual/footer.php";
   }
    function mo1res3(){
