@@ -25,11 +25,11 @@
            <a href="modulo4">¿Cual es la forma de pago de un pedido?</a>
            <a href="modulo4">¿Donde puedo ver el historial de mis pedidos?</a>
            <!-- <a href="modulo2-r5">¿Pregunta 5?</a> -->
-           <a href="modulo2r1">¿Pregunta 1?</a>
+           <!-- <a href="modulo2r1">¿Pregunta 1?</a>
            <a href="modulo2r2">¿Pregunta 2?</a>
            <a href="modulo2r3">¿Pregunta 3?</a>
            <a href="modulo2r4">¿Pregunta 4?</a>
-           <a href="modulo2r5">¿Pregunta 5?</a>
+           <a href="modulo2r5">¿Pregunta 5?</a> -->
 
        </div>
      </div>
@@ -39,9 +39,9 @@
            <h2>Supermercado</h2>
            <a href="modulo2-r1">¿En donde puedo ver los supermercados?</a>
            <a href="modulo2-r2">¿Como puedo buscar un supermercado?</a>
-           <a href="modulo2-r3">¿Pregunta 3?</a>
+           <!-- <a href="modulo2-r3">¿Pregunta 3?</a>
            <a href="modulo2-r4">¿Pregunta 4?</a>
-           <a href="modulo2-r5">¿Pregunta 5?</a>
+           <a href="modulo2-r5">¿Pregunta 5?</a> -->
 
        </div>
        <div class="cuatro">

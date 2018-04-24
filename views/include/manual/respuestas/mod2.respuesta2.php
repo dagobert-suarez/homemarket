@@ -2,7 +2,7 @@
 <div class="modulo1">
   <div class="ask">
     <h1>Supermercado</h1>
-    <h2>¿Titulo Pregunta2</h2>
+    <h2>¿Como puedo buscar un supermercado?</h2>
   </div>
   <div class="answer">
     <p>Respuesta .</p>
