@@ -1,7 +1,7 @@
 <i class="back"><a href="explora" >&#10094; Volver</a></i>
 <div class="modulo1">
   <div class="ask">
-    <h1>Cuenta</h1>
+    <h1>Usuario</h1>
     <h2>¿Como elimino mi cuenta?</h2>
   </div>
   <div class="answer">

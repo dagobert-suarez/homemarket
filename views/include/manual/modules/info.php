@@ -4,7 +4,7 @@
      <div class="wrapGrid">
        <div class="uno">
            <i class="fa fa-user-plus"></i>
-           <h2>Cuenta</h2>
+           <h2>Usuario</h2>
            <a href="modulo1-r1">¿Como puedo crear un cuenta?</a>
            <a href="modulo1-r2">¿Como inicio mi cuenta?</a>
            <a href="modulo1-r3">¿Como puedo configurar mi cuenta?</a>
@@ -44,7 +44,7 @@
            <a href="modulo2-r5">¿Pregunta 5?</a> -->
 
        </div>
-       <div class="cuatro">
+       <!-- <div class="cuatro">
            <i class="fa fa-cog"></i>
            <h2>Ajustes</h2>
            <a href="modulo5">¿Pregunta 1?</a>
@@ -53,7 +53,7 @@
            <a href="modulo5">¿Pregunta 4?</a>
            <a href="modulo5">¿Pregunta 5?</a>
 
-       </div>
+       </div> -->
      </div>
      <div class="wrapGrid3">
        <div class="uno">
