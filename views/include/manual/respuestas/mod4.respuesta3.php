@@ -1,8 +1,8 @@
 <i class="back"><a href="explora" >&lt;Volver</a></i>
 <div class="modulo1">
   <div class="ask">
-    <h1>Supermercado</h1>
-    <h2>¿En donde puedo ver los supermercados?</h2>
+    <h1>Pedidos</h1>
+    <h2>¿Cual es la forma de pago de un pedido?</h2>
   </div>
   <div class="answer">
     <p>Respuesta .</p>

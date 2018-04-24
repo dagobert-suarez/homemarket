@@ -21,9 +21,9 @@
            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
            <h2>Pedidos</h2>
            <a href="modulo4">¿Como hacer un pedido?</a>
-           <a href="modulo4">¿Como saber la cobertura del supermercado donde hago mi pedido?</a>
-           <a href="modulo4">¿Cual es la forma de pago de un pedido?</a>
-           <a href="modulo4">¿Donde puedo ver el historial de mis pedidos?</a>
+           <a href="modulo4-r2">¿Como saber la cobertura del supermercado donde hago mi pedido?</a>
+           <a href="modulo4-r3">¿Cual es la forma de pago de un pedido?</a>
+           <a href="modulo4-r4">¿Donde puedo ver el historial de mis pedidos?</a>
            <!-- <a href="modulo2-r5">¿Pregunta 5?</a> -->
            <!-- <a href="modulo2r1">¿Pregunta 1?</a>
            <a href="modulo2r2">¿Pregunta 2?</a>
@@ -37,7 +37,7 @@
        <div class="tres">
            <i class="fa fa-building-o"></i>
            <h2>Supermercado</h2>
-           <a href="modulo2-r1">¿En donde puedo ver los supermercados?</a>
+           <a href="modulo2">¿En donde puedo ver los supermercados?</a>
            <a href="modulo2-r2">¿Como puedo buscar un supermercado?</a>
            <!-- <a href="modulo2-r3">¿Pregunta 3?</a>
            <a href="modulo2-r4">¿Pregunta 4?</a>
@@ -60,10 +60,10 @@
            <i class="fa fa-shopping-basket"></i>
            <h2>Productos</h2>
            <a href="modulo3">¿Donde puedo ver los productos?</a>
-           <a href="modulo3">¿Como puedo buscar un producto?</a>
-           <a href="modulo3">¿Como puedo filtrar un producto?</a>
-           <a href="modulo3">¿Pregunta 4?</a>
-           <a href="modulo3">¿Pregunta 5?</a>
+           <a href="modulo3-r2">¿Como puedo buscar un producto?</a>
+           <a href="modulo3-r3">¿Como puedo filtrar un producto?</a>
+           <!-- <a href="modulo3">¿Pregunta 4?</a>
+           <a href="modulo3">¿Pregunta 5?</a> -->
        </div>
        <!-- <div class="dos">
            <h2>Modulo 6</h2>

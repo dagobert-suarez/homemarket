@@ -18,11 +18,13 @@ RewriteRule ^modulo1-r5$ index.php?controller=manual&a=mo1res5
 RewriteRule ^modulo2$ index.php?controller=manual&a=modulo2
 RewriteRule ^modulo2-r1$ index.php?controller=manual&a=mo2res1
 RewriteRule ^modulo2-r2$ index.php?controller=manual&a=mo2res2
-RewriteRule ^modulo2-r3$ index.php?controller=manual&a=mo2res3
-RewriteRule ^modulo2-r4$ index.php?controller=manual&a=mo2res4
-RewriteRule ^modulo2-r5$ index.php?controller=manual&a=mo2res5
 RewriteRule ^modulo3$ index.php?controller=manual&a=modulo3
+RewriteRule ^modulo3-r2$ index.php?controller=manual&a=mo3res2
+RewriteRule ^modulo3-r3$ index.php?controller=manual&a=mo3res3
 RewriteRule ^modulo4$ index.php?controller=manual&a=modulo4
+RewriteRule ^modulo4-r2$ index.php?controller=manual&a=mo4res2
+RewriteRule ^modulo4-r3$ index.php?controller=manual&a=mo4res3
+RewriteRule ^modulo4-r4$ index.php?controller=manual&a=mo4res4
 RewriteRule ^modulo5$ index.php?controller=manual&a=modulo5
 RewriteRule ^modulo6$ index.php?controller=manual&a=modulo6
 #ReweiteRule ^modulo1r1$ index.php?controller=manual&a=mo1res2
