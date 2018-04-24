@@ -1,7 +1,6 @@
-  RewriteEngine on
+RewriteEngine on
 
 #principal
-#----------------
 RewriteRule ^inicio$ index.php?controller=views
 RewriteRule ^ingreso$ index.php?controller=views&a=ingreso
 RewriteRule ^master$ index.php?controller=views&a=master
@@ -26,15 +25,14 @@ RewriteRule ^modulo3$ index.php?controller=manual&a=modulo3
 RewriteRule ^modulo4$ index.php?controller=manual&a=modulo4
 RewriteRule ^modulo5$ index.php?controller=manual&a=modulo5
 RewriteRule ^modulo6$ index.php?controller=manual&a=modulo6
+#ReweiteRule ^modulo1r1$ index.php?controller=manual&a=mo1res2
 
 #validar usuario
-#----------------
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 
 #cliente
-#----------------
 RewriteRule ^inicioCliente$ index.php?controller=user&a=inicioCliente
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
@@ -44,7 +42,6 @@ RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
 RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=user&a=BySupermercado&data=$1
 
 #supermercado
-#----------------
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
 RewriteRule ^mi-supermercado$ index.php?controller=views&a=mySuper
 RewriteRule ^Proveedores$ index.php?controller=views&a=proveedores
@@ -72,7 +69,6 @@ RewriteRule ^Registrar-empleado$ index.php?controller=nworkers&a=registroEmplead
 RewriteRule ^Empleados$ index.php?controller=views&a=Workers
 
 #empleado
-#----------------
 RewriteRule ^InicioWorker$ index.php?controller=views&a=InicioWorker
 RewriteRule ^settings-worker$ index.php?controller=views&a=settingsworker
 RewriteRule ^Retrasos$ index.php?controller=views&a=retrasos
@@ -82,7 +78,6 @@ RewriteRule ^actualizar-datosEm$ index.php?controller=views&a=updateEm
 
 
 #CRUD productos
-#----------------
 RewriteRule ^nuevo-producto$ index.php?controller=product&a=crear
 RewriteRule ^crearProduct$ index.php?controller=product&a=crearProduct
 RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductType&data=$1
@@ -101,6 +96,5 @@ RewriteRule ^actualizando-prove$ index.php?controller=product&a=updateProv
 RewriteRule ^eliminar-Provee-(\w+)$ index.php?controller=product&a=deleteProvee&data=$1
 
 #super administrador
-#----------------
 RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin
 RewriteRule ^Dashboard-Super$ index.php?controller=views&a=mainSuper
