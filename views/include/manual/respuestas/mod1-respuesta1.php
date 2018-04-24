@@ -2,7 +2,7 @@
 <div class="modulo1">
   <div class="ask">
     <h1>Registro</h1>
-    <h2>¿Titulo Pregunta 1?</h2>
+    <h2>¿Como puedo crear un cuenta?</h2>
   </div>
   <div class="answer">
     <p>Respuesta .</p>
