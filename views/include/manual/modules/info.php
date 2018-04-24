@@ -4,17 +4,17 @@
      <div class="wrapGrid">
        <div class="uno">
            <i class="fa fa-user-plus"></i>
-           <h2>Registro</h2>
+           <h2>Cuenta</h2>
            <a href="modulo1-r1">¿Como puedo crear un cuenta?</a>
            <a href="modulo1-r2">¿Como inicio mi cuenta?</a>
            <a href="modulo1-r3">¿Como puedo configurar mi cuenta?</a>
            <a href="modulo1-r4">¿Como puedo recuperar mi cuenta si perdi mi contraseña?</a>
            <a href="modulo1-r5">¿Como elimino mi cuenta?</a>
-           <a href="modulo1r1">¿Pregunta 1?</a>
+           <!-- <a href="modulo1r1">¿Pregunta 1?</a>
            <a href="modulo1r2">¿Pregunta 2?</a>
            <a href="modulo1r3">¿Pregunta 3?</a>
            <a href="modulo1r4">¿Pregunta 4?</a>
-           <a href="modulo1r5">¿Pregunta 5?</a>
+           <a href="modulo1r5">¿Pregunta 5?</a> -->
 
        </div>
        <div class="dos">

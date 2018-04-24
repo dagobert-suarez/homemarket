@@ -19,7 +19,7 @@
   }
   function mo1res2(){
     require_once "views/include/manual/header.php";
-    require_once "views/include/manual/respuestas/mod1-respuesta2.php";
+    require_once "views/include/manual/respuestas/mod1.respuesta2.php";
     require_once "views/include/manual/footer.php";
   }
    function mo1res3(){

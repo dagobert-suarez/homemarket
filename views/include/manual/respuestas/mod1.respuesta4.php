@@ -1,8 +1,8 @@
 <i class="back"><a href="explora" >&#10094; Volver</a></i>
 <div class="modulo1">
   <div class="ask">
-    <h1>Registro</h1>
-    <h2>¿Titulo Pregunta 4?</h2>
+    <h1>Cuenta</h1>
+    <h2>¿Como puedo recuperar mi cuenta si perdi mi contraseña?</h2>
   </div>
   <div class="answer">
     <p>Respuesta .</p>

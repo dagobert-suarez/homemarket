@@ -1,8 +1,8 @@
 <i class="back"><a href="explora" >&#10094; Volver</a></i>
 <div class="modulo1">
   <div class="ask">
-    <h1>Registro</h1>
-    <h2>¿Titulo Pregunta 2?</h2>
+    <h1>Cuenta</h1>
+    <h2>¿Como inicio mi cuenta?</h2>
   </div>
   <div class="answer">
     <p>Respuesta .</p>
