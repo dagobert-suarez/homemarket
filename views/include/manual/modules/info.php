@@ -5,7 +5,7 @@
        <div class="uno">
            <i class="fa fa-user-plus"></i>
            <h2>Cuenta</h2>
-           <a href="modulo1-r1">¿Como puedo crear un cuenta?</a>
+           <a href="modulo1-r1">¿Como puedo crear una cuenta?</a>
            <a href="modulo1-r2">¿Como inicio mi cuenta?</a>
            <a href="modulo1-r3">¿Como puedo configurar mi cuenta?</a>
            <a href="modulo1-r4">¿Como puedo recuperar mi cuenta si perdi mi contraseña?</a>
@@ -44,7 +44,7 @@
            <a href="modulo2-r5">¿Pregunta 5?</a> -->
 
        </div>
-       <div class="cuatro">
+       <!-- <div class="cuatro">
            <i class="fa fa-cog"></i>
            <h2>Ajustes</h2>
            <a href="modulo5">¿Pregunta 1?</a>
@@ -53,10 +53,8 @@
            <a href="modulo5">¿Pregunta 4?</a>
            <a href="modulo5">¿Pregunta 5?</a>
 
-       </div>
-     </div>
-     <div class="wrapGrid3">
-       <div class="uno">
+       </div> -->
+       <div class="cuatro">
            <i class="fa fa-shopping-basket"></i>
            <h2>Productos</h2>
            <a href="modulo3">¿Donde puedo ver los productos?</a>
@@ -65,6 +63,17 @@
            <!-- <a href="modulo3">¿Pregunta 4?</a>
            <a href="modulo3">¿Pregunta 5?</a> -->
        </div>
+     </div>
+     <!-- <div class="wrapGrid3"> -->
+       <!-- <div class="uno">
+           <i class="fa fa-shopping-basket"></i>
+           <h2>Productos</h2>
+           <a href="modulo3">¿Donde puedo ver los productos?</a>
+           <a href="modulo3-r2">¿Como puedo buscar un producto?</a>
+           <a href="modulo3-r3">¿Como puedo filtrar un producto?</a>
+           <a href="modulo3">¿Pregunta 4?</a>
+           <a href="modulo3">¿Pregunta 5?</a>
+       </div> -->
        <!-- <div class="dos">
            <h2>Modulo 6</h2>
            <a href="modulo6">¿Pregunta 1?</a>
@@ -73,5 +82,5 @@
            <a href="modulo6">¿Pregunta 4?</a>
            <a href="modulo6">¿Pregunta 5?</a>
        </div> -->
-     </div>
+     <!-- </div> -->
   </div>
