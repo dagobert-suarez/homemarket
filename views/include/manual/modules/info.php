@@ -4,8 +4,13 @@
      <div class="wrapGrid">
        <div class="uno">
            <i class="fa fa-user-plus"></i>
+<<<<<<< HEAD
            <h2>Cuenta</h2>
            <a href="modulo1-r1">¿Como puedo crear una cuenta?</a>
+=======
+           <h2>Usuario</h2>
+           <a href="modulo1-r1">¿Como puedo crear un cuenta?</a>
+>>>>>>> e427f1a01f372aa68b5fab3409009cc5dff8758e
            <a href="modulo1-r2">¿Como inicio mi cuenta?</a>
            <a href="modulo1-r3">¿Como puedo configurar mi cuenta?</a>
            <a href="modulo1-r4">¿Como puedo recuperar mi cuenta si perdi mi contraseña?</a>
@@ -54,7 +59,13 @@
            <a href="modulo5">¿Pregunta 5?</a>
 
        </div> -->
+<<<<<<< HEAD
        <div class="cuatro">
+=======
+     </div>
+     <div class="wrapGrid3">
+       <div class="uno">
+>>>>>>> e427f1a01f372aa68b5fab3409009cc5dff8758e
            <i class="fa fa-shopping-basket"></i>
            <h2>Productos</h2>
            <a href="modulo3">¿Donde puedo ver los productos?</a>
