@@ -42,7 +42,7 @@
   </table>
   <!--  Actualizar Producto -->
   <!-- ----------------------------->
-  <div class="fondo"></div>
+  <!-- <div class="fondo"></div>
   <div class="wrap">
       <div class="wea">
           <?php
@@ -63,12 +63,13 @@
               </form>
           </div>
       </div>
-  </div>
+  </div> -->
   <!--Fin de el Actualizar producto -->
   <!-- -------------------------->
+
   <!-- Detalles -->
   <!-- ---------------->
-  <div class="fondo-det"></div>
+  <!-- <div class="fondo-det"></div>
   <div class="wrap-det">
       <div class="wea-det">
           <?php
@@ -83,7 +84,7 @@
                   <label for="">Nombre del productos:</label>
                   <br>
       </div>
-  </div>
+  </div> -->
   <!--  Fin de Detalles -->
   <!-- --------------------->
 </div>

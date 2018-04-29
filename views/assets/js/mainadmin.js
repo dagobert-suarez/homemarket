@@ -1,3 +1,4 @@
+//Esto es para el datagrid
 $(document).ready(function() {
     $(".dataGrid").DataTable({
      "language":{
@@ -20,10 +21,13 @@ $(document).ready(function() {
 
     )
 } );
+// -------------
 
 // Esta es la parte de los tabs
 // -----------------------------
-function Name(evt, nName) {
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").onclick();
+function Name(event, nName) {
     var i, contentfo, btntabs;
     contentfo = document.getElementsByClassName("contentfo");
     for (i = 0; i < contentfo.length; i++) {
@@ -34,12 +38,10 @@ function Name(evt, nName) {
         btntabs[i].className = btntabs[i].className.replace(" active", "");
     }
     document.getElementById(nName).style.display = "block";
-    evt.currentTarget.className += " active";
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+    event.currentTarget.className += " active";
 }
 
-//  Fin   de Esta es la parte de los tabs
+//  Fin de la  es la parte de los tabs
 // -----------------------------
 
 // Modal de la Categoria
