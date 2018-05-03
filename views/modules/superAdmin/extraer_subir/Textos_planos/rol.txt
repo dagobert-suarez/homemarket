@@ -1,0 +1,5 @@
+id_rol;nom_rol
+1;cliente
+2;supermercado
+3;empleado
+4;administrador

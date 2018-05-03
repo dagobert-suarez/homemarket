@@ -1,0 +1,1 @@
+id;nombre;direccion;telefono;cod_ciu;logo;lon_sup;lat_sup;inicio;fin

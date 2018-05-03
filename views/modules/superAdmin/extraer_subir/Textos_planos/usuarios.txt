@@ -1,0 +1,3 @@
+id_usu ;nombre;apellido;fecha nacimiento;genero;telefono;correo;cod_ciu;rol
+1;dagobert;suarez;1999-08-25;m;5456576;dagobertsuarez@gmail.com;2121;4
+2;iugibhib;ygyhugyhub;1999-12-12;m;546678978;ghvhjbsnmd@hjbvhscjnk.com;2121;1

@@ -1,0 +1,3 @@
+id_tipo;nombre;tipo
+22;cereal
+21;granos
