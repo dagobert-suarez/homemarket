@@ -1,13 +1,13 @@
 <i class="back"><a href="explora" >&#10094; Volver</a></i>
 <div class="modulo1">
   <div class="ask">
-<<<<<<< HEAD
+
     <h1>Registro</h1>
     <h2>¿Como puedo crear una cuenta?</h2>
-=======
-    <h1>Usuario</h1>
-    <h2>¿Como puedo crear un cuenta?</h2>
->>>>>>> e427f1a01f372aa68b5fab3409009cc5dff8758e
+
+    <!-- <h1>Usuario</h1>
+    <h2>¿Como puedo crear un cuenta?</h2> -->
+
   </div>
   <div class="answer">
     <!-- <p>Respuesta .</p> -->

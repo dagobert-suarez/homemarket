@@ -34,13 +34,14 @@ class ProductController{
     require_once "views/modules/worker/header.php";
     require_once "views/modules/worker/createProduct.php";
     require_once "views/modules/worker/footer.php";
-
   }
-  // Ver los producto empleado
+  // Ver los productos empleado
   function Produtosviewsworker(){
     require_once "views/modules/worker/header.php";
     require_once "views/modules/worker/productosviews.php";
+    // require_once "views/modules/worker/footer.php";
     require_once "views/modules/worker/footer.php";
+
   }
   // Actualizar productos
   function updateProductos(){

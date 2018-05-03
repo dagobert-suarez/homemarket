@@ -82,9 +82,7 @@
                   <button type="submit" name="button" class="btntnt">Registrar</button>
               </div>
             </div>
-
       </form>
-      <!-- <h1>the record is missing</h1> -->
     </div>
   </div>
 
