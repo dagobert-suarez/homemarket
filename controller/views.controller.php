@@ -311,6 +311,12 @@ class viewsController{
 		require_once "views/modules/superAdmin/menuAdmin.php";
 		require_once "views/modules/superAdmin/footer.php";
 	}
+	function contendos(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/Contenido2.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+
 
 
 

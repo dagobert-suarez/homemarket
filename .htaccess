@@ -100,6 +100,8 @@ RewriteRule ^eliminar-Provee-(\w+)$ index.php?controller=product&a=deleteProvee&
 #super administrador
 RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin
 RewriteRule ^Dashboard-Super$ index.php?controller=views&a=mainSuper
+RewriteRule ^Contenido2$ index.php?controller=views&a=contendos
+
 
 #bajar subir archivo
 RewriteRule  ^bajar$ index.php?controller=views&a=bajar

@@ -118,14 +118,3 @@ section.container1S{
 }
 /*Fin de Perfil  */
 /*--------------------------------------  */
-
-h1{
-  color: red;
-  z-index: 5;
-  margin-top: 50px;
-  position: absolute;
-}
-.uno{
-  background-color: red;
-  margin: 50px;
-}
