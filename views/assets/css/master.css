@@ -118,7 +118,31 @@ section.container1S{
 }
 /*Fin de Perfil  */
 /*--------------------------------------  */
+#pass{
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid rgb(161, 161, 161);
+  outline: none;
+}
+.botons{
+  display: flex;
+}
+#content{
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 2px solid #4CAF50;
+  background-color: white;
+  outline: none;
+  color: #2d2d2d;
+}
 
 #boton2,#boton3{
   display: none;
+  outline: none;
+  padding: 6px 8px;
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+  margin: 5px;
+  border-radius: 3px;
 }

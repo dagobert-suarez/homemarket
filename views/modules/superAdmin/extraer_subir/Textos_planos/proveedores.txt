@@ -1,1 +1,6 @@
-id;nombre;direccion;telefono
+id;nombre;direccion;telefonoid;nombre;direccion;telefono
+1;  coca-cola  ;  q134ty  ;  12345yuid;nombre;direccion;telefono
+1;  coca-cola  ;  q134ty  ;  12345yuid;nombre;direccion;telefono
+1;  coca-cola  ;  q134ty  ;  12345yuid;nombre;direccion;telefono
+1;  coca-cola  ;  q134ty  ;  12345yuid;nombre;direccion;telefono
+1;  coca-cola  ;  q134ty  ;  12345yu

@@ -1,3 +1,23 @@
 id_tipo;nombre;tipo
 22;cereal
-21;granos
+21;granosid_tipo;nombre;tipo
+16;  aseo
+15;  carnes
+14;  grano+
+13;  lacteosid_tipo;nombre;tipo
+16;  aseo
+15;  carnes
+14;  grano+
+13;  lacteosid_tipo;nombre;tipo
+16;  aseo
+15;  carnes
+14;  grano+
+13;  lacteosid_tipo;nombre;tipo
+16;  aseo
+15;  carnes
+14;  grano+
+13;  lacteosid_tipo;nombre;tipo
+16;  aseo
+15;  carnes
+14;  grano+
+13;  lacteos

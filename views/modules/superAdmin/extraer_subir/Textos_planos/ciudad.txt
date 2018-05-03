@@ -1,2 +1,7 @@
 codigo;nombre;codigo_dpto
-2121;medellin;3434
+2121;medellin;3434codigo;nombre;codigo_dpto
+345;  Medellin  ;234567codigo;nombre;codigo_dpto
+345;  Medellin  ;234567codigo;nombre;codigo_dpto
+345;  Medellin  ;234567codigo;nombre;codigo_dpto
+345;  Medellin  ;234567codigo;nombre;codigo_dpto
+345;  Medellin  ;234567

@@ -185,6 +185,7 @@ while ($columna = mysqli_fetch_array($resultado)) {
   $mensaje = $columna['id_usu'].$li.$columna['id_sup'];
   fwrite($archivo, "\r\n".$mensaje);
 }
-mysqli_close($conexion);
 fclose($archivo);
+echo "<h3>!Ya se Exporto¡</h3>";
+mysqli_close($conexion);
  ?>
