@@ -1,11 +1,19 @@
 <?php
-$usuario = "root";
-$password = "";
-$servidor = "localhost";
-$basededatos = "home_market";
-$conexion = mysqli_connect( $servidor, $usuario, "" ) or die ("no se ha conectado al servidor de la base de datos");
-$db= mysqli_select_db( $conexion, $basededatos ) or die ("no se conecta");
-// require_once "model/coon.model.php";
+// $usuario = "root";
+// $password = "";
+// $servidor = "localhost";
+// $basededatos = "home_market";
+// $conexion = mysqli_connect( $servidor, $usuario, "" ) or die ("no se ha conectado al servidor de la base de datos");
+// $db= mysqli_select_db( $conexion, $basededatos ) or die ("no se conecta");
+// class extraer{
+//   public function __CONSTRUCT(){
+//     try {
+//       $this->pdo = DataBase::openDB();
+//       $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//     } catch (PDOException $e) {
+//       die($e->getMessage());
+//     }
+//   }
 //todo el código se repite de acuerdo a las tablas en bd
 $nombre_archivo = "views/modules/superAdmin/extraer_subir/Textos_planos/usuarios.txt";
 $li=";";
@@ -165,16 +173,7 @@ while ($columna = mysqli_fetch_array($resultado)) {
   $mensaje = $columna['id_ped'].$li.$columna['id_pro'].$li.$columna['can_pro'].$li.$columna['val_tot'].$li.$columna['cod_ped'];
   fwrite($archivo, "\r\n".$mensaje);
 }
-// $nombre_archivo = "views/modules/superAdmin/extraer_subir/Textos_planos/calificacion_supermercado.txt";
-// $archivo = fopen($nombre_archivo, "a");
-// $mensaje = "id_sup".$li."id_cal";
-// fwrite($archivo, $mensaje);
-// $consulta = "SELECT * FROM calificacion_supermercado";
-// $resultado = mysqli_query($conexion, $consulta) or die ("no dio consulta");
-// while ($columna = mysqli_fetch_array($resultado)) {
-//   $mensaje = $columna['id_sup'].$li.$columna['id_cal'];
-//   fwrite($archivo, "\r\n".$mensaje);
-// }
+
 $nombre_archivo = "views/modules/superAdmin/extraer_subir/Textos_planos/usuario_supermercado.txt";
 $archivo = fopen($nombre_archivo, "a");
 $mensaje = "id_usu".$li."id_sup";
@@ -187,4 +186,5 @@ while ($columna = mysqli_fetch_array($resultado)) {
 }
 mysqli_close($conexion);
 fclose($archivo);
+}
  ?>

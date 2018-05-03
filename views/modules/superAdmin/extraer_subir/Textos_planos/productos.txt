@@ -1,2 +1,0 @@
-id;nombre;descripcion;img;marca;id_tipo;cantidad;uni_medida;valor;id_sup
-2;hbhbh;bhjb;jhhjb;hjbjbjb;22;567;kg;5677;

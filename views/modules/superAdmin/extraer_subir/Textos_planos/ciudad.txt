@@ -1,2 +1,0 @@
-codigo;nombre;codigo_dpto
-2121;medellin;3434
