@@ -2,7 +2,8 @@
 
 <input type="text" name="" value="" id="pass">
 <button type="button" name="button" id="content">Mostar-Contenido</button>
-<button type="button" name="button" id="boton2">Exportar</button>
+<button type="button" name="button" id="boton2"><a href="bajar">Exportar</a></button>
+<!-- <a href="bajar archivo">Exportar</a> -->
 <button type="button" name="button" id="boton3">importar</button>
 
 <script type="text/javascript">

@@ -118,3 +118,7 @@ section.container1S{
 }
 /*Fin de Perfil  */
 /*--------------------------------------  */
+
+#boton2,#boton3{
+  display: none;
+}
