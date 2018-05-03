@@ -297,7 +297,7 @@ class viewsController{
 	function InicioSuperAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==4) {
 			require_once "views/modules/superAdmin/header.php";
-			// require_once "views/modules/superAdmin/superAdmin.php";
+			require_once "views/modules/superAdmin/superAdmin.php";
 			require_once "views/modules/superAdmin/footer.php";
 		}
 		// else {
@@ -308,7 +308,7 @@ class viewsController{
 
 	function mainSuper(){
 		require_once "views/modules/superAdmin/header.php";
-		require_once "views/modules/superAdmin/superAdmin.php";
+		require_once "views/modules/superAdmin/menuAdmin.php";
 		require_once "views/modules/superAdmin/footer.php";
 	}
 

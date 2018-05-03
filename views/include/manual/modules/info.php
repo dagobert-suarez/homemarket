@@ -6,9 +6,6 @@
            <i class="fa fa-user-plus"></i>
 
            <h2>Cuenta</h2>
-           <a href="modulo1-r1">¿Como puedo crear una cuenta?</a>
-
-
            <a href="modulo1-r1">¿Como puedo crear un cuenta?</a>
            <a href="modulo1-r2">¿Como inicio mi cuenta?</a>
            <a href="modulo1-r3">¿Como puedo configurar mi cuenta?</a>

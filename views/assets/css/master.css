@@ -73,11 +73,12 @@ section.container1S{
 }
 .wrap--content article{
     /* background-color: #F1F3F3; */
-    background-color: lime;
+    background-color: rgb(212, 212, 212);
+    border-radius: 4px;
     box-sizing: border-box;
     width: 95%;
     padding: 15px;
-    margin: 10px auto;
+    margin: 15px auto;
     color: #465966;
 }
 /*  Perfil */

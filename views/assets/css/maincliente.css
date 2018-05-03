@@ -62,7 +62,8 @@ li i:hover{
 #modal{
   display: none;
   top: 0px; left: 0px;
-  background-color: rgb(32, 32, 32);
+  /* background-color: rgb(32, 32, 32); */
+  background-color: #1F2122;
   border-bottom-right-radius:13%;
   animation-name: bounceIn;
   animation-duration:0.8s;
@@ -150,6 +151,21 @@ li i:hover{
 }
 /*_*.* finaliza Top menú y navigator*.*_*/
 /* ------------------------------------ */
+/* Principal de el cliente */
+/* ----------------------- */
+.showcontent{
+  /* background-color: rgb(42, 179, 126); */
+}
+.mapa{
+  margin: 10px auto 10px 250px;
+}
+.nose{
+  font-size: 25px;
+  color: rgb(119, 119, 254);
+}
+
+/* Fin de la principal del Cliente */
+/* -------------------------------- */
 /*_*.* Esta es la parte de los ajutes*.*_*/
 /* ------------------------------------ */
 .module--Sett{
@@ -210,9 +226,9 @@ li i:hover{
     height: auto;
 }
 #map{
-    width: 90%;
+    width: 60%;
     padding: 5px;
-    height: 60vh;
+    height: 45vh;
     /* background-color: rgb(207, 127, 88); */
 }
 

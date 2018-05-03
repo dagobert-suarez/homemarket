@@ -17,16 +17,14 @@
                 <i class="fa fa-window-close">&times;</i>
             </div> -->
             <?php
-
-              require_once("views/modules/SuperAdmin/profileS.php");
-              require_once("views/modules/SuperAdmin/navigator.php");
-
+              require_once ("views/modules/SuperAdmin/profileS.php");
+              require_once ("views/modules/SuperAdmin/navigator.php");
              ?>
+
         </header>
         <div class="wrap--content">
          <?php
-         require_once("views/modules/SuperAdmin/lol.php");
-         require_once("views/modules/SuperAdmin/menuAdmin.php");
-
+         require_once ("views/modules/SuperAdmin/lol.php");
+         require_once ("views/modules/SuperAdmin/superAdmin.php");
            ?>
            <article class="">
