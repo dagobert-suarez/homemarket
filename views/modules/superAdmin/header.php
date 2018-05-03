@@ -24,7 +24,7 @@
         </header>
         <div class="wrap--content">
          <?php
-         require_once ("views/modules/SuperAdmin/lol.php");
+         require_once ("views/modules/SuperAdmin/menuTop.php");
          require_once ("views/modules/SuperAdmin/superAdmin.php");
            ?>
            <article class="">
