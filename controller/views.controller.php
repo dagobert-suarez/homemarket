@@ -323,5 +323,11 @@ class viewsController{
 	// 	}
 	// require_once "views/modules/admin/createProduct.php";
 	// }
+
+	function bajar(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/extraer_subir/base_extraer.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
 }
 ?>
