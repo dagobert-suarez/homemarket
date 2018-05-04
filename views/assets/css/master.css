@@ -73,7 +73,7 @@ section.container1S{
 }
 .wrap--content article{
     /* background-color: #F1F3F3; */
-    background-color: rgb(212, 212, 212);
+    background-color: #FEFEFE;
     border-radius: 4px;
     box-sizing: border-box;
     width: 95%;
@@ -118,6 +118,9 @@ section.container1S{
 }
 /*Fin de Perfil  */
 /*--------------------------------------  */
+h1{
+  margin-bottom:15px; 
+}
 #pass{
   padding: 6px 8px;
   border-radius: 4px;
@@ -133,6 +136,7 @@ section.container1S{
   border: 2px solid #4CAF50;
   background-color: white;
   outline: none;
+  cursor: pointer;
   color: #2d2d2d;
 }
 
@@ -144,5 +148,11 @@ section.container1S{
   color: black;
   border: 2px solid #008CBA;
   margin: 5px;
+  cursor: pointer;
   border-radius: 3px;
+}
+#close{
+  display: none;
+  font-size: 33px;
+  cursor: pointer;
 }
