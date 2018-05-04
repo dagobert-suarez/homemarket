@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 id_usu ;nombre;apellido;fecha nacimiento;genero;telefono;correo;cod_ciu;rol
 1;dagobert;suarez;1999-08-25;m;5456576;dagobertsuarez@gmail.com;2121;4
 2;iugibhib;ygyhugyhub;1999-12-12;m;546678978;ghvhjbsnmd@hjbvhscjnk.com;2121;1id_usu ;nombre;apellido;fecha nacimiento;genero;telefono;correo;cod_ciu;rol
@@ -26,3 +27,6 @@ id_usu ;nombre;apellido;fecha nacimiento;genero;telefono;correo;cod_ciu;rol
 5;David ;Herrera;1999-11-29;m;3233423539;supermercado@gmail.com;345;4
 6;David;Herrera;1999-11-29;m;3233423539;k2guffy@gmail.com;345;1
 10;David;Herrera;1999-11-29;m;3233423539;guffy@gmail.com;345;2
+=======
+id_usu ;nombre;apellido;fecha nacimiento;genero;telefono;correo;cod_ciu;rol
+>>>>>>> f46b63198632e8c56bda6635bf77ac7a6ea07b67
