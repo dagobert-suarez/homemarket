@@ -30,3 +30,4 @@ id_usu ;nombre;apellido;fecha nacimiento;genero;telefono;correo;cod_ciu;rol
 =======
 id_usu ;nombre;apellido;fecha nacimiento;genero;telefono;correo;cod_ciu;rol
 >>>>>>> f46b63198632e8c56bda6635bf77ac7a6ea07b67
+id_usu ;nombre;apellido;fecha nacimiento;genero;telefono;correo;cod_ciu;rol
