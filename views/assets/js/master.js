@@ -19,26 +19,19 @@ cont1.onclick = function(){
     alert("El campo esta vacío");
   }else {
     if(usus == usu1){
-
       wrap.style.display = "block";
-
     }else if (usus == usu2){
       wrap.style.display = "block";
-
     }else if (usus == usu3){
-
       wrap.style.display = "block";
-
     }else if (usus == usu4){
-
       wrap.style.display = "block";
-
     }else {
       alert("El usuario no  es valido");
       window.location.href="Contenido2";
     }
   }
-}
+};
 content2.onclick = function(){
   var nose = password2.value
   if (nose === ''){
@@ -46,12 +39,11 @@ content2.onclick = function(){
   }else {
      if(nose == contraseñaUsu){
           wrap2.style.display = "block";
-
     }else{
       alert("Su contraseña es incorrecta Intente nuevamente");
     }
   }
-}
+};
 content.onclick = function(){
   var validar = password.value;
   if (validar ==='') {
@@ -59,13 +51,11 @@ content.onclick = function(){
   }else {
     if(validar == contraseña ) {
       botons.style.display = "block";
-
     }else {
       alert("la contraseña es incorrecta");
   }
     }
 };
-
 close.onclick = function(){
   botons.style.display = "none";
   window.location.href='Contenido2';
