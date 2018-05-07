@@ -22,7 +22,6 @@ $(document).ready(function() {
     )
 } );
 // -------------
-
 // Esta es la parte de los tabs
 // -----------------------------
 // Get the element with id="defaultOpen" and click on it
