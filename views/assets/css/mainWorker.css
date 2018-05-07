@@ -476,6 +476,10 @@ color: #433d53;
 background-color: rgb(196, 196, 196);
 padding: 10px;
 }
+.dataTable.no-footer .even:hover, .dataTable.no-footer .odd:hover{
+  background-color: rgb(190, 190, 190);
+  color: red;
+}
 
  thead {
     text-align:center;

@@ -1,3 +1,12 @@
+//  var menu = document.getElementById('menu');
+//
+//  window.onscroll = function() {scrollFunction()};
+//
+// function scrollFunction() {
+//     if (document.body.scrollTop > 20   ) {                                 //|| document.documentElement.scrollTop > 20//
+//         menu.style.backgroudcolor = 'red';
+//     }
+// }
 var openmenu = document.getElementById('open-m-r');
 var modalmenu = document.getElementById('modal-menu');
 var closemenu = document.getElementById('close-m-r');
@@ -32,7 +41,7 @@ function showSlides() {
     slides[slideIndex-1].style.display ="block";
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 4000); // Cambia la imagen cada 4 segungos
-}
+};
 
 // js de  login modal:guffy
 var show = document.getElementById('show');
