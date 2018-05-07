@@ -19,8 +19,8 @@
             <input type="text" class="k" name="data[]" value="" class="new" required>
           </div>
           <div class="form-group">
-            <label for="" class="opcional">Descripcion de producto:</label>
-            <textarea type="text" class="k" name="data[]" value="" class="new"></textarea>
+            <label for="" class="opcional">Contenido:</label>
+            <textarea type="number" class="k" name="data[]" value="" class="new"></textarea>
           </div>
       </div>
       <div class="content-form">
@@ -48,10 +48,13 @@
         <div class="form-group">
           <label for="" class="required">Medida:</label>
           <select class="ks" name="data[]">
-            <option value="">kg</option>
-            <option value="">lb</option>
-            <option value="">gr</option>
-            <option value="">lts</option>
+            <option value="kg">kg</option>
+            <option value="lb">lb</option>
+            <option value="gr">gr</option>
+            <option value="lts">lts</option>
+            <option value="ml">ml</option>
+            <option value="oz">oz</option>
+            <option value="unidad">unidad</option>
           </select>
         </div>
       </div>

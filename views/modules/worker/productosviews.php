@@ -14,7 +14,8 @@
       <tr>
         <th>#</th>
         <th>Nombre</th>
-        <th>Descripcion</th>
+        <th>Contenido</th>
+        <th>Medida</th>
         <th>Marca</th>
         <th>Acciones</th>
       </tr>
@@ -27,7 +28,8 @@
       <tr class="even">
         <td><?php echo $row["id_pro"]; ?></td>
         <td><?php echo $row["nom_pro"]; ?></td>
-        <td><?php echo $row["des_pro"]; ?></td>
+        <td><?php echo $row["cont_pro"]; ?></td>
+        <td><?php echo $row["uniMed_pro"]; ?></td>
         <td><?php echo $row["mar_pro"]; ?></td>
         <td>
             <a href="actualizar-producto-<?php echo $row['id_pro'] ;?>" class=""><i class="fa fa-pencil" aria-hidden="true"></i>Actualizar</a>

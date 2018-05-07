@@ -7,7 +7,7 @@
  ?>
  <!-- <p>uniMed_pro,valVen_pro,img_pro</p> -->
 
- <form class="" action="actualizando-producto" method="post" enctype="multipart/form-data">
+
 
  <header>
    <h1>Actualizar Producto</h1>
@@ -27,7 +27,7 @@
 
             <div class="form-group">
               <label for=""class="opcional">Descripcion del Producto:</label>
-              <textarea name="data[]" class="k" ><?php echo $dataProduct["des_pro"];?></textarea>
+              <textarea name="data[]" class="k" ><?php echo $dataProduct["cont_pro"];?></textarea>
             </div>
 
         </div>
