@@ -75,6 +75,7 @@ section.container1S{
     /* background-color: #F1F3F3; */
     background-color: #FEFEFE;
     border-radius: 4px;
+    border:0.5px solid rgb(161,161,161);
     box-sizing: border-box;
     width: 95%;
     padding: 15px;
@@ -125,17 +126,58 @@ h1{
 p{
   margin: 10px;
 }
-#pass{
+p b{
+  color: orange;
+}
+label{
+  text-align: left;
+  margin: 5px;
+  display:block;
+  font-size: 16px;
+}
+#wrap{
+  display: none;
+  margin-top: 5px;
+  animation-name: luz;
+  animation-duration: 1s;
+}
+@keyframes luz{
+  from{
+    opacity: -2;
+  }
+  to{
+    opacity: 10;
+  }
+}
+#wrap2{
+  display: none;
+  margin: 10px;
+  padding: 5px;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  border-radius: 4px;
+  animation-name: luz;
+  animation-duration: 1s;
+}
+#camp2,#pass,#pass2{
   padding: 6px 8px;
   border-radius: 4px;
   border: 1px solid rgb(161, 161, 161);
   outline: none;
 }
-.botons{
-  display: flex;
+#botons{
+  /*display: flex;*/
+  width: 40%;
+  display: none;
   margin: 10px;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+  animation-name: luz;
+  animation-duration: 1s;
 }
-#content{
+#content,#content2,#cont1{
   padding: 6px 8px;
   border-radius: 4px;
   border: 2px solid #4CAF50;
@@ -144,9 +186,13 @@ p{
   cursor: pointer;
   color: #2d2d2d;
 }
+#content:hover,#content2:hover,#cont1:hover   {
+  color: white;
+  background-color: #4CAF50;
+}
 
 #boton2,#boton3{
-  display: none;
+  /*display: none;*/
   outline: none;
   padding: 6px 8px;
   background-color: white;
@@ -156,8 +202,14 @@ p{
   cursor: pointer;
   border-radius: 3px;
 }
+#boton2:hover,#boton3:hover{
+  color: white;
+  background-color: #008CBA;
+}
 #close{
-  display: none;
-  font-size: 33px;
+  font-size:33px;
   cursor: pointer;
+}
+#close:hover{
+  color: red;
 }

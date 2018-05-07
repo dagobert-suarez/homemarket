@@ -414,9 +414,10 @@ tbody tr{
 color: #433d53;
 background-color: rgb(196, 196, 196);
 }
-tbody tr:hover{
-  background-color: rgb(190, 190, 190);
-  color: red;
+.dataTable.no-footer .even:hover, .dataTable.no-footer .odd:hover{
+  background-color: rgb(224, 224, 224);
+  color: rgb(191, 68, 255);
+
 }
 
  tbody td,thead td{
@@ -432,6 +433,10 @@ tbody tr:hover{
 
 .dataTable tbody.no-footer.even{
     background-color: rgb(0, 0, 0);
+}
+#dataGrid{
+  width: 100;
+  margin: 0px;  
 }
 
 /* _*.* Fin dataGrid*.*_ */

@@ -316,6 +316,26 @@ class viewsController{
 		require_once "views/modules/superAdmin/Contenido2.php";
 		require_once "views/modules/superAdmin/footer.php";
 	}
+	function Contenido(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/Contenido.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+	function Configuraciones(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/configuraciones.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+	function Permisos(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/permisos.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+	function InformacionS(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/informacion.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
 
 
 

@@ -111,31 +111,31 @@
       <div id="Categorias" class="contentfo">
         <h3>Categorías</h3>
         <button type="button" id="openCate" name="button">Nueva categoría</button>
-        <table  class="dataGrid">
-			<thead class="tittledatag">
-				<tr>
-					<td>#</td>
-					<td>Nombre categoria</td>
-					<td>Aciones</td>
-				</tr>
-			</thead>
-			<tbody>
-				<?php
-					$data = $this->readCategory();
-					foreach ( $data as $row) {	?>
-				<tr>
-					<td><?php echo $row["id_tip_pro"] ;?></td>
-					<td><?php echo $row["nom_tip_pro"] ;?></td>
-					<td>
-						<a href="#" class="abrirmodal"><i class="fa fa-pencil"></i>Editar</a>
-						<a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a>
-						<a href="eliminar-cate-<?php echo $row['id_tip_pro'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
-					</td>
+        <table  class="dataGrid" id="dataGrid">
+			       <thead class="tittledatag">
+        				<tr>
+        					<td>#</td>
+        					<td>Nombre categoria</td>
+        					<td>Aciones</td>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<?php
+        					$data = $this->readCategory();
+        					foreach ( $data as $row) {	?>
+        				<tr>
+        					<td><?php echo $row["id_tip_pro"] ;?></td>
+        					<td><?php echo $row["nom_tip_pro"] ;?></td>
+        					<td>
+        						<a href="#" class="abrirmodal"><i class="fa fa-pencil"></i>Editar</a>
+        						<a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a>
+        						<a href="eliminar-cate-<?php echo $row['id_tip_pro'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
+        					</td>
 
-				</tr>
-			<?php } ?>
-			</tbody>
-		</table>
+        				</tr>
+        			<?php } ?>
+        			</tbody>
+		          </table>
         <div id="fondo"></div>
         <div id="wrapmodal">
             <div id="modal">

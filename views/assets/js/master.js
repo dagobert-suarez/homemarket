@@ -1,16 +1,55 @@
 var contraseña = "nosevea";
+var contraseñaUsu = "homemarket";
+var usu1 = "Alexis";
+var usu2 = "Guffy";
+var usu3 = "Dago";
+var usu4 = "Urrego";
+var password2= document.getElementById('pass2');
 var password = document.getElementById('pass');
-var boton2 = document.getElementById('boton2');
+var botons = document.getElementById('botons');
+var content2 = document.getElementById('content2');
 var content = document.getElementById('content');
 var close = document.getElementById('close');
-var cero =
+var camp2= document.getElementById('camp2');
+var cont1 = document.getElementById('cont1');
 
-content.onclick = function(){
-  var nose = password.value
-  if (nose === ''){
+cont1.onclick = function(){
+  var usus = camp2.value
+  if (usus === ''){
     alert("El campo esta vacío");
   }else {
+    if(usus == usu1){
 
+      wrap.style.display = "block";
+
+    }else if (usus == usu2){
+      wrap.style.display = "block";
+
+    }else if (usus == usu3){
+
+      wrap.style.display = "block";
+
+    }else if (usus == usu4){
+
+      wrap.style.display = "block";
+
+    }else {
+      alert("El usuario no  es valido");
+      window.location.href="Contenido2";
+    }
+  }
+}
+content2.onclick = function(){
+  var nose = password2.value
+  if (nose === ''){
+    alert("El Campo no puede quedar vacìo");
+  }else {
+     if(nose == contraseñaUsu){
+          wrap2.style.display = "block";
+
+    }else{
+      alert("Su contraseña es incorrecta Intente nuevamente");
+    }
   }
 }
 content.onclick = function(){
@@ -19,9 +58,7 @@ content.onclick = function(){
     alert("!El Campo esta vacío Intente nuevamente¡");
   }else {
     if(validar == contraseña ) {
-      boton2.style.display = "block";
-      boton3.style.display = "block";
-      close.style.display = "block";
+      botons.style.display = "block";
 
     }else {
       alert("la contraseña es incorrecta");
@@ -30,8 +67,6 @@ content.onclick = function(){
 };
 
 close.onclick = function(){
-  boton2.style.display = "none";
-  boton3.style.display = "none";
-  close.style.display = "none";
+  botons.style.display = "none";
   window.location.href='Contenido2';
 };
