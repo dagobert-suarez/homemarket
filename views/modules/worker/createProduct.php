@@ -20,7 +20,7 @@
           </div>
           <div class="form-group">
             <label for="" class="opcional">Contenido:</label>
-            <textarea type="number" class="k" name="data[]" value="" class="new"></textarea>
+            <input type="number" class="k" name="data[]" value="" class="new"></textarea>
           </div>
       </div>
       <div class="content-form">
