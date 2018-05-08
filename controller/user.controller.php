@@ -217,6 +217,29 @@ class UserController{
 
 				}*/
 	}
-
+	function readbyusu(){
+			  $res = $this->users->readByCod($_SESSION['USER']['ID']);
+				return $res;
+	}
+	function updateClie(){
+			  $data = $_POST['data'];
+				$data[]=$_SESSION['USER']['ID'];
+				foreach ($data as $row) {
+					if($row==""){
+						$_SESSION['message']="campos vacios";
+						header("Location: Ajustes");
+						return;
+					}
+				}
+				$result = $this->users->updateUser($data);
+				if ($result==true) {
+					$_SESSION['message']="Modificacion exitosa";
+					$_SESSION['USER']['NAME']=$data[0];
+					header("Location: Ajustes");
+				}else{
+					$_SESSION['message']="Ocurrio un error";
+					header("Location: Ajustes");
+				}
+	}
 }
 ?>

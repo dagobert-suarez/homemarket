@@ -9,6 +9,12 @@
 
     </header>
     <div class="wrap-form">
+      <?php
+        if (isset($_SESSION['message'])) {
+         echo $_SESSION['message'];
+         unset($_SESSION['message']);
+        }
+      ?>
         <!-- <p>Actualizar la contraseña, los datos personales</p> -->
         <label for="">Correo: <?php echo $data["email_usu"]; ?></label>
         <form  action="actualizar-datosCli" method="post">
