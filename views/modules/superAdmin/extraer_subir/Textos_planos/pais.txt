@@ -1,7 +1,0 @@
-codigo_pais;nombre
-5757;colombiacodigo_pais;nombre
-1;  colombiacodigo_pais;nombre
-1;  colombiacodigo_pais;nombre
-1;  colombiacodigo_pais;nombre
-1;  colombiacodigo_pais;nombre
-1;  colombia

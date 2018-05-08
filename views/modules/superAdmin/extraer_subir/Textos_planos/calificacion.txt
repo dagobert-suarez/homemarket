@@ -1,6 +1,0 @@
-id;puntoid;punto
-1;  5id;punto
-1;  5id;punto
-1;  5id;punto
-1;  5id;punto
-1;  5
