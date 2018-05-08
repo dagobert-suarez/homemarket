@@ -17,7 +17,7 @@ var map;
                       console.log(e);
                     alert('You clicked in this marker');
                   },
-                  mouseover: function(e){
+                  click: function(e){
                      var infowindow = new google.maps.InfoWindow({
                             content: title
                     });
