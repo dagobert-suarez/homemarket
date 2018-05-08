@@ -65,7 +65,7 @@ class UserController{
 			//antes de esta joda
 			$data[7]=password_hash($data[7], PASSWORD_DEFAULT);
 			$token = md5($data[0].$data[1]);
-
+			
 			$result = $this->users->createUser($data,$token);
 			if ($result==true) {
 				$dataUser = $this->users->readByCorreo($data[5]);

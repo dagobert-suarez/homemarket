@@ -116,8 +116,7 @@ class UserModel{
 			 // Crear Supermercado
 			  function createSuper($data){
 				 try{
-					 $sql="INSERT INTO supermercado(nom_sup, dir_sup, tel_sup, cod_ciu,logo_sup)
-					 			VALUES (?,?,?,?,?)";
+					 $sql="call crear_sup(?,?,?,?,?,?)";
 					 $query=$this->pdo->prepare($sql);
 					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4] ) ) ;
 					 $msn ="Guardado Exitoxamente";

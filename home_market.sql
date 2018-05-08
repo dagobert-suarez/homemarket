@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-05-2018 a las 20:54:46
+-- Tiempo de generación: 08-05-2018 a las 22:00:11
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -78,9 +78,10 @@ BEGIN
 INSERT INTO acceso VALUES(token,contra,usu);
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crearDetPed` (`id_pro` INT, `cant_pro` INT, `cod_ped` INT)  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crearDetPed` (IN `id_pro` INT, IN `cant_pro` INT, IN `cod_ped` INT)  BEGIN
 INSERT INTO detalle_pedido(id_pro,cant_pro,cod_ped) VALUES (id_pro,cant_pro,cod_ped);
 call upVal();
+CALL totalPed();
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_categoria` (IN `nom_tip_pro` VARCHAR(30))  BEGIN
@@ -89,9 +90,9 @@ END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_pro` (IN `nom_pro` VARCHAR(30), IN `cont_pro` INT, IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT, IN `img_pro` VARCHAR(255), IN `id_sup` INT)  BEGIN
  
- INSERT INTO productos(nom_pro,cont_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro,id_sup) VALUES (nom_pro,cont_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro,id_sup);
+INSERT INTO productos(nom_pro,cont_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro,id_sup) VALUES (nom_pro,cont_pro,mar_pro,id_tip_pro,can_pro,uniMed_pro,valVen_pro,img_pro,id_sup) ;
  
- END$$
+END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_prov` (IN `nom_prov` VARCHAR(50), IN `dir_prov` VARCHAR(30), IN `tel_prov` VARCHAR(11))  BEGIN
 
@@ -99,9 +100,9 @@ INSERT INTO proveedores(nom_prov,dir_prov,tel_prov) VALUES (nom_prov,dir_prov,te
 
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_sup` (IN `nom_sup` VARCHAR(50), IN `dir_sup` VARCHAR(50), IN `tel_sup` VARCHAR(11), IN `cod_ciu` INT, IN `logo_sup` VARCHAR(255), IN `lon_sup` VARCHAR(100), IN `lat_sup` VARCHAR(100))  BEGIN
+CREATE DEFINER=`root`@`localhost` PROCEDURE `crear_sup` (IN `nom_sup` VARCHAR(50), IN `dir_sup` VARCHAR(50), IN `tel_sup` VARCHAR(11), IN `cod_ciu` INT, IN `logo_sup` VARCHAR(255), IN `id_usu` INT)  BEGIN
   
-  INSERT INTO supermercado(nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,lon_sup,lat_sup) VALUES(nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,lon_sup,lat_sup);
+  INSERT INTO supermercado(nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,id_usu) VALUES(nom_sup,dir_sup,tel_sup,cod_ciu,logo_sup,id_usu);
   
   END$$
 
@@ -147,9 +148,7 @@ SELECT * FROM usuario INNER JOIN acceso ON(usuario.id_usu_usu=acceso.id_usu_usu)
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarPro` (IN `nom_pro` VARCHAR(30), IN `cont_pro` INT, IN `mar_pro` VARCHAR(30), IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT, IN `id_tip_pro` INT, IN `img_pro` VARCHAR(255))  BEGIN 
-
-UPDATE productos SET nom_pro=nom_pro,cont_pro=cont_pro,mar_pro=mar_pro,can_pro=can_pro, uniMed_pro=uniMed_pro,valVen_pro=valVen_pro,id_tip_pro=id_tip_pro,img_pro=img_pro WHERE id_pro=productos.id_pro LIMIT 1;
-
+UPDATE productos SET  nom_pro=nom_pro,cont_pro=cont_pro,mar_pro=mar_pro,can_pro=can_pro, uniMed_pro=uniMed_pro,valVen_pro=valVen_pro,id_tip_pro=id_tip_pro,img_pro=img_pro WHERE id_pro=productos.id_pro LIMIT 1;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarProv` (IN `nom_prov` VARCHAR(50), IN `dir_prov` VARCHAR(30), IN `tel_prov` VARCHAR(11))  BEGIN
@@ -169,6 +168,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarUsu` (IN `nom_usu` VARCHAR
  
 UPDATE usuario SET nom_usu=nom_usu,ape_usu=ape_usu,fec_nac_usu=fec_nac_usu,tel_usu=tel_usu,cod_ciu=cod_ciu WHERE id_usu=usuario.id_usu LIMIT 1;
  
+END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `totalPed` ()  BEGIN
+
+SET @var =(SELECT sum(val_tot) FROM detalle_pedido INNER JOIN pedido ON detalle_pedido.cod_ped=pedido.cod_ped);
+UPDATE pedido INNER JOIN detalle_pedido ON pedido.cod_ped=detalle_pedido.cod_ped SET tot_com = @var;
+
+
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `upVal` ()  BEGIN
@@ -345,6 +352,14 @@ CREATE TABLE `pedido` (
   `tot_com` decimal(18,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `pedido`
+--
+
+INSERT INTO `pedido` (`cod_ped`, `fec_ped`, `id_usu`, `dir_ped`, `id_sup`, `id_usu_emp`, `tot_com`) VALUES
+(1, '2018-05-07 22:04:19', 4, 'calle 45', 2, 3, '24000.00'),
+(2, '2018-05-07 23:39:05', 4, 'calle 56 # 34-77', 1, 3, '24000.00');
+
 -- --------------------------------------------------------
 
 --
@@ -369,10 +384,10 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_pro`, `nom_pro`, `cont_pro`, `img_pro`, `mar_pro`, `id_tip_pro`, `can_pro`, `uniMed_pro`, `valVen_pro`, `id_sup`) VALUES
-(1, 'cafe', 0, '', 'dulce', 1, 200, 'kg', 2300, NULL),
-(2, 'harina', 0, '18-Fondos-de-pantalla-HD-del-honguito-de-Mario-Bros-hongo.jpg', 'dulce', 1, 200, 'kg', 2300, NULL),
-(3, 'harina', 0, '18-Fondos-de-pantalla-HD-del-honguito-de-Mario-Bros-hongo.jpg', 'dulce', 1, 200, 'kg', 2300, NULL),
-(4, 'harina', 0, '18-Fondos-de-pantalla-HD-del-honguito-de-Mario-Bros-hongo.jpg', 'dulce', 1, 200, 'kg', 2300, NULL);
+(20, 'queso', 0, '', 'roa', 1, 276, 'kg', 4000, NULL),
+(23, 'cafe', 0, '', 'roa', 1, 253, 'kg', 4000, NULL),
+(24, 'avena', NULL, NULL, 'quaker', 1, 198, 'gr', 3000, 2),
+(25, 'cm', 42, NULL, 'puta degenerada', 13, 0, 'kg', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -392,7 +407,7 @@ CREATE TABLE `proveedores` (
 --
 
 INSERT INTO `proveedores` (`id_prov`, `nom_prov`, `dir_prov`, `tel_prov`) VALUES
-(1, 'coca-coa', 'calll 12 #  32-77', '2345134'),
+(1, 'zenuuu ', 'cr 68 # 65-89', '6578909'),
 (2, 'zenu ', 'cr 68 # 65-89', '6578909');
 
 -- --------------------------------------------------------
@@ -452,7 +467,8 @@ CREATE TABLE `supermercado` (
 --
 
 INSERT INTO `supermercado` (`id_sup`, `nom_sup`, `dir_sup`, `tel_sup`, `cod_ciu`, `logo_sup`, `id_usu`, `lon_sup`, `lat_sup`, `hor_ini`, `hor_fin`) VALUES
-(1, 'supermercado ahorro ', 'callle 45 # 43-67', '3890765', 345, '7eb3a8d6007667248cba540c55dd68a0.jpg', 0, NULL, NULL, NULL, NULL);
+(1, 'supermercado ahorro ', 'callle 45 # 43-67', '3890765', 345, '', 0, NULL, NULL, NULL, NULL),
+(2, 'marke', 'callr 245', '23456731', 123, 'ecfdb2992a3bb508d65a6a8b683bc558.jpg', 0, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -658,19 +674,19 @@ ALTER TABLE `calificacion`
 -- AUTO_INCREMENT de la tabla `detalle_pedido`
 --
 ALTER TABLE `detalle_pedido`
-  MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ped` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT;
+  MODIFY `cod_ped` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
@@ -682,7 +698,7 @@ ALTER TABLE `proveedores`
 -- AUTO_INCREMENT de la tabla `supermercado`
 --
 ALTER TABLE `supermercado`
-  MODIFY `id_sup` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_sup` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_producto`
