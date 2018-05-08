@@ -15,19 +15,19 @@ class LoginController{
 		}else{
 			$result = array("false","El Usuario no existe");
 		}
-
 	echo json_encode($result);
 }
 
-  // function validar_password(){
-	// 	$result = $this->pass->contra($_POST['doc_usu']);
-	// 	if ($ressult!=array()) {
-	// 		$result = array("true","");
-	// 	}else{
-	// 		$result = array("false","contraseña invalida");
-	// 	}
-	// 	echo json_encode($result);
-	// }
+//valida la contraseña
+		function validar_contra(){
+			$result = $this->users->user($_POST['contra']);
+		if ($result!=array()){
+			$result = array("true","");
+		}else{
+			$result = array("false","no existe");
+		}
+	echo json_encode($result);
+}
 
 	function validar(){
 		$correo = $_POST['email'];
@@ -60,13 +60,15 @@ class LoginController{
 							header ('Location:InicioSuperAdmin');
 						}
 				} else {
+					// $result = array ("false","incorrecta");
 					// echo '<script language="javascript">alert("<div class="exit">crontraseña incorrecta</div>");</script>';
-					echo '<script languaje>alert("contraseña incorrecta")</script>';
+					// echo '<script languaje>alert("contraseña incorrecta")</script>';
 					// echo "Contraseña incorrecta !intente nuevamente¡";
-					echo "<script>window.location.href='inicio'</script>";
+					// echo "<script>window.location.href='inicio'</script>";
 					// $result = array("false","contraseña incorrecta");
 
 				}
+				// echo json_encode($result);
 		}else{
 			echo '<h1>el usuario no existe</h1>';
 		}

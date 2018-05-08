@@ -93,7 +93,25 @@ $('[name=email]').focus(function(){
     $("span.error").remove();
   // }
 })
-/*******---verificar contraseña:dago-----*****/
+// //parte de la contraseña
+// $("input[name='contra']").focusout(function(){
+//     $.post("validar_contra",{contra:$(this).val()},function(result){
+//         var result = JSON.parse(result);
+//         $("span.error").remove();
+//
+//         if(result[0] == "false"){
+//           $("input[name='contra']").after("<span class='error'>"+result[1]+"</span>");
+//           $(".btnsave").prop("disabled",true);
+//         }else{
+//           $("span.error").remove();
+//           $(".btnsave").prop("disabled",false);
+//         }
+//     })
+// })
+// $('[name=contra]').focus(function(){
+//   $("span.error").remove();
+// })
+/*******---verificar contraseña en el registro:dago-----*****/
 $('#password').keyup(function(){
     var password = $('#password').val();
     console.log(password.length);
