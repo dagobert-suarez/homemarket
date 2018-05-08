@@ -127,10 +127,10 @@ class ProductModel{
     }
 
   // Actualizar producto
-   function updateProc($data){
+   function updateProduct($data){
      // print_r($data);
       try{
-      $sql= "call modificarPro(?,?,?,?,?,?,?,?)";
+      $sql= "UPDATE productos SET nom_pro = ? , cont_pro = ? , mar_pro = ? , id_tip_pro = ? , can_pro = ? , uniMed_pro = ? , valVen_pro = ? , img_pro = ? ";
       $query = $this->pdo->prepare($sql);
       $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
       $msn = "modificado con exito";
@@ -141,6 +141,20 @@ class ProductModel{
      // die();
      return $msn;
   }
+  //  function updateProduct($data){
+  //    // print_r($data);
+  //     try{
+  //     $sql= "call modificarPro(?,?,?,?,?,?,?,?)";
+  //     $query = $this->pdo->prepare($sql);
+  //     $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
+  //     $msn = "modificado con exito";
+  //    }catch(PDOException $e){
+  //      $msn = $e->getMessage();
+  //    }
+  //    // echo $msn;
+  //    // die();
+  //    return $msn;
+  // }
 
 // Elimina el producto
   function deletePro($data){
