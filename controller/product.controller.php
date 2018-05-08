@@ -41,7 +41,7 @@ class ProductController{
     require_once "views/modules/worker/productosviews.php";
     // require_once "views/modules/worker/footer.php";
     require_once "views/modules/worker/footer.php";
-    
+
   }
   // Actualizar productos
   function updateProductos(){

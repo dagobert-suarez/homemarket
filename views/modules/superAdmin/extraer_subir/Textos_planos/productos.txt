@@ -1,0 +1,7 @@
+id;nombre;descripcion;img;marca;id_tipo;cantidad;uni_medida;valor;id_sup
+2;hbhbh;bhjb;jhhjb;hjbjbjb;22;567;kg;5677;id;nombre;descripcion;img;marca;id_tipo;cantidad;uni_medida;valor;id_sup
+4; jb ; as ; et ; et ;13;54; 5641 ;65;5id;nombre;descripcion;img;marca;id_tipo;cantidad;uni_medida;valor;id_sup
+4; jb ; as ; et ; et ;13;54; 5641 ;65;5id;nombre;descripcion;img;marca;id_tipo;cantidad;uni_medida;valor;id_sup
+4; jb ; as ; et ; et ;13;54; 5641 ;65;5id;nombre;descripcion;img;marca;id_tipo;cantidad;uni_medida;valor;id_sup
+4; jb ; as ; et ; et ;13;54; 5641 ;65;5id;nombre;descripcion;img;marca;id_tipo;cantidad;uni_medida;valor;id_sup
+4; jb ; as ; et ; et ;13;54; 5641 ;65;5

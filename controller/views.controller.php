@@ -301,7 +301,7 @@ class viewsController{
 	function InicioSuperAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==4) {
 			require_once "views/modules/superAdmin/header.php";
-			// require_once "views/modules/superAdmin/superAdmin.php";
+			require_once "views/modules/superAdmin/superAdmin.php";
 			require_once "views/modules/superAdmin/footer.php";
 		}
 		// else {
@@ -312,9 +312,35 @@ class viewsController{
 
 	function mainSuper(){
 		require_once "views/modules/superAdmin/header.php";
-		require_once "views/modules/superAdmin/superAdmin.php";
+		require_once "views/modules/superAdmin/menuAdmin.php";
 		require_once "views/modules/superAdmin/footer.php";
 	}
+	function contendos(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/Contenido2.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+	function Contenido(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/Contenido.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+	function Configuraciones(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/configuraciones.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+	function Permisos(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/permisos.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+	function InformacionS(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/informacion.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
+
 
 
 
@@ -327,5 +353,11 @@ class viewsController{
 	// 	}
 	// require_once "views/modules/admin/createProduct.php";
 	// }
+
+	function bajar(){
+		require_once "views/modules/superAdmin/header.php";
+		require_once "views/modules/superAdmin/extraer_subir/base_extraer.php";
+		require_once "views/modules/superAdmin/footer.php";
+	}
 }
 ?>

@@ -1,3 +1,12 @@
+//  var menu = document.getElementById('menu');
+//
+//  window.onscroll = function() {scrollFunction()};
+//
+// function scrollFunction() {
+//     if (document.body.scrollTop > 20   ) {                                 //|| document.documentElement.scrollTop > 20//
+//         menu.style.backgroudcolor = 'red';
+//     }
+// }
 var openmenu = document.getElementById('open-m-r');
 var modalmenu = document.getElementById('modal-menu');
 var closemenu = document.getElementById('close-m-r');
@@ -32,11 +41,10 @@ function showSlides() {
     slides[slideIndex-1].style.display ="block";
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 4000); // Cambia la imagen cada 4 segungos
-}
+};
 
 // js de  login modal:guffy
 var show = document.getElementById('show');
-
 show.onclick = function(){
     var mostar = document.getElementById('mostar');
     if(mostar.type  === "password"){
@@ -52,7 +60,6 @@ if (document.getElementById('close')) {
     var btn = document.getElementById('mon');
     var cerrar = document.getElementById('close');
 
-
     btn.onclick = function(){
         modal.style.display ="block";
     }
@@ -64,8 +71,7 @@ if (document.getElementById('close')) {
             modal.style.display= "none";
         }
     }
-
-}
+};
 // validaciones en el login:dago
 // -----------------------------------
 $("input[name='email']").focusout(function(){
@@ -82,18 +88,15 @@ $("input[name='email']").focusout(function(){
         }
     })
 })
-
 $('[name=email]').focus(function(){
   // if ($(this).val().length == 0){
     $("span.error").remove();
   // }
 })
-
 /*******---verificar contraseña:dago-----*****/
 $('#password').keyup(function(){
     var password = $('#password').val();
     console.log(password.length);
-
 });
 $('#rpassword').focusout(function(){
     var password = $('#password').val();
@@ -104,8 +107,6 @@ $('#rpassword').focusout(function(){
     }else{
       $("btntnt").prop("disabled",true);
       $('#rpassword').after('<div class="error" style="color", "red">Las contraseñas no coinciden</div>');
-
       console.log("no coinciden");
     }
-
 });

@@ -22,7 +22,6 @@ $(document).ready(function() {
     )
 } );
 // -------------
-
 // Esta es la parte de los tabs
 // -----------------------------
 // Get the element with id="defaultOpen" and click on it
@@ -40,20 +39,18 @@ function Name(event, nName) {
     document.getElementById(nName).style.display = "block";
     event.currentTarget.className += " active";
 }
-
 //  Fin de la  es la parte de los tabs
 // -----------------------------
-
 // Modal de la Categoria
-//  --------------------------
-// var fondo = document.getElementById('fondo');
-// var wrap = document.getElementById('wrap');
-// var abrir = document-getElementById('abrirmodal');
+ // --------------------------
+var fondo = document.getElementById('fondo');
+var wrap = document.getElementById('wrap');
+var abrir = document-getElementById('abrirmodal');
 
-// abrir.onclick = function(){
-//     fondo.style.display "block";
-//     wrap.style.display "block";
-// };
+abrir.onclick = function(){
+    fondo.style.display "block";
+    wrap.style.display "block";
+};
  var openCate = document.getElementById('openCate');
  var fondo = document.getElementById('fondo');
  var wrap = document.getElementById('wrap');
@@ -69,15 +66,13 @@ close.onclick = function(){
      fondo.style.display = "none";
      wrapmodal.style.display = "none";
  };
-
  //  Modal del editar supermercado
-
  // // Modal del menú para el Responsive
  // // ------------------------------------
  // $(".icon--mobile").click(function() {
  //     $("header.main--nav").toggleClass("open--nav")
  // })
-
+ 
  // modal de producto
  var openPro = document.getElementById('openPro');
  var ground = document.getElementById('ground');

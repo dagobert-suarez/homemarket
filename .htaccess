@@ -103,3 +103,14 @@ RewriteRule ^eliminar-Provee-(\w+)$ index.php?controller=product&a=deleteProvee&
 #super administrador
 RewriteRule ^InicioSuperAdmin$ index.php?controller=views&a=InicioSuperAdmin
 RewriteRule ^Dashboard-Super$ index.php?controller=views&a=mainSuper
+RewriteRule ^Contenido2$ index.php?controller=views&a=contendos
+RewriteRule ^Permisos$ index.php?controller=views&a=permisos
+RewriteRule ^Contenido$ index.php?controller=views&a=contenido
+RewriteRule ^Configuraciones$ index.php?controller=views&a=configuraciones
+RewriteRule ^InformaciónS$ index.php?controller=views&a=informacionS
+
+
+
+
+#bajar subir archivo
+RewriteRule  ^bajar$ index.php?controller=views&a=bajar

@@ -92,9 +92,10 @@ class UserController{
 
     function inicioCliente(){
       if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
-        require_once "views/modules/cliente/header.php";
-        require_once "views/modules/cliente/navigator.php";
-        // require_once "views/modules/cliente/maps.php";
+				require_once "views/modules/cliente/header.php";
+        require_once "views/modules/cliente/maincliente.php";
+				// require_once "views/modules/cliente/maps.php";
+        // require_once "views/modules/cliente/navigator.php";
         require_once "views/modules/cliente/footer.php";
       }else{
         header("Location: inicio");
@@ -187,7 +188,7 @@ class UserController{
 
 
 	//solo la parte de validar contraseña
-//solo la parte de validar contraseña
+	//solo la parte de validar contraseña
 	function validarPassword($data){
 		if (strlen($data)<8) {
 			return "La contraseña debe tener minimo 8 caracteres";
@@ -209,12 +210,12 @@ class UserController{
 		}else{
 			return false;
 		}
-//esto es de otra cosa
-		/*if(preg_match(), subject)){
+		//esto es de otra cosa
+				/*if(preg_match(), subject)){
 
-		}else{
+				}else{
 
-		}*/
+				}*/
 	}
 
 }
