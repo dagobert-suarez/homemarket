@@ -34,6 +34,10 @@ class viewsController{
 		require_once "views/include/scope.header-inicio.php";
 		require_once "views/include/scope.footer.php";
 	}
+	function forgot(){
+		require_once 'views/include/formulario.php';
+		// require_once '';
+	}
 
 	//las sessiones del administrador del supermercado
 	function inicioAdmin(){

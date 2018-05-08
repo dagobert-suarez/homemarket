@@ -71,6 +71,13 @@ class LoginController{
 			echo '<h1>el usuario no existe</h1>';
 		}
 	}
+	function enviar(){
+		if(mail('davidurrego302@gmail.com','recuperacion','nosekmansjfbsdajasdj')){
+			echo "enviado";
+		}else{
+			echo "ocurrio un error";
+		}
+	}
 }
 #editar de USUARIO
 #..................................
