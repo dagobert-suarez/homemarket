@@ -171,10 +171,24 @@ class ProductController{
               $result = $this->product->readByCat($data);
               return $result;
           }
+          public function readCategoryJson(){
+              $result = $this->product->readByCat($_POST['data']);
+              $_SESSION['update_category']=$result[0];
+              echo json_encode($result);
+          }
+          public function updateCategory(){
+              $result = $this->product->updateCategory(array($_POST['data'],$_SESSION['update_category']));
+              echo json_encode($result);
+          }
           public function updateCat(){
               $data = $_POST['data'];
               $result = $this->product->updateCategory($data);
               header("Location:nueva-categoria");
+          }
+          public function deleteCat(){
+              $data = $_POST['data'];
+              $result = $this->product->deleteCat($data);
+            echo json_encode($result);
           }
 
           // supermercados

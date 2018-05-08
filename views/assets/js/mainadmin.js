@@ -72,7 +72,7 @@ close.onclick = function(){
  // $(".icon--mobile").click(function() {
  //     $("header.main--nav").toggleClass("open--nav")
  // })
- 
+
  // modal de producto
  var openPro = document.getElementById('openPro');
  var ground = document.getElementById('ground');
