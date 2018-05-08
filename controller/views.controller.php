@@ -10,6 +10,10 @@ class viewsController{
 		$result = $this->userModel->readTodos()[0];
 		return $result	;
 	}
+	function  readSuper(){
+		$result = $this->userModel->readSuper();
+		echo json_encode($result);
+	}
 	 function prove(){
 		 $result = $this->userModel->prove()[0];
 		 return $result;

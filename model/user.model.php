@@ -35,6 +35,17 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+	function readSuper(){
+			 try{
+				 $sql = "SELECT * FROM supermercado INNER JOIN ciudad ON supermercado.cod_ciu = ciudad.cod_ciu ";
+				 $query = $this->pdo->prepare($sql);
+				 $query->execute();
+					 $msn = $query->fetchAll(PDO::FETCH_BOTH);
+					}catch (PDOException $e) {
+						die($e->getMessage());
+				  }
+					return $msn;
+			 }
 	function readBy($data){
 		try {
 				$sql= "SELECT * FROM usuario WHERE id_usu = ?";
