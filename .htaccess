@@ -44,6 +44,7 @@ RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
+RewriteRule ^nueva-contrasena$ index.php?controller=user&a=contra
 RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=user&a=BySupermercado&data=$1
 
 #supermercado

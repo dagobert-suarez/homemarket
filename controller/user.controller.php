@@ -241,5 +241,35 @@ class UserController{
 					header("Location: Ajustes");
 				}
 	}
+	function contra(){
+		$dataUser = $this->users->readContraseña($_SESSION['USER']['ID']);
+			  $data = $_POST['dataCon'];
+				$data[]=$_SESSION['USER']['ID'];
+				foreach ($data as $row) {
+					if($row==""){
+						$_SESSION['message']="campos vacios";
+						header("Location: Ajustes");
+						return;
+					}
+				}
+					if (password_verify($data[0], $dataUser['contra'])) {
+							if ($data[1]==$data[2]) {
+								$result = $this->users->updateUserContra(array(password_hash($data[1], PASSWORD_DEFAULT),$_SESSION['USER']['ID']));
+								$_SESSION['message']="Modificacion exitosa";
+								header("Location: Ajustes");
+							}else{
+								$_SESSION['message']="Las contraseñas son diferentes";
+								header("Location: Ajustes");
+							}
+					}else{
+						$_SESSION['message']="Contraseña actual no  valida";
+						header("Location: Ajustes");
+					}
+				// if ($result==true) {
+				// }else{
+				// 	$_SESSION['message']="Ocurrio un error";
+				// 	header("Location: Ajustes");
+				// }
+	}
 }
 ?>
