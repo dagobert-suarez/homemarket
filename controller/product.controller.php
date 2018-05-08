@@ -27,6 +27,11 @@ class ProductController{
       require_once "views/modules/admin/mySuper.php";
       require_once "views/modules/admin/footer_admin.php";
   }
+  function BySupermercado(){
+    require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/PorSupermercado.php";
+    require_once "views/modules/cliente/footer.php";
+  }
   // Empleado
   // -------------
   // Crear Producto
@@ -106,7 +111,7 @@ class ProductController{
             }
 
         }else {
-          // die("Error ".$_FILES["file"]["error"]);
+          die("Error ".$_FILES["file"]["error"]);
         }
          $result = $this->product->createProduct($data);
          echo '<script language="javascript">alert("creado con exito");</script>';

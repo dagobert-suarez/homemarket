@@ -65,7 +65,7 @@ class UserController{
 			//antes de esta joda
 			$data[7]=password_hash($data[7], PASSWORD_DEFAULT);
 			$token = md5($data[0].$data[1]);
-			
+
 			$result = $this->users->createUser($data,$token);
 			if ($result==true) {
 				$dataUser = $this->users->readByCorreo($data[5]);
@@ -114,11 +114,7 @@ class UserController{
 		require_once "views/modules/cliente/updateCliente.php";
 		require_once "views/modules/cliente/footer.php";
 	}
-	function BySupermercado(){
-		require_once "views/modules/cliente/header.php";
-		require_once "views/modules/cliente/PorSupermercado.php";
-		require_once "views/modules/cliente/footer.php";
-	}
+
 
 		function validarTelefono($data){
 			if (filter_var($data,FILTER_VALIDATE_INT)===false && strlen($data)<7 || strlen($data)>11) {

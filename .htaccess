@@ -7,9 +7,6 @@ RewriteRule ^master$ index.php?controller=views&a=master
 RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
-RewriteRule ^recuperar$ index.php?controller=views&a=forgot
-RewriteRule ^email$ index.php?controller=login&a=enviar
-
 #manual de usuario
 RewriteRule ^explora$ index.php?controller=manual&a=explora
 RewriteRule ^modulo1$ index.php?controller=manual&a=lorem
@@ -44,8 +41,7 @@ RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
-RewriteRule ^nueva-contrasena$ index.php?controller=user&a=contra
-RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=user&a=BySupermercado&data=$1
+RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=product&a=BySupermercado&data=$1
 
 #supermercado
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
@@ -55,7 +51,6 @@ RewriteRule ^Articulos$ index.php?controller=views&a=articulos
 RewriteRule ^Información$ index.php?controller=views&a=informacion
 RewriteRule ^Notificaciones$ index.php?controller=views&a=notificaciones
 RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
-RewriteRule ^ver-supermercados$ index.php?controller=views&a=readSuper
 #crud empleado
 RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
 RewriteRule ^actualizar-empleado(\w+)$ index.php?controller=user&a=update
@@ -111,10 +106,7 @@ RewriteRule ^Contenido$ index.php?controller=views&a=contenido
 RewriteRule ^Configuraciones$ index.php?controller=views&a=configuraciones
 RewriteRule ^InformaciónS$ index.php?controller=views&a=informacionS
 
-#CATEGORIAS
-RewriteRule ^ver-categoria$ index.php?controller=product&a=readCategoryJson
-RewriteRule ^actualizar-categoria$ index.php?controller=product&a=updateCategory
-RewriteRule ^eliminar-categoria$ index.php?controller=product&a=deleteCat
+
 
 
 #bajar subir archivo

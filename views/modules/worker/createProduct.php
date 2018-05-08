@@ -12,7 +12,7 @@
       </div>
   </header>
   <div class="content">
-    <form id="frmproducto" class="" action="crearProduct" method="post">
+    <form id="frmproducto" class="" action="crearProduct" method="post" enctype="multipart/form-data">
       <div class="content-form">
           <div class="form-group">
             <label for="" class="required">Nombre de producto:</label>

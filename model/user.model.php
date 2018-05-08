@@ -116,7 +116,7 @@ class UserModel{
 			 // Crear Supermercado
 			  function createSuper($data){
 				 try{
-					 $sql="call crear_sup(?,?,?,?,?,?)";
+					 $sql="call crear_sup(?,?,?,?,?)";
 					 $query=$this->pdo->prepare($sql);
 					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4] ) ) ;
 					 $msn ="Guardado Exitoxamente";
@@ -124,7 +124,7 @@ class UserModel{
 					 $msn = $e->getMessage();
 				 }
 
-				 return $result;
+				 return $msn;
 			 }
 			 // Seleccionar todos los supermercados
 			  function readAllSup(){

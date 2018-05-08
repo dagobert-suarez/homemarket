@@ -43,14 +43,14 @@ function Name(event, nName) {
 // -----------------------------
 // Modal de la Categoria
  // --------------------------
-var fondo = document.getElementById('fondo');
-var wrap = document.getElementById('wrap');
-var abrir = document-getElementById('abrirmodal');
-
-abrir.onclick = function(){
-    fondo.style.display "block";
-    wrap.style.display "block";
-};
+  // var fondo = document.getElementById('fondo');
+  // var wrap = document.getElementById('wrap');
+  // var abrir = document-getElementById('abrirmodal');
+  //
+  // abrir.onclick = function(){
+  //     fondo.style.display "block";
+  //     wrap.style.display "block";
+  // };
  var openCate = document.getElementById('openCate');
  var fondo = document.getElementById('fondo');
  var wrap = document.getElementById('wrap');
