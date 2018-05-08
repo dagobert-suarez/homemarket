@@ -20,7 +20,7 @@
 
         <div class="content-form">
             <div class="form-group">
-              <label for="" class="required">Nombre de la Producto:</label>
+              <label for="" class="required">Nombre del Producto:</label>
               <input type="text" class="k" name="data[]" value="<?php echo $dataProduct["nom_pro"];?>">
             </div>
 
