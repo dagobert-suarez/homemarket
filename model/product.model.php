@@ -54,8 +54,8 @@ class ProductModel{
         try {
             $sql="UPDATE tipo_producto SET nom_tip_pro = ? WHERE id_tip_pro = ? ";
             $query=$this->pdo->prepare($sql);
-            $query->execute(array($data[1],$data[0]));
-            $msn ="ya modificó";
+            $query->execute(array($data[0],$data[1]));
+            $msn =true;
         } catch (PDOException $e) {
             $msn = $e->getMessage();
         }
@@ -69,6 +69,17 @@ class ProductModel{
        $query=$this->pdo->prepare($sql);
        $query->execute(array($data));
        $msn ="se elimino la categoria exitosamente";
+     } catch (PDOException $e) {
+       $msn = $e->getMessage();
+     }
+         return $msn;
+   }
+    function deleteCat($data){
+     try{
+       $sql="DELETE FROM tipo_producto WHERE id_tip_pro = ?";
+       $query=$this->pdo->prepare($sql);
+       $query->execute(array($data));
+       $msn =true;
      } catch (PDOException $e) {
        $msn = $e->getMessage();
      }

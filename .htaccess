@@ -109,7 +109,10 @@ RewriteRule ^Contenido$ index.php?controller=views&a=contenido
 RewriteRule ^Configuraciones$ index.php?controller=views&a=configuraciones
 RewriteRule ^InformaciónS$ index.php?controller=views&a=informacionS
 
-
+#CATEGORIAS
+RewriteRule ^ver-categoria$ index.php?controller=product&a=readCategoryJson
+RewriteRule ^actualizar-categoria$ index.php?controller=product&a=updateCategory
+RewriteRule ^eliminar-categoria$ index.php?controller=product&a=deleteCat
 
 
 #bajar subir archivo

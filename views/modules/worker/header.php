@@ -26,7 +26,7 @@
         <div class="wrap--content">
         <?php
             require_once("views/modules/worker/menutop.php");
-            require_once("views/modules/worker/menutwo.php")
+            require_once("views/modules/worker/menutwo.php");
             ?>
 
             <article>
