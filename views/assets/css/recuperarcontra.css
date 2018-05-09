@@ -1,0 +1,34 @@
+@import "reset.css";
+@import "color.css";
+@import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Lato|Montserrat|Noto+Sans|PT+Sans|Raleway|Roboto:100,300,400 ');
+body{ margin: 0;background-color: rgba(247, 252, 255, 0); }
+
+.kepp{
+  border: 1px solid rgb(164, 164, 164);
+  width: 500px;
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+}
+.kepp h3{
+  
+}
+ .form-group #k{
+  padding: 6px 8px;
+  border-radius: 4px;
+  border:1px solid rgb(161, 161, 161);
+  outline: none;
+  margin: 15px;
+}
+.form-group #sent{
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 2px solid rgb(0, 159, 249);
+  color:rgb(0, 159, 249);
+  background: #fefefe;
+  box-sizing: border-box;
+  width: 90px;
+  font-size: 15px;
+  outline: none;
+}
+.form-group #sent:hover{ background-color: rgb(0, 159, 249); color: white; }
