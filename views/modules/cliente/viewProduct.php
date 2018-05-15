@@ -1,8 +1,8 @@
 <div class="modules">
   <div class="Productos">
 <?php
-        $data = $this->viewProducts();
-        foreach ($data as $row) { ?>
+$item =1;
+        foreach ($this->viewProducts() as $row){?>
 
       <div class="cardPro" >
         <img class="card-img-top-pro" src="views/assets/image/productos/<?php echo$row["img_pro"] ?>" alt="<?php echo $row["id_tip_pro"]; ?>">
@@ -16,6 +16,7 @@
         <a href="detalle-<?php echo $row["id_pro"]; ?>">mirar</a>
       </div>
 <?php
+$item++;
     }
     ?>
 </div>
