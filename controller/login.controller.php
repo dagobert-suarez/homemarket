@@ -72,7 +72,7 @@ class LoginController{
 		}
 	}
 	function enviar(){
-		if(mail('davidurrego302@gmail.com','recuperacion','nosekmansjfbsdajasdj')){
+		if(mail('home4market@gmail.com','recuperacion','este es el enlace para recuperar su contraseña http://localhost/homemarket/recuperar')){
 			echo "enviado";
 		}else{
 			echo "ocurrio un error";
