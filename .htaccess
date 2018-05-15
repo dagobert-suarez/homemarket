@@ -7,6 +7,9 @@ RewriteRule ^master$ index.php?controller=views&a=master
 RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
+RewriteRule ^recuperar$ index.php?controller=views&a=forgot
+RewriteRule ^email$ index.php?controller=login&a=enviar
+
 #manual de usuario
 RewriteRule ^explora$ index.php?controller=manual&a=explora
 RewriteRule ^modulo1$ index.php?controller=manual&a=lorem
