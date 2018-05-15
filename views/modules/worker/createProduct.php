@@ -69,7 +69,7 @@
         </div>
       </div>
         <div class="form-group">
-            <button type="submit" name="guardar" class="frmbtn">Crear Producto</button>
+            <button type="submit" name="guardar" class="frmbtn">Registar Producto</button>
 
         </div>
     </form>

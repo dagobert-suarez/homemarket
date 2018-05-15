@@ -170,17 +170,14 @@ li i:hover{
 /* ------------------------------------ */
 .module--Sett{
     background-color: white;
-    width: 70%;
-    padding: 15px;
+    width: 95%;
     box-sizing: border-box;
-    margin: 15px auto 0px ;
+    margin: 5px auto 0px ;
     border-radius: 1px;
-    border-top : 1px solid rgba(161,161,161, 0.93);
-    border-bottom:  1px solid rgba(161,161,161, 0.93);
     font-family:  'Noto_Sans',sans-serif;
     color: #465661;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 .module--Sett h1{
     color: #465661;
@@ -188,26 +185,81 @@ li i:hover{
     margin-bottom: 10px;
     text-align:  center;
 }
+.module--Sett .wrap-form{
+  border: 1px solid rgba(161,161,161, 0.93);
+  width: 75%;
+  border-radius: 5px;
+  padding: 5px;
+}
+.module--Sett .wrap-form label{
+  display: block;
+  margin: 5px 0px 0px 10px;
+  color: #433d53;
+}
+.module--Sett .wrap--info{
+  border: 1px solid rgba(161,161,161, 0.93);
+  padding: 5px;
+  width: 25%; height: 40%;
+  margin: 0px 0px 0px 10px;
+  border-radius: 5px;
+}
+.module--Sett .wrap--info h2{
+  margin: 3px 0px 5px 10px;
+  color: #433d53;
+}
+
+.module--Sett .wrap--info label{
+  display: block;
+  margin: 10px 0px 10px 10px;
+  color: #433d53;
+}
+.wrap-form .k{
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width:60%;
+    outline: none;
+    display: block;
+    margin: 5px 0px 2px 10px;
+}
+.wrap-form .kn{
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width:40%;
+    outline: none;
+    margin: 5px 0px 2px 10px;
+}
+.wrap-form .content-form{
+  display: flex;
+  width: 80%;
+  border: 1px solid red;
+}
+
 .module--Sett .wrap-form .form-group{
     display: flex;
     flex-direction: column;
-    margin: 15px auto;
+    width: 50%;
+    /* margin: 15px auto; */
 
 }
-.module--Sett .wrap-form .form-group input[type="text"],input[type="number"],input[type="date"],input[type="password"]{
-    width: 45%;
-    outline: none;
-    margin: 5px 1px 1px;
-    padding: 6px 30px;
-    border: 1px solid rgb(182, 182, 182);
-    line-height: 1.20;
-}
+
 .module--Sett .wrap-form .form-group .btnsave{
     width: 45%;
     margin-top: 15px;
     padding: 7px ;
     background-color:#F9AB11;
     border: 1px solid rgba(161,161,161,0.53);
+}
+.form-group .btnact {
+    width: 30%;
+    margin-top: 15px;
+    padding: 9px;
+    border: 2px solid rgba(161,161,161,0.63);
+    outline: none;
+    border-radius: 5px;
 }
 .module--Sett .wrap-form .form-group .btnsave:hover{
     box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.3);
@@ -367,6 +419,7 @@ article{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-gap: 5px;
+    padding: 10px;
     /* border: 1px solid rgb(210, 146, 80); */
     /*justify-content: space-between;*/
 }
@@ -377,7 +430,7 @@ article{
     border-radius: 3px;
     background: transparent;
     justify-content: flex-start;
-    margin: 8px auto;
+    /* margin: 8px auto; */
 
 }
 .card-img-top-pro{
@@ -386,15 +439,42 @@ article{
     /* margin-bottom: 5px; */
     /* border: 1px dotted rgba(228, 23, 23, 0.63); */
 }
-.cardPro:hover { box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.4); }
+.card-img-top-pro{
+    width: 175px; height: 175px;
+    margin:2px;
+    /* margin-bottom: 5px; */
+    /* border: 1px dotted rgba(228, 23, 23, 0.63); */
+}
+
+.cardPro:hover {box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.4); }
+.cardPro:hover .ground{display: block;}
+.cardPro:hover .addpro{display: block;}
+
+.cardPro .ground{
+  background-color: rgba(0,0,0,0.8);
+  z-index: 2;
+  width: 179px; height: 254px;
+  border-radius: 3px;
+  opacity: .4;
+  display: none;
+  position: absolute;
+}
+
 .cardPro .addpro{
     display: none;
-    border-radius: 6px;
-    padding: 6px 10px;
-    width: 100px;
-    background-color: lime;
+    border-radius: 8px;
+    padding: 8px 10px; margin:-110px 33px 0px;
+    width: 110px;
+    text-align:center;
+    background-color: #008CBA;
+    color: white ;
     position: absolute;
+    z-index: 2;
+    animation-name: luz;
+    animation-duration: 1s;
+    box-sizing: border-box;
 }
+
 .cardPro .nombre-produt h3{
     margin:  5px;
     font-size: 1.4rem;
