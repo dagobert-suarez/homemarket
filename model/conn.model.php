@@ -17,10 +17,8 @@
                 }
             }
         }
-
         public static function closeDB(){
             self::$dbstatus=null;
         }
     }
-
  ?>

@@ -36,6 +36,7 @@ RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 #cliente
 RewriteRule ^inicioCliente$ index.php?controller=user&a=inicioCliente
+RewriteRule ^detalle$ index.php?controller=user&a=mirarProducto
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos

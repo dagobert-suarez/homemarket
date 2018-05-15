@@ -2,13 +2,11 @@
 require_once "model/user.model.php";
 class UserController{
 	private $users;
+  public function __CONSTRUCT(){
+      $this->users = new UserModel();
+  }
 
-    public function __CONSTRUCT(){
-        $this->users = new UserModel();
-    }
 //todo estos, son las validaciones en los campos de registrarse en la landin
-// visualiza la cantidad de Supermercados
-
 	function crear(){
 		$data=$_POST['data'];
 		// print_r($data);
@@ -18,14 +16,14 @@ class UserController{
 		// }
 		// return;
 		// 741569
-			$i = 0;
-			foreach ($data as $row) {
-				$result = $this->validarEspacio($data[$i]);
-				if ($result==false) {
-					echo json_encode('Tienes que llenar todos los campos');
-					return;
-				}
-				$i++;
+		$i = 0;
+		foreach ($data as $row) {
+			$result = $this->validarEspacio($data[$i]);
+			if ($result==false) {
+				echo json_encode('Tienes que llenar todos los campos');
+				return;
+			}
+			$i++;
 			}
 			$result = $this->validarEmail($data[5]);
 			if ($result==false) {
@@ -89,20 +87,19 @@ class UserController{
 		return $result;
 	}
 
-
-    function inicioCliente(){
-      if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
-				require_once "views/modules/cliente/header.php";
-        require_once "views/modules/cliente/maincliente.php";
-				// require_once "views/modules/cliente/maps.php";
-        // require_once "views/modules/cliente/navigator.php";
-        require_once "views/modules/cliente/footer.php";
-      }else{
-        header("Location: inicio");
-      }
+	 function inicioCliente(){
+    if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
+			require_once "views/modules/cliente/header.php";
+      require_once "views/modules/cliente/maincliente.php";
+			// require_once "views/modules/cliente/maps.php";
+      // require_once "views/modules/cliente/navigator.php";
+      require_once "views/modules/cliente/footer.php";
+    }else{
+      header("Location: inicio");
     }
+  }
+
 	//los ajustes del cliente
-	// ----------------------- //
 	function updatecli(){
 		$data = $_POST['data'];
 		$data[]=$_SESSION['USER']['ID'];
@@ -115,17 +112,15 @@ class UserController{
 		require_once "views/modules/cliente/footer.php";
 	}
 
-
-		function validarTelefono($data){
-			if (filter_var($data,FILTER_VALIDATE_INT)===false && strlen($data)<7 || strlen($data)>11) {
-				return false;
-			}else{
-				return true;
-			}
+	function validarTelefono($data){
+		if (filter_var($data,FILTER_VALIDATE_INT)===false && strlen($data)<7 || strlen($data)>11) {
+			return false;
+		}else{
+			return true;
 		}
+	}
 
-
-		function validarEspacio($data){
+	function validarEspacio($data){
 		if($data==''){
 			return false;
 		}else{
@@ -134,12 +129,13 @@ class UserController{
 	}
 
 	function validarEmail($data){
-	if(filter_var($data, FILTER_VALIDATE_EMAIL)===false){
-		return false;
-	}else{
-		return true;
+		if(filter_var($data, FILTER_VALIDATE_EMAIL)===false){
+			return false;
+		}else{
+			return true;
+		}
 	}
-}
+
 	// Validar Nombre
 	function validarNombre($data){
 		if(strlen($data)<3 || strlen($data)>20){
@@ -150,18 +146,15 @@ class UserController{
 	}
 	// Validar nombre
 	function validarCaracter($data){
-	$patron_texto = "/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ\s]+$/";
-	if (!preg_match ($patron_texto,$data)) {
-		return false;
-	}else{
-		return true;
+		$patron_texto = "/^[a-zA-ZáéíóúÁÉÍÓÚäëïöüÄËÏÖÜàèìòùÀÈÌÒÙ\s]+$/";
+		if (!preg_match ($patron_texto,$data)) {
+			return false;
+		}else{
+			return true;
+		}
 	}
 
-	// Validar Apellido
-
-}
-
-
+	// validar apellido
 	function validarApe($data){
 		if(strlen($data)<=3 || strlen($data)>20){
 			return false;
@@ -179,11 +172,8 @@ class UserController{
 				return true;
 			}
 		}
-
 	}
 
-
-	//solo la parte de validar contraseña
 	//solo la parte de validar contraseña
 	function validarPassword($data){
 		if (strlen($data)<8) {
@@ -214,28 +204,29 @@ class UserController{
 				}*/
 	}
 	function readbyusu(){
-			  $res = $this->users->readByCod($_SESSION['USER']['ID']);
-				return $res;
-	}
+		$res = $this->users->readByCod($_SESSION['USER']['ID']);
+		return $res;
+		}
+
 	function updateClie(){
-			  $data = $_POST['data'];
-				$data[]=$_SESSION['USER']['ID'];
-				foreach ($data as $row) {
-					if($row==""){
-						$_SESSION['message']="campos vacios";
-						header("Location: Ajustes");
-						return;
-					}
-				}
-				$result = $this->users->updateUser($data);
-				if ($result==true) {
-					$_SESSION['message']="Modificacion exitosa";
-					$_SESSION['USER']['NAME']=$data[0];
-					header("Location: Ajustes");
-				}else{
-					$_SESSION['message']="Ocurrio un error";
-					header("Location: Ajustes");
-				}
+	  $data = $_POST['data'];
+		$data[]=$_SESSION['USER']['ID'];
+		foreach ($data as $row) {
+			if($row==""){
+				$_SESSION['message']="campos vacios";
+				header("Location: Ajustes");
+				return;
+			}
+		}
+		$result = $this->users->updateUser($data);
+			if ($result==true) {
+				$_SESSION['message']="Modificacion exitosa";
+				$_SESSION['USER']['NAME']=$data[0];
+				header("Location: Ajustes");
+			}else{
+				$_SESSION['message']="Ocurrio un error";
+				header("Location: Ajustes");
+			}
 	}
 	function contra(){
 		$dataUser = $this->users->readContraseña($_SESSION['USER']['ID']);
@@ -266,6 +257,11 @@ class UserController{
 				// 	$_SESSION['message']="Ocurrio un error";
 				// 	header("Location: Ajustes");
 				// }
+	}
+	function mirarProducto(){
+		require_once "views/modules/cliente/header.php";
+		require_once "views/modules/cliente/detalleProducto.php";
+		require_once "views/modules/cliente/footer.php";
 	}
 }
 ?>
