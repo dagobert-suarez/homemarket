@@ -189,10 +189,22 @@ class ProductModel{
           $query=$this->pdo->prepare($sql);
           $query->execute(array($data));
           $result = $query->fetch(PDO::FETCH_BOTH);
-      } catch(PDOException $e){
+        } catch(PDOException $e){
           $result = $e->getMessage();
       }
       return $result;
+   }
+
+   function readIdPro($data){
+     try{
+       $sql="SELECT * FROM productos WHERE id_pro = ?";
+       $query=$this->pdo->prepare($sql);
+       $query->execute(array($data));
+       $result = $query->fetch(PDO::FETCH_BOTH);
+     } catch(PDOException $e){
+       $result = $e->getMessage();
+     }
+     return $result;
    }
 
    //CRUD de proveeddores

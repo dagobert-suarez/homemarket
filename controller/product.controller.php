@@ -121,7 +121,7 @@ class ProductController{
 
       function viewProducts(){
           $result = $this->product->readProducts();
-          return  $result;
+          return $result;
       }
       public function readByIdproc($data){
           $result=$this->product->readByproc($data);
@@ -154,9 +154,12 @@ class ProductController{
           echo "<script>window.location.href='Productos-empleado'</script>";
       }
 
-      //visualiza los productos en la pagina de cliente
+      function readIdProduct($data){
+           $result=$this->product->readIdPro($data);
+           return $result;
+       }
 
-      // Categorias
+      // CRUD Categorias
       //envia el registro de categoria
       function createCategory(){
         $data = $_POST['data'];
@@ -166,7 +169,6 @@ class ProductController{
 
       }
 
-          // crud categorias
           //visualiza las  categorias en la pagina del empleado
           function readCategory(){
               $result = $this->product->readCategory();
@@ -197,7 +199,6 @@ class ProductController{
           }
 
           // supermercados
-
            // Seleccionar por Supermercados
           function readByIdSup($data){
                $result=$this->product->readBySup($data);

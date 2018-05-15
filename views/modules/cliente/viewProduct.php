@@ -1,8 +1,8 @@
 <div class="modules">
   <div class="Productos">
 <?php
-        $data = $this->viewProducts();
-        foreach ($data as $row) { ?>
+$item =1;
+        foreach ($this->viewProducts() as $row){?>
 
       <div class="cardPro" >
         <div class="ground"></div>
@@ -18,6 +18,7 @@
         <!-- <a href="#" class="addpro">nose</a> -->
       </div>
 <?php
+$item++;
     }
     ?>
 </div>
