@@ -27,6 +27,11 @@ class ProductController{
       require_once "views/modules/admin/mySuper.php";
       require_once "views/modules/admin/footer_admin.php";
   }
+  function BySupermercado(){
+    require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/PorSupermercado.php";
+    require_once "views/modules/cliente/footer.php";
+  }
   // Empleado
   // -------------
   // Crear Producto
@@ -106,7 +111,7 @@ class ProductController{
             }
 
         }else {
-          // die("Error ".$_FILES["file"]["error"]);
+          die("Error ".$_FILES["file"]["error"]);
         }
          $result = $this->product->createProduct($data);
          echo '<script language="javascript">alert("creado con exito");</script>';
@@ -129,9 +134,9 @@ class ProductController{
       public function updateProc(){
           $data = $_POST['data'];
           $img = $_FILES['file'];
-          $data[]=$img['name'];
-          copy($img['tmp_name'],"views/assets/image/productos/".$img['name']);
-          $result = $this->product->updateProc($data);
+          // $data[]=$img['name'];
+          // copy($img['tmp_name'],"views/assets/image/productos/".$img['name']);
+          $result = $this->product->updateProduct($data);
 
           echo '<script language="javascript">alert("Modificado con exito");</script>';
           echo "<script>window.location.href='Productos-empleado'</script>";
@@ -171,10 +176,24 @@ class ProductController{
               $result = $this->product->readByCat($data);
               return $result;
           }
+          public function readCategoryJson(){
+              $result = $this->product->readByCat($_POST['data']);
+              $_SESSION['update_category']=$result[0];
+              echo json_encode($result);
+          }
+          public function updateCategory(){
+              $result = $this->product->updateCategory(array($_POST['data'],$_SESSION['update_category']));
+              echo json_encode($result);
+          }
           public function updateCat(){
               $data = $_POST['data'];
               $result = $this->product->updateCategory($data);
               header("Location:nueva-categoria");
+          }
+          public function deleteCat(){
+              $data = $_POST['data'];
+              $result = $this->product->deleteCat($data);
+            echo json_encode($result);
           }
 
           // supermercados

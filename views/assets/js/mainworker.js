@@ -27,10 +27,45 @@ $(document).ready(function() {
 $(".abrirmodal").click(function() {
  $(".fondo").toggle();
  $(".wrap").toggle();
+ $.ajax({
+   url:"ver-categoria",
+   type:"post",
+   dataType:"json",
+   data:({data:this.id}),
+   success:function(result){
+     console.log(result);
+     $("#updateCategoryName").val(result[1]);
+   },
+   error:function(result){console.log(result);}
+ });
 });
 $(".close").click(function(){
     $(".fondo").toggle();
     $(".wrap").toggle();
+    $("#updateCategoryName").val("");
+});
+//actualizar categoria
+$("#updateCate").submit(function(e){
+  e.preventDefault();
+  if ($("#updateCategoryName").val()!="") {
+    $.ajax({
+      url:"actualizar-categoria",
+      type:"post",
+      dataType:"json",
+      data:({data:$("#updateCategoryName").val()}),
+      success:function(result){
+        console.log(result);
+        if(result==true){
+          location.reload();
+        }else{
+          alert(result);
+        }
+      },
+      error:function(result){console.log(result);}
+    });
+  }else{
+    alert("Campos vacios");
+  }
 });
 $(".fondo").click(function() {
  // $(".fondo").css("display","none");
@@ -45,7 +80,41 @@ $(".fondo").click(function() {
 $(".modalDet").click(function(){
     $(".fondo-det").toggle();
     $(".wrap-det").toggle();
+    var id = this.id;
+    id = id.replace("D","");
+    $.ajax({
+      url:"ver-categoria",
+      type:"post",
+      dataType:"json",
+      data:({data:id}),
+      success:function(result){
+        console.log(result);
+        $("#codeCat").html(result[0]);
+        $("#nomCat").html(result[1]);
+      },
+      error:function(result){console.log(result);}
+    });
 });
+//eliminar categoria
+function eliminarCategoria(id){
+  if (confirm("¿Eliminar esta categoria?")) {
+    $.ajax({
+      url:"eliminar-categoria",
+      type:"post",
+      dataType:"json",
+      data:({data:id}),
+      success:function(result){
+        console.log(result);
+        if (result==true) {
+          location.reload();
+        }else{
+          alert("Ocurrio un error");
+        }
+      },
+      error:function(result){console.log(result);}
+    });
+  }
+}
 $(".closedet").click(function(){
     $(".fondo-det").toggle();
     $(".wrap-det").toggle();

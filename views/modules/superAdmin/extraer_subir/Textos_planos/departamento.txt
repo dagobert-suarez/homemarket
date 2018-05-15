@@ -1,7 +1,0 @@
-codigo_dpto;nombre;codigo_pais
-3434;antioquia;5757codigo_dpto;nombre;codigo_pais
-234567;  antioquia  ;1codigo_dpto;nombre;codigo_pais
-234567;  antioquia  ;1codigo_dpto;nombre;codigo_pais
-234567;  antioquia  ;1codigo_dpto;nombre;codigo_pais
-234567;  antioquia  ;1codigo_dpto;nombre;codigo_pais
-234567;  antioquia  ;1

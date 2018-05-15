@@ -35,6 +35,39 @@ class UserModel{
 				  }
 					return $msn;
 			 }
+	function readByCod($data){
+			 try{
+				 $sql = "SELECT * FROM usuario WHERE id_usu = ?";
+				 $query = $this->pdo->prepare($sql);
+				 $query->execute(array($data));
+					 $msn = $query->fetch(PDO::FETCH_BOTH);
+					}catch (PDOException $e) {
+						die($e->getMessage());
+				  }
+					return $msn;
+			 }
+	function readContraseña($data){
+			 try{
+				 $sql = "SELECT * FROM acceso WHERE id_usu = ?";
+				 $query = $this->pdo->prepare($sql);
+				 $query->execute(array($data));
+					 $msn = $query->fetch(PDO::FETCH_BOTH);
+					}catch (PDOException $e) {
+						die($e->getMessage());
+				  }
+					return $msn;
+			 }
+	function readSuper(){
+			 try{
+				 $sql = "SELECT * FROM supermercado INNER JOIN ciudad ON supermercado.cod_ciu = ciudad.cod_ciu ";
+				 $query = $this->pdo->prepare($sql);
+				 $query->execute();
+					 $msn = $query->fetchAll(PDO::FETCH_BOTH);
+					}catch (PDOException $e) {
+						die($e->getMessage());
+				  }
+					return $msn;
+			 }
 	function readBy($data){
 		try {
 				$sql= "SELECT * FROM usuario WHERE id_usu = ?";
@@ -83,8 +116,7 @@ class UserModel{
 			 // Crear Supermercado
 			  function createSuper($data){
 				 try{
-					 $sql="INSERT INTO supermercado(nom_sup, dir_sup, tel_sup, cod_ciu,logo_sup)
-					 			VALUES (?,?,?,?,?)";
+					 $sql="call crear_sup(?,?,?,?,?)";
 					 $query=$this->pdo->prepare($sql);
 					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4] ) ) ;
 					 $msn ="Guardado Exitoxamente";
@@ -92,7 +124,7 @@ class UserModel{
 					 $msn = $e->getMessage();
 				 }
 
-				 return $result;
+				 return $msn;
 			 }
 			 // Seleccionar todos los supermercados
 			  function readAllSup(){
@@ -202,6 +234,29 @@ class UserModel{
 					 $query=$this->pdo->prepare($sql);
 					 $query->execute(array($data[0], $data[1], $data[2]));
 					 $msn= "Modificado Exitosamente";
+				 } catch (PDOException $e){
+					 $msn= $e->getMessage();
+				 }
+				 return $msn;
+			 }
+			 // actualizar usuario
+			  function updateUser($data){
+				 try{
+					 $sql="UPDATE usuario SET nom_usu = ? , ape_usu = ?, fec_nac_usu = ?, tel_usu = ? WHERE id_usu = ?";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4]));
+					 $msn= true;
+				 } catch (PDOException $e){
+					 $msn= $e->getMessage();
+				 }
+				 return $msn;
+			 }
+			  function updateUserContra($data){
+				 try{
+					 $sql="UPDATE acceso SET contra = ?  WHERE id_usu = ?";
+					 $query=$this->pdo->prepare($sql);
+					 $query->execute(array($data[0], $data[1]));
+					 $msn= true;
 				 } catch (PDOException $e){
 					 $msn= $e->getMessage();
 				 }

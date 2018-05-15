@@ -15,12 +15,14 @@
  <div class="content">
    <form class="" action="actualizando-producto" method="post" enctype="multipart/form-data">
      <label for="" class="see" >Id del producto: <?php echo $_GET["data"]; ?></label>
-        <!-- <input type="text" readonly name="data[]" value="<?php echo $_GET["data"]; ?>"> -->
+        <!-- <input type="text" readonly name="data[]" value="<?php
+        // echo $_GET["data"]; 
+        ?>"> -->
 
 
         <div class="content-form">
             <div class="form-group">
-              <label for="" class="required">Nombre de la Producto:</label>
+              <label for="" class="required">Nombre del Producto:</label>
               <input type="text" class="k" name="data[]" value="<?php echo $dataProduct["nom_pro"];?>">
             </div>
 
@@ -38,13 +40,28 @@
          </div>
 
          <div class="form-group">
+           <label for="" class="required">Categoria del Producto:</label>
+           <select class="product" name="data[]" value="<?php echo $dataProduct["id_tip_pro"];?>">
+             <option value=""></option>
+             <?php
+             foreach ($this->product->readCategory() as $row) {
+               if ($dataProduct['id_tip_pro']==$row['id_tip_pro']) {
+                 echo "<option value='$row[0]' selected>$row[1]</option>";
+               }else{
+                 echo "<option value='$row[0]'>$row[1]</option>";
+               }
+             }
+               ?>
+             </select>
+           </div>
+       </div>
+
+       <div class="content-form">
+         <div class="form-group">
            <label for=""class="required">Cantidad del producto:</label>
            <input class="k" type="number"  name="data[]" value="<?php echo $dataProduct["can_pro"];?>">
          </div>
 
-       </div>
-
-       <div class="content-form">
          <div class="form-group">
            <label for="" class="required">Unidad medida:</label>
            <select name="data[]" class="ks" value="<?php echo $dataProduct["uniMed_pro"];?>">
@@ -62,22 +79,6 @@
        </div>
 
       <div class="content-form">
-        <div class="form-group">
-          <label for="" class="required">Categoria del Producto:</label>
-          <select class="product" name="data[]" value="<?php echo $dataProduct["id_tip_pro"];?>">
-            <option value=""></option>
-            <?php
-            foreach ($this->product->readCategory() as $row) {
-              if ($dataProduct['id_tip_pro']==$row['id_tip_pro']) {
-                echo "<option value='$row[0]' selected>$row[1]</option>";
-              }else{
-                echo "<option value='$row[0]'>$row[1]</option>";
-              }
-            }
-              ?>
-            </select>
-          </div>
-
           <label for="">Imagen producto:</label>
           <input type="file" name="file" value=""><br><br>
 

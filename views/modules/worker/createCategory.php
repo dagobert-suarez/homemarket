@@ -41,9 +41,9 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 						<td><?php echo $row["id_tip_pro"] ;?></td>
 						<td><?php echo $row["nom_tip_pro"] ;?></td>
 						<td>
-							<a href="#" class="abrirmodal"><i class="fa fa-pencil"></i>Editar</a>
-							<a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a>
-							<a href="eliminar-tipo-<?php echo $row['id_tip_pro'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
+							<a href="#" class="abrirmodal" id="<?php echo $row["id_tip_pro"] ;?>"><i class="fa fa-pencil"></i>Editar</a>
+							<a href="#"class="modalDet" id="D<?php echo $row["id_tip_pro"] ;?>"><i class="fa fa-info"></i>Detalles</a>
+							<a href="#" onclick="eliminarCategoria(<?php echo $row["id_tip_pro"] ;?>)"><i class="fa fa-trash"></i>Eliminar</a>
 						</td>
 
 					</tr>
@@ -61,11 +61,10 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 				</div>
 
 				<div class="wrap-bod">
-					<form  name="frmCategory" action="actualizar-categoria" method="post">
+					<form  name="frmCategory" id="updateCate">
 						<label for="">Nombre de la categoria:</label>
-						<input type="text" class="k" name="data[]" required value=""><br>
+						<input type="text" class="k" name="data[]" required id="updateCategoryName"><br>
 						<button type="submit" name="button">Actualizar</button>
-						<h1>en procceso de desarrollo</h1>
 					</form>
 
 				</div>
@@ -83,9 +82,8 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 					<i class="closedet">&times;</i>
 				</div>
 				<div class="wrap-bod">
-					<p>La vista para el detalle de la categoria</p>
-						<label for="">en procceso de desarrollo</label>
-						<br>
+					Codigo: <p id="codeCat"></p>
+					Nombre: <p id="nomCat"></p>
 			</div>
 		</div>
 		<!--  Fin de Detalles -->

@@ -1,6 +1,0 @@
-id;nombre;direccion;telefono;cod_ciu;logo;lon_sup;lat_sup;inicio;finid;nombre;direccion;telefono;cod_ciu;logo;lon_sup;lat_sup;inicio;fin
-5;  dsag  ;  ergr  ;  32534  ;345;  eb40b3afe3b530491e8eceef2660d8df.jpg;;;;id;nombre;direccion;telefono;cod_ciu;logo;lon_sup;lat_sup;inicio;fin
-5;  dsag  ;  ergr  ;  32534  ;345;  eb40b3afe3b530491e8eceef2660d8df.jpg;;;;id;nombre;direccion;telefono;cod_ciu;logo;lon_sup;lat_sup;inicio;fin
-5;  dsag  ;  ergr  ;  32534  ;345;  eb40b3afe3b530491e8eceef2660d8df.jpg;;;;id;nombre;direccion;telefono;cod_ciu;logo;lon_sup;lat_sup;inicio;fin
-5;  dsag  ;  ergr  ;  32534  ;345;  eb40b3afe3b530491e8eceef2660d8df.jpg;;;;id;nombre;direccion;telefono;cod_ciu;logo;lon_sup;lat_sup;inicio;fin
-5;  dsag  ;  ergr  ;  32534  ;345;  eb40b3afe3b530491e8eceef2660d8df.jpg;;;;
