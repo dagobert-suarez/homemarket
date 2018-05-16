@@ -40,12 +40,12 @@ RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 #cliente
 RewriteRule ^inicioCliente$ index.php?controller=user&a=inicioCliente
-RewriteRule ^detalle-$ index.php?controller=user&a=mirarProducto
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
+RewriteRule ^detalle-(\w+)$ index.php?controller=product&a=detalleProduct&data=$1
 RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=product&a=BySupermercado&data=$1
 
 #supermercado

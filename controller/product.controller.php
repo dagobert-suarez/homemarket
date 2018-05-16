@@ -69,6 +69,12 @@ class ProductController{
     require_once "views/modules/worker/footer.php";
   }
 
+  function detalleProduct(){
+    require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/detalleProducto.php";
+    require_once "views/modules/cliente/footer.php";
+  }
+
     public function __CONSTRUCT(){
         $this->product = new ProductModel();
     }
