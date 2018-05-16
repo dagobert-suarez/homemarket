@@ -15,7 +15,6 @@ $item =1;
         </div>
         <p class="card-text-pro"></p>
         <a  class="addpro" href="detalle-<?php echo $row["id_pro"]; ?>" >mirar</a>
-        <!-- <a href="#" class="addpro">nose</a> -->
       </div>
 <?php
 $item++;
