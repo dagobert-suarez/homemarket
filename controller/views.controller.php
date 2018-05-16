@@ -1,31 +1,36 @@
 <?php
 require_once("model/user.model.php");
 class viewsController{
-		private $userModel;
-		public function __CONSTRUCT(){
+	private $userModel;
+	public function __CONSTRUCT(){
 		$this->userModel = new UserModel();
 	}
 
-	function  readTodos(){
+	function  readTodos(){{}
 		$result = $this->userModel->readTodos()[0];
 		return $result	;
 	}
+
 	function  readSuper(){
 		$result = $this->userModel->readSuper();
 		echo json_encode($result);
 	}
+
 	 function prove(){
 		 $result = $this->userModel->prove()[0];
 		 return $result;
 	 }
+
 	 function readBy($data){
 		 $result = $this->userModel->readBy($data);
 		 return $result;
 	 }
+
 	 function readAllEm(){
 		 $result = $this->userModel->readAllEm();
 		 return $result;
 	 }
+
 	 function update(){
 		 $data = $_POST['data'];
 		 $data[]=$_SESSION['USER']['ID'];
@@ -105,6 +110,7 @@ class viewsController{
 			require_once "views/modules/admin/updateADS.php";
 			require_once "views/modules/admin/footer_admin.php";
 		}
+
 		// Supermercados
 		public function newSuper(){
 			$data = $_POST['data'];
