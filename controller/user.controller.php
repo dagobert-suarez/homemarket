@@ -87,17 +87,19 @@ class UserController{
 		return $result;
 	}
 
-	 function inicioCliente(){
-    if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
-			require_once "views/modules/cliente/header.php";
-      require_once "views/modules/cliente/maincliente.php";
-			// require_once "views/modules/cliente/maps.php";
-      // require_once "views/modules/cliente/navigator.php";
-      require_once "views/modules/cliente/footer.php";
-    }else{
-      header("Location: inicio");
-    }
-  }
+	//  function inicioCliente(){
+  //   if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
+	// 		require_once "views/modules/cliente/header.php";
+	// 		require_once "views/modules/cliente/menuTopC.php";
+	// 		require_once "views/modules/cliente/navigator.php";
+	// 		require_once "views/modules/cliente/viewSuper.php";
+	// 		require_once "views/modules/cliente/footer.php";
+	// 		// require_once "views/modules/cliente/maps.php";
+  //     // require_once "views/modules/cliente/navigator.php";
+  //   }else{
+  //     header("Location: inicio");
+  //   }
+  // }
 
 	//los ajustes del cliente
 	function updatecli(){
