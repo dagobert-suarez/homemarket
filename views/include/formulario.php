@@ -15,7 +15,6 @@
         </div>
         <div class="form-group">
           <input type="submit" name="enviar_btn" class="btn btn-primary btn-sm" id="sent" value="Enviar" />
-          <button type="button" name="enviar_btn" id="sent">Enviar</button>
         </div>
       </div>
   </body>
