@@ -1,4 +1,4 @@
-<?php $dataProduct = $this->readIdProduct($GET_["data"]); ?>
+<?php $dataProduct = $this->readIdProduct($_GET["data"]); ?>
 <div class="">
   <h1>aquí van los detalles del producto</h1>
   <div class="">
