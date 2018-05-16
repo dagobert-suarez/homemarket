@@ -56,24 +56,16 @@ class LoginController{
 				echo '<h1>el usuario no existe</h1>';
 			}
 		}
+		function enviar(){
+			if(mail($_POST['mail_txt'],'Recuperar tú Contraseña','este es el enlace para recuperar su contraseña http://localhost/homemarket/validar')){
+				echo "enviado";
+			}else{
+				echo "ocurrio un errors";
+				}
+			}
+			function recuperar(){
+				require_once "views/include/recuperar.php";
+			}
+}
 
-	}
-	// function enviar(){
-	// 	if(mail('home4market@gmail.com','recuperacion','este es el enlace para recuperar su contraseña http://localhost/homemarket/recuperar')){
-	// 		echo "enviado";
-	// 	}else{
-	// 		echo "ocurrio un error";
-	//
-	//
-	// 	// enviar correos, para recuperar contraseña
-	// 	// autor: david urrego
-	// 	function enviar(){
-	// 		if(mail('davidurrego302@gmail.com','recuperacion','nosekmansjfbsdajasdj')){
-	// 			echo "enviado";
-	// 		}else{
-	// 			echo "ocurrio un error";
-	// 		}
-	//
-	// 	}
-	// }
 ?>

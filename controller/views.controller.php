@@ -6,12 +6,12 @@ class viewsController{
 		$this->userModel = new UserModel();
 	}
 
-	function  readTodos(){{}
+	function readTodos(){
 		$result = $this->userModel->readTodos()[0];
-		return $result	;
+		return $result;
 	}
 
-	function  readSuper(){
+	function readSuper(){
 		$result = $this->userModel->readSuper();
 		echo json_encode($result);
 	}
