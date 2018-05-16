@@ -57,7 +57,7 @@ class LoginController{
 			}
 		}
 		function enviar(){
-			if(mail($_POST['mail_txt'],'Recuperar tú Contraseña','este es el enlace para recuperar su contraseña http://localhost/homemarket/validar')){
+			if(mail($_POST['mail_txt'],'Recuperar tú Contraseña','En el siguiente enlace podrá recuperar su contraseña http://localhost/homemarket/validar')){
 				echo "enviado";
 			}else{
 				echo "ocurrio un error";
