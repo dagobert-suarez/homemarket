@@ -260,10 +260,5 @@ class UserController{
 				// 	header("Location: Ajustes");
 				// }
 	}
-	function mirarProducto(){
-		require_once "views/modules/cliente/header.php";
-		require_once "views/modules/cliente/detalleProducto.php";
-		require_once "views/modules/cliente/footer.php";
-	}
 }
 ?>
