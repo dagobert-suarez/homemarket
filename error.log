@@ -41,3 +41,21 @@
 [16-May-2018 22:45:43 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: guffyherrera150@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
 [16-May-2018 22:46:35 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: dagobertsuarez@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
 [16-May-2018 22:50:59 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+<<<<<<< HEAD
+=======
+[16-May-2018 22:54:21 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 04:43:25 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 04:54:49 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: durrego02@misena.edu.co -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 04:56:11 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: durrego02@misena.edu.co -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 04:56:35 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: durrego02@misena.edu.co -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 04:57:43 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: durrego02@misena.edu.co -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:01:55 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:03:25 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:03:40 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:03:54 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:04:22 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:05:28 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:07:56 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:53:23 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+[17-May-2018 05:54:29 Europe/Berlin] mail() on [C:\xampp\htdocs\homemarket\controller\login.controller.php:60]: To: davidurrego302@gmail.com -- Headers:  -- Subject: Recuperar tú Contraseña
+>>>>>>> 36326ed2a699b7ed2b6219b99e9c0057ac45edfc

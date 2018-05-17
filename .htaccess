@@ -9,6 +9,7 @@ RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
 RewriteRule ^recuperar$ index.php?controller=views&a=forgot
 RewriteRule ^email$ index.php?controller=login&a=enviar
+RewriteRule ^recupera$ index.php?controller=login&a=recuperar
 
 #manual de usuario
 RewriteRule ^explora$ index.php?controller=manual&a=explora
@@ -38,12 +39,17 @@ RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 
 #cliente
+<<<<<<< HEAD
 RewriteRule ^inicioCliente$ index.php?controller=product&a=Supermercados
+=======
+RewriteRule ^inicioCliente$ index.php?controller=user&a=inicioCliente
+>>>>>>> 36326ed2a699b7ed2b6219b99e9c0057ac45edfc
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
+RewriteRule ^detalle-(\w+)$ index.php?controller=product&a=detalleProduct&data=$1
 RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=product&a=BySupermercado&data=$1
 
 #supermercado
