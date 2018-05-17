@@ -57,12 +57,7 @@ class LoginController{
 			}
 		}
 		function enviar(){
-<<<<<<< HEAD
-			if(mail($_POST['mail_txt'],'Recuperar tú Contraseña','este es el enlace para recuperar su contraseña http://localhost/homemarket/validar')){
-				echo "enviado";
-			}else{
-				echo "ocurrio un errors";
-=======
+
 			if(mail($_POST['mail_txt'],'Recuperar tú Contraseña','En el siguiente enlace podrá recuperar su contraseña http://localhost/homemarket/recupera')){
 				// header("location:inicio");
 				echo "<script>
@@ -72,7 +67,7 @@ class LoginController{
 		echo "enviado";
 			}else{
 				echo "ocurrio un error";
->>>>>>> 36326ed2a699b7ed2b6219b99e9c0057ac45edfc
+				
 				}
 			}
 			function recuperar(){
