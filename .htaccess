@@ -39,7 +39,11 @@ RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 
 #cliente
+<<<<<<< HEAD
+RewriteRule ^inicioCliente$ index.php?controller=product&a=Supermercados
+=======
 RewriteRule ^inicioCliente$ index.php?controller=user&a=inicioCliente
+>>>>>>> 36326ed2a699b7ed2b6219b99e9c0057ac45edfc
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos

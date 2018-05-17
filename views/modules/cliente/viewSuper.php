@@ -1,3 +1,5 @@
+<div id="map"> </div>
+<?php require_once "views/modules/cliente/navigator.php"; ?>
 <div class="gallery--content">
     <div class="buscador">
         <input  class="sch" type="search" name="" value="" placeholder="Buscar Supermercados">

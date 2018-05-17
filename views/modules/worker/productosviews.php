@@ -28,7 +28,7 @@
       <tr class="even">
         <td><?php echo $row["id_pro"]; ?></td>
         <td><?php echo $row["nom_pro"]; ?></td>
-        <td><?php echo $row["des_pro"]; ?></td>
+        <td><?php echo $row["cont_pro"]; ?></td>
         <td><?php echo $row["uniMed_pro"]; ?></td>
         <td><?php echo $row["mar_pro"]; ?></td>
         <td>
