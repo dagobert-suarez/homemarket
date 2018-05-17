@@ -26,6 +26,7 @@
               require_once("views/modules/admin/Navigator.php");
 
              ?>
+
         </header>
         <div class="wrap--content">
             <?php

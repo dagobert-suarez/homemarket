@@ -39,15 +39,14 @@ RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 
 #cliente
-RewriteRule ^inicioCliente$ index.php?controller=product&a=Supermercados
-RewriteRule ^inicioCliente$ index.php?controller=user&a=inicioCliente
+RewriteRule ^inicioCliente$ index.php?controller=views&a=inicioCliente
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
-RewriteRule ^Supermercados$ index.php?controller=product&a=Supermercados
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
 RewriteRule ^detalle-(\w+)$ index.php?controller=product&a=detalleProduct&data=$1
 RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=product&a=BySupermercado&data=$1
+RewriteRule ^carritoCliente$ index.php?controller=product&a=updateClie&data=$1
 
 #supermercado
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
@@ -62,7 +61,7 @@ RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
 RewriteRule ^actualizar-empleado(\w+)$ index.php?controller=user&a=update
 
 #crud
-RewriteRule ^guardar-super$ index.php?controller=views&a=newSuper
+RewriteRule ^guardar-super$ index.php?controller=supermercado&a=newSuper
 RewriteRule ^editar-supermercado$ index.php?controller=views&a=updateSup
 RewriteRule ^actualizar-super-(\w+)$ index.php?controller=views&a=updatesuper&data=$1
 RewriteRule ^eliminar-supermercado-(\w+)$ index.php?controller=views&a=deleteSup&data=$1

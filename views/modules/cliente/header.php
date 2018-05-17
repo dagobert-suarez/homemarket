@@ -23,7 +23,6 @@
           </div>
           <nav>
               <ul class="options">
-                  <li><a href="Supermercados"><i class="fa fa-building"></i> Supermercados</a></li>
                   <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i> Notificaciones</a> </li>
                   <li><a href="Ajustes"><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</a></li>
                   <li><a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesion</a></li>

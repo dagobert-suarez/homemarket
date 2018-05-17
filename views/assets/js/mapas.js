@@ -71,7 +71,7 @@ GMaps.geolocate({
         map.setCenter(position.coords.latitude, position.coords.longitude)
     },
     error:function(error){
-            alert("En serio está usando este navegador?");
+            alert("vamo probar");
     }
 
 });
