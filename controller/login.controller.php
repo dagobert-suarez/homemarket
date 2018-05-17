@@ -57,11 +57,21 @@ class LoginController{
 			}
 		}
 		function enviar(){
-			if(mail('home4market@gmail.com','recuperacion','este es el enlace para recuperar su contraseña http://localhost/homemarket/recuperar')){
-				echo "enviado";
+
+			if(mail($_POST['mail_txt'],'Recuperar tú Contraseña','En el siguiente enlace podrá recuperar su contraseña http://localhost/homemarket/recupera')){
+				// header("location:inicio");
+				echo "<script>
+                alert('enviado');
+                window.location= 'inicio'
+    </script>";
+		echo "enviado";
 			}else{
 				echo "ocurrio un error";
+				
 				}
+			}
+			function recuperar(){
+				require_once "views/include/recuperar.php";
 			}
 }
 

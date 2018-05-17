@@ -10,11 +10,15 @@
     <br/>
       <div class="kepp">
         <h3>Restablecer Contraseña:</h3>
+        <p>Ingresa Tu corro</p>
         <div class="form-group">
           <input type="email" placeholder = "Ingrese su Correo Electronico" class="form-control" id="k" name="mail_txt" />
         </div>
         <div class="form-group">
           <input type="submit" name="enviar_btn" class="btn btn-primary btn-sm" id="sent" value="Enviar" />
+
+          <!-- <button type="button" name="enviar_btn" id="sent">Enviar</button> -->
+          
         </div>
       </div>
   </body>

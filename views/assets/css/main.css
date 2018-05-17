@@ -1,6 +1,5 @@
 /*@import "reset.css";*/
 @import "color.css";
-@import "animation.css";
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Lato|Montserrat|Noto+Sans|PT+Sans|Raleway|Roboto:100,300,400 ');
 body{
   margin: 0;
@@ -225,9 +224,7 @@ picture  h1{
     font-family: 'Raleway',sans-serif;
     color:rgb(254, 254, 254) ;
     padding-top: 20px;
-  
 }
-
 
  .info p{
   text-align: center;
@@ -239,8 +236,6 @@ picture  h1{
   font-family: 'Roboto',sans-serif;
   font-weight: 300;
   margin-top: 180px;
-  animation-name:letf;
-  animation-duration: 1s;
 
 }
 .info p span{
@@ -260,8 +255,6 @@ picture  h1{
   margin-top: 100px;
   top: 230px;
   left: 40%;
-  animation-name: Down;
-  animation-duration: 1.5s;
 }
 .starbtn:hover{
   color: #f1f1f1;
@@ -287,6 +280,10 @@ picture  h1{
   background-color: #ffab07;
 }
 
+@keyframes raz {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
@@ -338,8 +335,6 @@ picture  h1{
   margin: 40px 20px 0px 45px;
   letter-spacing: 0.5px;
   font-family: 'Noto sans', sans-serif;
-  animation-name:R;
-  animation-duration: 2s;
 }
 #registro{
   margin-top: 1.0%;

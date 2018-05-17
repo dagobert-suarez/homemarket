@@ -15,84 +15,40 @@
 </div>
 <div class="wrap--infosup">
 <p>nose</p>
+<!-- <div class="all">
+  <div class="content-title">
+      <h2 class="">Tus Filtros</h2>
+  </div>
+  <div class="contentex">
+      <ul>
+        <li><a href="Supermercados">Supermercados</a></li>
+        <li><a href="Productos">Productos</a></li>
+        <li><a href="#">historial</a></li>
+      </ul>
+  </div>
+</div> -->
 <div class="Productos">
-    <div class="cardPro" >
-         <img class="card-img-top-pro" src="views/assets/image/productos/automercado-granos-frijolesycubaces21_grande.png" alt="">
-         <!-- <a href="" class="addpro">Agregar</a> -->
-      <div class="nombre-produt">
-        <h3>Nom pro:</h3>
-      </div>
-      <div class="descrip-produt">
-        <h4>Valor pro</h4>
-      </div>
-      <!-- <h4 class="card-title-pro">Jumbo</h4> -->
-      <p class="card-text-pro"></p>
-      <!-- <a href="#" class="btn-go">ir a mercar</a> -->
-    </div>
-    <div class="cardPro" >
-         <img class="card-img-top-pro" src="views/assets/image/productos/automercado-granos-frijolesycubaces21_grande.png" alt="">
-         <!-- <a href="" class="addpro">Agregar</a> -->
-      <div class="nombre-produt">
-        <h3>Nom pro:</h3>
-      </div>
-      <div class="descrip-produt">
-        <h4>Valor pro</h4>
-      </div>
-      <!-- <h4 class="card-title-pro">Jumbo</h4> -->
-      <p class="card-text-pro"></p>
-      <!-- <a href="#" class="btn-go">ir a mercar</a> -->
-    </div>
-    <div class="cardPro" >
-         <img class="card-img-top-pro" src="views/assets/image/productos/automercado-granos-frijolesycubaces21_grande.png" alt="">
-         <!-- <a href="" class="addpro">Agregar</a> -->
-      <div class="nombre-produt">
-        <h3>Nom pro:</h3>
-      </div>
-      <div class="descrip-produt">
-        <h4>Valor pro</h4>
-      </div>
-      <!-- <h4 class="card-title-pro">Jumbo</h4> -->
-      <p class="card-text-pro"></p>
-      <!-- <a href="#" class="btn-go">ir a mercar</a> -->
-    </div>
-    <div class="cardPro" >
-         <img class="card-img-top-pro" src="views/assets/image/productos/automercado-granos-frijolesycubaces21_grande.png" alt="">
-         <!-- <a href="" class="addpro">Agregar</a> -->
-      <div class="nombre-produt">
-        <h3>Nom pro:</h3>
-      </div>
-      <div class="descrip-produt">
-        <h4>Valor pro</h4>
-      </div>
-      <!-- <h4 class="card-title-pro">Jumbo</h4> -->
-      <p class="card-text-pro"></p>
-      <!-- <a href="#" class="btn-go">ir a mercar</a> -->
-    </div>
-    <div class="cardPro" >
-         <img class="card-img-top-pro" src="views/assets/image/productos/automercado-granos-frijolesycubaces21_grande.png" alt="">
-         <!-- <a href="" class="addpro">Agregar</a> -->
-      <div class="nombre-produt">
-        <h3>Nom pro:</h3>
-      </div>
-      <div class="descrip-produt">
-        <h4>Valor pro</h4>
-      </div>
-      <!-- <h4 class="card-title-pro">Jumbo</h4> -->
-      <p class="card-text-pro"></p>
-      <!-- <a href="#" class="btn-go">ir a mercar</a> -->
-    </div><div class="cardPro" >
-         <img class="card-img-top-pro" src="views/assets/image/productos/automercado-granos-frijolesycubaces21_grande.png" alt="">
-         <!-- <a href="" class="addpro">Agregar</a> -->
-      <div class="nombre-produt">
-        <h3>Nom pro:</h3>
-      </div>
-      <div class="descrip-produt">
-        <h4>Valor pro</h4>
-      </div>
-      <!-- <h4 class="card-title-pro">Jumbo</h4> -->
-      <p class="card-text-pro"></p>
-      <!-- <a href="#" class="btn-go">ir a mercar</a> -->
-    </div>
+  <?php
+  $item =1;
+          foreach ($this->viewProducts() as $row){?>
+
+        <div class="cardPro" >
+          <div class="ground"></div>
+          <img class="card-img-top-pro" src="views/assets/image/productos/<?php echo$row["img_pro"] ?>" alt="<?php echo $row["id_tip_pro"]; ?>">
+          <div class="nombre-produt">
+            <h3><?php echo $row["nom_pro"]; ?></h3>
+          </div>
+          <div class="descrip-produt">
+            <h4><?php echo $row["valVen_pro"]; ?></h4>
+          </div>
+          <p class="card-text-pro"></p>
+          <a  class="addpro" href="detalle-<?php echo $row["id_pro"]; ?>" >mirar</a>
+          <!-- <a href="#" class="addpro">nose</a> -->
+        </div>
+  <?php
+  $item++;
+  }
+  ?>
 
 </div>
 </div>
