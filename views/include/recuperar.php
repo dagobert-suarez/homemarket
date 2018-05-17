@@ -5,8 +5,9 @@
     <title></title>
   </head>
   <body>
-    <input type="text" name="" value="">
-    <input type="text" name="" value="">
-    <button type="button" name="button"></button>
+  <h3>recuperar contraseña</h3>
+    <input type="text" placeholder="contraseña"name="" value="">
+    <input type="text" placeholder="verificar contraseña"name="" value="">
+    <input type="submit" name="enviar_btn" class="btn btn-primary btn-sm" id="sent" value="Enviar" />
   </body>
 </html>
