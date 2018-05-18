@@ -2,9 +2,7 @@ RewriteEngine on
 
 #principal
 RewriteRule ^inicio$ index.php?controller=views
-RewriteRule ^ingreso$ index.php?controller=views&a=ingreso
-RewriteRule ^master$ index.php?controller=views&a=master
-RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
+RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
 RewriteRule ^recuperar$ index.php?controller=views&a=forgot
@@ -40,7 +38,6 @@ RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 #cliente
 RewriteRule ^inicioCliente$ index.php?controller=views&a=inicioCliente
-RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
