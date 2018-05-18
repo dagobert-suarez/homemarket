@@ -83,7 +83,7 @@
 
       <!-- <div class="content-form">
           <label for="">Imagen producto:</label>
-          <input type="file" name="file" value=""><br><br>  -->
+          <input type="file" name="file" value=""><br><br> -->
 
           <input type="hidden" readonly name="data[]" value="<?php echo $_GET["data"]; ?>">
 

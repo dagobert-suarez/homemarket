@@ -153,13 +153,16 @@ class UserModel{
 			 // Actualizar Supermercados
 			  function updateSup($data){
 				 try{
-					 $sql="call modificarSup(?,?,?,?,?)";
+					 // $sql="call modificarSup(?,?,?,?,?)";
+					 $sql = "UPDATE supermercado set nom_sup = ?, dir_sup = ?, tel_sup = ?, cod_ciu = ?, logo_sup = ? WHERE id_sup = ?";
 					 $query=$this->pdo->prepare($sql);
-					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4]));
+					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4],$data[5]));
 					 $msn = "Modificado Exitosamente";
 				 } catch (PDOException $e){
 					 $msn = $e->getMessage();
 				 }
+				 echo $msn;
+				 die();
 				 return $msn;
 			 }
 			 // Eliminar Supermercados
