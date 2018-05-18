@@ -16,7 +16,7 @@
    <form class="" action="actualizando-producto" method="post" enctype="multipart/form-data">
      <label for="" class="see" >Id del producto: <?php echo $_GET["data"]; ?></label>
         <!-- <input type="text" readonly name="data[]" value="<?php
-        // echo $_GET["data"]; 
+        // echo $_GET["data"];
         ?>"> -->
 
 
@@ -78,9 +78,10 @@
          </div>
        </div>
 
-      <div class="content-form">
+      <!-- <div class="content-form">
           <label for="">Imagen producto:</label>
-          <input type="file" name="file" value=""><br><br>
+          <input type="file" name="file" value=""><br><br> -->
+          <input type="hidden" readonly name="data[]" value="<?php echo $_GET["data"]; ?>">
 
           <div class="form-group">
             <button type="submit" name="button" class="btnact">Actualizar</button>

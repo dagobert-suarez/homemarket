@@ -116,7 +116,7 @@ class ProductController{
         require_once "views/modules/cliente/PorSupermercado.php";
         require_once "views/modules/cliente/footer.php";
       }
-      
+
       function viewProducts(){
           $result = $this->product->readProducts();
           return $result;
@@ -131,7 +131,7 @@ class ProductController{
 
       public function updateProc(){
           $data = $_POST['data'];
-          $img = $_FILES['file'];
+          // $img = $_FILES['file'];
           // $data[]=$img['name'];
           // copy($img['tmp_name'],"views/assets/image/productos/".$img['name']);
           $result = $this->product->updateProduct($data);
