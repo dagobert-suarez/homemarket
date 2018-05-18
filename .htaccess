@@ -1,6 +1,6 @@
 RewriteEngine on
 
-#principal
+#la landing
 RewriteRule ^inicio$ index.php?controller=views
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
@@ -31,7 +31,7 @@ RewriteRule ^modulo5$ index.php?controller=manual&a=modulo5
 RewriteRule ^modulo6$ index.php?controller=manual&a=modulo6
 #ReweiteRule ^modulo1r1$ index.php?controller=manual&a=mo1res2
 
-#validar usuario
+#validar usuario en el login
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
@@ -107,9 +107,6 @@ RewriteRule ^Permisos$ index.php?controller=views&a=permisos
 RewriteRule ^Contenido$ index.php?controller=views&a=contenido
 RewriteRule ^Configuraciones$ index.php?controller=views&a=configuraciones
 RewriteRule ^InformaciónS$ index.php?controller=views&a=informacionS
-
-
-
 
 #bajar subir archivo
 RewriteRule  ^bajar$ index.php?controller=views&a=bajar
