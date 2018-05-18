@@ -16,7 +16,7 @@
    <form class="" action="actualizando-producto" method="post" enctype="multipart/form-data">
      <label for="" class="see" >Id del producto: <?php echo $_GET["data"]; ?></label>
         <!-- <input type="text" readonly name="data[]" value="<?php
-        // echo $_GET["data"]; 
+        // echo $_GET["data"];
         ?>"> -->
 
 
@@ -26,9 +26,9 @@
               <input type="text" class="k" name="data[]" value="<?php echo $dataProduct["nom_pro"];?>">
             </div>
 
-            <div class="form-group">
+             <div class="form-group">
               <label for=""class="opcional">Contenido:</label>
-              <input type="number" name="data[]" class="k" ><?php echo $dataProduct["cont_pro"];?></textarea>
+              <input type="number" class="k" name="data[]"  value="<?php echo $dataProduct["cont_pro"];?>">
             </div>
 
         </div>
@@ -69,6 +69,9 @@
              <option value="lb">lb</option>
              <option value="gr">gr</option>
              <option value="lts">lts</option>
+             <option value="ml">ml</option>
+             <option value="oz">oz</option>
+             <option value="unidad">unidad</option>
            </select>
          </div>
 
@@ -78,9 +81,12 @@
          </div>
        </div>
 
-      <div class="content-form">
+      <!-- <div class="content-form">
           <label for="">Imagen producto:</label>
-          <input type="file" name="file" value=""><br><br>
+          <input type="file" name="file" value=""><br><br>  -->
+
+          <input type="hidden" readonly name="data[]" value="<?php echo $_GET["data"]; ?>">
+
 
           <div class="form-group">
             <button type="submit" name="button" class="btnact">Actualizar</button>
