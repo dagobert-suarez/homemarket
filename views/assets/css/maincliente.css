@@ -277,48 +277,62 @@ li i:hover{
     margin-top: 0px;
     height: auto;
 }
+.wrap--map{
+  margin: 0px 20px 0px 20px; padding:1px;
+  display: flex;
+  border: 1px solid rgba(161,161,161,0.63);
+}
 #map{
     width: 60%;
     padding: 5px;
     height: 45vh;
-    /* background-color: rgb(207, 127, 88); */
 }
-
-
 /*_*.* finaliza  info-map*.*_*/
 /* ------------------------------- */
 
 /*Empieza  Supermercados   */
 /* ------------------------ */
-.gallery--content {
-    margin: 5px;
-    width: 75%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 2px;
+.wrap--supers{
+    width: 95%;
+    margin: 15px auto;
 }
-/*.supers{*/
-    /*margin: 50px;*/
-    /*justify-content: space-between;*/
-/*}*/
-.buscador{
+
+.wrap--supers .wrap-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin:5px 0px 15px 0px;
+  border-bottom: 2px solid rgba(161, 161, 161, 0.72);
+}
+.wrap--supers .wrap-title h3{
+  color: #A2A2A2;
+  margin: 0px 0px 5px 10px;
+  font-family: 'Lato' , sans-serif;
+  font-size: 30px;
+}
+.wrap--supers .wrap-title .buscador{
   /* background-color: blue; */
+  color: #433d53;
   text-align: center;
-  padding: 5px auto;
-  display: none;
+  padding: 0px auto;
 }
-.buscador .sch{
-  display: none;
+.wrap-title .buscador .k{
   outline: none;
-  width: 350px;
-  padding: 8px 30px;
+  width: 250px;
+  padding: 8px 12px;
   border:1px solid rgb(182, 182, 182) ;
-  border-radius: 8px;
+  border-radius: 4px;
   line-height: 1.20px;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
 }
-
+.gallery--content {
+    margin: 20px;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap:15px;
+}
 .card{
     width: 240px;
     border: 1px solid rgba(161,161,161,0.63);
@@ -326,9 +340,8 @@ li i:hover{
 .card:hover{
     box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     color: #433d53;
-     transform: scale(1.05);
+    transform: scale(1.04);
 }
 .card:hover .card-img-top{ transform: scale(1.0); }
 .card-img-top{
@@ -342,8 +355,8 @@ li i:hover{
     /* margin: 5px; */
 }
 .btn-go{
-    margin-top: 20px;
-    background-color:#D3A00E;
+    margin-top: 15px;
+    background-color:#FFBF00;
     /* background-color: gray; */
     border: 1px solid rgba(161,161,161,0.63);
     padding:8px ;
@@ -372,7 +385,7 @@ article{
 /* Información Por Supermercado  */
 /* ----------------------------- */
 .back{
-  background-color: lime;
+  background-color: #1F2122; color: white;
   padding: 8px 12px; margin: 0px 0px 0px 15px;
   width:80px;
   text-align: center;
@@ -380,6 +393,12 @@ article{
   border-radius: 4px;
   position: absolute;
   position: fixed;
+  display: none;
+}
+.back:hover{
+  background-color: white;
+  color: black;
+  box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.8);
 }
 .infoSup{
     background-color:  #FEFEFE;
