@@ -29,10 +29,13 @@
   </div>
   <div class="wrap--produt">
     <div class="wrap-title">
-      <h3>Productos</h3>
+      <h3 >Productos</h3>
       <div class="">
-        <label for="">Buscar Producto:</label>
-        <input type="text" name="" value="" class="k" placeholder="Buscar">
+        <form class="" action="BuscarPro" method="post">
+          <label for="">Buscar Producto:</label>
+          <input type="text" name="buscarpro" value="" class="k" placeholder="Buscar">
+          <button type="submit" name="" class="sch"> <i class="fa fa-search"></i> </button>
+        </form>
       </div>
     </div>
     <div class="Productos">
@@ -47,7 +50,7 @@
           </div>
           <div class="descrip-produt">
             <p><?php echo $row["can_pro"]; ?></p>
-            <h4><?php echo $row["valVen_pro"]; ?></h4>
+            <h4><?php echo number_format($row["valVen_pro"]); ?></h4>
           </div>
           <p class="card-text-pro"></p>
           <a  class="addpro" href="detalle-<?php echo $row["id_pro"]; ?>" >mirar</a>
