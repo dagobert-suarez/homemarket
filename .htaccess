@@ -46,7 +46,7 @@ RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
 RewriteRule ^detalle-(\w+)$ index.php?controller=product&a=detalleProduct&data=$1
 RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=product&a=BySupermercado&data=$1
-RewriteRule ^carritoCliente$ index.php?controller=product&a=updateClie&data=$1
+RewriteRule ^carritoCliente$ index.php?controller=product&a=carrito
 
 #supermercado
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin

@@ -19,6 +19,11 @@ class ProductController{
       require_once "views/modules/admin/footer_admin.php";
   }
 
+  function carrito(){
+    require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/carrito.php";
+    require_once "views/modules/cliente/footer.php";
+  }
   // Empleado
   // -------------
   // Crear Producto
@@ -116,7 +121,12 @@ class ProductController{
         require_once "views/modules/cliente/PorSupermercado.php";
         require_once "views/modules/cliente/footer.php";
       }
-      
+
+      function readbyProduct(){
+        $re = $this->product->readByCod($_SESSION['USER']['ID']);
+        return $re;
+        }
+
       function viewProducts(){
           $result = $this->product->readProducts();
           return $result;

@@ -60,8 +60,20 @@ class ProductModel{
             $msn = $e->getMessage();
         }
         return $msn;
-
     }
+
+    function readByCod($data){
+         try{
+           $sql = "SELECT * FROM productos WHERE id_pro = ?";
+           $query = $this->pdo->prepare($sql);
+           $query->execute(array($data));
+             $msn = $query->fetch(PDO::FETCH_BOTH);
+            }catch (PDOException $e) {
+              die($e->getMessage());
+            }
+            return $msn;
+         }
+
     //elimina el tipo de categoria
     function deleteProduct($data){
      try{
