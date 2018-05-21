@@ -1,4 +1,6 @@
-<?php $dataProduct = $this->readIdProduct($_GET["data"]); ?>
+<?php $dataProduct = $this->readIdProduct($_GET["data"]);
+  $_SESSION['add_cart']=array("id"=>$dataProduct['id_pro'],"nombre"=>$dataProduct["nom_pro"],"cantidad"=>6,"precio"=>$dataProduct["valVen_pro"]);
+?>
 <div class="">
   <h1>aquí van los detalles del producto</h1>
   <div class="">

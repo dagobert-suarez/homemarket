@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-05-2018 a las 22:56:05
+-- Tiempo de generación: 21-05-2018 a las 20:05:48
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 7.2.2
 
@@ -151,12 +151,12 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `login` (`email_usu` VARCHAR(50))  B
 SELECT * FROM usuario INNER JOIN acceso ON(usuario.id_usu_usu=acceso.id_usu_usu) WHERE usuario.email_usu = email;
 END$$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarPro` (IN `nom_pro` VARCHAR(30), IN `cont_pro` INT, IN `mar_pro` VARCHAR(30), IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT, IN `id_tip_pro` INT, IN `img_pro` VARCHAR(255))  BEGIN 
-UPDATE productos SET  nom_pro=nom_pro,cont_pro=cont_pro,mar_pro=mar_pro,can_pro=can_pro, uniMed_pro=uniMed_pro,valVen_pro=valVen_pro,id_tip_pro=id_tip_pro,img_pro=img_pro WHERE id_pro=productos.id_pro LIMIT 1;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarPro` (IN `nom_pro` VARCHAR(30), IN `cont_pro` INT, IN `mar_pro` VARCHAR(30), IN `id_tip_pro` INT, IN `can_pro` INT, IN `uniMed_pro` VARCHAR(30), IN `valVen_pro` FLOAT, IN `img_pro` VARCHAR(255))  BEGIN 
+UPDATE productos SET  nom_pro=nom_pro,cont_pro=cont_pro,mar_pro=mar_pro,id_tip_pro=id_tip_pro, can_pro=can_pro, uniMed_pro=uniMed_pro,valVen_pro=valVen_pro,img_pro=img_pro WHERE id_pro=productos.id_pro;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `modificarProv` (IN `nom_prov` VARCHAR(50), IN `dir_prov` VARCHAR(30), IN `tel_prov` VARCHAR(11))  BEGIN
-UPDATE proveedores SET nom_prov=nom_prov,dir_prov=dir_prov,tel_prov=tel_prov WHERE id_prov=proveedores.id_prov LIMIT 1;
+UPDATE proveedores SET nom_prov=nom_prov,dir_prov=dir_prov,tel_prov=tel_prov WHERE id_prov=proveedores.id_prov;
 
 END$$
 
@@ -403,10 +403,9 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_pro`, `nom_pro`, `cont_pro`, `img_pro`, `mar_pro`, `id_tip_pro`, `can_pro`, `uniMed_pro`, `valVen_pro`, `id_sup`) VALUES
-(20, 'queso', 0, '', 'roa', 1, 205, 'kg', 4000, NULL),
-(23, 'cafe', 0, '', 'roa', 1, 158, 'kg', 1000, NULL),
-(24, 'avena', NULL, NULL, 'quaker', 1, 198, 'gr', 3000, 2),
-(25, 'cm', 42, NULL, 'puta degenerada', 13, 0, 'kg', 1, 1);
+(20, 'avena', 400, NULL, 'quaker', 1, 400, 'gr', 1300, NULL),
+(23, 'jabon', 800, NULL, 'ariel', 12, 200, 'gr', 1800, NULL),
+(24, 'alcohol', 1200, NULL, 'haineken', 8, 200, 'ml', 3000, 2);
 
 -- --------------------------------------------------------
 
@@ -426,8 +425,8 @@ CREATE TABLE `proveedores` (
 --
 
 INSERT INTO `proveedores` (`id_prov`, `nom_prov`, `dir_prov`, `tel_prov`) VALUES
-(1, 'zenuuu ', 'cr 68 # 65-89', '6578909'),
-(2, 'zenu ', 'cr 68 # 65-89', '6578909');
+(1, 'coca-cola', 'calle5', '6546564'),
+(2, 'zenu', 'cr 68 # 65-89', '5415851');
 
 -- --------------------------------------------------------
 
@@ -706,7 +705,7 @@ ALTER TABLE `pedido`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_pro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
