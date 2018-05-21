@@ -308,7 +308,7 @@ li i:hover{
   color: #A2A2A2;
   margin: 0px 0px 5px 10px;
   font-family: 'Lato' , sans-serif;
-  font-size: 30px;
+  font-size: 35px;
 }
 .wrap--supers .wrap-title .buscador{
   /* background-color: blue; */
@@ -462,8 +462,9 @@ article{
 .wrap--produt .wrap-title  h3{
   color: #A2A2A2;
   margin: 1px 0px 1px 3px;
-  font-size: 30px;
+  font-size: 33px;
 }
+
 .wrap--produt .wrap-title .k{
   color: #A2A2A2;
   padding: 6px 10px;
@@ -471,6 +472,14 @@ article{
   border: 1px solid #ccc;
   border-radius: 4px;
   outline-color: orange;
+}
+.wrap--produt .wrap-title .sch{
+  padding: 8px;
+  border-radius: 4px;
+  margin: -38px;
+  outline: none;
+  border: 1px solid rgba(161,161,161,0.63);
+  background-color: inherit;
 }
 
 /* Fin de Información Por Supermercado */
