@@ -79,12 +79,26 @@ class UserModel{
 		}
 		return $result;
 			 }
+			 
 	function readAllEm(){
 		try {
 			$sql="SELECT * FROM usuario WHERE id_rol = 3";
 			$query=$this->pdo->prepare($sql);
 			$query->execute();
 			$result= $query->fetchALL(PDO::FETCH_BOTH);
+		} catch (PDOException $e) {
+			$result = $e->getMessage();
+		}
+		return $result;
+	}
+
+
+	function readByIdEmple($data){
+		try {
+			$sql= "SELECT * FROM usuario WHERE id_usu = ? AND id_rol = 3";
+			$query=$this->pdo->prepare($sql);
+			$query->execute(array($data));
+			$result = $query->fetch(PDO::FETCH_BOTH);
 		} catch (PDOException $e) {
 			$result = $e->getMessage();
 		}

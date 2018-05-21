@@ -164,6 +164,7 @@ class ProductController{
            return $result;
        }
 
+       
       // CRUD Categorias
       //envia el registro de categoria
       function createCategory(){

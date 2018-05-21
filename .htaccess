@@ -55,7 +55,7 @@ RewriteRule ^Notificaciones$ index.php?controller=views&a=notificaciones
 RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 #crud empleado
 RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
-RewriteRule ^actualizar-empleado(\w+)$ index.php?controller=user&a=update
+RewriteRule ^actualizar-empleado-(\w+)$ index.php?controller=user&a=actualizarEmpleado
 
 #crud
 RewriteRule ^guardar-super$ index.php?controller=supermercado&a=newSuper
