@@ -3,7 +3,7 @@
 	<form  class="modal-content" method="POST" action="validar" >
 		<div class="container-img">
 			<span id="close" class="close" >&times;</span>
-			<h1 class="title">Iniciar sesion</h1>
+			<h1 class="title">Iniciar sesión</h1>
 		</div>
 		<div class="container-form">
 			<label class="required" for="txtemail"><b>Correo</b></label>
@@ -18,7 +18,7 @@
 
 			<div class="botns">
 				<!-- <i class="fa fa-eye"> Mostrar Contrseña</i> -->
-				<a href="recuperar"class="">Olvidaste tu Contraseña</a>
+				<a href="recuperar"class="" id="" >¿Olvidaste tu Contraseña?</a>
 				<button class="btnsave">entrar</button>
 			</div>
 	</form>
