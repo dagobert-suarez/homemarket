@@ -4,8 +4,8 @@
 <h2>este es el carrito de compras</h2>
 <section>
   <?php
-    if (isset($_SESSION['carrito'])) {
-      $datos=$_SESSION['carrito'];
+    if (isset($_SESSION['CARRO'])) {
+      $datos=$_SESSION['CARRO'];
       $total=0;
       for ($i=0; $i <count($datos); $i++) {
     ?>
