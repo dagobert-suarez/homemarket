@@ -61,10 +61,16 @@ class ProductController{
     require_once "views/modules/worker/footer.php";
   }
 
+  // function detalleProduct(){
+  //   require_once "views/modules/cliente/header.php";
+  //   require_once "views/modules/cliente/detalleProducto.php";
+  //   require_once "views/modules/cliente/footer.php";
+  // }
   function detalleProduct(){
-    require_once "views/modules/cliente/header.php";
-    require_once "views/modules/cliente/detalleProducto.php";
-    require_once "views/modules/cliente/footer.php";
+    $data = $_POST['data'];
+    $result=$this->product->readIdPro($data);
+    echo json_encode($result);
+
   }
 
     public function __CONSTRUCT(){
@@ -164,7 +170,7 @@ class ProductController{
            return $result;
        }
 
-       
+
       // CRUD Categorias
       //envia el registro de categoria
       function createCategory(){

@@ -1,5 +1,8 @@
 <?php $dataSuper = $this->readByIdSup($_GET["data"]); ?>
 <a href="inicioCliente" class="back">Volrver</a>
+<div class="fondo">
+
+</div>
 <div class="infoSup">
     <div class="wrap-info-img">
             <img  class="logo--img" src="views/assets/image/logoHM.png" alt="" href="">
@@ -53,7 +56,8 @@
             <h4><?php echo number_format($row["valVen_pro"]); ?></h4>
           </div>
           <p class="card-text-pro"></p>
-          <a  class="addpro" href="detalle-<?php echo $row["id_pro"]; ?>" >mirar</a>
+          <!-- <a  class="addpro" href="detalle-<?php echo $row["id_pro"]; ?>" >mirar</a> -->
+          <p class="addpro" id="<?php echo $row["id_pro"]; ?>">Mirar</p>
         </div>
         <?php
         $item++;
