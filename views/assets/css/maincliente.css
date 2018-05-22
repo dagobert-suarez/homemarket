@@ -570,7 +570,7 @@ article{
     color: rgba(161,161,161,0.63);
 }
 /* Detalle de produtos */
-/*  */
+/* -------------------- */
 .fondo{
   position: fixed;
   display: none;
@@ -578,12 +578,12 @@ article{
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .wrapdet{
   display: none;
   background-color: #FEFEFE;
-  margin: 150px 350px;
+  margin: 100px 350px;
   width: 600px;
   position: absolute;
   z-index: 2;
@@ -594,20 +594,45 @@ article{
   border:1px solid rgba(161,161,161,063);
   border-radius: 4px;
 }
+.wrapdet .wrap-title{
+  display: flex;
+  justify-content: space-between;
+  color: #433d53;
+  margin-bottom: 10px;
+}
+.wrapdet .wrap-title i{
+  font-size: 2rem;
+  cursor: pointer;
+}
 .wrap-deta .wrap-image-pro{
-  width: 250px;
-  height: 250px;
+  width: 270px;
+  height: 270px;
+}
+.wrap-deta .wrap-name-pro{
+  width: 60%;
+  border-left: 1px solid rgba(161,161,161,063);
 }
 .wrap-deta .wrap-name-pro label{
   display: block;
   margin: 10px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
-.wrap-deta .wrap-name-pro .add-cart{
-  background-color:lime;
-  padding: 6px;
+.wrap-name-pro .botons{
+  display: flex;
+  margin-top: 25px;
+}
+.wrap-deta .wrap-name-pro .botons .add-cart{
+  background-color:#008CBA;
+  color: white;
+  font-size: 18px;
+  padding: 7px;
   border-radius: 3px;
   margin: 15px;
+}
+.wrap-deta .wrap-name-pro .botons a .id{
+  color: white;
+  font-size: 23px;
+  background-image:"views/assets/image/cart.png";
 }
 
 /*_*.* fin de produtos *.*_*/

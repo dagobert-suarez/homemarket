@@ -19,7 +19,7 @@ ground.onclick = function(){
 };
 
 // Modal de Detalle
-// ---------------- 
+// ----------------
 $(".addpro").click(function(){
   var producto = this.id;
   $.ajax({
@@ -40,9 +40,16 @@ $(".addpro").click(function(){
       console.log(result);
     }
   })
-
+});
+$("#close").click(function(){
+  $(".wrapdet").toggle();
+  $(".fondo").toggle();
 });
 
+$(".fondo").click(function(){
+  $(".wrapdet").toggle();
+  $(".fondo").toggle();
+});
 
 // When the user scrolls down 20px from the top of the document, show the button
 // window.onscroll = function() {scrollFunction()};

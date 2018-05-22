@@ -71,18 +71,23 @@
   <?php $dataProduct = $this->readIdProduct($_GET["data"]);
     $_SESSION['add_cart']=array("id"=>$dataProduct['id_pro'],"nombre"=>$dataProduct["nom_pro"],"cantidad"=>6,"precio"=>$dataProduct["valVen_pro"]);
   ?>
-  <h1>aquí van los detalles del producto</h1>
+  <div class="wrap-title">
+    <h3>Detalles del Producto</h3>
+    <i id="close">&times;</i>
+  </div>
   <div class="wrap-deta">
     <div class="wrap-image-pro">
       <img id="img_pro" alt="">
     </div>
     <div class="wrap-name-pro">
-      <label for="">Nombre: <p id="nom"></p> </label>
-      <label for="">Marca: <p id="mar"></p> </label>
-      <label for="">Precio: <p id="pre"></p> </label>
-      <div class="">
-      <a href="carritoCliente" class="add-cart">añadir al carrito</a>
-    </div>
+      <label for="">Nombre: <span id="nom"></span> </label>
+      <label for="">Marca: <span id="mar"></span> </label>
+      <label for="">Precio: <span id="pre"></span> </label>
+      <label for="">Cantidad:</label>
+      <!-- <input type="number" class="k" name="" value=""> -->
+      <div class="botons">
+          <a href="carritoCliente" class="add-cart">añadir al carrito <i class="id"></i> </a>
+      </div>
     </div>
   </div>
 </div>
