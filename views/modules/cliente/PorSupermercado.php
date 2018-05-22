@@ -86,7 +86,7 @@
       <label for="">Cantidad:</label>
       <!-- <input type="number" class="k" name="" value=""> -->
       <div class="botons">
-          <a href="carritoCliente" class="add-cart">añadir al carrito <i class="id"></i> </a>
+          <a href="carritoCliente" class="add-cart">Añadir al carrito <i class="fa fa-cart-plus"></i></a>
       </div>
     </div>
   </div>

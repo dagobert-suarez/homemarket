@@ -629,10 +629,9 @@ article{
   border-radius: 3px;
   margin: 15px;
 }
-.wrap-deta .wrap-name-pro .botons a .id{
+.wrap-deta .wrap-name-pro .botons a i{
   color: white;
   font-size: 23px;
-  background-image:"views/assets/image/cart.png";
 }
 
 /*_*.* fin de produtos *.*_*/
