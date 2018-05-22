@@ -149,8 +149,8 @@ class ProductModel{
         }catch(PDOException $e){
           $msn = $e->getMessage();
         }
-        echo $msn;
-        die();
+        // echo $msn;
+        // die();
         return $msn;
       }
   //  function updateProduct($data){

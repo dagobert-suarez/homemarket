@@ -76,16 +76,22 @@ class UserController{
 			}
 	}
 
+	function readByIdEm($data){
+		$result = $this->users->readByIdEmple($data);
+		return $result;
+	}
+
 	//---------inicio de sesion del cliente-------//
-	// --------------------------------------------- //
 	function readBy($data){
 		$result = $this->userModel->readBy($data);
 		return $result;
 	}
-	function readAllEm(){
+	function readAllEmp(){
 		$result = $this->userModel->readAllEm();
 		return $result;
 	}
+
+
 
 	//  function inicioCliente(){
   //   if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
@@ -107,6 +113,12 @@ class UserController{
 		$data[]=$_SESSION['USER']['ID'];
 		$result = $this->userModel->update($data);
 		header("Location: Ajustes");
+	}
+
+	function actualizarEmpleado(){
+		require_once "views/modules/admin/header-admin.php";
+		require_once "views/modules/admin/updateEm.php";
+		require_once "views/modules/admin/footer_admin.php";
 	}
 	function ajustes(){
 		require_once "views/modules/cliente/header.php";

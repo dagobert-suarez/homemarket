@@ -142,9 +142,9 @@ class viewsController{
 			 // Actualizar Supermercado
 			  function updateSup(){
 				 	$data = $_POST['data'];
-					$img = $_FILES['file'];
-					$data[]=$img['name'];
-					copy($img['tmp_name'],"views/assets/image/super/".$img['name']);
+					// $img = $_FILES['file'];
+					// $data[]=$img['name'];
+					// copy($img['tmp_name'],"views/assets/image/super/".$img['name']);
 
 					$result = $this->userModel->updateSup($data);
 
