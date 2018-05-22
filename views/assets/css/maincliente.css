@@ -580,6 +580,35 @@ article{
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
 }
+.wrapdet{
+  display: none;
+  background-color: #FEFEFE;
+  margin: 150px 350px;
+  width: 600px;
+  position: absolute;
+  z-index: 2;
+  padding: 5px;
+}
+.wrapdet .wrap-deta{
+  display: flex;
+  border:1px solid rgba(161,161,161,063);
+  border-radius: 4px;
+}
+.wrap-deta .wrap-image-pro{
+  width: 250px;
+  height: 250px;
+}
+.wrap-deta .wrap-name-pro label{
+  display: block;
+  margin: 10px;
+  font-size: 1.1rem;
+}
+.wrap-deta .wrap-name-pro .add-cart{
+  background-color:lime;
+  padding: 6px;
+  border-radius: 3px;
+  margin: 15px;
+}
 
 /*_*.* fin de produtos *.*_*/
 /* ------------------------------ */
