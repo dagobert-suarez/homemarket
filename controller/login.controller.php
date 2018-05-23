@@ -59,15 +59,13 @@ class LoginController{
 		function enviar(){
 
 			if(mail($_POST['mail_txt'],'Recuperar tú Contraseña','En el siguiente enlace podrá recuperar su contraseña http://localhost/homemarket/recupera')){
-				// header("location:inicio");
 				echo "<script>
                 alert('enviado');
                 window.location= 'inicio'
-    </script>";
-		echo "enviado";
+    				  </script>";
 			}else{
 				echo "ocurrio un error";
-				
+
 				}
 			}
 			function recuperar(){
