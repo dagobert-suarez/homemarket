@@ -60,8 +60,20 @@ class ProductModel{
             $msn = $e->getMessage();
         }
         return $msn;
-
     }
+
+    function readByCod($data){
+         try{
+           $sql = "SELECT * FROM productos WHERE id_pro = ?";
+           $query = $this->pdo->prepare($sql);
+           $query->execute(array($data));
+             $msn = $query->fetch(PDO::FETCH_BOTH);
+            }catch (PDOException $e) {
+              die($e->getMessage());
+            }
+            return $msn;
+         }
+
     //elimina el tipo de categoria
     function deleteProduct($data){
      try{
@@ -127,20 +139,20 @@ class ProductModel{
     }
 
   // Actualizar producto
-   function updateProduct($data){
-     // print_r($data);
-      try{
-      $sql= "UPDATE productos SET nom_pro = ? , cont_pro = ? , mar_pro = ? , id_tip_pro = ? , can_pro = ? , uniMed_pro = ? , valVen_pro = ?  WHERE id_pro=?";
-      $query = $this->pdo->prepare($sql);
-      $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
-      $msn = "modificado con exito";
-     }catch(PDOException $e){
-       $msn = $e->getMessage();
-     }
-     // echo $msn;
-     // die();
-     return $msn;
-  }
+      function updateProduct($data){
+        // print_r($data);
+        try{
+        $sql= "UPDATE productos SET nom_pro = ? , cont_pro = ?, mar_pro = ?, id_tip_pro = ?, can_pro = ?, uniMed_pro = ?, valVen_pro = ? WHERE id_pro=?";
+        $query = $this->pdo->prepare($sql);
+        $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[7]));
+        $msn = "modificado con exito";
+        }catch(PDOException $e){
+          $msn = $e->getMessage();
+        }
+        // echo $msn;
+        // die();
+        return $msn;
+      }
   //  function updateProduct($data){
   //    // print_r($data);
   //     try{
@@ -151,8 +163,8 @@ class ProductModel{
   //    }catch(PDOException $e){
   //      $msn = $e->getMessage();
   //    }
-  //    // echo $msn;
-  //    // die();
+  //     echo $msn;
+  //     die();
   //    return $msn;
   // }
 
@@ -249,13 +261,16 @@ class ProductModel{
     public function updateProv($data){
       try{
         // $sql="UPDATE proveedores SET nom_prov = ? , dir_prov = ?, tel_prov = ? ";
-        $sql = "call modificarProv(?,?,?)";
+        // $sql = "call modificarProv(?,?,?)";
+        $sql="UPDATE proveedores set nom_prov = ?, dir_prov = ?, tel_prov = ? WHERE id_prov = ? ";
         $query=$this->pdo->prepare($sql);
-        $query->execute(array($data[0], $data[1], $data[2]));
+        $query->execute(array($data[0], $data[1], $data[2],$data[3]));
         $msn= "Modificado Exitosamente";
       } catch (PDOException $e){
         $msn= $e->getMessage();
       }
+      // echo $msn;
+      // die();
       return $msn;
     }
     // Eliminar Proveedor

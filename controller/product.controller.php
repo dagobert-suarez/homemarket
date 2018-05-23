@@ -19,6 +19,11 @@ class ProductController{
       require_once "views/modules/admin/footer_admin.php";
   }
 
+  function carrito(){
+    require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/carrito.php";
+    require_once "views/modules/cliente/footer.php";
+  }
   // Empleado
   // -------------
   // Crear Producto
@@ -56,10 +61,16 @@ class ProductController{
     require_once "views/modules/worker/footer.php";
   }
 
+  // function detalleProduct(){
+  //   require_once "views/modules/cliente/header.php";
+  //   require_once "views/modules/cliente/detalleProducto.php";
+  //   require_once "views/modules/cliente/footer.php";
+  // }
   function detalleProduct(){
-    require_once "views/modules/cliente/header.php";
-    require_once "views/modules/cliente/detalleProducto.php";
-    require_once "views/modules/cliente/footer.php";
+    $data = $_POST['data'];
+    $result=$this->product->readIdPro($data);
+    echo json_encode($result);
+
   }
 
     public function __CONSTRUCT(){
@@ -116,7 +127,10 @@ class ProductController{
         require_once "views/modules/cliente/PorSupermercado.php";
         require_once "views/modules/cliente/footer.php";
       }
-
+      function readbyProduct(){
+        $re = $this->product->readByCod($_SESSION['USER']['ID']);
+        return $re;
+        }
       function viewProducts(){
           $result = $this->product->readProducts();
           return $result;
@@ -130,19 +144,18 @@ class ProductController{
       }
 
       public function updateProc(){
-          $data = $_POST['data'];
-          // $img = $_FILES['file'];
-          // $data[]=$img['name'];
-          // copy($img['tmp_name'],"views/assets/image/productos/".$img['name']);
-          $result = $this->product->updateProduct($data);
+        $data = $_POST['data'];
+        // $img = $_FILES['file'];
+        // $data[]=$img['name'];
+        // copy($img['tmp_name'],"views/assets/image/productos/".$img['name']);
+        $result = $this->product->updateProduct($data);
+        echo '<script language="javascript">alert("Modificado con exito");</script>';
+        echo "<script>window.location.href='Productos-empleado'</script>";
 
-          echo '<script language="javascript">alert("Modificado con exito");</script>';
-          echo "<script>window.location.href='Productos-empleado'</script>";
-
-          // echo '<script language="javascript">alert("Modificado con exito");</script>';
-          // echo "<script>window.location.href='Productos-empleado'</script>";
-          // header("Location: Productos-empleado");
-      }
+        // echo '<script language="javascript">alert("Modificado con exito");</script>';
+        // echo "<script>window.location.href='Productos-empleado'</script>";
+        // header("Location: Productos-empleado");
+    }
       // crud productos
 
       public function deleteProduct(){
@@ -156,6 +169,7 @@ class ProductController{
            $result=$this->product->readIdPro($data);
            return $result;
        }
+
 
       // CRUD Categorias
       //envia el registro de categoria

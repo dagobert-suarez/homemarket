@@ -79,12 +79,26 @@ class UserModel{
 		}
 		return $result;
 			 }
+			 
 	function readAllEm(){
 		try {
 			$sql="SELECT * FROM usuario WHERE id_rol = 3";
 			$query=$this->pdo->prepare($sql);
 			$query->execute();
 			$result= $query->fetchALL(PDO::FETCH_BOTH);
+		} catch (PDOException $e) {
+			$result = $e->getMessage();
+		}
+		return $result;
+	}
+
+
+	function readByIdEmple($data){
+		try {
+			$sql= "SELECT * FROM usuario WHERE id_usu = ? AND id_rol = 3";
+			$query=$this->pdo->prepare($sql);
+			$query->execute(array($data));
+			$result = $query->fetch(PDO::FETCH_BOTH);
 		} catch (PDOException $e) {
 			$result = $e->getMessage();
 		}
@@ -153,13 +167,16 @@ class UserModel{
 			 // Actualizar Supermercados
 			  function updateSup($data){
 				 try{
-					 $sql="call modificarSup(?,?,?,?,?)";
+					 // $sql="call modificarSup(?,?,?,?,?)";
+					 $sql = "UPDATE supermercado set nom_sup = ?, dir_sup = ?, tel_sup = ?, cod_ciu = ? WHERE id_sup = ?";
 					 $query=$this->pdo->prepare($sql);
 					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4]));
 					 $msn = "Modificado Exitosamente";
 				 } catch (PDOException $e){
 					 $msn = $e->getMessage();
 				 }
+				 // echo $msn;
+				 // die();
 				 return $msn;
 			 }
 			 // Eliminar Supermercados

@@ -38,11 +38,14 @@ $dataSuper = $this->readByIdSup($_GET["data"]);
                 </select>
             </div>
         </div>
-        <div class="content-form">
+        <!-- <div class="content-form">
             <div class="form-group">
                 <label  class="required" for="">Logo del Supermercado:</label>
                 <input  class="kfile" type="file" name="file">
-            </div>
+            </div> -->
+
+            <input type="hidden" readonly name="data[]" value="<?php echo $_GET["data"]; ?>">
+
                 <div class="form-group">
                     <button type="submit" name="button" class="btntnt">Actualizar</button>
                 </div>

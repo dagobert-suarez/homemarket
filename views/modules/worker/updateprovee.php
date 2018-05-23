@@ -19,6 +19,10 @@
             <label class="required">Teléfono del Proveedor:</label>
             <input class="k" type="number" name="data[]" value="<?php echo $dataProv["tel_prov"];?>">
           </div>
+
+          <input type="hidden" readonly name="data[]" value="<?php echo $_GET["data"]; ?>">
+
+
           <div class="form-group">
             <button type="submit" name="button" class="frmbtn">Actualizar</button>
           </div>

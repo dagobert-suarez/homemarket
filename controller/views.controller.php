@@ -82,13 +82,9 @@ class viewsController{
 	}
 
 	function Workers(){
-		if (isset($_SESSION['USERS']['rol']) && $_SESSION['USER']['rol']==2) {
 		require_once "views/modules/admin/header-admin.php";
 		require_once "views/modules/admin/Empleados.php";
 		require_once "views/modules/admin/footer_admin.php";
-	}else {
-		header("Location: inicio");
-	}
 	}
 
 	function mySuper(){
@@ -146,9 +142,9 @@ class viewsController{
 			 // Actualizar Supermercado
 			  function updateSup(){
 				 	$data = $_POST['data'];
-					$img = $_FILES['file'];
-					$data[]=$img['name'];
-					copy($img['tmp_name'],"views/assets/image/super/".$img['name']);
+					// $img = $_FILES['file'];
+					// $data[]=$img['name'];
+					// copy($img['tmp_name'],"views/assets/image/super/".$img['name']);
 
 					$result = $this->userModel->updateSup($data);
 

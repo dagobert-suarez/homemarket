@@ -1,10 +1,8 @@
 RewriteEngine on
 
-#principal
+#la landing
 RewriteRule ^inicio$ index.php?controller=views
-RewriteRule ^ingreso$ index.php?controller=views&a=ingreso
-RewriteRule ^master$ index.php?controller=views&a=master
-RewriteRule ^registrosuper$ index.php?controller=views&a=registrosuper
+RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
 RewriteRule ^super$ index.php?controller=views&a=super
 RewriteRule ^recuperar$ index.php?controller=views&a=forgot
@@ -33,20 +31,19 @@ RewriteRule ^modulo5$ index.php?controller=manual&a=modulo5
 RewriteRule ^modulo6$ index.php?controller=manual&a=modulo6
 #ReweiteRule ^modulo1r1$ index.php?controller=manual&a=mo1res2
 
-#validar usuario
+#validar usuario en el login
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
 
 
 #cliente
 RewriteRule ^inicioCliente$ index.php?controller=views&a=inicioCliente
-RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^Ajustes$ index.php?controller=user&a=ajustes
 RewriteRule ^Productos$ index.php?controller=product&a=Productos
 RewriteRule ^actualizar-datosCli$ index.php?controller=user&a=updateClie&data=$1
-RewriteRule ^detalle-(\w+)$ index.php?controller=product&a=detalleProduct&data=$1
+RewriteRule ^detalle$ index.php?controller=product&a=detalleProduct
 RewriteRule ^PorSupermercado-(\w+)$ index.php?controller=product&a=BySupermercado&data=$1
-RewriteRule ^carritoCliente$ index.php?controller=product&a=updateClie&data=$1
+RewriteRule ^carritoCliente$ index.php?controller=product&a=carrito
 
 #supermercado
 RewriteRule ^inicioAdmin$ index.php?controller=views&a=inicioAdmin
@@ -58,7 +55,7 @@ RewriteRule ^Notificaciones$ index.php?controller=views&a=notificaciones
 RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 #crud empleado
 RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
-RewriteRule ^actualizar-empleado(\w+)$ index.php?controller=user&a=update
+RewriteRule ^actualizar-empleado-(\w+)$ index.php?controller=user&a=actualizarEmpleado
 
 #crud
 RewriteRule ^guardar-super$ index.php?controller=supermercado&a=newSuper
@@ -110,9 +107,6 @@ RewriteRule ^Permisos$ index.php?controller=views&a=permisos
 RewriteRule ^Contenido$ index.php?controller=views&a=contenido
 RewriteRule ^Configuraciones$ index.php?controller=views&a=configuraciones
 RewriteRule ^InformaciónS$ index.php?controller=views&a=informacionS
-
-
-
 
 #bajar subir archivo
 RewriteRule  ^bajar$ index.php?controller=views&a=bajar
