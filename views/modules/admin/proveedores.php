@@ -56,7 +56,7 @@
           <td><?php echo $row["tel_prov"] ;?></td>
 					<td>
 						<a href="#" class=""><i class="fa fa-pencil"></i>Editar</a>
-						<a href="#"class=""id=""><i class="fa fa-info"></i>Detalles</a>
+						<a href="#" class="abrirpro" id="<?php echo $row['id_prov'];?>"><i class="fa fa-info"></i>Detalles</a>
 						<a href="eliminar-provee-<?php echo $row['id_prov'];?>"><i class="fa fa-trash"></i>Eliminar</a>
 					</td>
 				</tr>
@@ -66,6 +66,24 @@
 		</table>
 
       </div>
+</div>
 
+<!-- Detalles de empleado -->
+<div class="fondo"></div>
+<div class="wrap-modal">
+  <div class="wrap-det">
+    <div class="wrap-title">
+      <h3>Detalles del Proveedor </h3>
+      <i id="close">&times;</i>
+    </div>
+    <!-- <?php
+    $data = $this->readByProv($_SESSION['USER']['rol']);
+    ?> -->
+    <div class="wrap-body">
+      <label for="">Nombre: <span id="nom"></span> </label>
+      <label for="">Direccion: <span id="dir"></span> </label>
+      <label for="">Teléfono: <span id="tel"></span></label>
 
+    </div>
+  </div>
 </div>

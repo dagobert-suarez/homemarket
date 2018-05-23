@@ -136,16 +136,12 @@
       <h3>Detalles del empleado </h3>
       <i id="close">&times;</i>
     </div>
-    <?php
-    $data = $this->readBy($_SESSION['USER']['rol']);
-    ?>
     <div class="wrap-body">
       <label for="">Nombre: <span id="nom"></span> </label>
-      <label for="">Apellidod: <span id="ape"></span> </label>
+      <label for="">Apellido: <span id="ape"></span> </label>
       <label for="">Teléfono: <span id="tel"></span> </label>
       <label for="">Correo: <span id="corr"></span> </label>
       <label for="">Fecha de Nacimiento: <span id="fech"></span> </label>
-
     </div>
   </div>
 </div>

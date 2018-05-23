@@ -530,6 +530,7 @@ tbody td,thead td{
 }
 .wrap-modal{
   width: auto; height: auto;
+  min-width: 450px;
   background-color: #FEFEFE;
   position:absolute;
   top: 0px;left: 0px;
@@ -562,7 +563,7 @@ tbody td,thead td{
   width: 500px;
 }
 .wrap-det .wrap-body-sup .wrap-info-sup{
-  border-left: 1px solid lime; 
+  border-left: 1px solid lime;
 }
 .wrap-det .wrap-body-sup .wrap-info-sup label{
   display: block;

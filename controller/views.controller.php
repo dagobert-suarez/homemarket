@@ -181,6 +181,11 @@ class viewsController{
 					$result= $this->userModel->readByProv();
 					return $result;
 				}
+				function verPro(){
+					$data = $_POST['data'];
+					$result=$this->userModel->readByProv($data);
+					echo json_encode($result);
+				}
 				// Actualizar Proveedor
 				public function updateProv(){
 					$data= $_POST['data'];

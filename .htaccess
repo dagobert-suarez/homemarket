@@ -65,6 +65,7 @@ RewriteRule ^ver-super$ index.php?controller=views&a=detSuper
 RewriteRule ^actualizar-super-(\w+)$ index.php?controller=views&a=updatesuper&data=$1
 RewriteRule ^eliminar-supermercado-(\w+)$ index.php?controller=views&a=deleteSup&data=$1
 RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
+RewriteRule ^ver-prove$ index.php?controller=views&a=verPro
 RewriteRule ^eliminar-provee-(\w+)$ index.php?controller=views&a=deleteProv&data=$1
 RewriteRule ^guardar-categoria$ index.php?controller=views&a=crearCategoria
 RewriteRule ^eliminar-cate-(\w+)$ index.php?controller=views&a=deletecate&data=$1

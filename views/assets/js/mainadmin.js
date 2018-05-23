@@ -77,12 +77,38 @@ $(".detasup").click(function(){
       console.log(result);
     }
   });
-})
+});
+
+// detalle Proveedor
+// ---------------
+
+$(".abrirpro").click(function(){
+  var prove =this.id;
+  $.ajax({
+    url:"ver-prove",
+    type:("post"),
+    dataType:"json",
+    data:({data:prove}),
+    success:function(result) {
+      console.log(result);
+      // console.log(result);
+      $(".fondo").toggle();
+      $(".wrap-modal").toggle();
+      $("#nom").html(result.nom_prov);
+      $("#dir").html(result.dir_prov);
+      $("#tel").html(result.tel_prov);
+    },
+    error:function(result){console.log(result);}
+  });
+  // console.log("dago");
+});
+
 
 // -------------
 // Esta es la parte de los tabs
 // -----------------------------
 // Get the element with id="defaultOpen" and click on it
+
 document.getElementById("defaultOpen").onclick();
 function Name(event, nName) {
     var i, contentfo, btntabs;
