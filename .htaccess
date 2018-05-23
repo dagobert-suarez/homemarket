@@ -56,6 +56,7 @@ RewriteRule ^settings-Super$ index.php?controller=views&a=settingsSuper
 #crud empleado
 RewriteRule ^nuevo-empleado$ index.php?controller=user&a=crear
 RewriteRule ^actualizar-empleado-(\w+)$ index.php?controller=user&a=actualizarEmpleado
+RewriteRule ^ver-empleado$ index.php?controller=user&a=verEmple
 
 #crud
 RewriteRule ^guardar-super$ index.php?controller=supermercado&a=newSuper
@@ -88,11 +89,13 @@ RewriteRule ^eliminar-tipo-(\w+)$ index.php?controller=product&a=deleteProductTy
 RewriteRule ^eliminar-producto-(\w+)$ index.php?controller=product&a=deleteProduct&data=$1
 RewriteRule ^Productos-empleado$ index.php?controller=product&a=Produtosviewsworker
 RewriteRule ^actualizando-producto$ index.php?controller=product&a=updateProc
+RewriteRule ^detalle-produc$ index.php?controller=prodcut&a=detalleProduct
 RewriteRule ^actualizar-producto-(\w+)$ index.php?controller=product&a=updateProductos&data=$1&
 #CRUD categoria
 RewriteRule ^nueva-categoria$ index.php?controller=product&a=crearCategoria
 RewriteRule ^createCategory$ index.php?controller=product&a=createCategory
 RewriteRule ^actualizando-categoria$ index.php?c=product&a=updateCat
+RewriteRule ^ver-categoria$ index.php?controller=product&a=detallecat
 #CRUD proveedores
 RewriteRule ^registrar-provee$ index.php?controller=product&a=createProvee
 RewriteRule ^actualizar-provee-(\w+)$ index.php?controller=product&a=updateProvee&data=$1

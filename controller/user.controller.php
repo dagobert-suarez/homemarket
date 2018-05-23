@@ -81,6 +81,11 @@ class UserController{
 		return $result;
 	}
 
+ 	public function verEmple(){
+			$data = $_POST['data'];
+			$result = $this->users->readByIdEmple($data);
+			echo json_encode($result);
+		}
 	//---------inicio de sesion del cliente-------//
 	function readBy($data){
 		$result = $this->userModel->readBy($data);

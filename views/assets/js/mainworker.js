@@ -78,19 +78,19 @@ $(".fondo").click(function() {
 // Modal de Detalles
 // -----------------------
 $(".modalDet").click(function(){
-    $(".fondo-det").toggle();
-    $(".wrap-det").toggle();
-    var id = this.id;
-    id = id.replace("D","");
+    var cate = this.id;
+    // id = id.replace("D","");
     $.ajax({
       url:"ver-categoria",
       type:"post",
       dataType:"json",
-      data:({data:id}),
+      data:({data:cate}),
       success:function(result){
         console.log(result);
-        $("#codeCat").html(result[0]);
-        $("#nomCat").html(result[1]);
+        $(".fondo-det").toggle();
+        $(".wrap-det").toggle();
+        $("#codeCat").html(result.id_tip_pro);
+        $("#nomCat").html(result.nom_tip_pro);
       },
       error:function(result){console.log(result);}
     });
@@ -124,49 +124,27 @@ $(".fondo-det").click(function() {
     $(".wrap-det").toggle();
 });
 
+//detalle de productos
+// ---------------
+$(".openDet").click(function(){
+  console.log("hola");
+  var produc = this.id;
+  // $.ajax({
+  //   url:"detalle-produc",
+  //   type:"post",
+  //   dataType:"json",
+  //   data:({dta:produc}),
+  //   success:function(result){
+          // console.log(result);
+        // $(".fondo").toggle();
+        // $(".wrap-det").toggle();
+  //   },
+  //   error:function(result){
+  //    console.log(result);
+  //   }
+  // });
+});
 
-// validacion
-// ---------------------
-//inicia lo de categoria
-// $("#frmcategory").submit(function(e) {
-// e.preventDefault();
-//         dataJson = [];
-//         $(".new").each(function(){
-//             structure = {};
-//             structure = $(this).val();
-//             dataJson.push(structure);
-//         });
-//         $.ajax({
-//           url: "crear-categoria",
-//           type: "POST",
-//            dataType:'json',
-//            data: ({data: dataJson }),
-//            success: function(result){
-//              if (result==true) {
-//                $("#frmcategory")[0].reset();
-//                $('#frmcategory').after('<div class="mensaje">"ya registrò"</div>');
-//              }
-//             $('#frmcategory').after('<div class="mensaje">'+result+'</div>');
-//              setTimeout(function(){
-//                   $('div.mensaje').remove();
-//                 }, 5000);
-//             // console.log(result);
-//            },
-//            error: function(result){
-//               console.log(result);
-//            }
-//       });
-// });
-// termina lo de categoria
-
-// var fondo = document.getElementById('fondo');
-// var wrap = document.getElementById('wrap');
-// var abrir = document-getElementById('abrirmodal');
-
-// abrir.onclick = function(){
-//     fondo.style.display "block";
-//     wrap.style.display "block";
-// };
 // Esta es la parte de los tabs
 // -----------------------------
 function Name(evt, nName) {

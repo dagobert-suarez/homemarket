@@ -424,6 +424,7 @@ tbody td,thead td{
 }
 /* Fin de la  Categoria  */
 /* --------------- */
+
 /* Modal de Detalle Supermercado */
 /* -------------------------------------*/
 /* #wrapmodalsup{
@@ -516,3 +517,41 @@ tbody td,thead td{
 
 /*_*.* Finaliza la parte de los ajutes*.*_*/
 /* ------------------------------------ */
+
+/* modal de empleado  */
+.fondo{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px; left: 0px;
+  display: none;
+  z-index: 1;
+}
+.wrap-modal{
+  width: 450px; height: auto;
+  background-color: #FEFEFE;
+  position:absolute;
+  top: 0px;left: 0px;
+  z-index: 2;
+  display: none;
+  margin: 150px 450px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.wrap-modal .wrap-det .wrap-title{
+  display: flex;
+  justify-content: space-between;
+  color: #433d53;
+}
+.wrap-modal .wrap-det .wrap-title i{
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.wrap-modal .wrap-det .wrap-body label{
+  display: block;
+  margin: 10px;
+  font-size: 1.1rem;
+  color: #433d53;
+}

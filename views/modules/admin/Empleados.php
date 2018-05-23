@@ -111,7 +111,7 @@
                 <td><?php echo $row['email_usu'];?></td>
                 <td>
                     <a href="actualizar-empleado-<?php echo $row['id_usu'];?>" class=""><i class="fa fa-pencil"></i>Editar</a>
-                    <a href="#"class=""id=""><i class="fa fa-eye"></i>Detalles</a>
+                    <a href="#" class="openDet" id="<?php echo $row['id_usu'];?>"><i class="fa fa-eye"></i>Detalles</a>
                     <a href="#"><i class="fa fa-trash"></i>Eliminar</a>
                 </td>
             </tr>
@@ -126,4 +126,26 @@
     <h3> Permisos</h3>
   </div>
 
+</div>
+
+<!-- Detalles de empleado -->
+<div class="fondo"></div>
+<div class="wrap-modal">
+  <div class="wrap-det">
+    <div class="wrap-title">
+      <h3>Detalles del empleado </h3>
+      <i id="close">&times;</i>
+    </div>
+    <?php
+    $data = $this->readBy($_SESSION['USER']['rol']);
+    ?>
+    <div class="wrap-body">
+      <label for="">Nombre: <span id="nom"></span> </label>
+      <label for="">Apellidod: <span id="ape"></span> </label>
+      <label for="">Teléfono: <span id="tel"></span> </label>
+      <label for="">Correo: <span id="corr"></span> </label>
+      <label for="">Fecha de Nacimiento: <span id="fech"></span> </label>
+
+    </div>
+  </div>
 </div>

@@ -33,7 +33,7 @@
         <td><?php echo $row["mar_pro"]; ?></td>
         <td>
             <a href="actualizar-producto-<?php echo $row['id_pro'] ;?>" class=""><i class="fa fa-pencil" aria-hidden="true"></i>Actualizar</a>
-            <a href="#" class="modalDet"><i class="fa fa-eye" aria-hidden="true"></i>Detalles</a>
+            <a href="#" class="openDet" id="<?php echo $row['id_pro'] ;?>"><i class="fa fa-eye" aria-hidden="true"></i>Detalles</a>
             <a href="eliminar-producto-<?php echo $row['id_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true"></i>Eliminar</a>
         </td>
       </tr>
@@ -44,8 +44,9 @@
   </table>
   <!--  Actualizar Producto -->
   <!-- ----------------------------->
-  <!-- <div class="fondo"></div>
-  <div class="wrap">
+
+  <div class="fondo"></div>
+  <!-- <div class="wrap">
       <div class="wea">
           <?php
             $dataProduct = $this->readByproc(["data"]);
@@ -71,7 +72,7 @@
 
   <!-- Detalles -->
   <!-- ---------------->
-  <!-- <div class="fondo-det"></div>
+  <div class="fondo-det"></div>
   <div class="wrap-det">
       <div class="wea-det">
           <?php
@@ -85,8 +86,8 @@
               <p>La vista para el detalle del productos</p>
                   <label for="">Nombre del productos:</label>
                   <br>
-      </div>
-  </div> -->
+          </div>
+          </div>
+    </div>
   <!--  Fin de Detalles -->
   <!-- --------------------->
-</div>

@@ -42,7 +42,7 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 						<td><?php echo $row["nom_tip_pro"] ;?></td>
 						<td>
 							<a href="#" class="abrirmodal" id="<?php echo $row["id_tip_pro"] ;?>"><i class="fa fa-pencil"></i>Editar</a>
-							<a href="#"class="modalDet" id="D<?php echo $row["id_tip_pro"] ;?>"><i class="fa fa-info"></i>Detalles</a>
+							<a href="#" class="modalDet" id="<?php echo $row["id_tip_pro"];?>"><i class="fa fa-info"></i>Detalles</a>
 							<a href="#" onclick="eliminarCategoria(<?php echo $row["id_tip_pro"] ;?>)"><i class="fa fa-trash"></i>Eliminar</a>
 						</td>
 
@@ -82,8 +82,8 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 					<i class="closedet">&times;</i>
 				</div>
 				<div class="wrap-bod">
-					Codigo: <p id="codeCat"></p>
-					Nombre: <p id="nomCat"></p>
+					Codigo: <span id="codeCat"></span>
+					Nombre: <span id="nomCat"></span>
 			</div>
 		</div>
 		<!--  Fin de Detalles -->

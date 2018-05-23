@@ -21,6 +21,34 @@ $(document).ready(function() {
 
     )
 } );
+// modal para el datalle
+// ------------------
+
+$(".openDet").click(function(){
+  var empleado = this.id;
+  $.ajax({
+    url:"ver-empleado",
+    type:"post",
+    dataType:"json",
+    data:({data:empleado}),
+    success:function(result){
+      console.log(result);
+      $(".fondo").toggle();
+      $(".wrap-modal").toggle();
+      $("#nom").html(result.nom_usu);
+      $("#ape").html(result.ape_usu);
+      $("#tel").html(result.tel_usu);
+      $("#corr").html(result.email_usu);
+      $("#fech").html(result.fec_nac_usu);
+    },
+    error:function(result){console.log(result); }
+
+  })
+});
+$("#close").click(function(){
+  $(".fondo").toggle();
+  $(".wrap-modal").toggle();
+});
 // -------------
 // Esta es la parte de los tabs
 // -----------------------------

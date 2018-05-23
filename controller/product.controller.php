@@ -143,6 +143,7 @@ class ProductController{
           // return $result;
       }
 
+
       public function updateProc(){
         $data = $_POST['data'];
         // $img = $_FILES['file'];
@@ -207,6 +208,11 @@ class ProductController{
           public function deleteCat(){
               $data = $_POST['data'];
               $result = $this->product->deleteCat($data);
+            echo json_encode($result);
+          }
+          public function detallecat(){
+            $data = $_POST['data'];
+            $result= $this->product->readByCat($data);
             echo json_encode($result);
           }
 

@@ -79,7 +79,7 @@ class UserModel{
 		}
 		return $result;
 			 }
-			 
+
 	function readAllEm(){
 		try {
 			$sql="SELECT * FROM usuario WHERE id_rol = 3";
