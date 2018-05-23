@@ -529,7 +529,7 @@ tbody td,thead td{
   z-index: 1;
 }
 .wrap-modal{
-  width: 450px; height: auto;
+  width: auto; height: auto;
   background-color: #FEFEFE;
   position:absolute;
   top: 0px;left: 0px;
@@ -554,4 +554,17 @@ tbody td,thead td{
   margin: 10px;
   font-size: 1.1rem;
   color: #433d53;
+}
+.wrap-modal .wrap-det .wrap-body-sup{
+  display: flex;
+  border: 1px solid rgba(161,161,161,063);
+  border-radius: 5px;
+  width: 500px;
+}
+.wrap-det .wrap-body-sup .wrap-info-sup{
+  border-left: 1px solid lime; 
+}
+.wrap-det .wrap-body-sup .wrap-info-sup label{
+  display: block;
+  margin: 10px;
 }

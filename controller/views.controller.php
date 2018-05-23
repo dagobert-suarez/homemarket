@@ -139,6 +139,11 @@ class viewsController{
 				 $resut = $this->userModel->readBySup($data);
 				 return $resut;
 			 }
+			  public function detSuper(){
+					$data = $_POST['data'];
+					$result = $this->userModel->readBySup($data);
+					echo json_encode($result);
+				}
 			 // Actualizar Supermercado
 			  function updateSup(){
 				 	$data = $_POST['data'];

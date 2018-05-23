@@ -23,7 +23,6 @@ $(document).ready(function() {
 } );
 // modal para el datalle
 // ------------------
-
 $(".openDet").click(function(){
   var empleado = this.id;
   $.ajax({
@@ -49,6 +48,37 @@ $("#close").click(function(){
   $(".fondo").toggle();
   $(".wrap-modal").toggle();
 });
+$(".fondo").click(function(){
+  $(".fondo").toggle();
+  $(".wrap-modal").toggle();
+});
+
+// Detalle de supermercado
+// --------------------------
+
+$(".detasup").click(function(){
+  var supermercado = this.id;
+  $.ajax({
+    url:"ver-super",
+    type:("post"),
+    dataType:"json",
+    data:({data:supermercado}),
+    success:function(result) {
+      console.log(result);
+      $(".fondo").toggle();
+      $(".wrap-modal").toggle();
+      $("#nom").html(result.nom_sup);
+      $("#dir").html(result.dir_sup);
+      $("#tel").html(result.tel_sup);
+      $("#img-sup")[0].src = "views/assets/image/super/"+result.logo_sup;
+
+    },
+    error:function(result){
+      console.log(result);
+    }
+  });
+})
+
 // -------------
 // Esta es la parte de los tabs
 // -----------------------------

@@ -61,6 +61,7 @@ RewriteRule ^ver-empleado$ index.php?controller=user&a=verEmple
 #crud
 RewriteRule ^guardar-super$ index.php?controller=supermercado&a=newSuper
 RewriteRule ^editar-supermercado$ index.php?controller=views&a=updateSup
+RewriteRule ^ver-super$ index.php?controller=views&a=detSuper
 RewriteRule ^actualizar-super-(\w+)$ index.php?controller=views&a=updatesuper&data=$1
 RewriteRule ^eliminar-supermercado-(\w+)$ index.php?controller=views&a=deleteSup&data=$1
 RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
