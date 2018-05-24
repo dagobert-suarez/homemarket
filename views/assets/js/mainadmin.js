@@ -69,6 +69,7 @@ $(".detasup").click(function(){
       $("#nom").html(result.nom_sup);
       $("#dir").html(result.dir_sup);
       $("#tel").html(result.tel_sup);
+      $("#ciu").html(result.cod_ciu);
       $("#img-sup")[0].src = "views/assets/image/super/"+result.logo_sup;
     },
     error:function(result){

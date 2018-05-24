@@ -102,9 +102,10 @@
                 <img id="img-sup" alt="">
               </div>
               <div class="wrap-info-sup">
-                <label for="">Nombre: <span id="nom"></span> </label>
-                <label for="">Direccion: <span id="dir"></span> </label>
-                <label for="">Teléfono: <span id="tel"></span> </label>
+                <label for="">Nombre: <span id="nom"></span></label>
+                <label for="">Direccion: <span id="dir"></span></label>
+                <label for="">Teléfono: <span id="tel"></span></label>
+                <label for="">Ciudad: <span id="ciu"></span></label>
               </div>
             </div>
           </div>
