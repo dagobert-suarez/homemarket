@@ -33,7 +33,7 @@
         <td><?php echo $row["mar_pro"]; ?></td>
         <td>
             <a href="actualizar-producto-<?php echo $row['id_pro'] ;?>" class=""><i class="fa fa-pencil" aria-hidden="true"></i>Actualizar</a>
-            <a href="#" class="openDet" id="<?php echo $row['id_pro'] ;?>"><i class="fa fa-eye" aria-hidden="true"></i>Detalles</a>
+            <a href="#" class="openDet" id=""><i class="fa fa-eye" aria-hidden="true"></i>Detalles</a>
             <a href="eliminar-producto-<?php echo $row['id_pro'] ;?>"><i class="fa fa-trash" aria-hidden="true"></i>Eliminar</a>
         </td>
       </tr>
@@ -84,7 +84,7 @@
           </div>
           <div class="wrap-bod">
               <p>La vista para el detalle del productos</p>
-                  <label for="">Nombre del productos:</label>
+                  <label for="">Nombre del productos: <span id="nom"></span> </label>
                   <br>
           </div>
           </div>

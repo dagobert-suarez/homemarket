@@ -124,29 +124,18 @@ $(".fondo-det").click(function() {
     $(".wrap-det").toggle();
 });
 
-//detalle de productos
-// ---------------
+//  Detalle producto
+// ---------------------
+
 $(".openDet").click(function(){
   console.log("hola");
-  var produc = this.id;
-  // $.ajax({
-  //   url:"detalle-produc",
-  //   type:"post",
-  //   dataType:"json",
-  //   data:({dta:produc}),
-  //   success:function(result){
-          // console.log(result);
-        // $(".fondo").toggle();
-        // $(".wrap-det").toggle();
-  //   },
-  //   error:function(result){
-  //    console.log(result);
-  //   }
-  // });
 });
+
 
 // Esta es la parte de los tabs
 // -----------------------------
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 function Name(evt, nName) {
     var i, contentfo, btntabs;
     contentfo = document.getElementsByClassName("contentfo");
@@ -158,9 +147,7 @@ function Name(evt, nName) {
         btntabs[i].className = btntabs[i].className.replace(" active", "");
     }
     document.getElementById(nName).style.display = "block";
-    evt.currentTarget.className += " active";
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+    // evt.currentTarget.className += " active";
 }
 
 //  Fin   de Esta es la parte de los tabs

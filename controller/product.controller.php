@@ -36,7 +36,6 @@ class ProductController{
   function Produtosviewsworker(){
     require_once "views/modules/worker/header.php";
     require_once "views/modules/worker/productosviews.php";
-    // require_once "views/modules/worker/footer.php";
     require_once "views/modules/worker/footer.php";
 
   }

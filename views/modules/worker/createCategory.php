@@ -10,7 +10,7 @@ $dataCategory = $this -> readByCategory($_GET["data"]);
 				<label for="" class="required">Nombre de la categoria:</label>
 				<input type="text" class="k" name="data[]" value="" required>
 			</div>
-				<button type="submit" name="guardar" class="frmbtn">Crear categoria</button>
+				<button type="submit" name="guardar" class="frmbtn">Registrar categoria</button>
 			</form>
 		</div>
 		<header>
