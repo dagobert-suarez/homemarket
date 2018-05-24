@@ -161,6 +161,7 @@ class ProductController{
       public function deleteProduct(){
           $data = $_GET['data'];
           $result = $this->product->deletePro($data);
+          unlink("views/assets/image/productos/".$filename);
           echo '<script language="javascript">alert("Deseas eliminar este producto ?");</script>';
           echo "<script>window.location.href='Productos-empleado'</script>";
       }

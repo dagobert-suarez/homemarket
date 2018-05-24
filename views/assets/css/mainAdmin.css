@@ -47,20 +47,25 @@ section.container1S{
 }
 .wrap--content{ width: 100%; }
 .wrap--content .menuS--top{
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px 0;
     background-color: #FEFEFE;
     border-bottom: 1px solid rgba(161, 161, 161, 0.63);
 }
-.wrap--content .menuS--top ul{
+/* .wrap--content .menuS--top ul{
     width: 200px;
     display: flex;
     justify-content: space-around;
+} */
+.menuS--top .wrap-top{
+  display: flex;
+  justify-content:space-between;
+  padding: 20px;
 }
+.menuS--top .wrap-top .perf{ display: flex; }
+.menuS--top .wrap-top .perf ul a:hover{ color: orange; }
+
 .wrap--content .menuS--top .user--name{
     text-transform: uppercase;
-    margin-right:  640px;
+    margin-left: 55px;
 }
 .wrap--content .menuS--top .user--name::before{
     content: " Bienvenido : "
@@ -149,12 +154,12 @@ ul{ text-decoration: none; }
     z-index: 1;
     border: 1px solid rgba(161,161,161,0.63);
 }
-.content-down li{
+.content-down a{
     text-decoration: none;
     padding: 12px 14px;
     display: block;
 }
-.content-down li:hover{ background-color: #ddd; }
+.content-down a:hover{ background-color: #ddd; }
 .down:hover .content-down{ display: block; }
 /*Fin de Perfil  */
 /*--------------------------------------  */
@@ -530,13 +535,13 @@ tbody td,thead td{
 }
 .wrap-modal{
   width: auto; height: auto;
-  min-width: 450px;
+  min-width: 500px;
   background-color: #FEFEFE;
-  position:absolute;
+  position:fixed;
   top: 0px;left: 0px;
   z-index: 2;
   display: none;
-  margin: 150px 500px;
+  margin: 115px 440px;
   border-radius: 5px;
   padding: 5px;
 }
@@ -569,7 +574,7 @@ tbody td,thead td{
 }
 .wrap-modal .wrap-det .wrap-image-sup{
   width: 400px;
-  height:30s0px;
+  height:300px;
 }
 .wrap-det .wrap-body-sup .wrap-info-sup{
   border-left: 1px solid rgba(161,161,161,063);

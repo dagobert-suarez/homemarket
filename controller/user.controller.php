@@ -239,7 +239,7 @@ class UserController{
 		}
 		$result = $this->users->updateUser($data);
 			if ($result==true) {
-				$_SESSION['message']="Modificacion exitosa";
+				$_SESSION['message']="!Modificacion Exitosa¡";
 				$_SESSION['USER']['NAME']=$data[0];
 				header("Location: Ajustes");
 			}else{

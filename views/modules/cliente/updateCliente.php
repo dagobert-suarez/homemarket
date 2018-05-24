@@ -1,20 +1,18 @@
 <!-- empieza lo de los ajustes -->
-<?php
-// $data = $this->readBy($_SESSION['USER']['rol']);
-    $data = $this->readbyusu();
-?>
+<?php $data = $this->readbyusu(); ?>
 <div class="module--Sett">
     <div class="wrap-form">
       <header >
         <h1 class="sett">Ajustes <i class="fa fa-gears"></i></h1>
-
       </header>
-      <?php
+      <div class="message">
+        <?php
         if (isset($_SESSION['message'])) {
-         echo $_SESSION['message'];
-         unset($_SESSION['message']);
+          echo $_SESSION['message'];
+          unset($_SESSION['message']);
         }
-      ?>
+        ?>
+      </div>
         <!-- <p>Actualizar la contraseña, los datos personales</p> -->
 
         <form  action="actualizar-datosCli" method="post">

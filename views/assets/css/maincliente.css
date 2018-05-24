@@ -169,6 +169,13 @@ li i:hover{
 /* -------------------------------- */
 /*_*.* Esta es la parte de los ajutes*.*_*/
 /* ------------------------------------ */
+.message{
+  background-color: rgb(180, 249, 194);
+  border: 2px solid  #4CAF50;
+  color: black;
+  padding: 10px;
+  border-radius: 6px;
+}
 .module--Sett{
     background-color: white;
     width: 95%;
