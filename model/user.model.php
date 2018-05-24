@@ -92,6 +92,17 @@ class UserModel{
 		return $result;
 	}
 
+	function selectEmple(){
+	try{
+		$sql= "SELECT COUNT(*) FROM usuario WHERE id_rol = 3";
+		$query=$this->pdo->prepare($sql);
+		$query->execute();
+		$result=  $query->fetch(PDO::FETCH_BOTH);
+	}catch(PDOException $e){
+		$result = $e-> getMessage();
+	}
+	return $result;
+}
 
 	function readByIdEmple($data){
 		try {

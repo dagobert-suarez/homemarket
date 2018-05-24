@@ -52,7 +52,6 @@ $(".fondo").click(function(){
   $(".fondo").toggle();
   $(".wrap-modal").toggle();
 });
-
 // Detalle de supermercado
 // --------------------------
 
@@ -71,7 +70,6 @@ $(".detasup").click(function(){
       $("#dir").html(result.dir_sup);
       $("#tel").html(result.tel_sup);
       $("#img-sup")[0].src = "views/assets/image/super/"+result.logo_sup;
-
     },
     error:function(result){
       console.log(result);
@@ -79,9 +77,8 @@ $(".detasup").click(function(){
   });
 });
 
-// detalle Proveedor
+// Detalles Proveedor
 // ---------------
-
 $(".abrirpro").click(function(){
   var prove =this.id;
   $.ajax({
@@ -91,7 +88,6 @@ $(".abrirpro").click(function(){
     data:({data:prove}),
     success:function(result) {
       console.log(result);
-      // console.log(result);
       $(".fondo").toggle();
       $(".wrap-modal").toggle();
       $("#nom").html(result.nom_prov);
@@ -121,7 +117,7 @@ function Name(event, nName) {
         btntabs[i].className = btntabs[i].className.replace(" active", "");
     }
     document.getElementById(nName).style.display = "block";
-    event.currentTarget.className += " active";
+    // event.currentTarget.className += " active";
 }
 //  Fin de la  es la parte de los tabs
 // -----------------------------

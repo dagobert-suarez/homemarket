@@ -129,6 +129,7 @@
 </div>
 
 <!-- Detalles de empleado -->
+<!-- ----------------------->
 <div class="fondo"></div>
 <div class="wrap-modal">
   <div class="wrap-det">

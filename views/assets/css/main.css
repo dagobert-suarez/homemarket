@@ -512,7 +512,7 @@ input[type=password]:focus,select:focus{
     /*display: flex;*/
 }
 .modal-content{
-    background-color: #ececec;
+    background-color: #FEFEFE;
     margin: 10% auto 5% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -524,7 +524,6 @@ input[type=password]:focus,select:focus{
     position: relative;
     margin: -15px 0 20px 0;
 }
-
 .close{
     position: absolute;
     top: 0;
@@ -541,7 +540,7 @@ input[type=password]:focus,select:focus{
 .login--form input[type=email],
 .login--form input[type=password],
 .login--form input[type=text]{
-    border: 1px solid rgb(182, 182, 182);
+    border: 1px solid rgb(181, 181, 181);
     margin: 6px ;
     width: 100%;
     box-sizing: border-box;

@@ -88,17 +88,15 @@
             </tbody>
         </table>
 
-
+<!-- Detalle de supermercado -->
+<!-- ---------------------------->
         <div class="fondo"></div>
         <div class="wrap-modal">
           <div class="wrap-det">
             <div class="wrap-title">
-              <h3>Detalles del Supermercado </h3>
+              <h2>Detalles del Supermercado</h2>
               <i id="close">&times;</i>
             </div>
-            <!-- <?php
-            $data = $this->readByIdSup($_GET["data"]);
-             ?> -->
             <div class="wrap-body-sup">
               <div class="wrap-image-sup">
                 <img id="img-sup" alt="">
@@ -114,12 +112,13 @@
 
 
       </div>
+
         <!-- Categoria -->
         <!-- ----------------->
       <div id="Categorias" class="contentfo">
         <h3>Categorías</h3>
-        <button type="button" id="openCate" name="button">Nueva categoría</button>
         <table  class="dataGrid" id="dataGrid">
+          <button type="button" id="openCate" name="button">Nueva categoría</button>
 			       <thead class="tittledatag">
         				<tr>
         					<td>#</td>
@@ -129,6 +128,7 @@
         			</thead>
         			<tbody>
         				<?php
+                $item=1;
         					$data = $this->readCategory();
         					foreach ( $data as $row) {	?>
         				<tr>
@@ -136,20 +136,23 @@
         					<td><?php echo $row["nom_tip_pro"] ;?></td>
         					<td>
         						<a href="#" class="abrirmodal"><i class="fa fa-pencil"></i>Editar</a>
-        						<a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a>
+        						<!-- <a href="#"class="modalDet" id="modalDet"><i class="fa fa-info"></i>Detalles</a> -->
         						<a href="eliminar-cate-<?php echo $row['id_tip_pro'] ;?>"><i class="fa fa-trash"></i>Eliminar</a>
         					</td>
-
         				</tr>
-        			<?php } ?>
+        			<?php
+              $item++;
+             } ?>
         			</tbody>
 		          </table>
+
+        <!-- Modal De Nueva categoria -->
         <div id="fondo"></div>
         <div id="wrapmodal">
             <div id="modal">
                 <div class="wrap-tit">
                     <h1>Nueva Categoría</h1>
-                    <i id="closeCate"  class="close">&times;</i>
+                    <i id="closeCate" class="close">&times;</i>
                 </div>
                 <div class="wrap-bod">
                     <div class="form-group">
@@ -164,8 +167,10 @@
         </div>
 
       </div>
+
       <!-- Productos -->
       <!-- ----------------->
+
       <div id="Productos" class="contentfo">
         <h3>Productos</h3>
         <button type="button" id="openPro" name="button">Nuevo Producto</button>

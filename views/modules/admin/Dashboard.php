@@ -35,7 +35,7 @@
            <header>
                <h3>Empleados</h3>
            </header>
-           <p>Cantidad de Empleados</p>
+           <p>Cantidad: <?php echo $this->selectEmple(); ?></p>
        </div>
 
    </div>

@@ -20,7 +20,10 @@ class viewsController{
 		 $result = $this->userModel->prove()[0];
 		 return $result;
 	 }
-
+	 function selectEmple(){
+		 $result = $this->userModel->selectEmple()[0];
+		 return $result;
+	 }
 	 function readBy($data){
 		 $result = $this->userModel->readBy($data);
 		 return $result;
