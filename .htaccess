@@ -1,15 +1,14 @@
 RewriteEngine on
-
-#la landing
+#landing page
 RewriteRule ^inicio$ index.php?controller=views
 RewriteRule ^cerrar-sesion$ index.php?controller=singOut&a=salir
 RewriteRule ^nuevo-cliente$ index.php?controller=user&a=crear
-RewriteRule ^super$ index.php?controller=views&a=super
+#recuperar contraseña: david urrego
 RewriteRule ^recuperar$ index.php?controller=views&a=forgot
 RewriteRule ^email$ index.php?controller=login&a=enviar
 RewriteRule ^recupera$ index.php?controller=login&a=recuperar
 
-#manual de usuario
+#manual de usuario: david herrera
 RewriteRule ^explora$ index.php?controller=manual&a=explora
 RewriteRule ^modulo1$ index.php?controller=manual&a=lorem
 RewriteRule ^modulo1-r1$ index.php?controller=manual&a=mo1res1
@@ -31,10 +30,9 @@ RewriteRule ^modulo5$ index.php?controller=manual&a=modulo5
 RewriteRule ^modulo6$ index.php?controller=manual&a=modulo6
 #ReweiteRule ^modulo1r1$ index.php?controller=manual&a=mo1res2
 
-#validar usuario en el login
+#validación de usuario en el login
 RewriteRule ^validar$ index.php?controller=login&a=validar
 RewriteRule ^validar_usuario$ index.php?controller=login&a=validar_usuario
-
 
 #cliente
 RewriteRule ^inicioCliente$ index.php?controller=views&a=inicioCliente
@@ -68,8 +66,7 @@ RewriteRule ^guardar-provee$ index.php?controller=views&a=newProvee
 RewriteRule ^ver-prove$ index.php?controller=views&a=verPro
 RewriteRule ^eliminar-provee-(\w+)$ index.php?controller=views&a=deleteProv&data=$1
 RewriteRule ^guardar-categoria$ index.php?controller=views&a=crearCategoria
-RewriteRule ^eliminar-cate-(\w+)$ index.php?controller=views&a=deletecate&data=$1
-
+RewriteRule ^eliminar-cate-(\w+)$ index.php?controller=views&a=deletecate&data=$
 RewriteRule ^actualizar-datos$ index.php?controller=views&a=update&data=$1
 #CRUD empleado
 RewriteRule ^Registrar-empleado$ index.php?controller=nworkers&a=registroEmpleado

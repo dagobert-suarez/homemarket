@@ -25,7 +25,6 @@ class ProductController{
     require_once "views/modules/cliente/footer.php";
   }
   // Empleado
-  // -------------
   // Crear Producto
   function crear(){
     require_once "views/modules/worker/header.php";
@@ -60,16 +59,10 @@ class ProductController{
     require_once "views/modules/worker/footer.php";
   }
 
-  // function detalleProduct(){
-  //   require_once "views/modules/cliente/header.php";
-  //   require_once "views/modules/cliente/detalleProducto.php";
-  //   require_once "views/modules/cliente/footer.php";
-  // }
   function detalleProduct(){
     $data = $_POST['data'];
     $result=$this->product->readIdPro($data);
     echo json_encode($result);
-
   }
 
     public function __CONSTRUCT(){
@@ -85,14 +78,10 @@ class ProductController{
               $filesize = $_FILES["file"]["size"];
               $extention = pathinfo($_FILES["file"]["name"]);
               $extention = ".".$extention["extension"];
-
               $var_rand = rand(10000,999999) * rand(10000,999999);
               $tmp_name = md5($var_rand.$_FILES["file"]["name"]);
-
               $filename = $tmp_name.$extention;
-
               $extention = pathinfo($filename, PATHINFO_EXTENSION);
-
               if (!array_key_exists($extention, $allowed)) {
                 die("Error: favor seleccione un formato valido (.jpg, .png, .gif, .jpeg)");
               }
@@ -151,13 +140,8 @@ class ProductController{
         $result = $this->product->updateProduct($data);
         echo '<script language="javascript">alert("Modificado con exito");</script>';
         echo "<script>window.location.href='Productos-empleado'</script>";
-
-        // echo '<script language="javascript">alert("Modificado con exito");</script>';
-        // echo "<script>window.location.href='Productos-empleado'</script>";
-        // header("Location: Productos-empleado");
     }
       // crud productos
-
       public function deleteProduct(){
           $data = $_GET['data'];
           $result = $this->product->deletePro($data);
@@ -181,7 +165,6 @@ class ProductController{
         echo "<script>window.location.href='nueva-categoria'</script>";
 
       }
-
           //visualiza las  categorias en la pagina del empleado
           function readCategory(){
               $result = $this->product->readCategory();
@@ -229,7 +212,6 @@ class ProductController{
                return $result;
            }
            // ProveedoresEm
-    			 // --------------------------
     			 // Crear Proveedor
     			 public function createProvee(){
     	 			$data = $_POST['data'];
