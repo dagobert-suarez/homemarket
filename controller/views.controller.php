@@ -60,7 +60,6 @@ class viewsController{
 			require_once "views/modules/cliente/viewSuper.php";
 			require_once "views/modules/cliente/navigator.php";
 			require_once "views/modules/cliente/footer.php";
-
 		}else{
 			header("Location: inicio");
 		}
@@ -74,7 +73,6 @@ class viewsController{
 			require_once "views/modules/admin/Dashboard.php";
 			require_once "views/modules/admin/footer_admin.php";
 		}else {
-			// die();
 			header("Location: inicio");
 		}
 	}
@@ -131,7 +129,6 @@ class viewsController{
 		}
 
 		// Supermercados
-
 			// Seleccionar Todos los Supermercados
 			 function readAllSup(){
 				$result = $this->userModel->readAllSup();
@@ -155,10 +152,8 @@ class viewsController{
 					// copy($img['tmp_name'],"views/assets/image/super/".$img['name']);
 
 					$result = $this->userModel->updateSup($data);
-
 					echo '<script language="javascript">alert("Modificado con exito");</script>';
           echo "<script>window.location.href='mi-supermercado'</script>";
-
 			 }
 			 // Eliminar Supermercado
 			 public function deleteSup(){
@@ -227,20 +222,13 @@ class viewsController{
 					header("Location: mi-supermercado");
 				}
 
-
-
-
-
-
 //las sessiones del empeado - inicio
-// --------------------- //
 	function InicioWorker(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==3) {
 			require_once "views/modules/worker/header.php";
 			require_once "views/modules/worker/mainWork.php";
 			require_once "views/modules/worker/footer.php";
 		}else {
-			// die();
 			header ('Location: inicio');
 		}
 	}
@@ -253,7 +241,6 @@ class viewsController{
 		return $result;
 	}
 
-
 	// Actualizar los datos del Empleados
 	function updateEm(){
 		$data = $_POST['data'];
@@ -263,28 +250,24 @@ class viewsController{
 	}
 
 	//los ajustes del empleado
-	// ------------------------------
 	 function settingsworker(){
 		 require_once "views/modules/worker/header.php";
 		 require_once "views/modules/worker/updateWorker.php";
 		 require_once "views/modules/worker/footer.php";
 	 }
 	 // Retrasos
-	 // ---------
 	 function retrasos(){
 		 require_once "views/modules/worker/header.php";
 		 require_once "views/modules/worker/retrasos.php";
 		 require_once "views/modules/worker/footer.php";
 	 }
 	 // Pedidos
-	 // ---------
 	 function pedidos(){
 		 require_once "views/modules/worker/header.php";
 		 require_once "views/modules/worker/pedidos.php";
 		 require_once "views/modules/worker/footer.php";
 	 }
 	 // Provedores
-	 // ---------
 	 function proveedoresEm(){
 		 require_once "views/modules/worker/header.php";
 		 require_once "views/modules/worker/proveedores.php";
@@ -292,7 +275,6 @@ class viewsController{
 	 }
 
 //todo sobre el superadmin
-// ---------------------------//
 	function InicioSuperAdmin(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==4) {
 			require_once "views/modules/superAdmin/header.php";
@@ -300,11 +282,9 @@ class viewsController{
 			require_once "views/modules/superAdmin/footer.php";
 		}
 		else {
-		// 	die();
 			header ('Location: inicio');
 		}
 	}
-
 
 	function mainSuper(){
 		if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==4) {
@@ -340,19 +320,6 @@ class viewsController{
 		require_once "views/modules/superAdmin/informacion.php";
 		require_once "views/modules/superAdmin/footer.php";
 	}
-
-
-
-
-	// function ingreso(){
-	// 	if (isset($_SESSION['user'])) {
-	// 		echo $_SESSION['user'];
-  //
-	// 	}else{
-	// 		header('Location: inicio');
-	// 	}
-	// require_once "views/modules/admin/createProduct.php";
-	// }
 
 	function bajar(){
 		require_once "views/modules/superAdmin/header.php";

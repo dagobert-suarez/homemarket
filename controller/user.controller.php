@@ -96,22 +96,6 @@ class UserController{
 		return $result;
 	}
 
-
-
-	//  function inicioCliente(){
-  //   if (isset($_SESSION['USER']['rol']) && $_SESSION['USER']['rol']==1) {
-	// 		require_once "views/modules/cliente/header.php";
-	// 		require_once "views/modules/cliente/menuTopC.php";
-	// 		require_once "views/modules/cliente/navigator.php";
-	// 		require_once "views/modules/cliente/viewSuper.php";
-	// 		require_once "views/modules/cliente/footer.php";
-	// 		// require_once "views/modules/cliente/maps.php";
-  //     // require_once "views/modules/cliente/navigator.php";
-  //   }else{
-  //     header("Location: inicio");
-  //   }
-  // }
-
 	//los ajustes del cliente
 	function updatecli(){
 		$data = $_POST['data'];
@@ -215,12 +199,6 @@ class UserController{
 		}else{
 			return false;
 		}
-		//esto es de otra cosa
-				/*if(preg_match(), subject)){
-
-				}else{
-
-				}*/
 	}
 	function readbyusu(){
 		$res = $this->users->readByCod($_SESSION['USER']['ID']);
@@ -271,11 +249,6 @@ class UserController{
 						$_SESSION['message']="Contraseña actual no  valida";
 						header("Location: Ajustes");
 					}
-				// if ($result==true) {
-				// }else{
-				// 	$_SESSION['message']="Ocurrio un error";
-				// 	header("Location: Ajustes");
-				// }
 	}
 }
 ?>
