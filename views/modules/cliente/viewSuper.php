@@ -8,6 +8,7 @@
     <div class="buscador">
       <label for="">Buscar Supermercado:</label>
       <input  class="k" type="search" name="" value="" placeholder="Buscar Supermercados">
+      <i class="fa fa-search"></i>
     </div>
   </div>
   <div class="gallery--content">

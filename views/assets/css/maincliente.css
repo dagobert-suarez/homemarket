@@ -365,7 +365,7 @@ li i:hover{
     margin-top: 15px;
     background-color:#FFBF00;
     /* background-color: gray; */
-    border: 1px solid rgba(161,161,161,0.63);
+    border: 1px solid#FFBF00;
     padding:8px ;
     display: inline-block;
     border-radius: 4px;
