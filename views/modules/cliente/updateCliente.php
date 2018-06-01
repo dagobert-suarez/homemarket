@@ -5,7 +5,7 @@
       <header >
         <h1 class="sett">Ajustes <i class="fa fa-gears"></i></h1>
       </header>
-      <div class="message">
+      <div class="">
         <?php
         if (isset($_SESSION['message'])) {
           echo $_SESSION['message'];

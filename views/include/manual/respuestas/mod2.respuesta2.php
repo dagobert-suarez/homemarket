@@ -5,16 +5,18 @@
     <h2>¿Como puedo buscar un supermercado?</h2>
   </div>
   <div class="answer">
-    <p>Respuesta .</p>
     <div class="slideshow-container">
 
     <div class="mySlides faz">
-     <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-     <img class="img" src="views/assets/image/manual/ground.jpg" >
+       <div class="text">
+         <h4>Paso 1</h4>
+        <p>Damos clic en el input donde dice buscar supermercado.</p>
+      </div>
+     <img class="img" src="views/assets/image/manual/supermercado-como-buscar.png" >
 
     </div>
     <div class="mySlides faz">
-         <div class="text">hola si funciona </div>
+         <div class="text"></div>
         <img class="img" src="views/assets/image/manual/ground1.jpg" >
     </div>
     <div class="mySlides faz">
