@@ -36,6 +36,13 @@
       </div>
       <img  class="img" src="views/assets/image/manual/hacer-pedido-paso4.png" >
     </div>
+    <div class="mySlides faz">
+      <div class="arrow">
+        <a  class="nxtAnws" href="modulo4-r2">Proxima pregunta</a>
+        <div class="triangle">
+        </div>
+      </div>
+    </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -44,6 +51,7 @@
       <span class="indicator" onclick="currentSlide(2)"></span>
       <span class="indicator" onclick="currentSlide(3)"></span>
       <span class="indicator" onclick="currentSlide(4)"></span>
+      <span class="indicator" onclick="currentSlide(5)"></span>
     </div>
 
     </div>
