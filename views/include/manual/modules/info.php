@@ -10,7 +10,7 @@
            <a href="modulo1-r2">¿Como inicio mi cuenta?</a>
            <a href="modulo1-r3">¿Como puedo configurar mi cuenta?</a>
            <a href="modulo1-r4">¿Como puedo recuperar mi cuenta si perdi mi contraseña?</a>
-           <a href="modulo1-r5">¿Como elimino mi cuenta?</a>
+           <!-- <a href="modulo1-r5">¿Como elimino mi cuenta?</a> -->
            <!-- <a href="modulo1r1">¿Pregunta 1?</a>
            <a href="modulo1r2">¿Pregunta 2?</a>
            <a href="modulo1r3">¿Pregunta 3?</a>
