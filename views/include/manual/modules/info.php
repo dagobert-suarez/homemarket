@@ -10,7 +10,7 @@
            <a href="modulo1-r2">¿Como inicio mi cuenta?</a>
            <a href="modulo1-r3">¿Como puedo configurar mi cuenta?</a>
            <a href="modulo1-r4">¿Como puedo recuperar mi cuenta si perdi mi contraseña?</a>
-           <a href="modulo1-r5">¿Como elimino mi cuenta?</a>
+           <!-- <a href="modulo1-r5">¿Como elimino mi cuenta?</a> -->
            <!-- <a href="modulo1r1">¿Pregunta 1?</a>
            <a href="modulo1r2">¿Pregunta 2?</a>
            <a href="modulo1r3">¿Pregunta 3?</a>
@@ -22,7 +22,7 @@
            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
            <h2>Pedidos</h2>
            <a href="modulo4">¿Como hacer un pedido?</a>
-           <a href="modulo4-r2">¿Como saber la cobertura del supermercado donde hago mi pedido?</a>
+           <!-- <a href="modulo4-r2">¿Como saber la cobertura del supermercado donde hago mi pedido?</a> -->
            <a href="modulo4-r3">¿Cual es la forma de pago de un pedido?</a>
            <a href="modulo4-r4">¿Donde puedo ver el historial de mis pedidos?</a>
            <!-- <a href="modulo2-r5">¿Pregunta 5?</a> -->
@@ -66,7 +66,7 @@
            <h2>Productos</h2>
            <a href="modulo3">¿Donde puedo ver los productos?</a>
            <a href="modulo3-r2">¿Como puedo buscar un producto?</a>
-           <a href="modulo3-r3">¿Como puedo filtrar un producto?</a>
+           <!-- <a href="modulo3-r3">¿Como puedo filtrar un producto?</a> -->
            <!-- <a href="modulo3">¿Pregunta 4?</a>
            <a href="modulo3">¿Pregunta 5?</a> -->
        </div>

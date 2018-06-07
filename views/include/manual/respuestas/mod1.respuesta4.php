@@ -5,18 +5,27 @@
     <h2>¿Como puedo recuperar mi cuenta si perdi mi contraseña?</h2>
   </div>
   <div class="answer">
-    <p>Respuesta .</p>
     <div class="slideshow-container">
-
     <div class="mySlides faz">
-      <img class="img" src="views/assets/image/manual/ground2.jpg" >
+      <div class="text">
+        <h4>Paso 1</h4>
+        <p>Hacer clic en la barra del Menú, Donde dice iniciar sesión.</p>
+      </div>
+      <img class="img" src="views/assets/image/manual/recuperar-contra-paso1.png" >
     </div>
     <div class="mySlides faz">
-        <img class="img" src="views/assets/image/manual/ground1.jpg" >
+      <div class="text">
+        <h4>Paso 2</h4>
+        <p>Hacer clic en el link que dice olvidaste tú contraseña.</p>
+      </div>
+        <img class="img" src="views/assets/image/manual/recuperar-contra-paso2.png" >
     </div>
-
     <div class="mySlides faz">
-        <img class="img" src="views/assets/image/manual/ground3.jpg" >
+      <div class="text">
+        <h4>Paso 3</h4>
+        <p>Poner el correo al que quieres que te envien los datos para recuperar la contraseña.</p>
+      </div>
+        <img class="img" src="views/assets/image/manual/recuperar-contra-paso3.png" >
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
