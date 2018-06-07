@@ -23,6 +23,19 @@ class UserModel{
 					return $msn;
 			 }
 
+			 //para crear la contraseña
+	function crearAcceso($data){
+			 try{
+				 $sql = "call CrearAcceso(?,?,?)";
+				 $query = $this->pdo->prepare($sql);
+				 $query->execute($data);
+					 $msn = true;
+					}catch (PDOException $e) {
+						die($e->getMessage());
+					}
+					return $msn;
+			 }
+
 			 // consulta en usuario el email
 	function readByCorreo($data){
 			 try{
@@ -116,18 +129,6 @@ class UserModel{
 		return $result;
 	}
 
-			 //para crear la contraseña
-	function crearAcceso($data){
-			 try{
-				 $sql = "call CrearAcceso(?,?,?)";
-				 $query = $this->pdo->prepare($sql);
-				 $query->execute($data);
-					 $msn = true;
-					}catch (PDOException $e) {
-						die($e->getMessage());
-				  }
-					return $msn;
-			 }
 	function update($data){
 			 try{
 				 $sql = "call modificarUsu(?,?,?,?,?)";
