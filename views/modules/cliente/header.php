@@ -25,6 +25,7 @@
               <ul class="options">
                   <li><a href="inicioCliente"><i class="fa fa-home" aria-hidden="true"></i> inicio</a> </li>
                   <li><a href="#"><i class="fa fa-bell" aria-hidden="true"></i> Notificaciones</a> </li>
+                  <li><a href="historial"><i class="fa fa-history" aria-hidden="true"></i> historial</a> </li>
                   <li><a href="Ajustes"><i class="fa fa-cog" aria-hidden="true"></i> Ajustes</a></li>
                   <li><a href="cerrar-sesion"> <i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesion</a></li>
               </ul>

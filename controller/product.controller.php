@@ -12,6 +12,11 @@ class ProductController{
     require_once "views/modules/cliente/viewProduct.php";
     require_once "views/modules/cliente/footer.php";
   }
+  function historial(){
+    require_once "views/modules/cliente/header.php";
+    require_once "views/modules/cliente/historial.php";
+    require_once "views/modules/cliente/footer.php";
+  }
 
   function mySuper(){
       require_once "views/modules/admin/header-admin.php";

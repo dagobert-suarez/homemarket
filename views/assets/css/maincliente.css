@@ -38,6 +38,19 @@ section.container1C{
   list-style-type:none;
   /*position: fixed;*/
 }
+/* dago */
+.title-historial{
+  font-size: 30px;
+  font-family: verdana;
+  text-align: center;
+  margin-top: 15px;
+}
+.title-historial::first-letter{
+  font-size: 35px;
+  font-family: verdana;
+  text-transform: capitalize;
+}
+/* termina dago */
 
 ul{
   text-decoration: none;
