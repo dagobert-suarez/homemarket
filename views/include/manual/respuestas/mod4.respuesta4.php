@@ -5,20 +5,29 @@
     <h2>¿Donde puedo ver el historial de mis pedidos?</h2>
   </div>
   <div class="answer">
-    <p>Respuesta .</p>
     <div class="slideshow-container">
 
     <div class="mySlides faz">
-     <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-     <img class="img" src="views/assets/image/manual/ground.jpg" >
+      <div class="text">
+        <h4>Paso 1</h4>
+        <p>Dar clic en la barra del menú.</p>
+      </div>
+     <img class="img" src="views/assets/image/manual/donde-ver-histo-paso1.png">
 
     </div>
     <div class="mySlides faz">
-         <div class="text">hola si funciona </div>
-        <img class="img" src="views/assets/image/manual/ground1.jpg" >
+      <div class="text">
+      <h4>Paso 2</h4>
+      <p>Selecionar la barra donde dice historial.</p>
     </div>
+        <img class="img" src="views/assets/image/manual/donde-ver-histo-paso2.png" >
+    </div>
+
     <div class="mySlides faz">
-        <img class="img" src="views/assets/image/manual/ground3.jpg" >
+      <div class="text">
+          <p>Por ultimo vemos el hsitorial de los pedidos que hemos realizados.</p>
+      </div>
+        <img class="img" src="views/assets/image/manual/donde-ver-histo-paso3.png" >
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
