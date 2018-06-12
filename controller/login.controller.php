@@ -70,6 +70,7 @@ class LoginController{
 			}
 			function recuperar(){
 				require_once "views/include/recuperar.php";
+
 			}
 }
 
