@@ -47,6 +47,7 @@ class viewsController{
 		require_once "views/include/scope.footer.php";
 	}
 	function forgot(){
+		require_once "views/include/scope.menutop.php";
 		require_once 'views/include/formulario.php';
 		// require_once '';
 	}

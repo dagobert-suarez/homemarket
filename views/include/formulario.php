@@ -6,8 +6,8 @@
     <title></title>
   </head>
   <body>
+    <div class="wrap--kep">
     <form name="mail_frm" action="email" method="post" enctype="multipart/form-data">
-    <br/>
       <div class="kepp">
         <h3>Restablecer Contraseña:</h3>
         <p>Ingresa Tu correo</p>
@@ -21,5 +21,6 @@
 
         </div>
       </div>
+    </div>
   </body>
 </html>

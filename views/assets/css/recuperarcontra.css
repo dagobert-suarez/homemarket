@@ -2,7 +2,75 @@
 @import "color.css";
 @import url('https://fonts.googleapis.com/css?family=Arimo|Catamaran|Lato|Montserrat|Noto+Sans|PT+Sans|Raleway|Roboto:100,300,400 ');
 body{ margin: 0;background-color: rgba(247, 252, 255, 0); }
+ /* menutop  */
+.menu{
+  width: 100%;
+  height: 55px;
+  background-color: #000000;
+  /* margin-top: 1.5%; */
+  position: fixed;
+  z-index: 1000;
+  opacity: 0.8;
+}
+.icon--mobile {
+  color: white;
+  display: none;
+  font-size: 35px;
+  margin: 7px 0px 7px 12px;
 
+}
+.menu-res a{
+  display:none;
+  display:flex;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 15px;
+
+}
+.logo--menu {
+  width: 13%;
+  margin: 0px 60px;
+  position: fixed;
+  z-index: 20000;
+}
+.logo--img{
+  width: 75px;
+  height: 50px;
+}
+.container--menu{
+  margin-left: 20%;
+  font-family: 'Roboto',sans-serif;
+  z-index: 300px;
+}
+.container--menu2{
+  margin-left: 80%;
+  font-family: 'Roboto',sans-serif;
+  z-index: 300px;
+}
+.menu a{
+  display: block;
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 15px;
+}
+/*.menu a:hover{
+}*/
+.menu a:hover{
+      background-color: #00604d;
+      color: white;
+      cursor: pointer;
+}
+/* Finaliza la parte del menu */
+/* ------------------------------ */
+.wrap--kep{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  justify-content:
+}
 .kepp{
   border: 1px solid rgb(164, 164, 164);
   width: 500px;
@@ -11,7 +79,7 @@ body{ margin: 0;background-color: rgba(247, 252, 255, 0); }
   text-align: center;
 }
 .kepp h3{
-  
+
 }
  .form-group #k{
   padding: 6px 8px;
