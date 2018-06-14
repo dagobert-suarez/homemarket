@@ -54,6 +54,12 @@ class ProductController{
     require_once "views/modules/worker/header.php";
     require_once "views/modules/worker/createCategory.php";
     require_once "views/modules/worker/footer.php";
+  }
+
+  function crearCategory(){
+    require_once "views/modules/superAdmin/header.php";
+    require_once "views/modules/SuperAdmin/crearCategoria.php";
+    require_once "views/modules/superAdmin/footer.php";
 
   }
 

@@ -110,6 +110,7 @@ RewriteRule ^Permisos$ index.php?controller=views&a=permisos
 RewriteRule ^Contenido$ index.php?controller=views&a=contenido
 RewriteRule ^Configuraciones$ index.php?controller=views&a=configuraciones
 RewriteRule ^InformaciónS$ index.php?controller=views&a=informacionS
+RewriteRule ^crear-categoria$ index.php?controller=product&a=crearCategory
 
 #bajar subir archivo
 RewriteRule  ^bajar$ index.php?controller=views&a=bajar
