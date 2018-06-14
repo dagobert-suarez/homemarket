@@ -655,3 +655,44 @@ article{
 
 /*_*.* fin de produtos *.*_*/
 /* ------------------------------ */
+/* Carrito de compras */
+/* ------------------- */
+.wrap--item{
+  width: 50%;
+  background-color: ;
+  height: auto;
+  min-height: 500px;
+  margin: 25px  0px 0px 350px; ;
+  border: 1px solid rgba(161,161,161,063);
+  border-radius: 4px;
+}
+.wrap--item h2{
+  background-color: rgb(69, 116, 136);
+  text-align: center;
+  padding: 3px;
+}
+.delet{
+  padding: 6px;
+  text-align:center;
+  background-color: #008CBA;
+  border-radius: 3px;
+  color: white;
+}
+
+.wrap--item .item{
+  display: block;
+  padding: 10px;
+  background-color: rgb(233, 233, 233);
+  margin-top:8px;
+  height:90px;
+}
+.wrap--item .item .content-item{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+ .item .content-item label{
+  font-size: 20px;
+  color: #383838;display: block;
+  co
+}
