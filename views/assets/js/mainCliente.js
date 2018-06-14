@@ -34,6 +34,9 @@ $(".addpro").click(function(){
       $("#nom").html(result.nom_pro);
       $("#mar").html(result.mar_pro);
       $("#pre").html(result.valVen_pro);
+      $("#nom2").val(result.nom_pro);
+      $("#mar2").val(result.mar_pro);
+      $("#pre2").val(result.valVen_pro);
       $("#idpro").val(result.id_pro);
       $("#img_pro")[0].src = "views/assets/image/productos/"+result.img_pro;
     },

@@ -89,6 +89,9 @@
         <label for="">Cantidad:</label>
         <input type="number" name="cantidad" value="" required>
         <input type="hidden" name="id" id="idpro">
+        <input type="hidden" name="nom2" id="nom2">
+        <input type="hidden" name="mar2" id="mar2">
+        <input type="hidden" name="pre2" id="pre2">
         <!-- <input type="number" class="k" name="" value=""> -->
         <div class="botons">
           <!-- <a href="carritoCliente" class="add-cart">Añadir al carrito <i class="fa fa-cart-plus"></i></a> -->

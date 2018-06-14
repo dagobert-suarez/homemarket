@@ -2,7 +2,6 @@
       $data = $this->readbyProduct();
   ?>
   <h2>este es el carrito de compras</h2>
-  <i class="fa fa-cart-plus"></i>
   <section>
 
     <?php
@@ -24,7 +23,11 @@
       }else {
         echo "<h2>carrito de compras vacio</h2>";
       }
-      echo $_POST['cantidad'];
       echo $_POST['id'];
+      echo $_POST['nom2'];
+      echo $_POST['mar2'];
+      echo $_POST['pre2'];
+      echo $_POST['cantidad'];
+      // echo $_POST['nombre'];
         ?>
   </section>
