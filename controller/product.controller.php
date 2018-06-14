@@ -1,7 +1,6 @@
 <?php
 //envio de datos de productos
 require_once("model/product.model.php");
-
 class ProductController{
   private $product;
 
@@ -41,7 +40,6 @@ class ProductController{
     require_once "views/modules/worker/header.php";
     require_once "views/modules/worker/productosviews.php";
     require_once "views/modules/worker/footer.php";
-
   }
   // Actualizar productos
   function updateProductos(){
@@ -60,7 +58,6 @@ class ProductController{
     require_once "views/modules/superAdmin/header.php";
     require_once "views/modules/SuperAdmin/crearCategoria.php";
     require_once "views/modules/superAdmin/footer.php";
-
   }
 
   // updateProve
@@ -77,81 +74,75 @@ class ProductController{
   }
 
     public function __CONSTRUCT(){
-        $this->product = new ProductModel();
+      $this->product = new ProductModel();
     }
 
     function crearProduct(){
-        $data = $_POST['data'];
-
-        if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0){
-              $allowed = array("jpg"=>"image/jpg", "jpeg"=>"image/jpeg","png"=>"image/png", "gif"=>"image/gif");
-              $filetype = $_FILES["file"]["type"];
-              $filesize = $_FILES["file"]["size"];
-              $extention = pathinfo($_FILES["file"]["name"]);
-              $extention = ".".$extention["extension"];
-              $var_rand = rand(10000,999999) * rand(10000,999999);
-              $tmp_name = md5($var_rand.$_FILES["file"]["name"]);
-              $filename = $tmp_name.$extention;
-              $extention = pathinfo($filename, PATHINFO_EXTENSION);
-              if (!array_key_exists($extention, $allowed)) {
-                die("Error: favor seleccione un formato valido (.jpg, .png, .gif, .jpeg)");
-              }
-              $maxsize= 2 * 1024 * 1024;
-              if($filesize > $maxsize){
-                die("Error: el tamaño del archivo debe ser menor o igual a 2MB");
-              }
-              //mine type
-              if (in_array($filetype, $allowed)) {
-                if (file_exists("views/assets/image/productos/".$filename)) {
-                die("lo sentimos ese archivo ya existe");
-              }else{
-                  move_uploaded_file($_FILES["file"]["tmp_name"],"views/assets/image/productos/".$filename);
-                  $data[7] = $filename;
-                  // $data[4] = $filename;
-                }
-            }else{
-              die("Error: no se puede reconocer la imagen intente nuevamente");
+      $data = $_POST['data'];
+      if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0){
+            $allowed = array("jpg"=>"image/jpg", "jpeg"=>"image/jpeg","png"=>"image/png", "gif"=>"image/gif");
+            $filetype = $_FILES["file"]["type"];
+            $filesize = $_FILES["file"]["size"];
+            $extention = pathinfo($_FILES["file"]["name"]);
+            $extention = ".".$extention["extension"];
+            $var_rand = rand(10000,999999) * rand(10000,999999);
+            $tmp_name = md5($var_rand.$_FILES["file"]["name"]);
+            $filename = $tmp_name.$extention;
+            $extention = pathinfo($filename, PATHINFO_EXTENSION);
+            if (!array_key_exists($extention, $allowed)) {
+              die("Error: favor seleccione un formato valido (.jpg, .png, .gif, .jpeg)");
             }
-
-        }else {
-          die("Error ".$_FILES["file"]["error"]);
-        }
-         $result = $this->product->createProduct($data);
-         echo '<script language="javascript">alert("creado con exito");</script>';
-         echo "<script>window.location.href='nuevo-producto'</script>";
+            $maxsize= 2 * 1024 * 1024;
+            if($filesize > $maxsize){
+              die("Error: el tamaño del archivo debe ser menor o igual a 2MB");
+            }
+            // mine type
+            if (in_array($filetype, $allowed)) {
+              if (file_exists("views/assets/image/productos/".$filename)) {
+              die("lo sentimos ese archivo ya existe");
+            }else{
+                move_uploaded_file($_FILES["file"]["tmp_name"],"views/assets/image/productos/".$filename);
+                $data[7] = $filename;
+                // $data[4] = $filename;
+              }
+          }else{
+            die("Error: no se puede reconocer la imagen intente nuevamente");
+          }
+      }else {
+        die("Error ".$_FILES["file"]["error"]);
       }
+       $result = $this->product->createProduct($data);
+       echo '<script language="javascript">alert("creado con exito");</script>';
+       echo "<script>window.location.href='nuevo-producto'</script>";
+    }
 
       function BySupermercado(){
         require_once "views/modules/cliente/header.php";
         require_once "views/modules/cliente/PorSupermercado.php";
         require_once "views/modules/cliente/footer.php";
       }
+
       function readbyProduct(){
         $re = $this->product->readByCod($_SESSION['USER']['ID']);
         return $re;
         }
+
       function viewProducts(){
           $result = $this->product->readProducts();
           return $result;
       }
-      public function readByIdproc($data){
-          $result=$this->product->readByproc($data);
-          return $result;
-          // $id = $_GET["data"];
-          // $result = $this->product->readByproc($id);
-          // return $result;
-      }
 
+      public function readByIdproc($data){
+        $result=$this->product->readByproc($data);
+        return $result;
+        }
 
       public function updateProc(){
         $data = $_POST['data'];
-        // $img = $_FILES['file'];
-        // $data[]=$img['name'];
-        // copy($img['tmp_name'],"views/assets/image/productos/".$img['name']);
         $result = $this->product->updateProduct($data);
         echo '<script language="javascript">alert("Modificado con exito");</script>';
         echo "<script>window.location.href='Productos-empleado'</script>";
-    }
+      }
       // crud productos
       public function deleteProduct(){
           $data = $_GET['data'];
@@ -162,10 +153,9 @@ class ProductController{
       }
 
       function readIdProduct($data){
-           $result=$this->product->readIdPro($data);
-           return $result;
-       }
-
+        $result=$this->product->readIdPro($data);
+        return $result;
+      }
 
       // CRUD Categorias
       //envia el registro de categoria
@@ -174,22 +164,23 @@ class ProductController{
         $result = $this->product->createCategory($data);
         echo '<script language="javascript">alert("<div class="exit">Creada con exito</div>");</script>';
         echo "<script>window.location.href='crear-categoria'</script>";
-
       }
-          //visualiza las  categorias en la pagina del empleado
-          function readCategory(){
-              $result = $this->product->readCategory();
-              return  $result;
-          }
-          public function readByCategory($data){
-              $result = $this->product->readByCat($data);
-              return $result;
-          }
-          public function readCategoryJson(){
-              $result = $this->product->readByCat($_POST['data']);
-              $_SESSION['update_category']=$result[0];
-              echo json_encode($result);
-          }
+      //visualiza las  categorias en la pagina del empleado
+      function readCategory(){
+        $result = $this->product->readCategory();
+        return  $result;
+      }
+
+      public function readByCategory($data){
+        $result = $this->product->readByCat($data);
+        return $result;
+      }
+
+      public function readCategoryJson(){
+        $result = $this->product->readByCat($_POST['data']);
+        $_SESSION['update_category']=$result[0];
+        echo json_encode($result);
+      }
           public function updateCategory(){
               $result = $this->product->updateCategory(array($_POST['data'],$_SESSION['update_category']));
               echo json_encode($result);
