@@ -83,6 +83,8 @@
       <label for="">Nombre: <span id="nom"></span> </label>
       <label for="">Marca: <span id="mar"></span> </label>
       <label for="">Precio: <span id="pre"></span> </label>
+
+      <!-- vista de los productos en el formulario -->
       <form class="" action="carritoCliente" method="post">
         <label for="">Cantidad:</label>
         <input type="number" name="cantidad" value="">
@@ -92,8 +94,8 @@
           <!-- <a href="carritoCliente" class="add-cart">Añadir al carrito <i class="fa fa-cart-plus"></i></a> -->
           <input type="submit"  value="Agregar al carrito">
         </div>
+      </form>
 
-    </form>
     </div>
   </div>
 </div>
