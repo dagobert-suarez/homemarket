@@ -47,3 +47,42 @@
     <?php } ?>
     </tbody>
   </table>
+  <!--  Actualizar Categoria -->
+  <!-- ----------------------------->
+  <div class="fondo"></div>
+  <div class="wrap">
+    <div class="wea">
+      <div class="wrap-tit">
+        <h1>Actualizar Categoria</h1>
+        <i class="close">&times</i>
+      </div>
+
+      <div class="wrap-bod">
+        <form  name="frmCategory" id="updateCate">
+          <label for="">Nombre de la categoria:</label>
+          <input type="text" class="k" name="data[]" required id="updateCategoryName"><br>
+          <button type="submit" name="button">Actualizar</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <!--Fin de el Actualizar  -->
+  <!-- -------------------------->
+  <!-- Detalles -->
+  <!-- ---------------->
+  <div class="fondo-det"></div>
+  <div class="wrap-det">
+    <div class="wea-det">
+      <div class="wrap-tit">
+        <h1>Detalles de la  Categoria</h1>
+        <i class="closedet">&times;</i>
+      </div>
+      <div class="wrap-bod">
+        Codigo: <span id="codeCat"></span>
+        Nombre: <span id="nomCat"></span>
+    </div>
+  </div>
+  <!--  Fin de Detalles -->
+  <!-- --------------------->
+  </div>
