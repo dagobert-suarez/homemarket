@@ -23,5 +23,7 @@
     }else {
       echo "<h2>carrito de compras vacio</h2>";
     }
+    echo $_POST['cantidad'];
+    echo $_POST['id'];
       ?>
 </section>

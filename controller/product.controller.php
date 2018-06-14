@@ -50,7 +50,7 @@ class ProductController{
   // Crear categoria
   function crearCategoria(){
     require_once "views/modules/worker/header.php";
-    require_once "views/modules/worker/createCategory.php";
+    require_once "views/modules/worker/viewCategory.php";
     require_once "views/modules/worker/footer.php";
   }
 

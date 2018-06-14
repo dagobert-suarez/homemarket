@@ -83,11 +83,17 @@
       <label for="">Nombre: <span id="nom"></span> </label>
       <label for="">Marca: <span id="mar"></span> </label>
       <label for="">Precio: <span id="pre"></span> </label>
-      <label for="">Cantidad:</label>
-      <!-- <input type="number" class="k" name="" value=""> -->
-      <div class="botons">
-          <a href="carritoCliente" class="add-cart">Añadir al carrito <i class="fa fa-cart-plus"></i></a>
-      </div>
+      <form class="" action="carritoCliente" method="post">
+        <label for="">Cantidad:</label>
+        <input type="number" name="cantidad" value="">
+        <input type="hidden" name="id" id="idpro">
+        <!-- <input type="number" class="k" name="" value=""> -->
+        <div class="botons">
+          <!-- <a href="carritoCliente" class="add-cart">Añadir al carrito <i class="fa fa-cart-plus"></i></a> -->
+          <input type="submit"  value="Agregar al carrito">
+        </div>
+
+    </form>
     </div>
   </div>
 </div>
