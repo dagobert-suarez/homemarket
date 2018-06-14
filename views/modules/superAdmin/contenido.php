@@ -1,1 +1,5 @@
-<h1>Contenido</h1>
+<h1>Categorias</h1>
+
+<table id="datatbale">
+
+</table>
