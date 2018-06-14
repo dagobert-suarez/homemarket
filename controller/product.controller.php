@@ -173,7 +173,7 @@ class ProductController{
         $data = $_POST['data'];
         $result = $this->product->createCategory($data);
         echo '<script language="javascript">alert("<div class="exit">Creada con exito</div>");</script>';
-        echo "<script>window.location.href='nueva-categoria'</script>";
+        echo "<script>window.location.href='crear-categoria'</script>";
 
       }
           //visualiza las  categorias en la pagina del empleado

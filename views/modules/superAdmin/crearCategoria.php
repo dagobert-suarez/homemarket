@@ -13,7 +13,7 @@
   <h1>Ver categoria</h1>
   <div class="breadcrums">
     <ul>
-      <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="Dashboard-Super"><i class="fa fa-home"></i> Home</a></li>
       <!-- <li><a href=""> 	Crear categoria</a></li> -->
       <li><a href="#"><i class="fa fa-clipboard" aria-hidden="true"></i>	Categorias</a></li>
     </ul>
