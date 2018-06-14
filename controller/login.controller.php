@@ -2,10 +2,9 @@
 require_once "model/login.model.php";
 class LoginController{
 	private $users;
-
-    public function __CONSTRUCT(){
-        $this->users = new LoginModel();
-    	}
+  public function __CONSTRUCT(){
+		  $this->users = new LoginModel();
+	}
 
 		//valida que el correo exista
 			function validar_usuario(){
@@ -22,10 +21,8 @@ class LoginController{
 			$correo = $_POST['email'];
 			$pass = $_POST['contra'];
 			$result = $this->users->user($_POST['email']);
-
 			$result_idsup = $this->users->supermercado($result['id_rol']);
 			$_SESSION['SUPERMERCADO']['supermarket']=$result_idsup['id_sup'];
-
 			if ($result!=array()){
 				$contra = $this->users->contra($result['id_usu']);
 				 // print_r($result);
@@ -56,8 +53,8 @@ class LoginController{
 				echo '<h1>el usuario no existe</h1>';
 			}
 		}
-		function enviar(){
 
+		function enviar(){
 			if(mail($_POST['mail_txt'],'Recuperar tú Contraseña','En el siguiente enlace podrá recuperar su contraseña http://localhost/homemarket/recupera')){
 				echo "<script>
                 alert('enviado');
@@ -65,13 +62,11 @@ class LoginController{
     				  </script>";
 			}else{
 				echo "ocurrio un error";
-
 				}
 			}
+
 			function recuperar(){
 				require_once "views/include/recuperar.php";
-
 			}
 }
-
 ?>
