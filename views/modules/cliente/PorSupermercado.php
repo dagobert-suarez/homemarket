@@ -87,7 +87,7 @@
       <!-- vista de los productos en el formulario -->
       <form class="" action="carritoCliente" method="post">
         <label for="">Cantidad:</label>
-        <input type="number" name="cantidad" value="">
+        <input type="number" name="cantidad" value="" required>
         <input type="hidden" name="id" id="idpro">
         <!-- <input type="number" class="k" name="" value=""> -->
         <div class="botons">
