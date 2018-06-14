@@ -12,7 +12,7 @@
       <label for="">Marca: <p id="mar"></p> </label>
       <label for="">Precio: <p id="pre"></p> </label>
       <div class="">
-      <a href="carritoCliente" class="add-cart">añadir al carrito</a>
+      <a href="carritoCliente" class="add-cart" id="<?php echo $row['id_pro'] ; ?> ">añadir al carrito</a>
     </div>
     </div>
   </div>

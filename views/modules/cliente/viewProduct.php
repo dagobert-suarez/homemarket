@@ -3,7 +3,6 @@
 <?php
 $item =1;
         foreach ($this->viewProducts() as $row){?>
-
       <div class="cardPro" >
         <div class="ground"></div>
         <img class="card-img-top-pro" src="views/assets/image/productos/<?php echo$row["img_pro"] ?>" alt="<?php echo $row["id_tip_pro"]; ?>">

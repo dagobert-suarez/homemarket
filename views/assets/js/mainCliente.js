@@ -51,6 +51,31 @@ $(".fondo").click(function(){
   $(".fondo").toggle();
 });
 
+$(".add-cart").click(function(e){
+  e.preventDefault();
+  // if ($("").val()!="") {
+  var add_car = this.id;
+
+    $.ajax({
+      url:"carritoCliente",
+      type:"post",
+      dataType:"json",
+      data:({data:$("#add_car").val()}),
+      success:function(result){
+        console.log(result);
+        if(result==true){
+          console.log(result);
+        }else{
+          alert(result);
+        }
+      },
+      error:function(result){console.log(result);}
+    });
+  // }else{
+  //   alert("Campos vacios");
+  // }
+});
+
 // When the user scrolls down 20px from the top of the document, show the button
 // window.onscroll = function() {scrollFunction()};
 //
