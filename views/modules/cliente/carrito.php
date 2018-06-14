@@ -4,6 +4,7 @@
   <h2>este es el carrito de compras</h2>
   <i class="fa fa-cart-plus"></i>
   <section>
+
     <?php
     if (isset($_SESSION['add_cart'])) {
       $_SESSION['CARRO'][]=array("id"=>$_SESSION['add_cart']['id'],"nombre"=>$_SESSION['add_cart']['nombre'],"cantidad"=>$_SESSION['add_cart']['cantidad'],"precio"=>$_SESSION['add_cart']['precio']);
