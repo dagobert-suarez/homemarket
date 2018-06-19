@@ -17,6 +17,13 @@
       <div class="">
         <span><?php echo $datos[$i]['nombre']; ?></span>
         <span><?php echo $datos[$i]['precio']; ?></span>
+
+        <span><?php echo $_POST['id']; ?></span>
+        <span><?php echo $_POST['nom2']; ?></span>
+        <span><?php echo $_POST['mar2']; ?></span>
+        <span><?php echo $_POST['pre2']; ?></span>
+        <span><?php echo $_POST['cantidad']; ?></span>
+        <!-- // echo $_POST['nombre']; -->
       </div>
       <?php
         }

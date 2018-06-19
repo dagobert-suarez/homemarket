@@ -17,11 +17,12 @@ class UserModel{
 				 $query = $this->pdo->prepare($sql);
 				 $query->execute(array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[6],$data[8]));
 					$msn = true;
-					}catch (PDOException $e) {
+			 }catch (PDOException $e) {
 						die($e->getMessage());
-				  }
-					return $msn;
 			 }
+			 return $msn;
+
+	}
 
 			 //para crear la contraseña
 	function crearAcceso($data){
@@ -141,15 +142,18 @@ class UserModel{
 		 }
 			 // Crear Supermercado
 			  function createSuper($data){
+					// print_r($data);
+					// echo '</br>';
 				 try{
-					 $sql="call crear_sup(?,?,?,?,?)";
+					 $sql="call crear_sup(?, ?, ?, ?, ?, ?)";
 					 $query=$this->pdo->prepare($sql);
-					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4] ) ) ;
-					 $msn ="Guardado Exitoxamente";
+					 $query->execute(array($data[0], $data[1], $data[2], $data[3], $data[4], $data[5] ) ) ;
+					 $msn = true;
 				 } catch(PDOException $e){
 					 $msn = $e->getMessage();
 				 }
-
+				 echo $msn;
+				 // die('aqui estoy');
 				 return $msn;
 			 }
 			 // Seleccionar todos los supermercados

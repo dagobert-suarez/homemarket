@@ -40,11 +40,16 @@ class supermercadoController{
     }else {
       die("Error ".$_FILES["file"]["error"]);
     }
+    $data[5] = ($_SESSION['USER']['ID']);
 
     $result = $this->userModel->createSuper($data);
-    echo '<script language="javascript">alert("creado con exito");</script>';
-    echo "<script>window.location.href='mi-supermercado'</script>";
+    if($result==1){
+      echo '<script language="javascript">alert("creado con exito");</script>';
+      echo "<script>window.location.href='mi-supermercado'</script>";
+    }else{
+      echo '<script language="javascript">alert("Ocurrio un error.");</script>';
+    }
         // header("Location: mi-supermercado");
-  } 
+  }
 }
 ?>
