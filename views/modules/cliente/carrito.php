@@ -5,7 +5,7 @@
 
     <?php
     if (isset($_SESSION['add_cart'])) {
-      $_SESSION['CARRO'][]=array("id"=>$_SESSION['add_cart']['id'],"nombre"=>$_SESSION['add_cart']['nombre'],"cantidad"=>$_SESSION['add_cart']['cantidad'],"precio"=>$_SESSION['add_cart']['precio']);
+      $_SESSION['CARRO'][]=array("id"=>$_SESSION['add_cart']['id'],"nombre"=>$_SESSION['add_cart']['nom2'],"cantidad"=>$_SESSION['add_cart']['cantidad'],"precio"=>$_SESSION['add_cart']['precio']);
       unset($_SESSION['add_cart']);
     }
       if (isset($_SESSION['CARRO'])) {
@@ -14,9 +14,6 @@
         for ($i=0; $i <count($datos); $i++) {
       ?>
       <div class="">
-        <span><?php echo $datos[$i]['nombre']; ?></span>
-        <span><?php echo $datos[$i]['precio']; ?></span>
-
         <span><?php echo $_POST['id']; ?></span>
         <span><?php echo $_POST['nom2']; ?></span>
         <span><?php echo $_POST['mar2']; ?></span>
@@ -41,7 +38,7 @@
             <label for="">Precio: <span><?php echo $_POST['pre2'];?></span> </label>
             <a href="#" class="delet"><i>&times;</i> Eliminar </a>
           </div>
-          
+
         </div>
       </div>
   </section>

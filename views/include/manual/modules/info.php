@@ -24,7 +24,7 @@
            <a href="modulo4">¿Como hacer un pedido?</a>
            <!-- <a href="modulo4-r2">¿Como saber la cobertura del supermercado donde hago mi pedido?</a> -->
            <a href="modulo4-r3">¿Cual es la forma de pago de un pedido?</a>
-           <a href="modulo4-r4">¿Donde puedo ver el historial de mis pedidos?</a>
+           <!-- <a href="modulo4-r4">¿Donde puedo ver el historial de mis pedidos?</a> -->
            <!-- <a href="modulo2-r5">¿Pregunta 5?</a> -->
            <!-- <a href="modulo2r1">¿Pregunta 1?</a>
            <a href="modulo2r2">¿Pregunta 2?</a>
