@@ -1,7 +1,6 @@
   <?php
       $data = $this->readbyProduct();
   ?>
-  <h2>este es el carrito de compras</h2>
   <section>
 
     <?php
@@ -27,14 +26,22 @@
       </div>
       <?php
         }
-      }else {
-        echo "<h2>carrito de compras vacio</h2>";
-      }
-      echo $_POST['id'];
-      echo $_POST['nom2'];
-      echo $_POST['mar2'];
-      echo $_POST['pre2'];
-      echo $_POST['cantidad'];
-      // echo $_POST['nombre'];
-        ?>
+      }else { echo "<h2>carrito de compras vacio</h2>"; }
+      ?>
+      <div class="wrap--item">
+        <h2>Carrito de compras</h2>
+        <div class="item">
+          <div class="content-item">
+            <!-- <label for="" class="hidden"> <?php  echo $_POST['id']; ?></label> -->
+            <label for="">Producto: <span><?php echo $_POST['nom2'];?></span> </label>
+            <label for="">Marca: <span><?php echo $_POST['mar2'];?></span> </label>
+          </div>
+          <div class="content-item">
+            <label for="">Cantidad: <span></span><?php echo $_POST['cantidad'];?></label>
+            <label for="">Precio: <span><?php echo $_POST['pre2'];?></span> </label>
+            <a href="#" class="delet"><i>&times;</i> Eliminar </a>
+          </div>
+          
+        </div>
+      </div>
   </section>
